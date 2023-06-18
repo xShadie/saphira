@@ -1,0 +1,8 @@
+﻿  StdAfx.cpp
+  PythonDebugModule.cpp
+  PythonLauncher.cpp
+  PythonMarshal.cpp
+  PythonUtils.cpp
+  Resource.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\eterLib\SkyBox.h(108,2): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert Resource.cpp)
+  scriptLib.vcxproj -> C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\scriptLib\Release\scriptLib.lib

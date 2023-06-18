@@ -1,0 +1,196 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Das Output-Verzeichnis endet nicht mit einem nachstehenden Schrägstrich. Der Schrägstrich wird in dieser Buildinstanz hinzugefügt, da er für die ordnungsgemäße Auswertung des Output-Verzeichnisses erforderlich ist.
+  StdAfx.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\eterLib\SkyBox.h(108,2): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren.
+  AffectFlagContainer.cpp
+  CCpuId.cpp
+  CefClientApp.cpp
+  CefClientHandler.cpp
+  CefClientV8ExtensionHandler.cpp
+  CefWebBrowser.cpp
+  CHddData.cpp
+  CHwidManager.cpp
+  CMacAddr.cpp
+  CMachineGuid.cpp
+  CNetworkAdapter.cpp
+  CPythonRenderTargetModule.cpp
+  HTSDK.cpp
+  InstanceBase.cpp
+  InstanceBaseBattle.cpp
+  InstanceBaseEffect.cpp
+  InstanceBaseEvent.cpp
+  InstanceBaseMotion.cpp
+  InstanceBaseMovement.cpp
+  InstanceBaseTransform.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert CPythonRenderTargetModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert InstanceBaseEffect.cpp)
+  CameraProcedure.cpp
+  minIni.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\minIni.cpp(38,1): warning C4005: "assert": Makro-Neudefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\assert.h(29): message : Siehe vorherige Definition von "assert" (Quelldatei wird kompiliert minIni.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\minIni.cpp(636,21): warning C4101: "tail": Unreferenzierte lokale Variable
+  PythonAcce.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonAcce.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert InstanceBase.cpp)
+  PythonBackground.cpp
+  PythonBackgroundModule.cpp
+  PythonCharacterManager.cpp
+  PythonCharacterManagerModule.cpp
+  PythonCharacterModule.cpp
+  PythonConfig.cpp
+  PythonConfigModule.cpp
+  PythonCubeRenewal.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonCubeRenewal.cpp)
+  PythonEffectModule.cpp
+  PythonEventManager.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonCharacterModule.cpp)
+  PythonEventManagerMoudle.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonConfigModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonBackground.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonEventManager.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonCharacterManager.cpp)
+  PythonGameEventManagerModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonEventManagerMoudle.cpp)
+  PythonItem.cpp
+  PythonItemModule.cpp
+  PythonNetworkStreamOfflineshop.cpp
+  PythonNonPlayer.cpp
+  PythonNonPlayerModule.cpp
+  PythonOfflineshop.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamOfflineshop.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonItemModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonOfflineshop.cpp)
+  PythonPlayer.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonItem.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNonPlayer.cpp)
+  PythonPlayerEventHandler.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayer.cpp)
+  PythonPlayerInput.cpp
+  PythonPlayerInputKeyboard.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerEventHandler.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerInput.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerInputKeyboard.cpp)
+  PythonPlayerInputMouse.cpp
+  PythonPlayerModule.cpp
+  PythonPlayerSkill.cpp
+  PythonQuest.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerInputMouse.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonPlayerSkill.cpp)
+  PythonrootlibManager.cpp
+  PythonSkill.cpp
+  PythonChat.cpp
+  PythonChatModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonChat.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonChatModule.cpp)
+  PythonExchange.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonSkill.cpp)
+  PythonExchangeModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonExchange.cpp)
+  PythonFlyModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonExchangeModule.cpp)
+  PythonGuild.cpp
+  PythonMessenger.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonGuild.cpp)
+  PythonMiniMap.cpp
+  PythonMiniMapModule.cpp
+  PythonSafeBox.cpp
+  PythonShop.cpp
+  PythonSkillPet.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonShop.cpp)
+  PythonSwitchbot.cpp
+  PythonTextTail.cpp
+  PythonTextTailModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonSwitchbot.cpp)
+  PythonPackModule.cpp
+  ProcessScanner.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonMiniMap.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonTextTail.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonSkillPet.cpp)
+  PythonApplication.cpp
+  PythonApplicationCamera.cpp
+  PythonApplicationCursor.cpp
+  PythonApplicationEvent.cpp
+  PythonApplicationLogo.cpp
+  PythonApplicationModule.cpp
+  PythonApplicationProcedure.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationCamera.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationCursor.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationEvent.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationLogo.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationProcedure.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplication.cpp)
+  PythonApplicationWebPage.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\PythonApplication.cpp(1150,74): warning C4474: "_snprintf": zu viele Argumente für Formatzeichenfolge übergeben
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\PythonApplication.cpp(1150,74): message : Platzhalter und deren Parameter erwarten 0 variadic-Argumente, es wurden aber 1 variadic-Argumente bereitgestellt.
+  PythonIME.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonApplicationWebPage.cpp)
+  PythonIMEModule.cpp
+  PythonProfilerModule.cpp
+  PythonSoundManagerModule.cpp
+  PythonSystem.cpp
+  PythonSystemModule.cpp
+  GuildMarkDownloader.cpp
+  GuildMarkUploader.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonSoundManagerModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonIMEModule.cpp)
+  MarkImage.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonSystem.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert GuildMarkUploader.cpp)
+  MarkManager.cpp
+  Locale.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert GuildMarkDownloader.cpp)
+  AccountConnector.cpp
+  InsultChecker.cpp
+  NetworkActorManager.cpp
+  ProcessCRC.cpp
+  PythonExceptionSender.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert AccountConnector.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert Locale.cpp)
+  PythonNetworkDatagram.cpp
+  PythonNetworkDatagramModule.cpp
+  PythonNetworkStream.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStream.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\extern\include\cryptopp\algparam.h(404,13): warning C4996: 'std::uncaught_exception': warning STL4006: std::uncaught_exception() is deprecated in C++17. It is superseded by std::uncaught_exceptions(), plural. You can define _SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING or _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS to acknowledge that you have received this warning. (Quelldatei wird kompiliert AccountConnector.cpp)
+  PythonNetworkStreamCommand.cpp
+  PythonNetworkStreamEvent.cpp
+  PythonNetworkStreamModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamCommand.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamEvent.cpp)
+  PythonNetworkStreamPhaseGame.cpp
+  PythonNetworkStreamPhaseGameActor.cpp
+  PythonNetworkStreamPhaseGameItem.cpp
+  PythonNetworkStreamPhaseHandShake.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamModule.cpp)
+  PythonNetworkStreamPhaseLoading.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseGameItem.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseGameActor.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseGame.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseHandShake.cpp)
+  PythonNetworkStreamPhaseLogin.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseLoading.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseLogin.cpp)
+  PythonNetworkStreamPhaseOffline.cpp
+  PythonNetworkStreamPhaseSelect.cpp
+  PythonWikiModule.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseOffline.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonNetworkStreamPhaseSelect.cpp)
+  PythonWikiRenderTarget.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonWikiModule.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert PythonWikiRenderTarget.cpp)
+  ServerStateChecker.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert ServerStateChecker.cpp)
+  ServerStateCheckerModule.cpp
+  CheckLatestFiles.cpp
+  TextTrans.cpp
+  GameType.cpp
+  MovieMan.cpp
+  UserInterface.cpp
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert GameType.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert UserInterface.cpp)
+C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Client\UserInterface\Packet.h(3254,17): warning C5208: Eine unbenannte Klasse, die im typedef-Namen verwendet wird, kann keine anderen Member als nicht statische Datenmember, Memberenumerationen oder Memberklassen deklarieren. (Quelldatei wird kompiliert MovieMan.cpp)
+  libconfig++.lib(libconfigcpp.obj) : Es wurde ein mit /GL kompiliertes MSIL .netmodule oder module gefunden. Verknüpfung wird mit /LTCG erneut gestartet. Fügen Sie /LTCG zur Linkbefehlszeile hinzu, um die Linkerleistung zu erhöhen.
+     Bibliothek "..\..\Binary\Andra.lib" und Objekt "..\..\Binary\Andra.exp" werden erstellt.
+  Code wird generiert.
+  Codegenerierung ist abgeschlossen.
+  UserInterface.vcxproj -> C:\Users\Shadow\Desktop\saphira_v2.3\client_src\Binary\Andra.exe
