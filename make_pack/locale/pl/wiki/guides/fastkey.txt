@@ -1,0 +1,160 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/fastkey.png]
+[CENTER_ALIGN;FONT_SIZE=24]HERE YOU WILL FIND THE LIST OF HOTKEYS
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz Teleport.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz ranking gildii.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz informacje o wyprawach.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz Przepustke Bitewna
+
+[X_PADDING=135;FONT_SIZE=15]* Zablokuj/odblokuj podglad ekwipunku przed pojedynkiem.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz ranking ogólny.
+
+[X_PADDING=135;FONT_SIZE=15]* Obróc kamere w lewo.
+
+[X_PADDING=135;FONT_SIZE=15]* Idz naprzód (równiez dziala strzalka).
+
+[X_PADDING=135;FONT_SIZE=15]* Idz w tyl (równiez dziala strzalka).
+
+[X_PADDING=135;FONT_SIZE=15]* Idz w lewo (równiez dziala strzalka).
+
+[X_PADDING=135;FONT_SIZE=15]* Idz w prawo (równiez dziala strzalka).
+
+[X_PADDING=135;FONT_SIZE=15]* Obróc kamere w prawo.
+
+[X_PADDING=135;FONT_SIZE=15]* Przybliz kamere.
+
+[X_PADDING=135;FONT_SIZE=15]* Oddal kamere.
+
+[X_PADDING=135;FONT_SIZE=15]* Okresl wysokosc kamery w stosunku do postaci.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz Sklep Offline
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno teleportacji.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz ekwipunek.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno Alchemii Smoczych Kamieni.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno zwierzaka.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz wikipedie w grze.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno Run.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz Switchbota.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno czatu.
+
+[X_PADDING=135;FONT_SIZE=15]* Zbierz przedmioty z ziemi.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno buffki.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno postaci.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno umiejetnosci.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno akcji.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno zadan.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz mape.
+
+[X_PADDING=135;FONT_SIZE=15]* Wsiadz/Zsiadz z wierzchowca.
+
+[X_PADDING=135;FONT_SIZE=15]* Odeslij wierzchowca.
+
+[X_PADDING=135;FONT_SIZE=15]* Nakarm konia.
+
+[X_PADDING=135;FONT_SIZE=15]* Open the guild panel.
+
+[X_PADDING=135;FONT_SIZE=15]* Zaatakuj.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno wiadomosci.
+
+[X_PADDING=135;FONT_SIZE=15]* Otwórz okno szeptu.
+
+[X_PADDING=135;FONT_SIZE=15]* Pokaz/Ukryj zwoje misji.
+
+[X_PADDING=135;FONT_SIZE=15]* Opcje.
+
+[X_PADDING=135;FONT_SIZE=15]* Pokaz/Ukryj minimape.
+
+[X_PADDING=135;FONT_SIZE=15]* Pokaz liste znajomych.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Ironiczna kreskówka.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Deszcz pieniedzy.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Instrument muzyczny.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Bicie serca
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Bicie serca z malymi serduszkami w tle.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Bomba.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Pomysl.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Zly i zdenerwowany.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Sorry.
+
+[IMG=d:/ymir work/ui/wiki/emoji/f5.tga; Y=46; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f6.tga; Y=73; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f7.tga; Y=100; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f8.tga; Y=127; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f10.tga; Y=154; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f11.tga; Y=181; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f12.tga; Y=208; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/q.tga; Y=235; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/w.tga; Y=262; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/s.tga; Y=289; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/a.tga; Y=316; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/d.tga; Y=343; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/e.tga; Y=370; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/r_plus_click.tga; Y=397; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f_plus_click.tga; Y=424; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/g_or_t.tga; Y=451; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/y.tga; Y=478; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/u.tga; Y=505; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/i.tga; Y=532; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/o.tga; Y=559; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/p.tga; Y=586; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/h.tga; Y=613; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/j.tga; Y=640; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/k.tga; Y=667; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/l.tga; Y=694; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/z.tga; Y=721; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/x.tga; Y=748; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/c.tga; Y=775; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/v.tga; Y=802; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/b.tga; Y=829; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/n.tga; Y=856; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/m.tga; Y=883; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_h.tga; Y=910; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_b.tga; Y=937; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_f.tga; Y=964; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_g.tga; Y=991; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/space.tga; Y=1018; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/enter.tga; Y=1045; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_enter.tga; Y=1072; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_q.tga; Y=1099; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/esc.tga; Y=1126; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_m.tga; Y=1153; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_m.tga; Y=1180; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_1.tga; Y=1207; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_2.tga; Y=1234; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_3.tga; Y=1261; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_4.tga; Y=1288; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_5.tga; Y=1315; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_6.tga; Y=1342; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_7.tga; Y=1369; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_8.tga; Y=1396; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_9.tga; Y=1423; X=12]

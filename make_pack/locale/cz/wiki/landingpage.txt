@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/rules.png]
+[CENTER_ALIGN;FONT_SIZE=24]VYZÝVÁME VÁS K PRECTENÍ A RESPEKTOVÁNÍ
+[CENTER_ALIGN;FONT_SIZE=24]PRAVIDEL HRY, ABYSTE JSTE SE VYHNUTI
+[CENTER_ALIGN;FONT_SIZE=24]JAKÝMKOLIV PROBLÉMUM.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. PRODEJ ÚCTU A PREDMETU
+[X_PADDING=20]Prodej úctu a predmetu za reálnou menu (jako jsou: paysafe, paypal, bitcoin, sofort atd.)
+[X_PADDING=20]Není povolen. Je prísne zakázán, dále není povolena výmena úctu nebo predmetu mezi servery.
+
+[X_PADDING=12]2. ÚTOCNÉ CHOVÁNÍ
+[X_PADDING=20]Je prísne zakázáno urážet ostatní hráce. Rovnež je zakázáno používat jazyk, kterýse nehodí k tématu hry,
+[X_PADDING=20]napríklad: vulgání vyjadrování, rouhání, výhružky mimo hru. Urážky namírené na zamestnance vedou k 
+[X_PADDING=20]okamžitému a zároven trvalému zablokování úctu do hry a na fórum. Opatrení jsou hodnocena na základe
+[X_PADDING=20]závažnosti veci.
+
+[X_PADDING=12]3. CHYBY
+[X_PADDING=20]Doporucujeme všem uživatelum, aby okamžite nahlásili jakoukoliv chybu clenum týmu Andra.
+[X_PADDING=20]Jakékoli neohlášení nebo zneužití chyby, které ovlivní prubeh hry, bude potrestáno.
+
+[X_PADDING=12]4. PODVÁDENÍ
+[X_PADDING=20]Použití hacku/botu nebo jiného nelegálního softwaru není povoleno.
+[X_PADDING=20]Jakýkoliv pokus bude potrestán trvalým zablokováním herního úctu.
+
+[X_PADDING=12]5. ZABEZPECENÍ ÚCTU A SOUKROMÉ INFORMACE
+[X_PADDING=20]Zamestnanci Andra neprebírají žádnou odpovednost v prípade ztráty úctu nebo položky v dusledku
+[X_PADDING=20]sdílení úctu. Durazne doporucujeme nesdílet své úcty/predmety. Rovnež vám doporucujeme nesdílet s
+[X_PADDING=20]nikým své soukromé informace. V prípade, že nekdo prozradí informace jiného
+[X_PADDING=20]uživatele, bude potrestán.
+
+[X_PADDING=12]6. REKLAMA'
+[X_PADDING=20]Jakýkoli pokus inzerovat jiné servery na našem serveru ve hre nebo na Discordu
+[X_PADDING=20]bude potrestán.
+
+[X_PADDING=12]7. CLENOVÉ TÝMU
+[X_PADDING=20]Zveme všechny naše uživatele, aby sledovali a respektovali volby a pokyny clenu týmu.
+[X_PADDING=20]Pokud bude toto pravidlo porušeno, hrozí prísné potrestání.

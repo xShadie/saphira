@@ -1,0 +1,1341 @@
+22110	Yang (100kk)	Yang cüzdaniniza almak için sag tiklayin.
+22111	Yang (500kk)	Yang cüzdaniniza almak için sag tiklayin.
+22112	Yang (20kkk)	Yang cüzdaniniza almak için sag tiklayin.
+22113	Yang (100kkk)	Yang cüzdaniniza almak için sag tiklayin.
+22114	Yang (500kkk)	Yang cüzdaniniza almak için sag tiklayin.
+71590	Kostüm Süresi +1	Bu öge kostümünüze 1 gün ekler.	1 ekstra gün
+71591	Kostüm Süresi +3	Bu öge kostümünüze 3 gün ekler.	3 ekstra gün
+71592	Kostüm Süresi +7	Bu öge kostümünüze 7 gün ekler.	7 ekstra gün
+71057	Chest Stones	Bu sandik rastgele bir +5 ruh tasi icerir.
+49021	Spirit Sword (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49022	Spirit Dagger (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49023	Spirit Bow (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49024	Spirit Glaive (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49025	Spirit Bell (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49026	Spirit Fan (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49027	Spirit Costume (F) (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+49028	Spirit Costume (M) (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+85112	Spirit Stole (inf)	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+71056	Helper Scroll	Bu oge yalnizca Yardimci rolune sahip olanlar icin gecerlidir.
+89001	Kupon	1 Ejderha Parasý deðerinde kupon.
+89002	Kupon	2 Ejderha Parasý deðerinde kupon.
+89003	Kupon	3 Ejderha Parasý deðerinde kupon.
+89004	Kupon	50 Ejderha Parasý deðerinde kupon.
+89005	Kupon	100 Ejderha Parasý deðerinde kupon.
+89006	Kupon	500 Ejderha Parasý deðerinde kupon.
+89007	Kupon	1000 Ejderha Parasý deðerinde kupon.
+50001	Item-Shop	Gögsün içinde:
+100000	Süre Özütü (K)	Bir ejderha taþýnýn süresini doldurur.
+100001	Süre Özütü (O)	Bir ejderha taþýnýn süresini doldurur.
+100002	Süre Özütü (B)	Bir ejderha taþýnýn süresini doldurur.
+100100	Ejderha kerpeteni	Ejderha taþýný çýkarmada baþarý olasýlýðýný yükseltmeye yarayan bir tamir aleti.
+100300	Yeþil Ejderha Fasulyesi	Büyülü fasulye, ejderha taþý seviyesini yükseltir. Güçlendirme baþarýsýz olabilir.
+100400	Mavi Ejderha Fasulyesi	Büyülü fasulye, ejderha taþýnýn bir seviye yükselmesi olasýlýðýný artýrýr.
+100500	Pembe Ejderha Fasulyesi	Ejderha taþýný baþarýyla bir seviye geliþtirme þansý %10 artar.
+11901	Smokin	Erkeklerin düðünde giydiði takým elbise.
+11902	Smokin	Erkeklerin düðünde giydiði takým elbise.
+11903	Gelinlik	Bayanlarýn düðünde giydiði özel kýyafet.
+11904	Gelinlik	Bayanlarýn düðünde giydiði özel kýyafet.
+18900	Kýzýl Alev Taþý	Kemerinin bonuslarýný güçlendirir.
+25040	Kutsama Kaðýdý	Geliþtirme baþarýsýz olduðunda eþyanýn yok olma riski ortadan kalkýp, sadece kalitesi 1 kademe düþer.
+25041	Büyülü Metal	Bir nesnenin en iyi þekilde geliþtirilmesini saðlayan bir efsanevi metal topaðý. Bunun dýþýnda, geliþtirilmiþ olan nesne, ne yok edilir ne de deðerden düþürülür.
+25100	Zihin Taþý Kaðýdý	Bu Kaðýt, silah ve zýrhlardan zihin taþý çýkarmaya yarar. Taþý çýkardýktan sonra izi kalýr.
+27600	Kamp Ateþi	Ateþ yakmak için kesilmiþ aðaç.
+27610	Balýkçýlýk Küresi	Bu sihirli küre oltaya takýlan balýk hakkýnda bilgi verir.
+27620	Balýkçýlýk Sýrlarý	Bu kitap balýklar hakkýnda bilgi verir.
+27803	Sudak Balýðý	Genellikle gölde yaþayan bir balýk türü.
+27804	Ringa Balýðý	Lezzetli bir balýk türü.
+27805	Büyük Sudak Balýðý	Büyük þiþman sudak balýðý.
+27806	Sazan	Ýri gümüþ renkli balýk.
+27807	Som Balýðý	Çiftleþme mevsiminde evine dönen bir balýk.
+27808	Ot Sazaný	Genelde bitkilerle beslenen sazan türü.
+27809	Dere Alabalýðý	Som Balýðýnýn akrabasý olan bir balýk.
+27810	Zargana	Uzun, zayýf yýlana benzer bir balýk . Çok fazla direnç içerir.
+27811	Gökkuþaðý Alabalýðý	Sýrtý gökkuþaðý renginde bir balýk.
+27812	Nehir Alabalýðý	Nehirde yaþayan bir balýktýr.
+27813	Hamsi	Sürü halinde yaþayan bir balýktýr.
+27814	Levrek	Tatlý suda yaþayan bir balýk.
+27815	Tekir Balýðý	Sadece temiz sularda yaþayan bir balýk türüdür.
+27816	Yayýn Balýðý	Bu balýðýn ayýrt edici özelliði kediye benzer büyük aðzýdýr.
+27817	Çopra Balýðý	Sýð ve çamurlu sularda yaþayan kaygan bir tür balýktýr.
+27818	Lüfer Balýðý	Karýþýk beslenen, temiz sularda yaþayan bir balýktýr.
+27819	Sevimli Balýk	Palamut türünün akrabasýdýr. Temiz sularda yaþar.
+27820	Palamut Balýðý	Bir tür kýþ balýðýdýr. Buz balýkçýlarý tarafýndan avlanýr.
+27821	Kadife Balýðý	Güzel renklere sahip olan bir balýktýr.
+27822	Aynalý Sazan	Yerel bir sazan türü.
+27823	Altýn Sudak Balýðý	Nadir rastlanan Sudak Balýðý türü.
+27824	Yýlan baþý balýðý	Tropikal tatlý suda yaþayan bir avcý balýk.
+27825	Kurbaða balýðý	Sadece akarsularda mevcut olan balýk.
+27826	Kral yengeci	Bu yengeç türlerine, boylarýndan dolayý canavar yengeç de denir.
+27827	Yabbie yengeci	Bu yengeç geceleri aktiftir ve gün boyunca saklandýðý yerde kalýr.
+27833	Ölü Sudak Balýðý	Ölü Sudak Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27834	Ölü Ringa Balýðý	Ölü Ringa Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27835	Ölü Büyük Sudak Balýðý	Ölü Büyük Sudak Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27836	Ölü Sazan	Ölü Sazan|Kamp Ateþinde ýzgara yapýlabilir.
+27837	Ölü Som Balýðý	Ölü Som Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27838	Ölü Ot Sazaný	Ölü Ot Sazaný|Kamp Ateþinde ýzgara yapýlabilir.
+27839	Ölü Dere Alabalýðý	Ölü Dere Alabalýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27840	Ölü Zargana	Ölü Zargana|Kamp Ateþinde ýzgara yapýlabilir.
+27841	Ölü Gökkuþaðý Alabalýðý	Ölü gökkuþaðýalabalýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27842	Ölü Nehir Alabalýðý	Ölü nehir alabalýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27843	Ölü Hamsi	Ölü Hamsi|Kamp Ateþinde ýzgara yapýlabilir.
+27844	Ölü Levrek	Ölü Levrek|Kamp Ateþinde ýzgara yapýlabilir.
+27845	Ölü Tekir Balýðý	Ölü Tekir Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27846	Ölü Yayýn Balýðý	Ölü Yayýn Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27847	Ölü Çopra Balýðý	Ölü Çopra Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27848	Ölü Lüfer Balýðý	Ölü Lüfer Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27849	Ölü Sevimli Balýk	Ölü Sevimli balýk|Kamp Ateþinde ýzgara yapýlabilir.
+27850	Ölü Palamut Balýðý	Ölü Palamut Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27851	Ölü Kadife Balýðý	Ölü Kadife Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27852	Ölü Aynalý Sazan	Ölü Aynalý Sazan|Kamp Ateþinde ýzgara yapýlabilir.
+27853	Ölü Altýn Sudak Balýðý	Ölü Altýn Sudak Balýðý|Kamp Ateþinde ýzgara yapýlabilir.
+27854	Ölü yýlan baþý balýðý	Bu balýk, açýk ateþte ýzgara yapmak için idealdir.
+27855	Ölü kurbaða balýðý	Bu balýk, açýk ateþte ýzgara yapmak için idealdir.
+27856	Ölü kral yengeci	Bu çaðanoz, açýk ateþte ýzgara yapmak için idealdir.
+27857	Ölü Yabbie yengeci	Bu çaðanoz, açýk ateþte ýzgara yapmak için idealdir.
+27987	Ýstiridye	Hoþ görünümlü bir deniz kabuklusudur. Ýçinde inci olabilir.
+27990	Taþ Parçasý	Küçük boyutlarda olmasý çok rahat taþýnmasýný saðlar. Farklý þekillerde kullanýlabilir.
+27992	Beyaz Ýnci	Saf Beyaz inci|Bayanlar sever.
+27993	Mavi Ýnci	Mavi Renkli Ýnci |Bayanlar sever.
+27994	Kankýrmýzý Ýnci	Kan Kýrmýzý Ýnci |Bayanlar sever.
+30179	Kývrýk Anahtar	Bu sihirli anahtar, Ejderha Tapýnaðý'na giden kapýyý etkinleþtiriyor.
+30270	Ejderha Taþý Parçasý	Ender bulunan bir ejderha taþý limesi
+30311	Ruh Kristali Anahtarý	Ýnce iþlenen mavi ruh kristalli bu anahtar Þeytan Katakombu'nun 2. katýný açar.
+30312	Surat Totemi	Surat kakmalý bu tahta levha Þeytan Katakombu'nun 6. katýnýn anahtarýdýr.
+30320	Küçülen Kafa	Küçülen Þeytan Kafasý Þeytan Katakombu'nun 2. katýnýn mührünü açar.
+30321	Küçülen Kafa	Küçülen Þeytan Kafasý Þeytan Katakombu'nun 2. katýnýn mührünü açar.
+30325	Arachnida Anahtarý	Baronesin yuvasýna giden kapýyý açar. Dayanýklý deðil, 24 saat sonra kýrýlýr. Ancak grup lideri kullanabilir.
+30327	Arachnida Flütü	Bu enstrümandan çýkan melodi, Örümcek Barones'i kendine çeker.
+30329	Altýn Diþli Çark	Ýsfet Steli'ndeki gizli mekanýzmayý harekete geçirir.
+30330	Maat Taþý	Adalet tanrýçasý Maat, kargaþayý düzene dönüþtürür.
+30331	Buz Anahtarý	Anahtar buz gibi soðuk ve Nemere Gözlemevi'nin üçüncü katýndaki kapýsýný açar. Sadece Þamanlar kullanabilir.
+30332	Kuzey Yýldýzý	Saf buzdan yapýlma bir mühür taþý. Nemere Gözlemevi'nin altýncý katýndaki kapýsýný açar.
+30333	Buzçiçeði Anahtarý	Buz anahtarý Nemere Gözlemevi'nin dokuzuncu katýndaki kapýsýný açar.
+30341	Ejderha Ateþi Yüzüðü	Enerji yüklü bir ýþýltý seni sarýyor. Ejderha ateþiyle oluþturulan bu yüzük Meley'in Ýni'ndeki heykelleri anýnda imha eder.
+30505	Zümrüt Ýþlemeli	Silahýný arýndýrmaya yarayan öðe
+30506	Safir Oyma Býçaðý	Silahýný arýndýrmaya yarayan alet
+30512	Kýrmýzý Ejderha Çeliði	Ejderha derisi çok hafif ve esnek ama oldukça dayanýklý. Metal gibi iþlenir ve zýrh yapýmý için kullanýlýr.
+30518	Altýn Ýplik	Sývý altýndan yapýlma büyülü iplik makarasý. Bir deðerli taþla birlikte kýymetli mücevher haline getirilebilir.
+30519	Altýn Kanca	Saf altýndan oluþur ve bir deðerli taþla birlikte kýymetli mücevher haline getirilebilir.
+30520	Altýn Kenet	Saf altýndan oluþur ve bir deðerli taþla birlikte kýymetli mücevher haline getirilebilir.
+30613	Orman Perisi Taþý	Gizemle ýþýldayan bu yeþil taþta aðaç ruhu olan bir Orman Perisi'nin ruhu kilitlidir. Orman Perisi Erebos'a giriþ yapýlabilmesini saðlayan gizli sözleri biliyor.
+30616	Titandiyoksit	Prizmatik kristal ekipman nesnesinin arýndýrýlmasýna yarar.
+30617	Akik	Gizemli ýþýldayan süs taþý ekipman nesnesinin arýndýrýlmasýna yarar.
+30618	Ay Taþý	Damla þeklindeki deðerli taþ bir kývýlcým ay ýþýðýný içinde taþýr. Bir ekipman nesnesinin arýndýrýlmasýna yarar.
+33031	Element Çiçeði	Element týlsýmlarýný geliþtiren çiçek þeklindeki deðerli taþ.
+39001	Büyülü Metal	Bu taþ, eþya yükseltmede baþarý þansýný yükseltir. Ayrýca, ne yok edilebilir ne de deðeri düþürülebilir. Bu eþyanýn ticareti var.
+39007	Demircinin El Kitabý	Yaþlý bir demircinin ruhuyla baðlý olan bir kitap. Nesne yükseltme þansýný artýrýr. Bu eþyanýn ticareti var.
+39008	Kötü Ruh Kovma Kaðýdý	Öðrenme baþarýsýz olursa, seni kötü ruhun lanetinden korur. Bu kaðýdýn yardýmýyla ayný gün bir beceri belgesi daha okuyabilirsin. Bu eþyanýn ticareti var.
+39022	Ejderha Parþömeni	Geliþtirme iþlemi baþarýsýz olduðunda bir eþyanýn yok olma riskini ortadan kaldýrýr. Yalnýzca kalitesi bir basamak düþer. Ayrýca baþarýlý bir geliþtirme ihtimali %10 artar. Bu eþyanýn ticareti var.
+39027	Taþ Sanatý Kitabý	Bir eþyada bulunan tüm kýrýk taþlarý çýkarýr. Bu sayede bir kere daha silah ve zýrhý yükseltme þansýn olur. Bu eþyanýn ticareti var.
+39030	Münzevi Tavsiyesi	Bir sonraki kitabý (ya da ruh taþýný) okurken yeteneðini geliþtirme þansýný iki buçuk katýna çýkarýr. Bu eþyanýn ticareti var.
+39039	Güneþ Özütü (B)	HP'ni otomatik olarak yeniler. 7.000.000 HP içerir. Bu eþyanýn ticareti var.
+39042	Ay Özütü (B)	SP'ni otomatik olarak yeniler. 700.000 SP içerir. Bu eþyanýn ticareti var.
+39063	Gaya maðazasýný sýfýrla	Gaya maðazasýný 5 saat dolmadan sýfýrlar ve hemen yeni, deðerli eþyalar kazandýrýr.
+39064	Gaya Maðazasýný Geniþlet	Deðerli bir eþya seçeneði için soldan ikinci sýranýn ilk bölümünden baþlayarak Gaya maðazasýný geniþletir.
+40108	Kesici Diþ Býçaðý+	Cadýlar Bayramý'nda kýlýcýný zincirli testereye dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40109	Kesici Diþ Hançeri+	Cadýlar Bayramý'nda hançerini zincirli testereye dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40110	Kesici Diþ Yayý+	Cadýlar Bayramý'nda yayýný çift taraflý zincirli testereye dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40111	Kesici Diþ Mýzraðý+	Cadýlar Bayramý'nda çift el kýlýcýný deðnekli zincirli testereye dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40112	Kesici Diþ Çaný+	Cadýlar Bayramý'nda çanýný zincirli testere gürzüne dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40113	Kesici Diþ Yelpazesi+	Cadýlar Bayramý'nda yelpazeni zincirli testere yelpazesine dönüþtüren bir silah görünümü. Sana en az bir tesadüfi bonus verir.
+40129	Aquarus býçaðý	Kýlýcýný saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+40130	Aquarus hançeri	Hançerini saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+40131	Aquarus yayý	Yayýný saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+40132	Aquarus glaive	Ýki elli kýlýcýný saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+40133	Aquarus çaný	Çanýný saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+40134	Aquarus yeplazesi	Yelpazeni saðlam ve yanar döner mavi suyla kaplayan silah görünümü.
+41029	Çöl Savaþçýsý (E, Bonus)	Erkeklere özel bu savaþ giysisiyle zorlu çöl koþullarýna karþý koyulur. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41030	Çöl Savaþçýsý (K, Bonus)	Bayanlara özel bu savaþ giysisiyle zorlu çöl koþullarýna karþý koyulur. Bu eþyanýn ticareti var.
+41117	Üç Silahþörler Kostümü	Üç silahþörler tarzýnda sýra dýþý bir kýyafet.
+41118	Hizmetçi Kýz Üniformasý	Fransýz hizmetçi kýz tarzýnda beyaz önlüklü siyah elbise.
+41119	Salsa Kýyafeti	Latin amerikali dansçýlara özel turuncu ve siyah renkte daracýk bir kýyafet.
+41120	Salsa Elbisesi	Siyah eldivenli kýrmýzý daracýk bir dans kýyafeti
+41121	Centilmen Kýyafeti	Aðýrbaþlý beylere özel þýk bir kýyafet
+41122	Kokteyl Kýyafeti	Gök mavi renkte kurdeleli bir elbise ve uygun sandaletler
+41125	Balkabaðý Smokini	Bu vesileyle yeniden tasarlandý ve tüm gözleri üstüne çekmeni saðlar.
+41126	Balkabaðý Giysisi	Bu vesileyle yeniden tasarlandý ve tüm gözleri üstüne çekmeni saðlar.
+41129	Üç Silahþörler Kostümü+	Üç silahþörler tarzýnda sýra dýþý bir kýyafet. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41130	Hizmetçi Kýz Üniformasý+	Fransýz hizmetçi kýz üniformasý tarzýnda beyaz önlüklü siyah bir elbise. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41131	Salsa Kýyafeti+	Latin amerikalý dansçýlara özel daracýk turuncu ve siyah bir kýyafet. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41132	Salsa Elbisesi+	Siyah eldivenli daracýk kýrmýzý dans elbisesi. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41133	Centilmen Kýyafeti+	Aðýrbaþlý beylere özel þýk bir kýyafet. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41134	Kokteyl Kýyafeti+	Gök mavi renkte kurdeleli bir elbise ve uygun sandaletler. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+41135	Balkabaðý Smokini(Bonus)	Bu vesileyle yeniden tasarlandý ve tüm gözleri üstüne çekmeni saðlar. Bu kostüm sana bir rastgele bonus kazandýrýr.
+41136	Balkabaðý Giysisi(Bonus)	Bu vesileyle yeniden tasarlandý ve tüm gözleri üstüne çekmeni saðlar. Bu kostüm sana bir rastgele bonus kazandýrýr.
+41307	Kobra Giysisi (e)	Yýlan motifli siyah parlak giysi
+41308	Kobra Giysisi (k)	Yýlan motifli siyah parlak giysi
+41309	Kobra Giysisi+ (e)	Yýlan motifli siyah parlak giysi. Sana en az bir rastgele bonus verir.
+41310	Kobra Giysisi+ (k)	Yýlan motifli siyah parlak giysi. Sana en az bir rastgele bonus verir.
+41311	Çöl Savaþçýsý (e, siyah)	Erkeklere özel siyah savaþ giysisi.
+41312	Çöl Savaþçýsý (k, siy.)	Kadýnlara özel siyah savaþ giysisi.
+41313	Çöl Savaþçýsý+ (e,siyah)	Erkeklere özel siyah savaþ giysisi. Sana en az bir rastgele bonus verir. Bu eþyanýn ticareti var.
+41314	Çöl Savaþçýsý+ (k, siy.)	Kadýnlar için siyah kumaþtan yapýlmýþ bir savaþ giysisi. Sana en az bir rastgele bonus verir.
+41315	Azrail'in Zýrhý (e)	Nam salmýþ Þeytan Prensi'nin çelik zýrhý.
+41316	Azrail'in Zýrhý (k)	Nam salmýþ Þeytan Prensi'nin çelik zýrhý.
+41317	Azrail'in Zýrhý+ (e)	Nam salmýþ Þeytan Prensi'nin çelik zýrhý. Sana en az bir rastgele bonus verir.
+41318	Azrail'in Zýrhý+ (k)	Nam salmýþ Þeytan Prensi'nin çelik zýrhý. Sana en az bir rastgele bonus verir.
+41324	Ay Yýldýz Savaþçýsý	Erkeklere özel ay yýldýz amblemi taþýyan savaþ giysisi
+41325	Ay Yýldýz Savaþçýsý	Bayanlara özel ay yýldýz amblemi taþýyan savaþ giysisi
+41326	Ay Yýldýz Savaþçýsý +	Erkeklere özel ay yýldýz amblemi taþýyan savaþ giysisi. Sana en az bir tane rastgele bonus kazandýrýr.
+41327	Ay Yýldýz Savaþçýsý +	Bayanlara özel ay yýldýz amblemi taþýyan savaþ giysisi. Sana en az bir tane rastgele bonus kazandýrýr.
+41528	Çöl Prensi (kýrmýzý)	Liderler için kýrmýzý kumaþtan yapýlan bir savaþçý kaftaný.
+41529	Çöl Prensi (mavi)	Liderler için mavi kumaþtan yapýlan bir savaþçý kaftaný.
+45053	Üç Silahþörler Saç Stili	Üç silahþörler tarzýnda bakýmlý kýsa sarý saç kesimi.
+45054	Hizmetçi Kýz Saç Stili	Hizmetçi kýz baþlýklý sarý küt saçlar.
+45055	Mini Mohikan	Mohikan tarzýnda havalý bir kýsa saç kesimi.
+45056	Salsa Düðümü	Kýrmýzý çiçekli zarif bir topuz.
+45057	Bogart Þapkasý	Humphrey Bogart tarzýnda klasik bir fötr þapka.
+45065	Üç Silahþörler SaçStili+	Üç silahþörler tarzýnda bakýmlý kýsa sarý saç kesimi. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45066	Hizmetçi Kýz Baþlýðý +	Hizmetçi kýz baþlýklý sarý küt saçlar. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45067	Mini Mohikan+	Mohikan tarzýnda göz alýcý bir kýsa saç kesimi. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45068	Salsa Düðümü+	Kýrmýzý çiçekli zarif bir topuz. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45069	Bogart Þapkasý+	Humphrey Bogart tarzýnda klasik bir fötr þapka. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45070	Çiçek Modeli+	Rengarenk çiçeklerle süslenmiþ þirin bir örgülü saç modeli. Sana en az bir tane rastgele bonus kazandýrýr. Bu eþyanýn ticareti var.
+45135	Kobra Saç Modeli (e)	Kobra giysisine uygun baþlýk
+45136	Kobra Saç Modeli (k)	Kobra giysisine uygun baþlýk
+45147	Siyah Kavuk (e)	Erkekler için siyah kumaþtan yapýlmýþ bir baþlýk.
+45148	Siyah Kavuk (k)	Kadýnlar için siyah kumaþtan yapýlmýþ bir baþlýk.
+45149	Siyah Kavuk+ (e)	Erkekler için siyah kumaþtan yapýlmýþ bir baþlýk. Sana en az bir rastgele bonus verir. Bu eþyanýn ticareti var.
+45150	Siyah Kavuk+ (k)	Kadýnlar için siyah kumaþtan yapýlmýþ bir baþlýk. Sana en az bir rastgele bonus verir.
+45151	Azrail'in Miðferi	Nam salmýþ Þeytan Prensi'nin yüzlü baþlýðý.
+45152	Azrail'in Miðferi (k)	Nam salmýþ Þeytan Prensi'nin yüzlü baþlýðý.
+45153	Azrail'in Miðferi+ (e)	Nam salmýþ Þeytan Prensi'nin yüzlü baþlýðý. Sana en az bir rastgele bonus saðlar.
+45154	Azrail'in Miðferi+ (k)	Nam salmýþ Þeytan Prensi'nin yüzlü baþlýðý. Sana en az bir rastgele bonus saðlar.
+45160	Ay Yýldýz Saç Modeli (e)	Yukarý toplanmýþ kýrmýzý beyaz rasta saç modeli.
+45161	Ay Yýldýz Saç Modeli (k)	Yukarý toplanmýþ saç bantlý kýrmýzý beyaz rasta saç modeli.
+45198	Kahverengi Kavuk	Savaþçýlar için dayanýklý bir kumaþtan üretilen zarif, kahverengi bir kavuk.
+45199	Beyaz Kavuk	Savaþçýlar için dayanýklý bir kumaþtan üretilen zarif, beyaz bir kavuk.
+45200	Kahverengi Baþlýk	Diþi savaþçýlar için hafif bir kumaþtan üretilen kahverengi bir baþlýk.
+45201	Beyaz Baþlýk	Diþi savaþçýlar için hafif bir kumaþtan üretilen beyaz bir baþlýk.
+45202	Kahverengi Kavuk+	Savaþçýlar için dayanýklý bir kumaþtan üretilen zarif, kahverengi bir kavuk. Sana en az bir rastgele bonus verir.
+45203	Beyaz Kavuk+	Savaþçýlar için dayanýklý bir kumaþtan üretilen zarif, beyaz bir kavuk. Sana en az bir rastgele bonus verir.
+45240	Kahverengi Baþlýk+	Diþi savaþçýlar için hafif bir kumaþtan üretilen kahverengi bir baþlýk. Sana rastgele en az bir bonus verir.
+45241	Yeþil Baþlýk+	Diþi savaþçýlar için hafif bir kumaþtan üretilen yeþil bir baþlýk. Sana rastgele en az bir bonus verir.
+50010	Çorap	Bazý insanlar, yýlbaþýnda hediyelerini bu çorabýn içine koyarlar.
+50011	Ayýþýðý Define Sandýðý	Göz alýcý süslemeleri insanlarý baþtan çýkarýr. Ayýþýðý aldýðýnda doða üstü þeyler olur.
+50053	Asker At Kitabý	En Üst düzeydeki binicilik sertifikasý|At üzerinde becerilerinizi kullanmanýza izin verir.
+50054	Saman	Acemi atlarýn beslemesi için kuru saman.
+50055	Havuç	Atlarýn favori sebzesi.
+50056	Kýrmýzý Ginseng	Güçlendirici ginseng. Sadece asker atlar kýrmýzý ginseng ile beslenir.
+50070	Ork Baþkanýnýn Sandýðý	Kutuda deðerli birþey olabilir.
+50071	Öðreti Lideri Sandýðý	Öðreti liderine ait olan sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50073	Kraliçe Örümcek Sandýðý	Kralýçe Örümcege ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50076	DevÇölkaplumbaða Sandýðý	Dev çöl kaplumbaðasýna ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50077	Dokuz Kuyruk Sandýðý	Dokuz Kuyruk Sandýðý. Ýçinde bazý kýymetli eþyalar mevcut.
+50078	Sarý Kaplan H. Sandýðý	Dev kaplana ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50079	Ateþ Kral Sandýðý	Ateþ Kralýna ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50080	Kýrmýzý Ejderha Sandýðý	Kýrmýzý Ejderhaya ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50082	Lusifer Sandýðý	Lusifer'e ait sandýk. Ýçinde bazý kýymetli eþyalar mevcut.
+50084	Kilit Açma Taþý	Bu taþýn, etrafýný saran enerji yüklü bir ýþýltýsý vardýr. Mühür büyülerine karþý etkilidir.
+50097	Azrail'in Sandýðý	Þeytani güçler bu sandýðý kilitli tutuyor. Ýçinde deðerli hazineler olmalý.
+50187	Çýrak Sandýðý I	Karþýlama hediyen maceraya ideal bir baþlangýç yapmak için gereken temel donanýmý içeriyor.
+50188	Çýrak Sandýðý I I	Sandýk ancak 10. seviyeye ulaþtýðýnda açýlabilir.
+50189	Çýrak Sandýðý III	Bu sandýk ancak 20. seviyeye ulaþtýðýnda açýlabilir.
+50190	Uzman Sandýðý I	Bu sandýk ancak 30. seviyeye ulaþtýðýnda açýlabilir.
+50191	Uzman Sandýðý II	Bu sandýk ancak 40. seviyeye ulaþtýðýnda açýlabilir.
+50192	Uzman Sandýðý III	Bu sandýk, ancak 50. seviyeye ulaþtýðýnda açýlabilir.
+50193	Usta Sandýðý I	Bu sandýk ancak 60. seviyeye ulaþtýðýnda açýlabilir.
+50194	Usta Sandýðý II	Bu sandýk ancak 75. seviyeye ulaþtýðýnda açýlabilir.
+50195	Usta Sandýðý III	Bu sandýk, ancak 100. seviyeye ulaþtýðýnda açýlabilir.
+50196	Büyük Üstat Sandýðý	Bu sandýk ancak 120. seviyeye ulaþtýðýnda açýlabilir.
+50212	Çýrak Sandýðý I	Karþýlama hediyen maceraya ideal bir baþlangýç yapmak için gereken temel donanýmý içeriyor.
+50213	Çýrak Sandýðý I	Karþýlama hediyesi maceraya ideal bir baþlangýç yapmak için gereken temel donanýmý içeriyor.
+50259	Cor Draconis, Antika	Kristal ejderha kalbi, içinde ruhu, ejderha taþýný barýndýrýr.
+50266	Jotun Thrym Sandýðý	Jotun Thrym sandýðý. Aðýr kilidi içinde deðerli bir þey bulunduðunu gösterir.
+50270	Kraliçe Meley'in Sandýðý	Bu sandýk Kraliçe Meley'in ininde bulundu. Gerçek bir kraliyet hazine içerr. Bu eþyanýn ticareti var.
+50271	Ejderha Bekçisi Sandýðý	Bu sandýk sayýsýz ejderha bekçisinin birkaç nadir ve yüzyýllardan beri kaybolduðu sanýlan hazineleri içerir. Bu eþyanýn ticareti var.
+50301	Sun zi Savaþ Sanatý	3 Savaþ stratejisi kitabýndan biri | Liderlik duygusunu arttýrýr | Kitap okundukan sonra yok olur.
+50302	Wu zi Savaþ Sanatý	3 Savaþ stratejisi kitabýndan biri | Liderlik duygusunu arttýrýr | Kitap okunduktan sonra yok olur.
+50303	WeiLiao Zi Savaþ Sanatý	3 Savaþ stratejisi kitabýndan biri | Liderlik duygusunu arttýrýr | Kitap okunduktan sonra yok olur.
+50307	Görev Kitabý(Kolay)	Kitabýn içinde kolay görevler var.
+50308	Görev Kitabý(Normal)	Kitabýn içinde normal görevler var.
+50309	Görev Kitabý(Zor)	Kitabýn içinde zor görevler var.
+50310	Görev Kitabý(Uzman)	Kitabýn içinde çok zor görevler var.
+50314	Dönüþüm Kitabý	Kitap baþarýyla okunduðunda dönüþüm becerisini yükselir. Kitap okunduktan sonra yok olur.
+50315	Ýleri Dönüþüm Kitabý	Bu kitabý iyi öðrenenin dönüþüm yeteneði artar. Okunduktan sonra yok olur.
+50316	Master Dönüþüm Kitabý	Bu kitabý yaratýða Dönüþmek için kullan | Liderlik duygusunu arttýrýr | Kitap okunduktan sonra yok olur.
+50323	Kitap Sandýðý Misilleme	Bu sandýk misilleme becerilerinin öðrenilmesini saðlayan rastgele bir beceri kitabý içerir.
+50324	Kitap Sandýð Güçlendirme	Bu sandýk güçlendirme becerilerinin öðrenilmesini saðlayan rastgele bir beceri kitabý içerir.
+50401	Üç Yönlü Kesme Klavuzu	Üç yönlü kesme becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50402	Kýlýç Çevirme Klavuzu	Kýlýç çevirme becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50403	Öfke Klavuzu	Öfke becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50404	Hava Kýlýcý Klavuzu	Hava kýlýcý becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50405	Hamle Klavuzu	Hamle becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50406	Yaþama Ýsteði Kitabý	Yaþama isteðini baþarýyla tamamlamak için kullanýlýr. Kitap okunduktan sonra kaybolur.
+50416	Ruh Vuruþu Klavuzu	Ruh vuruþu becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50417	Þiddetli Vuruþ Klavuzu	Þiddetli vuruþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50418	Güçlü Vuruþ Klavuzu	Güçlü vuruþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50419	Güçlü Beden Klavuzu	Güçlü beden becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50420	Kýlýç Darbesi Klavuzu	Kýlýç darbesi becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50421	Kýlýç Çemberi Kitabý	Kýlýç çemberini baþarýyla tamamlamak için kullanýlýr. Kitap okunduktan sonra kaybolur.
+50431	Suikast Klavuzu	Suikast becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50432	Hýzlý Saldýrý Klavuzu	Hýzlý saldýrý becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50433	Býçak Çevirme Klavuzu	Býçak çevirme becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50434	Kamuflaj Klavuzu	Kamuflaj becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50435	Zehirli Bulut Klavuzu	Zehirli bulut becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50436	Sinsi Zehir Kitabý	Sinsi zehri baþarýyla tamamlamak için kullanýlýr. Kitap okunduktan sonra kaybolur.
+50446	Tekrarlanan Atýþ Klavuzu	Tekrarlanan atýþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50447	Ok Yaðmuru Klavuzu	Ok yaðmuru becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50448	Ateþli Ok Klavuzu	Ateþli ok becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50449	Hafif Adým Klavuzu	Hafif adým becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50450	Zehirli Ok Klavuzu	Zehirli ok becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50451	Kývýlcým Vuruþu Kitabý	Kývýlcým vuruþu baþarýyla tamamlamak için kullanýlýr. Kitap okunduktan sonra kaybolur.
+50461	Parmak Darbesi Klavuzu	Parmak darbesi becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50462	Ejderha Dönüþü Klavuzu	Ejderha dönüþü becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50463	Büyülü Keskinlik Klavuzu	Büyülü keskinlik becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50464	Dehþet Klavuzu	Dehþet becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50465	Büyülü Zýrh Klavuzu	Büyülü zýrh becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50466	Büyü Çözme Klavuzu	Büyü çözme becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50476	Karanlýk Vuruþ Klavuzu	Karanlýk vuruþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50477	Ateþ Vuruþ Klavuzu	Ateþ vuruþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50478	Ateþ Hayaleti Klavuzu	Ateþ hayaleti becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50479	Karanlýk Koruma Klavuzu	Karanlýk koruma becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50480	Hayalet Vuruþ Klavuzu	Hayalet vuruþ becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50481	Karanlýk Küre Klavuzu	Karanlýk küre becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50491	Uçan Týlsým Klavuzu	Uçan týlsým becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50492	Ejderha Atýþý Klavuzu	Ejderha atýþý becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50493	Ejder Kükremesi Klavuzu	Ejder kükremesi becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50494	Kutsama Klavuzu	Kutsama becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50495	Yansýtma Klavuzu	Yansýtma becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50496	Ejderha Yardýmý Kitabý	Ejderha yardýmý becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50506	Þimþek Atmak Klavuzu	Þimþek atma becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50507	Þimþek Çaðýrma Klavuzu	Þimþek çaðýrma becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50508	Þimþek Pençesi Klavuzu	Þimþek pençesi becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50509	Ýyileþtirme Klavuzu	Ýyileþtirme becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50510	Hýz Klavuzu	Hýz becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50511	Yüksek Saldýrý Klavuzu	Saldýrý becerisinde ustalaþmak için kullanýlýr. Kitap okunduktan sonra yok olur.
+50513	Ruh Taþý	Grandmaster becerilerini artýran efsanevi taþ. Kullanýldýktan sonra yok olur.
+50516	Kýlýç Çevirme Misilleme	Bu kitap sana kýlýç çevirmeyle hasarýný düþürmeyi öðretir.
+50517	Suikast Misillemesi	Bu kitap sana suikastle hasarýný düþürmeyi öðretir.
+50518	Parmak Darbesi Misilleme	Bu kitap sana parmak darbesiyle hasarýný düþürmeyi öðretir.
+50519	Ejderha Atýþý Misilleme	Bu kitap sana ejderha atýþýyla hasarýný düþürmeyi öðretir.
+50520	Ruh Vuruþu Misillemesi	Bu kitap sana ruh vuruþuyla hasarýný düþürmeyi öðretir.
+50521	Ateþli Ok Misillemesi	Bu kitap sana ateþli okla hasarýný düþürmeyi öðretir.
+50522	Karanlýk Vuruþ Misilleme	Bu kitap sana karanlýk vuruþla hasarýný düþürmeyi öðretir.
+50523	Þimþek Çaðýrma Misilleme	Bu kitap sana þimþek çaðýrmayla hasarýný düþürmeyi öðretir.
+50560	Kýlýç Çevirme Güçlendir.	Bu kitap sana kýlýç çevirmeyi güçlendirme becerisini öðretir.
+50561	Suikast Güçlendirmesi	Bu kitap sana suikasti güçlendirme becerisini öðretir.
+50562	Parmak Darbesi Güçlendir	Bu kitap sana parmak darbesini güçlendirme becerisini öðretir.
+50563	Ejderha Atýþý Güçlendirm	Bu kitap sana ejderha atýþý güçlendirme becerisini öðretir.
+50564	Ruh Vuruþu Güçlendirmesi	Bu kitap sana ruh vuruþu güçlendirme becerisini öðretir.
+50565	Ateþli Ok Güçlendirmesi	Bu kitap sana ateþ okunu güçlendirme becerisini öðretir.
+50566	Karanlýk Vuruþ Güçlendir	Bu kitap sana karanlýk vuruþun güçlendirme becerisini öðretir.
+50567	Þimþek Çaðýrma Güçlendir	Bu kitap sana þimþek çaðýrma güçlendirme becerisini öðretir.
+50621	Elmas	Bu deðerli mücevher aksesuarlara eklenebilir.
+50622	Kehribar	Güzel bir kehribar| Aksesuarlara eklenebilir.
+50623	Fosil Aðaç Gövdesi	Aksesuarlara dayanýklýlýk kazandýran deðerli bir odun.
+50624	Bakýr	Bazen bronz ve bozuk para yapýmýnda kullanýlýr | Bakýr aksesuarlara eklenebilir.
+50625	Gümüþ	Mücevher yapýmýnda kullanýlan parlak bir soy metal.
+50626	Altýn	Mücevher yapýmýnda kullanýlýr. | Altýn aksesuarlara eklenebilir.
+50627	YeþimTaþý	5000 yýlý aþkýn süredir kullanýlan deðerli bir mineral. Mücevher yapýmýnda hala kullanýlýr.
+50628	Abanoz	Tüm odunlarýn en parlak ve güçlüsü.| Abanoz aksesuarlara eklenebilir.
+50629	Ýnci	Sedeften üretilen, zarif þekilde parýldayan, mücevherlerin mücevheridir.
+50630	Beyaz Altýn	Dayanýklý, beyazlaþtýrýlmýþ bu altýn mücevher yapýmýnda sevilerek kullanýlýr.
+50631	Kristal	Farklý renklerde olabilen kristal kuvars. Mücevher yapýmýnda sýkça kullanýlýr.
+50632	Ametist	Mor kuartz.| Ametist aksesuarlara eklenebilir.
+50633	Cennetin Gözyaþý	Cennetten kristalleþmiþ yaðmur | Cennetin gözü aksesuarlara eklenebilir.
+50926	Süs Taþý	Süs taþlarý topla ve Gaya tüccarýnýn bunlarý deðerli Gayaya dönüþecek þekilde bilemesini saðla.
+51001	Enerji Parçasý	Enerji kristaline ait parça. 30 tanesiyle bir kristal üretilebilir.
+51002	Enerji Kristali	Bu kristal iki saat boyunca bonuslarýný artýrýr.
+52040	Vahþi aslan	Mühür, binicisinin saldýrý deðerini 30 artýran vahþi aslanýný çaðýrýr.
+53010	Leonidas	Bu mühürle aslan yavrun Leonidas'ý yanýna çaðýrabilirsin. Bu petin sana saðladýklarý: | +%15 büyü/yakýn dövüþ saldýrýsý | +1500 HP
+53011	Khan	Bu mühürle kaplan yavrun Khan'ý yanýna çaðýrabilirsin. Bu petin sana saðladýklarý: | +%15 büyü/yakýn dövüþ saldýrýsý | +1500 HP
+53012	Porki	Bu mühürle yaban domuzu yavrun Porki'yi yanýna çaðýrabilirsin. Bu petin sana saðladýklarý: | +%15 büyü/yakýn dövüþ saldýrýsý | +1500 HP
+53013	Rufus	Bu mühürle kurt yavrusu Rufus'u yanýna çaðýrabilirsin. Bu petin sana saðladýklarý: | +%15 büyü/yakýn dövüþ saldýrýsý | +1500 HP
+53017	Yeþim Ankasý	Mühür, zarif yeþim ankasýný çaðýrýr. Bu petin sana saðladýklarý | +%15 büyü-/yakýn saldýrýsý | +%50 EXP bonus þansý.
+53256	Bonsai	Bu mühür minik savaþçý Bonsa'yý çaðýrýr.
+54043	Çýrak Sandýðý I	Karþýlama hediyen, maceraya ideal bir baþlangýç yapmak için gereken temel donanýmý içeriyor.
+55008	Pet Ýsmi Parþömeni	Petinin ismini deðiþtirmek için parþömeni petinin üzerine çek.
+55009	Pet Kitabý Sandýðý	Rastgele seçilmiþ bir pet beceri kitabý içerir.
+55010	Dayanýklýlýk (Savaþçý)	Bu beceriyi öðrendikten sonra petin dayanýklýlýðýný savaþçý ataklarýna karþý artýrýr.
+55011	Dayanýklýlýk (Sura)	Bu beceriyi öðrendikten sonra petin dayanýklýlýðýný Sura ataklarýna karþý artýrýr.
+55012	Dayanýklýlýk (Ninja)	Bu beceriyi öðrendikten sonra petin dayanýklýlýðýný ninja ataklarýna karþý artýrýr.
+55013	Dayanýklýlýk (Þaman)	Bu beceriyi öðrendikten sonra petin dayanýklýlýðýný þaman ataklarýna karþý artýrýr.
+55401	Maymun Yumurtasý	Petinin yumurtadan çýkmasýný istiyorsan sað fare tuþu ile yumurtayý týkla.
+55402	Örümcek Yumurtasý	Petinin yumurtadan çýkmasýný istiyorsan sað fare tuþu ile yumurtayý týkla.
+55403	Razadör Yumurtasý	Petinin yumurtadan çýkmasýný istiyorsan sað fare tuþu ile yumurtayý týkla.
+55404	Nemere Yumurtasý	Petinin yumurtadan çýkmasýný istiyorsan sað fare tuþu ile yumurtayý týkla.
+55405	Mavi Ejderha Yumurtasý	Petini kuluçkadan çýkarmak istersen farenin sað tuþuyla yumurtaya týkla.
+55406	Kýzýl Ejderha Yumurtasý	Petini kuluçkadan çýkarmak istersen farenin sað tuþuyla yumurtaya týkla.
+55407	Azrailcik yumurtasý	Petini kuluçkadan çýkarmak istersen farenin sað tuþuyla yumurtaya týkla.
+55408	Tombk cellatck yumurtasý	Petini kuluçkadan çýkarmak istersen farenin sað tuþuyla yumurtaya týkla.
+55409	Baashido Yavrusu Yumurt.	Petini kuluçkadan çýkarmak istersen farenin sað tuþuyla yumurtaya týkla.
+55410	Nessie yumurtasý	Petini kuluçkadan çýkarmak istersen, farenin sað tuþuyla yumurtaya týkla.
+55411	Exedyar Yumurtasý	Petini kuluçkadan çýkarmak istersen, farenin sað tuþuyla yumurtaya týkla.
+55701	Küçük Maymun	Petini sað fare tuþu ile çaðýr ve ardýndan P tuþu ile pet kullanýcý ara birimini görüntüle.
+55702	Küçük Örümcek	Petini sað fare tuþu ile çaðýr ve ardýndan P tuþu ile pet kullanýcý ara birimini görüntüle.
+55703	Küçük Razadör	Petini sað fare tuþu ile çaðýr ve ardýndan P tuþu ile pet kullanýcý ara birimini görüntüle.
+55704	Küçük Nemere	Petini sað fare tuþu ile çaðýr ve ardýndan P tuþu ile pet kullanýcý ara birimini görüntüle.
+55705	Küçük Ejderha	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55706	Küçük Meley	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55707	Azrailcik	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55708	Tombik cellatcýk	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55709	Baashido Yavrusu	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55710	Nessie	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+55711	Exedyar yavrusu	Petini farenin sað tuþuna týklayarak çaðýr. Sonra "P" tuþuna basarak petinin kullanýcý arayüzünü görüntüle.
+70031	Eskrim Broþürü	Bu broþür, diðer þeylerin yanýnda, insan anatomisinin potansiyeli ve zayýflýklarý konularýný içerir.
+70038	Cesaret Pelerini	Gerçek savaþçýlar taþýdýklarý renkli pelerin ile tüm yaratýklarýn dikkatini kendi üzerlerine çeker ve böylelikle kahramanlýklarýný kanýtlarlar.
+70039	Demircinin El Kitabý	Eski demircilerin ruhlarýný barýndýran kitap. Kullanýlýrsa, yükseltme baþarýsý oranýný arttýrýr.
+70063	Köstümü dönüþtür	Kostümlerinden birinin bonuslarýný kaldýrýr ve yenilerini ekler. Þansýn yaver giderse bu arada bonuslarýnýn sayýsý deðiþir. (en fazla 3 olacak kadar)
+70064	Kostümü efsunla	Kostümlerinden birinin bonuslarýný kaldýrýr ve yenilerini ekler.
+70065	Kostüm Bonusu Aktarýmý	Bir kostümdeki bonusu baþka bir kostüme aktarýr. Bu iþlemde kostümlerden biri yok edilir.
+70102	Zen Fasulye	Kötü sýralamayý azaltýr|iyi sýralamayý arttýrýr.
+70104	Dönüþüm Küresi	Bu küreyle yaratýða dönüþebilirsin.
+70105	Dönüþüm Küresi	Bu küreyle yaratýða dönüþebilirsin.
+70106	Dönüþüm Küresi	Bu küreyle yaratýða dönüþebilirsin.
+70107	Dönüþüm Küresi	Bu küreyle yaratýða dönüþebilirsin.
+70201	Saç Boyasý Temizleyici	Saçlarý orjinal rengine döndürür. Bu iþlemi görmüþ saçlarý tekrar boyayabilirsiniz.
+70202	Beyaz Saç Boyasý	Saçý beyaza boyar.| Her 3 seviyede bir kez kullanabilirsiniz.
+70203	Sarý Saç Boyasý	Saçý sarýya boyar.|Her 3 seviyede bir kez kullanabilirsiniz.
+70204	Kýrmýzý Saç Boyasý	Saçý kýrmýzýya boyar.|Her 3 seviyede bir kez kullanabilirsiniz.
+70205	Kahverengi Saç Boyasý	Saçý kahverengiye boyar.|Her 3 seviyede bir kez kullanabilirsiniz.
+70206	Siyah Saç Boyasý	Saçý siyaha boyar.|Her 3 seviyede bir kez kullanabilirsiniz.
+70301	Söz Yüzüðü	Sevenleri belli eden yüzük.
+70302	Nikah Yüzüðü	Evli çiftleri belirleyen yüzük.
+70602	Ruh Parþömeni (%100)	Bu parþömenle ruhunu bir basamak ilerleyecek þekilde geliþtir.
+70603	Ruh Parþömeni	Bu parþömenle ruhunu bir basamaða kadar ilerleyecek þekilde geliþtir. Deneme baþarýsýz olabilir.
+71001	Kötü Ruh Kovma Kaðýdý	Öðrenme baþarýsýz olursa, kötü ruh lanetinden korunmanýzý saðlar.
+71002	Statü Sýfýrlama Kaðýdý	Statü puanlarýný sýfýrlayarak karakterinizi baþka yönde geliþtirmenizi saðlar.
+71032	Ejderha Parþömeni	Geliþtirme iþlemi baþarýsýz olduðunda bir eþyanýn yok olma riskini ortadan kaldýrýr. Yalnýzca kalitesi bir basamak düþer. Ayrýca baþarýlý bir geliþtirme ihtimali %10 artar.
+71035	Araþtýrmacýnýn Özütü	Topladýðýnýz araþtýrma nesnelerinin kalitesini arttýrýr, böylece kabul edilmeleri kolaylaþýr. Yohara'daki görevler için geçerli deðildir.
+71048	Deðiþim Týlsýmý	Bu týlsým karakterinizin cinsiyetini deðiþtirebilir.
+71054	Krallýklarýn Ýzi	Bir karakter baþka bir krallýða kaçabilir, yani krallýk deðiþtirebilir.
+71055	Ýsim Ýzi	Karakter ismini deðiþtirir.
+71075	Saç Boyasý(Beyaz)	Saçý beyaza boyar.
+71076	Saç Boyasý(Sarýþýn)	Saçý sarýya boyar.
+71077	Saç Boyasý(Kýrmýzý)	Saçý kýrmýzýya boyar.
+71078	Saç Boyasý(Kahverengi)	Saçý kahverengiye boyar.
+71079	Saç Boyasý(Siyah)	Saçý siyaha boyar.
+71083	Taþ Sanatý Kitabý	Kýrýk taþý eklentiden silerek, boþ ekleme alaný oluþturur.
+71084	Efsun Nesnesi	Nesnelerinden birinin bonuslarýný siler ve yenilerini ekler. Sadece 1-5 bonuslarý için geçerlidir.
+71093	Dönüþüm Küresi	Bu küreyle bir yaratýða dönüþebilirsin.
+71094	Münzevi Tavsiyesi	Bir sonraki kitabý (ya da ruh taþýný) okurken yeteneðini geliþtirme þansýný iki buçuk katýna çýkarýr.
+71099	Yer Deðiþtirme Yüzüðü	Lonca liderinin yer deðiþimi ayarlamasýný saðlar.
+71100	Bilgi Deðiþim Kaðýdý	Tüm bilgini unut ve yenisini edin.
+71103	Tekrar Daðýtma (VIT)	Canlýlýðýný 1'e düþürür ve puanlarýný yeniden daðýtmaný saðlar.
+71104	Tekrar dðtma kaðýdý(INT)	Zeka puanýný 1'e düþürür ve puanlarýný yeniden daðýtmaný saðlar.
+71105	Tekrar Daðýtma (STR)	Gücünü 1'e düþürür ve puanlarýný tekrar daðýtmaný saðlar.
+71106	Tekrar Dðtma Kaðýdý(DEX)	Çevikliðini 1'e düþürür ve puanlarýný tekrar daðýtmaný saðlar.
+71107	Yaþam Meyvesi	Sýralama puanýný 2.000 arttýrýr (soðuma süresi: 8 saat).
+71123	Ejderha Pulu	Ejderha pullarý bilinen en þiddetli malzemeler arasýnda yer alýyor.
+71124	Beyaz Aslan	Beyaz kürklü hayvanlara oldukça ender rastlanýyor.
+71125	Savaþ yaban domuzu	Kötü hayvan ruhlarýný dizginleþtirmek ancak sihir sanatý ile mümkün.
+71126	Kýzgýn kurt	Kötü hayvan ruhlarýný dizginleþtirmek ancak sihir sanatý ile mümkün.
+71127	Vahþi kaplan	Kötü hayvan ruhlarýný dizginleþtirmek ancak sihir sanatý ile mümkün. Sonucuysa çok etkileyici.
+71128	Yýrtýcý aslan	Kötü hayvan ruhlarýný dizginleþtirmek ancak sihir sanatý ile mümkün. Sonucuysa çok etkileyici.
+71129	Ejderha Pençesi	Bu ürkütücü pençeyi görünce anýlar canlanýyor...
+71137	Kral kaplaný (mavi)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (mavi) çaðýrýr. Tecrübe toplamayý %30 artýrýr.
+71138	Kral kaplaný (kýrmzý)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (kýrmýzý) çaðýrýr. Tecrübe toplamayý %30 artýrýr.
+71139	Kral kaplaný (altýn)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (altýn) çaðýrýr.
+71140	Kral kaplaný (yeþil)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (yeþil) çaðýrýr. Tecrübe toplamayý %30 artýrýr.
+71141	Kral Kaplaný (gri)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (gri) çaðýrýr. Tecrübe toplamayý %30 artýrýr.
+71142	Kral kaplaný (beyaz)	Mührün büyüsü, heybetli Kral Kaplaný bineðini (beyaz) çaðýrýr. Tecrübe toplamayý %30 artýrýr.
+71149	Ölümcül Gücün Yüzüðü	Sana bir süre boyunca +%30 EXP, +%20 Suralara karþý savunma þansý, +%20 Þamanlara karþý savunma þansý, +%20 Lycanlara karþý savunma þansý, +%30 canavarlara karþý güç, +%10 maksimum HP ile +%10 maksimum SP saðlar.
+71151	Yeþil Efsun	Nesnelerinden birinin bonuslarýný siler ve yenilerini ekler. Yalnýzca 30. seviye ve altýndaki silahlara ve zýrhlara uygulanabilir. Ticareti yok.
+71161	Equus Purpur	Güzel mi güzel ve ender bulunan mor at mührü. Hareket hýzýný 60 artýrýr.
+71164	Kuyruklu yýldýz	Ren geyiði Kuyruklu Yýldýz'ý yanýna çaðýran bir mühür. Hareket hýzýný 60 artýrýr.
+71165	Kutup predatörü	Savaþsever Kutup Predatörü'nü yanýna çaðýran bir mühür. Hareket hýzýný 60 artýrýr.
+71166	Zýrhlý panda	Zýrhlý Panda'yý yanýna çaðýran bir mühür. Hareket hýzýný 60 artýrýr.
+71171	Tekboynuz	Tekboynuz'unu yanýna çaðýran bir mühür. Hareket hýzýný 60 artýrýr.
+71172	Kabus	Kabus'unu yanýna çaðýran bir mühür. Hareket hýzýný 60 artýrýr.
+71176	Siyah Panter	Esrarengiz siyah Panter'ini yanýna çaðýran bir mühür. Hareket hýzýný 30 artýrýr.
+71177	Leopar	Cesur Leopar'ýný yanýna çaðýran bir mühür. Hareket hýzýný 30 artýrýr.
+71182	Muffin (kahverengi)	Korku salan savaþ tavuðu Muffin'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71183	Nugget (kahverengi)	Korkunç savaþ tavuðu Nugget'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71184	Muffin (mavi)	Korku salan savaþ tavuðu Muffin'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71185	Nugget (mavi)	Korkunç savaþ tavuðu Nugget'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71186	Muffin (kahverengi)	Korku salan savaþ tavuðu Muffin'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71187	Nugget (yeþil)	Korkunç savaþ tavuðu Nugget'i yanýna çaðýran bir mühür. Hareket hýzýný 20 artýrýr.
+71192	Gürleme	Gümbürtü isimli ren geyiðini yanýna çaðýran bir mühür. Hareket hýzýný 20, tecrübe toplamayý %30 artýrýr.
+71193	Þimþek	Þimþek isimli ren geyiðini yanýna çaðýran bir mühür. Hareket hýzýný 20, tecrübe toplamayý %30 artýrýr.
+71197	Nugget (lacivert)	Bu mühürle, korkunç savaþ tavuðu Nugget'i yanýna çaðýrýrsýn.
+71198	Muffin (pembe)	Bu mühürle, korku salan savaþ tavuðu Muffin'i yanýna çaðýrýrsýn.
+71221	Nirvana ejderhasý	Mühür, Nirvana Ejderha'ný çaðýrýr.
+71222	Samsara ejderhasý	Mühür, Samsara Ejderha'ný çaðýrýr.
+71223	Manni	Bu mühürle güçlü bir mamutu çaðýrýrsýn.
+71224	Manu	Bu mühürle güçlü bir mamutu çaðýrýrsýn.
+71225	Spektral at	Bu mühür, parlak bineðini çaðýrýr.
+71226	At Nokturnat	Bu mühür, gece karanlýðý bineðini çaðýrýr.
+71227	Ay gölgesi	Bu mühür, kemikli savaþ atý Ay gölgesini çaðýrýr.
+71228	Gümüþ yýldýz	Bu mühür, kemikli savaþ atý Gümüþ yýldýzý çaðýrýr.
+71250	Beyaz Sfenks	Bu mühür, beyaz ve ayný zamanda bilge olan bineðini çaðýrýr.
+71251	Taþ Sfenks	Bu mühür, sert ve ayný zamanda sakin olan bineðini çaðýrýr.
+72301	Kutsama Kaðýdý	Geliþtirme baþarýsýz olduðunda eþyanýn yok olma riski ortadan kalkýp, sadece seviyesi 1 kademe düþer.
+72309	Demircinin El Kitabý	Yaþlý bir demircinin ruhuyla baðlý olan bir kitap. Kullanýlýrsa, yükseltme baþarýsý oranýný arttýrýr.
+72310	Kötü Ruh Kovma Kaðýdý	Öðrenme baþarýsýz olursa, seni kötü ruhun lanetinden korur. Bu kaðýdýn yardýmýyla ayný gün bir beceri belgesi daha okuyabilirsin.
+72314	Ejderha Parþömeni	Geliþtirme iþlemi baþarýsýz olduðunda bir eþyanýn yok olmasý riskini ortadan kaldýrýr. Yalnýzca kalitesi bir basamak düþer. Ayrýca baþarýlý bir geliþtirme ihtimali %10 artar.
+72319	Envanter geniþlemesi	Envanterini geniþletmek için bu nesneyi kullan. Ticareti yapýlabilir.
+72320	Envanter Geniþletme	Envanterini geniþletmek için bu nesneyi kullan.
+72725	Güneþ Özütü (B)	HP'ni otomatik olarak yeniler. 7.000.000 HP içerir.
+72729	Ay Özütü (B)	SP'ni otomatik olarak yeniler. 700.000 SP içerir.
+73001	Havalý Kýsa Saç (kýzýl)	Saç stili size çarpýcý bir görüntü kazandýrýr.
+73002	Havalý Kýsa Saç (açýk)	Saç stili size çarpýcý bir görüntü kazandýrýr.
+73003	Havalý Kýsa Saç (mavi)	Saç stili size çarpýcý bir görüntü kazandýrýr.
+73004	Havalý Kýsa Saç (kahve)	Saç stili size çarpýcý bir görüntü kazandýrýr.
+73005	Bandana (kýzýl)	Bandana ile bantlanmýþ daðýnýk saç stili.
+73006	Bandana (ekoseli kahve)	Bandana ile bantlanmýþ daðýnýk saç stili.
+73007	Bandana (mavi)	Bandana ile bantlanmýþ daðýnýk saç stili.
+73008	Bandana (ekoseli yeþil)	Bandana ile bantlanmýþ daðýnýk saç stili.
+73009	Uzun saç (siyah)	Savaþçýlarýn atalarý tarafýndan kullanýlan arkadan baðlý saç stili.
+73010	Uzun saç (kýzýl)	Savaþçýlarýn atalarý tarafýndan kullanýlan arkadan baðlý saç stili.
+73011	Uzun saç (açýk kahve)	Savaþçýlarýn atalarý tarafýndan kullanýlan arkadan baðlý saç stili.
+73012	Uzun saç (açýk yeþil)	Savaþçýlarýn atalarý tarafýndan kullanýlan arkadan baðlý saç stili.
+73251	At kuyruðu (kahve)	At kuyruðu þeklinde toplanmýþ uzun saçlar.
+73252	At kuyruðu (yeþil)	At kuyruðu þeklinde toplanmýþ uzun saçlar.
+73253	At kuyruðu (mavi)	At kuyruðu þeklinde toplanmýþ uzun saçlar.
+73254	At kuyruðu (fildiþi)	At kuyruðu þeklinde toplanmýþ uzun saçlar.
+73255	Güzel Kýsa Saç (kýzýl)	Doðal gösteren uzun saç stili.
+73256	Güzel Kýsa Saç (kahve)	Doðal gösteren uzun saç stili.
+73257	Güzel Kýsa Saç (açýk)	Doðal gösteren uzun saç stili.
+73258	Güzel Kýsa Saç (bordo)	Doðal gösteren uzun saç stili.
+73259	Kýsa Saç stili (kýzýl	Tehditkâr bir görünüm kazandýran kullanýþlý kýsa saç stili.
+73260	Kýsa Saç stili (mavi)	Tehditkâr bir görünüm kazandýran kýsa saç stili.
+73261	Kýsa Saç stili (siyah)	Tehditkâr bir görünüm kazandýran kýsa saç stili.
+73262	Kýsa Saç stili (sarý)	Size zalim bir görüntü veren saç stili.
+73501	Spor Saç Stili (beyaz)	Askeri stil saç kesimi.
+73502	Spor Saç Stili (kahve)	Askeri stil saç kesimi.
+73503	Spor Saç Kesimi (sarý)	Askeri stil saç kesimi.
+73504	Spor Saç Kesimi (yeþil)	Askeri stil saç kesimi.
+73505	Karizmatik Saç (beyaz)	Güçlü bir karakteri gösteren saç stili.
+73506	Karizmatik Saç (kýzýl)	Güçlü bir karakteri gösteren saç stili.
+73507	Karizmatik Saç (siyah)	Güçlü bir karakteri gösteren saç stili.
+73508	Karizmatik Saç (bordo)	Güçlü bir karakteri gösteren saç stili.
+73509	Þýk Saç Modeli (Beyaz)	Tüm saçýn arkaya tarandýðý moda bir saç stili.
+73510	Þýk Saç Modeli (mavi)	Tüm saçýn arkaya tarandýðý moda bir saç stili.
+73511	Þýk Saç Modeli (Siyah)	Tüm saçýn arkaya tarandýðý moda bir saç stili.
+73512	Þýk Saç Modeli (kahve)	Tüm saçýn arkaya tarandýðý moda bir saç stili.
+73751	Zarif saç stili (kahve)	Kelebek tokasýyla ayarlanmýþ þýk bir saç modeli.
+73752	Zarif saç stili (siyah)	Kelebek tokasýyla ayarlanmýþ þýk bir saç modeli.
+73753	Zarif saç stili(mavi)	Kelebek tokasyýla ayarlanmýþ þýk bir saç modeli.
+73754	Zarif saç stili (beyaz)	Kelebek tokasyýla ayarlanmýþ þýk bir saç modeli.
+73755	Orta Uz. Saç (kahve)	Þýk Þaman saç stili.
+73756	Orta Uz. Saç (siyah	Þýk Þaman saç stili.
+73757	Orta Uz. Saç (sarý)	Zarif ve düz saç stili.
+73758	Orta Uz. Saç (mor)	Þýk Þaman saç stili.
+73759	Eski saç stili (kahve)	Uzun katlý feminen bir saç stili.
+73760	Eski saç stili (açýk)	Uzun ve geleneksel saç stili.
+73761	Eski saç stili (mor)	Uzun katlý feminen bir saç stili.
+73762	Eski saç stili (kýzýl)	Uzun katlý feminen bir saç stili.
+74001	Moda Saç Stili (kýzýl)	Bu saç modeli kendine özgü bir görünüm kazandýrýr
+74002	Moda Saç Stili (açýk)	Bu saç stili sana çarpýcý bir görünüm kazandýrýr
+74003	Moda Saç (mavi)	Bu saç stili sana çarpýcý bir görünüm kazandýrýr
+74004	Moda Saç (kahve)	Bu saç stili sana çarpýcý bir görünüm kazandýrýr
+74005	Bandana (kýzýl)	Kýrmýzý bandanalý kýsa kahverengi saçlar
+74006	Bandana (ekoseli kahve)	Açýk renk bandanalý kýsa sarý saç stili.
+74007	Bandana (mavi)	Kahverengi bandanalý kýsa mavi saçlar
+74008	Bandana (ekoseli yeþil)	Yeþil bandanalý kýsa yeþil saçlar
+74009	Uzun saç (siyah)	Savaþçýlara çarpýcý bir görünüm kazandýran saç stili
+74010	Uzun saç (kýzýl)	Çarpýcý bir görünüm kazandýran saç stili
+74011	Uzun saç (kahve)	Etkileyici bir görünüm kazandýran saç stili
+74012	Uzun saç (yeþil)	Etkileyici bir görünüm kazandýran saç stili
+74013	Savaþçý Afro (e)	Erkek savaþçýya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74014	Savaþçý Afro (e)	Erkek savaþçýya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74015	Savaþçý(e)Samuray Miðfer	Erkek savaþçýya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74016	Savaþçý(e)Samuray Miðfer	Erkek savaþçýya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74017	Savaþçý Fesi (e)	Erkek savaþçýlar için kýrmýzý bir baþlýk. (süresi 7 gün)
+74018	Savaþçý Puþisi (e)	Erkek savaþçýlar için bir baþlýk. (süresi 7 gün)
+74019	Savaþçý Kavuðu (e)	Erkek savaþçýlar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+74020	Jack Pumpkin Savaþçý (e)	Savaþçý için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+74251	At kuyruðu (kahve)	Örülmüþ uzun kahverengi saçlar - Bayanlarýn çok sevdiði bir saç stili
+74252	At kuyruðu (yeþil)	Örülmüþ uzun yeþil saçlar - Bayanlarýn çok sevdiði bir saç stili
+74253	At kuyruðu (mavi)	Örülmüþ uzun mavi saçlar - Bayanlarýn çok sevdiði bir saç stili
+74254	At kuyruðu (fildiþi)	Örülmüþ uzun açýk renk saçlar - Bayanlarýn çok sevdiði bir saç stili
+74255	Omuz hiz. saç (kýzýl)	Þýmarýk ve havalý gösteren saç stili
+74256	Omuz hiz. saç (kahve)	Þýmarýk ve havalý gösteren saç stili
+74257	Omuz hiz. saç/açýk	Þýmarýk ve havalý gösteren saç stili
+74258	Omuz hiz. saç/mor	Þýmarýk ve havalý gösteren saç stili
+74259	Kýsa Saç stili (kýzýl)	Ninja tarzda perçemli kýrmýzý saç stili
+74260	Kýsa Saç stili (mavi)	Ninja tarzda perçemli mavi saç stili
+74261	Kýsa Saç stili (siyah)	Ninja tarzda perçemli siyah saç stili.
+74262	Kýsa Saç stili (sarý)	Ninja tarzda perçemli sarý saç stili
+74263	Ninja Afro (k)	Bayan ninjaya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74264	Ninja Afro (k)	Bayan ninjaya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74265	Ninja (k): Çiçekli Þapka	Bayan ninjaya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74266	Ninja (k): Çiçekli Þapka	Bayan ninjaya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74267	Ninja (k): Kum Peçesi	Bayan ninjalar için çok deðerli kumaþtan yapýlma bir peçe. (süresi 7 gün)
+74268	Ninja (k): Çöl Puþisi	Bayan ninjalar için kýymetli kumaþtan yapýlma bir çöl puþisi. (süresi 7 gün)
+74269	Ninja Sarýðý (k)	Bayan ninjalar için çok deðerli kumaþtan yapýlma bir kavuk. (süresi 7 gün)
+74270	Jack Pumpkin Ninja (k)	Bayan ninjalar için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+74501	Spor Saç Stili (beyaz)	Askeri tarzda kýsa kesimli saç stili
+74502	Spor Saç Stili (kahve)	Askeri tarzda kýsa kesimli saç stili
+74503	Spor Saç Kesimi (sarý)	Askeri tarzda kýsa kesimli saç stili
+74504	Spor Saç Kesimi (yeþil)	Askeri tarzda kýsa kesimli saç stili.
+74505	Karizmatik Saç (beyaz)	Bu saç stili sana kiþisel bir görünüm kazandýrýr.
+74506	Karizmatik Saç (kýzýl)	Bu saç stili sana kiþisel bir görünümün kazandýrýr.
+74507	Karizmatik Saç (siyah)	Bu saç stili sana kiþisel bir görünüm kazandýrýr.
+74508	Karizmatik Saç (mor)	Bu saç stili sana kiþisel bir görünüm kazandýrýr.
+74509	Uzun örgü (beyaz)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74510	Uzun örgü (mavi)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74511	Uzun örgü (siyah)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74512	Uzun örgü (kahve)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74513	Sura Afro (e)	Erkek suraya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74514	Sura Afro (e)	Erkek suraya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74515	Sura (e):Samuray Miðferi	Erkek suraya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74516	Sura (e):Samuray Miðferi	Erkek suraya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süre 7 gün).
+74517	Sura Fesi (e)	Erkek suralar için kýrmýzý bir baþlýk. (süresi 7 gün)
+74518	Sura Puþisi (e)	Erkek suralar için bir baþlýk. (süresi 7 gün)
+74519	Sura Kavuðu (e)	Erkek suralar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+74520	Jack Pumpkin Sura (e)	Sura için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+74521	Moda saç stili (gri)	Bu saç stili sana çarpýcý bir görünüm kazandýrýr
+74522	Bandana	Bandana ile toplanmýþ kýsa saç stili.
+74523	Uzun saç (sarý)	Gösteriþli ve sarý saçlý, göz alýcý bir saç stili.
+74524	Moda saç stili (altýn)	Modaya uygun bandanalý altýn saç.
+74525	Bandana (siyah)	Bandana ile toplanmýþ daðýnýk saç stili.
+74526	Uzun saç (yakut kýrmýzý)	Gösteriþli yakut kýrmýzýsý saç.
+74527	At Kuyruðu (kýrmýzý)	At kuyruðu þeklinde toplanmýþ uzun saçlar.
+74528	Omuzda Saç/su	Mavi bandanalý kibar saç stili
+74529	Kýsa Saç Modeli (kahve)	Korku veren rahat bir kýsa saç stili.
+74530	At Kuyruðu (kýrmýzý)	Uzun, kýrmýzý ve saç örgüsü þeklinde toplanmýþ saçlar. Bayanlarýn çok sevdiði bir saç stili.
+74531	Omuzda Saç/siyah	Þýmarýk ve havalý bir saç stili
+74532	Kýsa Saç Modeli (gri)	Tehditkâr bir görünüm kazandýran kýsa saç stili.
+74533	Spor Saç Modeli (siyah)	Askeri tarzda kýsa saç stili
+74534	Karizma Saç Modeli(sarý)	Bu saç stili sana kiþisel bir görünümün kazandýrýr.
+74535	Uzun Saç Örgüsü (pembe)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74536	Spor Saç Modeli (mor)	Sýra dýþý bir kýsa saç modeli
+74537	Karizma Saç Modeli(sarý)	Karizmatik uzun saç modeli
+74538	Uzun Saç Örgüsü (azur)	Evvelce zenginlik sembolü olan eski tarz örgülü saç.
+74539	Zarif Saç Stili(eflatun)	Toplanmýþ zarif saç stili
+74540	Orta Uz. Saç (koyu)	Zarif bir þaman saç stili
+74541	Eski Saç Modeli (beyaz)	Uzun ve geleneksel saç stili.
+74542	Zarif Saç Mod. (kýrmýzý)	Kelebekli iðneyle yukarý toplanmýþ zarif saç stili.
+74543	Orta Uz. Saç (beyaz)	Zarif düz saçlar
+74544	Eski Saç Modeli (siyah)	Feminen tarzda katlý uzun saç stili.
+74545	Kabile saç örg.+ (kýzýl)	Ait olduðun kabileyi gösteren kýrmýzý ahþap boncuklarla süslenmiþ saç örgüsü.
+74546	Kabile saç örg.+ (sarý)	Ait olduðun kabileyi gösteren sarý ahþap boncuklarla süslenmiþ saç örgüsü.
+74547	Kabile saç örg.+ (mavi)	Ait olduðun kabileyi gösteren mavi ahþap boncuklarla süslenmiþ saç örgüsü.
+74548	Kabile saç örg.+ (efl.)	Ait olduðun kabileyi gösteren eflatun ahþap boncuklarla süslenmiþ saç örgüsü.
+74549	Kabile saç örg.+ (yeþil)	Ait olduðun kabileyi gösteren yeþil ahþap boncuklarla süslenmiþ saç örgüsü.
+74550	Koruyucu alýnl.+ (altýn)	Ýþlemeli, klasik saç modelli bir koruyucu alýnlýk.
+74551	Koruyucu alýnl.+ (siyah)	Ýþlemeli, klasik saç modelli bir koruyucu alýnlýk.
+74552	Koruyucu alýnl.+ (kýrm.)	Ýþlemeli, klasik saç modelli bir koruyucu alýnlýk.
+74553	Koruyucu alýnl.+ (mavi)	Ýþlemeli, klasik saç modelli bir koruyucu alýnlýk.
+74554	Koruyucu alýnl.+ (byz.)	Ýþlemeli, klasik saç modelli bir koruyucu alýnlýk.
+74555	Koruyucu baþlýk+ (altýn)	Þakaklarý iyice koruyan, klasik saç modelli bir koruyucu baþlýk.
+74556	Koruyucu baþlýk+ (siyah)	Þakaklarý iyice koruyan, klasik saç modelli bir koruyucu baþlýk.
+74557	Koruyucu baþlýk+ (kýrm.)	Þakaklarý iyice koruyan, klasik saç modelli bir koruyucu baþlýk.
+74558	Koruyucu baþlýk+ (mavi)	Þakaklarý iyice koruyan, klasik saç modelli bir koruyucu baþlýk.
+74559	Koruyucu baþlýk+ (yeþil)	Þakaklarý iyice koruyan, klasik saç modelli bir koruyucu baþlýk.
+74751	Zarif Saç Modeli (kahve)	Kelebekli iðneyle yukarý toplanmýþ zarif saç stili.
+74752	Zarif Saç Modeli (siyah)	Kelebekli iðneyle yukarý toplanmýþ zarif saç stili.
+74753	Zarif saç stili (mavi)	Kelebekli iðneyle yukarý toplanmýþ zarif saç stili.
+74754	Zarif Saç Modeli (beyaz)	Kelebekli iðneyle yukarý toplanmýþ zarif saç stili.
+74755	Orta Uz. Saç (kahve)	Zarif bir þaman saç stili
+74756	Orta Uz. Saç (siyah)	Zarif bir þaman saç stili
+74757	Orta Uz. Saç (sarý)	Zarif bir þaman saç stili
+74758	Orta Uz. Saç (mor)	Zarif bir þaman saç stili
+74759	Eski Saç Stili (kahve)	Feminen tarzda katlý uzun saç stili.
+74760	Eski Saç Stili (sarýþýn)	Feminen tarzda katlý uzun saç stili.
+74761	Eski saç stili (mor)	Feminen tarzda katlý uzun saç stili.
+74762	Eski saç stili (kýzýl)	Feminen tarzda katlý uzun saç stili.
+74763	Þaman Afro (d)	Bayan þamana %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74764	Þaman Afro (d)	Bayan þamana %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74765	Þaman (d): Çiçekli Þapka	Bayan þamana %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süre 7 gün).
+74766	Þaman (d): Çiçekli Þapka	Bayan þamana %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+74767	Þaman (d): Kum Peçesi	Bayan þamanlar için çok deðerli kumaþtan yapýlma bir peçe. (süresi 7 gün)
+74768	Þaman (d): Çöl Puþisi	Bayan þamanlar için kýymetli kumaþtan yapýlma bir çöl puþisi. (süresi 7 gün)
+74769	Þaman Sarýðý (d)	Bayan þamanlar için çok deðerli kumaþtan yapýlma bir sarýk. (süresi 7 gün)
+74770	Jack Pumpkin Þaman (k)	Bayan þaman için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+75001	Modern saç (kýzýl)	Kýzýl saçlý ve bandanalý modern saç stili.
+75002	Modern saç (açýk)	Açýk renk saçlý ve bandanalý modern saç stili.
+75003	Modern saç (mavi)	Mavi saçlý ve bandanalý modern saç stili.
+75004	Modern saç (kahve)	Kahverengi saçlý ve bandanalý modern saç stili.
+75005	Bandana (kahve)	Bandana ile toplanmýþ daðýnýk kýsa saç stili.
+75006	Bandana (sarýþýn)	Bandana ile toplanmýþ daðýnýk kýsa saç stili.
+75007	Bandana (mavi)	Bandana ile toplanmýþ daðýnýk kýsa saç stili.
+75008	Bandana (yeþil)	Bandana ile toplanmýþ daðýnýk kýsa saç stili.
+75009	Uzun saç (siyah)	Görkemli siyah saçlar
+75010	Uzun saç (kýzýl)	Görkemli kýrmýzý saçlar
+75011	Uzun saç (kahve)	Görkemli kahverengi saçlar
+75012	Uzun saç (yeþil)	Görkemli yeþil saçlar
+75013	Savaþçý Afro (d)	Bayan savaþçýya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süre 7 gün).
+75014	Savaþçý Afro (d)	Bayan savaþçýya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75015	Savaþçý(d):Çiçekli Þapka	Bayan savaþçýya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75016	Savaþçý(d):Çiçekli Þapka	Bayan savaþçýya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75017	Savaþçý (d): Kum Peçesi	Bayan savaþçýlar için çok deðerli kumaþtan yapýlma bir peçe. (süresi 7 gün)
+75018	Savaþçý (d): Çöl Puþisi	Bayan savaþçýlar için kaliteli kumaþtan yapýlma bir çöl puþisi. (süresi 7 gün)
+75019	Savaþçý Sarýðý (d)	Bayan savaþçýlar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+75020	Jack Pumpkin Savaþçý (k)	Bayan savaþçý için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+75201	At kuyruðu (kahve)	At kuyruðu þeklinde toplanmýþ saçlar.
+75202	At kuyruðu (yeþil)	At kuyruðu þeklinde toplanmýþ saçlar.
+75203	At kuyruðu (mavi)	At kuyruðu þeklinde toplanmýþ saçlar.
+75204	At kuyruðu (gri)	At kuyruðu þeklinde toplanmýþ saçlar.
+75205	Omuz Hiz. Saç (kýrmýzý)	Beyaz bandanalý kibar bir saç stili.
+75206	Omuz Hiz. Saç (kahve)	Yeþil bandanalý, kibar bir saç stili.
+75207	Omuz hiz. saç/açýk	Açýk renk bandanalý kibar bir saç stili.
+75208	Omuz Hiz. Saç (mor)	Kýrmýzý bandanalý kibar bir saç stili.
+75209	Kýsa saç (kýzýl)	Tehditkâr bir görünüm kazandýran saç stili.
+75210	Kýsa saç (mavi)	Tehditkâr bir görünüm kazandýran saç stili.
+75211	Kýsa saç (siyah)	Tehditkâr bir görünüm kazandýran saç stili.
+75212	Kýsa saç (sarýþýn)	Tehditkâr bir görünüm kazandýran saç stili.
+75213	Ninja Afro (e)	Erkek ninjaya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75214	Ninja Afro (e)	Erkek ninjaya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75215	Ninja(e):Samuray Miðferi	Erkek ninjaya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75216	Ninja(e):Samuray Miðferi	Erkek ninjaya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75217	Ninja Fesi (e)	Erkek ninjalar için kýrmýzý bir baþlýk. (süresi 7 gün)
+75218	Ninja Puþisi (e)	Erkek ninjalarý çöl fýrtýnalarýndan koruyan bir baþlýk. (süresi 7 gün)
+75219	Ninja Kavuðu (e)	Erkek ninjalar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+75220	Jack Pumpkin Ninja (e)	Ninja için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+75401	Spor Saç Stili (gri)	Bayan suralara özgü sýradýþý saç stili.
+75402	Spor saç stili (kahve)	Bayan suralara özgü sýradýþý saç stili.
+75403	Spor Saç Stili (sarýþýn)	Bayan suralara özgü sýradýþý saç stili.
+75404	Spor saç stili (yeþil)	Bayan suralara özgü sýradýþý saç stili.
+75405	Karizmatik Saç (beyaz)	Uçuk tarzda uzun beyaz saçlar.
+75406	Karizmatik Saç (kýzýl)	Uçuk tarzda uzun kýrmýzý saçlar.
+75407	Karizmatik Saç (siyah)	Uçuk bir görünüm kazandýran uzun siyah saçlar.
+75408	Karizmatik Saç (mor)	Uçuk tarzda uzun mor saçlar.
+75409	Uzun örgü (beyaz)	Örgülü saç stili
+75410	Uzun örgü (mor)	Örgülü saç stili
+75411	Uzun örgü (siyah)	Örgülü saç stili
+75412	Uzun örgü (kahve)	Örgülü saç stili
+75413	Sura Afro (k)	Bayan suraya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75414	Sura Afro (k)	Bayan suraya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75415	Sura (k): Çiçekli Þapka	Bayan suraya %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75416	Sura (k): Çiçekli Þapka	Bayan suraya %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75417	Sura (k): Kum Peçesi	Bayan þuralar için çok deðerli kumaþtan yapýlma bir peçe. (süresi 7 gün)
+75418	Sura (k): Çöl Puþisi	Bayan þuralar için kaliteli kumaþtan yapýlma bir çöl puþisi. (süresi 7 gün)
+75419	Sura Sarýðý (k)	Bayan þuralar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+75420	Jack Pumpkin Sura (k)	Bayan sura için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+75601	Gös. Saç Stili (kahve)	Þamana asil bir görünüm kazandýran modern kesim.
+75602	Zarif saç stili (siyah)	Þamana asil bir görünüm kazandýran modern kesim.
+75603	Zarif saç stili (mavi)	Þamana asil bir görünüm kazandýran modern kesim.
+75604	Zarif saç stili (açýk)	Þamana asil bir görünüm kazandýran modern kesim.
+75605	Orta Uz. Saç (kahve)	Düz kahverengi saç.
+75606	Orta Uz. Saç(siyah)	Düz siyah saç.
+75607	Orta Uz. Saç (açýk)	Düz sarý saç.
+75608	Orta Uz. Saç(mor)	Düz mor saç.
+75609	Eski saç stili (kahve)	Eski savaþçý saç stili. Kahverengi saçlar örgü þeklinde toplanmýþtýr.
+75610	Eski saç stili (açýk)	Eski savaþçý saç stili. Açýk renk saçlar örgü þeklinde toplanmýþtýr.
+75611	Eski saç stili (mor)	Eski savaþçý saç stili. Mor saçlar örgü þeklinde toplanmýþtýr.
+75612	Eski saç stili (kýzýl)	Eski savaþçý saç stili. Kýzýl saçlar örgü þeklinde toplanmýþtýr.
+75613	Þaman Afro (e)	Erkek þamana %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75614	Þaman Afro (e)	Erkek þamana %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75615	Þaman(e):Samuray Miðferi	Erkek þamana %1'lik HP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75616	Þaman(e):Samuray Miðferi	Erkek þamana %1'lik SP bonusu kazandýrýr. Mevcut saç stilinin yerini alýr (süresi 7 gün).
+75617	Þaman Fesi (e)	Erkek þamanlar için kýrmýzý bir baþlýk. (süresi 7 gün)
+75618	Þaman Puþisi (e)	Erkek þamanlarý çöl fýrtýnalarýndan koruyan bir baþlýk. (süresi 7 gün).
+75619	Þaman Kavuðu (e)	Erkek þamanlar için kýymetli kumaþtan yapýlma bir baþlýk. (süresi 7 gün)
+75620	Jack Pumpkin Þaman (e)	Þaman için balkabaðý þeklinde bir maske. Öznitelik ve süre rastgele belirlenir. Mevcut olan saç stillerinin yerini alýr.
+76001	Statü Sýfýrlama Kaðýdý	Bu nesneyi kullanman, statü puanlarýný yeniden daðýtma olanaðý saðlar. Böylece karakterini baþka bir yönde geliþtirebilirsin. Ticareti yok.
+76002	Küçülen Kafa	Küçülen Þeytan Kafasý Þeytan Katakombu'nun 3. katýnýn mührünü açar. Ticareti yok.
+76007	Cesaret Pelerini	Tüm yaratýklarýn kendine çeken renkli bir pelerin. Savaþçýlar bununla bir zamanlar cesaretlerini kanýtlardý. Ticareti yok.
+76016	Kutsama Parþömeni	Geliþtirme baþarýsýz olduðunda eþyanýn yok olma riskini ortadan kaldýrýr. Bu durumda sadece kalitesi 1 puan düþer. Ticareti yok.
+76023	Yeþil Efsun	Nesnelerinden birinin bonuslarýný siler ve yenilerini ekler. Yalnýzca 40. seviye ve altýndaki silahlara ve zýrhlara uygulanabilir. Seviye sandýðýndan bir eþyadýr, ticareti yok.
+76025	Rüzgarýn Ayakkabýlarý	Bu esya ile Ochao Tapinagi'nin zindaniyla yüzlesebilirsin.
+79501	Ok Çantasý	Seni 24 saat boyunca sonsuz sayýda okla destekleyen bir çanta. Hasar uzun menzilli atýþlarda düþmez.
+79502	Ok Çantasý	Seni 7 gün boyunca sonsuz sayýda okla destekleyen bir çanta. Hasar uzun menzilli atýþlarda düþmez.
+79503	Ok Çantasý	Seni savaþta sonsuz sayýda okla destekleyen bir çanta. Hasar uzun menzilli atýþlarda düþmez.
+79504	Ok Çantasý	Seni savaþta sonsuz sayýda okla destekleyen bir çanta. Hasar uzun menzilli atýþlarda düþmez.
+85001	Hakim Kuþaðý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85002	Hakim Kuþaðý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85003	Hakim Kuþaðý (asil)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85004	Hakim Kuþaðý(kiþiye öz.)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85005	Usta Kuþaðý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85006	Usta Kuþaðý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85007	Usta Kuþaðý (asil)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85008	Usta Kuþaðý (kiþiye öz.)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85011	Bey Kuþaðý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85012	Bey Kuþaðý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85013	Bey Kuþaðý (soylu)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85014	Bey Kuþaðý (kiþiye özel)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85015	Kral Kuþaðý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85016	Kral Kuþaðý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85017	Kral Kuþaðý (soylu)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85018	Kral Kuþaðý (kiþiye öze)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85071	Chou Bandý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85072	Chou Bandý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85073	Chou Bandý (asil)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85074	Chou Bandý (kiþiye özel)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85075	Mao Bandý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85076	Mao Bandý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85077	Mao Bandý (asil)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85078	Mao Bandý (kiþiye özel)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+85079	Yu Bandý (basit)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %1'ini emer.
+85080	Yu Bandý (zarif)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %5'ini emer.
+85081	Yu Bandý (asil)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %10'unu emer.
+85082	Yu Bandý (kiþiye özel)	Bu kuþak kullandýðýn silah veya zýrha ait bonusun %11~25'ini emer.
+90000	Dönüþüm Belgesi	Omuz kuþaðýndaki bonuslarý silmek için dönüþüm belgesini kullan.
+10951	Beyaz Yelken	Bu esya Gemi Savunma zindaniyla savasmak için kullanilir.
+10954	Ates Kristali	Bu Kristal, bir NPC'den bir Ates Tilsimi satin almak veya yükseltmek için kullanilir.
+10955	Buz Kristali	Bu Kristal, bir NPC'den bir Buz Tilsimi satin almak veya yükseltmek için kullanilir.
+10956	Karanlik Kristali	Bu Kristal, bir NPC'den bir Karanlik Tilsimi satin almak veya yükseltmek için kullanilir.
+10957	Simsek Kristali	Bu Kristal, bir NPC'den bir Simsek Tilsimi satin almak veya yükseltmek için kullanilir.
+10958	Rüzgar Kristali	Bu Kristal, bir NPC'den bir Rüzgar Tilsimi satin almak veya yükseltmek için kullanilir.
+10959	Toprak Kristali	Bu Kristal, bir NPC'den bir Toprak Tilsimi satin almak veya yükseltmek için kullanilir.
+10960	1. Sira Altin Alasimli Sandik	Ödül 1. Siniflandirilmis Altin Lig.
+10961	1. Sira Gümüs Alasimli Sandik	Ödül 1. Siniflandirilmis Gümüs Lig.
+10962	1. Sira Bronz Alasimli Sandik	Ödül 1. Siniflandirilmis Bronz Lig.
+10963	2. Sira Altin Alasimli Sandik	2. Siniflandirilmis Altin Lig'i ödüllendirin.
+10964	2. Sira Gümüs Alasimli Sandik	2. Siniflandirilmis Gümüs Lig'i ödüllendirin.
+10965	2. Sira Bronz Alasimli Sandik	2. Siniflandirilmis Bronz Lig'i ödüllendirin.
+10966	3. Sira Altin Alasimli Sandik	3. Siniflandirilmis Altin Lig'i ödüllendirin.
+10967	3. Sira Gümüs Alasimli Sandik	3. Siniflandirilmis Gümüs Lig'i ödüllendirin.
+10968	3. Sira Bronz Alasimli Sandik	3. Siniflandirilmis Bronz Lig'i ödüllendirin.
+18901	Kirmizi Alev Tasi (Kalici)	Kemerinizin bonuslarini arttirir. Süre: kalici
+27798	Tatli su karidesi	Büyük baliklari yakalamak için yem.	Nadir bir baligin yakalanma sansini %20 arttirir.
+27799	Kilçik	Bir Baligin Kemikleri
+27800	Yapistirici	Hafif ve ucuz bir yem	Nadir bir baligin yakalanma sansini %5 arttirir.
+27801	Solucan	Baliklari çeken popüler yem.	Nadir bir baligin yakalanma sansini %8 arttirir.
+27802	Minik Balik	Büyük baliklari çeken yem.	Nadir bir baligin yakalanma sansini %12 arttirir.
+27863	Izgara Zander	Asagidakileri almak için bu baligi yiyin:
+27864	Izgara Mandalina Baligi	Asagidakileri almak için bu baligi yiyin:
+27865	Izgara Büyük Zander	Asagidakileri almak için bu baligi yiyin:
+27866	Izgara Sazan	Asagidakileri almak için bu baligi yiyin:
+27867	Izgara Somon	Asagidakileri almak için bu baligi yiyin:
+27868	Izgara Ot Sazani	Asagidakileri almak için bu baligi yiyin:
+27869	Izgara Dere Alabaligi	Asagidakileri almak için bu baligi yiyin:
+27870	Izgara yilan baligi	Asagidakileri almak için bu baligi yiyin:
+27871	Izgara Gökkusagi Alabaligi	Asagidakileri almak için bu baligi yiyin:
+27872	Izgara nehir alabaligi	Asagidakileri almak için bu baligi yiyin:
+27873	Izgara kizilcik	Asagidakileri almak için bu baligi yiyin:
+27874	Izgara levrek	Asagidakileri almak için bu baligi yiyin:
+27875	Izgara tençi	Asagidakileri almak için bu baligi yiyin:
+27876	Izgara yayin baligi	Asagidakileri almak için bu baligi yiyin:
+27877	Izgara Loach	Asagidakileri almak için bu baligi yiyin:
+27878	Izgara Lotus Baligi	Asagidakileri almak için bu baligi yiyin:
+27879	Izgara tatli balik	Asagidakileri almak için bu baligi yiyin:
+27880	Izgara kokusu	Asagidakileri almak için bu baligi yiyin:
+27881	Izgara seri	Asagidakileri almak için bu baligi yiyin:
+27882	Izgara Aynali Sazan	Asagidakileri almak için bu baligi yiyin:
+27883	Izgara Altin balik	Asagidakileri almak için bu baligi yiyin:
+27884	Izgara yilanbasi	Asagidakileri almak için bu baligi yiyin:
+27885	Izgara Skygazer	Asagidakileri almak için bu baligi yiyin:
+27886	Izgara Kirmizi Kral Yengeç	Asagidakileri almak için bu baligi yiyin:
+27887	Izgara Yabby	Asagidakileri almak için bu baligi yiyin:
+30002	Kara egrelti otu	Chaegirab'in ilgisini çekebilir.
+30003	Chaegirab yüzügü	Chaegirab'in ilgisini çekebilir.
+30004	Metin kristali	Chaegirab'in ilgisini çekebilir.
+30005	Saflastirilmis çekirdek	Chaegirab'in ilgisini çekebilir.
+30006	Ork Disi	Chaegirab'in ilgisini çekebilir..
+30015	Seytan Hatirasi	Chaegirab'in ilgisini çekebilir.
+30047	Lanet Kitabi	Chaegirab'in ilgisini çekebilir.
+30050	Buz Topu	Chaegirab'in ilgisini çekebilir.
+30094	Yang Çantasi Küçük	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 200.000 ile 600.00 yang arasinda bulabilirsiniz.
+30095	Yang Çantasi Orta	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 400.000 ile 1.200.000 yang arasinda bulabilirsiniz.
+30096	Yang Çantasi Büyük	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 700.000 ile 2.100.000 yang arasinda bulabilirsiniz.
+30097	Yang Çantasi Küçük	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 200.000 ile 600.00 yang arasinda bulabilirsiniz.
+30098	Yang Çantasi Orta	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 400.000 ile 1.200.000 yang arasinda bulabilirsiniz.
+30099	Yang Çantasi Büyük	Yang'i bu çantadan bulabilirsiniz, Açmak için sag tiklayin. 700.000 ile 2.100.000 yang arasinda bulabilirsiniz.
+30165	Zelkova Dali	Chaegirab'in ilgisini çekebilir.
+30166	Tugyis Tabelasi	Chaegirab'in ilgisini çekebilir.
+30167	Kirmizi Hayalet Agaci Dali	Chaegirab'in ilgisini çekebilir.
+30168	Liderin Notlari	Chaegirab'in ilgisini çekebilir.
+30251	Kötülük Mücevheri	Chaegirab'in ilgisini çekebilir.
+30252	Bilgelik Mücevheri	Chaegirab'in ilgisini çekebilir.
+30255	Ates Yaziti	Bu esya, Ates Tilsimi'ni yükseltmek için kullanilir.
+30256	Simsek Yaziti	Bu esya, Simsek Tilsimi'ni yükseltmek için kullanilir.
+30257	Toprak Yaziti	Bu esya, Toprak Tilsimi'ni yükseltmek için kullanilir.
+30258	Buz Yaziti	Bu esya, Buz Tilsimi'ni yükseltmek için kullanilir.
+30259	Rüzgar Yaziti	Bu esya, Rüzgar Tilsimi'ni yükseltmek için kullanilir.
+30260	Karanlik Yaziti	Bu esya, Karanlik Tilsimi'ni yükseltmek için kullanilir.
+30271	Metin Kayasi Parçasi	Bu öge, ekipman parçalarini yükseltmek için kullanilir.
+30273	Mistik sertifika	Bu öge, ekipman parçalarini epiklestirmek için kullanilir.
+30274	Antika Sertifika	Bu öge, ekipman parçalarini epiklestirmek için kullanilir.
+30275	Epik Sertifika	Bu öge, ekipman parçalarini epiklestirmek için kullanilir.
+30276	Efsanevi Sertifika	Bu öge, ekipman parçalarini epiklestirmek için kullanilir.
+30277	Tanrilar Kristali	100 birim Tanrilar Kristali ile 1 Tanrilar Kristali+ takas edebilirsiniz.	Onlari dönüstürmek için sag tiklayin.
+30278	Tanrilar Kristali+	Bu öge, gelistirmeler, isçilik ve çesitli npc satin alimlari için kullanilir.
+30279	Günes Kristali	100 birim Günes Kristali ile 1 Günes Kristali+ takas edebilirsiniz.	Onlari dönüstürmek için sag tiklayin.
+30280	Günes Kristali+	Bu öge, gelistirmeler, isçilik ve çesitli npc satin alimlari için kullanilir.
+30282	Razador Boynuzu	Bu öge, ekipman parçalarini yükseltmek için kullanilir.
+30283	Nemere Boynuzu	Bu öge, ekipman parçalarini yükseltmek için kullanilir.
+30284	Ruhsuz Tas	Bu öge, NPC'den iyilestirmeler ve çesitli satin almalar için kullanilir.
+30516	Antika Apolet	Ekipman iyilestirme için öge.
+30524	Alev Tasi	Ekipman iyilestirme için öge.
+30525	Buz Alevi Tasi	Ekipman iyilestirme için öge.
+30587	Mor Kumas	Ekipman iyilestirme için öge.
+30602	Mavi boya	Ekipman iyilestirme için öge.
+30610	Mitril	Ekipman iyilestirme için öge.
+30612	Saglam Ipler	Ekipman iyilestirme için öge.
+30614	Siyah Boya	Ekipman iyilestirme için öge.
+30615	Beyaz Boya	Ekipman iyilestirme için öge.
+30623	Balçik sisesi bos	Bu esya Slime zindaninda kullanilir, bir kez düstügünde slime üzerine sürüklenmelidir.
+30624	Balçik sisesi dolu	Bu esya Slime zindaninda kullanilir, bir kez düstügünde çakmaktasina sürüklenmelidir.
+30625	Menhir balçik parçasi	Bu esya Slime zindaniyla savasmak için kullanilir.
+30798	Piramit Zindani Bileti	Bu esya ile piramitlerin zindaniyla yüzlesebilirsiniz.
+30800	Parsömen parçasi 1	Bu esya Piramit Zindaninin ikinci katinin üstesinden gelmek için kullanilir.
+30801	Parsömen parçasi 2	Bu esya Piramit Zindaninin ikinci katinin üstesinden gelmek için kullanilir.
+30802	Parsömen parçasi 3	Bu esya Piramit Zindaninin ikinci katinin üstesinden gelmek için kullanilir.
+30803	Parsömen parçasi 4	Bu esya Piramit Zindaninin ikinci katinin üstesinden gelmek için kullanilir.
+30804	Adaçayi Bandi	Bu esya Piramit Zindaninda kullanilir.
+30805	Antik Anahtar	Bu esya Piramit Zindaninda kullanilir.
+30806	Antik Sandik	Bu esya Piramit Zindaninda kullanilir.
+39015	Demirci Taþý	Bu tasla demirciden bir esya satin almak mümkündür.
+39048	Savasçi Sandigi	Savasçilar için faydali kitaplar içeren paket.
+39050	Ninja Sandigi	Ninja için faydali kitaplar içeren paket.
+39052	Sura Sandigi	Sura için faydali kitaplar içeren paket.
+39054	Saman Sandigi	Saman için faydali kitaplar içeren paket.
+39065	Yang (20kk)	20kk Yang içerir.
+39066	Yang (40kk)	40kk Yang içerir.
+39067	Yang (70kk)	70kk Yang içerir.
+39068	Yang (15kk)	15kk Yang içerir.
+39069	Yang (10kk)	10kk Yang içerir.
+39070	Yang (30kk)	30kk Yang içerir.
+39071	Yang (5kk)	5kk Yang içerir.
+39072	Yang (25kk)	25kk Yang içerir.
+39073	Yang (35kk)	35kk Yang içerir.
+39074	Yang (55kk)	55kk Yang içerir.
+39075	Yang (50kk)	50kk Yang içerir.
+39076	Yang (100kk)	100kk Yang içerir.
+39077	Yang (150kk)	150kk Yang içerir.
+39079	Yang (80kk)	80kk Yang içerir.
+39080	Yang (130kk)	130kk Yang içerir.
+39081	Yang (230kk)	230kk Yang içerir.
+39082	Yang (120kk)	120kk Yang içerir.
+39083	Yang (220kk)	220kk Yang içerir.
+40004	Eek'in Yüzügü	Size özel bonuslar veren gizli malzemelerle yapilmis bir Yüzük.
+40095	Karanlik Zodyak Yelpazesi	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40096	Karanlik Zodyak Çani	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40097	Karanlik Zodyak Oragi	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40098	Karanlik Zodyak Yayi	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40099	Karanlik Zodyak Biçagi	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40100	Karanlik Zodyak Kilici	Battle Pass magazasindan satin alinabilen bir silah görünümü.
+40143	Arastirmaci Iksiri +	Bu iksir, esyalarin kalitesini arttirir ve bekleme süresini sifirlar.
+40144	Arastirmaci Iksiri	Bu iksir, bekleme süresini sifirlar.
+40192	Karanlik Zodyak Kostümleri (f)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40193	Karanlik Zodyak Kostümleri (m)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40194	Karanlik Zodyak Kostümleri (f)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40195	Karanlik Zodyak Kostümleri (m)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40196	Karanlik Zodyak Kostümleri (m)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40197	Karanlik Zodyak Kostümleri (f)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40198	Karanlik Zodyak Kostümleri (m)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+40199	Karanlik Zodyak Kostümleri (f)	Silahlarla eslesen efektlere sahip zodyak kostümü.
+45242	Siyah örgüler + (m)	Zodyak Kostümüne uyan özel örgüler.
+45243	Siyah örgüler + (f)	Zodyak Kostümüne uyan özel örgüler.
+46003	Hilal Savasçisi (f)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46004	Hilal Savasçisi (m)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46005	Azrail'in Zirhi (f)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46006	Azrail'in Zirhi (m)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46007	Çöl Savasçisi (f)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46008	Çöl Savasçisi (m)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46303	Azrail'in Migferi (f)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46304	Azrail'in Migferi (m)	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46307	Salsa Topuzu	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46308	Mini Mohawk	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46601	Yirtik Dis Yelpazesi	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46602	Yirtik Dis Çani	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46603	Aquarus Yelpazesi	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46604	Aquarus Çani	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46605	Seker Çani	Bu öge yalnizca destek samani tarafindan giyilebilir.
+46606	Buzlu Fan	Bu öge yalnizca destek samani tarafindan giyilebilir.
+50063	Razador Sandigi	Bu sandik Kizil Ejderha Kalesinden alindi. Gerçekten muhtesem bir hazine içeriyor.
+50064	Nemere Sandigi	Bu sandik Nemere'nin Gözetleme Kulesi'nden çikarildi. Gerçekten muhtesem bir hazine içeriyor.
+50065	Buz Cadisi Sandigi	Bu sandik degerli bir sey içeriyor.
+50066	Degerli Sandik	Bu sandik, ekipmaniniz için degerli esyalar içerir. Kostümler için kanat kostümleri ve diger faydali esyalari içerebilir.
+50067	Günlük Hediye Sandigi	Bu Sandik bazi harika ödüller içeriyor.
+50069	Lord Hayalet Agaç Sandigi	Bu sandik degerli bir sey içeriyor.
+50072	Ork Labirent Sandigi	Bu sandik degerli bir sey içeriyor.
+50074	Barones Sandigi	Bu sandik degerli bir sey içeriyor.
+50075	Balçik Kraliçe Sandigi	Bu sandik degerli bir sey içeriyor.
+50081	Büyük Hayalet Agaç Sandigi	Bu sandik degerli bir sey içeriyor.
+50098	Beran-Setaou'nun Sandigi	Bu sandik Sürgün Magarasi'ndan çikarildi. Gerçekten muhtesem bir hazine içeriyor.
+50099	Elemental Sandik	Bu sandik, tilsimlari yükseltmek için gereken ögeleri içerir.
+50100	Haru Sandigi	Bu sandik degerli bir sey içeriyor.
+50101	Eien Sandigi	Bu sandik degerli bir sey içeriyor.
+50102	Buncho Sandigi	Bu sandik degerli bir sey içeriyor.
+50138	Mahon Sandigi	Bu sandik degerli bir sey içeriyor.
+50139	Bo Sandigi	Bu sandik degerli bir sey içeriyor.
+50140	Goo-Pae Sandigi	Bu sandik degerli bir sey içeriyor.
+50141	Chuong Sandigi	Bu sandik degerli bir sey içeriyor.
+50142	Acimasiz Komutan Sandigi	 Bu sandik degerli bir sey içeriyor.
+50143	Beceri Sandigi	Beceri Sandigi, standart beceriler için kitaplar içerir.
+50203	Hydra'nin Sandigi	Bu sandik degerli bir sey içeriyor.
+50204	Ochao'nun Sandigi	Bu sandik degerli bir sey içeriyor.
+50254	Karanligin Sandigi	Agir sandik, Karanlik Ulus'un unutulduguna inanilan zenginliklerini gizler.
+50285	En-Tai'nin sandigi	En-Tai'nin sandigi degerli ödüller içeriyor.
+50333	Ilahi Güç Kitabi	Ilahi gücü gelistirin. Bu kitap sayesinde standart Ilahi Güç becerisini gelistirebilirsiniz.
+50334	Altin Ustasi Kitabi	Ilahi gücü gelistirin. Bu kitap sayesinde standart Yang Toplama yetenegini gelistirebilirsiniz.
+50335	Canavar Avcisi Kitabi	Ilahi gücü gelistirin. Bu kitap sayesinde standart Canavar Avcisi becerisini gelistirebilirsiniz.
+50336	Yasam Gücü Kitabi	Ilahi gücü gelistirin. Bu kitap sayesinde standart Yasam Gücü yetenegini gelistirebilirsiniz.
+50525	Mükemmel Ruh Tasi	Bu Kusursuz Tas, becerilerinizi yalnizca bir tas kullanarak Grand Master seviyesinden Perfect Master seviyesine yükseltmenizi saglar. Kullanimdan sonra tas kaybolur.
+50526	Ruh Takviyesi Tasi	Bu efsanevi tas, güçlendirme becerilerinin Grandmaster becerilerini artirmaniza izin verir. Kullanimdan sonra tas kaybolur.
+50527	Ruh Taslarinin Karsi Saldirisi	Bu efsanevi tas, karsi saldiri becerilerinin Grandmaster becerilerini artirmaniza olanak tanir. Kullanimdan sonra tas kaybolur.
+50634	Ruh kristali	Ruh kadar saf bir kristal. Aksesuar olarak takilabilir.
+50635	Yakut	Essiz bir kaplamaya sahip kirmizi degerli tas. Aksesuar olarak takilabilir.
+50636	Grena	Essiz bir kaplamaya sahip turuncu degerli tas. Aksesuar olarak takilabilir.
+50637	Zümrüt	Essiz bir kaplamaya sahip yesil degerli tas. Aksesuar olarak takilabilir.
+50638	Safir	Essiz bir kaplamaya sahip mavi degerli tas. Aksesuar olarak takilabilir.
+50639	Turmalin	Bu büyülü degerli tas, gökkusaginin tüm renkleri ile isildiyor. Aksesuar olarak takilabilir.
+50640	Kyanit	Essiz bir kesime sahip mavi ve kirmizi bir degerli tas. Aksesuar olarak takilabilir.
+50672	Kehribar (Kalici)	Bal veya altin tonlarinda parlayan, fosillesmis reçineden yapilmis berrak bir mücevher. Süre: Kalici
+50673	Fosil Ahsap (Kalici)	Mücevher esyalarina stabilite saglayabilen degerli bir agaç. Süre: Kalici
+50674	Bakir (Kalici)	Mücevher ve madeni para yapmak için kullanilabilen dövülebilir degerli bir metal. Bronz üretimi için de gereklidir. Süre: Kalici
+50675	Gümüs (Kalici)	Mücevher yapiminda kullanilan parlak degerli metal. Gümüs aksesuarlara islenebilir. Süre: Kalici
+50676	Altin (Kalici)	Mücevher yapiminda kullanilan altin metal. Altin aksesuarlara dönüstürülebilir. Süre: Kalici
+50677	Yesim (Kalici)	5000 yili askin süredir kullanilan degerli bir mineral. Aksesuarlara ve mücevherlere islenebilir. Süre: Kalici
+50678	Abanoz (Kalici)	Bu siyah, sert ahsap, tüm ahsaplarin en degerlilerinden biridir. Aksesuarlara ve mücevherlere islenebilir. Süre: Kalici
+50679	Inci (Kalici)	Mücevher yapiminda kullanilir. Aksesuarlara ve mücevherlere islenebilir. Süre: Kalici
+50680	Beyaz Altin (Kalici)	Genellikle mücevherat için kullanilan sert, beyaz bir altin alasimi. Süre: Kalici
+50681	Kristal (Kalici)	Farkli renklerde bulunabilen kristal kuvarstan yapilmis sert bir tas. Genellikle mücevherat için kullanilir. Süre: Kalici
+50682	Ametist (Kalici)	Morun farkli tonlarinda bulunabilen popüler bir kuvars. Genellikle mücevher yapiminda kullanilir. Süre: Kalici
+50683	Cennetin Gözyasi (Kalici)	Gökten kristalize yagmur. Mücevher yapiminda kullanilabilir. Süre: Kalici
+50684	Ruh Kristali (Kalici)	Ruh kadar saf bir kristal. Aksesuar olarak takilabilir. Süre: Kalici
+50685	Yakut (Kalici)	Essiz bir kaplamaya sahip kirmizi degerli tas. Aksesuar olarak takilabilir. Süre: Kalici
+50686	Grena (Kalici)	Essiz bir kaplamaya sahip turuncu degerli tas. Aksesuar olarak takilabilir. Süre: Kalici
+50687	Zümrüt (Kalici)	Essiz bir kaplamaya sahip yesil degerli tas. Aksesuar olarak takilabilir. Süre: Kalici
+50688	Safir (Kalici)	Essiz bir kaplamaya sahip mavi degerli tas. Aksesuar olarak takilabilir. Süre: Kalici
+50689	Turmalin (Kalici)	Bu büyülü degerli tas, gökkusaginin tüm renkleri ile isildiyor. Aksesuar olarak takilabilir. Süre: Kalici
+50690	Kyanit (Kalici)	Essiz bir kesime sahip mavi ve kirmizi bir degerli tas. Aksesuar olarak takilabilir. Süre: Kalici
+53025	Leopar Yavrusu	Bu mühür, tatli bebek leoparinizi çagirabilirsiniz.
+53026	Leonidas Mührü(15d)	Bu mühür ile 15 günlük Leonidas aslan yavrunuzu çagirabilirsiniz.
+53027	Leonidas Mührü(30d)	Bu mühür ile 30 günlük Leonidas aslan yavrunuzu çagirabilirsiniz.
+53028	Leonidas Mührü(Kalici)	Bu mühür ile Kalici Leonidas'i çagirabilirsiniz.
+53029	Nogai Mührü (15d)	Bu mühür ile 15 günlük bir Nogaj çagirabilirsiniz.
+53030	Nogai Mührü (30d)	Bu mühür ile 30 günlük bir Nogaj çagirabilirsiniz.
+53031	Nogai Mührü (Kalici)	Bu mühür Kalici bir Nogaj çagirabilirsiniz.
+53248	Donnie (15d)	Bu mühürle, kabus tavsaniniz Donnie'yi çagirabilirsiniz
+53249	Donnie (30d)	Bu mühürle, kabus tavsaniniz Donnie'yi çagirabilirsiniz
+53250	Donnie (Kalici)	Bu mühürle, kabus tavsaniniz Donnie'yi çagirabilirsiniz
+53251	Frank (15d)	Bu mühürle, kabus tavsaniniz Frank'i çagirabilirsiniz
+53252	Frank (30d)	Bu mühürle, kabus tavsaniniz Frank'i çagirabilirsiniz
+53253	Frank (Kalici)	Bu mühürle, kabus tavsaniniz Frank'i çagirabilirsiniz
+53263	Griffy	Bu mühür Griffy'yi çagirir, evcil hayvaninizi çagirir.
+53264	Nogai	Bu mühür Nogai'yi çagiriyor, evcil hayvaninizi çagiriyor.
+53282	Her Seyi Gören Alev Kedisi	Bu mühürle her seyi gören ates kedisini çagirabilirsiniz.
+53283	Her seyi gören Frost Kedisi	Bu mühürle her seyi gören bir buz kedisi çagirabilirsiniz.
+55002	Nakliye Kutusu	Evcil hayvaninizi tasiyiciya yerlestirerek onu pazarlanabilir hale getireceksiniz.
+55003	Genç Pet Kitabi	Bu kitap evcil hayvan gelisimi için kullanilir.
+55004	Vahsi Pet Kitabi	Bu kitap evcil hayvan gelisimi için kullanilir.
+55005	Kahraman Pet Kitabi	Bu kitap evcil hayvan gelisimi için kullanilir.
+55014	Kritik Hasar Kitabi (PvM)	Bu beceriyi ögrendikten sonra pet, PVM'de verilen kritik hasari arttirir.
+55015	Metin Avcisi Kitabi	Bu beceriyi ögrendikten sonra pet, Metin Taslarina verilen hasari arttirir.
+55016	Patron Avcisi Kitabi	Bu beceriyi ögrendikten sonra pet, Patronlara verilen hasari arttirir.
+55017	EXP Kitabi	 Bu beceriyi ögrendikten sonra pet, XP bonus degerini arttirir.
+55018	Yang Düsürme Kitabi	Bu beceriyi ögrendikten sonra pet, Yang'i düsürme sansini arttirir.
+55019	Berserker	Bu beceriyi ögrendikten sonra pet, büyülü/yakin dövüs hasarini arttirir.
+55020	Vücut Saldiri Blok Kitabi	Bu beceriyi ögrendikten sonra pet, bedensel saldirilari engelleme sansini artirir.
+55021	Yansitma Kitabi	Bu beceriyi ögrendikten sonra pet, oyuncunun aldigi hasari arttirir ve bu da rakibe yansiyacaktir.
+56001	Yükseltme Iksiri (%5)	Bu iksir, bir ögeyi yükseltme sansini %5 artirir. Bu esya ayni zamanda demirciden esya satin almak için de kullanilir.
+56002	Yükseltme Iksiri (10%)	Bu iksir, bir ögeyi yükseltme sansini %10 artirir. Bu esya ayni zamanda demirciden esya satin almak için de kullanilir
+56003	Yükseltme Iksiri (15%)	Bu iksir, bir ögeyi yükseltme sansini %15 artirir.
+70058	Güç Yüzügü (15 G)	15 gün boyunca size özel bonuslar veren gizli malzemelerle yapilmis bir Yüzük.
+70059	Güç Yüzügü (30 G)	30 gün boyunca size özel bonuslar veren gizli malzemelerle yapilmis bir Yüzük.
+70060	Güç Yüzügü (Kalici)	Size kalici özel bonuslar veren gizli malzemelerle yapilmis bir Yüzük.
+70401	Kostüm Efsun Kaldirici	Kostümlerinizden birindeki bonuslari kaldirin ve yenilerini ekleyin.
+70402	Cadi Kostümü Özel (%5)	Kostümlerinizden birine özel bir bonus (en fazla 2) ekleyin.
+70403	Cadi Özel Kostümü (%10)	Kostümlerinizden birine özel bir bonus (en fazla 2) ekleyin.
+70404	Özel Bonusu Kaldir	Seçtiginiz özel bonuslardan birini kostümlerinizden kaldirir.
+70604	Dondurma Bonusu	Bu ögeyi bonuslari olan bir ekipman üzerinde kullanmak, sans eseri seçilen bir bonusu dondurur..
+70605	Yeniden Dondurma Bonusu	Bu öge, tesadüfen seçilen donmus bonusu degistirmenizi saglar..
+70606	Çözülme Bonusu	Bu öge, donmus bonusu olan bir ekipmani çözmenizi saglar..
+70610	Savas Bileti Kuponu	Bu öge, Savas pasosu magazasindan kostüm satin almak için kullanilir.
+70611	Savas Bileti	Bu öge Savas pasosunu etkinlestirir.
+70612	Degerli Elmas	Bu Ödüllü Elmas, bir NPC'den silah kaplamalari, zirh ve saç satin almak için kullanilir..
+70613	Güzellik Iksiri	Bu Güzellik Iksiri, bir NPC'den Pet ve Binek görünümleri satin almak için kullanilir..
+70614	Güzellik Iksiri	Bu Güzellik Iksiri, bir NPC'den Pet ve Binek görünümleri satin almak için kullanilir..
+71025	Demircinin Tasi	Bu tas ile demirciden demircinin kitabini satin alabilirsiniz..
+71085	Esyayi Güçlendir	Esyalarinizdan birine 5 bonus ekleyin.
+71135	Hilal Yüzügü (7G)	Hilal seklinde ustaca islenmis gravür içeren bir yüzük.
+71136	Güçlü Lolipop (7G)	Size özel bonuslar veren gizli malzemelerle yapilmis bir lolipop.
+71148	Irade Gücü Yüzügü (30G)	Size özel bonuslar veren gizli malzemelerle yapilmis bir Yüzük.
+71153	Bilgelik Iksiri (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+71174	Razador Bileti	Razador Biletini gardiyana vererek Kizil Ejderha Kalesine girmek için izin alacaksiniz..
+71175	Nemere Bileti	Nemere Biletini gardiyana vererek, Nemere Gözetleme Kulesi'ne girmek için izin alacaksiniz..
+71188	Sihirli Lolipop (15G)	Size özel bonuslar veren gizli malzemelerle yapilmis bir lolipop.
+71203	Savasçi Sandigi	Rastgele seçilmis 3 Beceri Kitabi içeren Savasçi Paketi.
+71204	Ninja Sandigi	Rastgele seçilmis 3 Beceri Kitabi içeren Ninja Paketi.
+71205	Sura Sandigi	Rastgele seçilmis 3 Beceri Kitabi içeren Sura Paketi.
+71206	Saman Sandigi	Rastgele seçilmis 3 Beceri Kitabi içeren Saman Paketi.
+71229	Manu (30G)	Mühür, 30 günlük güçlü bir mamutu çagristiriyor.
+71231	Beyaz Aslan (30G)	Animals with white fur are very rare and many cultures worship them, believing that they carry remarkable powers.
+71233	Spektral At (30G)	This seal summons your gleaming mount.
+71234	Sihirli Lolipop (30G)	Size özel bonuslar veren gizli malzemelerle yapilmis bir lolipop.
+71235	Sihirli Lolipop (Kalici)	Size özel bonuslar veren gizli malzemelerle yapilmis bir lolipop.
+71252	Drake	Bu Binek sadece BattlePass'te bulunabilir.
+71253	Manu (Kalici)	Mühür, güçlü ve kalici bir mamutu çagristiriyor.
+71254	Beyaz Aslan (Kalici)	Beyaz kürklü hayvanlar çok nadirdir ve birçok kültür, olaganüstü güçler tasidiklarina inanarak onlara tapar..
+71255	Spektral At (Kalici)	Bu mühür parildayan bineginizi çagiriyor.
+72001	Deneyim Yüzügü (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72002	Deneyim Yüzügü (3 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72003	Deneyim Yüzügü (30Dakika)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.	Takas Edilemez.
+72004	Deneyim Yüzügü (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.	Takas Edilemez.
+72006	Hirsiz Eldiveni (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72007	Hirsiz Eldiveni (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.	Takas Edilemez.
+72013	Balik Tutma Kitabi (30Dakika)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72014	Balik Tutma Kitabi (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72015	Balik Tutma Kitabi (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72044	Liderin Kitabi (1 saat)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+72726	Günes Özütü (E)	HP'nizi otomatik olarak doldurur. Sonsuz HP içerir.
+72730	Ay Özütü (E)	SP'nizi otomatik olarak doldurur. Sonsuz SP içerir.
+80019	Sari ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80022	Kirmizi ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80023	Açik mavi ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80024	Yesil ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80025	Mor ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80026	Turuncu ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+80027	Mavi ince kumas	Bu malzemeden bir Omuz Kanat'i yapilir.
+84999	Kostüm Efsun Kaldirici	Kusak kostümlerinizden birindeki bonuslari kaldirin ve yenilerini uygulayin. Degiskenler rastgeledir ve Kusak derecesine baglidir.
+85019	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85020	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85021	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85022	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85023	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85024	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85025	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85026	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85027	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85028	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85029	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85030	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85031	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85032	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85033	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85034	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85035	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85036	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85037	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85038	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85039	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85040	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85041	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85042	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85043	Kral Kusagi Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85044	Kral Kusagi Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85045	Kral Kusagi Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85046	Kral Kusagi Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85047	Yu Bandi (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85048	Yu Bandi (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85049	Yu Bandi (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85050	Yu Bandi (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85051	Mao bandi (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85052	Mao bandi (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85053	Mao bandi (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85054	Mao bandi (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85055	Gerçekçi kanat Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85056	Gerçekçi kanat Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85057	Gerçekçi kanat Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85058	Gerçekçi kanat Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85059	Prensip kanat Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85060	Prensip kanat Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85061	Prensip kanat Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85062	Prensip kanat Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85063	Usta kusak Kostümü (basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85064	Usta kusak Kostümü (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85065	Usta kusak Kostümü (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85066	Usta kusak Kostümü (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85067	Chou Bandi(basit)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85068	Chou Bandi (zarif)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85069	Chou Bandi (asil)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85070	Chou Bandi (kisiye öz.)	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+85083	Seytan Kanatlari	Bu öge, karakterinize ek bonuslar saglayan bir kusak kostümdür.
+86050	Tilsim Arttirma Kagidi	Tilsiminiza yeni bir bonus ekler (en fazla 4 bonusa kadar).
+86051	Tilsim Efsun Nesnesi	Tilsimdaki bonuslari kaldirir ve yenilerini uygular. Oranlar degiskenlik gösterir.
+86052	Tilsim Kutsama Küresi	Efsanevi küre, Bir tilsimin zaten 4 özelligi varsa, bu son bonusu eklemenizi saglar
+86053	Sari Inci Parçasi	10 Sari Inci Parçasini 1 Sari Inci ile degistirebilirsiniz. Degistirmek için sag tiklayin.
+86054	Yesil Inci Parçasi	1 Yesil Inci için 10 Yesil Inci Parçasi degistirebilirsiniz. Degistirmek için sag tiklayin.
+86055	Mor Inci Parçasi	10 Mor Inci Parçasini 1 Mor Inci ile degistirebilirsiniz. Degistirmek için sag tiklayin.
+86056	Sari Inci	Evcil hayvani gelistirmek için kullanilan çok nadir bir inci.
+86057	Yesil Inci	Evcil hayvani gelistirmek için kullanilan çok nadir bir inci.
+86058	Mor Inci	Evcil hayvani gelistirmek için kullanilan çok nadir bir inci.
+86060	Zodyak Efsun Nesnesi	Zodiac silahiniz ve zirhinizdan bonuslari kaldirir ve yenilerini uygular.
+86062	Simya Efsun Nesnesi	Ejderha taslarinizdan birindeki bonuslari kaldirin ve yenilerini uygulayin.
+86066	Büyülü Tas Parçasi	Bu esya ile demirciye giderek Büyülü Tas satin alabilirsiniz.
+86067	Kaba Tilsim	Bu öge tilsimlarin iyilestirilmesi için kullanilir.
+86071	Protein Atistirmaligi (2G)	Bu nesne ile evcil hayvaninizi canlandirabilir veya ömrünü uzatabilirsiniz. Yeni bir süre alacaksiniz: 2g. Kullanmak için bu nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+86072	Protein Atistirmaligi (4G)	Bu nesne ile evcil hayvaninizi canlandirabilir veya ömrünü uzatabilirsiniz. Yeni bir süre alacaksiniz: 4g. Kullanmak için bu nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+86073	Protein Atistirmaligi (8G)	Bu nesne ile evcil hayvaninizi canlandirabilir veya ömrünü uzatabilirsiniz. Yeni bir süre alacaksiniz: 8g. Kullanmak için bu nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+86074	Ilahi Protein Atistirmaligi (Kalici)	Bu nesne ile evcil hayvaninizi canlandirabilir veya ömrünü uzatabilirsiniz. Yeni bir sonsuz süre alacak. Kullanmak için nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+86075	Özel Atistirmalik	Bu nesne sayesinde evcil hayvaninizin tercih ettigi bir bonusu iyilestirebilirsiniz. Kullanmak için nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+86076	Pet Beceri Sifirlama	Bu öge, evcil hayvaninizin bir becerisini unutmanizi saglar. Kullanmak için evcil hayvaninizi çagirmaniz gerekir.
+86077	Pet Beceri Sifirlama (S)	Bu öge, evcil hayvaninizin tüm yeteneklerini unutmanizi saglar. Kullanmak için evcil hayvaninizi çagirmaniz gerekir.
+86080	Kusak Bonusu kaldir	Bu esya sayesinde kusak bonuslarini kaldirabilirsiniz.Bonuslari kaldirmak için esyayi kusagin üzerine sürükle.
+88001	Saman Kral Kusagi	Bu öge sadece destekleyici saman tarafindan giyilebilir.
+88005	Saman Kirmizi Kral Kusagi	Bu öge sadece destekleyici saman tarafindan giyilebilir.
+88009	Saman Siyah Kral Kusagi	Bu öge sadece destekleyici saman tarafindan giyilebilir.
+88010	Maymun Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88011	Maymun Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88012	Örümcek Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88013	Örümcek Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88014	Razador Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88015	Razador Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88016	Nemere Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88017	Nemere Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88018	Ejder Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88019	Ejder Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88020	Meley Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88021	Meley Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88022	Azrail Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88023	Azrail Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88024	Sisman Yürütücü Kostümleri (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88025	Sisman Mini Yürütücü Kostümleri (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88026	Baashido Bebek Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88027	Baashido Bebek Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88028	Nessie Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88029	Nessie Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88030	Exedyar Kostümü (7G)	Bu ürün evcil hayvaniniz için 7 gün boyunca özel bir estetik saglar.
+88031	Exedyar Kostümü (Kalici)	Bu öge evcil hayvaniniza kalici olarak özel bir estetik saglar.
+88035	Saman Beyaz Kanati	Bu öge sadece destek saman tarafindan giyilebilir.
+88039	Saman Chou Kusagi	Bu öge sadece destek saman tarafindan giyilebilir.
+88110	Aslan Kostümü (7G)	Bu öge, bineginize 7 gün boyunca özel bir estetik kazandirir.
+88111	Aslan Kostümü (Kalici)	Bu öge, bineginize kalici olarak özel bir estetik saglar.
+88112	Ejder Kostümü (7d)	Bu öge, bineginize 7 gün boyunca özel bir estetik kazandirir.
+88113	Ejder Kostümü (Kalici)	Bu öge, bineginize kalici olarak özel bir estetik saglar.
+88114	Fil Kostümü (7G)	Bu öge, bineginize 7 gün boyunca özel bir estetik kazandirir.
+88115	Fil Kostümü (Kalici)	Bu öge, bineginize kalici olarak özel bir estetik saglar.
+88116	Panda Kostümü (7G)	Bu öge, bineginize 7 gün boyunca özel bir estetik kazandirir.
+88117	Panda Kostümü (Kalici)	Bu öge, bineginize kalici olarak özel bir estetik saglar.
+88210	Kara Silah Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88211	Kara Silah Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88212	Siyah Zirh Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88213	Siyah Zirh Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88214	Pembe Silah Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88215	Pembe Silah Etkisi (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88216	Pembe Zirh Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88217	Pembe Zirh Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88218	Turuncu Silah Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88219	Turuncu Silah Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88220	Turuncu Zirh Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88221	Turuncu Zirh Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88222	Yesil Silah Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88223	Yesil Silah Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88224	Yesil Zirh Etkisi I (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88225	Yesil Zirh Etkisi I (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88226	Mor Silah Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88227	Mor Silah Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88228	Mor Zirh Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88229	Mor Zirh Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88230	Mavi Silah Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88231	Mavi Silah Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88232	Mavi Zirh Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88233	Mavi Zirh Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88234	Pembe Silah Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88235	Pembe Silah Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88236	Pembe Zirh Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88237	Pembe Zirh Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88238	Beyaz Silah Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88239	Beyaz Silah Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88240	Beyaz Zirh Etkisi II (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88241	Beyaz Zirh Etkisi II (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88242	Yesil Silah Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88243	Yesil Silah Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88244	Yesil Zirh Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88245	Yesil Zirh Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88246	Kirmizi Silah Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88247	Kirmizi Silah Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88248	Kirmizi Zirh Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88249	Kirmizi Zirh Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88250	Mavi Silah Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88251	Mavi Silah Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88252	Açik Mavi Zirh Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88253	Açik Mavi Zirh Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88254	Sari Silah Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88255	Sari Silah Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88256	Sari Zirh Etkisi III (7G)	Bu öge, karakterinize özel bir estetik saglar.
+88257	Sari Zirh Etkisi III (Kalici)	Bu öge, karakterinize özel bir estetik saglar.
+88902	Kasmir Paketi	Bu paket, özel magazanizi benzersiz bir sekilde dekore etmenizi saglar.
+88910	Turuncu Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88911	Sari Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88912	Mavi Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88913	Kirmizi Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88914	Yesil Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88915	Mor Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88916	Mavi Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88917	Turuncu Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88918	Beyaz Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88919	Sari Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88920	Kirmizi Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88921	Yesil Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88922	Kritik Isabet	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88923	Delici Mücadele	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88924	Ejderha Tanri Saldirisi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88925	Ejderha Tanri Savunmasi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88926	Ejderha Tanri Zekasi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88927	Ejderha Tanri Yasami	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88928	Hiz Iksiri	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88929	Yesil Iksir (L) (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88930	Mavi Sebnem (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88931	Turuncu Sebnem (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88932	Sari Sebnem (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88933	Kirmizi Sebnem (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88934	Yesil Sebnem (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88935	Kritik Isabet (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88936	Delici Isabet (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88937	Ejderha Tanri saldirisi (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88938	Ejderha Tanri Savunmasi (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88939	Ejderha Tanri Zekasi (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88940	Ejderha Tanri Yasami (Kalici)	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88941	Mavi Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88942	Turuncu Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88943	Sari Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88944	Kirmizi Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88945	Yesil Sebnem	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88946	Turuncu Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88947	Sari Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88948	Mavi Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88949	Kirmizi Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88950	Yesil Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88951	Mor Ampül	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88952	Kritik Isabet	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88953	Delici Isabet	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88954	Ejderha Tanri Saldirisi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88955	Ejderha Tanri Savunmasi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88956	Ejderha Tanri Zekasi	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88957	Ejderha Tanri Yasami	Ejderha Tanrisi sizi kutsayacak: Kutsama almak için sag tiklayin.
+88958	Ruh Parsomeni	Bu parsömen ile ruhunuzu bir seviye gelistirebilirsiniz.
+88959	Efsun Nesnesi	Ögelerinizden birindeki bonuslari kaldirir ve daha fazlasini ekler.
+88960	Özel Atistirmalik	Bu nesne sayesinde evcil hayvaninizin tercih ettigi bir bonusu iyilestirebilirsiniz. Kullanmak için nesneyi evcil hayvan simgesinin üzerine sürükleyin.
+88961	Simya Efsun Nesnesi	Ejderha taslarinizdan birindeki bonuslari kaldirir ve yenilerini uygular.
+88962	Kusak Kostümü Efsun	Nesnesi	Kusak kostümlerinizden birindeki bonuslari kaldirir ve yenilerini uygular. Degiskenler rastgeledir ve kusak derecesine baglidir.
+88963	Kostüm Efsun Nesnesi	Kostümlerinizden birindeki bonuslari kaldirir ve yenilerini uygular.
+88964	Tilsim Kutsama Küresi	Efsanevi küre, Bir tilsimin zaten 4 özelligi varsa,son bonusu eklemenizi saglar.
+88965	Tilsim Efsun Nesnesi	Tilsimdaki bonuslari kaldirir ve yenilerini uygular. Oranlar rastgele gelir.
+88966	Tilsim Arttirma Kagidi	Tilsiminiza yeni bir bonus ekler (en fazla 4 bonusa kadar).
+88967	Evcil Hayvan Sandigi	Evcil hayvan yumurtalari içerir Evcil hayvaninizi seçmek için sag tiklayin.
+88968	Güzellik Iksiri	Bu Güzellik Iksiri, bir NPC'den Pet ve Binek görünümleri satin almak için kullanilir.
+88970	Ares'in Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88971	Hera'nin Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88972	Apollo'nun Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88973	Afrodit'in Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88974	Poseidon'un Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88975	Athena'nin Rünü	Rün Sisesi ile rünün gücü arttirilabilir. Güç yalnizca rün aktif oldugunda düser.
+88976	Zeus'un Rünü	Bu rün yalnizca tüm rünler en az %50 güce sahip oldugunda etkinlesir.
+88977	Rün Sisesi (S)	Bir Rün'ün gücünü arttirir. Siseyi istediginiz rün'e sürükleyin.
+88978	Rün Sisesi (M)	Bir Rün'ün gücünü arttirir. Siseyi istediginiz rün'e sürükleyin.
+88979	Rün Sisesi (L)	Bir Rün'ün gücünü arttirir. Siseyi istediginiz rün'e sürükleyin.
+88980	Rün Parçasi	Bu esya, Rün magazasindan satin almak için kullanilir.
+89100	Zeus Tasi	Bu öge, rün zindaninin bekleme süresini sifirlamaniza izin verir.
+89101	Rün Bileti	Bu bilet, rün zindanina giris yapmanizi saglar.
+89102	Rün Ruhu	10 rün ruhunu 1 Ilahi Anahtar ile takas edebilirsiniz. Degistirmek için sag tiklayin.
+89103	Ilahi Anahtar	Bu anahtar, rune zindaninin 1. katinda kullanilir. Ayrica rün zindaninin en üst katinda da kullanilir. 1. Katta kullanmak için sag tiklayin. Rune Zindaninin en üst katinda yok etmek için Rün Tasina sürükleyin.
+89104	Yesil Ork Anahtari	Bu esya, Ork Zindanindaki bir mührü açmak için kullanilir.
+89105	Kara Ork Anahtari	Bu esya, Ork zindanindaki son köprünün kilidini açmak için kullanilir.
+89106	Ork Bileti	Bu esya Ork Zindanina girmek için kullanilir.
+89107	Rün Bileti	Bu bilet, Rün zindanina giris yapmanizi saglar.
+89108	Uyum Küpeleri (2Saat)	Eslerden biri tarafindan giyilirse, her iki es için de 3 saat boyunca en fazla %8 oraninda delici vurus sansini artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89109	Sevgi Bilezigi (2Saat)	Eslerden biri tarafindan giyilirse, savas sirasinda her iki es için de 3 saat boyunca maksimum %20 oraninda deneyim puani toplamayi artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89110	Sevgi Küpeleri (2Saat)	Eslerden biri tarafindan giyilirse, her iki es için de kritik vurus sansini 3 saat boyunca maksimum %8 arttirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89111	Uyum Bilezigi (2Saat)	Eslerden biri tarafindan giyilirse, düsman canavarlarin her iki es üzerindeki saldiri gücünü 3 saat boyunca maksimum %15 azaltir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89112	Sevgi Kolyesi (2Saat)	Biri tarafindan giyilirse, her iki es için de saldiri gücünü 3 saat boyunca maksimum 40 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89113	Uyum Kolyesi (2Saat)	Biri tarafindan giyilirse, her iki esin savunmasini 3 saat boyunca maksimum 30 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89114	Uyum Küpesi (8 Saat)	Eslerden biri tarafindan giyilirse, her iki es için de 3 saat boyunca en fazla %8 oraninda delici vurus sansini artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89115	Sevgi Bilezigi (8Saat)	Eslerden biri tarafindan giyilirse, savas sirasinda her iki es için de 3 saat boyunca maksimum %20 oraninda deneyim puani toplamayi artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89116	Sevgi küpesi (8Saat)	Eslerden biri tarafindan giyilirse, her iki es için de kritik vurus sansini 3 saat boyunca maksimum %8 artirin. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89117	Uyum Bilezigi (8Saat)	Eslerden biri tarafindan giyilirse, düsman canavarlarin her iki es üzerindeki saldiri gücünü 3 saat boyunca maksimum %15 azaltir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89118	Sevgi Kolyesi (8Saat)	Biri tarafindan giyilirse, her iki es için de saldiri gücünü 3 saat boyunca maksimum 40 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89119	Uyum Kolyesi (8Saat)	Biri tarafindan giyilirse, her iki esin savunmasini 3 saat boyunca maksimum 30 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89120	Uyum Küpesi (Kalici)	Eslerden biri tarafindan giyilirse, her iki es için de 3 saat boyunca en fazla %8 oraninda delici vurus sansini artirin. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89121	Sevgi Bilezigi (Kalici)	Eslerden biri tarafindan giyilirse, savas sirasinda her iki es için de 3 saat boyunca maksimum %20 oraninda deneyim puani toplamayi artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89122	Sevgi Küpesi (Kalici)	Eslerden biri tarafindan giyilirse, her iki es için de kritik vurus sansini 3 saat boyunca maksimum %8 artirin. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89123	Uyum Bilezigi (Kalici)	Eslerden biri tarafindan giyilirse, düsman canavarlarin her iki es üzerindeki saldiri gücünü 3 saat boyunca maksimum %15 azaltir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89124	Sevgi Kolyesi (Kalici)	Biri tarafindan giyilirse, her iki es için de saldiri gücünü 3 saat boyunca maksimum 40 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+89125	Uyum Kolyesi (Kalici)	Eslerden biri tarafindan giyilirse, her iki esin savunmasini 3 saat boyunca maksimum 30 artirir. Ögenin etkisi, ask puanlarinin yüzdesine baglidir. Örnegin bir çiftin %50 ask puani varsa, maksimum etki yari yariya azalir.
+164401	Biyolog Büyüsü	Bu esya ile bazi biyolog görevlerinin bonusunu sifirlamak mümkündür.
+164402	Chaegirab Papirüsü	Bu papirüs ile Biyolog'dan esya satin almak mümkün.
+164406	Gökkusagi Iksiri	Bu öge, becerilerinizden birinin rengini degistirmenizi saglar.
+164407	Parlama iksiri	Bu Iksir, bir NPC'den silah ve zirh efektleri satin almak için kullanilir.
+164408	Tanri Meyvesi	Ejderha Tanrisi bahçesinin tatli kadim meyvesi. Bir ekipman ögesini rafine etmek için kullanilir.
+164409	Tanri Özütü	Sise gizemli bir parlak sivi içerir. Bir ekipman ögesini rafine etmek için kullanilir.
+164410	Hakikat Ruhu	Iyi bir ruh sonsuza kadar cam bir küreye hapsedilmis. Bir ekipman ögesini rafine etmek için kullanilir.
+164411	Hakikat Kitabi	Basligi parildayan güçlü cilt. Bir ekipman ögesini rafine etmek için kullanilir.
+164412	Ilahi çiçek	Ejderha Tanrisi Bahçesinden kutsal çiçek. Bir ekipman ögesini rafine etmek için kullanilir.
+164413	Kiliç Parçasi Goad	Bu esya ile Zehir Kilicini +9'dan Destansi dereceye üretmek mümkündür.
+164414	Seytanin Kilicinin Parçasi	Bu esya ile Aslan Kilicini +9'dan Destansi dereceye üretmek mümkündür.
+164415	Ruh Çalan Biçak Parçasi	Bu esya ile Kin Kilicini +9'dan Epic rütbesine çikarmak mümkündür.
+164416	Mavi Ejderha Yay Parçasi	Bu esya ile +9'dan Destansi dereceye Havali Çelik Yay üretmek mümkündür.
+164417	Yelpaze Parçasi	Bu esya ile Bamboo Bell'i +9'dan Epic rütbesine çikarmak mümkündür.
+164418	Siyam Biçagi Parçasi	Bu esya ile Seytan Kanadi Çakrami +9'dan Epic rank'a getirmek mümkündür.
+164419	Parlama Iksiri	Bu Iksir, bir NPC'den silah ve zirh efektleri satin almak için kullanilir.
+31367	3 rastgele seçilen yetenek kitabi içeren sandik.
+31369	3 rastgele seçilen yetenek kitabi içeren sandik.
+31365	3 rastgele seçilen yetenek kitabi içeren sandik.
+31363	3 rastgele seçilen yetenek kitabi içeren sandik.

@@ -1,0 +1,29 @@
+[BANNER_IMG=d:/ymir work/ui/wiki/banners/patchnotes.tga]
+Jede Zeile ist eine einzelne Textzeile für den Parser.
+[CENTER_ALIGN]Wenn du die Zeile mit [ beginnst, kannst du die aktuelle Zeile formatieren (z. B. CENTER_ALIGN):
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=200; CENTER_ALIGN]
+*Du kannst Absätze hinzufügen, indem du die Textzeile mit * beginnst.
+[X_PADDING=20]*Du kannst das X_PADDING für jede Textzeile festlegen, sodass sie ein wenig weiter rechts beginnt.
+[X_PADDING=20;COLOR=0xFF0000]*Du kannst ganze Zeilen mit COLOR=0xRRGGBB einfärben (optional: Du kannst den Alpha-Wert setzen, wenn du 0xRRGGBBAA verwendest).
+[X_PADDING=20;COLOR=0x0000FF;FONT_SIZE=30]*Es ist möglich, GANZ GROßE TEXTZEILEN
+[X_PADDING=32;COLOR=0x0000FF;FONT_SIZE=40]mit FONT_SIZE zu schreiben.
+[Y_PADDING=20]*Du kannst auch das Y_PADDING setzen, sodass der Text weiter von der vorherigen Zeile entfernt beginnt.
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=246; CENTER_ALIGN]
+[RIGHT_ALIGN]Rechtsausrichtung existiert ebenfalls ;)
+[Y_PADDING=30]Bei Bildern musst du den Pfad im IMG-Token angeben und dann die (lokale) Position mit den X- und Y-Token festlegen. Wenn du 
+CENTER_ALIGN oder RIGHT_ALIGN schreibst, überschreibt es das X-Token.
+
+[CENTER_ALIGN]Übrigens, die Tokens werden mit ; getrennt.
+[IMG=d:/ymir work/ui/wiki/detail_item.tga; CENTER_ALIGN; Y = 276]
+[CENTER_ALIGN; Y_PADDING=15]Wenn du das Bild vor dem Text schreibst, kannst du sogar auf dem Bild schreiben.
+[CENTER_ALIGN; Y_PADDING=190]Ansonsten geht das nicht ;)
+[IMG=d:/ymir work/ui/wiki/detail_item.tga; CENTER_ALIGN; Y = 477]
+
+[Y_PADDING = 190]Wenn du den Client nicht jedes Mal neu starten möchtest, wenn du diesen Text änderst, kopiere den Wiki-Ordner von locale/en in den Ordner des Clients. Benenne ihn dann im locale-Ordner um (z. B. in wiki_ oder was auch immer) und packe locale. Im Testserver werden dann die Dateien aus dem Ordner des Clients gelesen.
+
+[CENTER_ALIGN]Sobald du fertig bist, musst du nur noch die Kategorie ändern, um die bearbeiteten Texte anzuzeigen.
+
+[COLOR=0xFF0000;FONT_SIZE=21]Ja, und vergiss nicht, es wieder in den locale-Ordner zurückzulegen, wenn du fertig bist (:
+
+[RIGHT_ALIGN]Falls du dich fragst, warum die Scrollbar so lang ist:
+[RIGHT_ALIGN]*Aufgrund der leeren Zeilen am Ende der Datei

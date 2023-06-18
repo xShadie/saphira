@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/rules.png]
+[CENTER_ALIGN;FONT_SIZE=24]TE INVITAMOS A LEER Y SEGUIR LAS
+[CENTER_ALIGN;FONT_SIZE=24]NORMAS DEL JUEGO PARA EVITAR
+[CENTER_ALIGN;FONT_SIZE=24]CUALQUIER PROBLEMA.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. VENTA DE CUENTAS Y ARTÍCULOS
+[X_PADDING=20]No se permite la venta de cuentas y artículos por divisas reales (como: paysafe, paypall, bitcoin, sofrot, etc.)
+[X_PADDING=20]Está estrictamente prohibido, el intercambio de las mismas con otros servidores.
+
+[X_PADDING=12]2. LENGUAJE OFENSIVO
+[X_PADDING=20]Está estrictamente prohibido insultar a otros jugadores. También está prohibido utilizar un lenguaje que no se
+[X_PADDING=20]adapte a la temática del juego, como: lenguaje soez, racismo o amenazas fuera del juego. Los insultos dirigidos
+[X_PADDING=20]al personal conducen al bloqueo permanente e inmediato de la cuenta del juego y del foro. Las medidas se evalúan
+[X_PADDING=20]en función de la gravedad del asunto.
+
+[X_PADDING=12]3. ERRORES DENTRO DEL JUEGO
+[X_PADDING=20]Alentamos a todos los usuarios a que informen de inmediato a un miembro del personal sobre cualquier error o mas 
+[X_PADDING=20]conocido como "bug". Cualquier tipo de uso o abuso de "bug" que afecte al normal desarrollo del juego será sancionado.
+
+[X_PADDING=12]4. PROGRAMAS DE TERCEROS O "HACKS"
+[X_PADDING=20]No se permite el uso de hacks / bots o cualquier otro software ilegal.
+[X_PADDING=20]Cualquier intento será castigado con el bloqueo permanente de la cuenta.
+
+[X_PADDING=12]5. SEGURIDAD DE LA CUENTA E INFORMACIÓN PRIVADA
+[X_PADDING=20]El personal de Andra no asume ninguna responsabilidad en caso de pérdida de la cuenta o del artículo debido
+[X_PADDING=20]al uso compartido de la cuenta. Le recomendamos encarecidamente que no comparta sus cuentas / artículos También
+[X_PADDING=20]le recomendamos que no comparta su información privada con nadie. En caso de que alguien divulgue información
+[X_PADDING=20]de otro usuario, el personal lo sancionará
+
+[X_PADDING=12]6. PUBLICIDAD
+[X_PADDING=20]Cualquier intento de publicitar otros servidores en nuestro servidor de Juego
+[X_PADDING=20]o Discord será castigado.
+
+[X_PADDING=12]7. MIEMBROS DEL EQUIPO O STAFF
+[X_PADDING=20]Invitamos a todos nuestros usuarios a seguir y respetar las elecciones e instrucciones
+[X_PADDING=20]del personal. Si se infringe esta regla, existe el riesgo de una sanción grave.

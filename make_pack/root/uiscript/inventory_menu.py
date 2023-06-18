@@ -1,0 +1,101 @@
+import uiscriptlocale
+
+BUTTONS_COUNT = 6
+BOARD_WIDTH = 28
+BOARD_HEIGHT = (29 * BUTTONS_COUNT)
+
+window = {
+	"name" : "InventoryMenuWindow",
+	"x" : 0,
+	"y" : 0,
+	"style" : ("movable", "float",),
+	"width" : BOARD_WIDTH,
+	"height" : BOARD_HEIGHT,
+	"children" :
+	(
+		{
+			"name" : "board",
+			"type" : "bar",
+			"x" : 0,
+			"y" : 0,
+			"width" : BOARD_WIDTH,
+			"height" : BOARD_HEIGHT,
+			"color" : 0x00000000,
+			"children" : 
+			(
+				{
+					"name" : "button1",
+					"type" : "button",
+					"x" : 0,
+					"y" : 0,
+					"tooltip_text" : uiscriptlocale.TELEPORTER,
+					"tooltip_x" : -70,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/button_teleport_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_teleport_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_teleport_03.tga",
+				},	
+				{
+					"name" : "button2",
+					"type" : "button",
+					"x" : 0,
+					"y" : 30,
+					"tooltip_text" : uiscriptlocale.BATTLE_PASS,
+					"tooltip_x" : -57,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/button_battle_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_battle_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_battle_03.tga",
+				},
+				{
+					"name" : "button3",
+					"type" : "button",
+					"x" : 0,
+					"y" : (30 * 2),
+					"tooltip_text" : uiscriptlocale.SWITCH_BOT,
+					"tooltip_x" : -59,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/button_switch_bot_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_switch_bot_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_switch_bot_03.tga",
+				},
+				{
+					"name" : "button4",
+					"type" : "button",
+					"x" : 0,
+					"y" : (30 * 3),
+					"tooltip_text" : uiscriptlocale.CLASSIFICA_GILDA,
+					"tooltip_x" : -67,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/button_guild_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_guild_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_guild_03.tga",
+				},
+				{
+					"name" : "button5",
+					"type" : "button",
+					"x" : 0,
+					"y" : (30 * 4),
+					"tooltip_text" : uiscriptlocale.CLASSIFICA_GIOCATORI,
+					"tooltip_x" : -75,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/button_rank_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_rank_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/button_rank_03.tga",
+				},
+				{
+					"name" : "button6",
+					"type" : "button",
+					"x" : 0,
+					"y" : (30 * 5),
+					"tooltip_text" : uiscriptlocale.EXTRA_INVENTORY,
+					"tooltip_x" : -75,
+					"tooltip_y" : 10,
+					#"default_image" : "d:/ymir work/ui/sidebar/inventaire_special_button_01.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/inventaire_special_button_02.tga",
+					#"default_image" : : "d:/ymir work/ui/sidebar/inventaire_special_button_03.tga",
+				},
+			),
+		},
+	),
+}

@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "public_teleport.dds"
+left 0
+top 96
+right 165
+bottom 123

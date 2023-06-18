@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/rules.png]
+[CENTER_ALIGN;FONT_SIZE=24]ZAPRASZAMY DO PRZECZYTANIA I PRZESTRZEGANIA
+[CENTER_ALIGN;FONT_SIZE=24]ZASAD GRY, ABY UNIKNAC
+[CENTER_ALIGN;FONT_SIZE=24]PROBLEMÓW.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. SPRZEDAZ KONT I PRZEDMIOTÓW
+[X_PADDING=20]Sprzedaz kont i przedmiotów za prawdziwa walute (w tym: paysafe, paypall, bitcoin, sofrot itp.) 
+[X_PADDING=20]jest surowo zabroniona, ponadto nie wolno wymieniac yang/przedmiotów/postaci za inny serwer.
+
+[X_PADDING=12]2. OBRAZLIWY JEZYK
+[X_PADDING=20]Surowo zabrania sie obrazania innych graczy. Zabronione jest równiez uzywanie jezyka niepasujacego do
+[X_PADDING=20]jezyka niepasujacego do tematyki gry, takich jak: wulgarny jezyk, bluznierstwa, grozby poza gra. 
+[X_PADDING=20]Zniewagi kierowane pod adresem administracji prowadza do natychmiastowego trwalego zablokowania konta gry i forum.
+[X_PADDING=20]konta gry i forum.
+
+[X_PADDING=12]3. BLEDY
+[X_PADDING=20]Zachecamy wszystkich uzytkowników do natychmiastowego zglaszania kazdego bledu czlonkowi administracji.
+[X_PADDING=20]Kazde uzycie lub naduzycie buga, które wplynie na normalny przebieg gry, bedzie karane.
+
+[X_PADDING=12]4. OSZUKIWANIE
+[X_PADDING=20]Korzystanie z hacków/botów lub innego nielegalnego (oprogramowania jest niedozwolone).
+[X_PADDING=20]Kazda próba bedzie karana blokada permanentna
+
+[X_PADDING=12]5.BEZPIECZENSTWO KONTA I INFORMACJI PRYWATNYCH
+[X_PADDING=20]Administracja Andra nie ponosi zadnej odpowiedzialnosci w przypadku utraty konta lub przedmiotu z powodu wspóldzielenia konta.
+[X_PADDING=20](Zdecydowanie zalecamy, aby nie udostepniac nikomu swoich kont/przedmiotów).
+[X_PADDING=20]Radzimy równiez nie udostepniac nikomu swoich prywatnych informacji.
+[X_PADDING=20](W przypadku, gdy ktos ujawni prywatne informacje o innym uzytkowniku, administracja go ukarze.)
+
+[X_PADDING=12]6. REKLAMOWANIE
+[X_PADDING=20]Wszelkie próby reklamowania innych serwerów na naszym serwerze gry lub discord beda karane.
+[X_PADDING=20]discord beda karane.
+
+[X_PADDING=12]7. ADMINISTRACJA
+[X_PADDING=20]Zapraszamy wszystkich naszych uzytkowników do przestrzegania i respektowania wyborów i polecen personelu.
+[X_PADDING=20]Jesli ta zasada zostanie zlamana, istnieje ryzyko surowej kary.

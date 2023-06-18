@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/rules.png]
+[CENTER_ALIGN;FONT_SIZE=24]Kérjük olvasd el figyelmesen
+[CENTER_ALIGN;FONT_SIZE=24]a szabályzatot, és tartsd 
+[CENTER_ALIGN;FONT_SIZE=24]magad azokhoz.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. FELHASZNÁLÓK ÉS TÁRGYAK ELADÁSA
+[X_PADDING=20]A felhasználók és tárgyak nem cserélhetoek, illetve adhatóak el valós pénzért! (pl.: paysafe, paypal, bitcoin,
+[X_PADDING=20]sofrot, stb...) Mindazonáltal szigorúan tilos még az egyéb szerverekre cserélni a tárgyakat, felhasználókat!
+
+[X_PADDING=12]2. SÉRTO BESZÉD
+[X_PADDING=20]Szigorúan tilos sérteni a többi játékost! Tilos olyan nyelvet használni a játékban, ami nem illik a játékba! pl.:
+[X_PADDING=20]Káromkodás, istenkáromlás, szítkozódás, rasszizmus, homofóbia, fenyegetés stb... Sértések közvetlenül 
+[X_PADDING=20]a csapattagok felé rögtönzött tiltást ereményez mind a játékból, mind a fórumból!
+[X_PADDING=20]A büntetés mértéke függ az atrocitás mértékétol!
+
+[X_PADDING=12]3. BUGOK
+[X_PADDING=20]Megkérünk minden játékost, hogy ha bugot/hibát észlel, azt azonnal jelentse az egyik tag felé!
+[X_PADDING=20]Bármiféle bug/hiba kihaszánlása büntetést eredményez!
+
+[X_PADDING=12]4. CSALÁSOK
+[X_PADDING=20]Csalások és botok, egyéb harmadik féltol származó szoftverek használata
+[X_PADDING=20]tilos! Végleges kitiltás jár a használatukért!
+
+[X_PADDING=12]5. FELHASZNÁLÓ BIZTONSÁG ÉS PRIVÁT INFORMÁCIÓK
+[X_PADDING=20]A Andra tagok nem vállalnak felelosséget elveszett felhasználókért, tárgyakért ha a felhasználót megosztottad!
+[X_PADDING=20]Erosen ajánljuk, hogy ne ossz meg semmit másokkal! Kérjük, hogy ne ossz meg semmilyen 
+[X_PADDING=20]privát információt a felhasználódról bárkinek!
+[X_PADDING=20]Ha még is megtorténne, büntetés kiosztása a jutalom!
+
+[X_PADDING=12]6. REKLÁM
+[X_PADDING=20]Semmiféle reklám nem egengedett sem a szerveren, sem a Discord szerveren, ellen esetben
+[X_PADDING=20]büntetés jár érte!
+
+[X_PADDING=12]7. TAGOK
+[X_PADDING=20]Megkérünk mindenkit, hogy kövessék és tiszteljék a Andra tagok kéréseit, útmutatásait!
+[X_PADDING=20]Ezen szabály megszegése komoly büntetést von maga után!

@@ -1,0 +1,36 @@
+[BANNER_IMG=d:/ymir work/ui/wiki/banners/en/rules.png]
+[CENTER_ALIGN;FONT_SIZE=24]WIR BITTEN JEDEN SPIELER, FOLGENDE
+[CENTER_ALIGN;FONT_SIZE=24]REGELN ZU LESEN, UM PROBLEME
+[CENTER_ALIGN;FONT_SIZE=24]ZU VERMEIDEN.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=76; CENTER_ALIGN]
+
+[X_PADDING=12]1. VERKAUF VON SPIELERKONTEN UND GEGENSTÄNDEN
+[X_PADDING=20]Der Verkauf von Spielerkonten und Gegenständen für Echtgeld (z. B.: Paysafecard, Paypal, BitCoin usw.) ist nicht erlaubt! Es ist 
+[X_PADDING=20]ebenfalls strikt verboten, Spielerkonten und Gegenstände von diesem Server gegen Spielerkonten und Gegenstände von anderen Servern zu tauschen!
+
+[X_PADDING=12]2. HETZREDE
+[X_PADDING=20]Keine Beleidigungen oder Belästigungen anderer Spieler oder Mitarbeiter. Dazu gehören unter anderem Namensnennungen,
+[X_PADDING=20]respektlose oder unhöfliche Äußerungen, die Verwendung von Schimpfwörtern gegenüber anderen, Trolling,
+[X_PADDING=20]sexuelle/illegale Inhalte, rassistische/Hassreden, bedrohliches Verhalten gegenüber anderen, 
+[X_PADDING=20]provokative oder vulgäre Inhalte.
+
+[X_PADDING=12]3. BUGS (SPIELFEHLER)
+[X_PADDING=20]Wir bitten alle Spieler, falls ein Spielfehler gefunden wird oder auftritt, diesen schnellstmöglich bei einem unserer
+[X_PADDING=20]Teammitglieder zu melden. Jegliches Ausnutzen von Bugs (Spielfehlern), die das Spiel betreffen, ist verboten. 
+
+[X_PADDING=12]4. CHEATEN, HACKEN, BETRÜGEN
+[X_PADDING=20]Das Nutzen von Hacks/Bots und externen Anwendungen, die unser Spiel beeinflussen, wird mit harten Strafen geahndet. 
+[X_PADDING=20](Permanenter Ausschluss vom Spiel sowie permanenter Ausschluss vom Forum)
+
+[X_PADDING=12]5. Kontosicherheit und private Informationen
+[X_PADDING=20]Andere Admins sind nicht dazu verpflichtet, verlorene Konten/Gegenstände wiederherzustellen, wenn das Konto mit anderen Personen
+[X_PADDING=20]geteilt wird! Wir empfehlen euch, eure Konten nicht mit anderen Spielern/Personen zu teilen.
+[X_PADDING=20]Wir empfehlen euch, eure privaten Informationen (Kontodaten, Adresse usw.) nicht mit anderen zu teilen.
+[X_PADDING=20]Falls eure persönlichen Informationen von einem Spieler verbreitet werden, meldet euch unverzüglich bei unseren Administratoren.
+
+[X_PADDING=12]6. WERBUNG
+[X_PADDING=20]Jegliche Fremdwerbung auf unserem Discord und im Spiel ist verboten.
+
+[X_PADDING=12]7. ADMINISTRATOREN UND ADMINISTRATORINNEN
+[X_PADDING=20]Wir bitten jeden Spieler, jegliche Entscheidungen der Administrator/innen zu befolgen und zu respektieren.
+[X_PADDING=20]Das Verstoßen gegen das Regelwerk kann einen PERMANENTEN SPIELAUSSCHLUSS zur folge haben!

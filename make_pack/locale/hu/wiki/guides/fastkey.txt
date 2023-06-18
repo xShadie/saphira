@@ -1,0 +1,160 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/en/fastkey.png]
+[CENTER_ALIGN;FONT_SIZE=24]HERE YOU WILL FIND THE LIST OF HOTKEYS
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+
+[X_PADDING=135;FONT_SIZE=15]* Nyissa meg a Teleportot.
+
+[X_PADDING=135;FONT_SIZE=15]* Open the guild leaderboard.
+
+[X_PADDING=135;FONT_SIZE=15]* Dungeon info megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Battle Pass megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Lezárja és Feloldja a párbajhoz készített felszerelt tárgyak elonézetének lehetoségét.
+
+[X_PADDING=135;FONT_SIZE=15]* Open the general rankings.
+
+[X_PADDING=135;FONT_SIZE=15]* Kamera mozgatása balra.
+
+[X_PADDING=135;FONT_SIZE=15]* Mozogj elore (iránnyal megegyezo nyilak használata is muködik).
+
+[X_PADDING=135;FONT_SIZE=15]* Mozogj hátra (iránnyal megegyezo nyilak használata is muködik).
+
+[X_PADDING=135;FONT_SIZE=15]* Mozogj balra (iránnyal megegyezo nyilak használata is muködik).
+
+[X_PADDING=135;FONT_SIZE=15]* Mozogj jobbra (iránnyal megegyezo nyilak használata is muködik).
+
+[X_PADDING=135;FONT_SIZE=15]* Kamera mozgatása jobbra.
+
+[X_PADDING=135;FONT_SIZE=15]* Kamera zoomolása befelé.
+
+[X_PADDING=135;FONT_SIZE=15]* Kamera zoomolása kifelé.
+
+[X_PADDING=135;FONT_SIZE=15]* Magasság beállítása a földhöz képest, relatíve a karakterhez.Determine the height of the terrain relative to the character.
+
+[X_PADDING=135;FONT_SIZE=15]* Offline Bolt megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Teleportáló megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Leltár megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Alkímia megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Kisállat ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Beépített Wiki megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Rúnák ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Switchbot megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Chat beállításának megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Tárgyak gyujtése a földrol.
+
+[X_PADDING=135;FONT_SIZE=15]* Support Sámán ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Karakter ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Képesség ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Akciók ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Küldetések megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Térkép megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Fel/Le-szállás a hátas-ra/ról.
+
+[X_PADDING=135;FONT_SIZE=15]* Hátas elküldése.
+
+[X_PADDING=135;FONT_SIZE=15]* Ló etetése.
+
+[X_PADDING=135;FONT_SIZE=15]* Céh ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Támadás.
+
+[X_PADDING=135;FONT_SIZE=15]* Üzenet ablak megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Privát üzenet ablakának megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Mutat/Eltakar a küldetéseket.
+
+[X_PADDING=135;FONT_SIZE=15]* Beállítások.
+
+[X_PADDING=135;FONT_SIZE=15]* Mutat/Eltakar mini térképet.
+
+[X_PADDING=135;FONT_SIZE=15]* Barát lista megnyitása.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Képregény iróniával.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Pénz eso.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Hangszer.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Szívdobbanás.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Szívdobbanás pici szívekkel körülötte.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Bomba.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Ötlet.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Szomorú és mérges.
+
+[X_PADDING=135;FONT_SIZE=15]* Emoji: Bocsánat.
+
+[IMG=d:/ymir work/ui/wiki/emoji/f5.tga; Y=46; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f6.tga; Y=73; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f7.tga; Y=100; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f8.tga; Y=127; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f10.tga; Y=154; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f11.tga; Y=181; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f12.tga; Y=208; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/q.tga; Y=235; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/w.tga; Y=262; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/s.tga; Y=289; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/a.tga; Y=316; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/d.tga; Y=343; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/e.tga; Y=370; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/r_plus_click.tga; Y=397; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/f_plus_click.tga; Y=424; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/g_or_t.tga; Y=451; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/y.tga; Y=478; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/u.tga; Y=505; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/i.tga; Y=532; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/o.tga; Y=559; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/p.tga; Y=586; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/h.tga; Y=613; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/j.tga; Y=640; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/k.tga; Y=667; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/l.tga; Y=694; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/z.tga; Y=721; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/x.tga; Y=748; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/c.tga; Y=775; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/v.tga; Y=802; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/b.tga; Y=829; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/n.tga; Y=856; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/m.tga; Y=883; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_h.tga; Y=910; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_b.tga; Y=937; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_f.tga; Y=964; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_g.tga; Y=991; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/space.tga; Y=1018; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/enter.tga; Y=1045; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_enter.tga; Y=1072; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_q.tga; Y=1099; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/esc.tga; Y=1126; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/shift_plus_m.tga; Y=1153; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/alt_plus_m.tga; Y=1180; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_1.tga; Y=1207; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_2.tga; Y=1234; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_3.tga; Y=1261; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_4.tga; Y=1288; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_5.tga; Y=1315; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_6.tga; Y=1342; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_7.tga; Y=1369; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_8.tga; Y=1396; X=12]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl_plus_9.tga; Y=1423; X=12]

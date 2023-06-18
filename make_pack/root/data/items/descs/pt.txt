@@ -1,0 +1,1341 @@
+22110	Yang (100kk)	Clique com o botão direito para recebê-lo em sua carteira yang.
+22111	Yang (500kk)	Clique com o botão direito para recebê-lo em sua carteira yang.
+22112	Yang (20kkk)	Clique com o botão direito para recebê-lo em sua carteira yang.
+22113	Yang (100kkk)	Clique com o botão direito para recebê-lo em sua carteira yang.
+22114	Yang (500kkk)	Clique com o botão direito para recebê-lo em sua carteira yang.
+71590	Tempo do traje +1	Este item adiciona 1 dia ao seu traje.	1 dia extra
+71591	Tempo do traje +3	Este item adiciona 3 dias ao seu traje.	3 dias extras
+71592	Tempo do traje +7	Este item adiciona 7 dias ao seu traje.	7 dias extras
+71057	Chest Stones	Este bau contem uma pedra espiritual +5 aleatoria.
+49021	Spirit Sword (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49022	Spirit Dagger (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49023	Spirit Bow (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49024	Spirit Glaive (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49025	Spirit Bell (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49026	Spirit Fan (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49027	Spirit Costume (F) (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+49028	Spirit Costume (M) (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+85112	Spirit Stole (inf)	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+71056	Helper Scroll	Este item esta disponivel apenas para aqueles que tem a funcao de Ajudante.
+89001	Voucher	Voucher no valor de 1 Moedas Dragão.
+89002	Voucher	Voucher no valor de 2 Moedas Dragão.
+89003	Voucher	Voucher no valor de 3 Moedas Dragão.
+89004	Voucher	Voucher no valor de 50 Moedas Dragão.
+89005	Voucher	Voucher no valor de 100 Moedas Dragão.
+89006	Voucher	Voucher no valor de 500 Moedas Dragão.
+89007	Voucher	Voucher no valor de 1000 Moedas Dragão.
+50001	Item-Shop	Dentro do baú há:
+100000	Elixir do Tempo (P)	Recupera a duração de uma Pedra do Dragão.
+100001	Elixir do Tempo (M)	Recupera a duração de uma Pedra do Dragão.
+100002	Elixir do Tempo (G)	Recupera a duração de uma Pedra do Dragão.
+100100	Pinças do Dragão	Uma ferramenta útil que aumenta a probabilidade de sucesso durante a remoção de uma Pedra do Dragão.
+100300	Feijão do Dragão Verde	Este mágico feijão aumenta o nível da tua Pedra do Dragão. O processo de fortalecimento pode falhar.
+100400	Feijão do Dragão Azul	Este feijão mágico aumenta a probabilidade de sucesso do melhoramento em um nível da Pedra do Dragão.
+100500	Feijão do Dragão Rosa	A probabilidade de sucesso de melhoramento em um nível de uma Pedra do Dragão é 10% mais alta.
+11901	Fato de Casamento	Um fato elegante para um homem usar num casamento.
+11902	Fato de Casamento	Um fato elegante para um homem usar num casamento.
+11903	Vestido de Casamento	Um vestido especial para uma mulher vestir num casamento.
+11904	Vestido de Casamento	Um vestido especial para uma mulher vestir num casamento.
+18900	Pedra da Chama Vermelha	Aumenta os bónus do teu cinto.
+25040	Pergaminho da Bênção	Elimina o risco de um item ser destruído caso um melhoramento falhe. Caso falhe, a qualidade do item será apenas reduzida em 1 nível.
+25041	Pedra Mágica	Um fragmento do metal lendário que aumenta as probabilidades de conseguires melhorar um item. O item que tentas melhorar não será destruído nem a sua qualidade diminuirá.
+25100	Pergaminho da Extracção	Pergaminho que permite extrair Pedras Espíritas de uma arma ou armadura. Deixa uma marca de extracção.
+27600	Fogueira	Madeira que foi cortada para uma fogueira.
+27610	Mármore de Pesca	Este mármore mágico revela qual o peixe que mordeu o anzol.
+27620	Livro de Pesca	Um livro que mostra informações sobre o peixe.
+27803	Lúcio	Peixe comum que normalmente vive em lagos.
+27804	Peixe Mandarim	Um peixe delicioso.
+27805	Lúcio Grande	Lúcio grande e gordo.
+27806	Carpa	Um grande peixe de cor prateada.
+27807	Salmão	Um peixe que regressa a casa sozinho na época do cio.
+27808	Carpa Herbivora	Uma carpa que normalmente se alimenta de ervas.
+27809	Truta Texugo	Um peixe que é primo do salmão.
+27810	Enguia	Um peixe longo e fino que parece uma serpente. Tem muita resistência.
+27811	Truta Arco-Íris	Um peixe que tem um arco-íris na parte de trás.
+27812	Truta de Rio	Um peixe de água doce muito comum nesta área.
+27813	Escardínio	Um peixe vermelho e reluzente que vive em cardume.
+27814	Perca	Um peixe que é conhecido como "tubarão dos mares".
+27815	Tenchi	Um tipo de tainha que vive apenas em águas limpas.
+27816	Peixe Gato	Um peixe com uma grande boca e bigodes como os dos gatos.
+27817	Verdemã	Um peixe escorregadio que normalmente vive em águas rasas e lamacentas.
+27818	Peixe Lótus	Um peixe grande de água fria, que vive de uma dieta variada.
+27819	Peixe Doce	Peixe da família do Eperlano. Vive ao longo da costa e em estuários.
+27820	Eperlano	Um peixe que é capturado maioritariamente no gelo.
+27821	Shiri	Um peixe com uma forma e cor bonitas.
+27822	Carpa Espelhada	Carpa domesticada.
+27823	Carpa Dourada	Um raro peixe dourado e reluzente.
+27824	Cabeça-de-Cobra	Um predador de água doce que vive em águas tropicais.
+27825	Mira-Céu	Um peixe que apenas pode ser encontrado em águas movimentadas.
+27826	Rei Caranguejo Vermelho	Este gigante é a maior espécie de Rei Caranguejo que se conhece.
+27827	Yabby	Esta espécie de lagostim é geralmente nocturna e permanece escondida durante o dia.
+27833	Lúcio Morto	Peixe perfeito para ser grelhado numa fogueira.
+27834	Peixe Mandarim Morto	Peixe perfeito para ser grelhado numa fogueira.
+27835	Lúcio Grande Morto	Peixe perfeito para ser grelhado numa fogueira.
+27836	Carpa Morta	Peixe perfeito para ser grelhado numa fogueira.
+27837	Salmão Morto	Este peixe pode ser grelhado numa fogueira.
+27838	Carpa Herbívora Morta	É saborosa quando grelhada numa fogueira.
+27839	Truta Texugo Morta	É saborosa quando grelhada numa fogueira.
+27840	Enguia Morta	É saborosa quando grelhada numa fogueira.
+27841	Truta Arco-Íris Morta	É saborosa quando grelhada numa fogueira.
+27842	Truta de Rio Morta	É saborosa quando grelhada numa fogueira.
+27843	Escardínio Morto	É saboroso quando grelhado numa fogueira.
+27844	Perca Morta	É saborosa quando grelhada numa fogueira.
+27845	Tenchi Morto	É saboroso quando grelhado numa fogueira.
+27846	Peixe Gato Morto	É saboroso quando grelhado numa fogueira.
+27847	Verdemã Morto	É saboroso quando grelhado numa fogueira.
+27848	Peixe Lótus Morto	É saboroso quando grelhado numa fogueira.
+27849	Peixe Doce Morto	É saboroso quando grelhado numa fogueira.
+27850	Eperlano Morto	É saboroso quando grelhado numa fogueira.
+27851	Shiri Morto	É saboroso quando grelhado numa fogueira.
+27852	Carpa Espelhada Morta	É saborosa quando grelhada numa fogueira.
+27853	Carpa Dourada Morta	É saborosa quando grelhada numa fogueira.
+27854	Cabeça-de-Cobra Morto	Peixe perfeito para ser grelhado numa fogueira.
+27855	Mira-Céu Morto	Peixe perfeito para ser grelhado numa fogueira.
+27856	Rei Carang. Verm. Morto	Caranguejo perfeito para ser grelhado numa fogueira.
+27857	Yabby Morto	Lagostim perfeito para ser grelhado numa fogueira.
+27987	Ostra	Um molusco com uma bonita concha. Pode conter uma pérola no seu interior.
+27990	Pedaço de Pedra	Devido ao pequeno tamanho pode ser transportada facilmente. Tem várias utilizações possíveis.
+27992	Pérola Branca	Um tesouro branco puro encontrado dentro de uma Ostra.
+27993	Pérola Azul	Uma magnífica pérola de cor azul profundo encontrada dentro de uma Ostra.
+27994	Pérola Vermelha	Uma pérola de cor avermelhada encontrada dentro de uma Ostra.
+30179	Chave Torcida	A chave mágica activa o portal para o Templo do Dragão.
+30270	Lasca de Pedra do Dragão	Lasca de uma Pedra do Dragão rara
+30311	Chave de Azurite	Esta delicada chave, com uma pedra de Azurite, abre a passagem para o 2º Andar das Catacumbas do Demónio.
+30312	Totem de Rosto	Este pedaço de madeira com um rosto cravado serve como chave para o 6º Andar das Catacumbas do Demónio.
+30320	Cabeça Encolhida	Esta cabeça de demónio encolhida abre o selo para o 2º Andar das Catacumbas do Demónio.
+30321	Cabeça Encolhida	Esta cabeça de demónio encolhida abre o selo para o 2º Andar das Catacumbas do Demónio.
+30325	Chave do Aracnídeo	Abre o portão para o Ninho de Reprodução da Baronesa. Desintegra-se após 24 horas. Apenas pode ser usada por líderes de grupo.
+30327	Apito do Aracnídeo	A música deste instrumento atrai a Aranha Baronesa.
+30329	Roda Dentada Dourada	Activa o mecanismo escondido na Estela de Isfet.
+30330	Pedra de Maat	Como Deusa da Justiça, Maat luta pela ordem entre o caos.
+30331	Chave da Geada	A chave é fria como o gelo e dá acesso ao terceiro piso da Torre de Vigia de Nemere. Apenas pode ser usada por Xamãs.
+30332	Estrela Polar	Pedra-chave feita de gelo puro. Permite o acesso ao sexto andar da Torre de Vigia de Nemere.
+30333	Chave da Flor da Geada	Esta chave feita de gelo permite o acesso ao nono andar da Torre de Vigia de Nemere.
+30341	Anel Fogo do Dragão	Uma aura de energia intensa rodeia-te. Forjado nas chamas de um dragão, este anel irá destruir num instante as estátuas no Covil de Meley.
+30505	Decoração Esmeralda	Elemento para refinares a tua arma.
+30506	Faca de Gravura Lazuli	Ferramenta para refinares a tua arma.
+30512	Aço de Dragão Vermelho	Couro de dragão é extremamente leve e flexível, mas também virtualmente indestrutível. Pode ser processado como metal e usado na produção de armaduras.
+30518	Fio Dourado	Rolo de fio mágico, feito de ouro fundido. Pode ser processado, juntamente com uma pedra preciosa, em joalharia valiosa.
+30519	Gancho Dourado	Feito de ouro puro, pode ser processado, juntamente com uma pedra preciosa, em joalharia valiosa.
+30520	Fivela Dourada	Feita de ouro puro, pode ser processada, juntamente com uma pedra preciosa, em joalharia valiosa.
+30613	Pedra das Dríades	Rodeada por um brilho verde, esta misteriosa pedra contém no seu interior a alma de uma dríade, o espírito de uma árvore. As dríades conhecem as palavras secretas que te garantem acesso à masmorra Erebus.
+30616	Dióxido de Titânio	Este cristal prismático é usado para refinar uma peça de equipamento.
+30617	Ágata	Esta misteriosa e reluzente pedra preciosa é usada para refinar uma peça de equipamento.
+30618	Pedra Lunar	Um raio de luar está encapsulado nesta jóia em forma de lágrima. É usada para refinar uma peça de equipamento.
+33031	Flor Elemental	Pedra preciosa em forma de flor para melhorares os teus talismãs elementais.
+39001	Pedra Mágica	Esta Pedra garante a melhor probabilidade de melhorares um item. Além disso, o item não será destruído nem perderá qualidade se o melhoramento falhar. Este item é negociável.
+39007	Manual do Ferreiro	Este livro contém a alma de um Ferreiro antigo. Se for usado aumenta a probabilidade de melhorar um Item. Este item é negociável.
+39008	Pergaminho do Exorcismo	Remove a maldição do espírito malvado se a aprendizagem não é bem sucedida. Com a ajuda deste pergaminho podes ler outro livro no mesmo dia. Este item é negociável.
+39022	Pergaminho do Dragão	Remove o risco de um Item ser destruído se o Melhoramento falhar. A sua qualidade será apenas reduzida 1 nível. Adicionalmente, a probabilidade do Melhoramento ser bem sucedido é aumentada em 10%. Este item é negociável.
+39027	Manual da Pedra	Remove todos os Pedaços de Pedra Partida de um item. Terás assim outra oportunidade de melhorar o teu equipamento. Este item é negociável.
+39030	Conselho do Eremita	Aumenta a probabilidade de acertares a leitura de um Livro de Habilidade (ou Pedra da Alma) em 2.5 vezes. Este item é negociável.
+39039	Elixir do Sol (G)	Recupera automaticamente a tua VD. Contém 7.000.000 VD. Este item é negociável.
+39042	Elixir da Lua (G)	Recupera automaticamente a tua MN. Contém 700.000 MN. Este item é negociável.
+39063	Actualiza Mercado Gaya	Actualiza o Mercado de Gaya antes do normal temporizador de 5 horas e revela novos itens valiosos.
+39064	Expande Mercado de Gaya	Expande o Mercado de Gaya, abrindo um novo espaço para oferta de itens, começando pelo primeiro espaço na segunda fila.
+40108	Lâmina Motosserra+	Uma skin de arma que transforma a tua espada numa motosserra para o Halloween. Dá-te pelo menos um bónus aleatório.
+40109	Adaga Motosserra+	Uma skin de arma que transforma a tua adaga numa motosserra para o Halloween. Dá-te pelo menos um bónus aleatório.
+40110	Arco Motosserra+	Uma skin de arma que transforma o teu arco numa motosserra dupla para o Halloween. Dá-te pelo menos um bónus aleatório.
+40111	Glava Motosserra+	Uma skin de arma que transforma a tua espada de duas-mãos numa motosserra de pique para o Halloween. Dá-te pelo menos um bónus aleatório.
+40112	Campainha Motosserra+	Uma skin de arma que transforma a tua campainha numa moca-motosserra para o Halloween. Dá-te pelo menos um bónus aleatório.
+40113	Leque Motosserra+	Uma skin de arma que transforma o teu leque num leque-motosserra para o Halloween. Dá-te pelo menos um bónus aleatório.
+40129	Lâmina Aquariana	Uma skin de arma que cobre a tua lâmina com uma camada de água dura e iridescente.
+40130	Adaga Aquariana	Uma skin de arma que cobre a tua adaga com uma camada de água dura e iridescente.
+40131	Arco Aquariano	Uma skin de arma que cobre o teu arco com uma camada de água dura e iridescente.
+40132	Glava Aquariana	Uma skin de arma que cobre a tua espada de duas-mãos com uma camada de água dura e iridescente.
+40133	Campainha Aquariana	Uma skin de arma que cobre a tua campainha com uma camada de água dura e iridescente.
+40134	Leque Aquariano	Uma skin de arma que cobre o teu leque com uma camada de água dura e iridescente.
+41029	Guerreiro Deserto (M, B)	Roupa de combate para homens, para ajudar a sobreviver às desumanas condições do deserto. Dá-te pelo menos um bónus aleatório. Item negociável.
+41030	Guerreiro Deserto (F, B)	Roupa de combate para mulheres, para ajudar a sobreviver às desumanas condições do deserto. Item negociável.
+41117	Disfarce Mosqueteiro	Fato extravagante no estilo dos mosqueteiros.
+41118	Uniforme de Empregada	Vestido negro com um avental branco no estilo de uma empregada Francesa.
+41119	Fato de Salsa	Fato laranja e negro, justo, para bailarinos de danças latinas.
+41120	Vestido de Salsa	Vestido vermelho, justo, para dançarinas, com luvas pretas.
+41121	Fato de Cavalheiro	Fato elegante para homens de bons costumes.
+41122	Vestido de Cocktail	Vestido azul com um arco e sandália de tiras a combinar.
+41125	Smoking de Abóbora	Uma peça clássica - reinterpretada para esta ocasião especial.
+41126	Vestido de Abóbora	Uma peça clássica - reinterpretada para esta ocasião especial.
+41129	Disfarce Mosqueteiro +	Fato extravagante no estilo dos mosqueteiros. Dá-te pelo menos um bónus aleatório. Item negociável.
+41130	Uniforme de Empregada +	Vestido negro com um avental branco no estilo de uma empregada Francesa. Dá-te pelo menos um bónus aleatório. Item negociável.
+41131	Fato de Salsa +	Fato laranja e negro, justo, para bailarinos de danças latinas. Dá-te pelo menos um bónus aleatório. Item negociável.
+41132	Vestido de Salsa +	Vestido vermelho, justo, para dançarinas, com luvas pretas. Dá-te pelo menos um bónus aleatório. Item negociável.
+41133	Fato de Cavalheiro +	Fato elegante para homens de bons costumes. Dá-te pelo menos um bónus aleatório. Item negociável.
+41134	Vestido de Cocktail +	Vestido azul com um arco e sandália de tiras a combinar. Dá-te pelo menos um bónus aleatório. Item negociável.
+41135	Smoking de Abóbora (Bón)	Uma peça clássica - reinterpretada para esta ocasião especial. Este disfarce dá-te um bónus aleatório.
+41136	Vestido de Abóbora (Bón)	Uma peça clássica - reinterpretada para esta ocasião especial. Este disfarce dá-te um bónus aleatório.
+41307	Disfarce Cobra (m)	Disfarce preto reluzente com símbolos de cobras.
+41308	Disfarce Cobra (f)	Disfarce preto reluzente com símbolos de cobras.
+41309	Disfarce Cobra+ (m)	Disfarce preto reluzente com símbolos de cobras. Dá-te pelo menos um bónus aleatório.
+41310	Disfarce Cobra+ (f)	Disfarce preto reluzente com símbolos de cobras. Dá-te pelo menos um bónus aleatório.
+41311	Guerreiro Deserto(Preto)	Roupas de combate pretas para homens.
+41312	Guerreira Deserto(Preto)	Roupas de combate pretas para mulheres.
+41313	Guerreiro Deserto+(Prt)	Roupas de combate pretas para homens. Dá-te pelo menos um bónus aleatório. Item negociável.
+41314	Guerreira Deserto+(Prt)	Roupas de combate pretas para mulheres. Dá-te pelo menos um bónus aleatório.
+41315	Armadura Azrael (m)	Armadura de aço pertencente ao infame líder demoníaco.
+41316	Armadura Azrael (f)	Armadura de aço pertencente ao infame líder demoníaco.
+41317	Armadura Azrael+ (m)	Armadura de aço pertencente ao infame líder demoníaco. Dá-te pelo menos um bónus aleatório.
+41318	Armadura Azrael+ (f)	Armadura de aço pertencente ao infame líder demoníaco. Dá-te pelo menos um bónus aleatório.
+41324	Guerreiro Crescente	Fato de batalha masculino com uma estrela e um emblema crescente.
+41325	Guerreira Crescente	Fato de batalha feminino com uma estrela e um emblema crescente.
+41326	Guerreiro Crescente+	Fato de batalha masculino com uma estrela e um emblema crescente. Dá-te pelo menos um bónus aleatório.
+41327	Guerreira Crescente+	Fato de batalha feminino com uma estrela e um emblema crescente. Dá-te pelo menos um bónus aleatório.
+41528	Príncipe Deserto (Verm)	Vestimenta de um guerreiro, feita de um tecido vermelho e própria de um líder.
+41529	Príncipe Deserto (Azul)	Vestimenta de um guerreiro, feita de um tecido azul e própria de um líder.
+45053	Penteado Mosqueteiro	Cabelo curto e loiro, bem mantido, para um estilo perfeito de mosqueteiro.
+45054	Touca de Empregada	Penteado loiro com uma touca de empregada.
+45055	Mini Moicano	Penteado curto e estiloso no estilo dos Iroquois.
+45056	Penteado de Salsa	Penteado elegante com uma flor vermelha.
+45057	Fedora Bogart	Fedora clássico no estilo de Humphrey Bogart.
+45065	Penteado Mosqueteiro +	Cabelo curto e loiro, bem mantido, para um estilo perfeito de mosqueteiro. Dá-te pelo menos um bónus aleatório. Item negociável.
+45066	Touca de Empregada +	Penteado loiro com uma touca de empregada. Dá-te pelo menos um bónus aleatório. Item negociável.
+45067	Mini Moicano +	Penteado curto e estiloso no estilo dos Iroquois. Dá-te pelo menos um bónus aleatório. Item negociável.
+45068	Penteado de Salsa +	Penteado elegante com uma flor vermelha. Dá-te pelo menos um bónus aleatório. Item negociável.
+45069	Fedora Bogart +	Fedora clássico no estilo de Humphrey Bogart. Dá-te pelo menos um bónus aleatório. Item negociável.
+45070	Penteado de Flores +	Tranças com flores coloridas como acessório. Dá-te pelo menos um bónus aleatório. Item negociável.
+45135	Penteado Cobra (m)	Um penteado que condiz com o Disfarce Cobra.
+45136	Penteado Cobra (f)	Um penteado que condiz com o Disfarce Cobra.
+45147	Turbante Preto (M)	Um adereço para a cabeça feito de materiais pretos para homens.
+45148	Turbante Preto (F)	Um adereço para a cabeça feito de materiais pretos para mulheres.
+45149	Turbante Preto+ (M)	Um adereço para a cabeça feito de materiais pretos para homens. Dá-te pelo menos um bónus aleatório. Item negociável.
+45150	Turbante Preto+ (F)	Um adereço para a cabeça feito de materiais pretos para mulheres. Dá-te pelo menos um bónus aleatório.
+45151	Elmo Azrael (m)	Adereço de cabeça com o esgar do infame líder demoníaco.
+45152	Elmo Azrael (f)	Adereço de cabeça com o esgar do infame líder demoníaco.
+45153	Elmo Azrael+ (m)	Adereço de cabeça com o esgar do infame líder demoníaco. Dá-te pelo menos um bónus aleatório.
+45154	Elmo Azrael+ (f)	Adereço de cabeça com o esgar do infame líder demoníaco. Dá-te pelo menos um bónus aleatório.
+45160	Penteado Crescente (M)	Dreadlocks atadas, pintadas de vermelho e branco.
+45161	Penteado Crescente (F)	Dreadlocks atadas, pintadas de vermelho e branco, com uma bandana.
+45198	Turbante Castanho	Um nobre turbante castanho, feito de material suficientemente durável para guerreiros.
+45199	Turbante Branco	Um nobre turbante branco, feito de material suficientemente durável para guerreiros.
+45200	Lenço Cabeça Castanho	Um lenço de cabeça castanho, feito de material leve e perfeito para guerreiras.
+45201	Lenço Cabeça Branco	Um lenço de cabeça branco, feito de material leve e perfeito para guerreiras.
+45202	Turbante Castanho+	Um nobre turbante castanho, feito de material suficientemente durável para guerreiros. Dá-te pelo menos um bónus aleatório.
+45203	Turbante Branco+	Um nobre turbante branco, feito de material suficientemente durável para guerreiros. Dá-te pelo menos um bónus aleatório.
+45240	Lenço Cabeça Castanho+	Um lenço de cabeça castanho, feito de material leve e perfeito para guerreiras. Dá-te pelo menos um bónus aleatório.
+45241	Lenço Cabeça Verde+	Um lenço de cabeça verde, feito de material leve e perfeito para guerreiras. Dá-te pelo menos um bónus aleatório.
+50010	Meia	Alguém põe presentes nesta meia durante a Época de Natal.
+50011	Caixa Tesouro do Luar	Uma decoração deslumbrante que seduz as pessoas. Coisas sobrenaturais acontecem quando recebe o luar.
+50053	Livro do Cavalo Militar	Certificação mestre para montar a cavalo |Permite utilizar habilidades a cavalo.
+50054	Feno	Feno seco para alimentar um cavalo.
+50055	Cenoura	O vegetal favorito de um cavalo.
+50056	Ginseng Vermelho	Apenas os cavalos militares comem Ginseng Vermelho.
+50070	Cofre do Chefe Orc	O cofre do Chefe Orc. Algo valioso está no interior do cofre.
+50071	Cofre do Líder Negro	O cofre do Líder Negro. Algo valioso está no interior do cofre.
+50073	Cofre da Rainha Aranha	O cofre da Rainha Aranha. Algo valioso está no interior do cofre.
+50076	Cofre Tartaruga Gigante	O cofre da Tartaruga Gigante. Algo valioso está no interior do cofre.
+50077	Cofre do Nove Caudas	O cofre do Nove Caudas. Algo valioso está no interior do cofre.
+50078	Cofre do Tigre Fantasma	O cofre do Tigre Fantasma. Algo valioso está no interior do cofre.
+50079	Cofre do Rei Chama	O cofre do Rei Chama. Algo valioso está no interior do cofre.
+50080	Cofre do Dragão Vermelho	O cofre do Dragão Vermelho. Algo valioso está no interior do cofre.
+50082	Cofre da Morte	O cofre do Fantasma da Morte. Algo valioso está no interior do cofre.
+50084	Pedra-Chave	Este item possui uma aura que remove Selos Mágicos.
+50097	Cofre de Azrael	Poderes demoníacos mantêm este cofre trancado. Certamente existirão tesouros valiosos no seu interior.
+50187	Cofre do Aprendiz I	O teu presente de boas-vindas contém um conjunto de equipamento básico para optimizar o início da tua aventura.
+50188	Cofre do Aprendiz II	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 10.
+50189	Cofre do Aprendiz III	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 20.
+50190	Cofre do Perito I	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 30.
+50191	Cofre do Perito II	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 40.
+50192	Cofre do Perito III	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 50.
+50193	Cofre do Mestre I	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 60.
+50194	Cofre do Mestre II	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 75.
+50195	Cofre do Mestre III	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 100.
+50196	Cofre do Grande Mestre	Este cofre apenas pode ser aberto quanto tiveres atingido o nível 120.
+50212	Cofre do Aprendiz I	O teu presente de boas-vindas contém um conjunto de equipamento básico para optimizar o início da tua aventura.
+50213	Cofre do Aprendiz I	O teu presente de boas-vindas contém um conjunto de equipamento básico para optimizar o início da tua aventura.
+50259	Cor Draconis (Antigo)	O cristalino coração do dragão contém a alma, a Pedra do Dragão, no seu interior.
+50266	Cofre de Jotun Thrym	O cofre de Jotun Thrym. Julgando pela pesada fechadura, deve conter algo valioso no seu interior.
+50270	Cofre da Rainha Meley	Este cofre foi recuperado do covil da Rainha Dragão Meley. Contém um tesouro verdadeiramente magnífico. Este item é negociável.
+50271	Cofre Guarda do Dragão	Este cofre contém os tesouros de inúmeros guardas de dragões, tesouros que há séculos se pensavam estar perdidos. Este item é negociável.
+50301	Arte da Guerra Sun-Zi	Um dos três livros de Arte de Guerra - aumenta o nível de Liderança daquele que o lê. O livro desaparece depois de lido.
+50302	Arte da Guerra Wu-Zi	Um dos três livros de Arte de Guerra - aumenta o nível de Liderança daquele que o lê. O livro desaparece depois de lido.
+50303	Arte da Guerra WeiLao-Zi	Um dos três livros de Arte de Guerra - aumenta o nível de Liderança daquele que o lê. O livro desaparece depois de lido.
+50307	Livro da Missão Fácil	Contém uma Missão de nível Fácil.
+50308	Livro da Missão Normal	Contém uma Missão de nível Normal.
+50309	Livro da Missão Difícil	Contém uma Missão de nível Difícil.
+50310	Livro da Missão Mestre	Contém uma Missão de nível Mestre.
+50314	Livro da Forma(1)	A leitura bem-sucedida deste livro aumenta as tuas habilidades de transformação. O livro desaparece depois de lido.
+50315	Livro da Mutação(2)	A leitura bem-sucedida deste Livro aumenta a tua habilidade de Polimorfismo. Desaparece depois de usado.
+50316	Livro do Polimorfismo(3)	Usa este livro para aumentar o nível de Polimorfismo. O livro desaparece depois de lido.
+50323	Cofre Livro da Guarda	Este cofre contém um livro de habilidade aleatório para aprenderes habilidades de guarda.
+50324	Cofre Livro do Reforço	Este cofre contém um livro de habilidade aleatório para aprenderes habilidades de reforço.
+50401	Manual Ataque Triplo	Usa este livro para dominares a habilidade Ataque Triplo. O livro desaparece depois de lido.
+50402	Manual Espada Rotativa	Usa este livro para dominares a habilidade Espada Rotativa. O livro desaparece depois de lido.
+50403	Manual Raiva	Usa este livro para dominares a habilidade Raiva. O livro desaparece depois de lido.
+50404	Manual Aura da Espada	Usa este livro para dominares a habilidade Aura da Espada. O livro desaparece depois de lido.
+50405	Manual Investida	Usa este livro para dominares a habilidade Investida. O livro desaparece depois de lido.
+50406	Manual Força Vital	Usa este livro para dominares a habilidade Força Vital. O livro desaparece depois de lido.
+50416	Manual Força do Golpe	Usa este livro para dominares a habilidade Força do Golpe. O livro desaparece depois de lido.
+50417	Manual Ataque Destrutivo	Usa este livro para dominares a habilidade Ataque Destrutivo. O livro desaparece depois de lido.
+50418	Manual Terramoto	Usa este livro para dominares a habilidade Terramoto. O livro desaparece depois de lido.
+50419	Manual Corpo Forte	Usa este livro para dominares a habilidade Corpo Forte. O livro desaparece depois de lido.
+50420	Manual Ataque de Espada	Usa este livro para dominares a habilidade Ataque de Espada. O livro desaparece depois de lido.
+50421	Manual Orbe da Espada	Usa este livro para dominares a habilidade Orbe da Espada. O livro desaparece depois de lido.
+50431	Manual Emboscar	Usa este livro para dominares a habilidade Emboscar. O livro desaparece depois de lido.
+50432	Manual Ataque Rápido	Usa este livro para dominares a habilidade Ataque Rápido. O livro desaparece depois de lido.
+50433	Manual Adaga Rotativa	Usa este livro para dominares a habilidade Adaga Rotativa. O livro desaparece depois de lido.
+50434	Manual Modo Furtivo	Usa este livro para dominares a habilidade Modo Furtivo. O livro desaparece depois de lido.
+50435	Manual Nuvem Venenosa	Usa este livro para dominares a habilidade Nuvem Venenosa. O livro desaparece depois de lido.
+50436	Manual Veneno Insidioso	Usa este livro para dominares a habilidade Veneno Insidioso. O livro desaparece depois de lido.
+50446	Manual Tiro Duplo	Usa este livro para dominares a habilidade Tiro Duplo. O livro desaparece depois de lido.
+50447	Manual Chuva de Setas	Usa este livro para dominares a habilidade Chuva de Setas. O livro desaparece depois de lido.
+50448	Manual Flecha de Fogo	Usa este livro para dominares a habilidade Flecha de Fogo. O livro desaparece depois de lido.
+50449	Manual Flutuar	Usa este livro para dominares a habilidade Flutuar. O livro desaparece depois de lido.
+50450	Manual Seta Envenenada	Usa este livro para dominares a habilidade Seta Envenenada. O livro desaparece depois de lido.
+50451	Manual Faísca	Usa este livro para dominares a habilidade Faísca. O livro desaparece depois de lido.
+50461	Manual Ataque do Dedo	Usa este livro para dominares a habilidade Ataque do Dedo. O livro desaparece depois de lido.
+50462	Manual Espiral do Dragão	Usa este livro para dominares a habilidade Espiral do Dragão. O livro desaparece depois de lido.
+50463	Manual Lâmina Encantada	Usa este livro para dominares a habilidade Lâmina Encantada. O livro desaparece depois de lido.
+50464	Manual Receio	Usa este livro para dominares a habilidade Receio. O livro desaparece depois de lido.
+50465	Manual Armadura Negra	Usa este livro para dominares a habilidade Armadura Negra. O livro desaparece depois de lido.
+50466	Manual Remover Efeito	Usa este livro para dominares a habilidade Remover Efeito. O livro desaparece depois de lido.
+50476	Manual Ataque Obscuro	Usa este livro para dominares a habilidade Ataque Obscuro. O livro desaparece depois de lido.
+50477	Manual Ataque Chama	Usa este livro para dominares a habilidade Ataque Chama. O livro desaparece depois de lido.
+50478	Manual Espírito da Chama	Usa este livro para dominares a habilidade Espírito da Chama. O livro desaparece depois de lido.
+50479	Manual Protecção Sombria	Usa este livro para dominares a habilidade Protecção Sombria. O livro desaparece depois de lido.
+50480	Manual Ataque Espiritual	Usa este livro para dominares a habilidade Ataque Espiritual. O livro desaparece depois de lido.
+50481	Manual Bola da Escuridão	Usa este livro para dominares a habilidade Bola da Escuridão. O livro desaparece depois de lido.
+50491	Manual Talismã Voador	Usa este livro para dominares a habilidade Talismã Voador. O livro desaparece depois de lido.
+50492	Manual Ataque do Dragão	Usa este livro para dominares a habilidade Ataque do Dragão. O livro desaparece depois de lido.
+50493	Manual Rugido do Dragão	Usa este livro para dominares a habilidade Rugido do Dragão. O livro desaparece depois de lido.
+50494	Manual Bênção	Usa este livro para dominares a habilidade Bênção. O livro desaparece depois de lido.
+50495	Manual Poder Reflectivo	Usa este livro para dominares a habilidade Poder Reflectivo. O livro desaparece depois de lido.
+50496	Manual Ajuda do Dragão	Usa este livro para dominares a habilidade Ajuda do Dragão. O livro desaparece depois de lido.
+50506	Manual Atirar Raio	Usa este livro para dominares a habilidade Atirar Raio. O livro desaparece depois de lido.
+50507	Manual Invocar Raio	Usa este livro para dominares a habilidade Invocar Raio. O livro desaparece depois de lido.
+50508	Manual Garra de Raios	Usa este livro para dominares a habilidade Garra de Raios. O livro desaparece depois de lido.
+50509	Manual Cura	Usa este livro para dominares a habilidade Cura. O livro desaparece depois de lido.
+50510	Manual Rapidez	Usa este livro para dominares a habilidade Rapidez. O livro desaparece depois de lido.
+50511	Manual Energia	Usa este livro para dominares a habilidade Energia. O livro desaparece depois de lido.
+50513	Pedra da Alma	A pedra lendária utilizada para aumentar as tuas Habilidades em Grande Mestre. Desaparece depois de ser usada.
+50516	Guarda Espada Rotativa	Este livro ensina-te a habilidade de reduzires o dano infligido pela Espada Rotativa.
+50517	Guarda Emboscada	Este livro ensina-te a habilidade de reduzires o dano infligido pela Emboscada.
+50518	Guarda Ataque do Dedo	Este livro ensina-te a habilidade de reduzires o dano infligido pelo Ataque do Dedo.
+50519	Guarda Ataque do Dragão	Este livro ensina-te a habilidade de reduzires o dano infligido pelo Ataque do Dragão.
+50520	Guarda Ataque Espiritual	Este livro ensina-te a habilidade de reduzires o dano infligido pelo Ataque Espiritual.
+50521	Guarda Flecha de Fogo	Este livro ensina-te a habilidade de reduzires o dano infligido pela Flecha de Fogo.
+50522	Guarda Ataque Obscuro	Este livro ensina-te a habilidade de reduzires o dano infligido pelo Ataque Obscuro.
+50523	Guarda Invocar Raio	Este livro ensina-te a habilidade de reduzires o dano infligido por Invocar Raio.
+50560	Reforço Espada Rotativa	Este livro ensina-te a habilidade de fortaleceres a Espada Rotativa.
+50561	Reforço Emboscada	Este livro ensina-te a habilidade de fortaleceres a Emboscada.
+50562	Reforço Ataque do Dedo	Este livro ensina-te a habilidade de fortaleceres o Ataque do Dedo.
+50563	Reforço Ataque do Dragão	Este livro ensina-te a habilidade de fortaleceres o Ataque do Dragão.
+50564	Reforço Atq. Espiritual	Este livro ensina-te a habilidade de fortaleceres o Ataque Espiritual.
+50565	Reforço Flecha de Fogo	Este livro ensina-te a habilidade de fortaleceres a Flecha de Fogo.
+50566	Reforço Ataque Obscuro	Este livro ensina-te a habilidade de fortaleceres o Ataque Obscuro.
+50567	Reforço Invocar Raio	Este livro ensina-te a habilidade de fortaleceres Invocar Raio.
+50621	Diamante	A pedra preciosa mais forte que é usada para adicionar um socket nos Acessórios.
+50622	Âmbar	Uma bonita pedra Âmbar| Pode ser adicionada a um Acessório.
+50623	Madeira	Uma Madeira valiosa| Pode ser adicionada a um Acessório de Madeira.
+50624	Cobre	Por vezes é usado para fazer bronze e moedas. | Pode ser adicionado a um Acessório de Cobre.
+50625	Prata	Metal brilhante usado para fazer jóias. | Pode ser adicionada a um Acessório de Prata.
+50626	Ouro	Metal dourado usado para fazer jóias. | Pode ser adicionado a um Acessório de Ouro.
+50627	Jade	Um dos valiosos minerais. | Pode ser adicionado a um Acessório de Jade.
+50628	Ébano	A madeira mais leve e forte de todas.| Pode ser adicionado a um Acessório de Ébano.
+50629	Pérola	Usada para fazer jóias.| Pode ser adicionada a um Acessório de Pérola.
+50630	Platina	Um tipo de mineral parecido com a Prata, mas mais duro.| Pode ser adicionada a um Acessório de Platina.
+50631	Cristal	É também chamado de Rocha Cristal ou Quartzo.| Pode ser adicionado a um Acessório de Cristal.
+50632	Ametista	Um Quartzo roxo. | Pode ser adicionada a um Acessório de Ametista.
+50633	Safira	Chuva do céu cristalizada. | Pode ser adicionada a um Acessório de Safira.
+50926	Pedra Reluzente	Recolhe Pedras Reluzentes e pede ao Mercador de Gaya que as corte para formar valiosas Gaya.
+51001	Fragmento de Energia	Fragmento de um Cristal de Energia. 30 peças podem ser usadas para formar um Cristal.
+51002	Cristal de Energia	Este Cristal aumenta os teus bónus durante 2 horas.
+52040	Leão Selvagem	O selo invoca o teu Leão Selvagem. Esta montada aumenta em 30 o Valor de Ataque do seu utilizador.
+53010	Leonidas	Podes usar este Selo para invocares a tua cria de leão, Leonidas. O pet proporciona-te | +15% Ataque Mágico/Corpo-a-Corpo | +1.500 VD
+53011	Khan	Podes usar este Selo para invocares a tua cria de tigre, Khan. O pet proporciona-te | +15% Ataque Mágico/Corpo-a-Corpo | +1.500 VD
+53012	Porky	Podes usar este Selo para invocares o teu jovem javali, Porky. O pet proporciona-te | +15% Ataque Mágico/Corpo-a-Corpo | +1.500 VD
+53013	Rufus	Podes usar este Selo para invocares a tua cria de lobo, Rufus. O pet proporciona-te | +15% Ataque Mágico/Corpo-a-Corpo | +1.500 VD
+53017	Fénix Jade	Este selo invoca a graciosa Fénix Jade. O pet proporciona-te | +15% Ataque Mágico/Corpo-a-Corpo | +50% Probabilidade de EXP Bónus
+53256	Bonsai	Este selo invoca Bonsai, o guerreiro miniatura.
+54043	Cofre de Aprendiz I	O teu cartão de boas-vindas contém um conjunto de equipamento base para um óptimo começo da tua aventura.
+55008	Pergaminho Nome do Pet	Arrasta o pergaminho para o teu pet para mudares o seu nome.
+55009	Cofre do Livro do Pet	Contém um livro de habilidade de pet seleccionado aleatoriamente.
+55010	Resistência (Guerreiro)	Após aprender esta habilidade, o teu pet aumenta a tua resistência contra ataques de Guerreiros.
+55011	Resistência (Sura)	Após aprender esta habilidade, o teu pet aumenta a tua resistência contra ataques de Suras.
+55012	Resistência (Ninja)	Após aprender esta habilidade, o teu pet aumenta a tua resistência contra ataques de Ninjas.
+55013	Resistência (Xamã)	Após aprender esta habilidade, o teu pet aumenta a tua resistência contra ataques de Xamãs.
+55401	Ovo do Macaco	Quando quiseres ver o teu pet eclodir, clica com o botão direito no ovo.
+55402	Ovo da Aranha	Quando quiseres ver o teu pet eclodir, clica com o botão direito no ovo.
+55403	Ovo do Razador	Quando quiseres ver o teu pet eclodir, clica com o botão direito no ovo.
+55404	Ovo de Nemere	Quando quiseres ver o teu pet eclodir, clica com o botão direito no ovo.
+55405	Ovo do Dragão Azul	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55406	Ovo do Dragão Vermelho	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55407	Ovo de Mini Azrael	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55408	Ovo de Mini Executor Grd	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55409	Ovo do Baashido Bebé	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55410	Ovo de Nessie	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55411	Ovo de Exedyar	Quando quiseres fazer eclodir o teu pet, clica no ovo com o botão direito do rato.
+55701	Mini Macaco	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55702	Mini Aranha	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55703	Mini Razador	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55704	Mini Nemere	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55705	Dragonette	Clica com o botão direito do rato para invocares o teu pet, depois clica em "P" no teu teclado para abrires a interface do pet.
+55706	Mini Meley	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55707	Mini Azrael	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55708	Mini Executor Grd	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55709	Baashido Bebé	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55710	Nessie	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+55711	Prole de Exedyar	Clica com o botão direito para invocares o teu pet, depois clica na tecla "P" do teu teclado para abrires a interface do pet.
+70031	Manual de Duelos	Este manual refere-se, entre outras coisas, aos potenciais e fraquezas da anatomia humana.
+70038	Capa de Bravura	Os Guerreiros antigos demonstravam a sua bravura ao usar uma capa colorida com a qual puxavam a atenção de todos os monstros para si.
+70039	Manual do Ferreiro	Este livro contém a alma de um Ferreiro antigo. Se for usado aumenta a probabilidade de melhorar um Item.
+70063	Transformar Disfarce	Remove os bónus de um dos teus disfarces e substitui-os por novos. Com alguma sorte, a quantidade de bónus pode até ser mudada (até um máx. de 3).
+70064	Encantar Disfarce	Remove os bónus de um dos teus disfarces e substitui-os por novos.
+70065	Passa-Bónus de Disfarce	Transfere os bónus de um disfarce para outro. A transferência destrói um dos disfarces.
+70102	Feijão Zen	Diminui o Karma negativo.
+70104	Mármore do Polimorfismo	Podes transformar-te num monstro a partir do mármore.
+70105	Mármore do Polimorfismo	Podes transformar-te num monstro a partir do mármore.
+70106	Mármore do Polimorfismo	Podes transformar-te num monstro a partir do mármore.
+70107	Mármore do Polimorfismo	Podes transformar-te num monstro a partir do mármore.
+70201	Descolorante	Faz o cabelo regressar à sua cor original. O cabelo branqueado pode ser tingido.
+70202	Cor de Cabelo Branca	Pinta o cabelo de branco.|Podes pintar uma vez a cada 3 níveis.
+70203	Cor de Cabelo Loira	Pinta o cabelo de loiro.|Podes pintar uma vez a cada 3 níveis.
+70204	Cor de Cabelo Vermelha	Pinta o cabelo de vermelho.|Podes pintar uma vez a cada 3 níveis.
+70205	Cor de Cabelo Castanha	Pinta o cabelo de castanho.|Podes pintar uma vez a cada 3 níveis.
+70206	Cor de Cabelo Preta	Pinta o cabelo de preto.|Podes pintar uma vez a cada 3 níveis.
+70301	Anel de Casal	Um anel usado por amantes.
+70302	Aliança	Um anel usado por um par casado.
+70602	Pergaminho da Alma(100%)	Aumenta o desenvolvimento da tua alma em 1 nível com este pergaminho.
+70603	Pergaminho da Alma	Aumenta o desenvolvimento da tua alma em até 2 níveis com este pergaminho. A tentativa pode falhar.
+71001	Pergaminho do Exorcismo	Remove a maldição do espírito malvado se a aprendizagem não é bem sucedida. Com a ajuda deste pergaminho podes ler outro livro no mesmo dia.
+71002	Pergaminho dos Atributos	Torna possível redistribuir todos os Pontos de Atributo.
+71032	Pergaminho do Dragão	Remove o risco de um Item ser destruído se o Melhoramento falhar. A sua qualidade será apenas reduzida 1 nível. Adicionalmente, a probabilidade do Melhoramento ser bem sucedido é aumentada em 10%.
+71035	Elixir do Investigador	Melhora a qualidade dos objetos de investigação que recolheste, aumentando assim a probabilidade de serem aceites. Não se aplica a missões em Yohara.
+71048	Feitiço de Mudança	Este feitiço irá mudar o género da tua personagem.
+71054	Permissão de Exílio	Uma personagem poderá ir para o exílio noutro Reino. Isto significa mudar de Reino.
+71055	Permissão de Mudar Nome	Altera o nome da Personagem.
+71075	Cor de Cabelo (Branca)	Tinge o cabelo de branco.
+71076	Cor de Cabelo (Loira)	Tinge o cabelo de loiro.
+71077	Cor de Cabelo (Vermelha)	Tinge o cabelo de vermelho.
+71078	Cor de Cabelo (Casanha)	Tinge o cabelo de castanho.
+71079	Cor de Cabelo (Preta)	Tinge o cabelo de preto.
+71083	Manual da Pedra	Remove todos os Pedaços de Pedra Partida de um item. Terás assim outra oportunidade de melhorar o teu equipamento.
+71084	Feitiço para Itens	Remove os bónus de um dos teus itens e adiciona novos. Aplica-se apenas aos bónus 1-5.
+71093	Mármore do Polimorfismo	Podes transformar-te num monstro a partir do mármore.
+71094	Conselho do Eremita	Aumenta a probabilidade de acertares a leitura de um Livro de Habilidade (ou Pedra da Alma) em 2.5 vezes.
+71099	Anel do Substituto	Permite ao Líder de uma Guild escolher um substituto.
+71100	Pergaminho da Mudança	Esquece o teu treino e começa um novo.
+71103	Redistribuição (VIT)	Coloca a tua Vitalidade a 1 e permite que distribuas esses pontos de novo.
+71104	Redistribuição (INT)	Coloca a tua Inteligência a 1 e permite que distribuas esses pontos de novo.
+71105	Redistribuição (FRÇ)	Coloca a tua Força a 1 e permite que distribuas esses pontos de novo.
+71106	Redistribuição (DES)	Coloca a tua Destreza a 1 e permite-te redistribuir os pontos recebidos.
+71107	Fruta da Vida	Aumenta os Pontos de Karma em 2000. Terás de esperar 8 horas entre cada uso.
+71123	Escamas do Dragão	As Escamas do Dragão são dos materiais mais resistentes que existem.
+71124	Leão Branco	Animais de pêlo branco são extremamente raros e muitas culturas adoram-nos, crendo que eles possuem poderes extraordinários.
+71125	Javali de Guerra	Domesticar espíritos de animais maléficos requer uma hábil utilização da magia, mas os resultados podem ser muito impressionantes.
+71126	Lobo de Combate	Domesticar espíritos de animais maléficos requer uma hábil utilização da magia, mas os resultados podem ser muito impressionantes.
+71127	Tigre da Tempestade	Domesticar espíritos de animais maléficos requer uma hábil utilização da magia, mas os resultados podem ser muito impressionantes.
+71128	Leão da Batalha	Domesticar espíritos de animais maléficos requer uma hábil utilização da magia, mas os resultados podem ser muito impressionantes.
+71129	Garra do Dragão	O aspecto desta imponente garra traz-me algo à memória...
+71137	Tigre Real (Azul)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (azul). Aumenta a experiência obtida em 30%.
+71138	Tigre Real (Vermelho)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (vermelho). Aumenta a experiência obtida em 30%.
+71139	Tigre Real (Ouro)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (ouro).
+71140	Tigre Real (Verde)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (verde). Aumenta a experiência obtida em 30%.
+71141	Tigre Real (Cinza)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (cinzento). Aumenta a experiência obtida em 30%.
+71142	Tigre Real (Branco)	A magia deste selo invoca a tua montada, o majestoso Tigre Real (branco). Aumenta a experiência obtida em 30%.
+71149	Anel do Poder Mortal	Dá-te +30% EXP, +20% Resistência a dano de Suras, +20% Resistência a dano de Xamãs, +20% Resistência a dano de Lycans, +30% Forte contra Monstros, +10% VD Máx. e +10% MN Máx. durante algum tempo.
+71151	Feitiço Verde	Remove os bónus de um dos teus itens e adiciona novos. Apenas pode ser usado em armas e armaduras até nível 30. Item dos cofres de nível. Não negociável.
+71161	Equus Púrpura	Selo para um dos mais belos e raros cavalos púrpura. Aumenta a tua Rapidez de Movimento em 60.
+71164	Cometa	Podes usar este selo para invocares a tua rena, Cometa. Aumenta a tua Rapidez de Movimento em 60.
+71165	Predador Polar	Podes usar este selo para invocares o teu agressivo Predador Polar. Aumenta a tua Rapidez de Movimento em 60.
+71166	Panda Blindado	Podes usar este selo para invocares o teu Panda Blindado. Aumenta a tua Rapidez de Movimento em 60.
+71171	Unicórnio	Podes usar este selo para invocares o teu Unicórnio. Aumenta a tua Rapidez de Movimento em 60.
+71172	Pesadelo	Podes usar este selo para invocares o teu Pesadelo. Aumenta a tua Rapidez de Movimento em 60.
+71176	Pantera Negra	Este selo invoca a tua misteriosa Pantera Negra. Aumenta a tua Rapidez de Movimento em 30.
+71177	Leopardo	Este selo invoca o teu corajoso Leopardo. Aumenta a tua Rapidez de Movimento em 30.
+71182	Muffin (Castanho)	Podes usar este selo para invocares Muffin, o temido frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71183	Nugget (Castanho)	Podes usar este selo para invocares Nugget, o colossal frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71184	Muffin (Azul)	Podes usar este selo para invocares Muffin, o temido frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71185	Nugget (Azul)	Podes usar este selo para invocares Nugget, o colossal frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71186	Muffin (Verde)	Podes usar este selo para invocares Muffin, o temido frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71187	Nugget (Verde)	Podes usar este selo para invocares Nugget, o colossal frango de combate. Aumenta a tua Rapidez de Movimento em 20.
+71192	Trovão	Podes usar este selo para invocares a tua rena Trovão. Aumenta a tua Rapidez de Movimento em 20 e a experiência obtida em 30%.
+71193	Relâmpago	Podes usar este selo para invocares a tua rena Relâmpago. Aumenta a tua Rapidez de Movimento em 20 e a experiência obtida em 30%.
+71197	Nugget (Azul Marinho)	Podes usar este selo para invocares Nugget, o colossal frango de combate.
+71198	Muffin (Rosa)	Podes usar este selo para invocares Muffin, o temido frango de combate.
+71221	Dragão de Nirvana	O selo invoca o teu Dragão de Nirvana.
+71222	Dragão de Samsara	O selo invoca o teu Dragão de Samsara.
+71223	Manny	Este selo invoca um poderoso mamute.
+71224	Ellie	Este selo invoca um poderoso mamute.
+71225	Montada Espectral	Este selo invoca a tua montada reluzente.
+71226	Equus Nocturnus	Este selo invoca a tua montada negra.
+71227	Montada da Penumbra	Este selo invoca a Montada da Penumbra esquelética.
+71228	Montada Astro Prata	Este selo invoca a Montada Astro Prata esquelética.
+71250	Esfinge Branca	Este selo invoca a tua montada sábia branca.
+71251	Esfinge de Pedra	Este selo invoca a tua montada estoica de pedra.
+72301	Pergaminho da Bênção	Elimina o risco de um item ser destruído caso um melhoramento falhe. Caso falhe, a qualidade do item será apenas reduzida em 1 nível.
+72309	Manual do Ferreiro	Este livro contém a alma de um Ferreiro antigo. Se usado, aumenta a probabilidade de melhorar um item com sucesso.
+72310	Pergaminho do Exorcismo	Remove a maldição do espírito malvado se a aprendizagem não for bem sucedida. Com a ajuda deste pergaminho conseguirás ler outro documento de habilidades no mesmo dia.
+72314	Pergaminho do Dragão	Elimina o risco de um item ser destruído quando um melhoramento falha. Caso falhe, a qualidade do item será apenas reduzida em 1 nível. Adicionalmente, a probabilidade de um melhoramento ser bem-sucedido é aumentada em 10%.
+72319	Expansão Inventário	Usa este item para expandires o teu inventário. Negociável.
+72320	Expansão de Inventário	Usa este item para expandires o teu inventário.
+72725	Elixir do Sol (G)	Recupera automaticamente a tua VD. Contém 7.000.000 VD.
+72729	Elixir da Lua (G)	Recupera automaticamente a tua MN. Contém 700.000 MN.
+73001	Cabelo Curto (Ruivo)	Penteado para Guerreiros que te dá um aspecto jovial.
+73002	Cabelo Curto (Clara)	Penteado para Guerreiros que te dá um aspecto jovial.
+73003	Cabelo Curto (Azul)	Penteado para Guerreiros que te dá um aspecto jovial.
+73004	Cabelo Curto (Castanho)	Penteado para Guerreiros que te dá um aspecto jovial.
+73005	Lenço (Vermelho)	Cabelo para Guerreiros com um lenço.
+73006	Lenço (Cor-clara)	Cabelo para Guerreiros com um lenço.
+73007	Lenço (Azul)	Cabelo espetado por baixo de um lenço.
+73008	Lenço (Verde)	Penteado espetado por baixo de um lenço.
+73009	Apanhado (Preto)	Penteado para Guerreiros que te dá uma aparência cativante.
+73010	Apanhado (Ruivo)	Penteado que te dá uma aparência cativante.
+73011	Apanhado (Castanho)	Penteado que te dá uma aparência cativante.
+73012	Apanhado (Verde)	Penteado que te dá uma aparência cativante.
+73251	Rabo de Cavalo(Castanho)	Penteado apanhado num rabo de cavalo.
+73252	Rabo de Cavalo(Verde)	Penteado apanhado num rabo de cavalo.
+73253	Rabo de Cavalo(Azul)	Penteado apanhado num rabo de cavalo.
+73254	Rabo de Cavalo(Marfim)	Penteado feito com um rabo de cavalo.
+73255	Corte Rebelde (Ruivo)	Um corte de cabelo natural com cabelo à altura dos ombros.
+73256	Corte Rebelde (Castanho)	Um corte de cabelo natural com cabelo à altura dos ombros.
+73257	Corte Médio (Marfim)	Um corte de cabelo natural com cabelo à altura dos ombros.
+73258	Corte Rebelde (Roxo)	Um corte de cabelo natural com cabelo à altura dos ombros.
+73259	Franja Vermelha	Um penteado com cabelo curto e franja.
+73260	Franja Azul	Um penteado com cabelo curto e franja.
+73261	Franja Negra	Penteado que te dá um look ameaçador. Para Ninjas a partir de nível 25.
+73262	Franja Clara	Penteado que te dá um look ameaçador. Para Ninjas a partir de nível 25.
+73501	Prático Branco	Um penteado prático.
+73502	Prático de cor castanha	Um penteado prático.
+73503	Prático Loiro	Um penteado prático.
+73504	Prático em Verde	Um penteado prático.
+73505	Longos Cabelos Brancos	Penteado carismático com longos cabelos brancos.
+73506	Longos Cabelos Rosa	Penteado carismático com longos cabelos rosa.
+73507	Longos Cabelos Negros	Penteado carismático com longos cabelos negros.
+73508	Longos Cabelos Roxos	Penteado carismático com longos cabelos roxos.
+73509	Cabelo Branco Apanhado	Penteado tradicional em branco.
+73510	Cabelo Azul Apanhado	Penteado tradicional em azul.
+73511	Cabelo Negro Apanhado	Penteado tradicional de cor negra.
+73512	Cabelo Castanho Apanhado	Penteado tradicional em castanho.
+73751	Cabelo Castanho Aprumado	Penteado elegante de cor castanha.
+73752	Cabelo Negro Aprumado	Penteado elegante de cor negra.
+73753	Cabelo Azul Aprumado	Penteado elegante de cor azul.
+73754	Cabelo Branco Aprumado	Penteado elegante de cor branca.
+73755	Cabelo Médio (Castanho)	Penteado elegante para Xamãs.
+73756	Cabelos Negros Lisos	Penteado elegante para Xamãs.
+73757	Cabelos Loiros Lisos	Elegante, cabelo liso.
+73758	Cabelos Violeta Lisos	Penteado elegante para Xamãs.
+73759	Estilo Antigo - Castanho	Penteado tradicional de cabelos longos.
+73760	Estilo Antigo - Loiro	Cabelo comprido, usado de uma forma tradicional.
+73761	Estilo Antigo - Roxo	Penteado tradicional de cabelos longos.
+73762	Estilo Antigo - Ruivo	Penteado tradicional de cabelos longos.
+74001	Moderno (Vermelho)	Penteado que te dá um ar distinto
+74002	Moderno (Claro)	Penteado que te dá um ar distinto
+74003	Moderno (Azul)	Penteado que te dá um ar distinto
+74004	Moderno (Castanho)	Penteado que te dá um ar distinto
+74005	Lenço (Vermelho)	Cabelo curto e um lenço vermelho
+74006	Lenço (Xadrez Castanho)	Cabelo curto e um lenço de cor clara
+74007	Lenço (Azul)	Cabelo curto e um lenço azul
+74008	Lenço (Xadrez Verde)	Cabelo curto e um lenço verde
+74009	Apanhado (Preto)	Penteado que te dá um ar distinto
+74010	Apanhado (Vermelho)	Penteado que te dá um ar distinto
+74011	Apanhado (Castanho)	Penteado que te dá um ar distinto
+74012	Apanhado (Verde)	Penteado que te dá um ar distinto
+74013	Afro - Guerreiro	Dá a um Guerreiro um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74014	Afro - Guerreiro	Dá a um Guerreiro um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74015	Elmo Samurai - Guerreiro	Dá a um Guerreiro um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74016	Elmo Samurai - Guerreiro	Dá a um Guerreiro um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74017	Fez - Guerreiro	Um chapéu vermelho para Guerreiros (M). (Duração: 7 dias)
+74018	Keffiyeh - Guerreiro	Um acessório para Guerreiros (M). (Duração: 7 dias)
+74019	Turbante - Guerreiro	Um acessório para Guerreiros (M) feito de material da mais alta qualidade. (Duração: 7 dias)
+74020	Máscara de Guerreiro (m)	Uma máscara em forma de abóbora para Guerreiros do sexo masculino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+74251	Rabo de Cavalo(Castanho)	Penteado popular com um longo rabo de cavalo
+74252	Rabo de Cavalo(Verde)	Penteado popular com um longo rabo de cavalo
+74253	Rabo de Cavalo(Azul)	Penteado popular com um longo rabo de cavalo
+74254	Rabo de Cavalo(Claro)	Penteado popular com um longo rabo de cavalo
+74255	Corte Médio (Vermelho)	Penteado atrevido e moderno
+74256	Corte Médio (Castanho)	Penteado atrevido e moderno
+74257	Corte Médio (Claro)	Penteado atrevido e moderno
+74258	Corte Médio (Roxo)	Penteado atrevido e moderno
+74259	Corte Curto (Vermelho)	Cabelo vermelho para Ninjas
+74260	Corte Curto (Azul-Céu)	Cabelo azul para Ninjas
+74261	Corte Curto (Preto)	Cabelo preto para Ninjas
+74262	Corte Curto (Loiro)	Cabelo loiro para Ninjas
+74263	Afro - Ninja (F)	Dá a uma Ninja um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74264	Afro - Ninja (F)	Dá a uma Ninja um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74265	Chapéu - Ninja (F)	Dá a uma Ninja um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74266	Chapéu - Ninja (F)	Dá a uma Ninja um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74267	Foulard - Ninja (F)	Um véu para Ninjas (F) feito de um material muito valioso. (Duração: 7 dias)
+74268	Cachecol - Ninja (F)	Um cachecol para o deserto para Ninjas (F) feito de um material precioso. (Duração: 7 dias)
+74269	Turbante - Ninja (F)	Um turbante para Ninjas (F) feito de um material muito valioso. (Duração: 7 dias)
+74270	Máscara de Ninja (f)	Uma máscara em forma de abóbora para Ninjas do sexo feminino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+74501	Desportivo (Branco)	Penteado curto, de estilo militar
+74502	Desportivo (Castanho)	Penteado curto, de estilo militar
+74503	Desportivo (Loiro)	Penteado curto, de estilo militar
+74504	Desportivo (Verde)	Penteado curto, de estilo militar
+74505	Carismático (Branco)	Penteado que acentua um carácter forte
+74506	Carismático (Vermelho)	Penteado que acentua um carácter forte
+74507	Carismático (Preto)	Penteado que acentua um carácter forte
+74508	Carismático (Roxo)	Penteado que acentua um carácter forte
+74509	Elegante (Branco)	Penteado antigo que outrora foi um símbolo de riqueza
+74510	Elegante (Azul)	Penteado antigo que outrora foi um símbolo de riqueza
+74511	Elegante (Preto)	Penteado antigo que outrora foi um símbolo de riqueza
+74512	Elegante (Castanho)	Penteado antigo que outrora foi um símbolo de riqueza
+74513	Afro - Sura (M)	Dá a um Sura um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74514	Afro - Sura (M)	Dá a um Sura um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74515	Elmo Samurai - Sura (M)	Dá a um Sura um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74516	Elmo Samurai - Sura (M)	Dá a um Sura um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74517	Fez - Sura (M)	Um chapéu vermelho para Suras (M). (Duração: 7 dias)
+74518	Keffiyeh - Sura (M)	Um acessório para Suras (M). (Duração: 7 dias)
+74519	Turbante - Sura (M)	Um acessório para Suras (M) feito de material da mais alta qualidade. (Duração: 7 dias)
+74520	Máscara de Sura (m)	Uma máscara em forma de abóbora para Suras do sexo masculino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+74521	Moderno (Cinzento)	Um penteado que te dá um ar distinto.
+74522	Lenço	Cabelo curto domado com um lenço.
+74523	Longo (Loiro)	Um penteado impressionante com cabelo loiro magnífico.
+74524	Moderno (Dourado)	Penteado moderno com cabelo dourado e uma fita.
+74525	Lenço (Preto)	Cabelo curto e despenteado, controlado com um lenço.
+74526	Longo (Vermelho Rubi)	Cabelo maravilhoso, vermelho rubi.
+74527	Rabo de Cavalo(Vermelho)	Cabelo longo atado num rabo de cavalo.
+74528	Pelos Ombros (Aqua)	Um penteado discreto com uma fita azul.
+74529	Curto (Castanho)	Um penteado que te confere um ar ameaçador.
+74530	Rabo de Cavalo(Vermelho)	Cabelo vermelho comprido que foi atado num rabo de cavalo - um penteado muito popular entre mulheres.
+74531	Pelos Ombros (Preto)	Um penteado com um aspecto moderno e atrevido.
+74532	Curto (Cinzento)	Um penteado curto que te confere um ar ameaçador.
+74533	Desportivo (Preto)	Um penteado curto que te confere um ar militar.
+74534	Carismático (Loiro)	Um penteado que acentua uma forte personalidade individual.
+74535	Apanhado Longo (Rosa)	Um penteado apanhado antiquado que outrora foi símbolo de riqueza.
+74536	Desportivo (Roxo)	Um penteado curto e extravagante.
+74537	Carismático (Loiro)	Um penteado carismático com cabelo longo.
+74538	Apanhado Longo (Real)	Um penteado apanhado antiquado que outrora foi símbolo de riqueza.
+74539	Elegante (Roxo)	Um penteado elegante com cabelo preto atado.
+74540	Médio (Escuro)	Um penteado elegante de Xamã.
+74541	Antigo (Branco)	Cabelo comprido usado de uma forma tradicional.
+74542	Elegante (Vermelho)	Um penteado elegante apanhado com um gancho de borboleta.
+74543	Médio (Branco)	Penteado liso e elegante.
+74544	Antigo (Preto)	Um penteado feminino com cabelo longo.
+74545	Tribal+ (Vermelho)	Tranças decoradas com pérolas de madeira vermelhas que indicam uma associação tribal.
+74546	Tribal+ (Amarelo)	Tranças decoradas com pérolas de madeira amarelas que indicam uma associação tribal.
+74547	Tribal+ (Azul)	Tranças decoradas com pérolas de madeira azuis que indicam uma associação tribal.
+74548	Tribal+ (Roxo)	Tranças decoradas com pérolas de madeira roxas que indicam uma associação tribal.
+74549	Tribal+ (Verde)	Tranças decoradas com pérolas de madeira verdes que indicam uma associação tribal.
+74550	Coroa Lupina+ (Ouro)	Adereço para a cabeça decorado com jóias para o cabelo a condizer.
+74551	Coroa Lupina+ (Preta)	Adereço para a cabeça decorado com jóias para o cabelo a condizer.
+74552	Coroa Lupina+ (Vermelha)	Adereço para a cabeça decorado com jóias para o cabelo a condizer.
+74553	Coroa Lupina+ (Azul)	Adereço para a cabeça decorado com jóias para o cabelo a condizer.
+74554	Coroa Lupina+ (Branca)	Adereço para a cabeça decorado com jóias para o cabelo a condizer.
+74555	Capuz de Lobo+ (Ouro)	Armadura elaborada para a cabeça e fontes com jóias de cabelo tradicionais.
+74556	Capuz de Lobo+ (Preto)	Armadura elaborada para a cabeça e fontes com jóias de cabelo tradicionais.
+74557	Capuz de Lobo+(Vermelho)	Armadura elaborada para a cabeça e fontes com jóias de cabelo tradicionais.
+74558	Capuz de Lobo+ (Azul)	Armadura elaborada para a cabeça e fontes com jóias de cabelo tradicionais.
+74559	Capuz de Lobo+ (Verde)	Armadura elaborada para a cabeça e fontes com jóias de cabelo tradicionais.
+74751	Gancho (Castanho)	Penteado elegante com um gancho em borboleta
+74752	Gancho (Preto)	Penteado elegante com um gancho em borboleta
+74753	Gancho (Azul)	Penteado elegante com um gancho em borboleta
+74754	Gancho (Branco)	Penteado elegante com um gancho em borboleta
+74755	Médio (Castanho)	Penteado elegante para Xamãs
+74756	Semi-Longo (Preto)	Penteado elegante para Xamãs
+74757	Semi-Longo (Loiro)	Penteado elegante para Xamãs
+74758	Semi-Longo (Roxo)	Penteado elegante para Xamãs
+74759	Semi-Longo (Castanho)	Penteado feminino com cabelo longo e liso
+74760	Antigo Penteado (Loiro)	Penteado feminino com cabelo longo e liso
+74761	Semi-Longo (Roxo)	Penteado feminino com cabelo longo e liso
+74762	Semi-Longo (Vermelho)	Penteado feminino com cabelo longo e liso
+74763	Afro - Xamã (F)	Dá a uma Xamã um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74764	Afro - Xamã (F)	Dá a uma Xamã um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74765	Chapéu - Xamã (F)	Dá a uma Xamã um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74766	Chapéu - Xamã (F)	Dá a uma Xamã um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+74767	Foulard - Xamã (F)	Um véu para Xamãs (F) feito de um material muito valioso. (Duração: 7 dias)
+74768	Cachecol - Xamã (F)	Um cachecol para o deserto para Xamãs (F) feito de um material precioso. (Duração: 7 dias)
+74769	Turbante - Xamã (F)	Um turbante para Xamãs (F) feito de um material muito valioso. (Duração: 7 dias)
+74770	Máscara de Xamã (f)	Uma máscara em forma de abóbora para Xamãs do sexo feminino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+75001	Totós (Vermelho)	Penteado moderno com cabelo vermelho, totós e duas fitas
+75002	Totós (Claro)	Penteado moderno com cabelo claro, totós e duas fitas
+75003	Totós (Azul)	Penteado moderno com cabelo azul, totós e duas fitas
+75004	Totós (Castanho)	Penteado moderno com cabelo castanho, totós e duas fitas
+75005	Fita (Castanho)	Cabelo curto e desgrenhado, com uma fita
+75006	Fita (Loiro)	Cabelo curto e desgrenhado, com uma fita
+75007	Fita (Azul)	Cabelo curto e desgrenhado, com uma fita
+75008	Fita (Verde)	Cabelo curto e desgrenhado, com uma fita
+75009	Esplendoroso (Preto)	Cabelo preto e esplendoroso
+75010	Esplendoroso (Vermelho)	Cabelo vermelho e esplendoroso
+75011	Esplendoroso (Castanho)	Cabelo castanho e esplendoroso
+75012	Esplendoroso (Verde)	Cabelo verde e esplendoroso
+75013	Afro - Guerreira	Dá a uma Guerreira um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75014	Afro - Guerreira	Dá a uma Guerreira um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75015	Chapéu - Guerreira	Dá a uma Guerreira um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75016	Chapéu - Guerreira	Dá a uma Guerreira um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75017	Foulard - Guerreira	Um véu para Guerreiros (F) feito de um material muito valioso. (Duração: 7 dias)
+75018	Cachecol - Guerreira	Um cachecol para o deserto para Guerreiros (F) feito de um material precioso. (Duração: 7 dias)
+75019	Turbante - Guerreira	Um turbante para Guerreiros (F) feito de um material muito valioso. (Duração: 7 dias)
+75020	Máscara de Guerreiro (f)	Uma máscara em forma de abóbora para Guerreiros do sexo feminino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+75201	Rabo de Cavalo(Castanho)	Cabelo castanho com um rabo de cavalo
+75202	Rabo de Cavalo(Verde)	Cabelo verde com um rabo de cavalo
+75203	Rabo de Cavalo(Azul)	Cabelo azul com um rabo de cavalo
+75204	Rabo de cavalo(Loiro)	Cabelo loiro com um rabo de cavalo
+75205	Lenço (Branco)	Penteado discreto com um lenço branco
+75206	Lenço (Verde)	Penteado discreto com um lenço verde
+75207	Lenço (Castanho)	Penteado discreto com um lenço castanho
+75208	Lenço (Vermelho)	Penteado discreto com um lenço vermelho
+75209	Despenteado (Vermelho)	Penteado que te dá um ar sinistro
+75210	Despenteado (Azul)	Penteado que te dá um ar sinistro
+75211	Despenteado (Preto)	Penteado que te dá um ar sinistro
+75212	Despenteado (Loiro)	Penteado que te dá um ar sinistro
+75213	Afro - Ninja (M)	Dá a um Ninja um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75214	Afro - Ninja (M)	Dá a um Ninja um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75215	Elmo Samurai - Ninja (M)	Dá a um Ninja um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75216	Elmo Samurai - Ninja (M)	Dá a um Ninja um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75217	Fez - Ninja (M)	Um chapéu vermelho para Ninjas (M). (Duração: 7 dias)
+75218	Keffiyeh - Ninja (M)	Um acessório para Ninjas (M). (Duração: 7 dias)
+75219	Turbante - Ninja (M)	Um acessório para Ninjas (M) feito de material da mais alta qualidade. (Duração: 7 dias)
+75220	Máscara de Ninja (m)	Uma máscara em forma de abóbora para Ninjas do sexo masculino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+75401	Apanhado (Cinza)	Penteado extravagante popular entre Suras femininas
+75402	Apanhado (Castanho)	Penteado extravagante popular entre Suras femininas
+75403	Apanhado (Loiro)	Penteado extravagante popular entre Suras femininas
+75404	Apanhado (Verde)	Penteado extravagante popular entre Suras femininas
+75405	Comprido (Branco)	Cabelo branco e comprido que te dá um ar pensativo
+75406	Comprido (Vermelho)	Cabelo vermelho e comprido que te dá um ar pensativo
+75407	Comprido (Preto)	Cabelo preto e comprido que te dá um ar pensativo
+75408	Comprido (Roxo)	Cabelo roxo e comprido que te dá um ar pensativo
+75409	Duquesa (Branco)	Penteado com trança
+75410	Duquesa (Roxo)	Penteado com trança
+75411	Duquesa (Preto)	Penteado com trança
+75412	Duquesa (Castanho)	Penteado com trança
+75413	Afro - Sura (F)	Dá a uma Sura um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75414	Afro - Sura (F)	Dá a uma Sura um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75415	Chapéu - Sura (F)	Dá a uma Sura um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75416	Chapéu - Sura (F)	Dá a uma Sura um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75417	Foulard - Sura (F)	Um véu para Suras (F) feito de um material muito valioso. (Duração: 7 dias)
+75418	Cachecol - Sura (F)	Um cachecol para o deserto para Suras (F) feito de um material precioso. (Duração: 7 dias)
+75419	Turbante - Sura (F)	Um turbante para Suras (F) feito de um material muito valioso. (Duração: 7 dias)
+75420	Máscara de Sura (f)	Uma máscara em forma de abóbora para Suras do sexo feminino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+75601	Aprumado (Castanho)	Penteado aprumado que te dá uma expressão forte
+75602	Aprumado (Preto)	Penteado aprumado que te dá uma expressão forte
+75603	Aprumado (Azul)	Penteado aprumado que te dá uma expressão forte
+75604	Aprumado (Cinza)	Penteado aprumado que te dá uma expressão forte
+75605	Longo (Castanho)	Cabelo longo e castanho
+75606	Longo (Preto)	Cabelo longo e preto
+75607	Longo (Loiro)	Cabelo longo e loiro
+75608	Longo (Roxo)	Cabelo longo e roxo
+75609	Antigo (Castanho)	Penteado antigo. Cabelo castanho apanhado num rabo de cavalo
+75610	Antigo (Claro)	Penteado antigo. Cabelo claro apanhado num rabo de cavalo
+75611	Antigo (Roxo)	Penteado antigo. Cabelo roxo apanhado num rabo de cavalo
+75612	Antigo (Vermelho)	Penteado antigo. Cabelo vermelho apanhado num rabo de cavalo
+75613	Afro - Xamã (M)	Dá a um Xamã um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75614	Afro - Xamã (M)	Dá a um Xamã um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75615	Elmo Samurai - Xamã (M)	Dá a um Xamã um bónus de VD de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75616	Elmo Samurai - Xamã (M)	Dá a um Xamã um bónus de MN de 1%. Substitui o penteado actual. (Duração: 7 dias)
+75617	Fez - Xamã (M)	Um chapéu vermelho para Xamãs (M). (Duração: 7 dias)
+75618	Keffiyeh - Xamã (M)	Um acessório para Xamãs (M). (Duração: 7 dias)
+75619	Turbante - Xamã (M)	Um acessório para Xamãs (M) feito de material da mais alta qualidade. (Duração: 7 dias)
+75620	Máscara de Xamã (m)	Uma máscara em forma de abóbora para Xamãs do sexo masculino. Os atributos e sua duração são definidos aleatoriamente. Substitui qualquer penteado existente.
+76001	Pergaminho dos Atributos	A utilização deste item permite-te redistribuir todos os teus Pontos de Atributo. Podes usá-lo para alterar o curso de desenvolvimento da tua personagem. Não negociável.
+76002	Cabeça Encolhida	Esta cabeça de demónio encolhida abre o selo para o 3º Andar das Catacumbas do Demónio. Não negociável.
+76007	Capa de Bravura	Os Guerreiros antigos demonstravam a sua bravura ao usar uma capa colorida com a qual puxavam a atenção de todos os monstros para si. Não negociável.
+76016	Pergaminho da Bênção	Elimina o risco de um item ser destruído caso um melhoramento falhe. Caso falhe, a qualidade do item será apenas reduzida em 1 nível.
+76023	Feitiço Verde	Remove os bónus de um dos teus itens e adiciona novos. Apenas pode ser usado em armas e armaduras até nível 40. Item dos cofres de nível. Não negociável.
+76025	Sapatos de Vento	Com este item você pode enfrentar a masmorra do Templo de Ochao.
+79501	Aljava do Arqueiro	Uma aljava que te proporciona uma fonte inesgotável de flechas por 24 horas. Sem qualquer redução do dano infligido por disparos à distância.
+79502	Aljava do Arqueiro	Uma aljava que te proporciona uma fonte inesgotável de flechas por 7 dias. Sem qualquer redução do dano infligido por disparos à distância.
+79503	Aljava do Arqueiro	Uma aljava que te proporciona uma fonte inesgotável de flechas. Sem qualquer redução do dano infligido por disparos à distância.
+79504	Aljava do Arqueiro	Uma aljava que te proporciona uma fonte inesgotável de flechas. Sem qualquer redução do dano infligido por disparos à distância.
+85001	Faixa de Lorde (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85002	Faixa de Lorde (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85003	Faixa de Lorde (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85004	Faixa de Lorde (Pessoal)	Esta Faixa retira 11~25% dos bónus da arma ou armadura que usas para absorção.
+85005	Faixa de Mestre (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85006	Faixa de Mestre (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85007	Faixa de Mestre (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85008	Faixa de Mestre(Pessoal)	Esta Faixa retira 11~25% dos bónus da arma ou armadura que usas para absorção.
+85011	Faixa Soberana (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85012	Faixa Soberana (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85013	Faixa Soberana (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85014	Faixa Soberana (Pessoal)	Esta Faixa retira 11~25% dos bónus da arma ou armadura que usas para absorção.
+85015	Faixa Real (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85016	Faixa Real (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85017	Faixa Real (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85018	Faixa Real (Pessoal)	Esta Faixa retira 11~25% dos bónus da arma ou armadura que usas para absorção.
+85071	Faixa Chou (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85072	Faixa Chou (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85073	Faixa Chou (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85074	Faixa Chou (Pessoal)	Esta Faixa retira 11-25% dos bónus da arma ou armadura que usas para absorção.
+85075	Faixa Mao (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85076	Faixa Mao (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85077	Faixa Mao (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85078	Faixa Mao (Pessoal)	Esta Faixa retira 11-25% dos bónus da arma ou armadura que usas para absorção.
+85079	Faixa You (Básica)	Esta Faixa retira 1% dos bónus da arma ou armadura que usas para absorção.
+85080	Faixa You (Fina)	Esta Faixa retira 5% dos bónus da arma ou armadura que usas para absorção.
+85081	Faixa You (Nobre)	Esta Faixa retira 10% dos bónus da arma ou armadura que usas para absorção.
+85082	Faixa You (Pessoal)	Esta Faixa retira 11-25% dos bónus da arma ou armadura que usas para absorção.
+90000	Certificado de Reversão	Usa o Certificado de Reversão para removeres bónus de uma Faixa de Ombro.
+10951	Vela Branca	Este item é usado para combater a masmorra de defesa do navio.
+10954	Cristal de Fogo	Este Cristal é usado para comprar ou atualizar um Talismã de fogo de um NPC.
+10955	Cristal de Gelo	Este Cristal é usado para comprar ou atualizar um Talismã de gelo de um NPC.
+10956	Cristal das Trevas	Este Cristal é usado para comprar ou atualizar um Talismã da escuridão um NPC.
+10957	Cristal de Raio	Este Cristal é usado para comprar ou atualizar um Talismã de raio de um NPC.
+10958	Cristal de Vento	Este Cristal é usado para comprar ou atualizar um Talismã de vento de um NPC.
+10959	Cristal da Terra	Este Cristal é usado para comprar ou atualizar um Talismã de terra de um NPC.
+10960	1º lugar Baú Liga de Ouro	Recompensa 1ª Classificado Liga de Ouro.
+10961	1º lugar Baú Liga de Prata	Recompensa 1ª Classificado Liga de Prata.
+10962	1º lugar Baú liga de bronze	Recompensa 1ª Classificado Liga de Bronze.
+10963	2º lugar Baú Liga de Ouro	Recompensa 2ª Classificado Liga de Ouro.
+10964	2º lugar Baú Liga de Prata	Recompensa 2ª Classificado Liga de Prata.
+10965	2º lugar Baú liga de bronze	Recompensa 2ª Classificado Liga de Bronze.
+10966	3º lugar Baú Liga de Ouro	Recompensa 3ª Classificado Liga de Ouro.
+10967	3º lugar Baú Liga de Prata	Recompensa 3ª Classificado Liga de Prata.
+10968	3º lugar Baú Liga de bronze	Recompensa 3ª Classificado Liga de bronze.
+18901	Pedra Chama Vermelha (Permanente)	Aumenta os bônus de seu cinto. Duração: infinita.
+27798	Camarão de Água Doce	Isca para a captura de peixes grandes.	Aumenta em 20% a chance de um peixe raro ser capturado.
+27799	Ossos de peixes	Os ossos de um peixe
+27800	Massa	Uma isca leve e barata	Aumenta em 5% a chance de um peixe raro ser capturado.
+27801	Minhoca	Isca popular que atrai peixes.	Aumenta em 8% a chance de um peixe raro ser capturado.
+27802	Minnow	Isca que atrai peixes grandes.	Aumenta em 12% a chance de um peixe raro ser capturado.
+27863	Zander grelhado	Coma este peixe para receber:
+27864	Peixe Mandarim Grelhado	Coma este peixe para receber:
+27865	Zander Grelhado Grande	Coma este peixe para receber:
+27866	Carpa Grelhada	Coma este peixe para receber:
+27867	Salmão Grelhado	Coma este peixe para receber:
+27868	Carpa Grelhada	Coma este peixe para receber:
+27869	Truta de ribeiro grelhada	Coma este peixe para receber:
+27870	Enguia Grelhada	Coma este peixe para receber:
+27871	Truta arco-íris grelhada	Coma este peixe para receber:
+27872	Truta de rio grelhada	Coma este peixe para receber:
+27873	Rudd Grelhado	Coma este peixe para receber:
+27874	Poleiro Grelhado	Coma este peixe para receber:
+27875	Tenchi Grelhado	Coma este peixe para receber:
+27876	Peixe-gato Grelhado	Coma este peixe para receber:
+27877	Loach Grelhado	Coma este peixe para receber:
+27878	Peixe Lótus Grelhado	Coma este peixe para receber:
+27879	Peixe-doce grelhado	Coma este peixe para receber:
+27880	Smelt grelhado	Coma este peixe para receber:
+27881	Shiri Grelhado	Coma este peixe para receber:
+27882	Carpa Espelho Grelhada	Coma este peixe para receber:
+27883	Peixe dourado grelhado	Coma este peixe para receber:
+27884	Snakehead Grelhado	Coma este peixe para receber:
+27885	 Skygazer Grelhado	Coma este peixe para receber:
+27886	Caranguejo Rei Vermelho Grelhado	Coma este peixe para receber:
+27887	Yabby Grelhado	Coma este peixe para receber:
+30002	Samambaia escura	Pode ser do interesse de Chaegirab.
+30003	Anel Chaegirab	Pode ser do interesse de Chaegirab.
+30004	Cristal de Metin	Pode ser do interesse de Chaegirab.
+30005	Núcleo Purificado	Pode ser do interesse de Chaegirab.
+30006	Dente de Orc	Pode ser do interesse de Chaegirab.
+30015	Lembrança domoníaca	Pode ser do interesse de Chaegirab.
+30047	Livro de maldições	Pode ser do interesse de Chaegirab.
+30050	Esfera de gelo	Pode ser do interesse de Chaegirab.
+30094	Bolsa de Gold Pequena	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 200.000 a 600,00 Gold.
+30095	Bolsa de Gold Média	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 400.000 a 1.200.000 Gold.
+30096	Bolsa de Gold Grande	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 700.000 a 2.100.000 Gold.
+30097	Bolsa de Gold Pequena	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 200.000 a 600.00 Gold.
+30098	Bolsa de Gold Média	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 400.000 a 1.200.000 Gold.
+30099	Bolsa de Gold Grande	Você pode encontrar Gold nesta bolsa. Clique com o botão direito para abri-la. você pode encontrar de 700.000 a 2.100.000 Gold.
+30165	Ramo de Zelkova	Pode ser do interesse de Chaegirab.
+30166	Símbolo Fantasma	Pode ser do interesse de Chaegirab.
+30167	Galho Fantasma	Pode ser do interesse de Chaegirab.
+30168	Emblema do Rei Negro	Pode ser do interesse de Chaegirab.
+30251	Jóia da Malevolência	Pode ser do interesse de Chaegirab.
+30252	Jóia da Sabedoria	Pode ser do interesse de Chaegirab.
+30255	Tratado das Chamas	Este item é usado para atualizar o Talismã de Fogo.
+30256	Tratado do Raio	Este item é usado para atualizar o Talismã de Raio.
+30257	Tratado da Terra	Este item é usado para atualizar o Talismã da Terra.
+30258	Tratado de Gelo	Este item é usado para atualizar o Talismã de Gelo.
+30259	Tratado do Vento	Este item é usado para atualizar o Talismã do Vento.
+30260	Tratado das Trevas	Este item é usado para atualizar o Talismã da Escuridão.
+30271	Fragmento de Metin Rock	Este item é usado para atualizar peças de equipamento.
+30273	Certificado Místico	Este item é usado para epicizar peças de equipamento.
+30274	Certificado Antigo	Este item é usado para epicizar peças de equipamento.
+30275	Certificado Épico	Este item é usado para epicizar peças de equipamento.
+30276	Certificado Lendário	Este item é usado para epicizar peças de equipamento.
+30277	Cristal de Deus	Você pode trocar 100 Cristal de Deus por 1 Cristal de Deus+.	Clique com o botão direito para transformá-los.
+30278	Cristal de Deus+	Este item é usado para aprimoramentos, elaboração e várias compras de npc.
+30279	Cristal Solar	Você pode trocar 100 Cristal Solar por 1 Cristal Solar+.	Clique com o botão direito para transformá-los.
+30280	Cristal Solar+	Este item é usado para aprimoramentos, elaboração e várias compras de npc.
+30282	Chifre de Razador	Este item é usado para atualizar peças de equipamento.
+30283	Chifre de Nemere	Este item é usado para atualizar peças de equipamento.
+30284	Pedra sem Espírito	Este item é usado para melhorias e várias compras do NPC.
+30516	Dragonas antigas	Item para melhoria de equipamento.
+30524	Pedra Chama	Item para melhoria de equipamento.
+30525	Pedra da Chama de Gelo	Item para melhoria de equipamento.
+30587	Pano roxo	Item para melhoria de equipamento.
+30602	Corante azul	Item para melhoria de equipamento.
+30610	Mithril	Item para melhoria de equipamento.
+30612	Cordas Robustas	Item para melhoria de equipamento.
+30614	Tinta preta	Item para melhoria de equipamento.
+30615	Tinta Branca	Item para melhoria de equipamento.
+30623	Frasco de limo vazio	Este item é usado na masmorra do Slime, assim que dropar, deve ser arrastado para o Slime.
+30624	Frasco cheio de limo	Este item é usado na masmorra do Slime, assim que dropar, deve ser arrastado para a pederneira.
+30625	Pedaço de limo de menir	Este item é usado para combater na masmorra de Slime.
+30798	Cruz Ankh	Com este item você pode enfrentar o calabouço das pirâmides.
+30800	Pedaço de pergaminho 1	Este item é usado para superar o segundo andar do Calabouço da Pirâmide
+30801	Pedaço de pergaminho 2	Este item é usado para superar o segundo andar do Calabouço da Pirâmide
+30802	Pedaço de pergaminho 3	Este item é usado para superar o segundo andar do Calabouço da Pirâmide
+30803	Pedaço de pergaminho 4	Este item é usado para superar o segundo andar do Calabouço da Pirâmide
+30804	Sage Band	Este item é usado no Calabouço da Pirâmide.
+30805	Chave Antiga	Este item é usado no Calabouço da Pirâmide.
+30806	Baú Milenar	Este item é usado no Calabouço da Pirâmide.
+39015	Pedra do Ferreiro	Com esta pedra é possível comprar um item do ferreiro.
+39048	Baú do Guerreiro	Pacote contendo livros úteis para guerreiro.
+39050	Baú do Ninja	Pacote contendo livros úteis para ninja.
+39052	Baú do Sura	Pacote contendo livros úteis para sura.
+39054	Baú do Xamã	Pacote contendo livros úteis para xamã.
+39065	Gold (20kk)	Contém 20kk de Gold.
+39066	Gold (40kk)	Contém 40kk de Gold.
+39067	Gold (70kk)	Contém 70kk de Gold.
+39068	Gold (15kk)	Contém 15kk de Gold.
+39069	Gold (10kk)	Contém 10kk de Gold.
+39070	Gold (30kk)	Contém 30kk de Gold.
+39071	Gold (5kk)	Contém 5kk de Gold.
+39072	Gold (25kk)	Contém 25kk de Gold.
+39073	Gold (35kk)	Contém 35kk de Gold.
+39074	Gold (55kk)	Contém 55kk de Gold.
+39075	Gold (50kk)	Contém 50kk de Gold.
+39076	Gold (100kk)	Contém 100kk de Gold.
+39077	Gold (150kk)	Contém 150kk de Gold.
+39079	Gold (80kk)	Contém 80kk de Gold.
+39080	Gold (130kk)	Contém 130kk de Gold.
+39081	Gold (230kk)	Contém 230kk de Gold.
+39082	Gold (120kk)	Contém 120kk de Gold.
+39083	Gold (220kk)	Contém 220kk de Gold.
+40004	Anel de Eek	Um anel feito com ingredientes secretos, que lhe dá bônus especiais.
+40095	Leque do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40096	Sino do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40097	Glava do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40098	Arco do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40099	Adaga do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40100	Espada do Zodíaco Negro	Uma Skin de arma que pode ser comprada na loja de passes de batalha.
+40143	Elixir do Pesquisador+	Este elixir aumenta a qualidade dos itens e redefine o tempo de espera.
+40144	Elixir do Pesquisador	Este elixir redefine o tempo de espera.
+40192	Traje do Zodíaco Negro (f)	Traje do Zodíaco com efeitos que combinam com as armas.
+40193	Traje do Zodíaco Negro (m)	Traje do Zodíaco com efeitos que combinam com as armas.
+40194	Traje do Zodíaco Negro (f)	Traje do Zodíaco com efeitos que combinam com as armas.
+40195	Traje do Zodíaco Negro (m)	Traje do Zodíaco com efeitos que combinam com as armas.
+40196	Traje do Zodíaco Negro (m)	Traje do Zodíaco com efeitos que combinam com as armas.
+40197	Traje do Zodíaco Negro (f)	Traje do Zodíaco com efeitos que combinam com as armas.
+40198	Traje do Zodíaco Negro (m)	Traje do Zodíaco com efeitos que combinam com as armas.
+40199	Traje do Zodíaco Negro (f)	Traje do Zodíaco com efeitos que combinam com as armas.
+45242	Tranças pretas + (m)	Tranças especiais que combinam com o Traje do Zodíaco.
+45243	Tranças pretas+ (f)	Tranças especiais que combinam com o Traje do Zodíaco.
+46003	Crescent Warrioress (f)	Este item só pode ser usado pelo xamã suporte.
+46004	Crescent Warrioress (m)	Este item só pode ser usado pelo xamã suporte.
+46005	Armadura de Azrael (f)	Este item só pode ser usado pelo xamã suporte.
+46006	Armadura de Azrael (m)	Este item só pode ser usado pelo xamã suporte..
+46007	Guerreiro do deserto (f)	Este item só pode ser usado pelo xamã suporte.
+46008	Guerreiro do deserto (m)	Este item só pode ser usado pelo xamã suporte.
+46303	Capacete de Azrael (f)	Este item só pode ser usado pelo xamã suporte.
+46304	Capacete de Azrael (m)	Este item só pode ser usado pelo xamã suporte.
+46307	Salsa Bun	Este item só pode ser usado pelo xamã suporte.
+46308	Mini Mohawk	Este item só pode ser usado pelo xamã suporte.
+46601	Leque de Serra	Este item só pode ser usado pelo xamã suporte.
+46602	Sino de Serra	Este item só pode ser usado pelo xamã suporte.
+46603	Leque Acquariano	Este item só pode ser usado pelo xamã suporte.
+46604	Sino Acquariano	Este item só pode ser usado pelo xamã suporte.
+46605	Sino Açucarado	Este item só pode ser usado pelo xamã suporte.
+46606	Leque de Gelo	Este item só pode ser usado pelo xamã suporte.
+50063	Baú do Razador	Este baú foi recuperado da Fortaleza do Dragão Vermelho. Ele contém um tesouro verdadeiramente magnífico.
+50064	Baú do Nemere	Este baú foi recuperado da Torre de Vigia de Nemere. Ele contém um tesouro verdadeiramente magnífico.
+50065	Baú de Bruxa de Gelo	Este baú contém algo valioso.
+50066	Baú Precioso	Este baú contém itens valiosos para seu equipamento.	Ele pode conter faixas de ombro e outros itens úteis para trajes.
+50067	Baú de Presente Diário	Este baú contém alguns prêmios fantásticos.
+50069	Baú do Lord Árvore Fantasma	Este baú contém algo valioso.
+50072	Baú Orc Maze	Este baú contém algo valioso.
+50074	Baú da Baronesa	Este baú contém algo valioso.
+50075	Baú da Rainha Slime	Este baú contém algo valioso.
+50081	Baú da Grande Árvore Fanstama	Este baú contém algo valioso.
+50098	Baú do Beran-Setaou	Este baú foi recuperado da Gruta do Exílio. Ele contém um tesouro verdadeiramente magnífico.
+50099	Baú Elemental	Este baú contém itens necessários para atualizar os talismãs.
+50100	Baú do Haru	Este baú contém algo valioso.
+50101	Baú do Eien	Este baú contém algo valioso.
+50102	Baú do Buncho	Este baú contém algo valioso.
+50138	Baú do Mahon	Este baú contém algo valioso.
+50139	Baú do Bo	Este baú contém algo valioso.
+50140	Baú do Goo-Pae	Este baú contém algo valioso.
+50141	Baú do Chuong	Este baú contém algo valioso.
+50142	Baú do Comandante Brutal	Este baú contém algo valioso.
+50143	Baú de Habilidades	Baú de Skills contém livros para habilidades padrão.
+50203	Baú da Hydra	Este baú contém algo valioso.
+50204	Baú do Ochao	Este baú contém algo valioso.
+50254	Baú da Escuridão	O baú pesado esconde as consideradas riquezas esquecidas da Nação das Trevas.
+50285	Baú do Ruler En-Tai's	Este baú contém algo valioso.
+50333	Livro da Força Divina	Aumente o poder divino. Através deste livro, você pode melhorar a habilidade padrão da Força Divina.
+50334	Livro Master Gold	Aumente o poder divino. Por meio deste livro, você pode aprimorar a habilidade padrão de Coletar Gold.
+50335	Livro de caçadores de monstros	Aumente o poder divino. Através deste livro, você pode melhorar a habilidade padrão de caçadores de monstros.
+50336	Livro da Força da Vida	Aumente o poder divino. Por meio deste livro, você pode melhorar a habilidade padrão da Força de Vida.
+50525	Pedras da Alma Perfeita	Esta Pedra Perfeita permite que você atualize suas habilidades de grau de Grande Mestre para grau de Grande Mestre Perfeito usando apenas uma pedra. A pedra desaparece após o uso.
+50526	Impulso Pedra da Alma	Esta pedra lendária permite que você aumente as habilidades do Grande Mestre das habilidades de impulso. A pedra desaparece após o uso.
+50527	Contra ataque Pedra da Alma	Esta pedra lendária permite que você aumente as habilidades do Grande Mestre das habilidades de contra-ataque. A pedra desaparece após o uso.
+50634	Alma de Cristal	Um cristal puro como a alma. Pode ser inserido como acessório.
+50635	Rubi	Gema vermelha com acabamento único. Pode ser inserido como acessório.
+50636	Granada	Gema laranja com acabamento único. Pode ser inserido como acessório.
+50637	Esmeralda	Gema verde com acabamento único. Pode ser inserido como acessório.
+50638	Safira	Gema azul com acabamento único. Pode ser inserido como acessório.
+50639	Turmalina	Esta gema mágica brilha com todas as cores do arco-íris. Pode ser inserido como acessório.
+50640	Cianita	Uma gema azul e vermelha com um corte único. Pode ser inserido como acessório.
+50672	Âmbar (Permanente)	Uma joia límpida feita de resina fossilizada, que brilha em tons de mel ou dourado.	Duração: infinita
+50673	Madeira Fóssil (Permanente)	Uma madeira valiosa que pode dar estabilidade aos itens de joalheria.	Duração: infinita
+50674	Cobre (Permanente)	Um metal precioso maleável que pode ser usado para fazer joias e moedas. Também é necessário para a produção de bronze.	Duração: infinita
+50675	Prata (Permanente)	Metal precioso brilhante usado para fazer joias. Pode ser transformado em acessórios de prata.	Duração: infinita
+50676	Ouro (Permanente)	Metal dourado usado para fazer joias. Pode ser transformado em acessórios de ouro.	Duração: infinita
+50677	Jade (Permanente)	Um mineral valioso que é usado há mais de 5.000 anos. Pode ser trabalhado em acessórios e joias.	Duração: infinita
+50678	Ébano (Permanente)	Esta madeira negra e dura é uma das mais valiosas de todas. Pode ser trabalhado em acessórios e joias.	Duração: infinita
+50679	Pérola (Permanente)	Usado para fazer joias. Pode ser trabalhado em acessórios e joias.	Duração: infinita
+50680	Ouro Branco (Permanente)	Uma liga de ouro dura e branca, freqüentemente usada em joias.	Duração: infinita
+50681	Cristal (Permanente)	Uma pedra dura de quartzo cristalino que pode ser encontrada em várias cores. Freqüentemente usado para joalheria.	Duração: infinita
+50682	Ametista (Permanente)	Um quartzo popular que pode ser encontrado em diferentes tons de roxo. Muitas vezes é usado para fazer joias.	Duração: infinita
+50683	Lágrima do paraíso (Permanente)	Chuva cristalizada do céu. Pode ser usado para fazer joias.	    Duração: infinita
+50684	Cristal da Alma(Permanente)	Um cristal puro como a alma. Pode ser inserido como acessório.	Duração: infinita
+50685	Rubi (Permanente)	Gema vermelha com acabamento único. Pode ser inserido como acessório.	Duração: infinita
+50686	Granada (Permanente)	Gema laranja com acabamento único. Pode ser inserido como acessório.	Duração: infinita
+50687	Esmeralda (Permanente)	Gema verde com acabamento único. Pode ser inserido como acessório.	Duração: infinita
+50688	Safira (Permanente)	Gema azul com acabamento único. Pode ser inserido como acessório.	Duração: infinita
+50689	Turmalina (Permanent)	Esta gema mágica brilha com todas as cores do arco-íris. Pode ser inserido como acessório.	Duração: infinita
+50690	Cianita (Permanent)	Uma gema azul e vermelha com um corte único. Pode ser inserido como acessório.	Duração: infinita
+53025	Leopard Cub	Este selo evoca seu bebê leopardo.
+53026	Leonidas Signet(15d)	Com este selo evoca filhote de leão Leônidas de 15 dias.
+53027	Leonidas Signet(30d)	Com este selo evoca filhote de leão Leônidas de 30 dias.
+53028	Leonidas Signet(Permanente)	Com este selo evoca Leonidas Permanente.
+53029	Nogai Signet (15d)	Com este selo evoca um Nogaj de 15 dias.
+53030	Nogai Signet (30d)	Com este selo evoca um Nogaj de 30 dias.
+53031	Nogai Signet (Permanente)	Com este selo evoca um Nogaj Permanente.
+53248	Donnie (15d)	Com este selo evoca uma lebre dos pesadelos, Donnie 15 dias.
+53249	Donnie (30d)	Com este selo evoca uma lebre dos pesadelos, Donnie 30 dias.
+53250	Donnie (Permanente)	Com este selo evoca uma lebre dos pesadelos, Donnie Permanente.
+53251	Frank (15d)	Com este selo evoca um Frank de 15 dias.
+53252	Frank (30d)	Com este selo evoca um Frank de 30 dias.
+53253	Frank (Permanente)	Com este selo evoca um Frank Permanente.
+53263	Gryph	Este selo invoca Griffy, invoca seu grifo de estimação.
+53264	Nogai	Este selo invoca Nogai, invoca seu grifo de estimação.
+53282	FlameCat	Com este selo evoca o Gato de Fogo que tudo vê.
+53283	FrostCat	Com esta foca, você invoca um gato gelado que tudo vê.
+55002	Caixa de Transporte	Ao colocar seu animal de estimação na caixa de transporte, você o tornará comercializável.
+55003	Livro do jovem Pet	Este livro é usado para o desenvolvimento dos Pet.
+55004	Livro de Pet selvagens	Este livro é usado para o desenvolvimento dos Pet.
+55005	Livro de Pet Valente	Este livro é usado para o desenvolvimento dos Pet.
+55014	Livro de danos críticos (PvM)	Depois de aprender essa habilidade, o Pet aumenta o dano crítico causado no PVM.
+55015	Livro forte contra Metin	Depois de aprender essa habilidade, o Pet aumenta o dano causado às Rochas Metin.
+55016	Livro forte contra Boss	Depois de aprender essa habilidade, o Pet aumenta o dano causado contra os Boss.
+55017	Livro da intuição	Depois de aprender esta habilidade, o Pet o valor do bônus de XP.
+55018	Livro drop de Yang	Depois de aprender essa habilidade, o Pet aumenta a chance de dropar Gold.
+55019	Livro Valor de Ataque/Magia	Depois de aprender esta habilidade, o Pet aumenta o dano de ataque / magia.
+55020	Livro Bloqueio de Ataque Corporal	Depois de aprender esta habilidade, o Pet aumenta a chance de bloquear ataques corporais.
+55021	Livro Refletir Ataque Corporal	Após aprender esta habilidade, o pet aumenta o dano sofrido pelo jogador, que se refletirá no oponente.
+56001	Poção de Melhoria (5%)	Esta poção aumenta a chance de aprimorar um item em 5%.	Este item também é usado para comprar itens do ferreiro.
+56002	Poção de Melhoria (10%)	Esta poção aumenta a chance de aprimorar um item em 10%.	Este item também é usado para comprar itens do ferreiro.
+56003	Poção de Melhoria (15%)	Esta poção aumenta a chance de aprimorar um item em 15%.
+70058	Anel de Poder (15d)	Um anel feito com ingredientes secretos, que lhe dá bônus especiais por 15 dias.
+70059	Anel de Poder (30d)	Um anel feito com ingredientes secretos, que lhe dá bônus especiais por 30 dias..
+70060	Anel de Poder (Permanente)	Um anel feito com ingredientes secretos, que lhe dá bônus especiais permanente.
+70401	Trajes de encantamento	Remove os bônus de um de seus trajes e aplica novos.
+70402	Traje Especial da Bruxa (5%)	Adiciona um bônus especial (até no máximo 2) a um de seus trajes.
+70403	Traje Especial da Bruxa (10%)	Adiciona um bônus especial (até no máximo 2) a um de seus trajes.
+70404	Remove Bônus Especial	Remove um dos bônus especiais de sua escolha do seu traje.
+70604	Congela Bônus	Usa este item em um equipamento com bônus presentes irá congelar um bônus escolhido.
+70605	Descongela Bônus	Este item permite que você altere o bônus congelado escolhido.
+70606	Bônus de Degelo	Este item permite que você descongele uma peça de equipamento que tenha um bônus de congelamento.
+70610	Voucher do Battle Pass	Este item é usado para comprar roupas na loja Battle Pass.
+70611	Battle Pass	Este item ativa o Passe de Batalha.
+70612	Diamante precioso	Este Diamante premiado é usado para comprar Skin de armas, armaduras e cabelos de um NPC.
+70613	Poção da beleza	Esta poção de beleza é usada para comprar Skin de Pet e montaria de um NPC.
+70614	Poção da beleza	Esta poção de beleza é usada para comprar Skin de Pet e montaria de um NPC.
+71025	Pedra do ferreiro	Com esta pedra você pode comprar o livro do ferreiro no ferreiro.
+71085	Reforçar Item	Adicione 5 bônus a um de seus itens.
+71135	Anel da Lua Crescente (7d)	Um anel com uma gravura artisticamente trabalhada em forma de meia-lua.
+71136	Pirulito Mágico (7d)	Um pirulito feito com ingredientes secretos, que te dá bônus especiais.
+71148	Anel Força de Vontade (30d)	Um anel feito com ingredientes secretos, que lhe dá bônus especiais.
+71153	Poção da Sabedoria (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+71174	Razador Ticket	Entregando o Ticket Razador ao guardião, você obterá permissão para entrar na Fortaleza do Dragão Vermelho.
+71175	Nemere Ticket	Entregando o Nemere Ticket ao guardião, você obterá permissão para entrar na Torre de Vigia de Nemere.
+71188	Pirulito Mágico (15d)	Um pirulito feito com ingredientes secretos, que te dá bônus especiais.
+71203	Baú do Guerreiro	Pacote Guerreiro contendo 3 Livros de Habilidades selecionados aleatoriamente.
+71204	Baú do Ninja	Pacote Ninja contendo 3 Livros de Habilidades selecionados aleatoriamente.
+71205	Baú do Sura	Pacote Sura contendo 3 Livros de Habilidades selecionados aleatoriamente.
+71206	Baú do Xamã	Pacote Xamã contendo 3 Livros de Habilidades selecionados aleatoriamente.
+71229	Manny (30d)	Este selo evoca um poderoso mamute de 30 dias.
+71231	Leão Branco (30d)	Este selo evoca um poderoso Leão Branco de 30 dias.
+71233	Cavalo Real (30d)	Este selo evoca um majestoso Cavalo Real de 30 dias.
+71234	Pirulito Mágico (30d)	Um pirulito feito com ingredientes secretos, que te dá bônus especiais.
+71235	Pirulito Mágico (Permanente)	Um pirulito feito com ingredientes secretos, que te dá bônus especiais.
+71252	Drake	Esta montagem só pode ser encontrada no BattlePass.
+71253	Manny (Permanente)	Este selo evoca um poderoso mamute Permanente.
+71254	Leão Branco (Permanente)	Este selo evoca um poderoso Leão Branco Permanente.
+71255	Cavalo Real (Permanente)	Este selo evoca um majestoso Cavalo Real Permanente.
+72001	Anel de Experiência (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72002	Anel de Experiência (3h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72003	Anel de Experiência (30m)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.	Não negociável.
+72004	Anel de Experiência (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.	Não negociável.
+72006	Luvas de Ladrão (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72007	Luvas de Ladrão (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.	Não negociável.
+72013	Livro de Pesca (30m)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72014	Livro de Pesca (1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72015	Livro de Pesca (Permanent)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72044	Livro do Líder(1h)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+72726	Elixir do Sol (E)	Reabastece seu HP automaticamente. Contém HP infinito.
+72730	Elixir da Lua (E)	Reabastece automaticamente seu SP. Contém SP infinito.
+80019	Tecido fino amarelo	Uma faixa de ombro é feita com este material.
+80022	Tecido fino vermelho	Uma faixa de ombro é feita com este material.
+80023	Tecido fino azul claro	Uma faixa de ombro é feita com este material.
+80024	Tecido fino Verde	Uma faixa de ombro é feita com este material.
+80025	Tecido fino roxo	Uma faixa de ombro é feita com este material.
+80026	Tecido fino laranja	Uma faixa de ombro é feita com este material.
+80027	Tecido fino Azul	Uma faixa de ombro é feita com este material.
+84999	Faixa de Ombro de Encantamento	Remove os bônus de uma faixa de ombro e aplica novos.
+85019	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85020	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85021	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85022	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85023	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85024	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85025	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85026	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85027	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85028	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85029	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85030	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85031	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85032	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85033	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85034	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85035	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85036	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85037	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85038	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85039	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85040	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85041	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85042	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85043	Trajes Lord Sash (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85044	Trajes Lord Sash (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85045	Trajes Lord Sash (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85046	Trajes Lord Sash (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85047	Trajes Sash di Yu (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85048	Trajes Sash di Yu (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85049	Trajes Sash di Yu (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85050	Trajes Sash di Yu (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85051	Trajes Sash di Mao (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85052	Trajes Sash di Mao (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85053	Trajes Sash di Mao (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85054	Trajes Sash di Mao (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85055	Trajes Sash Reale (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85056	Trajes Sash Reale (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85057	Trajes Sash Reale (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85058	Trajes Sash Reale (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85059	Trajes Sash Principe (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85060	Trajes Sash Principe (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85061	Trajes Sash Principe (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85062	Trajes Sash Principe (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85063	Trajes Sash Maestro (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85064	Trajess Sash Maestro (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85065	Trajes Sash Maestro (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85066	Trajes Sash Maestro (custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85067	Trajes Sash di Chou (básico)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85068	Trajes Sash di Chou (bom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85069	Trajes Sash di Chou (nobre)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85070	Trajes Sash di Chou(custom)	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+85083	Asas do Diabo	Este item é uma faixa de ombro, que fornece bônus adicionais ao seu personagem.
+86050	Reforça Talismãs	Isso adicionará um novo bônus ao seu talismã (até um máximo de 4 bônus).
+86051	Encanta Talismãs	Remove bônus do talismã e aplica novos. As variáveis ??são aleatórias.
+86052	Fortalece Talismãs	Legendary sphere, If a talisman already has 4 attributes, this allows you to add the last bonus.
+86053	Fragmento de Pérola Amarela	Você pode trocar 10 Fragmentos de Pérola Amarela para 1 Pérola Amarela.	Clique com o botão direito para trocar.
+86054	Fragmento de Pérola Verde	Você pode trocar 10 Fragmentos de Pérola Verde para 1 Pérola Verde.	Clique com o botão direito para trocar.
+86055	Fragmento de Pérola Roxa	Você pode trocar 10 Fragmentos de Pérola Roxa para 1 Pérola Roxa.	Clique com o botão direito para trocar.
+86056	Pérola Amarela	Uma pérola muito rara que é usada para evoluir o Pet.
+86057	Pérola Verde	Uma pérola muito rara que é usada para evoluir o Pet.
+86058	Pérola Roxa	Uma pérola muito rara que é usada para evoluir o Pet.
+86060	Encanta Zodíaco	Remove bônus de sua arma e armadura do Zodíaco e aplica novos.
+86062	Encanta Alquimia	Remove os bônus de uma de suas pedras do dragão e aplique novos.
+86066	Pedaço De Pedra Mágica	Com este item, indo para o ferreiro, você pode comprar a Pedra Mágica.
+86067	Talismã Rude	Este item é usado para o aprimoramento de Talismãs.
+86071	Proteína Pet (2d)	Com esta proteína você pode reviver ou aumentar a vida útil de seu Pet. Você receberá uma nova duração de: 2d.	Arraste a Proteína sobre o ícone do animal de estimação para usá-lo.
+86072	Proteína Pet (4d)	Com esta proteína você pode reviver ou aumentar a vida útil de seu Pet. Você receberá uma nova duração de: 4d.	Arraste a Proteína sobre o ícone do animal de estimação para usá-lo.
+86073	Proteína Pet (8d)	Com esta proteína você pode reviver ou aumentar a vida útil de seu Pet. Você receberá uma nova duração de: 8d.	Arraste a Proteína sobre o ícone do animal de estimação para usá-lo.
+86074	Proteína Pet Divina (Permanente)	Com esta proteína seu Pet receberá uma nova duração infinita.	 Arraste a Proteína sobre o ícone do animal de estimação para usá-lo.
+86075	Proteína Especial	Através desta Proteína você pode aumentar um bônus à escolha do seu animal de estimação.	 Arraste a Proteína sobre o ícone do animal de estimação para usá-lo.
+86076	Resetar Habilidade Pet	Este item permite que você esqueça uma habilidade de seu Pet. Para usá-lo, você precisa ter seu Pet convocado.
+86077	Resetar Habilidade Pet (S)	Este item permite que você esqueça todas as habilidades de seu Pet. Para usá-lo, você precisa ter seu Pet convocado.
+86080	Remove Bônus Faixa de Ombro	Através deste item você pode remover os bônus de sua Faixa de Ombro.	 Arraste o item sobre a Faixa de Ombro para remover seus bônus.
+88001	Suporte Xamã Lord Sash	Este item só pode ser usado pelo xamã de apoio.
+88005	Suporte Xamã Red Sash	Este item só pode ser usado pelo xamã de apoio.
+88009	Suporte Xamã Black Sash	Este item só pode ser usado pelo xamã de apoio.
+88010	Traje Monkey (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88011	Traje Monkey (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88012	Traje Spider (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88013	Traje Spider (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88014	Traje Razador (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88015	Traje Razador (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88016	Traje Nemere (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88017	Traje Nemere (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88018	Traje Dragon (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88019	Traje Dragon (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88020	Traje Meley (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88021	Traje Meley (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88022	Traje Azrael (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88023	Traje Azrael (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88024	Traje Fat Executor (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88025	Traje Fat Mini Executor (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88026	Traje Baashido baby (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88027	Traje Baashido baby (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88028	Traje Nessie (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88029	Traje Nessie (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88030	Traje Exedyar (7d)	Este item proporciona uma estética especial para seu Pet por 7 dias.
+88031	Traje Exedyar (Permanente)	Este item proporciona uma estética especial ao seu Pet de forma permanente.
+88035	Suporte Xamã White Sash	Este item só pode ser usado pelo xamã de apoio.
+88039	Suporte Xamã Sash by Chou	Este item só pode ser usado pelo xamã de apoio.
+88110	Traje Lion (7d)	Este item dá à sua montaria uma estética especial por 7 dias.
+88111	Traje Lion (Permanente)	Este item fornece uma estética especial para sua montaria de forma permanente.
+88112	Traje Dragon (7d)	Este item dá à sua montaria uma estética especial por 7 dias.
+88113	Traje Dragon (Permanente)	Este item fornece uma estética especial para sua montaria de forma permanente.
+88114	Traje Elephant (7d)	Este item dá à sua montaria uma estética especial por 7 dias.
+88115	Traje Elephant (Permanente)	Este item fornece uma estética especial para sua montaria de forma permanente.
+88116	Traje Panda (7d)	Este item dá à sua montaria uma estética especial por 7 dias.
+88117	Traje Panda (Permanente)	Este item fornece uma estética especial para sua montaria de forma permanente.
+88210	Efeito Arma Negra I (7d)	Este item fornece uma estética especial ao seu personagem.
+88211	Efeito Arma Negra I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88212	Efeito Armadura Negra I (7d)	Este item fornece uma estética especial ao seu personagem.
+88213	Efeito Armadura Negra I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88214	Efeito Arma Rosa I (7d)	Este item fornece uma estética especial ao seu personagem.
+88215	Efeito Arma Rosa I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88216	Efeito Armadura Rosa I (7d)	TEste item fornece uma estética especial ao seu personagem.
+88217	Efeito Armadura Rosa I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88218	Efeito Arma Laranja I (7d)	Este item fornece uma estética especial ao seu personagem.
+88219	Efeito Arma Laranja I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88220	Efeito Armadura Laranja I (7d)	Este item fornece uma estética especial ao seu personagem.
+88221	Efeito Armadura Laranja I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88222	Efeito Arma Verde I (7d)	Este item fornece uma estética especial ao seu personagem.
+88223	Efeito Arma Verde I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88224	Efeito Armadura Verde I (7d)	Este item fornece uma estética especial ao seu personagem.
+88225	Efeito Armadura Verde I (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88226	Efeito Arma Roxo II (7d)	Este item fornece uma estética especial ao seu personagem.
+88227	Efeito Arma Roxo II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88228	Efeito Armadura Roxo II (7d)	Este item fornece uma estética especial ao seu personagem.
+88229	Efeito Armadura Roxo II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88230	Efeito Arma Azul II (7d)	Este item fornece uma estética especial ao seu personagem.
+88231	Efeito Arma Azul II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88232	Efeito Armadura Azul II (7d)	Este item fornece uma estética especial ao seu personagem.
+88233	Efeito Armadura Azul II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88234	Efeito Arma Rosa II (7d)	Este item fornece uma estética especial ao seu personagem.
+88235	Efeito Arma Rosa II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88236	Efeito Armadura Rosa II (7d)	Este item fornece uma estética especial ao seu personagem.
+88237	Efeito Armadura Rosa II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88238	Efeito Arma Branca II (7d)	Este item fornece uma estética especial ao seu personagem.
+88239	Efeito Arma Branca II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88240	Efeito Armadura Branca II (7d)	Este item fornece uma estética especial ao seu personagem.
+88241	Efeito Armadura Branca II (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88242	Efeito Arma Verde III (7d)	Este item fornece uma estética especial ao seu personagem.
+88243	Efeito Arma Verde III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88244	Efeito Armadura Verde III (7d)	Este item fornece uma estética especial ao seu personagem.
+88245	Efeito Armadura Verde III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88246	Efeito Arma Vermelho III (7d)	Este item fornece uma estética especial ao seu personagem.
+88247	Efeito Arma Vermelho III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88248	Efeito Armadura Vermelho III (7d)	Este item fornece uma estética especial ao seu personagem.
+88249	Efeito Armadura Vermelho III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88250	Efeito Arma Azul III (7d)	Este item fornece uma estética especial ao seu personagem.
+88251	Efeito Arma Azul III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88252	Efeito Armadura Azul III (7d)	Este item fornece uma estética especial ao seu personagem.
+88253	Efeito Armadura Azul III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88254	Efeito Arma Amarelo III (7d)	Este item fornece uma estética especial ao seu personagem.
+88255	Efeito Arma Amarelo III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88256	Efeito Armadura Amarelo III (7d)	Este item fornece uma estética especial ao seu personagem.
+88257	Efeito Armadura Amarelo III (Permanente)	Este item fornece uma estética especial ao seu personagem.
+88902	Pacote da Caxemira	Este pacote permite decorar a sua loja privada de uma forma única.
+88910	Ampola Laranja	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88911	Ampola Amarela	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88912	Ampola Azul	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88913	Ampola Vermelha	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88914	Ampola Verde	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88915	Ampola Violeta	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88916	Orvalho Azul	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88917	Orvalho Laranja	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88918	Orvalho Branco	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88919	Orvalho Amarelo	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88920	Orvalho Vermelho	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88921	Orvalho Verde	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88922	Golpe Crítico	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88923	Golpe Perfurador	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88924	Ataque do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88925	Defesa do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88926	Inteligência  do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88927	Vida do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88928	Elixir Velocidade de Ataque	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88929	Poção Verde(L) (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88930	Orvalho Azul (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88931	Orvalho Laranja (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88932	Orvalho Amarelo (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88933	Orvalho Vermelho (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88934	Orvalho Verde (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88935	Golpe Crítico (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88936	Golpe Perfurador (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88937	Ataque do Deus Dragão (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88938	Defesa do Deus Dragão (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88939	Inteligência do Deus Dragão (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88940	Vida do Deus Dragão (Permanente)	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88941	Orvalho Azul	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88942	Orvalho Laranja	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88943	Orvalho Amarelo	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88944	Orvalho Vermelho	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88945	Orvalho Verde	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88946	Orange Ampoule	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88947	Ampola Laranja	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88948	Ampola Azul	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88949	Ampola Vermelha	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88950	Ampola Verde	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88951	Ampola Violeta	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88952	Golpe Crítico	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88953	Golpe Perfurador	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88954	Ataque do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88955	Defesa  do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88956	Inteligência do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88957	Vida do Deus Dragão	O Deus Dragão irá abençoá-lo com:	Clique com o botão direito para receber a bênção.
+88958	Pergaminho da alma	Com este pergaminho você faz sua alma evoluir um nível.
+88959	Item Encantado	Ele remove os bônus de um de seus itens e adiciona mais.
+88960	Proteína Especial	Através desta Proteína você pode aumentar um bônus à escolha do seu Pet. Arraste a Proteína sobre o ícone do Pet para usá-lo.
+88961	Encanta Alquimia	Remove os bônus de uma de suas pedras de dragão e aplica novos.
+88962	Encanta Faixa de Ombro	Remove os bônus de uma faixa de ombro e aplique novas. As variáveis ??são aleatórias e baseiam-se no grau da faixa de ombro.
+88963	Encanta Trajes	Remove os bônus de uma faixa de ombro e aplica novos.
+88964	Fortalece Talismãs	Esfera lendária, se um talismã já tiver 4 atributos, isso permite que você adicione o último bônus.
+88965	Encanta Talismã	Remove bônus do talismã e aplica novos. As variáveis ??são aleatórias.
+88966	Reforça Talismãs	Isso adicionará um novo bônus ao seu talismã (até um máximo de 4 bônus).
+88967	Baú de Pet	contém ovos de Pet	Clique com o botão direito para escolher seu animal de estimação.
+88968	Poção da beleza	Esta poção de beleza é usada para comprar Skin de Pet e montaria de um NPC.
+88970	Runa de Ares	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88971	Runa de Hera	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88972	Runa de Apollo	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88973	Runa de Aphrodite	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88974	Runa de Poseidon	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88975	Runa de Athena	O poder da runa pode ser aumentado através da Garrafa Rune.	O poder diminui apenas quando a runa está ativa.
+88976	Runa de Zeus	Esta runa só é ativada quando todas as runas têm pelo menos 50% do poder.
+88977	Garrafa de Runa (S)	Aumenta o poder de uma runa.	Arraste a garrafa até a runa desejada.
+88978	Garrafa de Runa (M)	Aumenta o poder de uma runa.	Arraste a garrafa até a runa desejada.
+88979	Garrafa de Runa (L)	Aumenta o poder de uma runa.	Arraste a garrafa até a runa desejada.
+88980	Fragmento das Runas	Este item é usado para compra na Loja de Runas.
+89100	Pedra de Zeus	Este item permite que você reinicie o tempo de espera da masmorra de runas.
+89101	Bilhete das Runas	Este Ticket concede a você acesso à masmorra das runas.
+89102	Alma Rúnica	Você pode trocar 10 Fragmentos de Alma Rúnica para 1 Chave Divina.	Clique com o botão direito para trocar.
+89103	Chave Divina	Esta chave é usada no modo 1 da masmorra rúnica. Também é usado no último andar do calabouço das runas.	Clique com o botão direito para usá-lo no modo 1. Arraste a Pedra Rúnica para destruí-la no último andar do Calabouço Rúnico.
+89104	Chave dos Orcs Verdes	Este item é usado para destravar um selo no Calabouço Orc.
+89105	Chave dos Orcs Negros	Este item é usado para desbloquear a última ponte no Calabouço Orc.
+89106	Ticket dos Orcs	Este item é usado para entrar no Calabouço Orc.
+89107	Ticket das Runas	Este ticket concede a você acesso à masmorra das runas.
+89108	Brincos de Harmonia (2h)	Aumenta a chance de um acerto perfurante para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89109	Pulseira de Amor (2h)	Aumenta a coleção de pontos de experiência durante a batalha para ambos os cônjuges em no máximo 20% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89110	Brincos de Amor (2h)	Aumenta a chance de acertos críticos para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89111	Pulseira de Harmonia (2h)	Reduz o poder de ataque de monstros inimigos em ambos os cônjuges em um máximo de 15% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89112	Colar de Amor (2h)	Aumenta o poder de ataque de ambos os cônjuges em no máximo 40 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89113	Colar de Harmonia (2h)	Aumenta a defesa de ambos os cônjuges em no máximo 30 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89114	Brincos de Harmonia (8h)	Aumenta a chance de um acerto perfurante para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89115	Pulseira de Amor (8h)	Aumenta a coleção de pontos de experiência durante a batalha para ambos os cônjuges em no máximo 20% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89116	Brincos de Amor (8h)	Aumenta a chance de acertos críticos para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89117	Pulseira de Harmonia (8h)	Reduz o poder de ataque de monstros inimigos em ambos os cônjuges em um máximo de 15% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89118	Colar de Amor (8h)	Aumenta o poder de ataque de ambos os cônjuges em no máximo 40 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89119	Colar de Harmonia (8h)	Aumenta a defesa de ambos os cônjuges em no máximo 30 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89120	Brincos de Harmonia (Permanente)	Aumenta a chance de um acerto perfurante para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89121	Pulseira de Amor (Permanente)	Aumenta a coleção de pontos de experiência durante a batalha para ambos os cônjuges em no máximo 20% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89122	Brincos de Amor (Permanente)	Aumenta a chance de acertos críticos para ambos os cônjuges em no máximo 8% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89123	Pulseira de Harmonia (Permanente)	Reduz o poder de ataque de monstros inimigos em ambos os cônjuges em um máximo de 15% por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89124	Colar de Amor (Permanente)	Aumenta o poder de ataque de ambos os cônjuges em no máximo 40 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+89125	Colar de Harmonia (Permanente)	Aumenta a defesa de ambos os cônjuges em no máximo 30 por 3 horas, se usado por um deles. O efeito do item depende da porcentagem de pontos de amor. Se um casal tem, por exemplo, 50% de pontos de amor, o efeito máximo é reduzido pela metade.
+164401	Mágica do Biólogo	Com este item é possível zerar o bônus de algumas missões do biólogo.
+164402	Papiro Chaegirab	Com este papiro é possível comprar itens do Biólogo.
+164406	Elixir de Arco-íris	Este item permite que você altere a cor de uma de suas habilidades.
+164407	Poção Brilhante	Esta Poção é usada para comprar efeitos de arma e armadura de um NPC.
+164408	Fruto dos Deuses	Fruta de sabor doce do Jardim do Deus do Dragão. É usado para refinar um item do equipamento.
+164409	Elixir dos Deuses	O frasco contém um misterioso líquido luminoso. É usado para refinar um item do equipamento.
+164410	Alma da Verdade	Uma boa alma para sempre aprisionada em uma esfera de vidro. É usado para refinar um item do equipamento.
+164411	Livro da Verdade	Volume poderoso, cujo título parece brilhar. É usado para refinar um item do equipamento.
+164412	Flor Divina	Flor sagrada do Jardim do Deus do Dragão. É usado para refinar um item do equipamento.
+164413	Pedaço de Espada Goad	Com este item é possível fabricar Espada Venenosa de +9 para a categoria Epic.
+164414	Pedaço da Lâmina do Demônio	Com este item é possível fabricar Espada de Leão de +9 para a categoria Epic.
+164415	Pedaço de Lâmina Roubo de Alma	Com este item é possível fabricar Espada de Grudge de +9 para a categoria Epic.
+164416	Pedaço de Arco do Dragão Azul	Com este item é possível criar um Arco de Aço Corvo de +9 para a categoria Epic.
+164417	Pedaço de Sino do Êxtase	Com este item é possível criar Sino de Bambu de +9 para a categoria Epic.
+164418	Pedaço de Faca Siamesa	Com este item é possível criar o Chakram da Asa do Diabo de +9 para a categoria Epic.
+164419	Poção Brilhante	Esta Poção é usada para comprar efeitos de arma e armadura de um NPC.
+31369	Baú com 3 livros de habilidades selecionados aleatoriamente.
+31367	Baú com 3 livros de habilidades selecionados aleatoriamente.
+31365	Baú com 3 livros de habilidades selecionados aleatoriamente.
+31363	Baú com 3 livros de habilidades selecionados aleatoriamente.
