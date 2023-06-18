@@ -1,0 +1,31 @@
+May 30 13:56:41 :: InputDB::MapLocations 1
+May 30 13:56:41 :: MapLocation::Insert : 3 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 23 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 25 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 26 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 43 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 61 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 62 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 63 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 64 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 65 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 67 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 68 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 69 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 70 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 210 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 215 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 218 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 302 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 304 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 353 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 354 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 357 51.254.23.214 30243
+May 30 13:56:41 :: InputDB:P2P 51.254.23.214:30244
+May 30 13:56:41 :: SYSTEM: Trying to connect to 51.254.23.214:30244
+May 30 13:56:41 :: SYSTEM: connected to server (fd 17, ptr 0x2b85c800)
+May 30 13:56:41 :: P2P Connector opened (host 51.254.23.214)
+May 30 13:56:41 :: QUEST eventflag oxevent_status 0 prev_value 0
+May 30 13:57:02 :: P2P: Login abyss
+May 30 13:58:02 :: P2P: Logout abyss
+May 30 14:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 13)

@@ -1,0 +1,2 @@
+__GAME_VERSION__: 41137
+root@:/usr/wonderz/source/Server/game/src

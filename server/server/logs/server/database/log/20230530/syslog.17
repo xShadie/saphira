@@ -1,0 +1,3486 @@
+May 30 17:00:00 :: [   277900] return 0/0/1 async 0/0/0
+May 30 17:00:02 :: [   277950] return 0/0/0 async 0/0/0
+May 30 17:00:04 :: [   278000] return 0/0/0 async 0/0/0
+May 30 17:00:06 :: [   278050] return 0/0/0 async 0/0/0
+May 30 17:00:08 :: [   278100] return 0/0/0 async 0/0/0
+May 30 17:00:10 :: [   278150] return 0/0/1 async 0/0/0
+May 30 17:00:12 :: [   278200] return 0/0/0 async 0/0/0
+May 30 17:00:14 :: [   278250] return 0/0/0 async 0/0/0
+May 30 17:00:16 :: [   278300] return 0/0/0 async 0/0/0
+May 30 17:00:18 :: [   278350] return 0/0/0 async 0/0/0
+May 30 17:00:20 :: [   278400] return 0/0/1 async 0/0/0
+May 30 17:00:22 :: [   278450] return 0/0/0 async 0/0/0
+May 30 17:00:24 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:00:24 :: LOGOUT: Update player time pid(14)
+May 30 17:00:24 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:00:24 :: LOGOUT: Update player time pid(39)
+May 30 17:00:24 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:00:24 :: LOGOUT: Update player time pid(90)
+May 30 17:00:24 :: LOGOUT abyss 
+May 30 17:00:24 :: [   278500] return 0/0/0 async 0/0/0
+May 30 17:00:26 :: [   278550] return 0/0/0 async 0/0/0
+May 30 17:00:28 :: [   278600] return 0/0/0 async 0/0/0
+May 30 17:00:29 :: AUTH_PEER_READ: size 190
+May 30 17:00:29 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(593858158), client_key(1170981236 1141492344 1590406957 240772090)
+May 30 17:00:29 :: AUTH_PEER_WRITE: size 10
+May 30 17:00:30 :: LOGIN_BY_KEY success abyss 593858158 46.247.137.201
+May 30 17:00:30 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:00:30 :: abyss 469300 964200 hair 31
+May 30 17:00:30 :: bella 63800 166400 hair 0
+May 30 17:00:30 :: [   278650] return 0/0/3 async 0/0/0
+May 30 17:00:32 :: [   278700] return 0/0/0 async 0/0/0
+May 30 17:00:33 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:00:33 :: LOGOUT: Update player time pid(14)
+May 30 17:00:33 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:00:33 :: LOGOUT: Update player time pid(39)
+May 30 17:00:33 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:00:33 :: LOGOUT: Update player time pid(90)
+May 30 17:00:33 :: LOGOUT abyss 
+May 30 17:00:34 :: LOGIN_BY_KEY success abyss 593858158 46.247.137.201
+May 30 17:00:34 :: [   278750] return 0/1/2 async 0/0/0
+May 30 17:00:34 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:00:34 :: abyss 469300 964200 hair 31
+May 30 17:00:34 :: bella 63800 166400 hair 0
+May 30 17:00:35 :: SetPlay on 593858158 abyss
+May 30 17:00:35 :: [PLAYER_LOAD] ID bella pid 90 gold 490000 
+May 30 17:00:35 :: [PLAYER_LOAD] ID bella pid 90 gaya 0 
+May 30 17:00:35 :: AUTH_PEER_WRITE: size 18
+May 30 17:00:35 :: QID_QUEST 17
+May 30 17:00:35 :: QUEST_LOAD: count 2 PID 90
+May 30 17:00:35 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:00:35 :: QID_AFFECT 17
+May 30 17:00:35 :: AFFECT_LOAD: count 1 PID 90
+May 30 17:00:35 :: QID_BATTLE_PASS 17
+May 30 17:00:35 :: BATTLE_PASS_LOAD: count 0 PID 90
+May 30 17:00:35 :: QID_SKILL_COLOR 17 90
+May 30 17:00:35 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:00:36 :: [   278800] return 0/0/0 async 0/0/2
+May 30 17:00:38 :: [   278850] return 0/0/0 async 0/0/0
+May 30 17:00:40 :: [   278900] return 0/0/1 async 0/0/0
+May 30 17:00:42 :: [   278950] return 0/0/0 async 0/0/0
+May 30 17:00:44 :: [   279000] return 0/0/0 async 0/0/0
+May 30 17:00:46 :: [   279050] return 0/0/0 async 0/0/0
+May 30 17:00:48 :: [   279100] return 0/0/0 async 0/0/0
+May 30 17:00:50 :: [   279150] return 0/0/1 async 0/0/0
+May 30 17:00:52 :: [   279200] return 0/0/0 async 0/0/0
+May 30 17:00:54 :: [   279250] return 0/0/0 async 0/0/1
+May 30 17:00:56 :: [   279300] return 0/0/0 async 0/0/0
+May 30 17:00:58 :: [   279350] return 0/0/0 async 0/0/0
+May 30 17:00:59 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:00:59 :: LOGOUT: Insert player pid(14)
+May 30 17:00:59 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:00:59 :: LOGOUT: Insert player pid(39)
+May 30 17:00:59 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:00:59 :: LOGOUT: Insert player pid(90)
+May 30 17:00:59 :: SetPlay off 593858158 abyss
+May 30 17:00:59 :: LOGOUT abyss 
+May 30 17:00:59 :: AUTH_PEER_WRITE: size 18
+May 30 17:00:59 :: LOGIN_BY_KEY success abyss 593858158 46.247.137.201
+May 30 17:00:59 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:00:59 :: abyss 469300 964200 hair 31
+May 30 17:00:59 :: bella 63800 166400 hair 0
+May 30 17:01:00 :: SetPlay on 593858158 abyss
+May 30 17:01:00 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134596625 
+May 30 17:01:00 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:01:00 :: AUTH_PEER_WRITE: size 18
+May 30 17:01:00 :: QID_QUEST 18
+May 30 17:01:00 :: QUEST_LOAD: count 47 PID 14
+May 30 17:01:00 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:01:00 :: QID_AFFECT 18
+May 30 17:01:00 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:01:00 :: QID_BATTLE_PASS 18
+May 30 17:01:00 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:01:00 :: QID_SKILL_COLOR 18 14
+May 30 17:01:00 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:01:00 :: [   279400] return 0/0/5 async 0/0/5
+May 30 17:01:02 :: [   279450] return 0/0/0 async 0/0/3
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:01:03 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:03 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:01:04 :: [   279500] return 0/0/0 async 0/0/0
+May 30 17:01:06 :: [   279550] return 0/0/0 async 0/0/1
+May 30 17:01:08 :: [   279600] return 0/0/0 async 0/0/0
+May 30 17:01:10 :: [   279650] return 0/0/1 async 0/0/0
+May 30 17:01:12 :: [   279700] return 0/0/0 async 0/0/0
+May 30 17:01:14 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:14 :: ITEM_CACHE: save 14 id 50057412
+May 30 17:01:14 :: [   279750] return 0/0/0 async 0/0/0
+May 30 17:01:16 :: [   279800] return 0/0/0 async 0/0/0
+May 30 17:01:18 :: [   279850] return 0/0/0 async 0/0/0
+May 30 17:01:20 :: [   279900] return 0/0/1 async 0/0/0
+May 30 17:01:22 :: [   279950] return 0/0/0 async 0/0/0
+May 30 17:01:24 :: [   280000] return 0/0/0 async 0/0/0
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:01:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:01:25 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:01:25 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:01:25 :: LOGOUT: Insert player pid(14)
+May 30 17:01:25 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:01:25 :: LOGOUT: Insert player pid(39)
+May 30 17:01:25 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:01:25 :: LOGOUT: Insert player pid(90)
+May 30 17:01:25 :: SetPlay off 593858158 abyss
+May 30 17:01:25 :: LOGOUT abyss 
+May 30 17:01:25 :: AUTH_PEER_WRITE: size 18
+May 30 17:01:26 :: [   280050] return 0/0/0 async 0/0/0
+May 30 17:01:28 :: [   280100] return 0/0/0 async 0/0/0
+May 30 17:01:30 :: [   280150] return 0/0/1 async 0/0/0
+May 30 17:01:32 :: [   280200] return 0/0/0 async 0/0/0
+May 30 17:01:34 :: [   280250] return 0/0/0 async 0/0/0
+May 30 17:01:36 :: [   280300] return 0/0/0 async 0/0/0
+May 30 17:01:38 :: [   280350] return 0/0/0 async 0/0/0
+May 30 17:01:40 :: [   280400] return 0/0/1 async 0/0/0
+May 30 17:01:42 :: [   280450] return 0/0/0 async 0/0/0
+May 30 17:01:44 :: [   280500] return 0/0/0 async 0/0/0
+May 30 17:01:46 :: [   280550] return 0/0/0 async 0/0/0
+May 30 17:01:48 :: [   280600] return 0/0/0 async 0/0/0
+May 30 17:01:50 :: [   280650] return 0/0/1 async 0/0/0
+May 30 17:01:52 :: [   280700] return 0/0/0 async 0/0/0
+May 30 17:01:54 :: [   280750] return 0/0/0 async 0/0/0
+May 30 17:01:56 :: [   280800] return 0/0/0 async 0/0/0
+May 30 17:01:58 :: [   280850] return 0/0/0 async 0/0/0
+May 30 17:02:00 :: [   280900] return 0/0/1 async 0/0/0
+May 30 17:02:02 :: [   280950] return 0/0/0 async 0/0/0
+May 30 17:02:04 :: [   281000] return 0/0/0 async 0/0/0
+May 30 17:02:06 :: [   281050] return 0/0/0 async 0/0/0
+May 30 17:02:08 :: [   281100] return 0/0/0 async 0/0/0
+May 30 17:02:10 :: [   281150] return 0/0/1 async 0/0/0
+May 30 17:02:12 :: [   281200] return 0/0/0 async 0/0/0
+May 30 17:02:14 :: [   281250] return 0/0/0 async 0/0/0
+May 30 17:02:16 :: [   281300] return 0/0/0 async 0/0/0
+May 30 17:02:18 :: [   281350] return 0/0/0 async 0/0/0
+May 30 17:02:20 :: [   281400] return 0/0/1 async 0/0/0
+May 30 17:02:22 :: [   281450] return 0/0/0 async 0/0/0
+May 30 17:02:24 :: [   281500] return 0/0/0 async 0/0/0
+May 30 17:02:26 :: [   281550] return 0/0/0 async 0/0/0
+May 30 17:02:28 :: [   281600] return 0/0/0 async 0/0/0
+May 30 17:02:30 :: [   281650] return 0/0/1 async 0/0/0
+May 30 17:02:32 :: [   281700] return 0/0/0 async 0/0/0
+May 30 17:02:34 :: [   281750] return 0/0/0 async 0/0/0
+May 30 17:02:36 :: [   281800] return 0/0/0 async 0/0/0
+May 30 17:02:38 :: [   281850] return 0/0/0 async 0/0/0
+May 30 17:02:40 :: [   281900] return 0/0/1 async 0/0/0
+May 30 17:02:42 :: [   281950] return 0/0/0 async 0/0/0
+May 30 17:02:44 :: [   282000] return 0/0/0 async 0/0/0
+May 30 17:02:46 :: [   282050] return 0/0/0 async 0/0/0
+May 30 17:02:48 :: [   282100] return 0/0/0 async 0/0/0
+May 30 17:02:50 :: [   282150] return 0/0/1 async 0/0/0
+May 30 17:02:52 :: [   282200] return 0/0/0 async 0/0/0
+May 30 17:02:54 :: [   282250] return 0/0/0 async 0/0/0
+May 30 17:02:56 :: [   282300] return 0/0/0 async 0/0/0
+May 30 17:02:58 :: [   282350] return 0/0/0 async 0/0/0
+May 30 17:03:00 :: [   282400] return 0/0/1 async 0/0/0
+May 30 17:03:02 :: [   282450] return 0/0/0 async 0/0/0
+May 30 17:03:04 :: [   282500] return 0/0/0 async 0/0/0
+May 30 17:03:06 :: [   282550] return 0/0/0 async 0/0/0
+May 30 17:03:08 :: [   282600] return 0/0/0 async 0/0/0
+May 30 17:03:10 :: [   282650] return 0/0/1 async 0/0/0
+May 30 17:03:12 :: [   282700] return 0/0/0 async 0/0/0
+May 30 17:03:14 :: [   282750] return 0/0/0 async 0/0/0
+May 30 17:03:16 :: [   282800] return 0/0/0 async 0/0/0
+May 30 17:03:18 :: [   282850] return 0/0/0 async 0/0/0
+May 30 17:03:20 :: [   282900] return 0/0/1 async 0/0/0
+May 30 17:03:22 :: [   282950] return 0/0/0 async 0/0/0
+May 30 17:03:24 :: [   283000] return 0/0/0 async 0/0/0
+May 30 17:03:26 :: [   283050] return 0/0/0 async 0/0/0
+May 30 17:03:28 :: [   283100] return 0/0/0 async 0/0/0
+May 30 17:03:30 :: [   283150] return 0/0/1 async 0/0/0
+May 30 17:03:32 :: [   283200] return 0/0/0 async 0/0/0
+May 30 17:03:34 :: [   283250] return 0/0/0 async 0/0/0
+May 30 17:03:36 :: [   283300] return 0/0/0 async 0/0/0
+May 30 17:03:38 :: [   283350] return 0/0/0 async 0/0/0
+May 30 17:03:40 :: [   283400] return 0/0/1 async 0/0/0
+May 30 17:03:42 :: [   283450] return 0/0/0 async 0/0/0
+May 30 17:03:44 :: [   283500] return 0/0/0 async 0/0/0
+May 30 17:03:46 :: [   283550] return 0/0/0 async 0/0/0
+May 30 17:03:48 :: [   283600] return 0/0/0 async 0/0/0
+May 30 17:03:50 :: [   283650] return 0/0/1 async 0/0/0
+May 30 17:03:52 :: [   283700] return 0/0/0 async 0/0/0
+May 30 17:03:54 :: AUTH_PEER_READ: size 190
+May 30 17:03:54 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(43751827), client_key(1138033134 1433522956 601285799 1899864658)
+May 30 17:03:54 :: AUTH_PEER_WRITE: size 10
+May 30 17:03:54 :: [   283750] return 0/0/0 async 0/0/0
+May 30 17:03:55 :: LOGIN_BY_KEY success abyss 43751827 46.247.137.201
+May 30 17:03:55 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:03:55 :: abyss 469176 964295 hair 31
+May 30 17:03:55 :: bella 63800 166400 hair 0
+May 30 17:03:56 :: [   283800] return 0/0/0 async 0/0/0
+May 30 17:03:58 :: [   283850] return 0/0/0 async 0/0/0
+May 30 17:03:59 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:03:59 :: LOGOUT: Update player time pid(14)
+May 30 17:03:59 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:03:59 :: LOGOUT: Update player time pid(39)
+May 30 17:03:59 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:03:59 :: LOGOUT: Update player time pid(90)
+May 30 17:03:59 :: LOGOUT abyss 
+May 30 17:04:00 :: LOGIN_BY_KEY success abyss 43751827 46.247.137.201
+May 30 17:04:00 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:04:00 :: abyss 469176 964295 hair 31
+May 30 17:04:00 :: bella 63800 166400 hair 0
+May 30 17:04:00 :: SetPlay on 43751827 abyss
+May 30 17:04:00 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134596625 
+May 30 17:04:00 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:04:00 :: AUTH_PEER_WRITE: size 18
+May 30 17:04:00 :: QID_QUEST 19
+May 30 17:04:00 :: QUEST_LOAD: count 47 PID 14
+May 30 17:04:00 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:04:00 :: QID_AFFECT 19
+May 30 17:04:00 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:04:00 :: QID_BATTLE_PASS 19
+May 30 17:04:00 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:04:00 :: QID_SKILL_COLOR 19 14
+May 30 17:04:00 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:04:00 :: [   283900] return 0/47/54 async 0/0/0
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:04:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:01 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:04:02 :: [   283950] return 0/0/0 async 0/0/0
+May 30 17:04:04 :: [   284000] return 0/0/0 async 0/0/2
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:04:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:04:06 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:04:06 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:04:06 :: LOGOUT: Insert player pid(14)
+May 30 17:04:06 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:04:06 :: LOGOUT: Insert player pid(39)
+May 30 17:04:06 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:04:06 :: LOGOUT: Insert player pid(90)
+May 30 17:04:06 :: SetPlay off 43751827 abyss
+May 30 17:04:06 :: LOGOUT abyss 
+May 30 17:04:06 :: AUTH_PEER_WRITE: size 18
+May 30 17:04:06 :: [   284050] return 0/0/0 async 0/0/18
+May 30 17:04:06 :: LOGIN_BY_KEY success abyss 43751827 46.247.137.201
+May 30 17:04:07 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:04:07 :: abyss 55700 157900 hair 31
+May 30 17:04:07 :: bella 63800 166400 hair 0
+May 30 17:04:08 :: [   284100] return 0/0/0 async 0/0/0
+May 30 17:04:10 :: [   284150] return 0/0/1 async 0/0/0
+May 30 17:04:12 :: [   284200] return 0/0/0 async 0/0/0
+May 30 17:04:14 :: [   284250] return 0/0/0 async 0/0/0
+May 30 17:04:16 :: [   284300] return 0/0/0 async 0/0/0
+May 30 17:04:18 :: [   284350] return 0/0/0 async 0/0/0
+May 30 17:04:20 :: [   284400] return 0/0/1 async 0/0/0
+May 30 17:04:22 :: [   284450] return 0/0/0 async 0/0/0
+May 30 17:04:24 :: [   284500] return 0/0/0 async 0/0/0
+May 30 17:04:26 :: [   284550] return 0/0/0 async 0/0/0
+May 30 17:04:28 :: [   284600] return 0/0/0 async 0/0/0
+May 30 17:04:30 :: [   284650] return 0/0/1 async 0/0/0
+May 30 17:04:32 :: [   284700] return 0/0/0 async 0/0/0
+May 30 17:04:34 :: [   284750] return 0/0/0 async 0/0/0
+May 30 17:04:36 :: [   284800] return 0/0/1 async 0/0/0
+May 30 17:04:38 :: [   284850] return 0/0/0 async 0/0/0
+May 30 17:04:40 :: [   284900] return 0/0/1 async 0/0/0
+May 30 17:04:42 :: [   284950] return 0/0/0 async 0/0/0
+May 30 17:04:44 :: [   285000] return 0/0/0 async 0/0/0
+May 30 17:04:46 :: [   285050] return 0/0/0 async 0/0/0
+May 30 17:04:48 :: [   285100] return 0/0/0 async 0/0/0
+May 30 17:04:50 :: [   285150] return 0/0/1 async 0/0/0
+May 30 17:04:52 :: [   285200] return 0/0/0 async 0/0/0
+May 30 17:04:54 :: [   285250] return 0/0/0 async 0/0/0
+May 30 17:04:56 :: [   285300] return 0/0/0 async 0/0/0
+May 30 17:04:58 :: [   285350] return 0/0/0 async 0/0/0
+May 30 17:05:00 :: [   285400] return 0/0/1 async 0/0/0
+May 30 17:05:02 :: [   285450] return 0/0/0 async 0/0/0
+May 30 17:05:04 :: [   285500] return 0/0/0 async 0/0/0
+May 30 17:05:06 :: [   285550] return 0/0/0 async 0/0/0
+May 30 17:05:08 :: [   285600] return 0/0/0 async 0/0/0
+May 30 17:05:10 :: [   285650] return 0/0/1 async 0/0/0
+May 30 17:05:12 :: [   285700] return 0/0/0 async 0/0/0
+May 30 17:05:14 :: [   285750] return 0/0/0 async 0/0/0
+May 30 17:05:16 :: [   285800] return 0/0/0 async 0/0/0
+May 30 17:05:18 :: [   285850] return 0/0/0 async 0/0/0
+May 30 17:05:20 :: [   285900] return 0/0/1 async 0/0/0
+May 30 17:05:22 :: [   285950] return 0/0/0 async 0/0/0
+May 30 17:05:24 :: [   286000] return 0/0/0 async 0/0/0
+May 30 17:05:26 :: [   286050] return 0/0/0 async 0/0/0
+May 30 17:05:28 :: [   286100] return 0/0/0 async 0/0/0
+May 30 17:05:30 :: [   286150] return 0/0/1 async 0/0/0
+May 30 17:05:32 :: [   286200] return 0/0/0 async 0/0/0
+May 30 17:05:34 :: [   286250] return 0/0/0 async 0/0/0
+May 30 17:05:36 :: [   286300] return 0/0/0 async 0/0/0
+May 30 17:05:38 :: [   286350] return 0/0/0 async 0/0/0
+May 30 17:05:40 :: [   286400] return 0/0/1 async 0/0/0
+May 30 17:05:42 :: [   286450] return 0/0/0 async 0/0/0
+May 30 17:05:44 :: [   286500] return 0/0/0 async 0/0/0
+May 30 17:05:46 :: [   286550] return 0/0/0 async 0/0/0
+May 30 17:05:48 :: [   286600] return 0/0/0 async 0/0/0
+May 30 17:05:50 :: [   286650] return 0/0/1 async 0/0/0
+May 30 17:05:52 :: [   286700] return 0/0/0 async 0/0/0
+May 30 17:05:54 :: [   286750] return 0/0/0 async 0/0/0
+May 30 17:05:55 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:05:55 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:05:56 :: [   286800] return 0/0/0 async 0/0/0
+May 30 17:05:58 :: [   286850] return 0/0/0 async 0/0/0
+May 30 17:06:00 :: [   286900] return 0/0/1 async 0/0/0
+May 30 17:06:02 :: [   286950] return 0/0/0 async 0/0/0
+May 30 17:06:04 :: [   287000] return 0/0/0 async 0/0/0
+May 30 17:06:06 :: [   287050] return 0/0/0 async 0/0/0
+May 30 17:06:08 :: [   287100] return 0/0/0 async 0/0/0
+May 30 17:06:10 :: [   287150] return 0/0/1 async 0/0/0
+May 30 17:06:12 :: [   287200] return 0/0/0 async 0/0/0
+May 30 17:06:14 :: [   287250] return 0/0/0 async 0/0/0
+May 30 17:06:16 :: [   287300] return 0/0/0 async 0/0/0
+May 30 17:06:18 :: [   287350] return 0/0/0 async 0/0/0
+May 30 17:06:20 :: [   287400] return 0/0/1 async 0/0/0
+May 30 17:06:22 :: [   287450] return 0/0/0 async 0/0/0
+May 30 17:06:24 :: [   287500] return 0/0/0 async 0/0/0
+May 30 17:06:26 :: [   287550] return 0/0/0 async 0/0/0
+May 30 17:06:28 :: [   287600] return 0/0/0 async 0/0/0
+May 30 17:06:30 :: [   287650] return 0/0/1 async 0/0/0
+May 30 17:06:32 :: [   287700] return 0/0/0 async 0/0/0
+May 30 17:06:34 :: [   287750] return 0/0/0 async 0/0/0
+May 30 17:06:36 :: [   287800] return 0/0/0 async 0/0/0
+May 30 17:06:38 :: [   287850] return 0/0/0 async 0/0/0
+May 30 17:06:40 :: [   287900] return 0/0/1 async 0/0/0
+May 30 17:06:42 :: [   287950] return 0/0/0 async 0/0/0
+May 30 17:06:44 :: [   288000] return 0/0/0 async 0/0/0
+May 30 17:06:46 :: [   288050] return 0/0/0 async 0/0/0
+May 30 17:06:48 :: [   288100] return 0/0/0 async 0/0/0
+May 30 17:06:50 :: [   288150] return 0/0/1 async 0/0/0
+May 30 17:06:52 :: [   288200] return 0/0/0 async 0/0/0
+May 30 17:06:54 :: [   288250] return 0/0/0 async 0/0/0
+May 30 17:06:56 :: [   288300] return 0/0/0 async 0/0/0
+May 30 17:06:58 :: [   288350] return 0/0/0 async 0/0/0
+May 30 17:07:00 :: [   288400] return 0/0/1 async 0/0/0
+May 30 17:07:02 :: [   288450] return 0/0/0 async 0/0/0
+May 30 17:07:04 :: [   288500] return 0/0/0 async 0/0/0
+May 30 17:07:06 :: [   288550] return 0/0/0 async 0/0/0
+May 30 17:07:08 :: [   288600] return 0/0/0 async 0/0/0
+May 30 17:07:10 :: [   288650] return 0/0/1 async 0/0/0
+May 30 17:07:12 :: [   288700] return 0/0/0 async 0/0/0
+May 30 17:07:14 :: [   288750] return 0/0/0 async 0/0/0
+May 30 17:07:16 :: [   288800] return 0/0/0 async 0/0/0
+May 30 17:07:18 :: [   288850] return 0/0/0 async 0/0/0
+May 30 17:07:20 :: [   288900] return 0/0/1 async 0/0/0
+May 30 17:07:22 :: [   288950] return 0/0/0 async 0/0/0
+May 30 17:07:24 :: [   289000] return 0/0/0 async 0/0/0
+May 30 17:07:26 :: [   289050] return 0/0/0 async 0/0/0
+May 30 17:07:28 :: [   289100] return 0/0/0 async 0/0/0
+May 30 17:07:30 :: [   289150] return 0/0/1 async 0/0/0
+May 30 17:07:31 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:07:31 :: LOGOUT: Update player time pid(14)
+May 30 17:07:31 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:07:31 :: LOGOUT: Update player time pid(39)
+May 30 17:07:31 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:07:31 :: LOGOUT: Update player time pid(90)
+May 30 17:07:31 :: LOGOUT abyss 
+May 30 17:07:32 :: [   289200] return 0/0/0 async 0/0/0
+May 30 17:07:34 :: [   289250] return 0/0/0 async 0/0/0
+May 30 17:07:36 :: [   289300] return 0/0/0 async 0/0/0
+May 30 17:07:38 :: [   289350] return 0/0/0 async 0/0/0
+May 30 17:07:40 :: [   289400] return 0/0/1 async 0/0/0
+May 30 17:07:42 :: [   289450] return 0/0/0 async 0/0/0
+May 30 17:07:44 :: [   289500] return 0/0/0 async 0/0/0
+May 30 17:07:46 :: [   289550] return 0/0/0 async 0/0/0
+May 30 17:07:48 :: [   289600] return 0/0/0 async 0/0/0
+May 30 17:07:50 :: [   289650] return 0/0/1 async 0/0/0
+May 30 17:07:52 :: [   289700] return 0/0/0 async 0/0/0
+May 30 17:07:54 :: [   289750] return 0/0/0 async 0/0/0
+May 30 17:07:56 :: [   289800] return 0/0/0 async 0/0/0
+May 30 17:07:58 :: [   289850] return 0/0/0 async 0/0/0
+May 30 17:08:00 :: [   289900] return 0/0/1 async 0/0/0
+May 30 17:08:02 :: [   289950] return 0/0/0 async 0/0/0
+May 30 17:08:04 :: [   290000] return 0/0/0 async 0/0/0
+May 30 17:08:06 :: [   290050] return 0/0/0 async 0/0/0
+May 30 17:08:08 :: [   290100] return 0/0/0 async 0/0/0
+May 30 17:08:10 :: [   290150] return 0/0/1 async 0/0/0
+May 30 17:08:12 :: [   290200] return 0/0/0 async 0/0/0
+May 30 17:08:14 :: [   290250] return 0/0/0 async 0/0/0
+May 30 17:08:16 :: [   290300] return 0/0/0 async 0/0/0
+May 30 17:08:18 :: [   290350] return 0/0/0 async 0/0/0
+May 30 17:08:20 :: [   290400] return 0/0/1 async 0/0/0
+May 30 17:08:22 :: [   290450] return 0/0/0 async 0/0/0
+May 30 17:08:24 :: [   290500] return 0/0/0 async 0/0/0
+May 30 17:08:26 :: [   290550] return 0/0/0 async 0/0/0
+May 30 17:08:28 :: [   290600] return 0/0/0 async 0/0/0
+May 30 17:08:30 :: [   290650] return 0/0/1 async 0/0/0
+May 30 17:08:32 :: [   290700] return 0/0/0 async 0/0/0
+May 30 17:08:34 :: [   290750] return 0/0/0 async 0/0/0
+May 30 17:08:36 :: [   290800] return 0/0/0 async 0/0/0
+May 30 17:08:38 :: [   290850] return 0/0/0 async 0/0/0
+May 30 17:08:40 :: [   290900] return 0/0/1 async 0/0/0
+May 30 17:08:42 :: [   290950] return 0/0/0 async 0/0/0
+May 30 17:08:44 :: [   291000] return 0/0/0 async 0/0/0
+May 30 17:08:46 :: [   291050] return 0/0/0 async 0/0/0
+May 30 17:08:48 :: [   291100] return 0/0/0 async 0/0/0
+May 30 17:08:50 :: [   291150] return 0/0/1 async 0/0/0
+May 30 17:08:52 :: [   291200] return 0/0/0 async 0/0/0
+May 30 17:08:54 :: [   291250] return 0/0/0 async 0/0/0
+May 30 17:08:56 :: [   291300] return 0/0/0 async 0/0/0
+May 30 17:08:58 :: [   291350] return 0/0/0 async 0/0/0
+May 30 17:09:00 :: [   291400] return 0/0/1 async 0/0/0
+May 30 17:09:02 :: [   291450] return 0/0/0 async 0/0/0
+May 30 17:09:04 :: [   291500] return 0/0/0 async 0/0/0
+May 30 17:09:06 :: [   291550] return 0/0/0 async 0/0/0
+May 30 17:09:07 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:09:07 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:09:08 :: [   291600] return 0/0/0 async 0/0/0
+May 30 17:09:10 :: [   291650] return 0/0/1 async 0/0/0
+May 30 17:09:12 :: [   291700] return 0/0/0 async 0/0/0
+May 30 17:09:14 :: [   291750] return 0/0/0 async 0/0/0
+May 30 17:09:16 :: [   291800] return 0/0/0 async 0/0/0
+May 30 17:09:18 :: [   291850] return 0/0/0 async 0/0/0
+May 30 17:09:20 :: [   291900] return 0/0/1 async 0/0/0
+May 30 17:09:22 :: [   291950] return 0/0/0 async 0/0/0
+May 30 17:09:24 :: [   292000] return 0/0/0 async 0/0/0
+May 30 17:09:26 :: [   292050] return 0/0/0 async 0/0/0
+May 30 17:09:28 :: [   292100] return 0/0/0 async 0/0/0
+May 30 17:09:30 :: [   292150] return 0/0/1 async 0/0/0
+May 30 17:09:32 :: [   292200] return 0/0/0 async 0/0/0
+May 30 17:09:34 :: [   292250] return 0/0/0 async 0/0/0
+May 30 17:09:36 :: [   292300] return 0/0/0 async 0/0/0
+May 30 17:09:38 :: [   292350] return 0/0/0 async 0/0/0
+May 30 17:09:40 :: [   292400] return 0/0/1 async 0/0/0
+May 30 17:09:42 :: [   292450] return 0/0/0 async 0/0/0
+May 30 17:09:44 :: [   292500] return 0/0/0 async 0/0/0
+May 30 17:09:46 :: [   292550] return 0/0/0 async 0/0/0
+May 30 17:09:48 :: [   292600] return 0/0/0 async 0/0/0
+May 30 17:09:50 :: [   292650] return 0/0/1 async 0/0/0
+May 30 17:09:52 :: [   292700] return 0/0/0 async 0/0/0
+May 30 17:09:54 :: AUTH_PEER_READ: size 190
+May 30 17:09:54 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1001352148), client_key(1049965618 899014327 38853597 177376091)
+May 30 17:09:54 :: AUTH_PEER_WRITE: size 10
+May 30 17:09:54 :: [   292750] return 0/0/0 async 0/0/0
+May 30 17:09:55 :: LOGIN_BY_KEY success abyss 1001352148 46.247.137.201
+May 30 17:09:55 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:09:55 :: abyss 55700 157900 hair 31
+May 30 17:09:55 :: bella 63800 166400 hair 0
+May 30 17:09:56 :: [   292800] return 0/0/0 async 0/0/0
+May 30 17:09:58 :: [   292850] return 0/0/0 async 0/0/0
+May 30 17:10:00 :: [   292900] return 0/0/1 async 0/0/0
+May 30 17:10:01 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:10:01 :: LOGOUT: Update player time pid(14)
+May 30 17:10:01 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:10:01 :: LOGOUT: Update player time pid(39)
+May 30 17:10:01 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:10:01 :: LOGOUT: Update player time pid(90)
+May 30 17:10:01 :: LOGOUT abyss 
+May 30 17:10:01 :: LOGIN_BY_KEY success abyss 1001352148 46.247.137.201
+May 30 17:10:01 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:10:01 :: abyss 55700 157900 hair 31
+May 30 17:10:01 :: bella 63800 166400 hair 0
+May 30 17:10:01 :: SetPlay on 1001352148 abyss
+May 30 17:10:01 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134596625 
+May 30 17:10:01 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:10:01 :: AUTH_PEER_WRITE: size 18
+May 30 17:10:01 :: QID_QUEST 21
+May 30 17:10:01 :: QUEST_LOAD: count 47 PID 14
+May 30 17:10:01 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:10:01 :: QID_AFFECT 21
+May 30 17:10:01 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:10:01 :: QID_BATTLE_PASS 21
+May 30 17:10:01 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:10:01 :: QID_SKILL_COLOR 21 14
+May 30 17:10:01 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:10:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:02 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:10:02 :: [   292950] return 0/0/47 async 0/0/0
+May 30 17:10:04 :: [   293000] return 0/0/0 async 0/0/0
+May 30 17:10:06 :: [   293050] return 0/0/0 async 0/0/0
+May 30 17:10:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:07 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:10:08 :: [   293100] return 0/0/1 async 0/0/0
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:10:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:10:10 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:10:10 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:10:10 :: LOGOUT: Insert player pid(14)
+May 30 17:10:10 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:10:10 :: LOGOUT: Insert player pid(39)
+May 30 17:10:10 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:10:10 :: LOGOUT: Insert player pid(90)
+May 30 17:10:10 :: SetPlay off 1001352148 abyss
+May 30 17:10:10 :: LOGOUT abyss 
+May 30 17:10:10 :: AUTH_PEER_WRITE: size 18
+May 30 17:10:10 :: LOGIN_BY_KEY success abyss 1001352148 46.247.137.201
+May 30 17:10:10 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:10:10 :: abyss 55700 157900 hair 31
+May 30 17:10:10 :: bella 63800 166400 hair 0
+May 30 17:10:10 :: [   293150] return 0/0/3 async 0/0/18
+May 30 17:10:12 :: [   293200] return 0/0/0 async 0/0/0
+May 30 17:10:14 :: [   293250] return 0/0/0 async 0/0/0
+May 30 17:10:16 :: [   293300] return 0/0/0 async 0/0/0
+May 30 17:10:18 :: [   293350] return 0/0/0 async 0/0/0
+May 30 17:10:20 :: [   293400] return 0/0/1 async 0/0/0
+May 30 17:10:22 :: [   293450] return 0/0/0 async 0/0/0
+May 30 17:10:24 :: [   293500] return 0/0/0 async 0/0/0
+May 30 17:10:26 :: [   293550] return 0/0/0 async 0/0/0
+May 30 17:10:28 :: [   293600] return 0/0/0 async 0/0/0
+May 30 17:10:30 :: [   293650] return 0/0/1 async 0/0/0
+May 30 17:10:32 :: [   293700] return 0/0/0 async 0/0/0
+May 30 17:10:34 :: [   293750] return 0/0/0 async 0/0/0
+May 30 17:10:36 :: [   293800] return 0/0/0 async 0/0/0
+May 30 17:10:38 :: [   293850] return 0/0/0 async 0/0/0
+May 30 17:10:40 :: [   293900] return 0/0/1 async 0/0/0
+May 30 17:10:42 :: [   293950] return 0/0/0 async 0/0/0
+May 30 17:10:44 :: [   294000] return 0/0/0 async 0/0/0
+May 30 17:10:46 :: [   294050] return 0/0/0 async 0/0/0
+May 30 17:10:48 :: [   294100] return 0/0/0 async 0/0/0
+May 30 17:10:50 :: [   294150] return 0/0/1 async 0/0/0
+May 30 17:10:52 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:10:52 :: LOGOUT: Update player time pid(14)
+May 30 17:10:52 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:10:52 :: LOGOUT: Update player time pid(39)
+May 30 17:10:52 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:10:52 :: LOGOUT: Update player time pid(90)
+May 30 17:10:52 :: LOGOUT abyss 
+May 30 17:10:52 :: [   294200] return 0/0/0 async 0/0/0
+May 30 17:10:54 :: [   294250] return 0/0/0 async 0/0/0
+May 30 17:10:56 :: [   294300] return 0/0/0 async 0/0/0
+May 30 17:10:56 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:10:56 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:10:58 :: [   294350] return 0/0/0 async 0/0/0
+May 30 17:11:00 :: [   294400] return 0/0/1 async 0/0/0
+May 30 17:11:02 :: [   294450] return 0/0/0 async 0/0/0
+May 30 17:11:04 :: [   294500] return 0/0/0 async 0/0/0
+May 30 17:11:06 :: [   294550] return 0/0/0 async 0/0/0
+May 30 17:11:08 :: [   294600] return 0/0/0 async 0/0/0
+May 30 17:11:10 :: [   294650] return 0/0/1 async 0/0/0
+May 30 17:11:12 :: [   294700] return 0/0/0 async 0/0/0
+May 30 17:11:14 :: [   294750] return 0/0/0 async 0/0/0
+May 30 17:11:16 :: [   294800] return 0/0/0 async 0/0/0
+May 30 17:11:18 :: [   294850] return 0/0/0 async 0/0/0
+May 30 17:11:20 :: [   294900] return 0/0/1 async 0/0/0
+May 30 17:11:22 :: [   294950] return 0/0/0 async 0/0/0
+May 30 17:11:24 :: [   295000] return 0/0/0 async 0/0/0
+May 30 17:11:26 :: [   295050] return 0/0/0 async 0/0/0
+May 30 17:11:28 :: [   295100] return 0/0/0 async 0/0/0
+May 30 17:11:30 :: [   295150] return 0/0/1 async 0/0/0
+May 30 17:11:32 :: [   295200] return 0/0/0 async 0/0/0
+May 30 17:11:34 :: [   295250] return 0/0/0 async 0/0/0
+May 30 17:11:36 :: [   295300] return 0/0/0 async 0/0/0
+May 30 17:11:38 :: [   295350] return 0/0/0 async 0/0/0
+May 30 17:11:40 :: [   295400] return 0/0/1 async 0/0/0
+May 30 17:11:42 :: [   295450] return 0/0/0 async 0/0/0
+May 30 17:11:44 :: [   295500] return 0/0/0 async 0/0/0
+May 30 17:11:46 :: [   295550] return 0/0/0 async 0/0/0
+May 30 17:11:48 :: [   295600] return 0/0/0 async 0/0/0
+May 30 17:11:50 :: [   295650] return 0/0/1 async 0/0/0
+May 30 17:11:52 :: [   295700] return 0/0/0 async 0/0/0
+May 30 17:11:54 :: [   295750] return 0/0/0 async 0/0/0
+May 30 17:11:56 :: [   295800] return 0/0/0 async 0/0/0
+May 30 17:11:58 :: [   295850] return 0/0/0 async 0/0/0
+May 30 17:12:00 :: [   295900] return 0/0/1 async 0/0/0
+May 30 17:12:02 :: [   295950] return 0/0/0 async 0/0/0
+May 30 17:12:04 :: [   296000] return 0/0/0 async 0/0/0
+May 30 17:12:06 :: [   296050] return 0/0/0 async 0/0/0
+May 30 17:12:08 :: [   296100] return 0/0/0 async 0/0/0
+May 30 17:12:10 :: [   296150] return 0/0/1 async 0/0/0
+May 30 17:12:12 :: [   296200] return 0/0/0 async 0/0/0
+May 30 17:12:14 :: [   296250] return 0/0/0 async 0/0/0
+May 30 17:12:16 :: [   296300] return 0/0/0 async 0/0/0
+May 30 17:12:18 :: [   296350] return 0/0/0 async 0/0/0
+May 30 17:12:20 :: [   296400] return 0/0/1 async 0/0/0
+May 30 17:12:22 :: [   296450] return 0/0/0 async 0/0/0
+May 30 17:12:24 :: [   296500] return 0/0/0 async 0/0/0
+May 30 17:12:26 :: [   296550] return 0/0/0 async 0/0/0
+May 30 17:12:28 :: [   296600] return 0/0/0 async 0/0/0
+May 30 17:12:30 :: [   296650] return 0/0/1 async 0/0/0
+May 30 17:12:32 :: [   296700] return 0/0/0 async 0/0/0
+May 30 17:12:34 :: [   296750] return 0/0/0 async 0/0/0
+May 30 17:12:36 :: [   296800] return 0/0/0 async 0/0/0
+May 30 17:12:38 :: [   296850] return 0/0/0 async 0/0/0
+May 30 17:12:40 :: [   296900] return 0/0/1 async 0/0/0
+May 30 17:12:42 :: [   296950] return 0/0/0 async 0/0/0
+May 30 17:12:44 :: [   297000] return 0/0/0 async 0/0/0
+May 30 17:12:46 :: [   297050] return 0/0/0 async 0/0/0
+May 30 17:12:48 :: [   297100] return 0/0/0 async 0/0/0
+May 30 17:12:50 :: [   297150] return 0/0/1 async 0/0/0
+May 30 17:12:52 :: [   297200] return 0/0/0 async 0/0/0
+May 30 17:12:54 :: [   297250] return 0/0/0 async 0/0/0
+May 30 17:12:56 :: [   297300] return 0/0/0 async 0/0/0
+May 30 17:12:58 :: [   297350] return 0/0/0 async 0/0/0
+May 30 17:13:00 :: [   297400] return 0/0/1 async 0/0/0
+May 30 17:13:02 :: [   297450] return 0/0/0 async 0/0/0
+May 30 17:13:04 :: [   297500] return 0/0/0 async 0/0/0
+May 30 17:13:06 :: [   297550] return 0/0/0 async 0/0/0
+May 30 17:13:08 :: [   297600] return 0/0/0 async 0/0/0
+May 30 17:13:10 :: [   297650] return 0/0/1 async 0/0/0
+May 30 17:13:12 :: [   297700] return 0/0/0 async 0/0/0
+May 30 17:13:14 :: [   297750] return 0/0/0 async 0/0/0
+May 30 17:13:16 :: [   297800] return 0/0/0 async 0/0/0
+May 30 17:13:18 :: [   297850] return 0/0/0 async 0/0/0
+May 30 17:13:20 :: [   297900] return 0/0/1 async 0/0/0
+May 30 17:13:22 :: [   297950] return 0/0/0 async 0/0/0
+May 30 17:13:24 :: [   298000] return 0/0/0 async 0/0/0
+May 30 17:13:26 :: [   298050] return 0/0/0 async 0/0/0
+May 30 17:13:26 :: AUTH_PEER_READ: size 190
+May 30 17:13:26 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(140345284), client_key(70068888 826762060 1170746330 1488394496)
+May 30 17:13:27 :: AUTH_PEER_WRITE: size 10
+May 30 17:13:27 :: LOGIN_BY_KEY success abyss 140345284 46.247.137.201
+May 30 17:13:27 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:13:27 :: abyss 55700 157900 hair 31
+May 30 17:13:27 :: bella 63800 166400 hair 0
+May 30 17:13:28 :: [   298100] return 0/0/0 async 0/0/0
+May 30 17:13:30 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:13:30 :: LOGOUT: Update player time pid(14)
+May 30 17:13:30 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:13:30 :: LOGOUT: Update player time pid(39)
+May 30 17:13:30 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:13:30 :: LOGOUT: Update player time pid(90)
+May 30 17:13:30 :: LOGOUT abyss 
+May 30 17:13:30 :: [   298150] return 0/0/1 async 0/0/0
+May 30 17:13:31 :: LOGIN_BY_KEY success abyss 140345284 46.247.137.201
+May 30 17:13:31 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:13:31 :: abyss 55700 157900 hair 31
+May 30 17:13:31 :: bella 63800 166400 hair 0
+May 30 17:13:31 :: SetPlay on 140345284 abyss
+May 30 17:13:31 :: [PLAYER_LOAD] ID bella pid 90 gold 490000 
+May 30 17:13:31 :: [PLAYER_LOAD] ID bella pid 90 gaya 0 
+May 30 17:13:31 :: AUTH_PEER_WRITE: size 18
+May 30 17:13:31 :: QID_QUEST 23
+May 30 17:13:31 :: QUEST_LOAD: count 2 PID 90
+May 30 17:13:31 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:13:31 :: QID_AFFECT 23
+May 30 17:13:31 :: AFFECT_LOAD: count 1 PID 90
+May 30 17:13:31 :: QID_BATTLE_PASS 23
+May 30 17:13:31 :: BATTLE_PASS_LOAD: count 0 PID 90
+May 30 17:13:31 :: QID_SKILL_COLOR 23 90
+May 30 17:13:31 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:13:32 :: [   298200] return 0/0/2 async 0/0/0
+May 30 17:13:34 :: [   298250] return 0/0/0 async 0/0/2
+May 30 17:13:36 :: [   298300] return 0/0/0 async 0/0/0
+May 30 17:13:38 :: [   298350] return 0/0/0 async 0/0/0
+May 30 17:13:40 :: [   298400] return 0/0/1 async 0/0/0
+May 30 17:13:42 :: [   298450] return 0/0/0 async 0/0/0
+May 30 17:13:44 :: [   298500] return 0/0/0 async 0/0/0
+May 30 17:13:46 :: [   298550] return 0/0/0 async 0/0/0
+May 30 17:13:48 :: [   298600] return 0/0/0 async 0/0/0
+May 30 17:13:50 :: [   298650] return 0/0/1 async 0/0/0
+May 30 17:13:52 :: [   298700] return 0/0/0 async 0/0/0
+May 30 17:13:54 :: [   298750] return 0/0/0 async 0/0/0
+May 30 17:13:56 :: [   298800] return 0/0/0 async 0/0/0
+May 30 17:13:58 :: [   298850] return 0/0/0 async 0/0/0
+May 30 17:14:00 :: [   298900] return 0/0/1 async 0/0/0
+May 30 17:14:02 :: [   298950] return 0/0/0 async 0/0/0
+May 30 17:14:04 :: [   299000] return 0/0/0 async 0/0/0
+May 30 17:14:06 :: [   299050] return 0/0/0 async 0/0/0
+May 30 17:14:08 :: [   299100] return 0/0/0 async 0/0/0
+May 30 17:14:10 :: [   299150] return 0/0/1 async 0/0/0
+May 30 17:14:12 :: [   299200] return 0/0/0 async 0/0/0
+May 30 17:14:14 :: [   299250] return 0/0/0 async 0/0/0
+May 30 17:14:16 :: [   299300] return 0/0/0 async 0/0/0
+May 30 17:14:18 :: [   299350] return 0/0/0 async 0/0/0
+May 30 17:14:20 :: [   299400] return 0/0/1 async 0/0/0
+May 30 17:14:22 :: [   299450] return 0/0/0 async 0/0/0
+May 30 17:14:24 :: [   299500] return 0/0/0 async 0/0/0
+May 30 17:14:26 :: [   299550] return 0/0/0 async 0/0/0
+May 30 17:14:28 :: [   299600] return 0/0/0 async 0/0/0
+May 30 17:14:30 :: [   299650] return 0/0/1 async 0/0/0
+May 30 17:14:32 :: [   299700] return 0/0/0 async 0/0/0
+May 30 17:14:34 :: [   299750] return 0/0/0 async 0/0/0
+May 30 17:14:36 :: [   299800] return 0/0/0 async 0/0/0
+May 30 17:14:38 :: [   299850] return 0/0/0 async 0/0/0
+May 30 17:14:40 :: [   299900] return 0/0/1 async 0/0/0
+May 30 17:14:42 :: [   299950] return 0/0/0 async 0/0/0
+May 30 17:14:44 :: [   300000] return 0/0/0 async 0/0/0
+May 30 17:14:46 :: [   300050] return 0/0/0 async 0/0/0
+May 30 17:14:48 :: [   300100] return 0/0/0 async 0/0/0
+May 30 17:14:50 :: [   300150] return 0/0/1 async 0/0/0
+May 30 17:14:52 :: [   300200] return 0/0/0 async 0/0/0
+May 30 17:14:54 :: [   300250] return 0/0/0 async 0/0/0
+May 30 17:14:56 :: [   300300] return 0/0/0 async 0/0/0
+May 30 17:14:58 :: [   300350] return 0/0/0 async 0/0/0
+May 30 17:15:00 :: [   300400] return 0/0/1 async 0/0/0
+May 30 17:15:02 :: [   300450] return 0/0/0 async 0/0/0
+May 30 17:15:04 :: [   300500] return 0/0/7 async 0/0/0
+May 30 17:15:06 :: [   300550] return 0/0/0 async 0/0/0
+May 30 17:15:08 :: [   300600] return 0/0/0 async 0/0/0
+May 30 17:15:10 :: [   300650] return 0/0/1 async 0/0/0
+May 30 17:15:11 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:15:11 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:15:12 :: [   300700] return 0/0/0 async 0/0/0
+May 30 17:15:14 :: [   300750] return 0/0/0 async 0/0/0
+May 30 17:15:16 :: [   300800] return 0/0/0 async 0/0/0
+May 30 17:15:18 :: [   300850] return 0/0/0 async 0/0/0
+May 30 17:15:20 :: [   300900] return 0/0/1 async 0/0/0
+May 30 17:15:22 :: [   300950] return 0/0/0 async 0/0/0
+May 30 17:15:24 :: [   301000] return 0/0/0 async 0/0/0
+May 30 17:15:26 :: [   301050] return 0/0/0 async 0/0/0
+May 30 17:15:28 :: [   301100] return 0/0/0 async 0/0/0
+May 30 17:15:30 :: [   301150] return 0/0/1 async 0/0/0
+May 30 17:15:32 :: [   301200] return 0/0/0 async 0/0/0
+May 30 17:15:34 :: [   301250] return 0/0/0 async 0/0/0
+May 30 17:15:36 :: [   301300] return 0/0/0 async 0/0/0
+May 30 17:15:38 :: [   301350] return 0/0/0 async 0/0/0
+May 30 17:15:40 :: [   301400] return 0/0/1 async 0/0/0
+May 30 17:15:42 :: [   301450] return 0/0/0 async 0/0/0
+May 30 17:15:44 :: [   301500] return 0/0/0 async 0/0/0
+May 30 17:15:46 :: [   301550] return 0/0/0 async 0/0/0
+May 30 17:15:48 :: [   301600] return 0/0/0 async 0/0/0
+May 30 17:15:50 :: [   301650] return 0/0/1 async 0/0/0
+May 30 17:15:52 :: [   301700] return 0/0/0 async 0/0/0
+May 30 17:15:54 :: [   301750] return 0/0/0 async 0/0/0
+May 30 17:15:56 :: [   301800] return 0/0/0 async 0/0/0
+May 30 17:15:58 :: [   301850] return 0/0/0 async 0/0/0
+May 30 17:16:00 :: [   301900] return 0/0/1 async 0/0/0
+May 30 17:16:02 :: [   301950] return 0/0/0 async 0/0/0
+May 30 17:16:04 :: [   302000] return 0/0/0 async 0/0/0
+May 30 17:16:06 :: [   302050] return 0/0/0 async 0/0/0
+May 30 17:16:08 :: [   302100] return 0/0/0 async 0/0/0
+May 30 17:16:10 :: [   302150] return 0/0/1 async 0/0/0
+May 30 17:16:12 :: [   302200] return 0/0/0 async 0/0/0
+May 30 17:16:14 :: [   302250] return 0/0/0 async 0/0/0
+May 30 17:16:16 :: [   302300] return 0/0/0 async 0/0/0
+May 30 17:16:18 :: [   302350] return 0/0/0 async 0/0/0
+May 30 17:16:20 :: [   302400] return 0/0/1 async 0/0/0
+May 30 17:16:22 :: [   302450] return 0/0/0 async 0/0/0
+May 30 17:16:24 :: [   302500] return 0/0/0 async 0/0/0
+May 30 17:16:26 :: [   302550] return 0/0/0 async 0/0/0
+May 30 17:16:28 :: [   302600] return 0/0/0 async 0/0/0
+May 30 17:16:30 :: [   302650] return 0/0/1 async 0/0/0
+May 30 17:16:32 :: [   302700] return 0/0/0 async 0/0/0
+May 30 17:16:34 :: [   302750] return 0/0/0 async 0/0/0
+May 30 17:16:36 :: [   302800] return 0/0/0 async 0/0/0
+May 30 17:16:38 :: [   302850] return 0/0/0 async 0/0/0
+May 30 17:16:40 :: [   302900] return 0/0/1 async 0/0/0
+May 30 17:16:42 :: [   302950] return 0/0/0 async 0/0/0
+May 30 17:16:44 :: [   303000] return 0/0/0 async 0/0/0
+May 30 17:16:46 :: [   303050] return 0/0/0 async 0/0/0
+May 30 17:16:48 :: [   303100] return 0/0/0 async 0/0/0
+May 30 17:16:50 :: [   303150] return 0/0/1 async 0/0/0
+May 30 17:16:52 :: [   303200] return 0/0/0 async 0/0/0
+May 30 17:16:54 :: [   303250] return 0/0/0 async 0/0/0
+May 30 17:16:56 :: [   303300] return 0/0/0 async 0/0/0
+May 30 17:16:58 :: [   303350] return 0/0/0 async 0/0/0
+May 30 17:17:00 :: [   303400] return 0/0/1 async 0/0/0
+May 30 17:17:02 :: [   303450] return 0/0/0 async 0/0/0
+May 30 17:17:04 :: [   303500] return 0/0/0 async 0/0/0
+May 30 17:17:06 :: [   303550] return 0/0/0 async 0/0/0
+May 30 17:17:08 :: [   303600] return 0/0/0 async 0/0/0
+May 30 17:17:10 :: [   303650] return 0/0/1 async 0/0/0
+May 30 17:17:12 :: [   303700] return 0/0/0 async 0/0/0
+May 30 17:17:14 :: [   303750] return 0/0/0 async 0/0/0
+May 30 17:17:16 :: [   303800] return 0/0/0 async 0/0/0
+May 30 17:17:18 :: [   303850] return 0/0/0 async 0/0/0
+May 30 17:17:20 :: [   303900] return 0/0/1 async 0/0/0
+May 30 17:17:22 :: [   303950] return 0/0/0 async 0/0/0
+May 30 17:17:24 :: [   304000] return 0/0/0 async 0/0/0
+May 30 17:17:26 :: [   304050] return 0/0/0 async 0/0/0
+May 30 17:17:28 :: [   304100] return 0/0/0 async 0/0/0
+May 30 17:17:30 :: [   304150] return 0/0/1 async 0/0/0
+May 30 17:17:32 :: [   304200] return 0/0/0 async 0/0/0
+May 30 17:17:34 :: [   304250] return 0/0/0 async 0/0/0
+May 30 17:17:36 :: [   304300] return 0/0/0 async 0/0/0
+May 30 17:17:38 :: [   304350] return 0/0/0 async 0/0/0
+May 30 17:17:40 :: [   304400] return 0/0/1 async 0/0/0
+May 30 17:17:42 :: [   304450] return 0/0/0 async 0/0/0
+May 30 17:17:44 :: [   304500] return 0/0/0 async 0/0/0
+May 30 17:17:46 :: [   304550] return 0/0/0 async 0/0/0
+May 30 17:17:48 :: [   304600] return 0/0/0 async 0/0/0
+May 30 17:17:50 :: [   304650] return 0/0/1 async 0/0/0
+May 30 17:17:52 :: [   304700] return 0/0/0 async 0/0/0
+May 30 17:17:54 :: [   304750] return 0/0/0 async 0/0/0
+May 30 17:17:56 :: [   304800] return 0/0/0 async 0/0/0
+May 30 17:17:58 :: [   304850] return 0/0/0 async 0/0/0
+May 30 17:18:00 :: [   304900] return 0/0/1 async 0/0/0
+May 30 17:18:02 :: [   304950] return 0/0/0 async 0/0/0
+May 30 17:18:04 :: [   305000] return 0/0/0 async 0/0/0
+May 30 17:18:06 :: [   305050] return 0/0/0 async 0/0/0
+May 30 17:18:08 :: [   305100] return 0/0/0 async 0/0/0
+May 30 17:18:10 :: [   305150] return 0/0/1 async 0/0/0
+May 30 17:18:12 :: [   305200] return 0/0/0 async 0/0/0
+May 30 17:18:14 :: [   305250] return 0/0/0 async 0/0/0
+May 30 17:18:16 :: [   305300] return 0/0/0 async 0/0/0
+May 30 17:18:18 :: [   305350] return 0/0/0 async 0/0/0
+May 30 17:18:20 :: [   305400] return 0/0/1 async 0/0/0
+May 30 17:18:22 :: [   305450] return 0/0/0 async 0/0/0
+May 30 17:18:24 :: [   305500] return 0/0/0 async 0/0/0
+May 30 17:18:26 :: [   305550] return 0/0/0 async 0/0/0
+May 30 17:18:28 :: [   305600] return 0/0/0 async 0/0/0
+May 30 17:18:30 :: [   305650] return 0/0/1 async 0/0/0
+May 30 17:18:32 :: [   305700] return 0/0/0 async 0/0/0
+May 30 17:18:34 :: [   305750] return 0/0/1 async 0/0/0
+May 30 17:18:36 :: [   305800] return 0/0/0 async 0/0/0
+May 30 17:18:38 :: [   305850] return 0/0/0 async 0/0/0
+May 30 17:18:40 :: [   305900] return 0/0/1 async 0/0/0
+May 30 17:18:42 :: [   305950] return 0/0/0 async 0/0/0
+May 30 17:18:44 :: [   306000] return 0/0/0 async 0/0/0
+May 30 17:18:46 :: [   306050] return 0/0/0 async 0/0/0
+May 30 17:18:48 :: [   306100] return 0/0/0 async 0/0/0
+May 30 17:18:50 :: [   306150] return 0/0/1 async 0/0/0
+May 30 17:18:52 :: [   306200] return 0/0/0 async 0/0/0
+May 30 17:18:54 :: [   306250] return 0/0/0 async 0/0/0
+May 30 17:18:56 :: [   306300] return 0/0/0 async 0/0/0
+May 30 17:18:58 :: [   306350] return 0/0/0 async 0/0/0
+May 30 17:19:00 :: [   306400] return 0/0/1 async 0/0/0
+May 30 17:19:02 :: [   306450] return 0/0/0 async 0/0/0
+May 30 17:19:04 :: [   306500] return 0/0/0 async 0/0/0
+May 30 17:19:06 :: [   306550] return 0/0/0 async 0/0/0
+May 30 17:19:08 :: [   306600] return 0/0/0 async 0/0/0
+May 30 17:19:10 :: [   306650] return 0/0/1 async 0/0/0
+May 30 17:19:12 :: [   306700] return 0/0/0 async 0/0/0
+May 30 17:19:14 :: [   306750] return 0/0/0 async 0/0/0
+May 30 17:19:16 :: [   306800] return 0/0/0 async 0/0/0
+May 30 17:19:18 :: [   306850] return 0/0/0 async 0/0/0
+May 30 17:19:20 :: [   306900] return 0/0/1 async 0/0/0
+May 30 17:19:22 :: [   306950] return 0/0/0 async 0/0/0
+May 30 17:19:24 :: [   307000] return 0/0/0 async 0/0/0
+May 30 17:19:26 :: [   307050] return 0/0/0 async 0/0/0
+May 30 17:19:28 :: [   307100] return 0/0/0 async 0/0/0
+May 30 17:19:30 :: [   307150] return 0/0/1 async 0/0/0
+May 30 17:19:32 :: [   307200] return 0/0/0 async 0/0/0
+May 30 17:19:34 :: [   307250] return 0/0/0 async 0/0/0
+May 30 17:19:36 :: [   307300] return 0/0/0 async 0/0/0
+May 30 17:19:38 :: [   307350] return 0/0/0 async 0/0/0
+May 30 17:19:40 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:19:40 :: LOGOUT: Insert player pid(14)
+May 30 17:19:40 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:19:40 :: LOGOUT: Insert player pid(39)
+May 30 17:19:40 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:19:40 :: LOGOUT: Insert player pid(90)
+May 30 17:19:40 :: SetPlay off 140345284 abyss
+May 30 17:19:40 :: LOGOUT abyss 
+May 30 17:19:40 :: AUTH_PEER_WRITE: size 18
+May 30 17:19:40 :: [   307400] return 0/0/1 async 0/0/1
+May 30 17:19:42 :: [   307450] return 0/0/0 async 0/0/0
+May 30 17:19:44 :: [   307500] return 0/0/0 async 0/0/0
+May 30 17:19:46 :: [   307550] return 0/0/0 async 0/0/0
+May 30 17:19:48 :: [   307600] return 0/0/0 async 0/0/0
+May 30 17:19:50 :: [   307650] return 0/0/1 async 0/0/0
+May 30 17:19:52 :: [   307700] return 0/0/0 async 0/0/0
+May 30 17:19:54 :: [   307750] return 0/0/0 async 0/0/0
+May 30 17:19:56 :: [   307800] return 0/0/0 async 0/0/0
+May 30 17:19:58 :: [   307850] return 0/0/0 async 0/0/0
+May 30 17:20:00 :: [   307900] return 0/0/1 async 0/0/0
+May 30 17:20:02 :: [   307950] return 0/0/0 async 0/0/0
+May 30 17:20:04 :: [   308000] return 0/0/0 async 0/0/0
+May 30 17:20:06 :: [   308050] return 0/0/0 async 0/0/0
+May 30 17:20:08 :: [   308100] return 0/0/0 async 0/0/0
+May 30 17:20:10 :: [   308150] return 0/0/1 async 0/0/0
+May 30 17:20:12 :: [   308200] return 0/0/0 async 0/0/0
+May 30 17:20:12 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:20:12 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:20:14 :: [   308250] return 0/0/0 async 0/0/0
+May 30 17:20:16 :: [   308300] return 0/0/0 async 0/0/0
+May 30 17:20:18 :: [   308350] return 0/0/0 async 0/0/0
+May 30 17:20:20 :: [   308400] return 0/0/1 async 0/0/0
+May 30 17:20:22 :: [   308450] return 0/0/0 async 0/0/0
+May 30 17:20:24 :: [   308500] return 0/0/0 async 0/0/0
+May 30 17:20:26 :: [   308550] return 0/0/0 async 0/0/0
+May 30 17:20:28 :: [   308600] return 0/0/0 async 0/0/0
+May 30 17:20:30 :: [   308650] return 0/0/1 async 0/0/0
+May 30 17:20:32 :: [   308700] return 0/0/0 async 0/0/0
+May 30 17:20:34 :: [   308750] return 0/0/0 async 0/0/0
+May 30 17:20:36 :: [   308800] return 0/0/0 async 0/0/0
+May 30 17:20:38 :: [   308850] return 0/0/0 async 0/0/0
+May 30 17:20:40 :: [   308900] return 0/0/1 async 0/0/0
+May 30 17:20:42 :: [   308950] return 0/0/0 async 0/0/0
+May 30 17:20:44 :: [   309000] return 0/0/0 async 0/0/0
+May 30 17:20:46 :: [   309050] return 0/0/0 async 0/0/0
+May 30 17:20:48 :: [   309100] return 0/0/0 async 0/0/0
+May 30 17:20:50 :: [   309150] return 0/0/1 async 0/0/0
+May 30 17:20:52 :: [   309200] return 0/0/0 async 0/0/0
+May 30 17:20:54 :: [   309250] return 0/0/0 async 0/0/0
+May 30 17:20:56 :: [   309300] return 0/0/0 async 0/0/0
+May 30 17:20:58 :: [   309350] return 0/0/0 async 0/0/0
+May 30 17:21:00 :: [   309400] return 0/0/1 async 0/0/0
+May 30 17:21:02 :: [   309450] return 0/0/0 async 0/0/0
+May 30 17:21:04 :: [   309500] return 0/0/0 async 0/0/0
+May 30 17:21:06 :: [   309550] return 0/0/0 async 0/0/0
+May 30 17:21:08 :: [   309600] return 0/0/0 async 0/0/0
+May 30 17:21:10 :: [   309650] return 0/0/1 async 0/0/0
+May 30 17:21:12 :: [   309700] return 0/0/0 async 0/0/0
+May 30 17:21:14 :: [   309750] return 0/0/0 async 0/0/0
+May 30 17:21:16 :: [   309800] return 0/0/0 async 0/0/0
+May 30 17:21:18 :: [   309850] return 0/0/0 async 0/0/0
+May 30 17:21:20 :: [   309900] return 0/0/1 async 0/0/0
+May 30 17:21:22 :: [   309950] return 0/0/0 async 0/0/0
+May 30 17:21:24 :: [   310000] return 0/0/0 async 0/0/0
+May 30 17:21:26 :: [   310050] return 0/0/0 async 0/0/0
+May 30 17:21:28 :: [   310100] return 0/0/0 async 0/0/0
+May 30 17:21:30 :: [   310150] return 0/0/1 async 0/0/0
+May 30 17:21:32 :: [   310200] return 0/0/0 async 0/0/0
+May 30 17:21:34 :: [   310250] return 0/0/0 async 0/0/0
+May 30 17:21:36 :: [   310300] return 0/0/0 async 0/0/0
+May 30 17:21:38 :: [   310350] return 0/0/0 async 0/0/0
+May 30 17:21:40 :: [   310400] return 0/0/1 async 0/0/0
+May 30 17:21:42 :: [   310450] return 0/0/0 async 0/0/0
+May 30 17:21:43 :: AUTH_PEER_READ: size 190
+May 30 17:21:43 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(187663290), client_key(1891413237 1929331365 1416665502 745897825)
+May 30 17:21:43 :: AUTH_PEER_WRITE: size 10
+May 30 17:21:44 :: LOGIN_BY_KEY success abyss 187663290 46.247.137.201
+May 30 17:21:44 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:21:44 :: abyss 55700 157900 hair 31
+May 30 17:21:44 :: bella 63800 166400 hair 0
+May 30 17:21:44 :: [   310500] return 0/0/2 async 0/0/0
+May 30 17:21:46 :: [   310550] return 0/0/0 async 0/0/0
+May 30 17:21:48 :: [   310600] return 0/0/0 async 0/0/0
+May 30 17:21:49 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:21:49 :: LOGOUT: Update player time pid(14)
+May 30 17:21:49 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:21:49 :: LOGOUT: Update player time pid(39)
+May 30 17:21:49 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:21:49 :: LOGOUT: Update player time pid(90)
+May 30 17:21:49 :: LOGOUT abyss 
+May 30 17:21:49 :: LOGIN_BY_KEY success abyss 187663290 46.247.137.201
+May 30 17:21:49 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:21:49 :: abyss 55700 157900 hair 31
+May 30 17:21:49 :: bella 63800 166400 hair 0
+May 30 17:21:50 :: SetPlay on 187663290 abyss
+May 30 17:21:50 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134596625 
+May 30 17:21:50 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:21:50 :: AUTH_PEER_WRITE: size 18
+May 30 17:21:50 :: QID_QUEST 24
+May 30 17:21:50 :: QUEST_LOAD: count 47 PID 14
+May 30 17:21:50 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:21:50 :: QID_AFFECT 24
+May 30 17:21:50 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:21:50 :: QID_BATTLE_PASS 24
+May 30 17:21:50 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:21:50 :: QID_SKILL_COLOR 24 14
+May 30 17:21:50 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:21:50 :: [   310650] return 0/0/5 async 0/0/0
+May 30 17:21:52 :: [   310700] return 0/0/1 async 0/0/0
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:21:53 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:53 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:21:54 :: [   310750] return 0/0/26 async 0/0/2
+May 30 17:21:56 :: [   310800] return 0/0/0 async 0/0/0
+May 30 17:21:58 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:21:58 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:21:58 :: [   310850] return 0/0/0 async 0/0/1
+May 30 17:22:00 :: [   310900] return 0/0/1 async 0/0/0
+May 30 17:22:02 :: [   310950] return 0/0/0 async 0/0/0
+May 30 17:22:04 :: [   311000] return 0/0/0 async 0/0/0
+May 30 17:22:06 :: [   311050] return 0/0/0 async 0/0/0
+May 30 17:22:08 :: [   311100] return 0/0/0 async 0/0/0
+May 30 17:22:10 :: [   311150] return 0/0/1 async 0/0/0
+May 30 17:22:12 :: [   311200] return 0/0/0 async 0/0/0
+May 30 17:22:14 :: [   311250] return 0/0/0 async 0/0/0
+May 30 17:22:16 :: [   311300] return 0/0/0 async 0/0/0
+May 30 17:22:18 :: [   311350] return 0/0/0 async 0/0/0
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:22:19 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:19 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:22:19 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:22:19 :: LOGOUT: Insert player pid(14)
+May 30 17:22:19 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:22:19 :: LOGOUT: Insert player pid(39)
+May 30 17:22:19 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:22:19 :: LOGOUT: Insert player pid(90)
+May 30 17:22:19 :: SetPlay off 187663290 abyss
+May 30 17:22:19 :: LOGOUT abyss 
+May 30 17:22:19 :: AUTH_PEER_WRITE: size 18
+May 30 17:22:19 :: LOGIN_BY_KEY success abyss 187663290 46.247.137.201
+May 30 17:22:19 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:22:19 :: abyss 474300 954800 hair 31
+May 30 17:22:19 :: bella 63800 166400 hair 0
+May 30 17:22:20 :: [   311400] return 0/0/1 async 0/0/0
+May 30 17:22:22 :: [   311450] return 0/0/0 async 0/0/0
+May 30 17:22:24 :: [   311500] return 0/0/0 async 0/0/0
+May 30 17:22:26 :: [   311550] return 0/0/0 async 0/0/0
+May 30 17:22:28 :: [   311600] return 0/0/0 async 0/0/0
+May 30 17:22:30 :: [   311650] return 0/0/1 async 0/0/0
+May 30 17:22:32 :: [   311700] return 0/0/0 async 0/0/0
+May 30 17:22:34 :: [   311750] return 0/0/0 async 0/0/0
+May 30 17:22:36 :: [   311800] return 0/0/0 async 0/0/0
+May 30 17:22:38 :: [   311850] return 0/0/0 async 0/0/0
+May 30 17:22:39 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:22:39 :: LOGOUT: Update player time pid(14)
+May 30 17:22:39 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:22:39 :: LOGOUT: Update player time pid(39)
+May 30 17:22:39 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:22:39 :: LOGOUT: Update player time pid(90)
+May 30 17:22:39 :: LOGOUT abyss 
+May 30 17:22:40 :: [   311900] return 0/0/1 async 0/0/0
+May 30 17:22:42 :: [   311950] return 0/0/0 async 0/0/0
+May 30 17:22:44 :: AUTH_PEER_READ: size 190
+May 30 17:22:44 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1473715033), client_key(2073034551 717009729 1251771986 1781962690)
+May 30 17:22:44 :: AUTH_PEER_WRITE: size 10
+May 30 17:22:44 :: LOGIN_BY_KEY success abyss 1473715033 46.247.137.201
+May 30 17:22:44 :: [   312000] return 0/1/1 async 0/0/0
+May 30 17:22:44 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:22:44 :: abyss 474300 954800 hair 31
+May 30 17:22:44 :: bella 63800 166400 hair 0
+May 30 17:22:46 :: [   312050] return 0/0/0 async 0/0/0
+May 30 17:22:48 :: [   312100] return 0/0/0 async 0/0/0
+May 30 17:22:50 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:22:50 :: LOGOUT: Update player time pid(14)
+May 30 17:22:50 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:22:50 :: LOGOUT: Update player time pid(39)
+May 30 17:22:50 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:22:50 :: LOGOUT: Update player time pid(90)
+May 30 17:22:50 :: LOGOUT abyss 
+May 30 17:22:50 :: LOGIN_BY_KEY success abyss 1473715033 46.247.137.201
+May 30 17:22:50 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:22:50 :: abyss 474300 954800 hair 31
+May 30 17:22:50 :: bella 63800 166400 hair 0
+May 30 17:22:50 :: [   312150] return 0/0/3 async 0/0/0
+May 30 17:22:51 :: SetPlay on 1473715033 abyss
+May 30 17:22:51 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:22:51 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:22:51 :: AUTH_PEER_WRITE: size 18
+May 30 17:22:51 :: QID_QUEST 26
+May 30 17:22:51 :: QUEST_LOAD: count 47 PID 14
+May 30 17:22:51 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:22:51 :: QID_AFFECT 26
+May 30 17:22:51 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:22:51 :: QID_BATTLE_PASS 26
+May 30 17:22:51 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:22:51 :: QID_SKILL_COLOR 26 14
+May 30 17:22:51 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:22:52 :: [   312200] return 0/0/0 async 0/0/0
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:22:54 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:22:54 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:22:54 :: [   312250] return 0/0/0 async 0/0/0
+May 30 17:22:56 :: [   312300] return 0/0/0 async 0/0/0
+May 30 17:22:58 :: [   312350] return 0/0/0 async 0/0/0
+May 30 17:23:00 :: [   312400] return 0/0/1 async 0/0/0
+May 30 17:23:02 :: [   312450] return 0/0/0 async 0/0/0
+May 30 17:23:04 :: [   312500] return 0/0/0 async 0/0/0
+May 30 17:23:06 :: [   312550] return 0/0/0 async 0/0/0
+May 30 17:23:08 :: [   312600] return 0/0/0 async 0/0/0
+May 30 17:23:10 :: [   312650] return 0/0/1 async 0/0/0
+May 30 17:23:12 :: [   312700] return 0/0/0 async 0/0/0
+May 30 17:23:14 :: [   312750] return 0/0/0 async 0/0/0
+May 30 17:23:16 :: [   312800] return 0/0/0 async 0/0/0
+May 30 17:23:18 :: [   312850] return 0/0/0 async 0/0/0
+May 30 17:23:20 :: [   312900] return 0/0/1 async 0/0/0
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:23:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:22 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:23:22 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:23:22 :: LOGOUT: Insert player pid(14)
+May 30 17:23:22 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:23:22 :: LOGOUT: Insert player pid(39)
+May 30 17:23:22 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:23:22 :: LOGOUT: Insert player pid(90)
+May 30 17:23:22 :: SetPlay off 1473715033 abyss
+May 30 17:23:22 :: LOGOUT abyss 
+May 30 17:23:22 :: AUTH_PEER_WRITE: size 18
+May 30 17:23:22 :: LOGIN_BY_KEY success abyss 1473715033 46.247.137.201
+May 30 17:23:22 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:23:22 :: abyss 469300 964200 hair 31
+May 30 17:23:22 :: bella 63800 166400 hair 0
+May 30 17:23:22 :: [   312950] return 0/0/2 async 0/0/18
+May 30 17:23:24 :: [   313000] return 0/0/0 async 0/0/0
+May 30 17:23:26 :: [   313050] return 0/0/0 async 0/0/0
+May 30 17:23:28 :: [   313100] return 0/0/0 async 0/0/0
+May 30 17:23:30 :: [   313150] return 0/0/1 async 0/0/0
+May 30 17:23:31 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:23:31 :: LOGOUT: Update player time pid(14)
+May 30 17:23:31 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:23:31 :: LOGOUT: Update player time pid(39)
+May 30 17:23:31 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:23:31 :: LOGOUT: Update player time pid(90)
+May 30 17:23:31 :: LOGOUT abyss 
+May 30 17:23:32 :: [   313200] return 0/0/0 async 0/0/0
+May 30 17:23:34 :: [   313250] return 0/0/0 async 0/0/0
+May 30 17:23:35 :: AUTH_PEER_READ: size 190
+May 30 17:23:35 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(89816474), client_key(827235712 541480906 1781374803 1496791194)
+May 30 17:23:35 :: AUTH_PEER_WRITE: size 10
+May 30 17:23:36 :: LOGIN_BY_KEY success abyss 89816474 46.247.137.201
+May 30 17:23:36 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:23:36 :: abyss 469300 964200 hair 31
+May 30 17:23:36 :: bella 63800 166400 hair 0
+May 30 17:23:36 :: [   313300] return 0/0/2 async 0/0/0
+May 30 17:23:38 :: [   313350] return 0/0/0 async 0/0/0
+May 30 17:23:40 :: [   313400] return 0/0/1 async 0/0/0
+May 30 17:23:41 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:23:41 :: LOGOUT: Update player time pid(14)
+May 30 17:23:41 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:23:41 :: LOGOUT: Update player time pid(39)
+May 30 17:23:41 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:23:41 :: LOGOUT: Update player time pid(90)
+May 30 17:23:41 :: LOGOUT abyss 
+May 30 17:23:42 :: LOGIN_BY_KEY success abyss 89816474 46.247.137.201
+May 30 17:23:42 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:23:42 :: abyss 469300 964200 hair 31
+May 30 17:23:42 :: bella 63800 166400 hair 0
+May 30 17:23:42 :: SetPlay on 89816474 abyss
+May 30 17:23:42 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:23:42 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:23:42 :: AUTH_PEER_WRITE: size 18
+May 30 17:23:42 :: QID_QUEST 28
+May 30 17:23:42 :: QUEST_LOAD: count 47 PID 14
+May 30 17:23:42 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:23:42 :: QID_AFFECT 28
+May 30 17:23:42 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:23:42 :: QID_BATTLE_PASS 28
+May 30 17:23:42 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:23:42 :: QID_SKILL_COLOR 28 14
+May 30 17:23:42 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:23:42 :: [   313450] return 0/5/53 async 0/0/0
+May 30 17:23:44 :: [   313500] return 0/0/0 async 0/0/4
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:23:45 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:45 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:23:46 :: [   313550] return 0/0/0 async 0/0/0
+May 30 17:23:48 :: [   313600] return 0/0/0 async 0/0/1
+May 30 17:23:50 :: [   313650] return 0/0/1 async 0/0/0
+May 30 17:23:52 :: [   313700] return 0/0/0 async 0/0/0
+May 30 17:23:54 :: [   313750] return 0/0/0 async 0/0/0
+May 30 17:23:56 :: [   313800] return 0/0/0 async 0/0/0
+May 30 17:23:58 :: [   313850] return 0/0/0 async 0/0/0
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:23:59 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:23:59 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:23:59 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:23:59 :: LOGOUT: Insert player pid(14)
+May 30 17:23:59 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:23:59 :: LOGOUT: Insert player pid(39)
+May 30 17:23:59 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:23:59 :: LOGOUT: Insert player pid(90)
+May 30 17:23:59 :: SetPlay off 89816474 abyss
+May 30 17:23:59 :: LOGOUT abyss 
+May 30 17:23:59 :: AUTH_PEER_WRITE: size 18
+May 30 17:23:59 :: LOGIN_BY_KEY success abyss 89816474 46.247.137.201
+May 30 17:23:59 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:23:59 :: abyss 969600 278400 hair 31
+May 30 17:23:59 :: bella 63800 166400 hair 0
+May 30 17:24:00 :: [   313900] return 0/0/1 async 0/0/0
+May 30 17:24:02 :: [   313950] return 0/0/0 async 0/0/0
+May 30 17:24:04 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:24:04 :: LOGOUT: Update player time pid(14)
+May 30 17:24:04 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:24:04 :: LOGOUT: Update player time pid(39)
+May 30 17:24:04 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:24:04 :: LOGOUT: Update player time pid(90)
+May 30 17:24:04 :: LOGOUT abyss 
+May 30 17:24:04 :: [   314000] return 0/0/0 async 0/0/0
+May 30 17:24:06 :: [   314050] return 0/0/0 async 0/0/0
+May 30 17:24:08 :: AUTH_PEER_READ: size 190
+May 30 17:24:08 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1112818817), client_key(799281590 1015471145 970991306 722646389)
+May 30 17:24:08 :: AUTH_PEER_WRITE: size 10
+May 30 17:24:08 :: [   314100] return 0/0/0 async 0/0/0
+May 30 17:24:09 :: LOGIN_BY_KEY success abyss 1112818817 46.247.137.201
+May 30 17:24:09 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:24:09 :: abyss 969600 278400 hair 31
+May 30 17:24:09 :: bella 63800 166400 hair 0
+May 30 17:24:10 :: [   314150] return 0/0/1 async 0/0/0
+May 30 17:24:12 :: [   314200] return 0/0/0 async 0/0/0
+May 30 17:24:14 :: [   314250] return 0/0/0 async 0/0/0
+May 30 17:24:15 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:24:15 :: LOGOUT: Update player time pid(14)
+May 30 17:24:15 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:24:15 :: LOGOUT: Update player time pid(39)
+May 30 17:24:15 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:24:15 :: LOGOUT: Update player time pid(90)
+May 30 17:24:15 :: LOGOUT abyss 
+May 30 17:24:15 :: LOGIN_BY_KEY success abyss 1112818817 46.247.137.201
+May 30 17:24:16 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:24:16 :: abyss 969600 278400 hair 31
+May 30 17:24:16 :: bella 63800 166400 hair 0
+May 30 17:24:16 :: SetPlay on 1112818817 abyss
+May 30 17:24:16 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:24:16 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:24:16 :: AUTH_PEER_WRITE: size 18
+May 30 17:24:16 :: QID_QUEST 30
+May 30 17:24:16 :: QUEST_LOAD: count 47 PID 14
+May 30 17:24:16 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:24:16 :: QID_AFFECT 30
+May 30 17:24:16 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:24:16 :: QID_BATTLE_PASS 30
+May 30 17:24:16 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:24:16 :: QID_SKILL_COLOR 30 14
+May 30 17:24:16 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:24:16 :: [   314300] return 0/0/6 async 0/0/0
+May 30 17:24:18 :: [   314350] return 0/0/0 async 0/0/4
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:24:20 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:20 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:24:20 :: [   314400] return 0/0/1 async 0/0/0
+May 30 17:24:22 :: [   314450] return 0/0/0 async 0/0/1
+May 30 17:24:24 :: [   314500] return 0/0/0 async 0/0/0
+May 30 17:24:26 :: [   314550] return 0/0/0 async 0/0/0
+May 30 17:24:28 :: [   314600] return 0/0/0 async 0/0/0
+May 30 17:24:30 :: [   314650] return 0/0/1 async 0/0/0
+May 30 17:24:32 :: [   314700] return 0/0/0 async 0/0/0
+May 30 17:24:34 :: [   314750] return 0/0/0 async 0/0/0
+May 30 17:24:36 :: [   314800] return 0/0/0 async 0/0/0
+May 30 17:24:38 :: [   314850] return 0/0/0 async 0/0/0
+May 30 17:24:40 :: [   314900] return 0/0/1 async 0/0/0
+May 30 17:24:41 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:24:41 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:24:42 :: [   314950] return 0/0/0 async 0/0/0
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:24:43 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:24:43 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:24:43 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:24:43 :: LOGOUT: Insert player pid(14)
+May 30 17:24:43 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:24:43 :: LOGOUT: Insert player pid(39)
+May 30 17:24:43 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:24:43 :: LOGOUT: Insert player pid(90)
+May 30 17:24:43 :: SetPlay off 1112818817 abyss
+May 30 17:24:43 :: LOGOUT abyss 
+May 30 17:24:43 :: AUTH_PEER_WRITE: size 18
+May 30 17:24:44 :: [   315000] return 0/0/0 async 0/0/0
+May 30 17:24:46 :: [   315050] return 0/0/0 async 0/0/0
+May 30 17:24:48 :: [   315100] return 0/0/0 async 0/0/0
+May 30 17:24:50 :: [   315150] return 0/0/1 async 0/0/0
+May 30 17:24:52 :: [   315200] return 0/0/0 async 0/0/0
+May 30 17:24:54 :: [   315250] return 0/0/0 async 0/0/0
+May 30 17:24:56 :: [   315300] return 0/0/0 async 0/0/0
+May 30 17:24:58 :: [   315350] return 0/0/0 async 0/0/0
+May 30 17:25:00 :: [   315400] return 0/0/1 async 0/0/0
+May 30 17:25:02 :: [   315450] return 0/0/0 async 0/0/0
+May 30 17:25:04 :: [   315500] return 0/0/0 async 0/0/0
+May 30 17:25:06 :: [   315550] return 0/0/0 async 0/0/0
+May 30 17:25:08 :: [   315600] return 0/0/0 async 0/0/0
+May 30 17:25:10 :: [   315650] return 0/0/1 async 0/0/0
+May 30 17:25:12 :: [   315700] return 0/0/0 async 0/0/0
+May 30 17:25:14 :: [   315750] return 0/0/0 async 0/0/0
+May 30 17:25:16 :: [   315800] return 0/0/0 async 0/0/0
+May 30 17:25:18 :: [   315850] return 0/0/0 async 0/0/0
+May 30 17:25:20 :: [   315900] return 0/0/1 async 0/0/0
+May 30 17:25:22 :: [   315950] return 0/0/0 async 0/0/0
+May 30 17:25:24 :: [   316000] return 0/0/0 async 0/0/0
+May 30 17:25:26 :: [   316050] return 0/0/0 async 0/0/0
+May 30 17:25:28 :: [   316100] return 0/0/0 async 0/0/0
+May 30 17:25:30 :: [   316150] return 0/0/1 async 0/0/0
+May 30 17:25:32 :: [   316200] return 0/0/0 async 0/0/0
+May 30 17:25:34 :: [   316250] return 0/0/0 async 0/0/0
+May 30 17:25:36 :: [   316300] return 0/0/0 async 0/0/0
+May 30 17:25:38 :: [   316350] return 0/0/0 async 0/0/0
+May 30 17:25:40 :: [   316400] return 0/0/1 async 0/0/0
+May 30 17:25:42 :: [   316450] return 0/0/0 async 0/0/0
+May 30 17:25:44 :: [   316500] return 0/0/0 async 0/0/0
+May 30 17:25:46 :: [   316550] return 0/0/0 async 0/0/0
+May 30 17:25:48 :: [   316600] return 0/0/0 async 0/0/0
+May 30 17:25:50 :: [   316650] return 0/0/1 async 0/0/0
+May 30 17:25:52 :: [   316700] return 0/0/0 async 0/0/0
+May 30 17:25:54 :: [   316750] return 0/0/0 async 0/0/0
+May 30 17:25:56 :: [   316800] return 0/0/0 async 0/0/0
+May 30 17:25:58 :: [   316850] return 0/0/0 async 0/0/0
+May 30 17:26:00 :: [   316900] return 0/0/1 async 0/0/0
+May 30 17:26:02 :: [   316950] return 0/0/0 async 0/0/0
+May 30 17:26:04 :: [   317000] return 0/0/0 async 0/0/0
+May 30 17:26:06 :: [   317050] return 0/0/0 async 0/0/0
+May 30 17:26:08 :: [   317100] return 0/0/0 async 0/0/0
+May 30 17:26:10 :: [   317150] return 0/0/1 async 0/0/0
+May 30 17:26:12 :: [   317200] return 0/0/0 async 0/0/0
+May 30 17:26:14 :: [   317250] return 0/0/0 async 0/0/0
+May 30 17:26:16 :: [   317300] return 0/0/0 async 0/0/0
+May 30 17:26:18 :: [   317350] return 0/0/0 async 0/0/0
+May 30 17:26:20 :: [   317400] return 0/0/1 async 0/0/0
+May 30 17:26:22 :: [   317450] return 0/0/0 async 0/0/0
+May 30 17:26:24 :: [   317500] return 0/0/0 async 0/0/0
+May 30 17:26:26 :: [   317550] return 0/0/0 async 0/0/0
+May 30 17:26:28 :: [   317600] return 0/0/0 async 0/0/0
+May 30 17:26:30 :: [   317650] return 0/0/1 async 0/0/0
+May 30 17:26:32 :: [   317700] return 0/0/0 async 0/0/0
+May 30 17:26:34 :: [   317750] return 0/0/0 async 0/0/0
+May 30 17:26:36 :: [   317800] return 0/0/0 async 0/0/0
+May 30 17:26:38 :: [   317850] return 0/0/0 async 0/0/0
+May 30 17:26:40 :: [   317900] return 0/0/1 async 0/0/0
+May 30 17:26:42 :: [   317950] return 0/0/0 async 0/0/0
+May 30 17:26:44 :: [   318000] return 0/0/0 async 0/0/0
+May 30 17:26:46 :: [   318050] return 0/0/0 async 0/0/0
+May 30 17:26:48 :: [   318100] return 0/0/0 async 0/0/0
+May 30 17:26:50 :: [   318150] return 0/0/1 async 0/0/0
+May 30 17:26:52 :: [   318200] return 0/0/0 async 0/0/0
+May 30 17:26:54 :: [   318250] return 0/0/0 async 0/0/0
+May 30 17:26:56 :: [   318300] return 0/0/0 async 0/0/0
+May 30 17:26:58 :: [   318350] return 0/0/0 async 0/0/0
+May 30 17:26:59 :: AUTH_PEER_READ: size 190
+May 30 17:26:59 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1588075196), client_key(959278747 1438162800 1273732615 1507067009)
+May 30 17:26:59 :: AUTH_PEER_WRITE: size 10
+May 30 17:27:00 :: LOGIN_BY_KEY success abyss 1588075196 46.247.137.201
+May 30 17:27:00 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:27:00 :: abyss 970675 278740 hair 31
+May 30 17:27:00 :: bella 63800 166400 hair 0
+May 30 17:27:00 :: [   318400] return 0/0/4 async 0/0/0
+May 30 17:27:02 :: [   318450] return 0/0/0 async 0/0/0
+May 30 17:27:04 :: [   318500] return 0/0/0 async 0/0/0
+May 30 17:27:06 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:27:06 :: LOGOUT: Update player time pid(14)
+May 30 17:27:06 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:27:06 :: LOGOUT: Update player time pid(39)
+May 30 17:27:06 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:27:06 :: LOGOUT: Update player time pid(90)
+May 30 17:27:06 :: LOGOUT abyss 
+May 30 17:27:06 :: LOGIN_BY_KEY success abyss 1588075196 46.247.137.201
+May 30 17:27:06 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:27:06 :: abyss 970675 278740 hair 31
+May 30 17:27:06 :: bella 63800 166400 hair 0
+May 30 17:27:06 :: [   318550] return 0/0/2 async 0/0/0
+May 30 17:27:07 :: SetPlay on 1588075196 abyss
+May 30 17:27:07 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:27:07 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:27:07 :: AUTH_PEER_WRITE: size 18
+May 30 17:27:07 :: QID_QUEST 31
+May 30 17:27:07 :: QUEST_LOAD: count 47 PID 14
+May 30 17:27:07 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:27:07 :: QID_AFFECT 31
+May 30 17:27:07 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:27:07 :: QID_BATTLE_PASS 31
+May 30 17:27:07 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:27:07 :: QID_SKILL_COLOR 31 14
+May 30 17:27:07 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:27:07 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:07 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:27:07 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:27:07 :: LOGOUT: Insert player pid(14)
+May 30 17:27:07 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:27:07 :: LOGOUT: Insert player pid(39)
+May 30 17:27:07 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:27:07 :: LOGOUT: Insert player pid(90)
+May 30 17:27:07 :: SetPlay off 1588075196 abyss
+May 30 17:27:07 :: LOGOUT abyss 
+May 30 17:27:07 :: AUTH_PEER_WRITE: size 18
+May 30 17:27:08 :: [   318600] return 0/0/0 async 0/0/0
+May 30 17:27:10 :: [   318650] return 0/0/1 async 0/0/0
+May 30 17:27:12 :: [   318700] return 0/0/0 async 0/0/0
+May 30 17:27:14 :: [   318750] return 0/0/0 async 0/0/0
+May 30 17:27:16 :: AUTH_PEER_READ: size 190
+May 30 17:27:16 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(702726834), client_key(2031341184 56259482 660309294 1770300209)
+May 30 17:27:16 :: AUTH_PEER_WRITE: size 10
+May 30 17:27:16 :: [   318800] return 0/0/0 async 0/0/0
+May 30 17:27:17 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:27:17 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 17:27:17 :: abyss 970675 278740 hair 31
+May 30 17:27:17 :: bella 63800 166400 hair 0
+May 30 17:27:18 :: [   318850] return 0/0/0 async 0/0/0
+May 30 17:27:20 :: [   318900] return 0/0/1 async 0/0/0
+May 30 17:27:22 :: [   318950] return 0/0/0 async 0/0/0
+May 30 17:27:24 :: [   319000] return 0/0/0 async 0/0/0
+May 30 17:27:25 :: HEADER_GD_PLAYER_CREATE (handle: 154 length: 2095)
+May 30 17:27:25 :: PlayerCreate accountid 1 name hrss level 1 gold 500000, st 4 ht 3 job 5
+May 30 17:27:25 :: PlayerCreate accountid 1 name hrss gaya 0
+May 30 17:27:25 :: 7 name hrss job 5
+May 30 17:27:25 :: END
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000122 vnum1009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000122
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000123 vnum2009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000123
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000124 vnum19 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000124
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000125 vnum11409 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000125
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000126 vnum12349 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000126
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000127 vnum13009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000127
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000128 vnum14009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000128
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000129 vnum15009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000129
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000130 vnum16009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000130
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000131 vnum17009 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000131
+May 30 17:27:25 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000132 vnum50187 new owner91
+May 30 17:27:25 :: ITEM_CACHE: direct save 91 id 70000132
+May 30 17:27:26 :: [   319050] return 0/0/0 async 0/0/0
+May 30 17:27:28 :: [   319100] return 0/0/0 async 0/0/0
+May 30 17:27:30 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:27:30 :: LOGOUT: Update player time pid(14)
+May 30 17:27:30 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:27:30 :: LOGOUT: Update player time pid(39)
+May 30 17:27:30 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:27:30 :: LOGOUT: Update player time pid(90)
+May 30 17:27:30 :: LOGOUT abyss 
+May 30 17:27:30 :: [   319150] return 0/0/1 async 0/0/0
+May 30 17:27:30 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:27:31 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:27:31 :: abyss 970675 278740 hair 31
+May 30 17:27:31 :: hrss 957123 254982 hair 0
+May 30 17:27:31 :: bella 63800 166400 hair 0
+May 30 17:27:31 :: [PLAYER_LOAD] Load from PlayerDB pid[91]
+May 30 17:27:31 :: QID_PLAYER 32 91
+May 30 17:27:31 :: SetPlay on 702726834 abyss
+May 30 17:27:31 :: QID_ITEM 32
+May 30 17:27:31 :: ITEM_CACHE: new cache 91
+May 30 17:27:31 :: ITEM_LOAD: count 11 pid 91
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000122
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000123
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000124
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000125
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000126
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000127
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000128
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000129
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000130
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000131
+May 30 17:27:31 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:27:31 :: ITEM_CACHE: save 91 id 70000132
+May 30 17:27:31 :: QID_QUEST 32
+May 30 17:27:31 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:27:31 :: QID_AFFECT 32
+May 30 17:27:31 :: AFFECT_LOAD: count 0 PID 91 RealPID 91
+May 30 17:27:31 :: QID_BATTLE_PASS 32
+May 30 17:27:31 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:27:31 :: QID_SKILL_COLOR 32 91
+May 30 17:27:31 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:27:31 :: AUTH_PEER_WRITE: size 18
+May 30 17:27:32 :: [   319200] return 0/0/0 async 0/0/0
+May 30 17:27:34 :: [   319250] return 0/0/0 async 0/0/1
+May 30 17:27:36 :: [   319300] return 0/0/0 async 0/0/0
+May 30 17:27:38 :: [   319350] return 0/0/0 async 0/0/0
+May 30 17:27:40 :: [   319400] return 0/0/1 async 0/0/0
+May 30 17:27:42 :: [   319450] return 0/0/0 async 0/0/0
+May 30 17:27:44 :: [   319500] return 0/0/0 async 0/0/0
+May 30 17:27:45 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:27:45 :: LOGOUT: Insert player pid(14)
+May 30 17:27:45 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:27:45 :: LOGOUT: Insert player pid(39)
+May 30 17:27:45 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:27:45 :: LOGOUT: Insert player pid(90)
+May 30 17:27:45 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:27:45 :: LOGOUT: Insert player pid(91)
+May 30 17:27:45 :: SetPlay off 702726834 abyss
+May 30 17:27:45 :: LOGOUT abyss 
+May 30 17:27:45 :: AUTH_PEER_WRITE: size 18
+May 30 17:27:45 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:27:45 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:27:45 :: abyss 970675 278740 hair 31
+May 30 17:27:45 :: hrss 474300 954800 hair 0
+May 30 17:27:45 :: bella 63800 166400 hair 0
+May 30 17:27:46 :: SetPlay on 702726834 abyss
+May 30 17:27:46 :: [PLAYER_LOAD] ID hrss pid 91 gold 490000 
+May 30 17:27:46 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:27:46 :: AUTH_PEER_WRITE: size 18
+May 30 17:27:46 :: QID_QUEST 33
+May 30 17:27:46 :: QUEST_LOAD: count 2 PID 91
+May 30 17:27:46 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:27:46 :: QID_AFFECT 33
+May 30 17:27:46 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:27:46 :: QID_BATTLE_PASS 33
+May 30 17:27:46 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:27:46 :: QID_SKILL_COLOR 33 91
+May 30 17:27:46 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:27:46 :: [   319550] return 0/0/6 async 0/0/0
+May 30 17:27:48 :: [   319600] return 0/0/0 async 0/0/2
+May 30 17:27:50 :: [   319650] return 0/0/1 async 0/0/0
+May 30 17:27:52 :: [   319700] return 0/0/0 async 0/0/1
+May 30 17:27:54 :: [   319750] return 0/0/0 async 0/0/0
+May 30 17:27:56 :: [   319800] return 0/0/0 async 0/0/0
+May 30 17:27:58 :: [   319850] return 0/0/0 async 0/0/0
+May 30 17:28:00 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:28:00 :: LOGOUT: Insert player pid(14)
+May 30 17:28:00 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:28:00 :: LOGOUT: Insert player pid(39)
+May 30 17:28:00 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:28:00 :: LOGOUT: Insert player pid(90)
+May 30 17:28:00 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:28:00 :: LOGOUT: Insert player pid(91)
+May 30 17:28:00 :: SetPlay off 702726834 abyss
+May 30 17:28:00 :: LOGOUT abyss 
+May 30 17:28:00 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:00 :: [   319900] return 0/0/1 async 0/0/1
+May 30 17:28:01 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:28:01 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:28:01 :: abyss 970675 278740 hair 31
+May 30 17:28:01 :: hrss 959900 269200 hair 0
+May 30 17:28:01 :: bella 63800 166400 hair 0
+May 30 17:28:01 :: SetPlay on 702726834 abyss
+May 30 17:28:01 :: [PLAYER_LOAD] ID hrss pid 91 gold 480000 
+May 30 17:28:01 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:28:01 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:01 :: QID_QUEST 34
+May 30 17:28:01 :: QUEST_LOAD: count 2 PID 91
+May 30 17:28:01 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:28:01 :: QID_AFFECT 34
+May 30 17:28:01 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:28:01 :: QID_BATTLE_PASS 34
+May 30 17:28:01 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:28:01 :: QID_SKILL_COLOR 34 91
+May 30 17:28:01 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:28:02 :: [   319950] return 0/0/2 async 0/0/0
+May 30 17:28:04 :: [   320000] return 0/0/0 async 0/0/0
+May 30 17:28:06 :: [   320050] return 0/0/0 async 0/0/0
+May 30 17:28:08 :: [   320100] return 0/0/0 async 0/0/0
+May 30 17:28:10 :: [   320150] return 0/0/1 async 0/0/0
+May 30 17:28:12 :: [   320200] return 0/0/0 async 0/0/0
+May 30 17:28:14 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:28:14 :: LOGOUT: Insert player pid(14)
+May 30 17:28:14 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:28:14 :: LOGOUT: Insert player pid(39)
+May 30 17:28:14 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:28:14 :: LOGOUT: Insert player pid(90)
+May 30 17:28:14 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:28:14 :: LOGOUT: Insert player pid(91)
+May 30 17:28:14 :: SetPlay off 702726834 abyss
+May 30 17:28:14 :: LOGOUT abyss 
+May 30 17:28:14 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:14 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:28:14 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:28:14 :: abyss 970675 278740 hair 31
+May 30 17:28:14 :: hrss 63800 166400 hair 0
+May 30 17:28:14 :: bella 63800 166400 hair 0
+May 30 17:28:14 :: [   320250] return 0/0/2 async 0/0/1
+May 30 17:28:15 :: SetPlay on 702726834 abyss
+May 30 17:28:15 :: [PLAYER_LOAD] ID hrss pid 91 gold 470000 
+May 30 17:28:15 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:28:15 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:15 :: QID_QUEST 35
+May 30 17:28:15 :: QUEST_LOAD: count 2 PID 91
+May 30 17:28:15 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:28:15 :: QID_AFFECT 35
+May 30 17:28:15 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:28:15 :: QID_BATTLE_PASS 35
+May 30 17:28:15 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:28:15 :: QID_SKILL_COLOR 35 91
+May 30 17:28:15 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:28:16 :: [   320300] return 0/0/0 async 0/0/0
+May 30 17:28:18 :: [   320350] return 0/0/0 async 0/0/0
+May 30 17:28:20 :: [   320400] return 0/0/1 async 0/0/0
+May 30 17:28:22 :: [   320450] return 0/0/0 async 0/0/0
+May 30 17:28:24 :: [   320500] return 0/0/0 async 0/0/0
+May 30 17:28:26 :: [   320550] return 0/0/0 async 0/0/0
+May 30 17:28:27 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:28:27 :: LOGOUT: Insert player pid(14)
+May 30 17:28:27 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:28:27 :: LOGOUT: Insert player pid(39)
+May 30 17:28:27 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:28:27 :: LOGOUT: Insert player pid(90)
+May 30 17:28:27 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:28:27 :: LOGOUT: Insert player pid(91)
+May 30 17:28:27 :: SetPlay off 702726834 abyss
+May 30 17:28:27 :: LOGOUT abyss 
+May 30 17:28:27 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:28 :: LOGIN_BY_KEY success abyss 702726834 46.247.137.201
+May 30 17:28:28 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:28:28 :: abyss 970675 278740 hair 31
+May 30 17:28:28 :: hrss 353100 882900 hair 0
+May 30 17:28:28 :: bella 63800 166400 hair 0
+May 30 17:28:28 :: SetPlay on 702726834 abyss
+May 30 17:28:28 :: [PLAYER_LOAD] ID hrss pid 91 gold 460000 
+May 30 17:28:28 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:28:28 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:28 :: QID_QUEST 163
+May 30 17:28:28 :: QUEST_LOAD: count 2 PID 91
+May 30 17:28:28 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:28:28 :: QID_AFFECT 163
+May 30 17:28:28 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:28:28 :: QID_BATTLE_PASS 163
+May 30 17:28:28 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:28:28 :: QID_SKILL_COLOR 163 91
+May 30 17:28:28 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:28:28 :: [   320600] return 0/0/8 async 0/0/0
+May 30 17:28:30 :: [   320650] return 0/0/1 async 0/0/2
+May 30 17:28:32 :: [   320700] return 0/0/0 async 0/0/0
+May 30 17:28:34 :: [   320750] return 0/0/0 async 0/0/0
+May 30 17:28:36 :: [   320800] return 0/0/0 async 0/0/0
+May 30 17:28:38 :: [   320850] return 0/0/0 async 0/0/0
+May 30 17:28:40 :: [   320900] return 0/0/1 async 0/0/0
+May 30 17:28:42 :: [   320950] return 0/0/0 async 0/0/0
+May 30 17:28:44 :: [   321000] return 0/0/0 async 0/0/0
+May 30 17:28:46 :: [   321050] return 0/0/0 async 0/0/0
+May 30 17:28:48 :: [   321100] return 0/0/0 async 0/0/0
+May 30 17:28:50 :: [   321150] return 0/0/1 async 0/0/0
+May 30 17:28:52 :: [   321200] return 0/0/0 async 0/0/0
+May 30 17:28:54 :: [   321250] return 0/0/0 async 0/0/0
+May 30 17:28:56 :: [   321300] return 0/0/0 async 0/0/0
+May 30 17:28:58 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:28:58 :: LOGOUT: Insert player pid(14)
+May 30 17:28:58 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:28:58 :: LOGOUT: Insert player pid(39)
+May 30 17:28:58 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:28:58 :: LOGOUT: Insert player pid(90)
+May 30 17:28:58 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:28:58 :: LOGOUT: Insert player pid(91)
+May 30 17:28:58 :: SetPlay off 702726834 abyss
+May 30 17:28:58 :: LOGOUT abyss 
+May 30 17:28:58 :: AUTH_PEER_WRITE: size 18
+May 30 17:28:58 :: [   321350] return 0/0/0 async 0/0/1
+May 30 17:29:00 :: [   321400] return 0/0/1 async 0/0/0
+May 30 17:29:02 :: [   321450] return 0/0/0 async 0/0/0
+May 30 17:29:04 :: [   321500] return 0/0/0 async 0/0/0
+May 30 17:29:06 :: [   321550] return 0/0/0 async 0/0/0
+May 30 17:29:08 :: [   321600] return 0/0/0 async 0/0/0
+May 30 17:29:10 :: [   321650] return 0/0/1 async 0/0/0
+May 30 17:29:12 :: [   321700] return 0/0/0 async 0/0/0
+May 30 17:29:14 :: [   321750] return 0/0/0 async 0/0/0
+May 30 17:29:16 :: [   321800] return 0/0/0 async 0/0/0
+May 30 17:29:18 :: [   321850] return 0/0/0 async 0/0/0
+May 30 17:29:20 :: [   321900] return 0/0/1 async 0/0/0
+May 30 17:29:22 :: [   321950] return 0/0/0 async 0/0/0
+May 30 17:29:24 :: [   322000] return 0/0/0 async 0/0/0
+May 30 17:29:26 :: [   322050] return 0/0/0 async 0/0/0
+May 30 17:29:28 :: [   322100] return 0/0/0 async 0/0/0
+May 30 17:29:30 :: [   322150] return 0/0/1 async 0/0/0
+May 30 17:29:32 :: [   322200] return 0/0/0 async 0/0/0
+May 30 17:29:34 :: [   322250] return 0/0/0 async 0/0/0
+May 30 17:29:36 :: [   322300] return 0/0/0 async 0/0/0
+May 30 17:29:37 :: AUTH_PEER_READ: size 190
+May 30 17:29:37 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1431347184), client_key(1340637249 691819619 935871675 1025011097)
+May 30 17:29:37 :: AUTH_PEER_WRITE: size 10
+May 30 17:29:37 :: LOGIN_BY_KEY success abyss 1431347184 46.247.137.201
+May 30 17:29:38 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:29:38 :: abyss 970675 278740 hair 31
+May 30 17:29:38 :: hrss 354335 880593 hair 0
+May 30 17:29:38 :: bella 63800 166400 hair 0
+May 30 17:29:38 :: [   322350] return 0/0/2 async 0/0/0
+May 30 17:29:40 :: [   322400] return 0/0/1 async 0/0/0
+May 30 17:29:42 :: [   322450] return 0/0/0 async 0/0/0
+May 30 17:29:42 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:29:42 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:29:42 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:29:42 :: LOGOUT: Update player time pid(14)
+May 30 17:29:42 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:29:42 :: LOGOUT: Update player time pid(39)
+May 30 17:29:42 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:29:42 :: LOGOUT: Update player time pid(90)
+May 30 17:29:42 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:29:42 :: LOGOUT: Update player time pid(91)
+May 30 17:29:42 :: LOGOUT abyss 
+May 30 17:29:43 :: LOGIN_BY_KEY success abyss 1431347184 46.247.137.201
+May 30 17:29:43 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:29:43 :: abyss 970675 278740 hair 31
+May 30 17:29:43 :: hrss 354335 880593 hair 0
+May 30 17:29:43 :: bella 63800 166400 hair 0
+May 30 17:29:43 :: SetPlay on 1431347184 abyss
+May 30 17:29:43 :: [PLAYER_LOAD] ID hrss pid 91 gold 460000 
+May 30 17:29:43 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:29:43 :: AUTH_PEER_WRITE: size 18
+May 30 17:29:43 :: QID_QUEST 170
+May 30 17:29:43 :: QUEST_LOAD: count 2 PID 91
+May 30 17:29:43 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:29:43 :: QID_AFFECT 170
+May 30 17:29:43 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:29:43 :: QID_BATTLE_PASS 170
+May 30 17:29:43 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:29:43 :: QID_SKILL_COLOR 170 91
+May 30 17:29:43 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:29:44 :: [   322500] return 0/0/2 async 0/0/0
+May 30 17:29:46 :: [   322550] return 0/0/0 async 0/0/0
+May 30 17:29:48 :: [   322600] return 0/0/0 async 0/0/0
+May 30 17:29:50 :: [   322650] return 0/0/1 async 0/0/0
+May 30 17:29:52 :: [   322700] return 0/0/0 async 0/0/0
+May 30 17:29:54 :: [   322750] return 0/0/0 async 0/0/0
+May 30 17:29:56 :: [   322800] return 0/0/0 async 0/0/0
+May 30 17:29:58 :: [   322850] return 0/0/0 async 0/0/0
+May 30 17:30:00 :: [   322900] return 0/0/1 async 0/0/0
+May 30 17:30:02 :: [   322950] return 0/0/0 async 0/0/0
+May 30 17:30:04 :: [   323000] return 0/0/0 async 0/0/0
+May 30 17:30:06 :: [   323050] return 0/0/0 async 0/0/0
+May 30 17:30:08 :: [   323100] return 0/0/0 async 0/0/0
+May 30 17:30:10 :: [   323150] return 0/0/1 async 0/0/0
+May 30 17:30:11 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:30:11 :: LOGOUT: Insert player pid(14)
+May 30 17:30:11 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:30:11 :: LOGOUT: Insert player pid(39)
+May 30 17:30:11 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:30:11 :: LOGOUT: Insert player pid(90)
+May 30 17:30:11 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:30:11 :: LOGOUT: Insert player pid(91)
+May 30 17:30:11 :: SetPlay off 1431347184 abyss
+May 30 17:30:11 :: LOGOUT abyss 
+May 30 17:30:11 :: AUTH_PEER_WRITE: size 18
+May 30 17:30:11 :: LOGIN_BY_KEY success abyss 1431347184 46.247.137.201
+May 30 17:30:11 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:30:11 :: abyss 970675 278740 hair 31
+May 30 17:30:11 :: hrss 466700 508700 hair 0
+May 30 17:30:11 :: bella 63800 166400 hair 0
+May 30 17:30:12 :: SetPlay on 1431347184 abyss
+May 30 17:30:12 :: [PLAYER_LOAD] ID hrss pid 91 gold 450000 
+May 30 17:30:12 :: [PLAYER_LOAD] ID hrss pid 91 gaya 0 
+May 30 17:30:12 :: AUTH_PEER_WRITE: size 18
+May 30 17:30:12 :: QID_QUEST 36
+May 30 17:30:12 :: QUEST_LOAD: count 2 PID 91
+May 30 17:30:12 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:30:12 :: QID_AFFECT 36
+May 30 17:30:12 :: AFFECT_LOAD: count 1 PID 91
+May 30 17:30:12 :: QID_BATTLE_PASS 36
+May 30 17:30:12 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 17:30:12 :: QID_SKILL_COLOR 36 91
+May 30 17:30:12 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:30:12 :: [   323200] return 0/0/6 async 0/0/0
+May 30 17:30:14 :: [   323250] return 0/0/0 async 0/0/0
+May 30 17:30:16 :: [   323300] return 0/0/0 async 0/0/0
+May 30 17:30:18 :: [   323350] return 0/0/0 async 0/0/0
+May 30 17:30:20 :: [   323400] return 0/0/1 async 0/0/0
+May 30 17:30:22 :: [   323450] return 0/0/0 async 0/0/0
+May 30 17:30:24 :: [   323500] return 0/0/0 async 0/0/0
+May 30 17:30:26 :: [   323550] return 0/0/0 async 0/0/0
+May 30 17:30:28 :: [   323600] return 0/0/0 async 0/0/0
+May 30 17:30:30 :: [   323650] return 0/0/1 async 0/0/0
+May 30 17:30:32 :: [   323700] return 0/0/0 async 0/0/0
+May 30 17:30:34 :: [   323750] return 0/0/0 async 0/0/0
+May 30 17:30:36 :: [   323800] return 0/0/0 async 0/0/0
+May 30 17:30:38 :: [   323850] return 0/0/0 async 0/0/0
+May 30 17:30:40 :: [   323900] return 0/0/1 async 0/0/0
+May 30 17:30:42 :: [   323950] return 0/0/0 async 0/0/0
+May 30 17:30:44 :: [   324000] return 0/0/0 async 0/0/0
+May 30 17:30:46 :: [   324050] return 0/0/0 async 0/0/0
+May 30 17:30:48 :: [   324100] return 0/0/0 async 0/0/0
+May 30 17:30:50 :: [   324150] return 0/0/1 async 0/0/0
+May 30 17:30:52 :: [   324200] return 0/0/0 async 0/0/0
+May 30 17:30:54 :: [   324250] return 0/0/0 async 0/0/0
+May 30 17:30:56 :: [   324300] return 0/0/0 async 0/0/0
+May 30 17:30:58 :: [   324350] return 0/0/0 async 0/0/0
+May 30 17:31:00 :: [   324400] return 0/0/1 async 0/0/0
+May 30 17:31:02 :: [   324450] return 0/0/0 async 0/0/0
+May 30 17:31:04 :: [   324500] return 0/0/0 async 0/0/0
+May 30 17:31:06 :: [   324550] return 0/0/0 async 0/0/0
+May 30 17:31:08 :: [   324600] return 0/0/0 async 0/0/0
+May 30 17:31:10 :: [   324650] return 0/0/1 async 0/0/0
+May 30 17:31:12 :: [   324700] return 0/0/0 async 0/0/0
+May 30 17:31:14 :: [   324750] return 0/0/0 async 0/0/0
+May 30 17:31:16 :: [   324800] return 0/0/0 async 0/0/0
+May 30 17:31:18 :: [   324850] return 0/0/0 async 0/0/0
+May 30 17:31:20 :: [   324900] return 0/0/1 async 0/0/0
+May 30 17:31:22 :: [   324950] return 0/0/0 async 0/0/0
+May 30 17:31:24 :: [   325000] return 0/0/0 async 0/0/0
+May 30 17:31:26 :: [   325050] return 0/0/0 async 0/0/0
+May 30 17:31:28 :: [   325100] return 0/0/0 async 0/0/0
+May 30 17:31:30 :: [   325150] return 0/0/1 async 0/0/0
+May 30 17:31:32 :: [   325200] return 0/0/0 async 0/0/0
+May 30 17:31:34 :: [   325250] return 0/0/0 async 0/0/0
+May 30 17:31:36 :: [   325300] return 0/0/0 async 0/0/0
+May 30 17:31:38 :: [   325350] return 0/0/0 async 0/0/0
+May 30 17:31:40 :: [   325400] return 0/0/1 async 0/0/0
+May 30 17:31:42 :: [   325450] return 0/0/0 async 0/0/0
+May 30 17:31:44 :: [   325500] return 0/0/0 async 0/0/0
+May 30 17:31:46 :: [   325550] return 0/0/0 async 0/0/0
+May 30 17:31:48 :: [   325600] return 0/0/0 async 0/0/0
+May 30 17:31:50 :: [   325650] return 0/0/1 async 0/0/0
+May 30 17:31:52 :: [   325700] return 0/0/0 async 0/0/0
+May 30 17:31:54 :: [   325750] return 0/0/1 async 0/0/0
+May 30 17:31:56 :: [   325800] return 0/0/26 async 0/0/0
+May 30 17:31:58 :: [   325850] return 0/0/0 async 0/0/0
+May 30 17:32:00 :: [   325900] return 0/0/1 async 0/0/0
+May 30 17:32:02 :: [   325950] return 0/0/0 async 0/0/0
+May 30 17:32:04 :: [   326000] return 0/0/0 async 0/0/0
+May 30 17:32:06 :: [   326050] return 0/0/0 async 0/0/0
+May 30 17:32:08 :: [   326100] return 0/0/0 async 0/0/0
+May 30 17:32:08 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:32:08 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:32:10 :: [   326150] return 0/0/1 async 0/0/0
+May 30 17:32:12 :: [   326200] return 0/0/0 async 0/0/0
+May 30 17:32:14 :: [   326250] return 0/0/0 async 0/0/0
+May 30 17:32:16 :: [   326300] return 0/0/0 async 0/0/0
+May 30 17:32:18 :: [   326350] return 0/0/0 async 0/0/0
+May 30 17:32:20 :: [   326400] return 0/0/1 async 0/0/0
+May 30 17:32:22 :: [   326450] return 0/0/0 async 0/0/0
+May 30 17:32:24 :: [   326500] return 0/0/0 async 0/0/0
+May 30 17:32:26 :: [   326550] return 0/0/0 async 0/0/0
+May 30 17:32:28 :: [   326600] return 0/0/0 async 0/0/0
+May 30 17:32:30 :: [   326650] return 0/0/1 async 0/0/0
+May 30 17:32:32 :: [   326700] return 0/0/0 async 0/0/0
+May 30 17:32:34 :: [   326750] return 0/0/1 async 0/0/0
+May 30 17:32:36 :: [   326800] return 0/0/0 async 0/0/0
+May 30 17:32:38 :: [   326850] return 0/0/0 async 0/0/0
+May 30 17:32:40 :: [   326900] return 0/0/1 async 0/0/0
+May 30 17:32:42 :: [   326950] return 0/0/0 async 0/0/0
+May 30 17:32:44 :: [   327000] return 0/0/0 async 0/0/0
+May 30 17:32:46 :: [   327050] return 0/0/0 async 0/0/0
+May 30 17:32:48 :: [   327100] return 0/0/0 async 0/0/0
+May 30 17:32:50 :: [   327150] return 0/0/1 async 0/0/0
+May 30 17:32:52 :: [   327200] return 0/0/0 async 0/0/0
+May 30 17:32:54 :: [   327250] return 0/0/0 async 0/0/0
+May 30 17:32:56 :: [   327300] return 0/0/0 async 0/0/0
+May 30 17:32:58 :: [   327350] return 0/0/0 async 0/0/0
+May 30 17:33:00 :: [   327400] return 0/0/1 async 0/0/0
+May 30 17:33:02 :: [   327450] return 0/0/0 async 0/0/0
+May 30 17:33:04 :: [   327500] return 0/0/0 async 0/0/0
+May 30 17:33:06 :: [   327550] return 0/0/0 async 0/0/0
+May 30 17:33:08 :: [   327600] return 0/0/0 async 0/0/0
+May 30 17:33:10 :: [   327650] return 0/0/1 async 0/0/0
+May 30 17:33:12 :: [   327700] return 0/0/0 async 0/0/0
+May 30 17:33:14 :: [   327750] return 0/0/1 async 0/0/0
+May 30 17:33:16 :: [   327800] return 0/0/0 async 0/0/0
+May 30 17:33:18 :: [   327850] return 0/0/0 async 0/0/0
+May 30 17:33:20 :: [   327900] return 0/0/1 async 0/0/0
+May 30 17:33:22 :: [   327950] return 0/0/0 async 0/0/0
+May 30 17:33:23 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:33:23 :: LOGOUT: Insert player pid(14)
+May 30 17:33:23 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:33:23 :: LOGOUT: Insert player pid(39)
+May 30 17:33:23 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:33:23 :: LOGOUT: Insert player pid(90)
+May 30 17:33:23 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:33:23 :: LOGOUT: Insert player pid(91)
+May 30 17:33:23 :: SetPlay off 1431347184 abyss
+May 30 17:33:23 :: LOGOUT abyss 
+May 30 17:33:23 :: AUTH_PEER_WRITE: size 18
+May 30 17:33:24 :: [   328000] return 0/0/0 async 0/0/0
+May 30 17:33:26 :: [   328050] return 0/0/0 async 0/0/0
+May 30 17:33:28 :: [   328100] return 0/0/0 async 0/0/0
+May 30 17:33:30 :: [   328150] return 0/0/1 async 0/0/0
+May 30 17:33:32 :: [   328200] return 0/0/0 async 0/0/0
+May 30 17:33:34 :: [   328250] return 0/0/0 async 0/0/0
+May 30 17:33:36 :: [   328300] return 0/0/0 async 0/0/0
+May 30 17:33:38 :: [   328350] return 0/0/0 async 0/0/0
+May 30 17:33:40 :: [   328400] return 0/0/1 async 0/0/0
+May 30 17:33:42 :: [   328450] return 0/0/0 async 0/0/0
+May 30 17:33:44 :: [   328500] return 0/0/0 async 0/0/0
+May 30 17:33:46 :: [   328550] return 0/0/0 async 0/0/0
+May 30 17:33:48 :: [   328600] return 0/0/0 async 0/0/0
+May 30 17:33:50 :: [   328650] return 0/0/1 async 0/0/0
+May 30 17:33:52 :: [   328700] return 0/0/0 async 0/0/0
+May 30 17:33:54 :: [   328750] return 0/0/0 async 0/0/0
+May 30 17:33:56 :: [   328800] return 0/0/0 async 0/0/0
+May 30 17:33:58 :: [   328850] return 0/0/0 async 0/0/0
+May 30 17:34:00 :: [   328900] return 0/0/1 async 0/0/0
+May 30 17:34:02 :: [   328950] return 0/0/0 async 0/0/0
+May 30 17:34:04 :: [   329000] return 0/0/0 async 0/0/0
+May 30 17:34:06 :: [   329050] return 0/0/0 async 0/0/0
+May 30 17:34:08 :: [   329100] return 0/0/0 async 0/0/0
+May 30 17:34:10 :: [   329150] return 0/0/1 async 0/0/0
+May 30 17:34:12 :: [   329200] return 0/0/0 async 0/0/0
+May 30 17:34:14 :: [   329250] return 0/0/0 async 0/0/0
+May 30 17:34:16 :: [   329300] return 0/0/0 async 0/0/0
+May 30 17:34:18 :: [   329350] return 0/0/0 async 0/0/0
+May 30 17:34:20 :: [   329400] return 0/0/1 async 0/0/0
+May 30 17:34:22 :: [   329450] return 0/0/0 async 0/0/0
+May 30 17:34:24 :: [   329500] return 0/0/0 async 0/0/0
+May 30 17:34:26 :: [   329550] return 0/0/0 async 0/0/0
+May 30 17:34:28 :: [   329600] return 0/0/0 async 0/0/0
+May 30 17:34:30 :: [   329650] return 0/0/1 async 0/0/0
+May 30 17:34:32 :: [   329700] return 0/0/0 async 0/0/0
+May 30 17:34:34 :: [   329750] return 0/0/0 async 0/0/0
+May 30 17:34:36 :: [   329800] return 0/0/0 async 0/0/0
+May 30 17:34:38 :: [   329850] return 0/0/0 async 0/0/0
+May 30 17:34:40 :: [   329900] return 0/0/1 async 0/0/0
+May 30 17:34:42 :: [   329950] return 0/0/0 async 0/0/0
+May 30 17:34:43 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:34:43 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:34:44 :: [   330000] return 0/0/0 async 0/0/0
+May 30 17:34:46 :: [   330050] return 0/0/0 async 0/0/0
+May 30 17:34:48 :: [   330100] return 0/0/0 async 0/0/0
+May 30 17:34:50 :: [   330150] return 0/0/1 async 0/0/0
+May 30 17:34:52 :: [   330200] return 0/0/0 async 0/0/0
+May 30 17:34:54 :: [   330250] return 0/0/0 async 0/0/0
+May 30 17:34:56 :: [   330300] return 0/0/0 async 0/0/0
+May 30 17:34:58 :: [   330350] return 0/0/0 async 0/0/0
+May 30 17:35:00 :: [   330400] return 0/0/1 async 0/0/0
+May 30 17:35:02 :: [   330450] return 0/0/0 async 0/0/0
+May 30 17:35:04 :: [   330500] return 0/0/0 async 0/0/0
+May 30 17:35:06 :: [   330550] return 0/0/0 async 0/0/0
+May 30 17:35:08 :: [   330600] return 0/0/0 async 0/0/0
+May 30 17:35:10 :: [   330650] return 0/0/1 async 0/0/0
+May 30 17:35:12 :: [   330700] return 0/0/0 async 0/0/0
+May 30 17:35:14 :: [   330750] return 0/0/0 async 0/0/0
+May 30 17:35:16 :: [   330800] return 0/0/0 async 0/0/0
+May 30 17:35:18 :: [   330850] return 0/0/0 async 0/0/0
+May 30 17:35:20 :: [   330900] return 0/0/1 async 0/0/0
+May 30 17:35:22 :: [   330950] return 0/0/0 async 0/0/0
+May 30 17:35:24 :: [   331000] return 0/0/0 async 0/0/0
+May 30 17:35:26 :: [   331050] return 0/0/0 async 0/0/0
+May 30 17:35:28 :: [   331100] return 0/0/0 async 0/0/0
+May 30 17:35:30 :: [   331150] return 0/0/1 async 0/0/0
+May 30 17:35:32 :: [   331200] return 0/0/0 async 0/0/0
+May 30 17:35:34 :: [   331250] return 0/0/0 async 0/0/0
+May 30 17:35:36 :: [   331300] return 0/0/0 async 0/0/0
+May 30 17:35:38 :: [   331350] return 0/0/0 async 0/0/0
+May 30 17:35:40 :: [   331400] return 0/0/1 async 0/0/0
+May 30 17:35:42 :: [   331450] return 0/0/0 async 0/0/0
+May 30 17:35:44 :: [   331500] return 0/0/0 async 0/0/0
+May 30 17:35:46 :: [   331550] return 0/0/0 async 0/0/0
+May 30 17:35:48 :: [   331600] return 0/0/0 async 0/0/0
+May 30 17:35:50 :: [   331650] return 0/0/1 async 0/0/0
+May 30 17:35:52 :: [   331700] return 0/0/0 async 0/0/0
+May 30 17:35:54 :: [   331750] return 0/0/0 async 0/0/0
+May 30 17:35:56 :: [   331800] return 0/0/0 async 0/0/0
+May 30 17:35:58 :: [   331850] return 0/0/0 async 0/0/0
+May 30 17:36:00 :: [   331900] return 0/0/1 async 0/0/0
+May 30 17:36:02 :: [   331950] return 0/0/0 async 0/0/0
+May 30 17:36:04 :: [   332000] return 0/0/0 async 0/0/0
+May 30 17:36:06 :: [   332050] return 0/0/0 async 0/0/0
+May 30 17:36:08 :: [   332100] return 0/0/0 async 0/0/0
+May 30 17:36:10 :: [   332150] return 0/0/1 async 0/0/0
+May 30 17:36:12 :: [   332200] return 0/0/0 async 0/0/0
+May 30 17:36:14 :: [   332250] return 0/0/0 async 0/0/0
+May 30 17:36:16 :: [   332300] return 0/0/0 async 0/0/0
+May 30 17:36:18 :: [   332350] return 0/0/0 async 0/0/0
+May 30 17:36:20 :: [   332400] return 0/0/1 async 0/0/0
+May 30 17:36:22 :: [   332450] return 0/0/0 async 0/0/0
+May 30 17:36:23 :: AUTH_PEER_READ: size 190
+May 30 17:36:23 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(371490504), client_key(1644004554 1259936776 1568634812 1536034712)
+May 30 17:36:23 :: AUTH_PEER_WRITE: size 10
+May 30 17:36:24 :: LOGIN_BY_KEY success abyss 371490504 46.247.137.201
+May 30 17:36:24 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:36:24 :: abyss 970675 278740 hair 31
+May 30 17:36:24 :: hrss 459064 501816 hair 0
+May 30 17:36:24 :: bella 63800 166400 hair 0
+May 30 17:36:24 :: [   332500] return 0/0/2 async 0/0/0
+May 30 17:36:26 :: [   332550] return 0/0/0 async 0/0/0
+May 30 17:36:28 :: [   332600] return 0/0/0 async 0/0/0
+May 30 17:36:30 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:36:30 :: LOGOUT: Update player time pid(14)
+May 30 17:36:30 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:36:30 :: LOGOUT: Update player time pid(39)
+May 30 17:36:30 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:36:30 :: LOGOUT: Update player time pid(90)
+May 30 17:36:30 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:36:30 :: LOGOUT: Update player time pid(91)
+May 30 17:36:30 :: LOGOUT abyss 
+May 30 17:36:30 :: LOGIN_BY_KEY success abyss 371490504 46.247.137.201
+May 30 17:36:30 :: [   332650] return 0/1/3 async 0/0/0
+May 30 17:36:30 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:36:30 :: abyss 970675 278740 hair 31
+May 30 17:36:30 :: hrss 459064 501816 hair 0
+May 30 17:36:30 :: bella 63800 166400 hair 0
+May 30 17:36:31 :: SetPlay on 371490504 abyss
+May 30 17:36:31 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:36:31 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:36:31 :: AUTH_PEER_WRITE: size 18
+May 30 17:36:31 :: QID_QUEST 37
+May 30 17:36:31 :: QUEST_LOAD: count 47 PID 14
+May 30 17:36:31 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:36:31 :: QID_AFFECT 37
+May 30 17:36:31 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:36:31 :: QID_BATTLE_PASS 37
+May 30 17:36:31 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:36:31 :: QID_SKILL_COLOR 37 14
+May 30 17:36:31 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:36:32 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:32 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:36:32 :: [   332700] return 0/0/3 async 0/0/0
+May 30 17:36:34 :: [   332750] return 0/0/0 async 0/0/2
+May 30 17:36:36 :: [   332800] return 0/0/0 async 0/0/0
+May 30 17:36:37 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:37 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:36:38 :: [   332850] return 0/0/1 async 0/0/0
+May 30 17:36:40 :: [   332900] return 0/0/1 async 0/0/0
+May 30 17:36:42 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:42 :: ITEM_CACHE: save 14 id 50057412
+May 30 17:36:42 :: [   332950] return 0/0/0 async 0/0/0
+May 30 17:36:44 :: [   333000] return 0/0/0 async 0/0/0
+May 30 17:36:46 :: [   333050] return 0/0/0 async 0/0/0
+May 30 17:36:48 :: [   333100] return 0/0/0 async 0/0/0
+May 30 17:36:50 :: [   333150] return 0/0/1 async 0/0/0
+May 30 17:36:52 :: [   333200] return 0/0/0 async 0/0/0
+May 30 17:36:54 :: [   333250] return 0/0/0 async 0/0/0
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:36:55 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:36:55 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:36:55 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:36:55 :: LOGOUT: Insert player pid(14)
+May 30 17:36:55 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:36:55 :: LOGOUT: Insert player pid(39)
+May 30 17:36:55 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:36:55 :: LOGOUT: Insert player pid(90)
+May 30 17:36:55 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:36:55 :: LOGOUT: Insert player pid(91)
+May 30 17:36:55 :: SetPlay off 371490504 abyss
+May 30 17:36:55 :: LOGOUT abyss 
+May 30 17:36:55 :: AUTH_PEER_WRITE: size 18
+May 30 17:36:56 :: [   333300] return 0/0/0 async 0/0/0
+May 30 17:36:58 :: [   333350] return 0/0/0 async 0/0/0
+May 30 17:37:00 :: [   333400] return 0/0/1 async 0/0/0
+May 30 17:37:02 :: [   333450] return 0/0/0 async 0/0/0
+May 30 17:37:04 :: [   333500] return 0/0/0 async 0/0/0
+May 30 17:37:06 :: [   333550] return 0/0/0 async 0/0/0
+May 30 17:37:08 :: [   333600] return 0/0/0 async 0/0/0
+May 30 17:37:10 :: [   333650] return 0/0/1 async 0/0/0
+May 30 17:37:12 :: [   333700] return 0/0/0 async 0/0/0
+May 30 17:37:14 :: [   333750] return 0/0/0 async 0/0/0
+May 30 17:37:16 :: [   333800] return 0/0/0 async 0/0/0
+May 30 17:37:18 :: [   333850] return 0/0/0 async 0/0/0
+May 30 17:37:20 :: [   333900] return 0/0/1 async 0/0/0
+May 30 17:37:22 :: [   333950] return 0/0/0 async 0/0/0
+May 30 17:37:24 :: [   334000] return 0/0/0 async 0/0/0
+May 30 17:37:26 :: [   334050] return 0/0/0 async 0/0/0
+May 30 17:37:28 :: [   334100] return 0/0/0 async 0/0/0
+May 30 17:37:30 :: [   334150] return 0/0/1 async 0/0/0
+May 30 17:37:32 :: [   334200] return 0/0/0 async 0/0/0
+May 30 17:37:34 :: [   334250] return 0/0/0 async 0/0/0
+May 30 17:37:36 :: [   334300] return 0/0/0 async 0/0/0
+May 30 17:37:38 :: [   334350] return 0/0/0 async 0/0/0
+May 30 17:37:40 :: [   334400] return 0/0/1 async 0/0/0
+May 30 17:37:42 :: [   334450] return 0/0/0 async 0/0/0
+May 30 17:37:44 :: [   334500] return 0/0/0 async 0/0/0
+May 30 17:37:46 :: [   334550] return 0/0/0 async 0/0/0
+May 30 17:37:48 :: [   334600] return 0/0/0 async 0/0/0
+May 30 17:37:50 :: [   334650] return 0/0/1 async 0/0/0
+May 30 17:37:52 :: [   334700] return 0/0/0 async 0/0/0
+May 30 17:37:54 :: [   334750] return 0/0/0 async 0/0/0
+May 30 17:37:56 :: [   334800] return 0/0/0 async 0/0/0
+May 30 17:37:58 :: [   334850] return 0/0/0 async 0/0/0
+May 30 17:38:00 :: [   334900] return 0/0/1 async 0/0/0
+May 30 17:38:02 :: [   334950] return 0/0/0 async 0/0/0
+May 30 17:38:04 :: [   335000] return 0/0/0 async 0/0/0
+May 30 17:38:06 :: [   335050] return 0/0/0 async 0/0/0
+May 30 17:38:08 :: [   335100] return 0/0/0 async 0/0/0
+May 30 17:38:10 :: [   335150] return 0/0/1 async 0/0/0
+May 30 17:38:12 :: [   335200] return 0/0/0 async 0/0/0
+May 30 17:38:14 :: [   335250] return 0/0/0 async 0/0/0
+May 30 17:38:16 :: [   335300] return 0/0/0 async 0/0/0
+May 30 17:38:18 :: [   335350] return 0/0/0 async 0/0/0
+May 30 17:38:20 :: [   335400] return 0/0/1 async 0/0/0
+May 30 17:38:22 :: [   335450] return 0/0/0 async 0/0/0
+May 30 17:38:24 :: [   335500] return 0/0/0 async 0/0/0
+May 30 17:38:24 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 17:38:24 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 17:38:26 :: [   335550] return 0/0/0 async 0/0/0
+May 30 17:38:28 :: [   335600] return 0/0/0 async 0/0/0
+May 30 17:38:30 :: [   335650] return 0/0/1 async 0/0/0
+May 30 17:38:32 :: [   335700] return 0/0/0 async 0/0/0
+May 30 17:38:34 :: [   335750] return 0/0/0 async 0/0/0
+May 30 17:38:36 :: [   335800] return 0/0/0 async 0/0/0
+May 30 17:38:38 :: [   335850] return 0/0/0 async 0/0/0
+May 30 17:38:40 :: [   335900] return 0/0/1 async 0/0/0
+May 30 17:38:42 :: [   335950] return 0/0/0 async 0/0/0
+May 30 17:38:44 :: [   336000] return 0/0/0 async 0/0/0
+May 30 17:38:46 :: [   336050] return 0/0/0 async 0/0/0
+May 30 17:38:48 :: [   336100] return 0/0/0 async 0/0/0
+May 30 17:38:50 :: [   336150] return 0/0/1 async 0/0/0
+May 30 17:38:52 :: [   336200] return 0/0/0 async 0/0/0
+May 30 17:38:54 :: [   336250] return 0/0/0 async 0/0/0
+May 30 17:38:56 :: [   336300] return 0/0/0 async 0/0/0
+May 30 17:38:58 :: [   336350] return 0/0/0 async 0/0/0
+May 30 17:39:00 :: [   336400] return 0/0/1 async 0/0/0
+May 30 17:39:02 :: [   336450] return 0/0/0 async 0/0/0
+May 30 17:39:04 :: [   336500] return 0/0/0 async 0/0/0
+May 30 17:39:06 :: [   336550] return 0/0/0 async 0/0/0
+May 30 17:39:08 :: [   336600] return 0/0/0 async 0/0/0
+May 30 17:39:10 :: [   336650] return 0/0/1 async 0/0/0
+May 30 17:39:12 :: [   336700] return 0/0/0 async 0/0/0
+May 30 17:39:14 :: [   336750] return 0/0/0 async 0/0/0
+May 30 17:39:16 :: [   336800] return 0/0/0 async 0/0/0
+May 30 17:39:18 :: [   336850] return 0/0/0 async 0/0/0
+May 30 17:39:20 :: [   336900] return 0/0/1 async 0/0/0
+May 30 17:39:22 :: [   336950] return 0/0/0 async 0/0/0
+May 30 17:39:24 :: [   337000] return 0/0/0 async 0/0/0
+May 30 17:39:26 :: [   337050] return 0/0/0 async 0/0/0
+May 30 17:39:28 :: [   337100] return 0/0/0 async 0/0/0
+May 30 17:39:30 :: [   337150] return 0/0/1 async 0/0/0
+May 30 17:39:32 :: [   337200] return 0/0/0 async 0/0/0
+May 30 17:39:34 :: [   337250] return 0/0/0 async 0/0/0
+May 30 17:39:36 :: [   337300] return 0/0/0 async 0/0/0
+May 30 17:39:38 :: [   337350] return 0/0/0 async 0/0/0
+May 30 17:39:40 :: [   337400] return 0/0/1 async 0/0/0
+May 30 17:39:42 :: [   337450] return 0/0/0 async 0/0/0
+May 30 17:39:44 :: [   337500] return 0/0/0 async 0/0/0
+May 30 17:39:44 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:39:44 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:39:46 :: [   337550] return 0/0/0 async 0/0/0
+May 30 17:39:48 :: [   337600] return 0/0/0 async 0/0/0
+May 30 17:39:50 :: [   337650] return 0/0/1 async 0/0/0
+May 30 17:39:52 :: [   337700] return 0/0/0 async 0/0/0
+May 30 17:39:54 :: [   337750] return 0/0/0 async 0/0/0
+May 30 17:39:56 :: [   337800] return 0/0/0 async 0/0/0
+May 30 17:39:58 :: [   337850] return 0/0/0 async 0/0/0
+May 30 17:40:00 :: [   337900] return 0/0/1 async 0/0/0
+May 30 17:40:02 :: [   337950] return 0/0/0 async 0/0/0
+May 30 17:40:04 :: [   338000] return 0/0/0 async 0/0/0
+May 30 17:40:06 :: [   338050] return 0/0/0 async 0/0/0
+May 30 17:40:08 :: [   338100] return 0/0/0 async 0/0/0
+May 30 17:40:10 :: [   338150] return 0/0/1 async 0/0/0
+May 30 17:40:12 :: [   338200] return 0/0/0 async 0/0/0
+May 30 17:40:14 :: [   338250] return 0/0/0 async 0/0/0
+May 30 17:40:16 :: [   338300] return 0/0/0 async 0/0/0
+May 30 17:40:18 :: [   338350] return 0/0/0 async 0/0/0
+May 30 17:40:20 :: [   338400] return 0/0/1 async 0/0/0
+May 30 17:40:22 :: [   338450] return 0/0/0 async 0/0/0
+May 30 17:40:24 :: [   338500] return 0/0/0 async 0/0/0
+May 30 17:40:26 :: [   338550] return 0/0/0 async 0/0/0
+May 30 17:40:28 :: [   338600] return 0/0/0 async 0/0/0
+May 30 17:40:30 :: [   338650] return 0/0/1 async 0/0/0
+May 30 17:40:32 :: [   338700] return 0/0/0 async 0/0/0
+May 30 17:40:34 :: [   338750] return 0/0/0 async 0/0/0
+May 30 17:40:36 :: [   338800] return 0/0/0 async 0/0/0
+May 30 17:40:38 :: [   338850] return 0/0/0 async 0/0/0
+May 30 17:40:40 :: [   338900] return 0/0/1 async 0/0/0
+May 30 17:40:42 :: [   338950] return 0/0/0 async 0/0/0
+May 30 17:40:44 :: [   339000] return 0/0/0 async 0/0/0
+May 30 17:40:46 :: [   339050] return 0/0/0 async 0/0/0
+May 30 17:40:48 :: [   339100] return 0/0/0 async 0/0/0
+May 30 17:40:50 :: [   339150] return 0/0/1 async 0/0/0
+May 30 17:40:52 :: [   339200] return 0/0/0 async 0/0/0
+May 30 17:40:54 :: [   339250] return 0/0/0 async 0/0/0
+May 30 17:40:56 :: [   339300] return 0/0/0 async 0/0/0
+May 30 17:40:58 :: [   339350] return 0/0/0 async 0/0/0
+May 30 17:41:00 :: [   339400] return 0/0/1 async 0/0/0
+May 30 17:41:02 :: [   339450] return 0/0/0 async 0/0/0
+May 30 17:41:04 :: [   339500] return 0/0/0 async 0/0/0
+May 30 17:41:06 :: [   339550] return 0/0/0 async 0/0/0
+May 30 17:41:08 :: [   339600] return 0/0/0 async 0/0/0
+May 30 17:41:10 :: [   339650] return 0/0/1 async 0/0/0
+May 30 17:41:12 :: [   339700] return 0/0/0 async 0/0/0
+May 30 17:41:14 :: [   339750] return 0/0/0 async 0/0/0
+May 30 17:41:16 :: [   339800] return 0/0/0 async 0/0/0
+May 30 17:41:18 :: [   339850] return 0/0/0 async 0/0/0
+May 30 17:41:20 :: [   339900] return 0/0/1 async 0/0/0
+May 30 17:41:22 :: [   339950] return 0/0/0 async 0/0/0
+May 30 17:41:24 :: [   340000] return 0/0/0 async 0/0/0
+May 30 17:41:26 :: [   340050] return 0/0/0 async 0/0/0
+May 30 17:41:28 :: [   340100] return 0/0/0 async 0/0/0
+May 30 17:41:30 :: [   340150] return 0/0/1 async 0/0/0
+May 30 17:41:32 :: [   340200] return 0/0/0 async 0/0/0
+May 30 17:41:34 :: [   340250] return 0/0/0 async 0/0/0
+May 30 17:41:36 :: [   340300] return 0/0/0 async 0/0/0
+May 30 17:41:38 :: [   340350] return 0/0/0 async 0/0/0
+May 30 17:41:40 :: [   340400] return 0/0/1 async 0/0/0
+May 30 17:41:42 :: [   340450] return 0/0/0 async 0/0/0
+May 30 17:41:44 :: [   340500] return 0/0/0 async 0/0/0
+May 30 17:41:46 :: [   340550] return 0/0/0 async 0/0/0
+May 30 17:41:48 :: [   340600] return 0/0/0 async 0/0/0
+May 30 17:41:50 :: [   340650] return 0/0/1 async 0/0/0
+May 30 17:41:52 :: [   340700] return 0/0/0 async 0/0/0
+May 30 17:41:54 :: [   340750] return 0/0/0 async 0/0/0
+May 30 17:41:56 :: [   340800] return 0/0/1 async 0/0/0
+May 30 17:41:56 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:41:56 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:41:58 :: [   340850] return 0/0/0 async 0/0/0
+May 30 17:42:00 :: [   340900] return 0/0/1 async 0/0/0
+May 30 17:42:02 :: [   340950] return 0/0/0 async 0/0/0
+May 30 17:42:04 :: [   341000] return 0/0/0 async 0/0/0
+May 30 17:42:06 :: [   341050] return 0/0/0 async 0/0/0
+May 30 17:42:08 :: [   341100] return 0/0/0 async 0/0/0
+May 30 17:42:10 :: [   341150] return 0/0/1 async 0/0/0
+May 30 17:42:12 :: [   341200] return 0/0/0 async 0/0/0
+May 30 17:42:14 :: [   341250] return 0/0/0 async 0/0/0
+May 30 17:42:16 :: [   341300] return 0/0/0 async 0/0/0
+May 30 17:42:18 :: [   341350] return 0/0/0 async 0/0/0
+May 30 17:42:20 :: [   341400] return 0/0/1 async 0/0/0
+May 30 17:42:22 :: [   341450] return 0/0/0 async 0/0/0
+May 30 17:42:24 :: [   341500] return 0/0/0 async 0/0/0
+May 30 17:42:26 :: [   341550] return 0/0/0 async 0/0/0
+May 30 17:42:28 :: [   341600] return 0/0/0 async 0/0/0
+May 30 17:42:30 :: [   341650] return 0/0/1 async 0/0/0
+May 30 17:42:32 :: [   341700] return 0/0/0 async 0/0/0
+May 30 17:42:34 :: [   341750] return 0/0/0 async 0/0/0
+May 30 17:42:36 :: [   341800] return 0/0/0 async 0/0/0
+May 30 17:42:38 :: [   341850] return 0/0/0 async 0/0/0
+May 30 17:42:40 :: [   341900] return 0/0/1 async 0/0/0
+May 30 17:42:42 :: [   341950] return 0/0/0 async 0/0/0
+May 30 17:42:44 :: [   342000] return 0/0/0 async 0/0/0
+May 30 17:42:46 :: [   342050] return 0/0/0 async 0/0/0
+May 30 17:42:48 :: [   342100] return 0/0/0 async 0/0/0
+May 30 17:42:50 :: [   342150] return 0/0/1 async 0/0/0
+May 30 17:42:52 :: [   342200] return 0/0/0 async 0/0/0
+May 30 17:42:54 :: [   342250] return 0/0/0 async 0/0/0
+May 30 17:42:56 :: [   342300] return 0/0/0 async 0/0/0
+May 30 17:42:58 :: [   342350] return 0/0/0 async 0/0/0
+May 30 17:43:00 :: [   342400] return 0/0/1 async 0/0/0
+May 30 17:43:02 :: [   342450] return 0/0/0 async 0/0/0
+May 30 17:43:04 :: [   342500] return 0/0/0 async 0/0/0
+May 30 17:43:06 :: [   342550] return 0/0/0 async 0/0/0
+May 30 17:43:08 :: [   342600] return 0/0/0 async 0/0/0
+May 30 17:43:10 :: [   342650] return 0/0/1 async 0/0/0
+May 30 17:43:12 :: [   342700] return 0/0/0 async 0/0/0
+May 30 17:43:14 :: [   342750] return 0/0/0 async 0/0/0
+May 30 17:43:16 :: [   342800] return 0/0/0 async 0/0/0
+May 30 17:43:18 :: [   342850] return 0/0/0 async 0/0/0
+May 30 17:43:20 :: [   342900] return 0/0/1 async 0/0/0
+May 30 17:43:22 :: [   342950] return 0/0/0 async 0/0/0
+May 30 17:43:24 :: [   343000] return 0/0/0 async 0/0/0
+May 30 17:43:25 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 17:43:25 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 17:43:26 :: [   343050] return 0/0/0 async 0/0/0
+May 30 17:43:28 :: [   343100] return 0/0/0 async 0/0/0
+May 30 17:43:30 :: [   343150] return 0/0/1 async 0/0/0
+May 30 17:43:32 :: [   343200] return 0/0/0 async 0/0/0
+May 30 17:43:34 :: [   343250] return 0/0/0 async 0/0/0
+May 30 17:43:36 :: AUTH_PEER_READ: size 190
+May 30 17:43:36 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(48204399), client_key(1549219492 1640265816 699992973 866478945)
+May 30 17:43:36 :: AUTH_PEER_WRITE: size 10
+May 30 17:43:36 :: [   343300] return 0/0/0 async 0/0/0
+May 30 17:43:36 :: LOGIN_BY_KEY success abyss 48204399 46.247.137.201
+May 30 17:43:37 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:43:37 :: abyss 970806 278317 hair 31
+May 30 17:43:37 :: hrss 459064 501816 hair 0
+May 30 17:43:37 :: bella 63800 166400 hair 0
+May 30 17:43:38 :: [   343350] return 0/0/0 async 0/0/0
+May 30 17:43:40 :: [   343400] return 0/0/1 async 0/0/0
+May 30 17:43:42 :: [   343450] return 0/0/0 async 0/0/0
+May 30 17:43:43 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:43:43 :: LOGOUT: Update player time pid(14)
+May 30 17:43:43 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:43:43 :: LOGOUT: Update player time pid(39)
+May 30 17:43:43 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:43:43 :: LOGOUT: Update player time pid(90)
+May 30 17:43:43 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:43:43 :: LOGOUT: Update player time pid(91)
+May 30 17:43:43 :: LOGOUT abyss 
+May 30 17:43:44 :: LOGIN_BY_KEY success abyss 48204399 46.247.137.201
+May 30 17:43:44 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:43:44 :: abyss 970806 278317 hair 31
+May 30 17:43:44 :: hrss 459064 501816 hair 0
+May 30 17:43:44 :: bella 63800 166400 hair 0
+May 30 17:43:44 :: SetPlay on 48204399 abyss
+May 30 17:43:44 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:43:44 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:43:44 :: AUTH_PEER_WRITE: size 18
+May 30 17:43:44 :: QID_QUEST 38
+May 30 17:43:44 :: QUEST_LOAD: count 47 PID 14
+May 30 17:43:44 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:43:44 :: QID_AFFECT 38
+May 30 17:43:44 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:43:44 :: QID_BATTLE_PASS 38
+May 30 17:43:44 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:43:44 :: QID_SKILL_COLOR 38 14
+May 30 17:43:44 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:43:44 :: [   343500] return 0/0/6 async 0/0/0
+May 30 17:43:46 :: [   343550] return 0/0/0 async 0/0/0
+May 30 17:43:48 :: [   343600] return 0/0/0 async 0/0/2
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:43:49 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:43:49 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:43:50 :: [   343650] return 0/0/27 async 0/0/0
+May 30 17:43:52 :: [   343700] return 0/0/0 async 0/0/1
+May 30 17:43:54 :: [   343750] return 0/0/0 async 0/0/0
+May 30 17:43:56 :: [   343800] return 0/0/0 async 0/0/0
+May 30 17:43:58 :: [   343850] return 0/0/0 async 0/0/0
+May 30 17:44:00 :: [   343900] return 0/0/1 async 0/0/0
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:44:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:44:02 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:44:02 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:44:02 :: LOGOUT: Insert player pid(14)
+May 30 17:44:02 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:44:02 :: LOGOUT: Insert player pid(39)
+May 30 17:44:02 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:44:02 :: LOGOUT: Insert player pid(90)
+May 30 17:44:02 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:44:02 :: LOGOUT: Insert player pid(91)
+May 30 17:44:02 :: SetPlay off 48204399 abyss
+May 30 17:44:02 :: LOGOUT abyss 
+May 30 17:44:02 :: AUTH_PEER_WRITE: size 18
+May 30 17:44:02 :: [   343950] return 0/0/0 async 0/0/18
+May 30 17:44:04 :: [   344000] return 0/0/0 async 0/0/0
+May 30 17:44:06 :: [   344050] return 0/0/0 async 0/0/0
+May 30 17:44:08 :: [   344100] return 0/0/0 async 0/0/0
+May 30 17:44:10 :: [   344150] return 0/0/1 async 0/0/0
+May 30 17:44:12 :: [   344200] return 0/0/0 async 0/0/0
+May 30 17:44:14 :: [   344250] return 0/0/0 async 0/0/0
+May 30 17:44:16 :: [   344300] return 0/0/0 async 0/0/0
+May 30 17:44:18 :: [   344350] return 0/0/0 async 0/0/0
+May 30 17:44:20 :: [   344400] return 0/0/1 async 0/0/0
+May 30 17:44:22 :: [   344450] return 0/0/0 async 0/0/0
+May 30 17:44:24 :: [   344500] return 0/0/0 async 0/0/0
+May 30 17:44:26 :: [   344550] return 0/0/0 async 0/0/0
+May 30 17:44:28 :: [   344600] return 0/0/0 async 0/0/0
+May 30 17:44:30 :: [   344650] return 0/0/1 async 0/0/0
+May 30 17:44:32 :: [   344700] return 0/0/0 async 0/0/0
+May 30 17:44:34 :: [   344750] return 0/0/0 async 0/0/0
+May 30 17:44:36 :: [   344800] return 0/0/0 async 0/0/0
+May 30 17:44:38 :: [   344850] return 0/0/0 async 0/0/0
+May 30 17:44:40 :: [   344900] return 0/0/1 async 0/0/0
+May 30 17:44:42 :: [   344950] return 0/0/0 async 0/0/0
+May 30 17:44:44 :: [   345000] return 0/0/0 async 0/0/0
+May 30 17:44:45 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:44:45 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:44:46 :: [   345050] return 0/0/0 async 0/0/0
+May 30 17:44:48 :: [   345100] return 0/0/0 async 0/0/0
+May 30 17:44:50 :: [   345150] return 0/0/1 async 0/0/0
+May 30 17:44:52 :: [   345200] return 0/0/0 async 0/0/0
+May 30 17:44:54 :: [   345250] return 0/0/0 async 0/0/0
+May 30 17:44:56 :: [   345300] return 0/0/0 async 0/0/0
+May 30 17:44:58 :: [   345350] return 0/0/0 async 0/0/0
+May 30 17:45:00 :: [   345400] return 0/0/1 async 0/0/0
+May 30 17:45:02 :: [   345450] return 0/0/0 async 0/0/0
+May 30 17:45:04 :: [   345500] return 0/0/0 async 0/0/0
+May 30 17:45:06 :: [   345550] return 0/0/0 async 0/0/0
+May 30 17:45:08 :: [   345600] return 0/0/0 async 0/0/0
+May 30 17:45:10 :: [   345650] return 0/0/1 async 0/0/0
+May 30 17:45:12 :: [   345700] return 0/0/0 async 0/0/0
+May 30 17:45:14 :: [   345750] return 0/0/0 async 0/0/0
+May 30 17:45:15 :: AUTH_PEER_READ: size 190
+May 30 17:45:15 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(2120332413), client_key(1314506483 1746183092 587707342 1320004441)
+May 30 17:45:15 :: AUTH_PEER_WRITE: size 10
+May 30 17:45:16 :: LOGIN_BY_KEY success abyss 2120332413 46.247.137.201
+May 30 17:45:16 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:45:16 :: abyss 970806 278317 hair 31
+May 30 17:45:16 :: hrss 459064 501816 hair 0
+May 30 17:45:16 :: bella 63800 166400 hair 0
+May 30 17:45:16 :: [   345800] return 0/0/2 async 0/0/0
+May 30 17:45:18 :: [   345850] return 0/0/0 async 0/0/0
+May 30 17:45:20 :: [   345900] return 0/0/1 async 0/0/0
+May 30 17:45:22 :: [   345950] return 0/0/0 async 0/0/0
+May 30 17:45:23 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:45:23 :: LOGOUT: Update player time pid(14)
+May 30 17:45:23 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:45:23 :: LOGOUT: Update player time pid(39)
+May 30 17:45:23 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:45:23 :: LOGOUT: Update player time pid(90)
+May 30 17:45:23 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:45:23 :: LOGOUT: Update player time pid(91)
+May 30 17:45:23 :: LOGOUT abyss 
+May 30 17:45:23 :: LOGIN_BY_KEY success abyss 2120332413 46.247.137.201
+May 30 17:45:23 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 17:45:23 :: abyss 970806 278317 hair 31
+May 30 17:45:23 :: hrss 459064 501816 hair 0
+May 30 17:45:23 :: bella 63800 166400 hair 0
+May 30 17:45:24 :: SetPlay on 2120332413 abyss
+May 30 17:45:24 :: [PLAYER_LOAD] ID abyss pid 14 gold 65134586625 
+May 30 17:45:24 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 17:45:24 :: AUTH_PEER_WRITE: size 18
+May 30 17:45:24 :: QID_QUEST 39
+May 30 17:45:24 :: QUEST_LOAD: count 47 PID 14
+May 30 17:45:24 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 17:45:24 :: QID_AFFECT 39
+May 30 17:45:24 :: AFFECT_LOAD: count 23 PID 14
+May 30 17:45:24 :: QID_BATTLE_PASS 39
+May 30 17:45:24 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 17:45:24 :: QID_SKILL_COLOR 39 14
+May 30 17:45:24 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 17:45:24 :: [   346000] return 0/0/51 async 0/0/0
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10034437
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10034446
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10034439
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50031626
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50037851
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10034442
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057398
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 50057436
+May 30 17:45:25 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:25 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:45:26 :: [   346050] return 0/0/0 async 0/0/0
+May 30 17:45:28 :: [   346100] return 0/0/0 async 0/0/2
+May 30 17:45:30 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:30 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:45:30 :: [   346150] return 0/0/1 async 0/0/0
+May 30 17:45:32 :: [   346200] return 0/0/0 async 0/0/0
+May 30 17:45:34 :: [   346250] return 0/0/0 async 0/0/0
+May 30 17:45:36 :: [   346300] return 0/0/0 async 0/0/0
+May 30 17:45:38 :: [   346350] return 0/0/0 async 0/0/0
+May 30 17:45:40 :: [   346400] return 0/0/1 async 0/0/0
+May 30 17:45:42 :: [   346450] return 0/0/0 async 0/0/0
+May 30 17:45:44 :: [   346500] return 0/0/0 async 0/0/0
+May 30 17:45:46 :: [   346550] return 0/0/0 async 0/0/0
+May 30 17:45:48 :: [   346600] return 0/0/0 async 0/0/0
+May 30 17:45:50 :: [   346650] return 0/0/1 async 0/0/0
+May 30 17:45:52 :: [   346700] return 0/0/0 async 0/0/1
+May 30 17:45:54 :: [   346750] return 0/0/0 async 0/0/1
+May 30 17:45:56 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:56 :: ITEM_CACHE: save 14 id 50057425
+May 30 17:45:56 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:56 :: ITEM_CACHE: save 14 id 50057424
+May 30 17:45:56 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:45:56 :: ITEM_CACHE: save 14 id 50057426
+May 30 17:45:56 :: [   346800] return 0/0/0 async 0/0/1
+May 30 17:45:58 :: [   346850] return 0/0/0 async 0/0/1
+May 30 17:46:00 :: [   346900] return 0/0/1 async 0/0/0
+May 30 17:46:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:01 :: ITEM_CACHE: save 14 id 50057427
+May 30 17:46:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:01 :: ITEM_CACHE: save 14 id 50057422
+May 30 17:46:01 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:01 :: ITEM_CACHE: save 14 id 50057423
+May 30 17:46:02 :: [   346950] return 0/0/0 async 0/0/0
+May 30 17:46:04 :: [   347000] return 0/0/0 async 0/0/0
+May 30 17:46:06 :: [   347050] return 0/0/0 async 0/0/0
+May 30 17:46:08 :: [   347100] return 0/0/0 async 0/0/0
+May 30 17:46:10 :: [   347150] return 0/0/1 async 0/0/0
+May 30 17:46:12 :: [   347200] return 0/0/0 async 0/0/0
+May 30 17:46:14 :: [   347250] return 0/0/0 async 0/0/0
+May 30 17:46:16 :: [   347300] return 0/0/0 async 0/0/0
+May 30 17:46:18 :: [   347350] return 0/0/0 async 0/0/0
+May 30 17:46:20 :: [   347400] return 0/0/1 async 0/0/0
+May 30 17:46:22 :: [   347450] return 0/0/0 async 0/0/0
+May 30 17:46:24 :: [   347500] return 0/0/0 async 0/0/0
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057421
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057419
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057418
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057416
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057420
+May 30 17:46:26 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:26 :: ITEM_CACHE: save 14 id 50057417
+May 30 17:46:26 :: [   347550] return 0/0/0 async 0/0/0
+May 30 17:46:28 :: [   347600] return 0/0/0 async 0/0/0
+May 30 17:46:30 :: [   347650] return 0/0/1 async 0/0/0
+May 30 17:46:32 :: [   347700] return 0/0/0 async 0/0/0
+May 30 17:46:34 :: [   347750] return 0/0/0 async 0/0/0
+May 30 17:46:36 :: [   347800] return 0/0/0 async 0/0/0
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 50057413
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030379
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030381
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030104
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030375
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030380
+May 30 17:46:38 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 17:46:38 :: ITEM_CACHE: save 14 id 10030382
+May 30 17:46:38 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 17:46:38 :: LOGOUT: Insert player pid(14)
+May 30 17:46:38 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 17:46:38 :: LOGOUT: Insert player pid(39)
+May 30 17:46:38 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 17:46:38 :: LOGOUT: Insert player pid(90)
+May 30 17:46:38 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 17:46:38 :: LOGOUT: Insert player pid(91)
+May 30 17:46:38 :: SetPlay off 2120332413 abyss
+May 30 17:46:38 :: LOGOUT abyss 
+May 30 17:46:38 :: AUTH_PEER_WRITE: size 18
+May 30 17:46:38 :: [   347850] return 0/0/0 async 0/0/12
+May 30 17:46:40 :: [   347900] return 0/0/2 async 0/0/0
+May 30 17:46:42 :: [   347950] return 0/0/0 async 0/0/0
+May 30 17:46:44 :: [   348000] return 0/0/0 async 0/0/0
+May 30 17:46:46 :: [   348050] return 0/0/0 async 0/0/0
+May 30 17:46:48 :: [   348100] return 0/0/0 async 0/0/0
+May 30 17:46:50 :: [   348150] return 0/0/1 async 0/0/0
+May 30 17:46:52 :: [   348200] return 0/0/0 async 0/0/0
+May 30 17:46:54 :: [   348250] return 0/0/0 async 0/0/0
+May 30 17:46:56 :: [   348300] return 0/0/0 async 0/0/0
+May 30 17:46:58 :: [   348350] return 0/0/0 async 0/0/0
+May 30 17:47:00 :: [   348400] return 0/0/1 async 0/0/0
+May 30 17:47:02 :: [   348450] return 0/0/0 async 0/0/0
+May 30 17:47:04 :: [   348500] return 0/0/0 async 0/0/0
+May 30 17:47:06 :: [   348550] return 0/0/0 async 0/0/0
+May 30 17:47:08 :: [   348600] return 0/0/0 async 0/0/0
+May 30 17:47:10 :: [   348650] return 0/0/1 async 0/0/0
+May 30 17:47:12 :: [   348700] return 0/0/0 async 0/0/0
+May 30 17:47:14 :: [   348750] return 0/0/0 async 0/0/0
+May 30 17:47:16 :: [   348800] return 0/0/0 async 0/0/0
+May 30 17:47:18 :: [   348850] return 0/0/0 async 0/0/0
+May 30 17:47:20 :: [   348900] return 0/0/1 async 0/0/0
+May 30 17:47:22 :: [   348950] return 0/0/0 async 0/0/0
+May 30 17:47:24 :: [   349000] return 0/0/0 async 0/0/0
+May 30 17:47:26 :: [   349050] return 0/0/0 async 0/0/0
+May 30 17:47:28 :: [   349100] return 0/0/0 async 0/0/0
+May 30 17:47:30 :: [   349150] return 0/0/1 async 0/0/0
+May 30 17:47:32 :: [   349200] return 0/0/0 async 0/0/0
+May 30 17:47:34 :: [   349250] return 0/0/0 async 0/0/0
+May 30 17:47:36 :: [   349300] return 0/0/0 async 0/0/0
+May 30 17:47:38 :: [   349350] return 0/0/0 async 0/0/0
+May 30 17:47:40 :: [   349400] return 0/0/1 async 0/0/0
+May 30 17:47:42 :: [   349450] return 0/0/0 async 0/0/0
+May 30 17:47:44 :: [   349500] return 0/0/0 async 0/0/0
+May 30 17:47:46 :: [   349550] return 0/0/0 async 0/0/0
+May 30 17:47:48 :: [   349600] return 0/0/0 async 0/0/0
+May 30 17:47:50 :: [   349650] return 0/0/1 async 0/0/0
+May 30 17:47:52 :: [   349700] return 0/0/0 async 0/0/0
+May 30 17:47:54 :: [   349750] return 0/0/0 async 0/0/0
+May 30 17:47:56 :: [   349800] return 0/0/0 async 0/0/0
+May 30 17:47:58 :: [   349850] return 0/0/0 async 0/0/0
+May 30 17:48:00 :: [   349900] return 0/0/1 async 0/0/0
+May 30 17:48:02 :: [   349950] return 0/0/0 async 0/0/0
+May 30 17:48:04 :: [   350000] return 0/0/0 async 0/0/0
+May 30 17:48:06 :: [   350050] return 0/0/0 async 0/0/0
+May 30 17:48:08 :: [   350100] return 0/0/0 async 0/0/0
+May 30 17:48:10 :: [   350150] return 0/0/1 async 0/0/0
+May 30 17:48:12 :: [   350200] return 0/0/0 async 0/0/0
+May 30 17:48:14 :: [   350250] return 0/0/0 async 0/0/0
+May 30 17:48:16 :: [   350300] return 0/0/0 async 0/0/0
+May 30 17:48:18 :: [   350350] return 0/0/0 async 0/0/0
+May 30 17:48:20 :: [   350400] return 0/0/1 async 0/0/0
+May 30 17:48:22 :: [   350450] return 0/0/0 async 0/0/0
+May 30 17:48:24 :: [   350500] return 0/0/0 async 0/0/0
+May 30 17:48:26 :: [   350550] return 0/0/0 async 0/0/0
+May 30 17:48:26 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 17:48:26 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 17:48:28 :: [   350600] return 0/0/0 async 0/0/0
+May 30 17:48:30 :: [   350650] return 0/0/1 async 0/0/0
+May 30 17:48:32 :: [   350700] return 0/0/0 async 0/0/0
+May 30 17:48:34 :: [   350750] return 0/0/0 async 0/0/0
+May 30 17:48:36 :: [   350800] return 0/0/0 async 0/0/0
+May 30 17:48:38 :: [   350850] return 0/0/0 async 0/0/0
+May 30 17:48:40 :: [   350900] return 0/0/1 async 0/0/0
+May 30 17:48:42 :: [   350950] return 0/0/0 async 0/0/0
+May 30 17:48:44 :: [   351000] return 0/0/0 async 0/0/0
+May 30 17:48:46 :: [   351050] return 0/0/0 async 0/0/0
+May 30 17:48:48 :: [   351100] return 0/0/0 async 0/0/0
+May 30 17:48:50 :: [   351150] return 0/0/1 async 0/0/0
+May 30 17:48:52 :: [   351200] return 0/0/0 async 0/0/0
+May 30 17:48:54 :: [   351250] return 0/0/0 async 0/0/0
+May 30 17:48:56 :: [   351300] return 0/0/0 async 0/0/0
+May 30 17:48:58 :: [   351350] return 0/0/0 async 0/0/0
+May 30 17:49:00 :: [   351400] return 0/0/1 async 0/0/0
+May 30 17:49:02 :: [   351450] return 0/0/0 async 0/0/0
+May 30 17:49:04 :: [   351500] return 0/0/0 async 0/0/0
+May 30 17:49:06 :: [   351550] return 0/0/0 async 0/0/0
+May 30 17:49:08 :: [   351600] return 0/0/0 async 0/0/0
+May 30 17:49:10 :: [   351650] return 0/0/1 async 0/0/0
+May 30 17:49:12 :: [   351700] return 0/0/0 async 0/0/0
+May 30 17:49:14 :: [   351750] return 0/0/0 async 0/0/0
+May 30 17:49:16 :: [   351800] return 0/0/0 async 0/0/0
+May 30 17:49:18 :: [   351850] return 0/0/0 async 0/0/0
+May 30 17:49:20 :: [   351900] return 0/0/1 async 0/0/0
+May 30 17:49:22 :: [   351950] return 0/0/0 async 0/0/0
+May 30 17:49:24 :: [   352000] return 0/0/0 async 0/0/0
+May 30 17:49:26 :: [   352050] return 0/0/0 async 0/0/0
+May 30 17:49:28 :: [   352100] return 0/0/0 async 0/0/0
+May 30 17:49:30 :: [   352150] return 0/0/1 async 0/0/0
+May 30 17:49:32 :: [   352200] return 0/0/0 async 0/0/0
+May 30 17:49:34 :: [   352250] return 0/0/0 async 0/0/0
+May 30 17:49:36 :: [   352300] return 0/0/0 async 0/0/0
+May 30 17:49:38 :: [   352350] return 0/0/0 async 0/0/0
+May 30 17:49:40 :: [   352400] return 0/0/1 async 0/0/0
+May 30 17:49:42 :: [   352450] return 0/0/0 async 0/0/0
+May 30 17:49:44 :: [   352500] return 0/0/0 async 0/0/0
+May 30 17:49:46 :: [   352550] return 0/0/0 async 0/0/0
+May 30 17:49:46 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:49:46 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:49:48 :: [   352600] return 0/0/0 async 0/0/0
+May 30 17:49:50 :: [   352650] return 0/0/1 async 0/0/0
+May 30 17:49:52 :: [   352700] return 0/0/0 async 0/0/0
+May 30 17:49:54 :: [   352750] return 0/0/0 async 0/0/0
+May 30 17:49:56 :: [   352800] return 0/0/0 async 0/0/0
+May 30 17:49:58 :: [   352850] return 0/0/0 async 0/0/0
+May 30 17:50:00 :: [   352900] return 0/0/1 async 0/0/0
+May 30 17:50:02 :: [   352950] return 0/0/0 async 0/0/0
+May 30 17:50:04 :: [   353000] return 0/0/0 async 0/0/0
+May 30 17:50:06 :: [   353050] return 0/0/0 async 0/0/0
+May 30 17:50:08 :: [   353100] return 0/0/0 async 0/0/0
+May 30 17:50:10 :: [   353150] return 0/0/1 async 0/0/0
+May 30 17:50:12 :: [   353200] return 0/0/0 async 0/0/0
+May 30 17:50:14 :: [   353250] return 0/0/0 async 0/0/0
+May 30 17:50:16 :: [   353300] return 0/0/0 async 0/0/0
+May 30 17:50:18 :: [   353350] return 0/0/0 async 0/0/0
+May 30 17:50:20 :: [   353400] return 0/0/1 async 0/0/0
+May 30 17:50:22 :: [   353450] return 0/0/0 async 0/0/0
+May 30 17:50:24 :: [   353500] return 0/0/0 async 0/0/0
+May 30 17:50:26 :: [   353550] return 0/0/0 async 0/0/0
+May 30 17:50:28 :: [   353600] return 0/0/0 async 0/0/0
+May 30 17:50:30 :: [   353650] return 0/0/1 async 0/0/0
+May 30 17:50:32 :: [   353700] return 0/0/0 async 0/0/0
+May 30 17:50:34 :: [   353750] return 0/0/0 async 0/0/0
+May 30 17:50:36 :: [   353800] return 0/0/0 async 0/0/0
+May 30 17:50:38 :: [   353850] return 0/0/0 async 0/0/0
+May 30 17:50:40 :: [   353900] return 0/0/1 async 0/0/0
+May 30 17:50:42 :: [   353950] return 0/0/0 async 0/0/0
+May 30 17:50:44 :: [   354000] return 0/0/0 async 0/0/0
+May 30 17:50:46 :: [   354050] return 0/0/0 async 0/0/0
+May 30 17:50:48 :: [   354100] return 0/0/0 async 0/0/0
+May 30 17:50:50 :: [   354150] return 0/0/1 async 0/0/0
+May 30 17:50:52 :: [   354200] return 0/0/0 async 0/0/0
+May 30 17:50:54 :: [   354250] return 0/0/0 async 0/0/0
+May 30 17:50:56 :: [   354300] return 0/0/0 async 0/0/0
+May 30 17:50:58 :: [   354350] return 0/0/0 async 0/0/0
+May 30 17:51:00 :: [   354400] return 0/0/1 async 0/0/0
+May 30 17:51:02 :: [   354450] return 0/0/0 async 0/0/0
+May 30 17:51:04 :: [   354500] return 0/0/0 async 0/0/0
+May 30 17:51:06 :: [   354550] return 0/0/0 async 0/0/0
+May 30 17:51:08 :: [   354600] return 0/0/0 async 0/0/0
+May 30 17:51:10 :: [   354650] return 0/0/1 async 0/0/0
+May 30 17:51:12 :: [   354700] return 0/0/0 async 0/0/0
+May 30 17:51:14 :: [   354750] return 0/0/0 async 0/0/0
+May 30 17:51:16 :: [   354800] return 0/0/0 async 0/0/0
+May 30 17:51:18 :: [   354850] return 0/0/0 async 0/0/0
+May 30 17:51:20 :: [   354900] return 0/0/1 async 0/0/0
+May 30 17:51:22 :: [   354950] return 0/0/0 async 0/0/0
+May 30 17:51:24 :: [   355000] return 0/0/0 async 0/0/0
+May 30 17:51:26 :: [   355050] return 0/0/0 async 0/0/0
+May 30 17:51:28 :: [   355100] return 0/0/0 async 0/0/0
+May 30 17:51:30 :: [   355150] return 0/0/1 async 0/0/0
+May 30 17:51:32 :: [   355200] return 0/0/0 async 0/0/0
+May 30 17:51:34 :: [   355250] return 0/0/0 async 0/0/0
+May 30 17:51:36 :: [   355300] return 0/0/0 async 0/0/0
+May 30 17:51:38 :: [   355350] return 0/0/0 async 0/0/0
+May 30 17:51:39 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 17:51:39 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 17:51:40 :: [   355400] return 0/0/1 async 0/0/0
+May 30 17:51:42 :: [   355450] return 0/0/0 async 0/0/0
+May 30 17:51:44 :: [   355500] return 0/0/0 async 0/0/0
+May 30 17:51:46 :: [   355550] return 0/0/0 async 0/0/0
+May 30 17:51:48 :: [   355600] return 0/0/0 async 0/0/0
+May 30 17:51:50 :: [   355650] return 0/0/1 async 0/0/0
+May 30 17:51:52 :: [   355700] return 0/0/0 async 0/0/0
+May 30 17:51:54 :: [   355750] return 0/0/0 async 0/0/0
+May 30 17:51:56 :: [   355800] return 0/0/0 async 0/0/0
+May 30 17:51:58 :: [   355850] return 0/0/0 async 0/0/0
+May 30 17:52:00 :: [   355900] return 0/0/1 async 0/0/0
+May 30 17:52:02 :: [   355950] return 0/0/0 async 0/0/0
+May 30 17:52:04 :: [   356000] return 0/0/0 async 0/0/0
+May 30 17:52:06 :: [   356050] return 0/0/0 async 0/0/0
+May 30 17:52:08 :: [   356100] return 0/0/0 async 0/0/0
+May 30 17:52:10 :: [   356150] return 0/0/1 async 0/0/0
+May 30 17:52:12 :: [   356200] return 0/0/0 async 0/0/0
+May 30 17:52:14 :: [   356250] return 0/0/0 async 0/0/0
+May 30 17:52:16 :: [   356300] return 0/0/0 async 0/0/0
+May 30 17:52:18 :: [   356350] return 0/0/0 async 0/0/0
+May 30 17:52:20 :: [   356400] return 0/0/1 async 0/0/0
+May 30 17:52:22 :: [   356450] return 0/0/0 async 0/0/0
+May 30 17:52:24 :: [   356500] return 0/0/0 async 0/0/0
+May 30 17:52:26 :: [   356550] return 0/0/0 async 0/0/0
+May 30 17:52:28 :: [   356600] return 0/0/0 async 0/0/0
+May 30 17:52:30 :: [   356650] return 0/0/1 async 0/0/0
+May 30 17:52:32 :: [   356700] return 0/0/0 async 0/0/0
+May 30 17:52:34 :: [   356750] return 0/0/0 async 0/0/0
+May 30 17:52:36 :: [   356800] return 0/0/0 async 0/0/0
+May 30 17:52:38 :: [   356850] return 0/0/0 async 0/0/0
+May 30 17:52:40 :: [   356900] return 0/0/1 async 0/0/0
+May 30 17:52:42 :: [   356950] return 0/0/0 async 0/0/0
+May 30 17:52:44 :: [   357000] return 0/0/0 async 0/0/0
+May 30 17:52:46 :: [   357050] return 0/0/0 async 0/0/0
+May 30 17:52:48 :: [   357100] return 0/0/0 async 0/0/0
+May 30 17:52:50 :: [   357150] return 0/0/1 async 0/0/0
+May 30 17:52:52 :: [   357200] return 0/0/0 async 0/0/0
+May 30 17:52:54 :: [   357250] return 0/0/0 async 0/0/0
+May 30 17:52:56 :: [   357300] return 0/0/0 async 0/0/0
+May 30 17:52:58 :: [   357350] return 0/0/0 async 0/0/0
+May 30 17:53:00 :: [   357400] return 0/0/1 async 0/0/0
+May 30 17:53:02 :: [   357450] return 0/0/0 async 0/0/0
+May 30 17:53:04 :: [   357500] return 0/0/0 async 0/0/0
+May 30 17:53:06 :: [   357550] return 0/0/0 async 0/0/0
+May 30 17:53:08 :: [   357600] return 0/0/0 async 0/0/0
+May 30 17:53:10 :: [   357650] return 0/0/1 async 0/0/0
+May 30 17:53:12 :: [   357700] return 0/0/0 async 0/0/0
+May 30 17:53:14 :: [   357750] return 0/0/0 async 0/0/0
+May 30 17:53:16 :: [   357800] return 0/0/0 async 0/0/0
+May 30 17:53:18 :: [   357850] return 0/0/0 async 0/0/0
+May 30 17:53:20 :: [   357900] return 0/0/1 async 0/0/0
+May 30 17:53:22 :: [   357950] return 0/0/0 async 0/0/0
+May 30 17:53:24 :: [   358000] return 0/0/0 async 0/0/0
+May 30 17:53:26 :: [   358050] return 0/0/0 async 0/0/0
+May 30 17:53:27 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 17:53:27 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 17:53:28 :: [   358100] return 0/0/0 async 0/0/0
+May 30 17:53:30 :: [   358150] return 0/0/1 async 0/0/0
+May 30 17:53:32 :: [   358200] return 0/0/0 async 0/0/0
+May 30 17:53:34 :: [   358250] return 0/0/0 async 0/0/0
+May 30 17:53:36 :: [   358300] return 0/0/0 async 0/0/0
+May 30 17:53:38 :: [   358350] return 0/0/0 async 0/0/0
+May 30 17:53:40 :: [   358400] return 0/0/1 async 0/0/0
+May 30 17:53:42 :: [   358450] return 0/0/0 async 0/0/0
+May 30 17:53:44 :: [   358500] return 0/0/0 async 0/0/0
+May 30 17:53:46 :: [   358550] return 0/0/0 async 0/0/0
+May 30 17:53:48 :: [   358600] return 0/0/0 async 0/0/0
+May 30 17:53:50 :: [   358650] return 0/0/1 async 0/0/0
+May 30 17:53:52 :: [   358700] return 0/0/0 async 0/0/0
+May 30 17:53:54 :: [   358750] return 0/0/0 async 0/0/0
+May 30 17:53:56 :: [   358800] return 0/0/0 async 0/0/0
+May 30 17:53:58 :: [   358850] return 0/0/0 async 0/0/0
+May 30 17:54:00 :: [   358900] return 0/0/1 async 0/0/0
+May 30 17:54:02 :: [   358950] return 0/0/0 async 0/0/0
+May 30 17:54:04 :: [   359000] return 0/0/0 async 0/0/0
+May 30 17:54:06 :: [   359050] return 0/0/0 async 0/0/0
+May 30 17:54:08 :: [   359100] return 0/0/0 async 0/0/0
+May 30 17:54:10 :: [   359150] return 0/0/1 async 0/0/0
+May 30 17:54:12 :: [   359200] return 0/0/0 async 0/0/0
+May 30 17:54:14 :: [   359250] return 0/0/0 async 0/0/0
+May 30 17:54:16 :: [   359300] return 0/0/0 async 0/0/0
+May 30 17:54:18 :: [   359350] return 0/0/0 async 0/0/0
+May 30 17:54:20 :: [   359400] return 0/0/1 async 0/0/0
+May 30 17:54:22 :: [   359450] return 0/0/0 async 0/0/0
+May 30 17:54:24 :: [   359500] return 0/0/0 async 0/0/0
+May 30 17:54:26 :: [   359550] return 0/0/0 async 0/0/0
+May 30 17:54:28 :: [   359600] return 0/0/0 async 0/0/0
+May 30 17:54:30 :: [   359650] return 0/0/1 async 0/0/0
+May 30 17:54:32 :: [   359700] return 0/0/0 async 0/0/0
+May 30 17:54:34 :: [   359750] return 0/0/0 async 0/0/0
+May 30 17:54:36 :: [   359800] return 0/0/0 async 0/0/0
+May 30 17:54:38 :: [   359850] return 0/0/0 async 0/0/0
+May 30 17:54:40 :: [   359900] return 0/0/1 async 0/0/0
+May 30 17:54:42 :: [   359950] return 0/0/0 async 0/0/0
+May 30 17:54:44 :: [   360000] return 0/0/0 async 0/0/0
+May 30 17:54:46 :: [   360050] return 0/0/0 async 0/0/0
+May 30 17:54:47 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 90 bella 
+May 30 17:54:47 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(90)
+May 30 17:54:48 :: [   360100] return 0/0/0 async 0/0/0
+May 30 17:54:50 :: [   360150] return 0/0/1 async 0/0/0
+May 30 17:54:52 :: [   360200] return 0/0/0 async 0/0/0
+May 30 17:54:54 :: [   360250] return 0/0/0 async 0/0/0
+May 30 17:54:56 :: [   360300] return 0/0/0 async 0/0/0
+May 30 17:54:58 :: [   360350] return 0/0/0 async 0/0/0
+May 30 17:55:00 :: [   360400] return 0/0/1 async 0/0/0
+May 30 17:55:02 :: [   360450] return 0/0/0 async 0/0/0
+May 30 17:55:04 :: [   360500] return 0/0/0 async 0/0/0
+May 30 17:55:06 :: [   360550] return 0/0/0 async 0/0/0
+May 30 17:55:08 :: [   360600] return 0/0/0 async 0/0/0
+May 30 17:55:10 :: [   360650] return 0/0/1 async 0/0/0
+May 30 17:55:12 :: [   360700] return 0/0/0 async 0/0/0
+May 30 17:55:14 :: [   360750] return 0/0/0 async 0/0/0
+May 30 17:55:16 :: [   360800] return 0/0/0 async 0/0/0
+May 30 17:55:18 :: [   360850] return 0/0/0 async 0/0/0
+May 30 17:55:20 :: [   360900] return 0/0/1 async 0/0/0
+May 30 17:55:22 :: [   360950] return 0/0/0 async 0/0/0
+May 30 17:55:24 :: [   361000] return 0/0/0 async 0/0/0
+May 30 17:55:26 :: [   361050] return 0/0/0 async 0/0/0
+May 30 17:55:28 :: [   361100] return 0/0/0 async 0/0/0
+May 30 17:55:30 :: [   361150] return 0/0/1 async 0/0/0
+May 30 17:55:32 :: [   361200] return 0/0/0 async 0/0/0
+May 30 17:55:34 :: [   361250] return 0/0/0 async 0/0/0
+May 30 17:55:36 :: [   361300] return 0/0/0 async 0/0/0
+May 30 17:55:38 :: [   361350] return 0/0/0 async 0/0/0
+May 30 17:55:40 :: [   361400] return 0/0/1 async 0/0/0
+May 30 17:55:42 :: [   361450] return 0/0/0 async 0/0/0
+May 30 17:55:44 :: [   361500] return 0/0/0 async 0/0/0
+May 30 17:55:46 :: [   361550] return 0/0/0 async 0/0/0
+May 30 17:55:48 :: [   361600] return 0/0/0 async 0/0/0
+May 30 17:55:50 :: [   361650] return 0/0/1 async 0/0/0
+May 30 17:55:52 :: [   361700] return 0/0/0 async 0/0/0
+May 30 17:55:54 :: [   361750] return 0/0/0 async 0/0/0
+May 30 17:55:56 :: [   361800] return 0/0/0 async 0/0/0
+May 30 17:55:58 :: [   361850] return 0/0/0 async 0/0/0
+May 30 17:56:00 :: [   361900] return 0/0/1 async 0/0/0
+May 30 17:56:02 :: [   361950] return 0/0/0 async 0/0/0
+May 30 17:56:04 :: [   362000] return 0/0/0 async 0/0/0
+May 30 17:56:06 :: [   362050] return 0/0/0 async 0/0/0
+May 30 17:56:08 :: [   362100] return 0/0/0 async 0/0/0
+May 30 17:56:10 :: [   362150] return 0/0/1 async 0/0/0
+May 30 17:56:12 :: [   362200] return 0/0/0 async 0/0/0
+May 30 17:56:14 :: [   362250] return 0/0/0 async 0/0/0
+May 30 17:56:16 :: [   362300] return 0/0/0 async 0/0/0
+May 30 17:56:18 :: [   362350] return 0/0/0 async 0/0/0
+May 30 17:56:20 :: [   362400] return 0/0/1 async 0/0/0
+May 30 17:56:22 :: [   362450] return 0/0/0 async 0/0/0
+May 30 17:56:24 :: [   362500] return 0/0/0 async 0/0/0
+May 30 17:56:26 :: [   362550] return 0/0/0 async 0/0/0
+May 30 17:56:28 :: [   362600] return 0/0/0 async 0/0/0
+May 30 17:56:30 :: [   362650] return 0/0/1 async 0/0/0
+May 30 17:56:32 :: [   362700] return 0/0/0 async 0/0/0
+May 30 17:56:34 :: [   362750] return 0/0/0 async 0/0/0
+May 30 17:56:36 :: [   362800] return 0/0/0 async 0/0/0
+May 30 17:56:38 :: [   362850] return 0/0/0 async 0/0/0
+May 30 17:56:39 :: FLUSH_ITEMCACHESET : Deleted pid(91)
+May 30 17:56:39 :: FLUSH_ITEMCACHESET : Deleted pid(90)
+May 30 17:56:39 :: FLUSH_ITEMCACHESET : Deleted pid(39)
+May 30 17:56:39 :: FLUSH_ITEMCACHESET : Deleted pid(14)
+May 30 17:56:40 :: [   362900] return 0/0/1 async 0/0/0
+May 30 17:56:42 :: [   362950] return 0/0/0 async 0/0/0
+May 30 17:56:44 :: [   363000] return 0/0/0 async 0/0/0
+May 30 17:56:46 :: [   363050] return 0/0/0 async 0/0/0
+May 30 17:56:48 :: [   363100] return 0/0/0 async 0/0/0
+May 30 17:56:50 :: [   363150] return 0/0/1 async 0/0/0
+May 30 17:56:52 :: [   363200] return 0/0/0 async 0/0/0
+May 30 17:56:54 :: [   363250] return 0/0/0 async 0/0/0
+May 30 17:56:56 :: [   363300] return 0/0/0 async 0/0/0
+May 30 17:56:58 :: [   363350] return 0/0/0 async 0/0/0
+May 30 17:57:00 :: [   363400] return 0/0/1 async 0/0/0
+May 30 17:57:02 :: [   363450] return 0/0/0 async 0/0/0
+May 30 17:57:04 :: [   363500] return 0/0/0 async 0/0/0
+May 30 17:57:06 :: [   363550] return 0/0/0 async 0/0/0
+May 30 17:57:08 :: [   363600] return 0/0/0 async 0/0/0
+May 30 17:57:10 :: [   363650] return 0/0/1 async 0/0/0
+May 30 17:57:12 :: [   363700] return 0/0/0 async 0/0/0
+May 30 17:57:14 :: [   363750] return 0/0/0 async 0/0/0
+May 30 17:57:16 :: [   363800] return 0/0/0 async 0/0/0
+May 30 17:57:18 :: [   363850] return 0/0/0 async 0/0/0
+May 30 17:57:20 :: [   363900] return 0/0/1 async 0/0/0
+May 30 17:57:22 :: [   363950] return 0/0/0 async 0/0/0
+May 30 17:57:24 :: [   364000] return 0/0/0 async 0/0/0
+May 30 17:57:26 :: [   364050] return 0/0/0 async 0/0/0
+May 30 17:57:28 :: [   364100] return 0/0/0 async 0/0/0
+May 30 17:57:30 :: [   364150] return 0/0/1 async 0/0/0
+May 30 17:57:32 :: [   364200] return 0/0/0 async 0/0/0
+May 30 17:57:34 :: [   364250] return 0/0/0 async 0/0/0
+May 30 17:57:36 :: [   364300] return 0/0/0 async 0/0/0
+May 30 17:57:38 :: [   364350] return 0/0/0 async 0/0/0
+May 30 17:57:40 :: [   364400] return 0/0/1 async 0/0/0
+May 30 17:57:42 :: [   364450] return 0/0/0 async 0/0/0
+May 30 17:57:44 :: [   364500] return 0/0/0 async 0/0/0
+May 30 17:57:46 :: [   364550] return 0/0/0 async 0/0/0
+May 30 17:57:48 :: [   364600] return 0/0/0 async 0/0/0
+May 30 17:57:50 :: [   364650] return 0/0/1 async 0/0/0
+May 30 17:57:52 :: [   364700] return 0/0/0 async 0/0/0
+May 30 17:57:54 :: [   364750] return 0/0/0 async 0/0/0
+May 30 17:57:56 :: [   364800] return 0/0/0 async 0/0/0
+May 30 17:57:58 :: [   364850] return 0/0/0 async 0/0/0
+May 30 17:58:00 :: [   364900] return 0/0/1 async 0/0/0
+May 30 17:58:02 :: [   364950] return 0/0/0 async 0/0/0
+May 30 17:58:04 :: [   365000] return 0/0/0 async 0/0/0
+May 30 17:58:06 :: [   365050] return 0/0/0 async 0/0/0
+May 30 17:58:08 :: [   365100] return 0/0/0 async 0/0/0
+May 30 17:58:10 :: [   365150] return 0/0/1 async 0/0/0
+May 30 17:58:12 :: [   365200] return 0/0/0 async 0/0/0
+May 30 17:58:14 :: [   365250] return 0/0/0 async 0/0/0
+May 30 17:58:16 :: [   365300] return 0/0/0 async 0/0/0
+May 30 17:58:18 :: [   365350] return 0/0/0 async 0/0/0
+May 30 17:58:20 :: [   365400] return 0/0/1 async 0/0/0
+May 30 17:58:22 :: [   365450] return 0/0/0 async 0/0/0
+May 30 17:58:24 :: [   365500] return 0/0/0 async 0/0/0
+May 30 17:58:26 :: [   365550] return 0/0/0 async 0/0/0
+May 30 17:58:28 :: [   365600] return 0/0/0 async 0/0/0
+May 30 17:58:30 :: [   365650] return 0/0/1 async 0/0/0
+May 30 17:58:32 :: [   365700] return 0/0/0 async 0/0/0
+May 30 17:58:34 :: [   365750] return 0/0/0 async 0/0/0
+May 30 17:58:36 :: [   365800] return 0/0/0 async 0/0/0
+May 30 17:58:38 :: [   365850] return 0/0/0 async 0/0/0
+May 30 17:58:40 :: [   365900] return 0/0/1 async 0/0/0
+May 30 17:58:42 :: [   365950] return 0/0/0 async 0/0/0
+May 30 17:58:44 :: [   366000] return 0/0/0 async 0/0/0
+May 30 17:58:46 :: [   366050] return 0/0/0 async 0/0/0
+May 30 17:58:48 :: [   366100] return 0/0/0 async 0/0/0
+May 30 17:58:50 :: [   366150] return 0/0/1 async 0/0/0
+May 30 17:58:52 :: [   366200] return 0/0/0 async 0/0/0
+May 30 17:58:54 :: [   366250] return 0/0/0 async 0/0/0
+May 30 17:58:56 :: [   366300] return 0/0/0 async 0/0/0
+May 30 17:58:58 :: [   366350] return 0/0/0 async 0/0/0
+May 30 17:59:00 :: [   366400] return 0/0/1 async 0/0/0
+May 30 17:59:02 :: [   366450] return 0/0/0 async 0/0/0
+May 30 17:59:04 :: [   366500] return 0/0/0 async 0/0/0
+May 30 17:59:06 :: [   366550] return 0/0/0 async 0/0/0
+May 30 17:59:08 :: [   366600] return 0/0/0 async 0/0/0
+May 30 17:59:10 :: [   366650] return 0/0/1 async 0/0/0
+May 30 17:59:12 :: [   366700] return 0/0/0 async 0/0/0
+May 30 17:59:14 :: [   366750] return 0/0/0 async 0/0/0
+May 30 17:59:16 :: [   366800] return 0/0/0 async 0/0/0
+May 30 17:59:18 :: [   366850] return 0/0/0 async 0/0/0
+May 30 17:59:20 :: [   366900] return 0/0/1 async 0/0/0
+May 30 17:59:22 :: [   366950] return 0/0/0 async 0/0/0
+May 30 17:59:24 :: [   367000] return 0/0/0 async 0/0/0
+May 30 17:59:26 :: [   367050] return 0/0/0 async 0/0/0
+May 30 17:59:28 :: [   367100] return 0/0/0 async 0/0/0
+May 30 17:59:30 :: [   367150] return 0/0/1 async 0/0/0
+May 30 17:59:32 :: [   367200] return 0/0/0 async 0/0/0
+May 30 17:59:34 :: [   367250] return 0/0/0 async 0/0/0
+May 30 17:59:36 :: [   367300] return 0/0/0 async 0/0/0
+May 30 17:59:38 :: [   367350] return 0/0/0 async 0/0/0
+May 30 17:59:40 :: [   367400] return 0/0/1 async 0/0/0
+May 30 17:59:42 :: [   367450] return 0/0/0 async 0/0/0
+May 30 17:59:44 :: [   367500] return 0/0/0 async 0/0/0
+May 30 17:59:46 :: [   367550] return 0/0/0 async 0/0/0
+May 30 17:59:48 :: [   367600] return 0/0/0 async 0/0/0
+May 30 17:59:50 :: [   367650] return 0/0/1 async 0/0/0
+May 30 17:59:52 :: [   367700] return 0/0/0 async 0/0/0
+May 30 17:59:54 :: [   367750] return 0/0/0 async 0/0/0
+May 30 17:59:56 :: [   367800] return 0/0/0 async 0/0/0
+May 30 17:59:58 :: [   367850] return 0/0/0 async 0/0/0
+May 30 18:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 17)

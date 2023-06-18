@@ -1,0 +1,348 @@
+May 30 22:00:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:01:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:02:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:02:49 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 22:03:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:03:43 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 22:04:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:05:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:06:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:07:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:08:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:09:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:09:43 :: RegisterRaceNumMap Pile Of Clams 20055
+May 30 22:10:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:11:12 :: RegisterRaceNumMap Vein Of Diamond Ore 20047
+May 30 22:11:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:12:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:13:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:14:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:14:48 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 560265030 output input_len 0, ptr 0x2b898100
+May 30 22:14:48 :: SYSTEM: closing socket. DESC #18
+May 30 22:14:57 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 2922996513 output input_len 0, ptr 0x2b898100
+May 30 22:14:57 :: Handshake: lower than zero -20
+May 30 22:14:57 :: Handshake: lower than zero -1
+May 30 22:14:57 :: Handshake: client_time 0 server_time 29896933
+May 30 22:14:58 :: LOGIN_BY_KEY: abyss key 901800825
+May 30 22:14:58 :: LoginSuccess
+May 30 22:14:58 :: 	player(abyss).job(0)
+May 30 22:14:58 :: 	player().job(0)
+May 30 22:14:58 :: 	player(bella).job(3)
+May 30 22:14:58 :: 	player(hrss).job(5)
+May 30 22:14:58 :: 	player().job(0)
+May 30 22:14:58 :: success to 51.254.23.214:30243
+May 30 22:14:58 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 22:14:58 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 22:14:58 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 22:14:58 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 22:14:58 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 22:14:58 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 22:14:58 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 22:14:58 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 22:14:58 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 22:14:58 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 22:14:58 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 22:14:58 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 22:14:58 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 22:14:58 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 22:14:58 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 22:14:58 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 22:14:58 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 22:14:58 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 22:14:58 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 22:14:58 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 22:14:58 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 22:14:58 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 22:14:58 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 22:14:58 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 22:14:58 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 22:14:58 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 22:14:58 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 22:14:58 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 22:14:58 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 22:14:58 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 22:14:58 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 22:14:58 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 22:14:58 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 22:14:58 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 22:14:58 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 22:14:58 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 22:14:58 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 22:14:58 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 22:14:58 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 22:14:58 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 22:14:58 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 22:14:58 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 22:14:58 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 22:14:58 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 22:14:58 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 22:14:58 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 22:14:58 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 22:14:58 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 22:14:58 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 22:14:58 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 22:14:58 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 22:14:58 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 22:14:58 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 22:14:58 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 22:14:58 :: success to 51.254.23.214:30247
+May 30 22:14:58 :: success to 51.254.23.214:30247
+May 30 22:14:58 :: success to 51.254.23.214:30247
+May 30 22:14:58 :: InputDB::login_success: abyss
+May 30 22:14:58 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 1462822941 output input_len 0, ptr 0x2b898600
+May 30 22:14:58 :: MARK_SERVER: Login
+May 30 22:14:59 :: LargePacket Size 8
+May 30 22:14:59 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 22:14:59 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 22:14:59 :: SYSTEM: closing socket. DESC #19
+May 30 22:15:04 :: SYSTEM: closing socket. DESC #18
+May 30 22:15:04 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 278062645 output input_len 0, ptr 0x2b898100
+May 30 22:15:05 :: Handshake: lower than zero -20
+May 30 22:15:05 :: Handshake: client_time 0 server_time 29904173
+May 30 22:15:05 :: LOGIN_BY_KEY: abyss key 901800825
+May 30 22:15:05 :: LoginSuccess
+May 30 22:15:05 :: 	player(abyss).job(0)
+May 30 22:15:05 :: 	player().job(0)
+May 30 22:15:05 :: 	player(bella).job(3)
+May 30 22:15:05 :: 	player(hrss).job(5)
+May 30 22:15:05 :: 	player().job(0)
+May 30 22:15:05 :: success to 51.254.23.214:30243
+May 30 22:15:05 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 22:15:05 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 22:15:05 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 22:15:05 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 22:15:05 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 22:15:05 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 22:15:05 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 22:15:05 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 22:15:05 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 22:15:05 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 22:15:05 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 22:15:05 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 22:15:05 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 22:15:05 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 22:15:05 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 22:15:05 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 22:15:05 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 22:15:05 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 22:15:05 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 22:15:05 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 22:15:05 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 22:15:05 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 22:15:05 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 22:15:05 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 22:15:05 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 22:15:05 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 22:15:05 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 22:15:05 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 22:15:05 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 22:15:05 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 22:15:05 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 22:15:05 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 22:15:05 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 22:15:05 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 22:15:05 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 22:15:05 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 22:15:05 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 22:15:05 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 22:15:05 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 22:15:05 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 22:15:05 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 22:15:05 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 22:15:05 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 22:15:05 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 22:15:05 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 22:15:05 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 22:15:05 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 22:15:05 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 22:15:05 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 22:15:05 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 22:15:05 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 22:15:05 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 22:15:05 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 22:15:05 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 22:15:05 :: success to 51.254.23.214:30247
+May 30 22:15:05 :: success to 51.254.23.214:30247
+May 30 22:15:05 :: success to 51.254.23.214:30247
+May 30 22:15:05 :: InputDB::login_success: abyss
+May 30 22:15:05 :: player_select: login: abyss index: 0
+May 30 22:15:05 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 22:15:05 :: PK_MODE: abyss 3
+May 30 22:15:05 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 2198 PTR: 0x2892e700
+May 30 22:15:05 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(1120100, 11200)
+May 30 22:15:05 :: InputDB: player_load abyss 1120100x11200x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 22:15:05 :: ITEM_LOAD: COUNT abyss 341
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 22:15:05 :: QUEST_LOAD: count 56
+May 30 22:15:05 ::             biologist.delivered 1
+May 30 22:15:05 ::             biologist.time 1685442993
+May 30 22:15:05 ::             comandos_tm.iniciar 1
+May 30 22:15:05 ::             deviltower_zone.ch 1
+May 30 22:15:05 ::             deviltower_zone.cooldown 1685456377
+May 30 22:15:05 ::             deviltower_zone.disconnect 1685456114
+May 30 22:15:05 ::             deviltower_zone.enter_time 1685455777
+May 30 22:15:05 ::             deviltower_zone.idx 660000
+May 30 22:15:05 ::             dragonlair_zone.ch 1
+May 30 22:15:05 ::             dragonlair_zone.cooldown 1659211304
+May 30 22:15:05 ::             dragonlair_zone.disconnect 1659206253
+May 30 22:15:05 ::             dragonlair_zone.enter_time 1659205904
+May 30 22:15:05 ::             dragonlair_zone.idx 2080001
+May 30 22:15:05 ::             enchanted_forest.cooldown 1685413567
+May 30 22:15:05 ::             enchanted_forest.disconnect 1685408497
+May 30 22:15:05 ::             enchanted_forest.idx 2100000
+May 30 22:15:05 ::             exp.stat 1
+May 30 22:15:05 ::             give_basic_weapon.__status 668443392
+May 30 22:15:05 ::             guild_manage.new_disband_time 1685407521
+May 30 22:15:05 ::             horse_name.valid_till 1784830353
+May 30 22:15:05 ::             hydra_zone.ch 1
+May 30 22:15:05 ::             hydra_zone.cooldown 1685414368
+May 30 22:15:05 ::             hydra_zone.disconnect 1685409294
+May 30 22:15:05 ::             hydra_zone.enter_time 1685408968
+May 30 22:15:05 ::             hydra_zone.idx 3530000
+May 30 22:15:05 ::             item_attr_mission.attr_type_1 5
+May 30 22:15:05 ::             item_attr_mission.attr_type_2 21
+May 30 22:15:05 ::             item_attr_mission.attr_type_3 22
+May 30 22:15:05 ::             item_attr_mission.attr_type_4 9
+May 30 22:15:05 ::             item_attr_mission.attr_value_1 12
+May 30 22:15:05 ::             item_attr_mission.attr_value_2 20
+May 30 22:15:05 ::             item_attr_mission.attr_value_3 20
+May 30 22:15:05 ::             item_attr_mission.attr_value_4 20
+May 30 22:15:05 ::             item_attr_mission.id_ask_elected 4
+May 30 22:15:05 ::             item_attr_mission.saved_day 8
+May 30 22:15:05 ::             main_quest_lv1.101 15
+May 30 22:15:05 ::             main_quest_lv1.102 10
+May 30 22:15:05 ::             main_quest_lv1.103 8
+May 30 22:15:05 ::             main_quest_lv1.104 8
+May 30 22:15:05 ::             main_quest_lv1.171 15
+May 30 22:15:05 ::             main_quest_lv1.172 10
+May 30 22:15:05 ::             main_quest_lv1.173 8
+May 30 22:15:05 ::             main_quest_lv1.174 8
+May 30 22:15:05 ::             main_quest_lv1.__status -1693753306
+May 30 22:15:05 ::             pyramide_zone.ch 1
+May 30 22:15:05 ::             pyramide_zone.cooldown 1685411947
+May 30 22:15:05 ::             pyramide_zone.disconnect 1685408926
+May 30 22:15:05 ::             pyramide_zone.enter_time 1685408347
+May 30 22:15:05 ::             pyramide_zone.idx 3570000
+May 30 22:15:05 ::             rune.__status 777843330
+May 30 22:15:05 ::             rune_zone.ch 1
+May 30 22:15:05 ::             rune_zone.cooldown 1685416006
+May 30 22:15:05 ::             rune_zone.disconnect 1685409238
+May 30 22:15:05 ::             rune_zone.enter_time 1685408806
+May 30 22:15:05 ::             rune_zone.idx 2180000
+May 30 22:15:05 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 22:15:06 :: SAVE: abyss 1120100x11200
+May 30 22:15:06 :: VERSION: abyss 1215955205 metin2client.exe
+May 30 22:15:08 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 3419819873 output input_len 0, ptr 0x2b898600
+May 30 22:15:08 :: SHOW: abyss 1120100x11200x0
+May 30 22:15:08 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 22:15:08 :: ENTERGAME: abyss 1120100x11200x0 46.247.137.201 map_index 68
+May 30 22:15:08 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 22:15:08 :: HORSE STAMINA REGEN EVENT CREATE 0x54c83f40
+May 30 22:15:08 :: SendLandList map 68 count 0 elem_size: 0
+May 30 22:15:08 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 0 16857892min
+May 30 22:15:08 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 1 16857892min
+May 30 22:15:08 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 2 16857892min
+May 30 22:15:08 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 3 16857892min
+May 30 22:15:08 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 4 16857892min
+May 30 22:15:08 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 5 16857892min
+May 30 22:15:08 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16857892
+May 30 22:15:08 :: PREMIUM: abyss type 6 16857892min
+May 30 22:15:08 :: VERSION CHECK 1215955205 1215955205
+May 30 22:15:08 :: reallocating buffer to 4096, current 1024
+May 30 22:15:08 :: QUEST_LOAD: Login pc 14 by event
+May 30 22:15:08 :: WarpSet abyss 969600 278400 current map 68 target map 41
+May 30 22:15:08 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 22:15:09 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 22:15:09 :: SAVE: abyss 969600x278400
+May 30 22:15:09 :: QUEST clear timer 0
+May 30 22:15:09 :: SYSTEM: closing socket. DESC #18
+May 30 22:15:20 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:15:22 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 4213060740 output input_len 0, ptr 0x2b898100
+May 30 22:15:23 :: SYSTEM: closing socket. DESC #19
+May 30 22:15:23 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 3797108567 output input_len 0, ptr 0x2b898600
+May 30 22:15:23 :: SYSTEM: closing socket. DESC #18
+May 30 22:15:23 :: SYSTEM: closing socket. DESC #19
+May 30 22:16:09 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 22:16:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:16:22 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 22:17:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:18:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:18:49 :: RegisterRaceNumMap Vein Of Crystal Ore 20057
+May 30 22:19:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:20:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:21:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:22:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:23:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:24:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:24:29 :: RegisterRaceNumMap Pile Of Clams 20055
+May 30 22:25:19 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:26:16 :: RegisterRaceNumMap Vein Of Ebony Ore 20054
+May 30 22:26:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:27:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:28:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:29:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:30:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:31:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:32:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:32:57 :: RegisterRaceNumMap Vein Of Crystal Ore 20057
+May 30 22:33:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:33:50 :: RegisterRaceNumMap Vein Of Ebony Ore 20054
+May 30 22:34:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:35:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:36:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:37:18 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:38:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:39:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:40:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:41:06 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 22:41:15 :: RegisterRaceNumMap Vein Of Crystal Ore 20057
+May 30 22:41:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:42:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:43:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:44:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:45:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:46:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:47:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:48:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:48:48 :: RegisterRaceNumMap Vein Of White Gold Ore 20056
+May 30 22:49:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:49:37 :: RegisterRaceNumMap Vein Of White Gold Ore 20056
+May 30 22:50:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:51:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:52:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:53:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:54:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:55:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:56:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:56:20 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 22:57:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:57:50 :: RegisterRaceNumMap Pile Of Clams 20055
+May 30 22:58:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 22:59:17 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 23:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 22)

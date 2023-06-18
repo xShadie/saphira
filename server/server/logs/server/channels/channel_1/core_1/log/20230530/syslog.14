@@ -1,0 +1,2644 @@
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060359 752621
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059413 753188
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059451 752500
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060417 751407
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059850 751564
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060277 752551
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059737 752031
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060653 752641
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059926 751647
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060671 753191
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059556 752199
+May 30 14:00:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1060017 752098
+May 30 14:00:54 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:01:54 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:02:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059962 751648
+May 30 14:02:43 :: SpawnMob: BAN_PK position for mob spawn ????? 1503 at 1059758 752089
+May 30 14:02:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:03:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:04:09 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 3057777922 output input_len 0, ptr 0x2b898100
+May 30 14:04:11 :: SYSTEM: closing socket. DESC #18
+May 30 14:04:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:05:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:06:14 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 1463442338 output input_len 0, ptr 0x2b898100
+May 30 14:06:14 :: Handshake: client_time 0 server_time 573651
+May 30 14:06:15 :: LOGIN_BY_KEY: abyss key 2022420422
+May 30 14:06:15 :: LoginSuccess
+May 30 14:06:15 :: 	player(abyss).job(0)
+May 30 14:06:15 :: 	player(Testing).job(2)
+May 30 14:06:15 :: 	player().job(0)
+May 30 14:06:15 :: 	player().job(0)
+May 30 14:06:15 :: 	player().job(0)
+May 30 14:06:15 :: success to 51.254.23.214:30247
+May 30 14:06:15 :: success to 51.254.23.214:30243
+May 30 14:06:15 :: InputDB::login_success: abyss
+May 30 14:06:16 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 3010792532 output input_len 0, ptr 0x2b898600
+May 30 14:06:17 :: MARK_SERVER: Login
+May 30 14:06:17 :: LargePacket Size 8
+May 30 14:06:17 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:06:17 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 1 size 1436)
+May 30 14:06:17 :: LargePacket Size 1426
+May 30 14:06:17 :: reallocating buffer to 4096, current 1024
+May 30 14:06:18 :: SYSTEM: closing socket. DESC #19
+May 30 14:06:22 :: SYSTEM: closing socket. DESC #18
+May 30 14:06:24 :: P2P: Login abyss
+May 30 14:06:34 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2985018359 output input_len 0, ptr 0x2b898100
+May 30 14:06:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:07:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:08:21 :: P2P: Logout abyss
+May 30 14:08:22 :: SYSTEM: closing socket. DESC #18
+May 30 14:08:22 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 3352626926 output input_len 0, ptr 0x2b898100
+May 30 14:08:25 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 1113353980 output input_len 0, ptr 0x2b898600
+May 30 14:08:26 :: Handshake: lower than zero -20
+May 30 14:08:26 :: Handshake: client_time 0 server_time 705167
+May 30 14:08:26 :: LOGIN_BY_KEY: abyss key 2022420422
+May 30 14:08:26 :: LoginSuccess
+May 30 14:08:26 :: 	player(abyss).job(0)
+May 30 14:08:26 :: 	player(Testing).job(2)
+May 30 14:08:26 :: 	player().job(0)
+May 30 14:08:26 :: 	player().job(0)
+May 30 14:08:26 :: 	player().job(0)
+May 30 14:08:26 :: success to 51.254.23.214:30247
+May 30 14:08:26 :: success to 51.254.23.214:30243
+May 30 14:08:26 :: InputDB::login_success: abyss
+May 30 14:08:27 :: player_select: login: abyss index: 1
+May 30 14:08:27 :: PK_MODE: Testing 3
+May 30 14:08:27 :: PLAYER_LOAD: Testing PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 6290 PTR: 0x77ee3e00
+May 30 14:08:27 :: InputDB: player_load Testing 876099x219286x0 LEVEL 8 MOV_SPEED 200 JOB 0 ATG 2 DFG 26 GMLv 0
+May 30 14:08:27 :: ITEM_LOAD: COUNT Testing 39
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:08:27 :: QUEST_LOAD: count 5
+May 30 14:08:27 ::             exp.stat 1
+May 30 14:08:27 ::             give_basic_weapon.__status 668443392
+May 30 14:08:27 ::             horse_name.valid_till 1785344189
+May 30 14:08:27 ::             main_quest_lv1.__status -1147521841
+May 30 14:08:27 ::             pvp.BLOCK_VIEW_EQUIPMENT 1
+May 30 14:08:27 :: SAVE: Testing 876099x219286
+May 30 14:08:28 :: VERSION: Testing 1215955205 Demonz2.exe
+May 30 14:08:29 :: SYSTEM: closing socket. DESC #18
+May 30 14:08:29 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 3594519078 output input_len 0, ptr 0x2b898100
+May 30 14:08:30 :: SHOW: Testing 876099x219286x0
+May 30 14:08:30 :: AddAffect Testing type 215 apply 0 0 flag 28 duration 5
+May 30 14:08:30 :: ENTERGAME: Testing 876099x219286x0 88.24.209.246 map_index 43
+May 30 14:08:30 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 14:08:30 :: HORSE STAMINA REGEN EVENT CREATE 0x77eea300
+May 30 14:08:30 :: SendLandList map 43 count 0 elem_size: 0
+May 30 14:08:30 :: AddAffect Testing type 500 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 0 16887090min
+May 30 14:08:30 :: AddAffect Testing type 501 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 1 16887090min
+May 30 14:08:30 :: AddAffect Testing type 502 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 2 16887090min
+May 30 14:08:30 :: AddAffect Testing type 503 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 3 16887090min
+May 30 14:08:30 :: AddAffect Testing type 504 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 4 16887090min
+May 30 14:08:30 :: AddAffect Testing type 505 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 5 16887090min
+May 30 14:08:30 :: AddAffect Testing type 506 apply 0 0 flag 0 duration 16887090
+May 30 14:08:30 :: PREMIUM: Testing type 6 16887090min
+May 30 14:08:30 :: VERSION CHECK 1215955205 1215955205
+May 30 14:08:30 :: reallocating buffer to 4096, current 1024
+May 30 14:08:30 :: HORSENAME: update 39 Testing Horse
+May 30 14:08:30 :: QUEST_LOAD: Login pc 39 by event
+May 30 14:08:30 :: AddAffect Testing type 999 apply 0 0 flag 0 duration 31536000
+May 30 14:08:36 :: COMMAND: Testing: quit
+May 30 14:08:40 :: SYSTEM: closing socket. DESC #18
+May 30 14:08:40 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2418435622 output input_len 0, ptr 0x2b898100
+May 30 14:08:40 :: DISCONNECT: Testing (DESC::~DESC)
+May 30 14:08:40 :: SAVE: Testing 876099x219286
+May 30 14:08:40 :: QUEST clear timer 0
+May 30 14:08:40 :: SYSTEM: closing socket. DESC #19
+May 30 14:08:40 :: SYSTEM: closing socket. DESC #18
+May 30 14:08:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:09:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:10:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:11:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:12:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:13:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:14:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:15:53 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:16:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:17:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:17:56 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 4270633189 output input_len 0, ptr 0x2b898100
+May 30 14:17:56 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 298805627 output input_len 0, ptr 0x2b898600
+May 30 14:17:57 :: SYSTEM: closing socket. DESC #18
+May 30 14:17:57 :: SYSTEM: closing socket. DESC #19
+May 30 14:18:01 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 1098226566 output input_len 0, ptr 0x2b898600
+May 30 14:18:02 :: Handshake: client_time 0 server_time 1281290
+May 30 14:18:02 :: LOGIN_BY_KEY: abyss key 1545636676
+May 30 14:18:02 :: LoginSuccess
+May 30 14:18:02 :: 	player(abyss).job(0)
+May 30 14:18:02 :: 	player(Testing).job(2)
+May 30 14:18:02 :: 	player().job(0)
+May 30 14:18:02 :: 	player().job(0)
+May 30 14:18:02 :: 	player().job(0)
+May 30 14:18:02 :: success to 51.254.23.214:30247
+May 30 14:18:02 :: success to 51.254.23.214:30243
+May 30 14:18:02 :: InputDB::login_success: abyss
+May 30 14:18:04 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 2218466225 output input_len 0, ptr 0x2b898100
+May 30 14:18:05 :: MARK_SERVER: Login
+May 30 14:18:06 :: LargePacket Size 8
+May 30 14:18:06 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:18:06 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:18:06 :: SYSTEM: closing socket. DESC #19
+May 30 14:18:07 :: SYSTEM: closing socket. DESC #18
+May 30 14:18:07 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2474245358 output input_len 0, ptr 0x2b898600
+May 30 14:18:07 :: Handshake: client_time 0 server_time 1286370
+May 30 14:18:07 :: SYSTEM: closing socket. DESC #18
+May 30 14:18:07 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2054444935 output input_len 0, ptr 0x2b898600
+May 30 14:18:08 :: Handshake: client_time 0 server_time 1287050
+May 30 14:18:08 :: LOGIN_BY_KEY: abyss key 1086880090
+May 30 14:18:08 :: LoginSuccess
+May 30 14:18:08 :: 	player(abyss).job(0)
+May 30 14:18:08 :: 	player(Testing).job(2)
+May 30 14:18:08 :: 	player().job(0)
+May 30 14:18:08 :: 	player().job(0)
+May 30 14:18:08 :: 	player().job(0)
+May 30 14:18:08 :: success to 51.254.23.214:30247
+May 30 14:18:08 :: success to 51.254.23.214:30243
+May 30 14:18:08 :: InputDB::login_success: abyss
+May 30 14:18:09 :: player_select: login: abyss index: 1
+May 30 14:18:09 :: PK_MODE: Testing 3
+May 30 14:18:09 :: PLAYER_LOAD: Testing PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 268 PTR: 0x77f257c0
+May 30 14:18:09 :: InputDB: player_load Testing 876099x219286x0 LEVEL 8 MOV_SPEED 200 JOB 0 ATG 2 DFG 26 GMLv 0
+May 30 14:18:09 :: ITEM_LOAD: COUNT Testing 39
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:18:09 :: QUEST_LOAD: count 5
+May 30 14:18:09 ::             exp.stat 1
+May 30 14:18:09 ::             give_basic_weapon.__status 668443392
+May 30 14:18:09 ::             horse_name.valid_till 1785344189
+May 30 14:18:09 ::             main_quest_lv1.__status -1147521841
+May 30 14:18:09 ::             pvp.BLOCK_VIEW_EQUIPMENT 1
+May 30 14:18:10 :: SAVE: Testing 876099x219286
+May 30 14:18:13 :: VERSION: Testing 1215955205 Demonz2.exe
+May 30 14:18:19 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 508351223 output input_len 0, ptr 0x2b898100
+May 30 14:18:20 :: SHOW: Testing 876099x219286x0
+May 30 14:18:20 :: AddAffect Testing type 215 apply 0 0 flag 28 duration 5
+May 30 14:18:20 :: ENTERGAME: Testing 876099x219286x0 88.24.209.246 map_index 43
+May 30 14:18:20 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 14:18:20 :: HORSE STAMINA REGEN EVENT CREATE 0x77f3a0e0
+May 30 14:18:20 :: SendLandList map 43 count 0 elem_size: 0
+May 30 14:18:20 :: AddAffect Testing type 500 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 0 16886500min
+May 30 14:18:20 :: AddAffect Testing type 501 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 1 16886500min
+May 30 14:18:20 :: AddAffect Testing type 502 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 2 16886500min
+May 30 14:18:20 :: AddAffect Testing type 503 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 3 16886500min
+May 30 14:18:20 :: AddAffect Testing type 504 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 4 16886500min
+May 30 14:18:20 :: AddAffect Testing type 505 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 5 16886500min
+May 30 14:18:20 :: AddAffect Testing type 506 apply 0 0 flag 0 duration 16886500
+May 30 14:18:20 :: PREMIUM: Testing type 6 16886500min
+May 30 14:18:20 :: VERSION CHECK 1215955205 1215955205
+May 30 14:18:20 :: reallocating buffer to 4096, current 1024
+May 30 14:18:20 :: QUEST_LOAD: Login pc 39 by event
+May 30 14:18:20 :: AddAffect Testing type 999 apply 0 0 flag 0 duration 31536000
+May 30 14:18:33 :: QUEST ScriptButton pid 39 idx 65
+May 30 14:18:34 :: QUEST InputString pid 39 msg TELEPORTING#m1_yel
+May 30 14:18:34 :: QUEST remove items(vnum 0) count 0 of Testing[39]
+May 30 14:18:34 :: WarpSet Testing 63800 166400 current map 43 target map 21
+SYSERR: May 30 14:18:34 :: P2PSendSwitchbot: No switchbot found to transfer. (pid 39 source_port 30243 target_port 30247)
+May 30 14:18:34 :: DISCONNECT: Testing (DESC::~DESC)
+May 30 14:18:34 :: SAVE: Testing 63800x166400
+May 30 14:18:34 :: QUEST clear timer 0
+May 30 14:18:34 :: SYSTEM: closing socket. DESC #18
+May 30 14:18:35 :: SYSTEM: closing socket. DESC #19
+May 30 14:18:35 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 4180155414 output input_len 0, ptr 0x2b898100
+May 30 14:18:35 :: P2P: Login Testing
+May 30 14:18:39 :: SYSTEM: closing socket. DESC #18
+May 30 14:18:39 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2283417779 output input_len 0, ptr 0x2b898100
+May 30 14:18:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:19:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:20:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:21:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:22:49 :: P2P: Logout Testing
+May 30 14:22:50 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 2023656532 output input_len 0, ptr 0x2b898600
+May 30 14:22:50 :: SYSTEM: closing socket. DESC #18
+May 30 14:22:50 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 39725702 output input_len 0, ptr 0x2b898100
+May 30 14:22:51 :: MARK_SERVER: Login
+May 30 14:22:51 :: LargePacket Size 8
+May 30 14:22:51 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:22:51 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:22:51 :: SYSTEM: closing socket. DESC #19
+May 30 14:22:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:22:58 :: P2P: Login abyss
+May 30 14:23:01 :: SYSTEM: closing socket. DESC #18
+May 30 14:23:01 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 1498205270 output input_len 0, ptr 0x2b898100
+May 30 14:23:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:24:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:25:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:25:55 :: SYSTEM: new connection from [88.24.209.246] fd: 19 handshake 1391975998 output input_len 0, ptr 0x2b898600
+May 30 14:25:55 :: P2P: Logout abyss
+May 30 14:25:56 :: Handshake: lower than zero -39
+May 30 14:25:56 :: Handshake: client_time 0 server_time 1755377
+May 30 14:25:56 :: LOGIN_BY_KEY: abyss key 1086880090
+May 30 14:25:57 :: LoginSuccess
+May 30 14:25:57 :: 	player(abyss).job(0)
+May 30 14:25:57 :: 	player(Testing).job(2)
+May 30 14:25:57 :: 	player().job(0)
+May 30 14:25:57 :: 	player().job(0)
+May 30 14:25:57 :: 	player().job(0)
+May 30 14:25:57 :: success to 51.254.23.214:30243
+May 30 14:25:57 :: success to 51.254.23.214:30247
+May 30 14:25:57 :: InputDB::login_success: abyss
+May 30 14:25:57 :: SYSTEM: new connection from [88.24.209.246] fd: 20 handshake 2571024594 output input_len 0, ptr 0x5d7c3a00
+May 30 14:25:57 :: SYSTEM: closing socket. DESC #18
+May 30 14:25:57 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 2456674800 output input_len 0, ptr 0x2b898100
+May 30 14:25:57 :: player_select: login: abyss index: 0
+May 30 14:25:57 :: MARK_SERVER: Login
+May 30 14:25:57 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 14:25:57 :: PK_MODE: abyss 3
+May 30 14:25:57 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 2 PTR: 0x77ee3e00
+May 30 14:25:57 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(333100, 755900)
+May 30 14:25:57 :: InputDB: player_load abyss 333100x755900x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 14:25:57 :: ITEM_LOAD: COUNT abyss 334
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: RegisterRaceNumMap Royal Tiger (gold) 20122
+May 30 14:25:57 :: AddAffect abyss type 533 apply 53 20 flag 0 duration 86400
+May 30 14:25:57 :: AddAffect abyss type 533 apply 159 20 flag 0 duration 86400
+May 30 14:25:57 :: AddAffect abyss type 533 apply 162 8 flag 0 duration 86400
+May 30 14:25:57 :: AddAffect abyss type 533 apply 19 50 flag 0 duration 86400
+May 30 14:25:57 :: AddAffect abyss type 221 apply 109 20122 flag 0 duration 86400
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:25:57 :: QUEST_LOAD: count 42
+May 30 14:25:57 ::             biologist.delivered 1
+May 30 14:25:57 ::             biologist.time 1685442993
+May 30 14:25:57 ::             comandos_tm.iniciar 1
+May 30 14:25:57 ::             dragonlair_zone.ch 1
+May 30 14:25:57 ::             dragonlair_zone.cooldown 1659211304
+May 30 14:25:57 ::             dragonlair_zone.disconnect 1659206253
+May 30 14:25:57 ::             dragonlair_zone.enter_time 1659205904
+May 30 14:25:57 ::             dragonlair_zone.idx 2080001
+May 30 14:25:57 ::             enchanted_forest.cooldown 1685413567
+May 30 14:25:57 ::             enchanted_forest.disconnect 1685408497
+May 30 14:25:57 ::             enchanted_forest.idx 2100000
+May 30 14:25:57 ::             give_basic_weapon.__status 668443392
+May 30 14:25:57 ::             guild_manage.new_disband_time 1685407521
+May 30 14:25:57 ::             horse_name.valid_till 1784830353
+May 30 14:25:57 ::             hydra_zone.ch 1
+May 30 14:25:57 ::             hydra_zone.cooldown 1685414368
+May 30 14:25:57 ::             hydra_zone.disconnect 1685409294
+May 30 14:25:57 ::             hydra_zone.enter_time 1685408968
+May 30 14:25:57 ::             hydra_zone.idx 3530000
+May 30 14:25:57 ::             item_attr_mission.attr_type_1 5
+May 30 14:25:57 ::             item_attr_mission.attr_type_2 21
+May 30 14:25:57 ::             item_attr_mission.attr_type_3 22
+May 30 14:25:57 ::             item_attr_mission.attr_type_4 9
+May 30 14:25:57 ::             item_attr_mission.attr_value_1 12
+May 30 14:25:57 ::             item_attr_mission.attr_value_2 20
+May 30 14:25:57 ::             item_attr_mission.attr_value_3 20
+May 30 14:25:57 ::             item_attr_mission.attr_value_4 20
+May 30 14:25:57 ::             item_attr_mission.id_ask_elected 4
+May 30 14:25:57 ::             item_attr_mission.saved_day 8
+May 30 14:25:57 ::             main_quest_lv1.__status -1147521841
+May 30 14:25:57 ::             pyramide_zone.ch 1
+May 30 14:25:57 ::             pyramide_zone.cooldown 1685411947
+May 30 14:25:57 ::             pyramide_zone.disconnect 1685408926
+May 30 14:25:57 ::             pyramide_zone.enter_time 1685408347
+May 30 14:25:57 ::             pyramide_zone.idx 3570000
+May 30 14:25:57 ::             rune.__status 777843330
+May 30 14:25:57 ::             rune_zone.ch 1
+May 30 14:25:57 ::             rune_zone.cooldown 1685416006
+May 30 14:25:57 ::             rune_zone.disconnect 1685409238
+May 30 14:25:57 ::             rune_zone.enter_time 1685408806
+May 30 14:25:57 ::             rune_zone.idx 2180000
+May 30 14:25:57 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 14:25:57 :: LargePacket Size 8
+May 30 14:25:57 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:25:58 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:25:58 :: SAVE: abyss 333100x755900
+May 30 14:25:59 :: VERSION: abyss 1215955205 Demonz2.exe
+May 30 14:25:59 :: SYSTEM: closing socket. DESC #20
+May 30 14:25:59 :: SYSTEM: closing socket. DESC #18
+May 30 14:25:59 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 176661762 output input_len 0, ptr 0x2b898100
+May 30 14:26:00 :: SHOW: abyss 333100x755900x0
+May 30 14:26:00 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 14:26:00 :: ENTERGAME: abyss 333100x755900x0 88.24.209.246 map_index 64
+May 30 14:26:00 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 14:26:00 :: HORSE STAMINA REGEN EVENT CREATE 0x77f2d360
+May 30 14:26:00 :: SendLandList map 64 count 0 elem_size: 0
+May 30 14:26:00 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 0 16886040min
+May 30 14:26:00 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 1 16886040min
+May 30 14:26:00 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 2 16886040min
+May 30 14:26:00 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 3 16886040min
+May 30 14:26:00 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 4 16886040min
+May 30 14:26:00 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 5 16886040min
+May 30 14:26:00 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16886040
+May 30 14:26:00 :: PREMIUM: abyss type 6 16886040min
+May 30 14:26:00 :: VERSION CHECK 1215955205 1215955205
+May 30 14:26:00 :: reallocating buffer to 4096, current 1024
+May 30 14:26:00 :: HORSENAME: update 14 [TM]Ragnar Horse
+May 30 14:26:00 :: QUEST_LOAD: Login pc 14 by event
+May 30 14:26:00 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 14:26:01 :: RegisterRaceNumMap Bonsai 34066
+May 30 14:26:01 :: AddAffect abyss type 587 apply 0 0 flag 50057413 duration 1892160000
+May 30 14:26:07 :: SECTREE DIFFER: abyss 51x118 was 52x118 dist 1.0m
+May 30 14:26:07 :: SECTREE DIFFER: abyss 51x117 was 51x118 dist 1.0m
+May 30 14:26:07 :: SECTREE DIFFER: abyss 52x117 was 51x117 dist 1.0m
+May 30 14:26:09 :: SECTREE DIFFER: abyss 52x118 was 52x117 dist 1.0m
+May 30 14:26:10 :: SECTREE DIFFER: abyss 52x117 was 52x118 dist 1.0m
+May 30 14:26:20 :: AddAffect abyss type 209 apply 0 0 flag 4 duration 31
+May 30 14:26:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:26 :: SAVE: abyss 334218x752275
+May 30 14:26:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:27 :: GIVE_GOLD: abyss 2584
+May 30 14:26:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:27 :: GIVE_GOLD: abyss 935
+May 30 14:26:27 :: GIVE_GOLD: abyss 935
+May 30 14:26:27 :: GIVE_GOLD: abyss 935
+May 30 14:26:27 :: SAVE: abyss 334218x752275
+May 30 14:26:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:27 :: GIVE_GOLD: abyss 1095
+May 30 14:26:27 :: GIVE_GOLD: abyss 1095
+May 30 14:26:27 :: GIVE_GOLD: abyss 1095
+May 30 14:26:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:26:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:28 :: GIVE_GOLD: abyss 890
+May 30 14:26:28 :: GIVE_GOLD: abyss 890
+May 30 14:26:28 :: GIVE_GOLD: abyss 890
+May 30 14:26:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:28 :: GIVE_GOLD: abyss 2294
+May 30 14:26:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:28 :: SAVE: abyss 334218x752275
+May 30 14:26:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:26:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:29 :: GIVE_GOLD: abyss 1037
+May 30 14:26:29 :: GIVE_GOLD: abyss 1037
+May 30 14:26:29 :: GIVE_GOLD: abyss 1037
+May 30 14:26:30 :: SAVE: abyss 334218x752275
+May 30 14:26:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:31 :: GIVE_GOLD: abyss 1497
+May 30 14:26:31 :: GIVE_GOLD: abyss 1497
+May 30 14:26:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:32 :: SAVE: abyss 334218x752275
+May 30 14:26:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:26:32 :: GIVE_GOLD: abyss 2863
+May 30 14:26:33 :: COMMAND: abyss: cannot_dead
+May 30 14:26:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:33 :: GIVE_GOLD: abyss 1336
+May 30 14:26:33 :: GIVE_GOLD: abyss 1336
+May 30 14:26:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:33 :: SAVE: abyss 334218x752275
+May 30 14:26:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:34 :: SAVE: abyss 334218x752275
+May 30 14:26:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:35 :: GIVE_GOLD: abyss 2855
+May 30 14:26:35 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:26:35 :: SAVE: abyss 334218x752275
+May 30 14:26:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:38 :: SAVE: abyss 334218x752275
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:38 :: GIVE_GOLD: abyss 2367
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:38 :: GIVE_GOLD: abyss 3382
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:38 :: GIVE_GOLD: abyss 2829
+May 30 14:26:39 :: SAVE: abyss 334218x752275
+May 30 14:26:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:40 :: GIVE_GOLD: abyss 740
+May 30 14:26:40 :: GIVE_GOLD: abyss 740
+May 30 14:26:40 :: GIVE_GOLD: abyss 740
+May 30 14:26:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:26:40 :: GIVE_GOLD: abyss 1019
+May 30 14:26:40 :: GIVE_GOLD: abyss 1019
+May 30 14:26:40 :: GIVE_GOLD: abyss 1019
+May 30 14:26:41 :: SAVE: abyss 334218x752275
+May 30 14:26:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:42 :: SAVE: abyss 334218x752275
+May 30 14:26:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:43 :: GIVE_GOLD: abyss 1353
+May 30 14:26:43 :: GIVE_GOLD: abyss 1353
+May 30 14:26:43 :: SAVE: abyss 334218x752275
+May 30 14:26:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:44 :: GIVE_GOLD: abyss 1350
+May 30 14:26:44 :: GIVE_GOLD: abyss 1350
+May 30 14:26:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:44 :: GIVE_GOLD: abyss 2369
+May 30 14:26:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:45 :: SAVE: abyss 334218x752275
+May 30 14:26:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:26:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:46 :: GIVE_GOLD: abyss 962
+May 30 14:26:46 :: GIVE_GOLD: abyss 962
+May 30 14:26:46 :: GIVE_GOLD: abyss 962
+May 30 14:26:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:46 :: GIVE_GOLD: abyss 3030
+May 30 14:26:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:47 :: GIVE_GOLD: abyss 1224
+May 30 14:26:47 :: GIVE_GOLD: abyss 1224
+May 30 14:26:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:47 :: GIVE_GOLD: abyss 819
+May 30 14:26:47 :: GIVE_GOLD: abyss 819
+May 30 14:26:47 :: GIVE_GOLD: abyss 819
+May 30 14:26:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:47 :: SAVE: abyss 334218x752275
+May 30 14:26:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:48 :: GIVE_GOLD: abyss 2854
+May 30 14:26:48 :: SAVE: abyss 334218x752275
+May 30 14:26:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:48 :: GIVE_GOLD: abyss 699
+May 30 14:26:48 :: GIVE_GOLD: abyss 699
+May 30 14:26:48 :: GIVE_GOLD: abyss 699
+May 30 14:26:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:49 :: SAVE: abyss 334218x752275
+May 30 14:26:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:50 :: GIVE_GOLD: abyss 2551
+May 30 14:26:50 :: SAVE: abyss 334218x752275
+May 30 14:26:50 :: GIVE_GOLD: abyss 3657
+May 30 14:26:50 :: GIVE_GOLD: abyss 2837
+May 30 14:26:50 :: GIVE_GOLD: abyss 3430
+May 30 14:26:50 :: GIVE_GOLD: abyss 3587
+May 30 14:26:50 :: GIVE_GOLD: abyss 3516
+May 30 14:26:50 :: GIVE_GOLD: abyss 3328
+May 30 14:26:50 :: GIVE_GOLD: abyss 3115
+May 30 14:26:50 :: GIVE_GOLD: abyss 2732
+May 30 14:26:50 :: GIVE_GOLD: abyss 2955
+May 30 14:26:50 :: GIVE_GOLD: abyss 3745
+May 30 14:26:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:51 :: GIVE_GOLD: abyss 1470
+May 30 14:26:51 :: GIVE_GOLD: abyss 1470
+May 30 14:26:51 :: SAVE: abyss 334218x752275
+May 30 14:26:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:26:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:52 :: GIVE_GOLD: abyss 818
+May 30 14:26:52 :: GIVE_GOLD: abyss 818
+May 30 14:26:52 :: GIVE_GOLD: abyss 818
+May 30 14:26:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:26:52 :: GIVE_GOLD: abyss 956
+May 30 14:26:52 :: GIVE_GOLD: abyss 956
+May 30 14:26:52 :: GIVE_GOLD: abyss 956
+May 30 14:26:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:52 :: SAVE: abyss 334218x752275
+May 30 14:26:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:57 :: SAVE: abyss 334218x752275
+May 30 14:26:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:26:59 :: SAVE: abyss 334218x752275
+May 30 14:27:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: SAVE: abyss 334218x752275
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8009)
+May 30 14:27:01 :: DROP_ITEM: Yang Bag Medium 334347 752138 by Metin of Shadow
+May 30 14:27:01 :: DROP_ITEM: Stone of Cooldown +1 334327 752118 by Metin of Shadow
+May 30 14:27:01 :: DROP_ITEM: Chest of the Warrior 334347 752338 by Metin of Shadow
+May 30 14:27:01 :: DROP_ITEM: Papyrus Chaegirab 334207 752218 by Metin of Shadow
+May 30 14:27:01 :: DROP_ITEM: Enchant Item 334147 752218 by Metin of Shadow
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: GIVE_GOLD: abyss 775
+May 30 14:27:01 :: GIVE_GOLD: abyss 775
+May 30 14:27:01 :: GIVE_GOLD: abyss 775
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:01 :: GIVE_GOLD: abyss 2498
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 3391
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1023
+May 30 14:27:01 :: GIVE_GOLD: abyss 1023
+May 30 14:27:01 :: GIVE_GOLD: abyss 1023
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1115
+May 30 14:27:01 :: GIVE_GOLD: abyss 1115
+May 30 14:27:01 :: GIVE_GOLD: abyss 1115
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: GIVE_GOLD: abyss 849
+May 30 14:27:01 :: GIVE_GOLD: abyss 849
+May 30 14:27:01 :: GIVE_GOLD: abyss 849
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1721
+May 30 14:27:01 :: GIVE_GOLD: abyss 1721
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1414
+May 30 14:27:01 :: GIVE_GOLD: abyss 1414
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: GIVE_GOLD: abyss 677
+May 30 14:27:01 :: GIVE_GOLD: abyss 677
+May 30 14:27:01 :: GIVE_GOLD: abyss 677
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1487
+May 30 14:27:01 :: GIVE_GOLD: abyss 1487
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:01 :: GIVE_GOLD: abyss 714
+May 30 14:27:01 :: GIVE_GOLD: abyss 714
+May 30 14:27:01 :: GIVE_GOLD: abyss 714
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:01 :: GIVE_GOLD: abyss 2617
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 2807
+May 30 14:27:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:01 :: GIVE_GOLD: abyss 1164
+May 30 14:27:01 :: GIVE_GOLD: abyss 1164
+May 30 14:27:01 :: GIVE_GOLD: abyss 1164
+May 30 14:27:02 :: SAVE: abyss 334218x752275
+May 30 14:27:13 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:14 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:14 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:14 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:15 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:15 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:15 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:15 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:15 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:16 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: AddAffect abyss type 209 apply 0 0 flag 4 duration 31
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:17 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:18 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:19 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:19 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:19 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:27:20 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:20 :: GIVE_GOLD: abyss 982
+May 30 14:27:20 :: GIVE_GOLD: abyss 982
+May 30 14:27:20 :: GIVE_GOLD: abyss 982
+May 30 14:27:20 :: SAVE: abyss 334879x752633
+May 30 14:27:21 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:21 :: GIVE_GOLD: abyss 3428
+May 30 14:27:21 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:21 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:21 :: GIVE_GOLD: abyss 1383
+May 30 14:27:21 :: GIVE_GOLD: abyss 1383
+May 30 14:27:21 :: SAVE: abyss 334879x752633
+May 30 14:27:21 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:23 :: SAVE: abyss 334879x752633
+May 30 14:27:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:27:24 :: GIVE_GOLD: abyss 2426
+May 30 14:27:24 :: SAVE: abyss 334879x752633
+May 30 14:27:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:27:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:27:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:27:25 :: SAVE: abyss 334879x752633
+May 30 14:27:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:27:26 :: SAVE: abyss 334879x752633
+May 30 14:27:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:26 :: GIVE_GOLD: abyss 869
+May 30 14:27:26 :: GIVE_GOLD: abyss 869
+May 30 14:27:26 :: GIVE_GOLD: abyss 869
+May 30 14:27:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:27:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:26 :: GIVE_GOLD: abyss 1016
+May 30 14:27:26 :: GIVE_GOLD: abyss 1016
+May 30 14:27:26 :: GIVE_GOLD: abyss 1016
+May 30 14:27:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:26 :: GIVE_GOLD: abyss 1111
+May 30 14:27:26 :: GIVE_GOLD: abyss 1111
+May 30 14:27:26 :: GIVE_GOLD: abyss 1111
+May 30 14:27:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:27:27 :: GIVE_GOLD: abyss 776
+May 30 14:27:27 :: GIVE_GOLD: abyss 776
+May 30 14:27:27 :: GIVE_GOLD: abyss 776
+May 30 14:27:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:27 :: SAVE: abyss 334879x752633
+May 30 14:27:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:27:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:28 :: GIVE_GOLD: abyss 1244
+May 30 14:27:28 :: GIVE_GOLD: abyss 1244
+May 30 14:27:28 :: SAVE: abyss 334879x752633
+May 30 14:27:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:27:29 :: GIVE_GOLD: abyss 768
+May 30 14:27:29 :: GIVE_GOLD: abyss 768
+May 30 14:27:29 :: GIVE_GOLD: abyss 768
+May 30 14:27:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=704)
+May 30 14:27:30 :: GIVE_GOLD: abyss 3136
+May 30 14:27:30 :: SAVE: abyss 334879x752633
+May 30 14:27:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:27:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=705)
+May 30 14:27:31 :: GIVE_GOLD: abyss 1380
+May 30 14:27:31 :: GIVE_GOLD: abyss 1380
+May 30 14:27:31 :: SAVE: abyss 334879x752633
+May 30 14:27:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:27:31 :: GIVE_GOLD: abyss 3115
+May 30 14:27:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:31 :: GIVE_GOLD: abyss 1016
+May 30 14:27:31 :: GIVE_GOLD: abyss 1016
+May 30 14:27:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:31 :: GIVE_GOLD: abyss 822
+May 30 14:27:31 :: GIVE_GOLD: abyss 822
+May 30 14:27:31 :: GIVE_GOLD: abyss 822
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=705)
+May 30 14:27:32 :: GIVE_GOLD: abyss 1386
+May 30 14:27:32 :: GIVE_GOLD: abyss 1386
+May 30 14:27:32 :: SAVE: abyss 334879x752633
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:32 :: GIVE_GOLD: abyss 1147
+May 30 14:27:32 :: GIVE_GOLD: abyss 1147
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=705)
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:32 :: GIVE_GOLD: abyss 2340
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:27:33 :: GIVE_GOLD: abyss 3108
+May 30 14:27:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:33 :: GIVE_GOLD: abyss 1724
+May 30 14:27:33 :: GIVE_GOLD: abyss 1724
+May 30 14:27:33 :: SAVE: abyss 334879x752633
+May 30 14:27:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:34 :: GIVE_GOLD: abyss 1092
+May 30 14:27:34 :: GIVE_GOLD: abyss 1092
+May 30 14:27:34 :: GIVE_GOLD: abyss 1092
+May 30 14:27:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:34 :: GIVE_GOLD: abyss 2763
+May 30 14:27:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:27:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:34 :: SAVE: abyss 334879x752633
+May 30 14:27:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:34 :: GIVE_GOLD: abyss 936
+May 30 14:27:34 :: GIVE_GOLD: abyss 936
+May 30 14:27:34 :: GIVE_GOLD: abyss 936
+May 30 14:27:34 :: GIVE_GOLD: abyss 2619
+May 30 14:27:34 :: GIVE_GOLD: abyss 2472
+May 30 14:27:34 :: GIVE_GOLD: abyss 2375
+May 30 14:27:34 :: GIVE_GOLD: abyss 2084
+May 30 14:27:34 :: GIVE_GOLD: abyss 2562
+May 30 14:27:34 :: GIVE_GOLD: abyss 2218
+May 30 14:27:34 :: GIVE_GOLD: abyss 2512
+May 30 14:27:34 :: GIVE_GOLD: abyss 2477
+May 30 14:27:34 :: GIVE_GOLD: abyss 2786
+May 30 14:27:34 :: GIVE_GOLD: abyss 2716
+May 30 14:27:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:27:35 :: SAVE: abyss 334879x752633
+May 30 14:27:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:27:36 :: GIVE_GOLD: abyss 1275
+May 30 14:27:36 :: GIVE_GOLD: abyss 1275
+May 30 14:27:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2107)
+May 30 14:27:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2106)
+May 30 14:27:36 :: SAVE: abyss 334879x752633
+May 30 14:27:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:37 :: GIVE_GOLD: abyss 2840
+May 30 14:27:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:38 :: SAVE: abyss 334879x752633
+May 30 14:27:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:27:38 :: GIVE_GOLD: abyss 892
+May 30 14:27:38 :: GIVE_GOLD: abyss 892
+May 30 14:27:38 :: GIVE_GOLD: abyss 892
+May 30 14:27:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:38 :: GIVE_GOLD: abyss 1362
+May 30 14:27:38 :: GIVE_GOLD: abyss 1362
+May 30 14:27:39 :: SAVE: abyss 334879x752633
+May 30 14:27:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:39 :: GIVE_GOLD: abyss 3453
+May 30 14:27:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:39 :: GIVE_GOLD: abyss 1559
+May 30 14:27:39 :: GIVE_GOLD: abyss 1559
+May 30 14:27:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:27:40 :: GIVE_GOLD: abyss 3300
+May 30 14:27:40 :: SAVE: abyss 334879x752633
+May 30 14:27:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=706)
+May 30 14:27:40 :: GIVE_GOLD: abyss 1565
+May 30 14:27:40 :: GIVE_GOLD: abyss 1565
+May 30 14:27:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:40 :: GIVE_GOLD: abyss 932
+May 30 14:27:40 :: GIVE_GOLD: abyss 932
+May 30 14:27:40 :: GIVE_GOLD: abyss 932
+May 30 14:27:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:40 :: GIVE_GOLD: abyss 2806
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:27:41 :: GIVE_GOLD: abyss 3041
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:41 :: GIVE_GOLD: abyss 942
+May 30 14:27:41 :: GIVE_GOLD: abyss 942
+May 30 14:27:41 :: GIVE_GOLD: abyss 942
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:41 :: GIVE_GOLD: abyss 2524
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:41 :: GIVE_GOLD: abyss 1254
+May 30 14:27:41 :: GIVE_GOLD: abyss 1254
+May 30 14:27:41 :: SAVE: abyss 334879x752633
+May 30 14:27:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=707)
+May 30 14:27:41 :: GIVE_GOLD: abyss 1679
+May 30 14:27:41 :: GIVE_GOLD: abyss 1679
+May 30 14:27:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:27:42 :: GIVE_GOLD: abyss 1649
+May 30 14:27:42 :: GIVE_GOLD: abyss 1649
+May 30 14:27:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:42 :: GIVE_GOLD: abyss 1335
+May 30 14:27:42 :: GIVE_GOLD: abyss 1335
+May 30 14:27:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:42 :: SAVE: abyss 334879x752633
+May 30 14:27:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=707)
+May 30 14:27:43 :: GIVE_GOLD: abyss 1498
+May 30 14:27:43 :: GIVE_GOLD: abyss 1498
+May 30 14:27:43 :: SAVE: abyss 334879x752633
+May 30 14:27:44 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:27:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=706)
+May 30 14:27:45 :: GIVE_GOLD: abyss 1083
+May 30 14:27:45 :: GIVE_GOLD: abyss 1083
+May 30 14:27:45 :: GIVE_GOLD: abyss 1083
+May 30 14:27:46 :: SAVE: abyss 334879x752633
+May 30 14:27:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:27:46 :: GIVE_GOLD: abyss 1162
+May 30 14:27:46 :: GIVE_GOLD: abyss 1162
+May 30 14:27:46 :: GIVE_GOLD: abyss 1162
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:47 :: SAVE: abyss 334879x752633
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:47 :: GIVE_GOLD: abyss 941
+May 30 14:27:47 :: GIVE_GOLD: abyss 941
+May 30 14:27:47 :: GIVE_GOLD: abyss 941
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:47 :: GIVE_GOLD: abyss 883
+May 30 14:27:47 :: GIVE_GOLD: abyss 883
+May 30 14:27:47 :: GIVE_GOLD: abyss 883
+May 30 14:27:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:48 :: GIVE_GOLD: abyss 801
+May 30 14:27:48 :: GIVE_GOLD: abyss 801
+May 30 14:27:48 :: GIVE_GOLD: abyss 801
+May 30 14:27:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:48 :: GIVE_GOLD: abyss 873
+May 30 14:27:48 :: GIVE_GOLD: abyss 873
+May 30 14:27:48 :: GIVE_GOLD: abyss 873
+May 30 14:27:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:48 :: GIVE_GOLD: abyss 1214
+May 30 14:27:48 :: GIVE_GOLD: abyss 1214
+May 30 14:27:48 :: SAVE: abyss 334879x752633
+May 30 14:27:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2102)
+May 30 14:27:49 :: GIVE_GOLD: abyss 1281
+May 30 14:27:49 :: GIVE_GOLD: abyss 1281
+May 30 14:27:49 :: SAVE: abyss 334879x752633
+May 30 14:27:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:50 :: SAVE: abyss 334879x752633
+May 30 14:27:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:50 :: GIVE_GOLD: abyss 2572
+May 30 14:27:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:27:52 :: SAVE: abyss 334879x752633
+May 30 14:27:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:52 :: GIVE_GOLD: abyss 1300
+May 30 14:27:52 :: GIVE_GOLD: abyss 1300
+May 30 14:27:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:52 :: GIVE_GOLD: abyss 2803
+May 30 14:27:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:52 :: GIVE_GOLD: abyss 2500
+May 30 14:27:53 :: SAVE: abyss 334879x752633
+May 30 14:27:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:54 :: SAVE: abyss 334879x752633
+May 30 14:27:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:55 :: SAVE: abyss 334879x752633
+May 30 14:27:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:56 :: SAVE: abyss 334879x752633
+May 30 14:27:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:57 :: GIVE_GOLD: abyss 1589
+May 30 14:27:57 :: GIVE_GOLD: abyss 1589
+May 30 14:27:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:57 :: GIVE_GOLD: abyss 781
+May 30 14:27:57 :: GIVE_GOLD: abyss 781
+May 30 14:27:57 :: GIVE_GOLD: abyss 781
+May 30 14:27:57 :: AddAffect abyss type 209 apply 0 0 flag 4 duration 31
+May 30 14:27:57 :: SAVE: abyss 334879x752633
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8009)
+May 30 14:27:58 :: DROP_ITEM: Stone of Deathblow +3 335117 752818 by Metin of Shadow
+May 30 14:27:58 :: DROP_ITEM: Chest of the Warrior 334977 752638 by Metin of Shadow
+May 30 14:27:58 :: DROP_ITEM: Enchant Item 334957 752738 by Metin of Shadow
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2105)
+May 30 14:27:58 :: GIVE_GOLD: abyss 865
+May 30 14:27:58 :: GIVE_GOLD: abyss 865
+May 30 14:27:58 :: GIVE_GOLD: abyss 865
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:58 :: GIVE_GOLD: abyss 2390
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:58 :: GIVE_GOLD: abyss 1058
+May 30 14:27:58 :: GIVE_GOLD: abyss 1058
+May 30 14:27:58 :: GIVE_GOLD: abyss 1058
+May 30 14:27:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2104)
+May 30 14:27:59 :: SAVE: abyss 334879x752633
+May 30 14:28:12 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:13 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:13 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:13 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:13 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:14 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:14 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:14 :: GIVE_GOLD: abyss 744
+May 30 14:28:14 :: GIVE_GOLD: abyss 744
+May 30 14:28:14 :: GIVE_GOLD: abyss 744
+May 30 14:28:14 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:28:15 :: SAVE: abyss 334484x754049
+May 30 14:28:15 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:15 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:16 :: SAVE: abyss 334484x754049
+May 30 14:28:17 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:17 :: SAVE: abyss 334484x754049
+May 30 14:28:17 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:17 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:18 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:18 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:18 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:18 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:18 :: SAVE: abyss 334484x754049
+May 30 14:28:19 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:28:19 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:19 :: SAVE: abyss 334484x754049
+May 30 14:28:19 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:19 :: GIVE_GOLD: abyss 583
+May 30 14:28:19 :: GIVE_GOLD: abyss 583
+May 30 14:28:19 :: GIVE_GOLD: abyss 583
+May 30 14:28:20 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:20 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:21 :: SAVE: abyss 334484x754049
+May 30 14:28:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:22 :: GIVE_GOLD: abyss 789
+May 30 14:28:22 :: GIVE_GOLD: abyss 789
+May 30 14:28:22 :: GIVE_GOLD: abyss 789
+May 30 14:28:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:22 :: GIVE_GOLD: abyss 2455
+May 30 14:28:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:23 :: SAVE: abyss 334484x754049
+May 30 14:28:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:24 :: SAVE: abyss 334484x754049
+May 30 14:28:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:28:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:25 :: SAVE: abyss 334484x754049
+May 30 14:28:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:26 :: GIVE_GOLD: abyss 2475
+May 30 14:28:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:26 :: SAVE: abyss 334484x754049
+May 30 14:28:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:28 :: GIVE_GOLD: abyss 1178
+May 30 14:28:28 :: GIVE_GOLD: abyss 1178
+May 30 14:28:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:28 :: GIVE_GOLD: abyss 664
+May 30 14:28:28 :: GIVE_GOLD: abyss 664
+May 30 14:28:28 :: GIVE_GOLD: abyss 664
+May 30 14:28:29 :: SAVE: abyss 334484x754049
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:29 :: GIVE_GOLD: abyss 2187
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:30 :: GIVE_GOLD: abyss 1185
+May 30 14:28:30 :: GIVE_GOLD: abyss 1185
+May 30 14:28:30 :: SAVE: abyss 334484x754049
+May 30 14:28:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:28:30 :: GIVE_GOLD: abyss 937
+May 30 14:28:30 :: GIVE_GOLD: abyss 937
+May 30 14:28:30 :: GIVE_GOLD: abyss 937
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:31 :: SAVE: abyss 334484x754049
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:31 :: GIVE_GOLD: abyss 609
+May 30 14:28:31 :: GIVE_GOLD: abyss 609
+May 30 14:28:31 :: GIVE_GOLD: abyss 609
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:28:31 :: GIVE_GOLD: abyss 927
+May 30 14:28:31 :: GIVE_GOLD: abyss 927
+May 30 14:28:31 :: GIVE_GOLD: abyss 927
+May 30 14:28:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:28:32 :: GIVE_GOLD: abyss 1795
+May 30 14:28:32 :: GIVE_GOLD: abyss 1795
+May 30 14:28:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:28:32 :: GIVE_GOLD: abyss 2314
+May 30 14:28:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:32 :: GIVE_GOLD: abyss 926
+May 30 14:28:32 :: GIVE_GOLD: abyss 926
+May 30 14:28:32 :: GIVE_GOLD: abyss 926
+May 30 14:28:32 :: SAVE: abyss 334484x754049
+May 30 14:28:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:32 :: GIVE_GOLD: abyss 1370
+May 30 14:28:32 :: GIVE_GOLD: abyss 1370
+May 30 14:28:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:33 :: SAVE: abyss 334484x754049
+May 30 14:28:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:34 :: GIVE_GOLD: abyss 1134
+May 30 14:28:34 :: GIVE_GOLD: abyss 1134
+May 30 14:28:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:28:34 :: GIVE_GOLD: abyss 3265
+May 30 14:28:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:28:34 :: GIVE_GOLD: abyss 1005
+May 30 14:28:34 :: GIVE_GOLD: abyss 1005
+May 30 14:28:34 :: GIVE_GOLD: abyss 1005
+May 30 14:28:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:28:34 :: GIVE_GOLD: abyss 899
+May 30 14:28:34 :: GIVE_GOLD: abyss 899
+May 30 14:28:34 :: GIVE_GOLD: abyss 899
+May 30 14:28:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:34 :: SAVE: abyss 334484x754049
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:35 :: GIVE_GOLD: abyss 935
+May 30 14:28:35 :: GIVE_GOLD: abyss 935
+May 30 14:28:35 :: GIVE_GOLD: abyss 935
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:35 :: GIVE_GOLD: abyss 1351
+May 30 14:28:35 :: GIVE_GOLD: abyss 1351
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:36 :: GIVE_GOLD: abyss 716
+May 30 14:28:36 :: GIVE_GOLD: abyss 716
+May 30 14:28:36 :: GIVE_GOLD: abyss 716
+May 30 14:28:36 :: SAVE: abyss 334484x754049
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:36 :: GIVE_GOLD: abyss 810
+May 30 14:28:36 :: GIVE_GOLD: abyss 810
+May 30 14:28:36 :: GIVE_GOLD: abyss 810
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:28:37 :: GIVE_GOLD: abyss 1097
+May 30 14:28:37 :: GIVE_GOLD: abyss 1097
+May 30 14:28:37 :: GIVE_GOLD: abyss 1097
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:37 :: SAVE: abyss 334484x754049
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:28:37 :: GIVE_GOLD: abyss 2975
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:38 :: GIVE_GOLD: abyss 1647
+May 30 14:28:38 :: GIVE_GOLD: abyss 1647
+May 30 14:28:38 :: SAVE: abyss 334484x754049
+May 30 14:28:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:28:39 :: SAVE: abyss 334484x754049
+May 30 14:28:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:28:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:40 :: SAVE: abyss 334484x754049
+May 30 14:28:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:41 :: SAVE: abyss 334484x754049
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:42 :: GIVE_GOLD: abyss 1335
+May 30 14:28:42 :: GIVE_GOLD: abyss 1335
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:42 :: GIVE_GOLD: abyss 2232
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:42 :: GIVE_GOLD: abyss 760
+May 30 14:28:42 :: GIVE_GOLD: abyss 760
+May 30 14:28:42 :: GIVE_GOLD: abyss 760
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:28:42 :: GIVE_GOLD: abyss 1031
+May 30 14:28:42 :: GIVE_GOLD: abyss 1031
+May 30 14:28:42 :: GIVE_GOLD: abyss 1031
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:42 :: GIVE_GOLD: abyss 881
+May 30 14:28:42 :: GIVE_GOLD: abyss 881
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:42 :: GIVE_GOLD: abyss 2360
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:43 :: SAVE: abyss 334484x754049
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:43 :: GIVE_GOLD: abyss 638
+May 30 14:28:43 :: GIVE_GOLD: abyss 638
+May 30 14:28:43 :: GIVE_GOLD: abyss 638
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:43 :: GIVE_GOLD: abyss 986
+May 30 14:28:43 :: GIVE_GOLD: abyss 986
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:43 :: GIVE_GOLD: abyss 1294
+May 30 14:28:43 :: GIVE_GOLD: abyss 1294
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:28:44 :: SAVE: abyss 334484x754049
+May 30 14:28:44 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:46 :: GIVE_GOLD: abyss 958
+May 30 14:28:46 :: GIVE_GOLD: abyss 958
+May 30 14:28:46 :: GIVE_GOLD: abyss 958
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:46 :: SAVE: abyss 334484x754049
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:47 :: GIVE_GOLD: abyss 1416
+May 30 14:28:47 :: GIVE_GOLD: abyss 1416
+May 30 14:28:47 :: SAVE: abyss 334484x754049
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:47 :: GIVE_GOLD: abyss 1306
+May 30 14:28:47 :: GIVE_GOLD: abyss 1306
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:48 :: GIVE_GOLD: abyss 2005
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:48 :: GIVE_GOLD: abyss 686
+May 30 14:28:48 :: GIVE_GOLD: abyss 686
+May 30 14:28:48 :: GIVE_GOLD: abyss 686
+May 30 14:28:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:48 :: SAVE: abyss 334484x754049
+May 30 14:28:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:50 :: SAVE: abyss 334484x754049
+May 30 14:28:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:28:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:51 :: SAVE: abyss 334484x754049
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:51 :: GIVE_GOLD: abyss 983
+May 30 14:28:51 :: GIVE_GOLD: abyss 983
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:51 :: GIVE_GOLD: abyss 800
+May 30 14:28:51 :: GIVE_GOLD: abyss 800
+May 30 14:28:51 :: GIVE_GOLD: abyss 800
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:51 :: GIVE_GOLD: abyss 1027
+May 30 14:28:51 :: GIVE_GOLD: abyss 1027
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:51 :: GIVE_GOLD: abyss 812
+May 30 14:28:51 :: GIVE_GOLD: abyss 812
+May 30 14:28:51 :: GIVE_GOLD: abyss 812
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:51 :: GIVE_GOLD: abyss 770
+May 30 14:28:51 :: GIVE_GOLD: abyss 770
+May 30 14:28:51 :: GIVE_GOLD: abyss 770
+May 30 14:28:52 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:28:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:52 :: SAVE: abyss 334484x754049
+May 30 14:28:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:52 :: GIVE_GOLD: abyss 2155
+May 30 14:28:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:52 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:28:53 :: SAVE: abyss 334484x754049
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:55 :: GIVE_GOLD: abyss 2358
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:55 :: PONG! 254
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:55 :: GIVE_GOLD: abyss 1128
+May 30 14:28:55 :: GIVE_GOLD: abyss 1128
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:55 :: GIVE_GOLD: abyss 1879
+May 30 14:28:55 :: SAVE: abyss 334484x754049
+May 30 14:28:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:56 :: GIVE_GOLD: abyss 1019
+May 30 14:28:56 :: GIVE_GOLD: abyss 1019
+May 30 14:28:56 :: Handshake: lower than zero -37
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:28:56 :: GIVE_GOLD: abyss 1145
+May 30 14:28:56 :: GIVE_GOLD: abyss 1145
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:56 :: GIVE_GOLD: abyss 654
+May 30 14:28:56 :: GIVE_GOLD: abyss 654
+May 30 14:28:56 :: GIVE_GOLD: abyss 654
+May 30 14:28:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:56 :: Handshake: client_time 1755377 server_time 1935893 name: abyss
+May 30 14:28:56 :: SAVE: abyss 334484x754049
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8008)
+May 30 14:28:57 :: DROP_ITEM: Stone of Magic +2 334438 753943 by Metin of Soul
+May 30 14:28:57 :: DROP_ITEM: Chest of the Warrior 334658 753983 by Metin of Soul
+May 30 14:28:57 :: DROP_ITEM: Spiritless Stone 334418 753863 by Metin of Soul
+May 30 14:28:57 :: DROP_ITEM: Enchant Item 334518 753763 by Metin of Soul
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:28:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:28:58 :: SAVE: abyss 334484x754049
+May 30 14:29:00 :: SAVE: abyss 334484x754049
+May 30 14:29:23 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:23 :: SAVE: abyss 334988x754919
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:24 :: SAVE: abyss 334988x754919
+May 30 14:29:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:25 :: SAVE: abyss 334988x754919
+May 30 14:29:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:27 :: SAVE: abyss 334988x754919
+May 30 14:29:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:29:27 :: GIVE_GOLD: abyss 1426
+May 30 14:29:27 :: GIVE_GOLD: abyss 1426
+May 30 14:29:28 :: SAVE: abyss 334988x754919
+May 30 14:29:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:29 :: SAVE: abyss 334988x754919
+May 30 14:29:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:30 :: GIVE_GOLD: abyss 886
+May 30 14:29:30 :: GIVE_GOLD: abyss 886
+May 30 14:29:30 :: GIVE_GOLD: abyss 886
+May 30 14:29:30 :: SAVE: abyss 334988x754919
+May 30 14:29:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:31 :: GIVE_GOLD: abyss 2625
+May 30 14:29:31 :: SAVE: abyss 334988x754919
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:29:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:32 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:32 :: SAVE: abyss 334988x754919
+May 30 14:29:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:33 :: GIVE_GOLD: abyss 1084
+May 30 14:29:33 :: GIVE_GOLD: abyss 1084
+May 30 14:29:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:29:33 :: GIVE_GOLD: abyss 1464
+May 30 14:29:33 :: GIVE_GOLD: abyss 1464
+May 30 14:29:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:33 :: GIVE_GOLD: abyss 2239
+May 30 14:29:34 :: SAVE: abyss 334988x754919
+May 30 14:29:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:35 :: GIVE_GOLD: abyss 2557
+May 30 14:29:35 :: SAVE: abyss 334988x754919
+May 30 14:29:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:36 :: SAVE: abyss 334988x754919
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:37 :: GIVE_GOLD: abyss 2756
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:37 :: GIVE_GOLD: abyss 1251
+May 30 14:29:37 :: GIVE_GOLD: abyss 1251
+May 30 14:29:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:38 :: GIVE_GOLD: abyss 656
+May 30 14:29:38 :: GIVE_GOLD: abyss 656
+May 30 14:29:38 :: GIVE_GOLD: abyss 656
+May 30 14:29:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:38 :: SAVE: abyss 334988x754919
+May 30 14:29:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:39 :: SAVE: abyss 334988x754919
+May 30 14:29:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:39 :: GIVE_GOLD: abyss 1075
+May 30 14:29:39 :: GIVE_GOLD: abyss 1075
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:40 :: GIVE_GOLD: abyss 1309
+May 30 14:29:40 :: GIVE_GOLD: abyss 1309
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:40 :: GIVE_GOLD: abyss 1281
+May 30 14:29:40 :: GIVE_GOLD: abyss 1281
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:40 :: GIVE_GOLD: abyss 823
+May 30 14:29:40 :: GIVE_GOLD: abyss 823
+May 30 14:29:40 :: GIVE_GOLD: abyss 823
+May 30 14:29:40 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:41 :: SAVE: abyss 334988x754919
+May 30 14:29:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:29:43 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:43 :: SAVE: abyss 334988x754919
+May 30 14:29:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:43 :: GIVE_GOLD: abyss 1989
+May 30 14:29:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:43 :: GIVE_GOLD: abyss 826
+May 30 14:29:43 :: GIVE_GOLD: abyss 826
+May 30 14:29:43 :: GIVE_GOLD: abyss 826
+May 30 14:29:44 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:44 :: SAVE: abyss 334988x754919
+May 30 14:29:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:45 :: SAVE: abyss 334988x754919
+May 30 14:29:46 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:49 :: GIVE_GOLD: abyss 1780
+May 30 14:29:49 :: SAVE: abyss 334988x754919
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:49 :: GIVE_GOLD: abyss 2657
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:49 :: GIVE_GOLD: abyss 999
+May 30 14:29:49 :: GIVE_GOLD: abyss 999
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:29:49 :: GIVE_GOLD: abyss 650
+May 30 14:29:49 :: GIVE_GOLD: abyss 650
+May 30 14:29:49 :: GIVE_GOLD: abyss 650
+May 30 14:29:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:50 :: GIVE_GOLD: abyss 926
+May 30 14:29:50 :: GIVE_GOLD: abyss 926
+May 30 14:29:50 :: GIVE_GOLD: abyss 926
+May 30 14:29:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:50 :: GIVE_GOLD: abyss 1011
+May 30 14:29:50 :: GIVE_GOLD: abyss 1011
+May 30 14:29:50 :: SAVE: abyss 334988x754919
+May 30 14:29:50 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:29:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:29:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:29:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:52 :: SAVE: abyss 334988x754919
+May 30 14:29:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:53 :: GIVE_GOLD: abyss 2389
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:29:53 :: GIVE_GOLD: abyss 934
+May 30 14:29:53 :: GIVE_GOLD: abyss 934
+May 30 14:29:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:53 :: SAVE: abyss 334988x754919
+May 30 14:29:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:29:57 :: SAVE: abyss 334988x754919
+May 30 14:29:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:58 :: SAVE: abyss 334988x754919
+May 30 14:29:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:58 :: GIVE_GOLD: abyss 742
+May 30 14:29:58 :: GIVE_GOLD: abyss 742
+May 30 14:29:58 :: GIVE_GOLD: abyss 742
+May 30 14:29:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:29:59 :: GIVE_GOLD: abyss 833
+May 30 14:29:59 :: GIVE_GOLD: abyss 833
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:29:59 :: SAVE: abyss 334988x754919
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:29:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:00 :: GIVE_GOLD: abyss 2499
+May 30 14:30:00 :: GIVE_GOLD: abyss 2174
+May 30 14:30:00 :: GIVE_GOLD: abyss 2732
+May 30 14:30:00 :: GIVE_GOLD: abyss 2541
+May 30 14:30:00 :: GIVE_GOLD: abyss 2165
+May 30 14:30:00 :: GIVE_GOLD: abyss 2543
+May 30 14:30:00 :: GIVE_GOLD: abyss 2933
+May 30 14:30:00 :: GIVE_GOLD: abyss 2137
+May 30 14:30:00 :: GIVE_GOLD: abyss 2752
+May 30 14:30:00 :: GIVE_GOLD: abyss 2330
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:00 :: GIVE_GOLD: abyss 2269
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:00 :: SAVE: abyss 334988x754919
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:01 :: GIVE_GOLD: abyss 1351
+May 30 14:30:01 :: GIVE_GOLD: abyss 1351
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:01 :: GIVE_GOLD: abyss 1509
+May 30 14:30:01 :: GIVE_GOLD: abyss 1509
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:01 :: GIVE_GOLD: abyss 714
+May 30 14:30:01 :: GIVE_GOLD: abyss 714
+May 30 14:30:01 :: GIVE_GOLD: abyss 714
+May 30 14:30:01 :: SAVE: abyss 334988x754919
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:02 :: GIVE_GOLD: abyss 794
+May 30 14:30:02 :: GIVE_GOLD: abyss 794
+May 30 14:30:02 :: GIVE_GOLD: abyss 794
+May 30 14:30:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:02 :: GIVE_GOLD: abyss 1207
+May 30 14:30:02 :: GIVE_GOLD: abyss 1207
+May 30 14:30:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:02 :: GIVE_GOLD: abyss 2406
+May 30 14:30:02 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:30:03 :: SAVE: abyss 334988x754919
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:05 :: GIVE_GOLD: abyss 1199
+May 30 14:30:05 :: GIVE_GOLD: abyss 1199
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:05 :: GIVE_GOLD: abyss 2231
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:05 :: SAVE: abyss 334988x754919
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:05 :: GIVE_GOLD: abyss 679
+May 30 14:30:05 :: GIVE_GOLD: abyss 679
+May 30 14:30:05 :: GIVE_GOLD: abyss 679
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:05 :: GIVE_GOLD: abyss 1101
+May 30 14:30:05 :: GIVE_GOLD: abyss 1101
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:06 :: SAVE: abyss 334988x754919
+May 30 14:30:08 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:08 :: SAVE: abyss 334988x754919
+May 30 14:30:08 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8008)
+May 30 14:30:09 :: DROP_ITEM: Yang Bag Small  335062 755025 by Metin of Soul
+May 30 14:30:09 :: DROP_ITEM: Stone of Ducking +2 335042 755185 by Metin of Soul
+May 30 14:30:09 :: DROP_ITEM: Chest of the Warrior 335022 755025 by Metin of Soul
+May 30 14:30:09 :: DROP_ITEM: Exorcism Scroll 334962 754965 by Metin of Soul
+May 30 14:30:09 :: DROP_ITEM: Solar Crystal 334962 755165 by Metin of Soul
+May 30 14:30:09 :: DROP_ITEM: Enchant Item 335162 755045 by Metin of Soul
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: GIVE_GOLD: abyss 2503
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:09 :: GIVE_GOLD: abyss 1945
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:09 :: DROP_ITEM: Pearl Earrings +6 335008 754865 from Elite Orc Sorcerer
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:09 :: GIVE_GOLD: abyss 2861
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:09 :: GIVE_GOLD: abyss 1066
+May 30 14:30:09 :: GIVE_GOLD: abyss 1066
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: GIVE_GOLD: abyss 2844
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:09 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:09 :: GIVE_GOLD: abyss 2291
+May 30 14:30:10 :: SAVE: abyss 334988x754919
+May 30 14:30:20 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:30:21 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:30:22 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:30:22 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:30:22 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:30:22 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:23 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:30:23 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:23 :: GIVE_GOLD: abyss 1117
+May 30 14:30:23 :: GIVE_GOLD: abyss 1117
+May 30 14:30:23 :: SAVE: abyss 334170x755174
+May 30 14:30:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:25 :: GIVE_GOLD: abyss 1392
+May 30 14:30:25 :: GIVE_GOLD: abyss 1392
+May 30 14:30:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:26 :: SAVE: abyss 334170x755174
+May 30 14:30:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:27 :: SAVE: abyss 334170x755174
+May 30 14:30:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:28 :: SAVE: abyss 334170x755174
+May 30 14:30:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:29 :: GIVE_GOLD: abyss 2363
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:29 :: GIVE_GOLD: abyss 1937
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:29 :: GIVE_GOLD: abyss 1176
+May 30 14:30:29 :: GIVE_GOLD: abyss 1176
+May 30 14:30:29 :: SAVE: abyss 334170x755174
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:30 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:30:30 :: SAVE: abyss 334170x755174
+May 30 14:30:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:31 :: GIVE_GOLD: abyss 2084
+May 30 14:30:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:31 :: GIVE_GOLD: abyss 1837
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:32 :: SAVE: abyss 334170x755174
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:33 :: GIVE_GOLD: abyss 1071
+May 30 14:30:33 :: GIVE_GOLD: abyss 1071
+May 30 14:30:33 :: SAVE: abyss 334170x755174
+May 30 14:30:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:30:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:33 :: GIVE_GOLD: abyss 908
+May 30 14:30:33 :: GIVE_GOLD: abyss 908
+May 30 14:30:33 :: GIVE_GOLD: abyss 908
+May 30 14:30:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:33 :: GIVE_GOLD: abyss 2838
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:34 :: GIVE_GOLD: abyss 1449
+May 30 14:30:34 :: GIVE_GOLD: abyss 1449
+May 30 14:30:34 :: SAVE: abyss 334170x755174
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:30:34 :: GIVE_GOLD: abyss 2438
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:35 :: SAVE: abyss 334170x755174
+May 30 14:30:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:36 :: GIVE_GOLD: abyss 2261
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:36 :: GIVE_GOLD: abyss 1012
+May 30 14:30:36 :: GIVE_GOLD: abyss 1012
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:36 :: GIVE_GOLD: abyss 1243
+May 30 14:30:36 :: GIVE_GOLD: abyss 1243
+May 30 14:30:36 :: SAVE: abyss 334170x755174
+May 30 14:30:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:37 :: GIVE_GOLD: abyss 801
+May 30 14:30:37 :: GIVE_GOLD: abyss 801
+May 30 14:30:37 :: GIVE_GOLD: abyss 801
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=2103)
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:37 :: GIVE_GOLD: abyss 922
+May 30 14:30:37 :: GIVE_GOLD: abyss 922
+May 30 14:30:37 :: GIVE_GOLD: abyss 922
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:37 :: SAVE: abyss 334170x755174
+May 30 14:30:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:37 :: GIVE_GOLD: abyss 3333
+May 30 14:30:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:38 :: GIVE_GOLD: abyss 1079
+May 30 14:30:38 :: GIVE_GOLD: abyss 1079
+May 30 14:30:38 :: GIVE_GOLD: abyss 1079
+May 30 14:30:38 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:30:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:38 :: GIVE_GOLD: abyss 816
+May 30 14:30:38 :: GIVE_GOLD: abyss 816
+May 30 14:30:38 :: GIVE_GOLD: abyss 816
+May 30 14:30:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:39 :: SAVE: abyss 334170x755174
+May 30 14:30:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:30:40 :: GIVE_GOLD: abyss 948
+May 30 14:30:40 :: GIVE_GOLD: abyss 948
+May 30 14:30:40 :: GIVE_GOLD: abyss 948
+May 30 14:30:40 :: SAVE: abyss 334170x755174
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:40 :: GIVE_GOLD: abyss 1050
+May 30 14:30:40 :: GIVE_GOLD: abyss 1050
+May 30 14:30:40 :: GIVE_GOLD: abyss 1050
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:41 :: GIVE_GOLD: abyss 2748
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:41 :: SAVE: abyss 334170x755174
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:41 :: GIVE_GOLD: abyss 1156
+May 30 14:30:41 :: GIVE_GOLD: abyss 1156
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:41 :: GIVE_GOLD: abyss 1850
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=656)
+May 30 14:30:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:42 :: SAVE: abyss 334170x755174
+May 30 14:30:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:43 :: GIVE_GOLD: abyss 1709
+May 30 14:30:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:30:44 :: GIVE_GOLD: abyss 1535
+May 30 14:30:44 :: GIVE_GOLD: abyss 1535
+May 30 14:30:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:44 :: GIVE_GOLD: abyss 1628
+May 30 14:30:44 :: GIVE_GOLD: abyss 1628
+May 30 14:30:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:44 :: SAVE: abyss 334170x755174
+May 30 14:30:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:44 :: GIVE_GOLD: abyss 2559
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:45 :: GIVE_GOLD: abyss 1040
+May 30 14:30:45 :: GIVE_GOLD: abyss 1040
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:45 :: SAVE: abyss 334170x755174
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:46 :: GIVE_GOLD: abyss 2261
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:46 :: GIVE_GOLD: abyss 867
+May 30 14:30:46 :: GIVE_GOLD: abyss 867
+May 30 14:30:46 :: GIVE_GOLD: abyss 867
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:47 :: GIVE_GOLD: abyss 2142
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:47 :: SAVE: abyss 334170x755174
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:47 :: GIVE_GOLD: abyss 673
+May 30 14:30:47 :: GIVE_GOLD: abyss 673
+May 30 14:30:47 :: GIVE_GOLD: abyss 673
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:48 :: GIVE_GOLD: abyss 1853
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:48 :: SAVE: abyss 334170x755174
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:48 :: GIVE_GOLD: abyss 2575
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:48 :: GIVE_GOLD: abyss 2474
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:48 :: GIVE_GOLD: abyss 729
+May 30 14:30:48 :: GIVE_GOLD: abyss 729
+May 30 14:30:48 :: GIVE_GOLD: abyss 729
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:49 :: SAVE: abyss 334170x755174
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:49 :: GIVE_GOLD: abyss 974
+May 30 14:30:49 :: GIVE_GOLD: abyss 974
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:30:50 :: GIVE_GOLD: abyss 2482
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:50 :: GIVE_GOLD: abyss 2106
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:50 :: GIVE_GOLD: abyss 912
+May 30 14:30:50 :: GIVE_GOLD: abyss 912
+May 30 14:30:50 :: SAVE: abyss 334170x755174
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:50 :: GIVE_GOLD: abyss 1299
+May 30 14:30:50 :: GIVE_GOLD: abyss 1299
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:51 :: GIVE_GOLD: abyss 1285
+May 30 14:30:51 :: GIVE_GOLD: abyss 1285
+May 30 14:30:51 :: SAVE: abyss 334170x755174
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:51 :: GIVE_GOLD: abyss 955
+May 30 14:30:51 :: GIVE_GOLD: abyss 955
+May 30 14:30:51 :: GIVE_GOLD: abyss 955
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:51 :: GIVE_GOLD: abyss 862
+May 30 14:30:51 :: GIVE_GOLD: abyss 862
+May 30 14:30:51 :: GIVE_GOLD: abyss 862
+May 30 14:30:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:30:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:51 :: GIVE_GOLD: abyss 2449
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:52 :: GIVE_GOLD: abyss 2134
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:52 :: SAVE: abyss 334170x755174
+May 30 14:30:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:53 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:54 :: SAVE: abyss 334170x755174
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:54 :: GIVE_GOLD: abyss 1536
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:54 :: GIVE_GOLD: abyss 1261
+May 30 14:30:54 :: GIVE_GOLD: abyss 1261
+May 30 14:30:55 :: SAVE: abyss 334170x755174
+May 30 14:30:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:56 :: GIVE_GOLD: abyss 645
+May 30 14:30:56 :: GIVE_GOLD: abyss 645
+May 30 14:30:56 :: GIVE_GOLD: abyss 645
+May 30 14:30:56 :: SAVE: abyss 334170x755174
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:30:56 :: GIVE_GOLD: abyss 789
+May 30 14:30:56 :: GIVE_GOLD: abyss 789
+May 30 14:30:56 :: GIVE_GOLD: abyss 789
+May 30 14:30:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:30:57 :: SAVE: abyss 334170x755174
+May 30 14:30:57 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:30:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:30:59 :: SAVE: abyss 334170x755174
+May 30 14:30:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:30:59 :: GIVE_GOLD: abyss 2362
+May 30 14:30:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:30:59 :: GIVE_GOLD: abyss 2074
+May 30 14:31:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:31:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:31:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:31:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:31:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:31:00 :: SAVE: abyss 334170x755174
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: GIVE_GOLD: abyss 1192
+May 30 14:31:01 :: GIVE_GOLD: abyss 1192
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: GIVE_GOLD: abyss 766
+May 30 14:31:01 :: GIVE_GOLD: abyss 766
+May 30 14:31:01 :: GIVE_GOLD: abyss 766
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:31:01 :: GIVE_GOLD: abyss 1024
+May 30 14:31:01 :: GIVE_GOLD: abyss 1024
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:31:01 :: GIVE_GOLD: abyss 2686
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:31:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:31:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:31:02 :: GIVE_GOLD: abyss 2570
+May 30 14:31:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:31:02 :: SAVE: abyss 334170x755174
+May 30 14:31:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:31:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:31:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:31:02 :: GIVE_GOLD: abyss 580
+May 30 14:31:02 :: GIVE_GOLD: abyss 580
+May 30 14:31:02 :: GIVE_GOLD: abyss 580
+May 30 14:31:03 :: SAVE: abyss 334170x755174
+May 30 14:31:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8008)
+May 30 14:31:03 :: DROP_ITEM: Yang Bag Small  334178 755199 by Metin of Soul
+May 30 14:31:03 :: DROP_ITEM: Stone of Haste +1 334138 755099 by Metin of Soul
+May 30 14:31:03 :: DROP_ITEM: Chest of the Sura 333918 755219 by Metin of Soul
+May 30 14:31:03 :: DROP_ITEM: Solar Crystal 333938 755259 by Metin of Soul
+May 30 14:31:03 :: DROP_ITEM: Enchant Item 334018 755299 by Metin of Soul
+May 30 14:31:04 :: SAVE: abyss 334170x755174
+May 30 14:31:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:31:55 :: PONG! 254
+May 30 14:31:55 :: Handshake: client_time 1935893 server_time 2114535 name: abyss
+May 30 14:31:59 :: PING_EVENT: no pong 88.24.209.246
+May 30 14:31:59 :: SYSTEM: closing socket. DESC #18
+May 30 14:32:00 :: SAVE: abyss 334170x755174
+May 30 14:32:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:33:14 :: GIVE_GOLD: abyss 2933
+May 30 14:33:14 :: GIVE_GOLD: abyss 2679
+May 30 14:33:14 :: GIVE_GOLD: abyss 2526
+May 30 14:33:14 :: GIVE_GOLD: abyss 2533
+May 30 14:33:14 :: GIVE_GOLD: abyss 3008
+May 30 14:33:14 :: GIVE_GOLD: abyss 2365
+May 30 14:33:14 :: GIVE_GOLD: abyss 2939
+May 30 14:33:14 :: GIVE_GOLD: abyss 3069
+May 30 14:33:14 :: GIVE_GOLD: abyss 3151
+May 30 14:33:14 :: GIVE_GOLD: abyss 2620
+May 30 14:33:15 :: SAVE: abyss 334170x755174
+May 30 14:33:24 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:24 :: GIVE_GOLD: abyss 794
+May 30 14:33:24 :: GIVE_GOLD: abyss 794
+May 30 14:33:24 :: GIVE_GOLD: abyss 794
+May 30 14:33:25 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:25 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:25 :: SAVE: abyss 334300x754582
+May 30 14:33:26 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:26 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:26 :: GIVE_GOLD: abyss 2501
+May 30 14:33:26 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:26 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:26 :: SAVE: abyss 334300x754582
+May 30 14:33:27 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:27 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:27 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:27 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:27 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:28 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 14:33:28 :: SAVE: abyss 334300x754582
+May 30 14:33:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:28 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:29 :: SAVE: abyss 334300x754582
+May 30 14:33:29 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:30 :: GIVE_GOLD: abyss 1004
+May 30 14:33:30 :: GIVE_GOLD: abyss 1004
+May 30 14:33:30 :: SAVE: abyss 334300x754582
+May 30 14:33:30 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:31 :: SAVE: abyss 334300x754582
+May 30 14:33:31 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:32 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:32 :: SAVE: abyss 334300x754582
+May 30 14:33:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:33 :: GIVE_GOLD: abyss 2149
+May 30 14:33:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:33 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:33 :: GIVE_GOLD: abyss 989
+May 30 14:33:33 :: GIVE_GOLD: abyss 989
+May 30 14:33:33 :: SAVE: abyss 334300x754582
+May 30 14:33:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:34 :: GIVE_GOLD: abyss 722
+May 30 14:33:34 :: GIVE_GOLD: abyss 722
+May 30 14:33:34 :: GIVE_GOLD: abyss 722
+May 30 14:33:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:34 :: GIVE_GOLD: abyss 1095
+May 30 14:33:34 :: GIVE_GOLD: abyss 1095
+May 30 14:33:34 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:34 :: GIVE_GOLD: abyss 694
+May 30 14:33:34 :: GIVE_GOLD: abyss 694
+May 30 14:33:34 :: GIVE_GOLD: abyss 694
+May 30 14:33:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:35 :: SAVE: abyss 334300x754582
+May 30 14:33:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:35 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:36 :: SAVE: abyss 334300x754582
+May 30 14:33:36 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:37 :: GIVE_GOLD: abyss 1218
+May 30 14:33:37 :: GIVE_GOLD: abyss 1218
+May 30 14:33:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:37 :: SAVE: abyss 334300x754582
+May 30 14:33:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:37 :: GIVE_GOLD: abyss 701
+May 30 14:33:37 :: GIVE_GOLD: abyss 701
+May 30 14:33:37 :: GIVE_GOLD: abyss 701
+May 30 14:33:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:37 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:37 :: GIVE_GOLD: abyss 680
+May 30 14:33:37 :: GIVE_GOLD: abyss 680
+May 30 14:33:37 :: GIVE_GOLD: abyss 680
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:38 :: GIVE_GOLD: abyss 734
+May 30 14:33:38 :: GIVE_GOLD: abyss 734
+May 30 14:33:38 :: GIVE_GOLD: abyss 734
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:38 :: GIVE_GOLD: abyss 2225
+May 30 14:33:38 :: SAVE: abyss 334300x754582
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:38 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:39 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:39 :: SAVE: abyss 334300x754582
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:40 :: GIVE_GOLD: abyss 1240
+May 30 14:33:40 :: GIVE_GOLD: abyss 1240
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:40 :: GIVE_GOLD: abyss 2612
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:40 :: GIVE_GOLD: abyss 632
+May 30 14:33:40 :: GIVE_GOLD: abyss 632
+May 30 14:33:40 :: GIVE_GOLD: abyss 632
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:40 :: GIVE_GOLD: abyss 2866
+May 30 14:33:40 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:40 :: SAVE: abyss 334300x754582
+May 30 14:33:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:41 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:33:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:41 :: GIVE_GOLD: abyss 688
+May 30 14:33:41 :: GIVE_GOLD: abyss 688
+May 30 14:33:41 :: GIVE_GOLD: abyss 688
+May 30 14:33:41 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:42 :: SAVE: abyss 334300x754582
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:42 :: GIVE_GOLD: abyss 1246
+May 30 14:33:42 :: GIVE_GOLD: abyss 1246
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:42 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:42 :: GIVE_GOLD: abyss 3152
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:43 :: SAVE: abyss 334300x754582
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:43 :: GIVE_GOLD: abyss 653
+May 30 14:33:43 :: GIVE_GOLD: abyss 653
+May 30 14:33:43 :: GIVE_GOLD: abyss 653
+May 30 14:33:43 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:33:43 :: GIVE_GOLD: abyss 2833
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:33:44 :: GIVE_GOLD: abyss 2944
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=756)
+May 30 14:33:44 :: GIVE_GOLD: abyss 1063
+May 30 14:33:44 :: GIVE_GOLD: abyss 1063
+May 30 14:33:44 :: GIVE_GOLD: abyss 1063
+May 30 14:33:44 :: SAVE: abyss 334300x754582
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:44 :: GIVE_GOLD: abyss 2687
+May 30 14:33:44 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:45 :: SAVE: abyss 334300x754582
+May 30 14:33:45 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:46 :: GIVE_GOLD: abyss 1048
+May 30 14:33:46 :: GIVE_GOLD: abyss 1048
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:46 :: GIVE_GOLD: abyss 1764
+May 30 14:33:46 :: SAVE: abyss 334300x754582
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:33:46 :: GIVE_GOLD: abyss 875
+May 30 14:33:46 :: GIVE_GOLD: abyss 875
+May 30 14:33:46 :: GIVE_GOLD: abyss 875
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:46 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:47 :: GIVE_GOLD: abyss 1915
+May 30 14:33:47 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:47 :: GIVE_GOLD: abyss 1072
+May 30 14:33:47 :: GIVE_GOLD: abyss 1072
+May 30 14:33:47 :: GIVE_GOLD: abyss 1072
+May 30 14:33:47 :: SAVE: abyss 334300x754582
+May 30 14:33:47 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:33:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:33:48 :: GIVE_GOLD: abyss 896
+May 30 14:33:48 :: GIVE_GOLD: abyss 896
+May 30 14:33:48 :: GIVE_GOLD: abyss 896
+May 30 14:33:48 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:49 :: SAVE: abyss 334300x754582
+May 30 14:33:49 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:33:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:49 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:50 :: SAVE: abyss 334300x754582
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:50 :: GIVE_GOLD: abyss 1138
+May 30 14:33:50 :: GIVE_GOLD: abyss 1138
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=637)
+May 30 14:33:50 :: GIVE_GOLD: abyss 3174
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:50 :: GIVE_GOLD: abyss 1947
+May 30 14:33:50 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:50 :: GIVE_GOLD: abyss 2400
+May 30 14:33:51 :: SAVE: abyss 334300x754582
+May 30 14:33:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:33:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:51 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:51 :: GIVE_GOLD: abyss 607
+May 30 14:33:51 :: GIVE_GOLD: abyss 607
+May 30 14:33:51 :: GIVE_GOLD: abyss 607
+May 30 14:33:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:52 :: GIVE_GOLD: abyss 668
+May 30 14:33:52 :: GIVE_GOLD: abyss 668
+May 30 14:33:52 :: GIVE_GOLD: abyss 668
+May 30 14:33:52 :: SAVE: abyss 334300x754582
+May 30 14:33:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:53 :: SAVE: abyss 334300x754582
+May 30 14:33:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:54 :: SAVE: abyss 334300x754582
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:55 :: GIVE_GOLD: abyss 620
+May 30 14:33:55 :: GIVE_GOLD: abyss 620
+May 30 14:33:55 :: GIVE_GOLD: abyss 620
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: GIVE_GOLD: abyss 825
+May 30 14:33:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:55 :: SAVE: abyss 334300x754582
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:33:56 :: GIVE_GOLD: abyss 788
+May 30 14:33:56 :: GIVE_GOLD: abyss 788
+May 30 14:33:56 :: GIVE_GOLD: abyss 788
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:57 :: GIVE_GOLD: abyss 2332
+May 30 14:33:57 :: SAVE: abyss 334300x754582
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:57 :: GIVE_GOLD: abyss 2945
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:57 :: GIVE_GOLD: abyss 967
+May 30 14:33:57 :: GIVE_GOLD: abyss 967
+May 30 14:33:57 :: GIVE_GOLD: abyss 967
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:58 :: GIVE_GOLD: abyss 2222
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:58 :: SAVE: abyss 334300x754582
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:58 :: GIVE_GOLD: abyss 911
+May 30 14:33:58 :: GIVE_GOLD: abyss 911
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:58 :: GIVE_GOLD: abyss 885
+May 30 14:33:58 :: GIVE_GOLD: abyss 885
+May 30 14:33:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:59 :: SAVE: abyss 334300x754582
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:33:59 :: GIVE_GOLD: abyss 865
+May 30 14:33:59 :: GIVE_GOLD: abyss 865
+May 30 14:33:59 :: GIVE_GOLD: abyss 865
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:33:59 :: GIVE_GOLD: abyss 2344
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:33:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:33:59 :: GIVE_GOLD: abyss 928
+May 30 14:33:59 :: GIVE_GOLD: abyss 928
+May 30 14:33:59 :: GIVE_GOLD: abyss 928
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:34:00 :: GIVE_GOLD: abyss 1245
+May 30 14:34:00 :: GIVE_GOLD: abyss 1245
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:34:00 :: SAVE: abyss 334300x754582
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:34:00 :: GIVE_GOLD: abyss 2500
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=635)
+May 30 14:34:00 :: GIVE_GOLD: abyss 2315
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=633)
+May 30 14:34:00 :: GIVE_GOLD: abyss 854
+May 30 14:34:00 :: GIVE_GOLD: abyss 854
+May 30 14:34:00 :: GIVE_GOLD: abyss 854
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:34:00 :: GIVE_GOLD: abyss 973
+May 30 14:34:00 :: GIVE_GOLD: abyss 973
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:34:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:34:00 :: GIVE_GOLD: abyss 992
+May 30 14:34:00 :: GIVE_GOLD: abyss 992
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:34:01 :: SAVE: abyss 334300x754582
+May 30 14:34:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:34:01 :: GIVE_GOLD: abyss 1396
+May 30 14:34:01 :: GIVE_GOLD: abyss 1396
+May 30 14:34:02 :: AddAffect abyss type 210 apply 0 0 flag 6 duration 2
+May 30 14:34:02 :: SAVE: abyss 334300x754582
+May 30 14:34:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:34:03 :: GIVE_GOLD: abyss 830
+May 30 14:34:03 :: GIVE_GOLD: abyss 830
+May 30 14:34:03 :: GIVE_GOLD: abyss 830
+May 30 14:34:04 :: SAVE: abyss 334300x754582
+May 30 14:34:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:34:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=634)
+May 30 14:34:04 :: GIVE_GOLD: abyss 820
+May 30 14:34:04 :: GIVE_GOLD: abyss 820
+May 30 14:34:04 :: GIVE_GOLD: abyss 820
+May 30 14:34:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:34:04 :: GIVE_GOLD: abyss 1174
+May 30 14:34:04 :: GIVE_GOLD: abyss 1174
+May 30 14:34:04 :: GIVE_GOLD: abyss 1174
+May 30 14:34:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:34:05 :: GIVE_GOLD: abyss 1940
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: SAVE: abyss 334300x754582
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:34:05 :: GIVE_GOLD: abyss 638
+May 30 14:34:05 :: GIVE_GOLD: abyss 638
+May 30 14:34:05 :: GIVE_GOLD: abyss 638
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=604)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=8008)
+May 30 14:34:05 :: DROP_ITEM: Stone of Penetration +3 334323 754489 by Metin of Soul
+May 30 14:34:05 :: DROP_ITEM: Chest of the Sura 334363 754369 by Metin of Soul
+May 30 14:34:05 :: DROP_ITEM: Spiritless Stone 334263 754469 by Metin of Soul
+May 30 14:34:05 :: DROP_ITEM: Enchant Item 334403 754429 by Metin of Soul
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: GIVE_GOLD: abyss 2130
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=636)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=603)
+May 30 14:34:05 :: GIVE_GOLD: abyss 680
+May 30 14:34:05 :: GIVE_GOLD: abyss 680
+May 30 14:34:05 :: GIVE_GOLD: abyss 680
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=601)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: GIVE_GOLD: abyss 2322
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=631)
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=632)
+May 30 14:34:05 :: GIVE_GOLD: abyss 1230
+May 30 14:34:05 :: GIVE_GOLD: abyss 1230
+May 30 14:34:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=602)
+May 30 14:34:06 :: SAVE: abyss 334300x754582
+May 30 14:34:07 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=657)
+May 30 14:34:07 :: GIVE_GOLD: abyss 3348
+May 30 14:34:08 :: SAVE: abyss 334300x754582
+May 30 14:34:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:34:55 :: PONG! 254
+May 30 14:34:55 :: Handshake: lower than zero -20
+May 30 14:34:55 :: Handshake: client_time 2114535 server_time 2294696 name: abyss
+May 30 14:34:59 :: SAVE: abyss 334300x754582
+May 30 14:35:23 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1371117880 output input_len 0, ptr 0x2b898100
+May 30 14:35:24 :: SYSTEM: closing socket. DESC #18
+May 30 14:35:33 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1923773047 output input_len 0, ptr 0x2b898100
+May 30 14:35:33 :: Handshake: lower than zero -20
+May 30 14:35:33 :: Handshake: client_time 0 server_time 2332536
+May 30 14:35:33 :: LOGIN_BY_KEY: abyss key 1437439906
+May 30 14:35:35 :: SYSTEM: new connection from [46.247.137.201] fd: 20 handshake 1774756811 output input_len 0, ptr 0x5d7c5d00
+May 30 14:35:35 :: SYSTEM: closing socket. DESC #18
+May 30 14:35:35 :: Handshake: lower than zero -39
+May 30 14:35:35 :: Handshake: client_time 0 server_time 2334696
+May 30 14:35:35 :: LOGIN_BY_KEY: abyss key 1440387373
+May 30 14:35:36 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 14:35:36 :: SAVE: abyss 334300x754582
+May 30 14:35:36 :: QUEST clear timer 0
+May 30 14:35:36 :: SYSTEM: closing socket. DESC #19
+May 30 14:35:37 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 4132312671 output input_len 0, ptr 0x2b898600
+May 30 14:35:37 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 2861729778 output input_len 0, ptr 0x2b898100
+May 30 14:35:37 :: SYSTEM: closing socket. DESC #20
+May 30 14:35:37 :: Handshake: lower than zero -40
+May 30 14:35:37 :: SYSTEM: closing socket. DESC #18
+May 30 14:35:37 :: Handshake: client_time 0 server_time 2336696
+May 30 14:35:37 :: LOGIN_BY_KEY: abyss key 1119230500
+May 30 14:35:38 :: LoginSuccess
+May 30 14:35:38 :: 	player(abyss).job(0)
+May 30 14:35:38 :: 	player(Testing).job(2)
+May 30 14:35:38 :: 	player().job(0)
+May 30 14:35:38 :: 	player().job(0)
+May 30 14:35:38 :: 	player().job(0)
+May 30 14:35:38 :: success to 51.254.23.214:30243
+May 30 14:35:38 :: success to 51.254.23.214:30247
+May 30 14:35:38 :: InputDB::login_success: abyss
+May 30 14:35:38 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 3883520433 output input_len 0, ptr 0x2b898600
+May 30 14:35:38 :: MARK_SERVER: Login
+May 30 14:35:38 :: LargePacket Size 8
+May 30 14:35:38 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:35:38 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:35:39 :: SYSTEM: closing socket. DESC #18
+SYSERR: May 30 14:35:41 :: Empire: EmpireSelectFailed 14
+May 30 14:35:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:35:54 :: PlayerCreate: name boss pos 0 job 4 shape 0
+May 30 14:35:54 :: NewPlayerTable2(name=boss, race=4, job=0)
+May 30 14:35:54 :: PlayerCreate: name boss account_id 0, TPlayerCreatePacketSize(2095), Packet->Gold 500000
+SYSERR: May 30 14:35:54 :: Process: UNKNOWN HEADER: 49, LAST HEADER: 4(90), REMAIN BYTES: 5, fd: 19
+May 30 14:35:54 :: SYSTEM: closing socket. DESC #19
+May 30 14:35:54 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1298436826 output input_len 0, ptr 0x2b898100
+May 30 14:35:54 :: SYSTEM: closing socket. DESC #18
+May 30 14:35:59 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1575814701 output input_len 0, ptr 0x2b898100
+May 30 14:35:59 :: Handshake: lower than zero -20
+May 30 14:35:59 :: Handshake: client_time 0 server_time 2358376
+May 30 14:35:59 :: LOGIN_BY_KEY: abyss key 247923528
+May 30 14:35:59 :: LoginSuccess
+May 30 14:35:59 :: 	player(abyss).job(0)
+May 30 14:35:59 :: 	player(Testing).job(2)
+May 30 14:35:59 :: 	player().job(0)
+May 30 14:35:59 :: 	player().job(0)
+May 30 14:35:59 :: 	player().job(0)
+May 30 14:35:59 :: success to 51.254.23.214:30243
+May 30 14:35:59 :: success to 51.254.23.214:30247
+May 30 14:35:59 :: InputDB::login_success: abyss
+May 30 14:36:02 :: SYSTEM: closing socket. DESC #18
+May 30 14:36:02 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 3756496344 output input_len 0, ptr 0x2b898100
+May 30 14:36:02 :: SYSTEM: closing socket. DESC #18
+May 30 14:36:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:37:27 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 2116198264 output input_len 0, ptr 0x2b898100
+May 30 14:37:28 :: SYSTEM: closing socket. DESC #18
+May 30 14:37:31 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 2377476942 output input_len 0, ptr 0x2b898100
+May 30 14:37:32 :: Handshake: lower than zero -20
+May 30 14:37:32 :: Handshake: client_time 0 server_time 2451222
+May 30 14:37:32 :: LOGIN_BY_KEY: abyss key 113916026
+May 30 14:37:32 :: LoginSuccess
+May 30 14:37:32 :: 	player(abyss).job(0)
+May 30 14:37:32 :: 	player(Testing).job(2)
+May 30 14:37:32 :: 	player().job(0)
+May 30 14:37:32 :: 	player().job(0)
+May 30 14:37:32 :: 	player().job(0)
+May 30 14:37:32 :: success to 51.254.23.214:30243
+May 30 14:37:32 :: success to 51.254.23.214:30247
+May 30 14:37:32 :: InputDB::login_success: abyss
+May 30 14:37:33 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 2643497505 output input_len 0, ptr 0x2b898600
+May 30 14:37:33 :: MARK_SERVER: Login
+May 30 14:37:33 :: LargePacket Size 8
+May 30 14:37:33 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:37:33 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:37:33 :: SYSTEM: closing socket. DESC #19
+May 30 14:37:38 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 3995109852 output input_len 0, ptr 0x2b898600
+May 30 14:37:38 :: SYSTEM: closing socket. DESC #18
+May 30 14:37:39 :: Handshake: lower than zero -38
+May 30 14:37:39 :: Handshake: client_time 0 server_time 2458223
+May 30 14:37:39 :: LOGIN_BY_KEY: abyss key 113916026
+May 30 14:37:39 :: LoginSuccess
+May 30 14:37:39 :: 	player(abyss).job(0)
+May 30 14:37:39 :: 	player(Testing).job(2)
+May 30 14:37:39 :: 	player().job(0)
+May 30 14:37:39 :: 	player().job(0)
+May 30 14:37:39 :: 	player().job(0)
+May 30 14:37:39 :: success to 51.254.23.214:30243
+May 30 14:37:39 :: success to 51.254.23.214:30247
+May 30 14:37:39 :: InputDB::login_success: abyss
+May 30 14:37:39 :: player_select: login: abyss index: 0
+May 30 14:37:40 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 14:37:40 :: PK_MODE: abyss 3
+May 30 14:37:40 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 124 PTR: 0x54d0f0c0
+May 30 14:37:40 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(334300, 754582)
+May 30 14:37:40 :: InputDB: player_load abyss 334300x754582x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 14:37:40 :: ITEM_LOAD: COUNT abyss 338
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: RegisterRaceNumMap Royal Tiger (gold) 20122
+May 30 14:37:40 :: AddAffect abyss type 533 apply 53 20 flag 0 duration 86400
+May 30 14:37:40 :: AddAffect abyss type 533 apply 159 20 flag 0 duration 86400
+May 30 14:37:40 :: AddAffect abyss type 533 apply 162 8 flag 0 duration 86400
+May 30 14:37:40 :: AddAffect abyss type 533 apply 19 50 flag 0 duration 86400
+May 30 14:37:40 :: AddAffect abyss type 221 apply 109 20122 flag 0 duration 86400
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 14:37:40 :: QUEST_LOAD: count 42
+May 30 14:37:40 ::             biologist.delivered 1
+May 30 14:37:40 ::             biologist.time 1685442993
+May 30 14:37:40 ::             comandos_tm.iniciar 1
+May 30 14:37:40 ::             dragonlair_zone.ch 1
+May 30 14:37:40 ::             dragonlair_zone.cooldown 1659211304
+May 30 14:37:40 ::             dragonlair_zone.disconnect 1659206253
+May 30 14:37:40 ::             dragonlair_zone.enter_time 1659205904
+May 30 14:37:40 ::             dragonlair_zone.idx 2080001
+May 30 14:37:40 ::             enchanted_forest.cooldown 1685413567
+May 30 14:37:40 ::             enchanted_forest.disconnect 1685408497
+May 30 14:37:40 ::             enchanted_forest.idx 2100000
+May 30 14:37:40 ::             give_basic_weapon.__status 668443392
+May 30 14:37:40 ::             guild_manage.new_disband_time 1685407521
+May 30 14:37:40 ::             horse_name.valid_till 1784830353
+May 30 14:37:40 ::             hydra_zone.ch 1
+May 30 14:37:40 ::             hydra_zone.cooldown 1685414368
+May 30 14:37:40 ::             hydra_zone.disconnect 1685409294
+May 30 14:37:40 ::             hydra_zone.enter_time 1685408968
+May 30 14:37:40 ::             hydra_zone.idx 3530000
+May 30 14:37:40 ::             item_attr_mission.attr_type_1 5
+May 30 14:37:40 ::             item_attr_mission.attr_type_2 21
+May 30 14:37:40 ::             item_attr_mission.attr_type_3 22
+May 30 14:37:40 ::             item_attr_mission.attr_type_4 9
+May 30 14:37:40 ::             item_attr_mission.attr_value_1 12
+May 30 14:37:40 ::             item_attr_mission.attr_value_2 20
+May 30 14:37:40 ::             item_attr_mission.attr_value_3 20
+May 30 14:37:40 ::             item_attr_mission.attr_value_4 20
+May 30 14:37:40 ::             item_attr_mission.id_ask_elected 4
+May 30 14:37:40 ::             item_attr_mission.saved_day 8
+May 30 14:37:40 ::             main_quest_lv1.__status -1147521841
+May 30 14:37:40 ::             pyramide_zone.ch 1
+May 30 14:37:40 ::             pyramide_zone.cooldown 1685411947
+May 30 14:37:40 ::             pyramide_zone.disconnect 1685408926
+May 30 14:37:40 ::             pyramide_zone.enter_time 1685408347
+May 30 14:37:40 ::             pyramide_zone.idx 3570000
+May 30 14:37:40 ::             rune.__status 777843330
+May 30 14:37:40 ::             rune_zone.ch 1
+May 30 14:37:40 ::             rune_zone.cooldown 1685416006
+May 30 14:37:40 ::             rune_zone.disconnect 1685409238
+May 30 14:37:40 ::             rune_zone.enter_time 1685408806
+May 30 14:37:40 ::             rune_zone.idx 2180000
+May 30 14:37:40 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 14:37:40 :: SAVE: abyss 334300x754582
+May 30 14:37:40 :: VERSION: abyss 1215955205 metin2client.exe
+May 30 14:37:42 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 702366525 output input_len 0, ptr 0x2b898100
+May 30 14:37:42 :: SHOW: abyss 334300x754582x0
+May 30 14:37:42 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 14:37:42 :: ENTERGAME: abyss 334300x754582x0 46.247.137.201 map_index 64
+May 30 14:37:42 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 14:37:42 :: HORSE STAMINA REGEN EVENT CREATE 0x54c99980
+May 30 14:37:42 :: SendLandList map 64 count 0 elem_size: 0
+May 30 14:37:42 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 0 16885338min
+May 30 14:37:42 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 1 16885338min
+May 30 14:37:42 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 2 16885338min
+May 30 14:37:42 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 3 16885338min
+May 30 14:37:42 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 4 16885338min
+May 30 14:37:42 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 5 16885338min
+May 30 14:37:42 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16885338
+May 30 14:37:42 :: PREMIUM: abyss type 6 16885338min
+May 30 14:37:42 :: VERSION CHECK 1215955205 1215955205
+May 30 14:37:42 :: reallocating buffer to 4096, current 1024
+May 30 14:37:43 :: QUEST_LOAD: Login pc 14 by event
+May 30 14:37:43 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 14:37:44 :: RegisterRaceNumMap Bonsai 34066
+May 30 14:37:44 :: AddAffect abyss type 587 apply 0 0 flag 50057413 duration 1892160000
+May 30 14:37:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:38:05 :: COMMAND: abyss: quit
+May 30 14:38:08 :: SYSTEM: new connection from [46.247.137.201] fd: 20 handshake 3557858546 output input_len 0, ptr 0x5d7c6200
+May 30 14:38:08 :: SYSTEM: closing socket. DESC #18
+May 30 14:38:09 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 14:38:09 :: SAVE: abyss 334775x753449
+May 30 14:38:09 :: QUEST clear timer 0
+May 30 14:38:09 :: SYSTEM: closing socket. DESC #19
+May 30 14:38:09 :: SYSTEM: closing socket. DESC #20
+May 30 14:38:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:39:51 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:40:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:41:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:42:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:43:15 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1712132678 output input_len 0, ptr 0x2b898100
+May 30 14:43:15 :: SYSTEM: closing socket. DESC #18
+May 30 14:43:23 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1321155512 output input_len 0, ptr 0x2b898100
+May 30 14:43:23 :: Handshake: lower than zero -20
+May 30 14:43:23 :: Handshake: client_time 0 server_time 2802540
+May 30 14:43:23 :: LOGIN_BY_KEY: abyss key 1943932186
+May 30 14:43:23 :: LoginSuccess
+May 30 14:43:23 :: 	player(abyss).job(0)
+May 30 14:43:23 :: 	player(Testing).job(2)
+May 30 14:43:23 :: 	player().job(0)
+May 30 14:43:23 :: 	player().job(0)
+May 30 14:43:23 :: 	player().job(0)
+May 30 14:43:23 :: success to 51.254.23.214:30243
+May 30 14:43:23 :: success to 51.254.23.214:30247
+May 30 14:43:23 :: InputDB::login_success: abyss
+May 30 14:43:24 :: SYSTEM: new connection from [46.247.137.201] fd: 19 handshake 1091063382 output input_len 0, ptr 0x2b898600
+May 30 14:43:24 :: MARK_SERVER: Login
+May 30 14:43:24 :: LargePacket Size 8
+May 30 14:43:24 :: MARK_SERVER: GuildMarkIDXList 15 bytes sent.
+May 30 14:43:24 :: MARK_SERVER: Sending blocks. (imgIdx 0 diff 0 size 10)
+May 30 14:43:24 :: SYSTEM: closing socket. DESC #19
+May 30 14:43:27 :: SYSTEM: closing socket. DESC #18
+May 30 14:43:28 :: P2P: Login Testing
+May 30 14:43:30 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 263763218 output input_len 0, ptr 0x2b898100
+May 30 14:43:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:44:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:45:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:46:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:46:53 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 14:47:30 :: RegisterRaceNumMap Vein Of Diamond Ore 20047
+May 30 14:47:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:48:29 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 14:48:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:49:18 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 14:49:30 :: PING_EVENT: no pong 46.247.137.201
+May 30 14:49:30 :: SYSTEM: closing socket. DESC #18
+May 30 14:49:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:50:10 :: RegisterRaceNumMap Pile Of Clams 20055
+May 30 14:50:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:50:53 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 14:51:42 :: RegisterRaceNumMap Vein Of Ebony Ore 20054
+May 30 14:51:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:52:40 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 14:52:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:53:28 :: RegisterRaceNumMap Vein Of Diamond Ore 20047
+May 30 14:53:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:54:22 :: RegisterRaceNumMap Vein Of White Gold Ore 20056
+May 30 14:54:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:54:59 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 14:55:50 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:56:01 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 14:56:49 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:56:52 :: RegisterRaceNumMap Vein Of Amethyst Ore 20058
+May 30 14:57:28 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 14:57:49 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:58:32 :: RegisterRaceNumMap Pile Of Clams 20055
+May 30 14:58:49 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 14:59:08 :: RegisterRaceNumMap Heaven's Tear Vein 20059
+May 30 14:59:49 :: SpawnMob: cannot create monster at non-exist sectree 405100 x 656600 (map 61)
+May 30 15:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 14)

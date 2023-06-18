@@ -1,0 +1,40 @@
+May 31 01:29:30 :: SYSTEM: new connection from [46.247.137.177] fd: 16 handshake 1566993616 output input_len 0, ptr 0x2898ca00
+May 31 01:29:30 :: Handshake: client_time 0 server_time 41682828
+May 31 01:29:30 :: AUTH_PHASE 0x2898ca00
+May 31 01:29:30 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 01:29:30 :: SetLoginKey 272595579
+May 31 01:29:30 :: InputAuth::Login: key (272595579) login (abyss)
+May 31 01:29:31 :: QID_AUTH_LOGIN: START 272595579 0x2898ca00
+May 31 01:29:31 :: Create_Time 0 19700101
+May 31 01:29:31 :: Block Time -2 
+May 31 01:29:31 :: SetRemainSecs abyss 0 type 2
+May 31 01:29:31 :: SendAuthLogin abyss key 1
+May 31 01:29:31 :: AuthLogin result 1 key 272595579
+May 31 01:29:31 :: SYSTEM: closing socket. DESC #16
+May 31 01:31:55 :: SYSTEM: new connection from [46.247.137.177] fd: 16 handshake 1616925850 output input_len 0, ptr 0x2898ca00
+May 31 01:31:55 :: Handshake: client_time 0 server_time 41827628
+May 31 01:31:55 :: AUTH_PHASE 0x2898ca00
+May 31 01:31:55 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 01:31:55 :: SetLoginKey 2096142465
+May 31 01:31:55 :: InputAuth::Login: key (2096142465) login (abyss)
+May 31 01:31:55 :: QID_AUTH_LOGIN: START 2096142465 0x2898ca00
+May 31 01:31:55 :: Create_Time 0 19700101
+May 31 01:31:55 :: Block Time -2 
+May 31 01:31:55 :: SetRemainSecs abyss 0 type 2
+May 31 01:31:55 :: SendAuthLogin abyss key 1
+May 31 01:31:55 :: AuthLogin result 1 key 2096142465
+May 31 01:31:56 :: SYSTEM: closing socket. DESC #16
+May 31 01:38:16 :: SYSTEM: new connection from [46.247.137.177] fd: 16 handshake 1127026893 output input_len 0, ptr 0x2898ca00
+May 31 01:38:16 :: Handshake: client_time 0 server_time 42208508
+May 31 01:38:16 :: AUTH_PHASE 0x2898ca00
+May 31 01:38:16 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 01:38:16 :: SetLoginKey 2113697314
+May 31 01:38:16 :: InputAuth::Login: key (2113697314) login (abyss)
+May 31 01:38:16 :: QID_AUTH_LOGIN: START 2113697314 0x2898ca00
+May 31 01:38:16 :: Create_Time 0 19700101
+May 31 01:38:16 :: Block Time -2 
+May 31 01:38:16 :: SetRemainSecs abyss 0 type 2
+May 31 01:38:16 :: SendAuthLogin abyss key 1
+May 31 01:38:16 :: AuthLogin result 1 key 2113697314
+May 31 01:38:16 :: SYSTEM: closing socket. DESC #16
+May 31 02:00:00 :: SYSTEM: LOG ROTATE (2023-05-31 1)

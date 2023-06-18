@@ -1,0 +1,3045 @@
+May 30 19:00:00 :: [   457900] return 0/0/1 async 0/0/0
+May 30 19:00:02 :: [   457950] return 0/0/0 async 0/0/0
+May 30 19:00:04 :: [   458000] return 0/0/0 async 0/0/0
+May 30 19:00:06 :: [   458050] return 0/0/0 async 0/0/0
+May 30 19:00:08 :: [   458100] return 0/0/0 async 0/0/0
+May 30 19:00:10 :: [   458150] return 0/0/1 async 0/0/0
+May 30 19:00:12 :: [   458200] return 0/0/0 async 0/0/0
+May 30 19:00:14 :: [   458250] return 0/0/0 async 0/0/0
+May 30 19:00:16 :: [   458300] return 0/0/0 async 0/0/0
+May 30 19:00:18 :: [   458350] return 0/0/0 async 0/0/0
+May 30 19:00:20 :: [   458400] return 0/0/1 async 0/0/0
+May 30 19:00:22 :: [   458450] return 0/0/0 async 0/0/0
+May 30 19:00:24 :: [   458500] return 0/0/0 async 0/0/0
+May 30 19:00:26 :: [   458550] return 0/0/0 async 0/0/0
+May 30 19:00:28 :: [   458600] return 0/0/0 async 0/0/0
+May 30 19:00:30 :: [   458650] return 0/0/1 async 0/0/0
+May 30 19:00:32 :: [   458700] return 0/0/0 async 0/0/0
+May 30 19:00:34 :: [   458750] return 0/0/0 async 0/0/0
+May 30 19:00:36 :: [   458800] return 0/0/0 async 0/0/0
+May 30 19:00:38 :: [   458850] return 0/0/0 async 0/0/0
+May 30 19:00:40 :: [   458900] return 0/0/1 async 0/0/0
+May 30 19:00:42 :: [   458950] return 0/0/0 async 0/0/0
+May 30 19:00:44 :: [   459000] return 0/0/0 async 0/0/0
+May 30 19:00:46 :: [   459050] return 0/0/0 async 0/0/0
+May 30 19:00:48 :: [   459100] return 0/0/0 async 0/0/0
+May 30 19:00:50 :: [   459150] return 0/0/1 async 0/0/0
+May 30 19:00:52 :: [   459200] return 0/0/0 async 0/0/0
+May 30 19:00:54 :: [   459250] return 0/0/0 async 0/0/0
+May 30 19:00:56 :: [   459300] return 0/0/0 async 0/0/0
+May 30 19:00:58 :: [   459350] return 0/0/0 async 0/0/0
+May 30 19:01:00 :: [   459400] return 0/0/1 async 0/0/0
+May 30 19:01:02 :: [   459450] return 0/0/0 async 0/0/0
+May 30 19:01:04 :: [   459500] return 0/0/0 async 0/0/0
+May 30 19:01:06 :: [   459550] return 0/0/0 async 0/0/0
+May 30 19:01:08 :: [   459600] return 0/0/0 async 0/0/0
+May 30 19:01:10 :: [   459650] return 0/0/1 async 0/0/0
+May 30 19:01:12 :: [   459700] return 0/0/0 async 0/0/0
+May 30 19:01:14 :: [   459750] return 0/0/0 async 0/0/0
+May 30 19:01:16 :: [   459800] return 0/0/0 async 0/0/0
+May 30 19:01:18 :: [   459850] return 0/0/0 async 0/0/0
+May 30 19:01:20 :: [   459900] return 0/0/1 async 0/0/0
+May 30 19:01:22 :: [   459950] return 0/0/0 async 0/0/0
+May 30 19:01:24 :: [   460000] return 0/0/0 async 0/0/0
+May 30 19:01:26 :: [   460050] return 0/0/0 async 0/0/0
+May 30 19:01:28 :: [   460100] return 0/0/0 async 0/0/0
+May 30 19:01:30 :: [   460150] return 0/0/1 async 0/0/0
+May 30 19:01:32 :: [   460200] return 0/0/0 async 0/0/0
+May 30 19:01:34 :: [   460250] return 0/0/0 async 0/0/0
+May 30 19:01:36 :: [   460300] return 0/0/0 async 0/0/0
+May 30 19:01:38 :: [   460350] return 0/0/0 async 0/0/0
+May 30 19:01:40 :: [   460400] return 0/0/1 async 0/0/0
+May 30 19:01:42 :: [   460450] return 0/0/0 async 0/0/0
+May 30 19:01:44 :: [   460500] return 0/0/0 async 0/0/0
+May 30 19:01:46 :: [   460550] return 0/0/0 async 0/0/0
+May 30 19:01:48 :: [   460600] return 0/0/0 async 0/0/0
+May 30 19:01:50 :: [   460650] return 0/0/1 async 0/0/0
+May 30 19:01:52 :: [   460700] return 0/0/0 async 0/0/0
+May 30 19:01:54 :: [   460750] return 0/0/0 async 0/0/0
+May 30 19:01:56 :: [   460800] return 0/0/0 async 0/0/0
+May 30 19:01:58 :: [   460850] return 0/0/0 async 0/0/0
+May 30 19:02:00 :: [   460900] return 0/0/1 async 0/0/0
+May 30 19:02:02 :: [   460950] return 0/0/0 async 0/0/0
+May 30 19:02:04 :: [   461000] return 0/0/0 async 0/0/0
+May 30 19:02:06 :: [   461050] return 0/0/0 async 0/0/0
+May 30 19:02:08 :: [   461100] return 0/0/0 async 0/0/0
+May 30 19:02:10 :: [   461150] return 0/0/1 async 0/0/0
+May 30 19:02:12 :: [   461200] return 0/0/0 async 0/0/0
+May 30 19:02:14 :: [   461250] return 0/0/0 async 0/0/0
+May 30 19:02:16 :: [   461300] return 0/0/0 async 0/0/0
+May 30 19:02:18 :: [   461350] return 0/0/0 async 0/0/0
+May 30 19:02:20 :: [   461400] return 0/0/1 async 0/0/0
+May 30 19:02:22 :: [   461450] return 0/0/0 async 0/0/0
+May 30 19:02:24 :: [   461500] return 0/0/0 async 0/0/0
+May 30 19:02:26 :: [   461550] return 0/0/0 async 0/0/0
+May 30 19:02:28 :: [   461600] return 0/0/0 async 0/0/0
+May 30 19:02:30 :: [   461650] return 0/0/1 async 0/0/0
+May 30 19:02:32 :: [   461700] return 0/0/0 async 0/0/0
+May 30 19:02:34 :: [   461750] return 0/0/0 async 0/0/0
+May 30 19:02:36 :: [   461800] return 0/0/0 async 0/0/0
+May 30 19:02:38 :: [   461850] return 0/0/0 async 0/0/0
+May 30 19:02:40 :: [   461900] return 0/0/1 async 0/0/0
+May 30 19:02:42 :: [   461950] return 0/0/0 async 0/0/0
+May 30 19:02:44 :: [   462000] return 0/0/0 async 0/0/0
+May 30 19:02:46 :: [   462050] return 0/0/0 async 0/0/0
+May 30 19:02:48 :: [   462100] return 0/0/0 async 0/0/0
+May 30 19:02:50 :: [   462150] return 0/0/1 async 0/0/0
+May 30 19:02:52 :: [   462200] return 0/0/0 async 0/0/0
+May 30 19:02:54 :: [   462250] return 0/0/0 async 0/0/0
+May 30 19:02:56 :: [   462300] return 0/0/0 async 0/0/0
+May 30 19:02:58 :: [   462350] return 0/0/0 async 0/0/0
+May 30 19:03:00 :: [   462400] return 0/0/1 async 0/0/0
+May 30 19:03:02 :: [   462450] return 0/0/0 async 0/0/0
+May 30 19:03:04 :: [   462500] return 0/0/0 async 0/0/0
+May 30 19:03:06 :: [   462550] return 0/0/0 async 0/0/0
+May 30 19:03:08 :: [   462600] return 0/0/0 async 0/0/0
+May 30 19:03:10 :: [   462650] return 0/0/1 async 0/0/0
+May 30 19:03:12 :: [   462700] return 0/0/0 async 0/0/0
+May 30 19:03:14 :: [   462750] return 0/0/0 async 0/0/0
+May 30 19:03:16 :: [   462800] return 0/0/0 async 0/0/0
+May 30 19:03:18 :: [   462850] return 0/0/0 async 0/0/0
+May 30 19:03:20 :: [   462900] return 0/0/1 async 0/0/0
+May 30 19:03:22 :: [   462950] return 0/0/0 async 0/0/0
+May 30 19:03:24 :: [   463000] return 0/0/0 async 0/0/0
+May 30 19:03:26 :: [   463050] return 0/0/0 async 0/0/0
+May 30 19:03:28 :: [   463100] return 0/0/0 async 0/0/0
+May 30 19:03:30 :: [   463150] return 0/0/1 async 0/0/0
+May 30 19:03:32 :: [   463200] return 0/0/0 async 0/0/0
+May 30 19:03:34 :: [   463250] return 0/0/0 async 0/0/0
+May 30 19:03:36 :: [   463300] return 0/0/0 async 0/0/0
+May 30 19:03:38 :: [   463350] return 0/0/0 async 0/0/0
+May 30 19:03:40 :: [   463400] return 0/0/1 async 0/0/0
+May 30 19:03:42 :: [   463450] return 0/0/0 async 0/0/0
+May 30 19:03:44 :: [   463500] return 0/0/0 async 0/0/0
+May 30 19:03:46 :: [   463550] return 0/0/0 async 0/0/0
+May 30 19:03:48 :: [   463600] return 0/0/0 async 0/0/0
+May 30 19:03:50 :: [   463650] return 0/0/1 async 0/0/0
+May 30 19:03:52 :: [   463700] return 0/0/0 async 0/0/0
+May 30 19:03:54 :: [   463750] return 0/0/0 async 0/0/0
+May 30 19:03:56 :: [   463800] return 0/0/0 async 0/0/0
+May 30 19:03:58 :: [   463850] return 0/0/0 async 0/0/0
+May 30 19:04:00 :: [   463900] return 0/0/1 async 0/0/0
+May 30 19:04:02 :: [   463950] return 0/0/0 async 0/0/0
+May 30 19:04:04 :: [   464000] return 0/0/0 async 0/0/0
+May 30 19:04:06 :: [   464050] return 0/0/0 async 0/0/0
+May 30 19:04:08 :: [   464100] return 0/0/0 async 0/0/0
+May 30 19:04:10 :: [   464150] return 0/0/1 async 0/0/0
+May 30 19:04:12 :: [   464200] return 0/0/0 async 0/0/0
+May 30 19:04:14 :: AUTH_PEER_READ: size 190
+May 30 19:04:14 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(710799882), client_key(499866264 296271984 1576141342 996749249)
+May 30 19:04:14 :: AUTH_PEER_WRITE: size 10
+May 30 19:04:14 :: [   464250] return 0/0/0 async 0/0/0
+May 30 19:04:14 :: LOGIN_BY_KEY success abyss 710799882 46.247.137.201
+May 30 19:04:15 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:04:15 :: abyss 958907 273513 hair 31
+May 30 19:04:15 :: hrss 466345 520349 hair 0
+May 30 19:04:15 :: bella 63800 166400 hair 0
+May 30 19:04:16 :: [   464300] return 0/0/0 async 0/0/0
+May 30 19:04:18 :: [   464350] return 0/0/0 async 0/0/0
+May 30 19:04:20 :: [   464400] return 0/0/1 async 0/0/0
+May 30 19:04:22 :: [   464450] return 0/0/0 async 0/0/0
+May 30 19:04:22 :: FLUSH_ITEMCACHESET : Deleted pid(91)
+May 30 19:04:22 :: FLUSH_ITEMCACHESET : No ItemCacheSet pid(90)
+May 30 19:04:22 :: FLUSH_ITEMCACHESET : No ItemCacheSet pid(39)
+May 30 19:04:22 :: FLUSH_ITEMCACHESET : No ItemCacheSet pid(14)
+May 30 19:04:24 :: [   464500] return 0/0/0 async 0/0/0
+May 30 19:04:26 :: [   464550] return 0/0/0 async 0/0/0
+May 30 19:04:28 :: [   464600] return 0/0/0 async 0/0/0
+May 30 19:04:30 :: [   464650] return 0/0/1 async 0/0/0
+May 30 19:04:32 :: [   464700] return 0/0/0 async 0/0/0
+May 30 19:04:34 :: [   464750] return 0/0/0 async 0/0/0
+May 30 19:04:36 :: [   464800] return 0/0/0 async 0/0/0
+May 30 19:04:38 :: [   464850] return 0/0/0 async 0/0/0
+May 30 19:04:40 :: [   464900] return 0/0/1 async 0/0/0
+May 30 19:04:42 :: [   464950] return 0/0/0 async 0/0/0
+May 30 19:04:44 :: [   465000] return 0/0/0 async 0/0/0
+May 30 19:04:46 :: [   465050] return 0/0/0 async 0/0/0
+May 30 19:04:48 :: [   465100] return 0/0/0 async 0/0/0
+May 30 19:04:50 :: [   465150] return 0/0/1 async 0/0/0
+May 30 19:04:52 :: [   465200] return 0/0/0 async 0/0/0
+May 30 19:04:54 :: [   465250] return 0/0/0 async 0/0/0
+May 30 19:04:55 :: PLAYER_DELETE FAILED len(7)
+May 30 19:04:56 :: [   465300] return 0/0/0 async 0/0/0
+May 30 19:04:58 :: [   465350] return 0/0/0 async 0/0/0
+May 30 19:05:00 :: [   465400] return 0/0/1 async 0/0/0
+May 30 19:05:02 :: [   465450] return 0/0/0 async 0/0/0
+May 30 19:05:03 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:05:03 :: LOGOUT: Insert player pid(14)
+May 30 19:05:03 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:05:03 :: LOGOUT: Insert player pid(39)
+May 30 19:05:03 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:05:03 :: LOGOUT: Insert player pid(90)
+May 30 19:05:03 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:05:03 :: LOGOUT: Insert player pid(91)
+May 30 19:05:03 :: LOGOUT abyss 
+May 30 19:05:03 :: LOGIN_BY_KEY success abyss 710799882 46.247.137.201
+May 30 19:05:03 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:05:03 :: abyss 958907 273513 hair 31
+May 30 19:05:03 :: hrss 466345 520349 hair 0
+May 30 19:05:03 :: bella 63800 166400 hair 0
+May 30 19:05:04 :: [PLAYER_LOAD] Load from PlayerDB pid[14]
+May 30 19:05:04 :: QID_PLAYER 44 14
+May 30 19:05:04 :: SetPlay on 710799882 abyss
+May 30 19:05:04 :: QID_ITEM 44
+May 30 19:05:04 :: ITEM_CACHE: new cache 14
+May 30 19:05:04 :: ITEM_LOAD: count 341 pid 14
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030104 vnum88972 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031850 vnum30033 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031850
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031849 vnum30012 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031849
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031848 vnum30041 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031848
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031847 vnum30030 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031847
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055883 vnum30612 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055883
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30008177 vnum30271 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30008177
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037706 vnum50333 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50037706
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055830 vnum30616 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055830
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30031583 vnum70102 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30031583
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055723 vnum30506 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055723
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055918 vnum30284 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055918
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055927 vnum30280 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055927
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031843 vnum30031 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031843
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060458 vnum80024 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060458
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30031586 vnum50513 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30031586
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055722 vnum30518 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055722
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30061231 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30061231
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031846 vnum30021 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031846
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031845 vnum30105 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031845
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031844 vnum30032 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031844
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060436 vnum80025 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060436
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055885 vnum30505 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055885
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051177 vnum71206 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051177
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051383 vnum28343 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051383
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30052411 vnum71206 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30052411
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057403 vnum189 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057403
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081285 vnum30516 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10081285
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055928 vnum30524 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055928
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060484 vnum80023 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060484
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057508 vnum18900 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057508
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057495 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057495
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057250 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057250
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057251 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057251
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057249 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057249
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057391 vnum50435 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057391
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066423 vnum19 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066423
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031370 vnum187 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031370
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031374 vnum187 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031374
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060446 vnum80026 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060446
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031373 vnum187 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031373
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057401 vnum88242 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057401
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081287 vnum30618 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10081287
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060505 vnum80027 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060505
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057497 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057497
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055926 vnum30275 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055926
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081284 vnum30505 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10081284
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081286 vnum30610 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10081286
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057437 vnum11299 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057437
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10037711 vnum86050 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10037711
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030284 vnum28334 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030284
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030290 vnum28337 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030290
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060431 vnum80022 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060431
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030385 vnum88976 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030385
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060434 vnum30279 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060434
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030127 vnum71085 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030127
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051362 vnum28332 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051362
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030382 vnum88975 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030380 vnum88974 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030379 vnum88970 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030375 vnum88973 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030381 vnum88971 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060442 vnum80019 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060442
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051170 vnum50143 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051170
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031842 vnum30011 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031842
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051247 vnum28115 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051247
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051365 vnum28040 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051365
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037705 vnum50336 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50037705
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031731 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031731
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031728 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031728
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034446 vnum70402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10034446
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057494 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057494
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029899 vnum28034 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029899
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029886 vnum28236 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029886
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029772 vnum39052 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029772
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029773 vnum28232 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029773
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029777 vnum39048 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029777
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029778 vnum28341 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029778
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029781 vnum72310 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029781
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029785 vnum28338 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029785
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029794 vnum28231 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029794
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029809 vnum71094 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029809
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029812 vnum28438 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029812
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037708 vnum50334 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50037708
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029819 vnum28335 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029819
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029833 vnum28130 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029833
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029841 vnum28238 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029841
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029849 vnum39050 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029849
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029850 vnum28136 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029850
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029858 vnum28039 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029858
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029875 vnum39054 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029875
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029876 vnum28234 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029876
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029905 vnum28331 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029905
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029919 vnum28336 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029919
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029926 vnum28235 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029926
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029931 vnum28333 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029931
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029948 vnum28131 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029948
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029954 vnum28233 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029954
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029961 vnum28243 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029961
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029976 vnum28237 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029976
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029987 vnum28133 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50029987
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030000 vnum28437 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030000
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030007 vnum28442 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030007
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030020 vnum28140 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030020
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030025 vnum28139 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030025
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030052 vnum28143 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030052
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030137 vnum28035 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030137
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030062 vnum28041 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030062
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030081 vnum28339 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030081
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030069 vnum28242 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030069
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030105 vnum28240 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030105
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030119 vnum28135 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030119
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030180 vnum28330 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030180
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030187 vnum28031 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030187
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030199 vnum28141 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030199
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030204 vnum28441 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030204
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030276 vnum28239 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030276
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030228 vnum28230 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030228
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030243 vnum28431 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030243
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030253 vnum28142 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030253
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030259 vnum28042 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030259
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030265 vnum28435 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030265
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030350 vnum28134 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030350
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030371 vnum28340 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50030371
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055882 vnum30516 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055882
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031446 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031446
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031627 vnum187 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031627
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031626 vnum70402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031626
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031724 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031724
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031726 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031726
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031721 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031721
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031725 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031725
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031727 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031727
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031433 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031433
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031444 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031444
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031432 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031432
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031440 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031440
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031436 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031436
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031447 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031447
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031434 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031434
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031445 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031445
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031431 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031431
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031441 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031441
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031442 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031442
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031438 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031438
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031430 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031430
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031439 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031439
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031722 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031722
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031435 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031435
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031443 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031443
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031437 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031437
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031462 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031462
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031467 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031467
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031463 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031463
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031459 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031459
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031470 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031470
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031460 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031460
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031471 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031471
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031468 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031468
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031465 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031465
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031449 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031449
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031461 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031461
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031466 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031466
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031469 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031469
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031464 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031464
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031454 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031454
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031448 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031448
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031452 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031452
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031453 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031453
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031451 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031451
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031455 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031455
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031450 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031450
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031456 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031456
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031457 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031457
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031458 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031458
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031473 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031473
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031483 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031483
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031479 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031479
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031476 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031476
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031474 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031474
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031484 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031484
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031480 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031480
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031477 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031477
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031481 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031481
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031475 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031475
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031472 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031472
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031482 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031482
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031478 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031478
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031729 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031729
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031730 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031730
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031723 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031723
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031851 vnum30147 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031851
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031852 vnum30007 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031852
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031853 vnum30060 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031853
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031854 vnum30059 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031854
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031855 vnum30048 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031855
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031856 vnum30049 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031856
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031857 vnum33431 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031857
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031859 vnum33433 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031859
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031860 vnum33434 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031860
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031858 vnum33432 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031858
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031861 vnum33435 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50031861
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034442 vnum70402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10034442
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051171 vnum71203 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051171
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034437 vnum70402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10034437
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051158 vnum71204 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051158
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034439 vnum70402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10034439
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075595 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10075595
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055831 vnum30520 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055831
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055923 vnum27994 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055923
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055884 vnum30587 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055884
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057498 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057498
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057493 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057493
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060652 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060652
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30065514 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30065514
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060433 vnum30277 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30060433
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051194 vnum71205 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051194
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057416 vnum88922 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057416
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057402 vnum88241 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057402
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037851 vnum45242 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50037851
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057507 vnum18060 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057507
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051392 vnum28342 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051392
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051452 vnum28036 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051452
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066396 vnum30613 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066396
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051678 vnum86051 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051678
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051675 vnum55005 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051675
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051708 vnum86052 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051708
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051730 vnum55004 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051730
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057436 vnum41307 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057436
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055540 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055540
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057281 vnum16109 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057281
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057276 vnum15189 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057276
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057488 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057488
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057392 vnum50447 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057392
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000075 vnum30094 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 70000075
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075866 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10075866
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057489 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057489
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057490 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057490
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000062 vnum30095 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 70000062
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30064710 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30064710
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066251 vnum28043 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066251
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066281 vnum28038 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066281
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066356 vnum28241 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066356
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066384 vnum28137 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066384
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066392 vnum28439 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066392
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066602 vnum28030 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066602
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066609 vnum28430 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066609
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066684 vnum28440 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066684
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066691 vnum28138 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066691
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066711 vnum28132 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066711
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057496 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057496
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066978 vnum28032 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10066978
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067156 vnum28436 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10067156
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067186 vnum28037 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10067186
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067404 vnum28433 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10067404
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067780 vnum28443 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10067780
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068016 vnum28033 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10068016
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068075 vnum28432 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10068075
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068156 vnum28434 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10068156
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10071192 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10071192
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057492 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057492
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10074158 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10074158
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50054217 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50054217
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10074953 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10074953
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075320 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10075320
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075389 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10075389
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055922 vnum27993 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055922
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055921 vnum27992 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055921
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10076760 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10076760
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10077490 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 10077490
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000076 vnum17126 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 70000076
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057257 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057257
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057254 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057254
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057252 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057252
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057256 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057256
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057255 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057255
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057253 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057253
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057260 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057260
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057258 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057258
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057259 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057259
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057262 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057262
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057261 vnum71084 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057261
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057280 vnum17109 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057280
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057275 vnum13049 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057275
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057278 vnum12249 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057278
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057279 vnum14109 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057279
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057435 vnum14106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057435
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057487 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057487
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066401 vnum70031 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066401
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066398 vnum86055 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066398
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066399 vnum70401 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066399
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066407 vnum72320 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066407
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066402 vnum50266 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066402
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066409 vnum86053 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066409
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066413 vnum30798 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066413
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066415 vnum30801 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066415
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066416 vnum30802 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066416
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066417 vnum30803 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066417
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066418 vnum89101 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066418
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066419 vnum89106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066419
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066420 vnum89107 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066420
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057414 vnum70038 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057414
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057417 vnum88923 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057417
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057418 vnum88924 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057418
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057419 vnum88925 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057419
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057420 vnum88926 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057420
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057422 vnum88948 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057422
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057423 vnum88949 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057423
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057424 vnum88950 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057424
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057426 vnum88946 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057426
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057427 vnum88947 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057427
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057428 vnum30256 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057428
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057399 vnum88246 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057399
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000059 vnum164402 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 70000059
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057431 vnum15106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057431
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057432 vnum15106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057432
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057433 vnum16106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057433
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057434 vnum16106 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057434
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055888 vnum20765 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50055888
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057415 vnum71148 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057415
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057413 vnum53256 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066403 vnum50099 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066403
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057400 vnum88244 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057400
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057425 vnum88951 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057425
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066421 vnum10951 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066421
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066422 vnum30179 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066422
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057483 vnum50067 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057483
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066406 vnum55009 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066406
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057421 vnum88927 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057421
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051948 vnum41775 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30051948
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066412 vnum76025 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066412
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066400 vnum86075 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066400
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057429 vnum73005 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057429
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066414 vnum30800 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066414
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057412 vnum71139 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057412
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057491 vnum30006 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057491
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057397 vnum19 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057397
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057398 vnum8240 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 50057398
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066442 vnum70612 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066442
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066459 vnum41307 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066459
+May 30 19:05:04 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066460 vnum40129 new owner14
+May 30 19:05:04 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:05:04 :: QID_QUEST 44
+May 30 19:05:04 :: QUEST_LOAD: count 47 PID 14
+May 30 19:05:04 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 19:05:04 :: QID_AFFECT 44
+May 30 19:05:04 :: AFFECT_LOAD: count 11 PID 14
+May 30 19:05:04 :: QID_BATTLE_PASS 44
+May 30 19:05:04 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 19:05:04 :: QID_SKILL_COLOR 44 14
+May 30 19:05:04 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 19:05:04 :: AUTH_PEER_WRITE: size 18
+May 30 19:05:04 :: [   465500] return 0/0/53 async 0/0/0
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057398
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057423
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057421
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057416
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057417
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10034437
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50031626
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057422
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10034446
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057425
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057427
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057420
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057436
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 30066459
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057426
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50037851
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10034442
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057419
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10034439
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057424
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:05:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:06 :: ITEM_CACHE: save 14 id 50057418
+May 30 19:05:06 :: [   465550] return 0/0/0 async 0/0/0
+May 30 19:05:08 :: [   465600] return 0/0/0 async 0/0/0
+May 30 19:05:10 :: [   465650] return 0/0/1 async 0/0/0
+May 30 19:05:11 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:05:11 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:05:12 :: [   465700] return 0/0/0 async 0/0/0
+May 30 19:05:14 :: [   465750] return 0/0/0 async 0/0/0
+May 30 19:05:16 :: [   465800] return 0/0/0 async 0/0/0
+May 30 19:05:18 :: [   465850] return 0/0/0 async 0/0/0
+May 30 19:05:20 :: [   465900] return 0/0/1 async 0/0/0
+May 30 19:05:22 :: [   465950] return 0/0/0 async 0/0/0
+May 30 19:05:24 :: [   466000] return 0/0/0 async 0/0/0
+May 30 19:05:26 :: [   466050] return 0/0/0 async 0/0/0
+May 30 19:05:28 :: [   466100] return 0/0/0 async 0/0/0
+May 30 19:05:30 :: [   466150] return 0/0/1 async 0/0/0
+May 30 19:05:32 :: [   466200] return 0/0/0 async 0/0/0
+May 30 19:05:34 :: [   466250] return 0/0/0 async 0/0/0
+May 30 19:05:36 :: [   466300] return 0/0/0 async 0/0/0
+May 30 19:05:38 :: [   466350] return 0/0/0 async 0/0/0
+May 30 19:05:40 :: [   466400] return 0/0/1 async 0/0/0
+May 30 19:05:42 :: [   466450] return 0/0/0 async 0/0/0
+May 30 19:05:44 :: [   466500] return 0/0/0 async 0/0/0
+May 30 19:05:46 :: [   466550] return 0/0/0 async 0/0/0
+May 30 19:05:48 :: [   466600] return 0/0/0 async 0/0/0
+May 30 19:05:50 :: [   466650] return 0/0/1 async 0/0/0
+May 30 19:05:52 :: [   466700] return 0/0/0 async 0/0/0
+May 30 19:05:54 :: [   466750] return 0/0/0 async 0/0/0
+May 30 19:05:56 :: [   466800] return 0/0/0 async 0/0/0
+May 30 19:05:58 :: [   466850] return 0/0/0 async 0/0/0
+May 30 19:06:00 :: [   466900] return 0/0/1 async 0/0/0
+May 30 19:06:02 :: [   466950] return 0/0/0 async 0/0/0
+May 30 19:06:04 :: [   467000] return 0/0/0 async 0/0/0
+May 30 19:06:06 :: [   467050] return 0/0/0 async 0/0/0
+May 30 19:06:08 :: [   467100] return 0/0/0 async 0/0/0
+May 30 19:06:10 :: [   467150] return 0/0/1 async 0/0/0
+May 30 19:06:12 :: [   467200] return 0/0/0 async 0/0/0
+May 30 19:06:14 :: [   467250] return 0/0/0 async 0/0/0
+May 30 19:06:16 :: [   467300] return 0/0/0 async 0/0/0
+May 30 19:06:18 :: [   467350] return 0/0/0 async 0/0/0
+May 30 19:06:20 :: [   467400] return 0/0/1 async 0/0/0
+May 30 19:06:22 :: [   467450] return 0/0/0 async 0/0/0
+May 30 19:06:24 :: [   467500] return 0/0/0 async 0/0/0
+May 30 19:06:26 :: [   467550] return 0/0/0 async 0/0/0
+May 30 19:06:28 :: [   467600] return 0/0/0 async 0/0/0
+May 30 19:06:30 :: [   467650] return 0/0/1 async 0/0/0
+May 30 19:06:32 :: [   467700] return 0/0/0 async 0/0/0
+May 30 19:06:34 :: [   467750] return 0/0/0 async 0/0/0
+May 30 19:06:36 :: [   467800] return 0/0/0 async 0/0/0
+May 30 19:06:38 :: [   467850] return 0/0/0 async 0/0/0
+May 30 19:06:40 :: [   467900] return 0/0/1 async 0/0/0
+May 30 19:06:42 :: [   467950] return 0/0/0 async 0/0/0
+May 30 19:06:44 :: [   468000] return 0/0/0 async 0/0/0
+May 30 19:06:46 :: [   468050] return 0/0/0 async 0/0/0
+May 30 19:06:48 :: [   468100] return 0/0/0 async 0/0/0
+May 30 19:06:50 :: [   468150] return 0/0/1 async 0/0/0
+May 30 19:06:52 :: [   468200] return 0/0/0 async 0/0/0
+May 30 19:06:54 :: [   468250] return 0/0/0 async 0/0/0
+May 30 19:06:56 :: [   468300] return 0/0/0 async 0/0/0
+May 30 19:06:58 :: [   468350] return 0/0/0 async 0/0/0
+May 30 19:07:00 :: [   468400] return 0/0/1 async 0/0/0
+May 30 19:07:02 :: [   468450] return 0/0/0 async 0/0/0
+May 30 19:07:04 :: [   468500] return 0/0/0 async 0/0/0
+May 30 19:07:06 :: [   468550] return 0/0/0 async 0/0/0
+May 30 19:07:08 :: [   468600] return 0/0/0 async 0/0/0
+May 30 19:07:10 :: [   468650] return 0/0/1 async 0/0/0
+May 30 19:07:12 :: [   468700] return 0/0/0 async 0/0/0
+May 30 19:07:14 :: [   468750] return 0/0/0 async 0/0/0
+May 30 19:07:16 :: [   468800] return 0/0/0 async 0/0/0
+May 30 19:07:18 :: [   468850] return 0/0/0 async 0/0/0
+May 30 19:07:20 :: [   468900] return 0/0/1 async 0/0/0
+May 30 19:07:22 :: [   468950] return 0/0/0 async 0/0/0
+May 30 19:07:24 :: [   469000] return 0/0/0 async 0/0/0
+May 30 19:07:26 :: [   469050] return 0/0/0 async 0/0/0
+May 30 19:07:28 :: [   469100] return 0/0/0 async 0/0/0
+May 30 19:07:30 :: [   469150] return 0/0/1 async 0/0/0
+May 30 19:07:32 :: [   469200] return 0/0/0 async 0/0/0
+May 30 19:07:34 :: [   469250] return 0/0/0 async 0/0/0
+May 30 19:07:36 :: [   469300] return 0/0/0 async 0/0/0
+May 30 19:07:38 :: [   469350] return 0/0/0 async 0/0/0
+May 30 19:07:40 :: [   469400] return 0/0/1 async 0/0/0
+May 30 19:07:42 :: [   469450] return 0/0/0 async 0/0/0
+May 30 19:07:44 :: [   469500] return 0/0/0 async 0/0/0
+May 30 19:07:46 :: [   469550] return 0/0/0 async 0/0/0
+May 30 19:07:48 :: [   469600] return 0/0/0 async 0/0/0
+May 30 19:07:50 :: [   469650] return 0/0/1 async 0/0/0
+May 30 19:07:52 :: [   469700] return 0/0/0 async 0/0/0
+May 30 19:07:54 :: [   469750] return 0/0/0 async 0/0/0
+May 30 19:07:56 :: [   469800] return 0/0/0 async 0/0/0
+May 30 19:07:58 :: [   469850] return 0/0/0 async 0/0/0
+May 30 19:08:00 :: [   469900] return 0/0/1 async 0/0/0
+May 30 19:08:02 :: [   469950] return 0/0/0 async 0/0/0
+May 30 19:08:04 :: [   470000] return 0/0/0 async 0/0/0
+May 30 19:08:06 :: [   470050] return 0/0/0 async 0/0/0
+May 30 19:08:08 :: [   470100] return 0/0/0 async 0/0/0
+May 30 19:08:10 :: [   470150] return 0/0/1 async 0/0/0
+May 30 19:08:12 :: [   470200] return 0/0/0 async 0/0/0
+May 30 19:08:14 :: [   470250] return 0/0/0 async 0/0/0
+May 30 19:08:16 :: [   470300] return 0/0/0 async 0/0/0
+May 30 19:08:18 :: [   470350] return 0/0/0 async 0/0/0
+May 30 19:08:20 :: [   470400] return 0/0/1 async 0/0/0
+May 30 19:08:22 :: [   470450] return 0/0/0 async 0/0/0
+May 30 19:08:24 :: [   470500] return 0/0/0 async 0/0/0
+May 30 19:08:26 :: [   470550] return 0/0/0 async 0/0/0
+May 30 19:08:28 :: [   470600] return 0/0/0 async 0/0/0
+May 30 19:08:30 :: [   470650] return 0/0/1 async 0/0/0
+May 30 19:08:32 :: [   470700] return 0/0/0 async 0/0/0
+May 30 19:08:34 :: [   470750] return 0/0/0 async 0/0/0
+May 30 19:08:36 :: [   470800] return 0/0/0 async 0/0/0
+May 30 19:08:38 :: [   470850] return 0/0/0 async 0/0/0
+May 30 19:08:40 :: [   470900] return 0/0/1 async 0/0/0
+May 30 19:08:42 :: [   470950] return 0/0/0 async 0/0/0
+May 30 19:08:44 :: [   471000] return 0/0/0 async 0/0/0
+May 30 19:08:46 :: [   471050] return 0/0/0 async 0/0/0
+May 30 19:08:48 :: [   471100] return 0/0/0 async 0/0/0
+May 30 19:08:50 :: [   471150] return 0/0/1 async 0/0/0
+May 30 19:08:52 :: [   471200] return 0/0/0 async 0/0/0
+May 30 19:08:54 :: [   471250] return 0/0/0 async 0/0/0
+May 30 19:08:56 :: [   471300] return 0/0/0 async 0/0/0
+May 30 19:08:58 :: [   471350] return 0/0/0 async 0/0/0
+May 30 19:09:00 :: [   471400] return 0/0/1 async 0/0/0
+May 30 19:09:02 :: [   471450] return 0/0/0 async 0/0/0
+May 30 19:09:04 :: [   471500] return 0/0/0 async 0/0/0
+May 30 19:09:06 :: [   471550] return 0/0/0 async 0/0/0
+May 30 19:09:08 :: [   471600] return 0/0/0 async 0/0/0
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:09:09 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:09:09 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:09:09 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:09:09 :: LOGOUT: Insert player pid(14)
+May 30 19:09:09 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:09:09 :: LOGOUT: Insert player pid(39)
+May 30 19:09:09 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:09:09 :: LOGOUT: Insert player pid(90)
+May 30 19:09:09 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:09:09 :: LOGOUT: Insert player pid(91)
+May 30 19:09:09 :: SetPlay off 710799882 abyss
+May 30 19:09:09 :: LOGOUT abyss 
+May 30 19:09:09 :: AUTH_PEER_WRITE: size 18
+May 30 19:09:10 :: [   471650] return 0/0/1 async 0/0/0
+May 30 19:09:12 :: [   471700] return 0/0/0 async 0/0/0
+May 30 19:09:14 :: [   471750] return 0/0/0 async 0/0/0
+May 30 19:09:16 :: [   471800] return 0/0/0 async 0/0/0
+May 30 19:09:18 :: [   471850] return 0/0/0 async 0/0/0
+May 30 19:09:20 :: [   471900] return 0/0/1 async 0/0/0
+May 30 19:09:22 :: [   471950] return 0/0/0 async 0/0/0
+May 30 19:09:24 :: [   472000] return 0/0/0 async 0/0/0
+May 30 19:09:26 :: [   472050] return 0/0/0 async 0/0/0
+May 30 19:09:28 :: [   472100] return 0/0/0 async 0/0/0
+May 30 19:09:30 :: [   472150] return 0/0/1 async 0/0/0
+May 30 19:09:32 :: [   472200] return 0/0/0 async 0/0/0
+May 30 19:09:34 :: [   472250] return 0/0/0 async 0/0/0
+May 30 19:09:36 :: [   472300] return 0/0/0 async 0/0/0
+May 30 19:09:38 :: [   472350] return 0/0/0 async 0/0/0
+May 30 19:09:40 :: [   472400] return 0/0/1 async 0/0/0
+May 30 19:09:42 :: [   472450] return 0/0/0 async 0/0/0
+May 30 19:09:44 :: [   472500] return 0/0/0 async 0/0/0
+May 30 19:09:46 :: [   472550] return 0/0/0 async 0/0/0
+May 30 19:09:48 :: [   472600] return 0/0/0 async 0/0/0
+May 30 19:09:50 :: [   472650] return 0/0/1 async 0/0/0
+May 30 19:09:52 :: [   472700] return 0/0/0 async 0/0/0
+May 30 19:09:54 :: [   472750] return 0/0/0 async 0/0/0
+May 30 19:09:56 :: [   472800] return 0/0/0 async 0/0/0
+May 30 19:09:58 :: [   472850] return 0/0/0 async 0/0/0
+May 30 19:10:00 :: [   472900] return 0/0/1 async 0/0/0
+May 30 19:10:02 :: [   472950] return 0/0/0 async 0/0/0
+May 30 19:10:04 :: [   473000] return 0/0/0 async 0/0/0
+May 30 19:10:06 :: [   473050] return 0/0/30 async 0/0/0
+May 30 19:10:08 :: [   473100] return 0/0/0 async 0/0/0
+May 30 19:10:10 :: [   473150] return 0/0/1 async 0/0/0
+May 30 19:10:12 :: [   473200] return 0/0/0 async 0/0/0
+May 30 19:10:14 :: [   473250] return 0/0/0 async 0/0/0
+May 30 19:10:16 :: [   473300] return 0/0/0 async 0/0/0
+May 30 19:10:18 :: [   473350] return 0/0/0 async 0/0/0
+May 30 19:10:20 :: [   473400] return 0/0/1 async 0/0/0
+May 30 19:10:22 :: [   473450] return 0/0/0 async 0/0/0
+May 30 19:10:23 :: AUTH_PEER_READ: size 190
+May 30 19:10:23 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1507565756), client_key(1209885724 26709825 87946552 648950328)
+May 30 19:10:23 :: AUTH_PEER_WRITE: size 10
+May 30 19:10:24 :: LOGIN_BY_KEY success abyss 1507565756 46.247.137.201
+May 30 19:10:24 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:10:24 :: abyss 959215 272884 hair 31
+May 30 19:10:24 :: hrss 466345 520349 hair 0
+May 30 19:10:24 :: bella 63800 166400 hair 0
+May 30 19:10:24 :: [   473500] return 0/0/2 async 0/0/0
+May 30 19:10:26 :: [   473550] return 0/0/0 async 0/0/0
+May 30 19:10:28 :: [   473600] return 0/0/0 async 0/0/0
+May 30 19:10:30 :: [   473650] return 0/0/1 async 0/0/0
+May 30 19:10:32 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:10:32 :: LOGOUT: Update player time pid(14)
+May 30 19:10:32 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:10:32 :: LOGOUT: Update player time pid(39)
+May 30 19:10:32 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:10:32 :: LOGOUT: Update player time pid(90)
+May 30 19:10:32 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:10:32 :: LOGOUT: Update player time pid(91)
+May 30 19:10:32 :: LOGOUT abyss 
+May 30 19:10:32 :: [   473700] return 0/0/0 async 0/0/0
+May 30 19:10:33 :: LOGIN_BY_KEY success abyss 1507565756 46.247.137.201
+May 30 19:10:33 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:10:33 :: abyss 959215 272884 hair 31
+May 30 19:10:33 :: hrss 466345 520349 hair 0
+May 30 19:10:33 :: bella 63800 166400 hair 0
+May 30 19:10:33 :: SetPlay on 1507565756 abyss
+May 30 19:10:33 :: [PLAYER_LOAD] ID abyss pid 14 gold 64788586625 
+May 30 19:10:33 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 19:10:33 :: AUTH_PEER_WRITE: size 18
+May 30 19:10:33 :: QID_QUEST 45
+May 30 19:10:33 :: QUEST_LOAD: count 47 PID 14
+May 30 19:10:33 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 19:10:33 :: QID_AFFECT 45
+May 30 19:10:33 :: AFFECT_LOAD: count 11 PID 14
+May 30 19:10:33 :: QID_BATTLE_PASS 45
+May 30 19:10:33 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 19:10:33 :: QID_SKILL_COLOR 45 14
+May 30 19:10:33 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 19:10:34 :: [   473750] return 0/0/47 async 0/0/0
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057426
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057423
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10034446
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 30066459
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10034437
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057422
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057416
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057398
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057417
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50031626
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057436
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057418
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057427
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057425
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10034439
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50037851
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10034442
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057419
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057424
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057421
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:10:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:36 :: ITEM_CACHE: save 14 id 50057420
+May 30 19:10:36 :: [   473800] return 0/0/0 async 0/0/2
+May 30 19:10:38 :: [   473850] return 0/0/0 async 0/0/0
+May 30 19:10:40 :: [   473900] return 0/0/1 async 0/0/0
+May 30 19:10:41 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:10:41 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:10:42 :: [   473950] return 0/0/0 async 0/0/0
+May 30 19:10:44 :: [   474000] return 0/0/0 async 0/0/0
+May 30 19:10:46 :: [   474050] return 0/0/0 async 0/0/0
+May 30 19:10:48 :: [   474100] return 0/0/0 async 0/0/0
+May 30 19:10:50 :: [   474150] return 0/0/1 async 0/0/0
+May 30 19:10:52 :: [   474200] return 0/0/0 async 0/0/0
+May 30 19:10:54 :: [   474250] return 0/0/0 async 0/0/0
+May 30 19:10:56 :: [   474300] return 0/0/0 async 0/0/0
+May 30 19:10:58 :: [   474350] return 0/0/0 async 0/0/0
+May 30 19:11:00 :: [   474400] return 0/0/1 async 0/0/0
+May 30 19:11:02 :: [   474450] return 0/0/0 async 0/0/0
+May 30 19:11:04 :: [   474500] return 0/0/0 async 0/0/0
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:11:06 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:11:06 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:11:06 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:11:06 :: LOGOUT: Insert player pid(14)
+May 30 19:11:06 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:11:06 :: LOGOUT: Insert player pid(39)
+May 30 19:11:06 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:11:06 :: LOGOUT: Insert player pid(90)
+May 30 19:11:06 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:11:06 :: LOGOUT: Insert player pid(91)
+May 30 19:11:06 :: SetPlay off 1507565756 abyss
+May 30 19:11:06 :: LOGOUT abyss 
+May 30 19:11:06 :: AUTH_PEER_WRITE: size 18
+May 30 19:11:06 :: [   474550] return 0/0/0 async 0/0/6
+May 30 19:11:08 :: [   474600] return 0/0/0 async 0/0/0
+May 30 19:11:10 :: [   474650] return 0/0/1 async 0/0/0
+May 30 19:11:12 :: [   474700] return 0/0/0 async 0/0/0
+May 30 19:11:14 :: [   474750] return 0/0/0 async 0/0/0
+May 30 19:11:16 :: [   474800] return 0/0/0 async 0/0/0
+May 30 19:11:18 :: [   474850] return 0/0/0 async 0/0/0
+May 30 19:11:20 :: [   474900] return 0/0/1 async 0/0/0
+May 30 19:11:22 :: [   474950] return 0/0/0 async 0/0/0
+May 30 19:11:24 :: [   475000] return 0/0/0 async 0/0/0
+May 30 19:11:26 :: [   475050] return 0/0/0 async 0/0/0
+May 30 19:11:28 :: [   475100] return 0/0/0 async 0/0/0
+May 30 19:11:30 :: [   475150] return 0/0/1 async 0/0/0
+May 30 19:11:32 :: [   475200] return 0/0/0 async 0/0/0
+May 30 19:11:34 :: [   475250] return 0/0/0 async 0/0/0
+May 30 19:11:36 :: [   475300] return 0/0/0 async 0/0/0
+May 30 19:11:38 :: [   475350] return 0/0/0 async 0/0/0
+May 30 19:11:40 :: [   475400] return 0/0/1 async 0/0/0
+May 30 19:11:42 :: [   475450] return 0/0/0 async 0/0/0
+May 30 19:11:44 :: [   475500] return 0/0/0 async 0/0/0
+May 30 19:11:46 :: [   475550] return 0/0/0 async 0/0/0
+May 30 19:11:48 :: [   475600] return 0/0/0 async 0/0/0
+May 30 19:11:50 :: [   475650] return 0/0/1 async 0/0/0
+May 30 19:11:52 :: [   475700] return 0/0/0 async 0/0/0
+May 30 19:11:54 :: [   475750] return 0/0/0 async 0/0/0
+May 30 19:11:56 :: [   475800] return 0/0/0 async 0/0/0
+May 30 19:11:58 :: [   475850] return 0/0/0 async 0/0/0
+May 30 19:12:00 :: [   475900] return 0/0/1 async 0/0/0
+May 30 19:12:02 :: [   475950] return 0/0/0 async 0/0/0
+May 30 19:12:04 :: [   476000] return 0/0/0 async 0/0/0
+May 30 19:12:06 :: [   476050] return 0/0/0 async 0/0/0
+May 30 19:12:08 :: [   476100] return 0/0/0 async 0/0/0
+May 30 19:12:10 :: [   476150] return 0/0/1 async 0/0/0
+May 30 19:12:12 :: [   476200] return 0/0/0 async 0/0/0
+May 30 19:12:14 :: [   476250] return 0/0/0 async 0/0/0
+May 30 19:12:16 :: [   476300] return 0/0/0 async 0/0/0
+May 30 19:12:18 :: [   476350] return 0/0/0 async 0/0/0
+May 30 19:12:20 :: [   476400] return 0/0/1 async 0/0/0
+May 30 19:12:22 :: [   476450] return 0/0/0 async 0/0/0
+May 30 19:12:24 :: [   476500] return 0/0/0 async 0/0/0
+May 30 19:12:26 :: [   476550] return 0/0/0 async 0/0/0
+May 30 19:12:28 :: [   476600] return 0/0/0 async 0/0/0
+May 30 19:12:30 :: [   476650] return 0/0/1 async 0/0/0
+May 30 19:12:32 :: [   476700] return 0/0/0 async 0/0/0
+May 30 19:12:34 :: [   476750] return 0/0/0 async 0/0/0
+May 30 19:12:36 :: [   476800] return 0/0/0 async 0/0/0
+May 30 19:12:38 :: [   476850] return 0/0/0 async 0/0/0
+May 30 19:12:40 :: [   476900] return 0/0/1 async 0/0/0
+May 30 19:12:42 :: [   476950] return 0/0/0 async 0/0/0
+May 30 19:12:44 :: [   477000] return 0/0/0 async 0/0/0
+May 30 19:12:46 :: [   477050] return 0/0/0 async 0/0/0
+May 30 19:12:48 :: [   477100] return 0/0/0 async 0/0/0
+May 30 19:12:50 :: [   477150] return 0/0/1 async 0/0/0
+May 30 19:12:52 :: [   477200] return 0/0/0 async 0/0/0
+May 30 19:12:54 :: [   477250] return 0/0/0 async 0/0/0
+May 30 19:12:56 :: [   477300] return 0/0/0 async 0/0/0
+May 30 19:12:58 :: [   477350] return 0/0/0 async 0/0/0
+May 30 19:13:00 :: [   477400] return 0/0/1 async 0/0/0
+May 30 19:13:02 :: [   477450] return 0/0/0 async 0/0/0
+May 30 19:13:04 :: [   477500] return 0/0/0 async 0/0/0
+May 30 19:13:06 :: [   477550] return 0/0/0 async 0/0/0
+May 30 19:13:08 :: [   477600] return 0/0/0 async 0/0/0
+May 30 19:13:10 :: [   477650] return 0/0/1 async 0/0/0
+May 30 19:13:12 :: [   477700] return 0/0/0 async 0/0/0
+May 30 19:13:14 :: [   477750] return 0/0/0 async 0/0/0
+May 30 19:13:16 :: [   477800] return 0/0/0 async 0/0/0
+May 30 19:13:18 :: [   477850] return 0/0/0 async 0/0/0
+May 30 19:13:20 :: [   477900] return 0/0/1 async 0/0/0
+May 30 19:13:22 :: [   477950] return 0/0/0 async 0/0/0
+May 30 19:13:24 :: [   478000] return 0/0/0 async 0/0/0
+May 30 19:13:26 :: [   478050] return 0/0/0 async 0/0/0
+May 30 19:13:28 :: [   478100] return 0/0/0 async 0/0/0
+May 30 19:13:30 :: [   478150] return 0/0/1 async 0/0/0
+May 30 19:13:32 :: [   478200] return 0/0/0 async 0/0/0
+May 30 19:13:34 :: [   478250] return 0/0/0 async 0/0/0
+May 30 19:13:36 :: [   478300] return 0/0/0 async 0/0/0
+May 30 19:13:38 :: [   478350] return 0/0/0 async 0/0/0
+May 30 19:13:40 :: [   478400] return 0/0/1 async 0/0/0
+May 30 19:13:42 :: [   478450] return 0/0/0 async 0/0/0
+May 30 19:13:44 :: [   478500] return 0/0/0 async 0/0/0
+May 30 19:13:46 :: [   478550] return 0/0/0 async 0/0/0
+May 30 19:13:48 :: [   478600] return 0/0/0 async 0/0/0
+May 30 19:13:50 :: [   478650] return 0/0/1 async 0/0/0
+May 30 19:13:52 :: [   478700] return 0/0/0 async 0/0/0
+May 30 19:13:54 :: [   478750] return 0/0/0 async 0/0/0
+May 30 19:13:56 :: [   478800] return 0/0/0 async 0/0/0
+May 30 19:13:58 :: [   478850] return 0/0/0 async 0/0/0
+May 30 19:14:00 :: [   478900] return 0/0/1 async 0/0/0
+May 30 19:14:02 :: [   478950] return 0/0/0 async 0/0/0
+May 30 19:14:04 :: [   479000] return 0/0/0 async 0/0/0
+May 30 19:14:06 :: [   479050] return 0/0/0 async 0/0/0
+May 30 19:14:08 :: [   479100] return 0/0/0 async 0/0/0
+May 30 19:14:10 :: [   479150] return 0/0/1 async 0/0/0
+May 30 19:14:12 :: [   479200] return 0/0/0 async 0/0/0
+May 30 19:14:14 :: [   479250] return 0/0/0 async 0/0/0
+May 30 19:14:16 :: [   479300] return 0/0/0 async 0/0/0
+May 30 19:14:18 :: [   479350] return 0/0/0 async 0/0/0
+May 30 19:14:20 :: [   479400] return 0/0/1 async 0/0/0
+May 30 19:14:22 :: [   479450] return 0/0/0 async 0/0/0
+May 30 19:14:24 :: [   479500] return 0/0/0 async 0/0/0
+May 30 19:14:26 :: [   479550] return 0/0/0 async 0/0/0
+May 30 19:14:28 :: [   479600] return 0/0/0 async 0/0/0
+May 30 19:14:30 :: [   479650] return 0/0/1 async 0/0/0
+May 30 19:14:32 :: [   479700] return 0/0/0 async 0/0/0
+May 30 19:14:34 :: [   479750] return 0/0/0 async 0/0/0
+May 30 19:14:36 :: [   479800] return 0/0/0 async 0/0/0
+May 30 19:14:38 :: [   479850] return 0/0/0 async 0/0/0
+May 30 19:14:40 :: [   479900] return 0/0/1 async 0/0/0
+May 30 19:14:42 :: [   479950] return 0/0/0 async 0/0/0
+May 30 19:14:44 :: [   480000] return 0/0/0 async 0/0/0
+May 30 19:14:46 :: [   480050] return 0/0/0 async 0/0/0
+May 30 19:14:48 :: [   480100] return 0/0/0 async 0/0/0
+May 30 19:14:50 :: [   480150] return 0/0/1 async 0/0/0
+May 30 19:14:52 :: [   480200] return 0/0/0 async 0/0/0
+May 30 19:14:54 :: [   480250] return 0/0/0 async 0/0/0
+May 30 19:14:56 :: [   480300] return 0/0/0 async 0/0/0
+May 30 19:14:58 :: [   480350] return 0/0/0 async 0/0/0
+May 30 19:15:00 :: [   480400] return 0/0/1 async 0/0/0
+May 30 19:15:02 :: [   480450] return 0/0/0 async 0/0/0
+May 30 19:15:04 :: [   480500] return 0/0/0 async 0/0/0
+May 30 19:15:06 :: [   480550] return 0/0/0 async 0/0/0
+May 30 19:15:08 :: [   480600] return 0/0/0 async 0/0/0
+May 30 19:15:10 :: [   480650] return 0/0/1 async 0/0/0
+May 30 19:15:12 :: [   480700] return 0/0/0 async 0/0/0
+May 30 19:15:14 :: [   480750] return 0/0/0 async 0/0/0
+May 30 19:15:16 :: [   480800] return 0/0/0 async 0/0/0
+May 30 19:15:18 :: [   480850] return 0/0/0 async 0/0/0
+May 30 19:15:20 :: [   480900] return 0/0/1 async 0/0/0
+May 30 19:15:22 :: [   480950] return 0/0/0 async 0/0/0
+May 30 19:15:24 :: [   481000] return 0/0/0 async 0/0/0
+May 30 19:15:26 :: [   481050] return 0/0/0 async 0/0/0
+May 30 19:15:28 :: [   481100] return 0/0/0 async 0/0/0
+May 30 19:15:30 :: [   481150] return 0/0/1 async 0/0/0
+May 30 19:15:32 :: [   481200] return 0/0/0 async 0/0/0
+May 30 19:15:34 :: [   481250] return 0/0/0 async 0/0/0
+May 30 19:15:36 :: [   481300] return 0/0/0 async 0/0/0
+May 30 19:15:38 :: [   481350] return 0/0/0 async 0/0/0
+May 30 19:15:40 :: [   481400] return 0/0/1 async 0/0/0
+May 30 19:15:42 :: [   481450] return 0/0/0 async 0/0/0
+May 30 19:15:44 :: [   481500] return 0/0/0 async 0/0/0
+May 30 19:15:46 :: [   481550] return 0/0/0 async 0/0/0
+May 30 19:15:48 :: [   481600] return 0/0/0 async 0/0/0
+May 30 19:15:50 :: [   481650] return 0/0/1 async 0/0/0
+May 30 19:15:52 :: [   481700] return 0/0/0 async 0/0/0
+May 30 19:15:54 :: [   481750] return 0/0/0 async 0/0/0
+May 30 19:15:56 :: [   481800] return 0/0/0 async 0/0/0
+May 30 19:15:58 :: [   481850] return 0/0/0 async 0/0/0
+May 30 19:16:00 :: [   481900] return 0/0/1 async 0/0/0
+May 30 19:16:02 :: [   481950] return 0/0/0 async 0/0/0
+May 30 19:16:04 :: [   482000] return 0/0/0 async 0/0/0
+May 30 19:16:06 :: [   482050] return 0/0/0 async 0/0/0
+May 30 19:16:07 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 19:16:07 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 19:16:08 :: [   482100] return 0/0/0 async 0/0/0
+May 30 19:16:10 :: [   482150] return 0/0/1 async 0/0/0
+May 30 19:16:12 :: [   482200] return 0/0/0 async 0/0/0
+May 30 19:16:14 :: [   482250] return 0/0/0 async 0/0/0
+May 30 19:16:16 :: [   482300] return 0/0/0 async 0/0/0
+May 30 19:16:18 :: [   482350] return 0/0/0 async 0/0/0
+May 30 19:16:20 :: [   482400] return 0/0/1 async 0/0/0
+May 30 19:16:22 :: [   482450] return 0/0/0 async 0/0/0
+May 30 19:16:24 :: [   482500] return 0/0/0 async 0/0/0
+May 30 19:16:26 :: [   482550] return 0/0/0 async 0/0/0
+May 30 19:16:28 :: [   482600] return 0/0/0 async 0/0/0
+May 30 19:16:30 :: [   482650] return 0/0/1 async 0/0/0
+May 30 19:16:32 :: [   482700] return 0/0/0 async 0/0/0
+May 30 19:16:34 :: [   482750] return 0/0/0 async 0/0/0
+May 30 19:16:36 :: [   482800] return 0/0/0 async 0/0/0
+May 30 19:16:38 :: [   482850] return 0/0/0 async 0/0/0
+May 30 19:16:40 :: [   482900] return 0/0/1 async 0/0/0
+May 30 19:16:42 :: [   482950] return 0/0/0 async 0/0/0
+May 30 19:16:44 :: [   483000] return 0/0/0 async 0/0/0
+May 30 19:16:46 :: [   483050] return 0/0/0 async 0/0/0
+May 30 19:16:48 :: [   483100] return 0/0/0 async 0/0/0
+May 30 19:16:50 :: [   483150] return 0/0/1 async 0/0/0
+May 30 19:16:52 :: [   483200] return 0/0/0 async 0/0/0
+May 30 19:16:54 :: [   483250] return 0/0/0 async 0/0/0
+May 30 19:16:56 :: [   483300] return 0/0/0 async 0/0/0
+May 30 19:16:58 :: [   483350] return 0/0/0 async 0/0/0
+May 30 19:17:00 :: [   483400] return 0/0/1 async 0/0/0
+May 30 19:17:02 :: [   483450] return 0/0/0 async 0/0/0
+May 30 19:17:04 :: [   483500] return 0/0/0 async 0/0/0
+May 30 19:17:06 :: [   483550] return 0/0/0 async 0/0/0
+May 30 19:17:08 :: [   483600] return 0/0/0 async 0/0/0
+May 30 19:17:10 :: [   483650] return 0/0/1 async 0/0/0
+May 30 19:17:12 :: [   483700] return 0/0/0 async 0/0/0
+May 30 19:17:14 :: [   483750] return 0/0/0 async 0/0/0
+May 30 19:17:16 :: [   483800] return 0/0/0 async 0/0/0
+May 30 19:17:18 :: [   483850] return 0/0/0 async 0/0/0
+May 30 19:17:20 :: [   483900] return 0/0/1 async 0/0/0
+May 30 19:17:22 :: [   483950] return 0/0/0 async 0/0/0
+May 30 19:17:24 :: [   484000] return 0/0/0 async 0/0/0
+May 30 19:17:26 :: [   484050] return 0/0/0 async 0/0/0
+May 30 19:17:28 :: [   484100] return 0/0/0 async 0/0/0
+May 30 19:17:30 :: [   484150] return 0/0/1 async 0/0/0
+May 30 19:17:32 :: [   484200] return 0/0/0 async 0/0/0
+May 30 19:17:34 :: [   484250] return 0/0/0 async 0/0/0
+May 30 19:17:36 :: [   484300] return 0/0/0 async 0/0/0
+May 30 19:17:38 :: [   484350] return 0/0/0 async 0/0/0
+May 30 19:17:40 :: [   484400] return 0/0/1 async 0/0/0
+May 30 19:17:42 :: [   484450] return 0/0/0 async 0/0/0
+May 30 19:17:44 :: [   484500] return 0/0/0 async 0/0/0
+May 30 19:17:46 :: [   484550] return 0/0/0 async 0/0/0
+May 30 19:17:48 :: [   484600] return 0/0/0 async 0/0/0
+May 30 19:17:50 :: [   484650] return 0/0/1 async 0/0/0
+May 30 19:17:52 :: [   484700] return 0/0/0 async 0/0/0
+May 30 19:17:54 :: [   484750] return 0/0/0 async 0/0/0
+May 30 19:17:56 :: [   484800] return 0/0/0 async 0/0/0
+May 30 19:17:58 :: [   484850] return 0/0/0 async 0/0/0
+May 30 19:18:00 :: [   484900] return 0/0/1 async 0/0/0
+May 30 19:18:02 :: [   484950] return 0/0/0 async 0/0/0
+May 30 19:18:04 :: [   485000] return 0/0/0 async 0/0/0
+May 30 19:18:06 :: [   485050] return 0/0/0 async 0/0/0
+May 30 19:18:08 :: [   485100] return 0/0/0 async 0/0/0
+May 30 19:18:10 :: [   485150] return 0/0/1 async 0/0/0
+May 30 19:18:12 :: [   485200] return 0/0/0 async 0/0/0
+May 30 19:18:14 :: [   485250] return 0/0/0 async 0/0/0
+May 30 19:18:16 :: [   485300] return 0/0/0 async 0/0/0
+May 30 19:18:18 :: [   485350] return 0/0/0 async 0/0/0
+May 30 19:18:20 :: [   485400] return 0/0/1 async 0/0/0
+May 30 19:18:22 :: [   485450] return 0/0/0 async 0/0/0
+May 30 19:18:24 :: [   485500] return 0/0/0 async 0/0/0
+May 30 19:18:26 :: [   485550] return 0/0/0 async 0/0/0
+May 30 19:18:28 :: [   485600] return 0/0/0 async 0/0/0
+May 30 19:18:30 :: [   485650] return 0/0/1 async 0/0/0
+May 30 19:18:32 :: [   485700] return 0/0/0 async 0/0/0
+May 30 19:18:34 :: [   485750] return 0/0/0 async 0/0/0
+May 30 19:18:36 :: [   485800] return 0/0/0 async 0/0/0
+May 30 19:18:38 :: [   485850] return 0/0/0 async 0/0/0
+May 30 19:18:40 :: [   485900] return 0/0/1 async 0/0/0
+May 30 19:18:42 :: [   485950] return 0/0/0 async 0/0/0
+May 30 19:18:44 :: [   486000] return 0/0/0 async 0/0/0
+May 30 19:18:46 :: [   486050] return 0/0/0 async 0/0/0
+May 30 19:18:48 :: [   486100] return 0/0/0 async 0/0/0
+May 30 19:18:50 :: [   486150] return 0/0/1 async 0/0/0
+May 30 19:18:52 :: [   486200] return 0/0/0 async 0/0/0
+May 30 19:18:54 :: [   486250] return 0/0/0 async 0/0/0
+May 30 19:18:56 :: [   486300] return 0/0/0 async 0/0/0
+May 30 19:18:58 :: [   486350] return 0/0/0 async 0/0/0
+May 30 19:19:00 :: [   486400] return 0/0/1 async 0/0/0
+May 30 19:19:02 :: [   486450] return 0/0/0 async 0/0/0
+May 30 19:19:04 :: [   486500] return 0/0/0 async 0/0/0
+May 30 19:19:06 :: [   486550] return 0/0/0 async 0/0/0
+May 30 19:19:08 :: [   486600] return 0/0/0 async 0/0/0
+May 30 19:19:10 :: [   486650] return 0/0/1 async 0/0/0
+May 30 19:19:12 :: [   486700] return 0/0/0 async 0/0/0
+May 30 19:19:14 :: [   486750] return 0/0/0 async 0/0/0
+May 30 19:19:16 :: [   486800] return 0/0/0 async 0/0/0
+May 30 19:19:18 :: [   486850] return 0/0/0 async 0/0/0
+May 30 19:19:20 :: [   486900] return 0/0/1 async 0/0/0
+May 30 19:19:22 :: [   486950] return 0/0/0 async 0/0/0
+May 30 19:19:24 :: [   487000] return 0/0/0 async 0/0/0
+May 30 19:19:26 :: [   487050] return 0/0/0 async 0/0/0
+May 30 19:19:28 :: [   487100] return 0/0/0 async 0/0/0
+May 30 19:19:30 :: [   487150] return 0/0/1 async 0/0/0
+May 30 19:19:32 :: [   487200] return 0/0/0 async 0/0/0
+May 30 19:19:34 :: [   487250] return 0/0/0 async 0/0/0
+May 30 19:19:36 :: [   487300] return 0/0/0 async 0/0/0
+May 30 19:19:38 :: [   487350] return 0/0/0 async 0/0/0
+May 30 19:19:40 :: [   487400] return 0/0/1 async 0/0/0
+May 30 19:19:42 :: [   487450] return 0/0/0 async 0/0/0
+May 30 19:19:44 :: [   487500] return 0/0/0 async 0/0/0
+May 30 19:19:46 :: [   487550] return 0/0/0 async 0/0/0
+May 30 19:19:48 :: [   487600] return 0/0/0 async 0/0/0
+May 30 19:19:50 :: [   487650] return 0/0/1 async 0/0/0
+May 30 19:19:52 :: [   487700] return 0/0/0 async 0/0/0
+May 30 19:19:54 :: [   487750] return 0/0/0 async 0/0/0
+May 30 19:19:55 :: AUTH_PEER_READ: size 190
+May 30 19:19:55 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1706265882), client_key(21103345 349117660 695188016 1713945232)
+May 30 19:19:55 :: AUTH_PEER_WRITE: size 10
+May 30 19:19:56 :: LOGIN_BY_KEY success abyss 1706265882 46.247.137.201
+May 30 19:19:56 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:19:56 :: abyss 959215 272884 hair 31
+May 30 19:19:56 :: hrss 466345 520349 hair 0
+May 30 19:19:56 :: bella 63800 166400 hair 0
+May 30 19:19:56 :: [   487800] return 0/0/2 async 0/0/0
+May 30 19:19:58 :: [   487850] return 0/0/0 async 0/0/0
+May 30 19:20:00 :: [   487900] return 0/0/1 async 0/0/0
+May 30 19:20:02 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:20:02 :: LOGOUT: Update player time pid(14)
+May 30 19:20:02 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:20:02 :: LOGOUT: Update player time pid(39)
+May 30 19:20:02 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:20:02 :: LOGOUT: Update player time pid(90)
+May 30 19:20:02 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:20:02 :: LOGOUT: Update player time pid(91)
+May 30 19:20:02 :: LOGOUT abyss 
+May 30 19:20:02 :: LOGIN_BY_KEY success abyss 1706265882 46.247.137.201
+May 30 19:20:02 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:20:02 :: abyss 959215 272884 hair 31
+May 30 19:20:02 :: hrss 466345 520349 hair 0
+May 30 19:20:02 :: bella 63800 166400 hair 0
+May 30 19:20:02 :: [   487950] return 0/0/2 async 0/0/0
+May 30 19:20:03 :: SetPlay on 1706265882 abyss
+May 30 19:20:03 :: [PLAYER_LOAD] ID abyss pid 14 gold 64788586625 
+May 30 19:20:03 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 19:20:03 :: AUTH_PEER_WRITE: size 18
+May 30 19:20:03 :: QID_QUEST 46
+May 30 19:20:03 :: QUEST_LOAD: count 47 PID 14
+May 30 19:20:03 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 19:20:03 :: QID_AFFECT 46
+May 30 19:20:03 :: AFFECT_LOAD: count 11 PID 14
+May 30 19:20:03 :: QID_BATTLE_PASS 46
+May 30 19:20:03 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 19:20:03 :: QID_SKILL_COLOR 46 14
+May 30 19:20:03 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 19:20:04 :: [   488000] return 0/0/0 async 0/0/0
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057426
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057423
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 30066459
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10034437
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057422
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057416
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057398
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057417
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50031626
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057436
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057418
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057427
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057425
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10034439
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50037851
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10034442
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057419
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057424
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057421
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 10034446
+May 30 19:20:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:05 :: ITEM_CACHE: save 14 id 50057420
+May 30 19:20:06 :: [   488050] return 0/0/0 async 0/0/4
+May 30 19:20:08 :: [   488100] return 0/0/29 async 0/0/0
+May 30 19:20:10 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:20:10 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:20:10 :: [   488150] return 0/0/1 async 0/0/1
+May 30 19:20:12 :: [   488200] return 0/0/0 async 0/0/0
+May 30 19:20:14 :: [   488250] return 0/0/0 async 0/0/0
+May 30 19:20:16 :: [   488300] return 0/0/0 async 0/0/0
+May 30 19:20:18 :: [   488350] return 0/0/0 async 0/0/0
+May 30 19:20:20 :: [   488400] return 0/0/1 async 0/0/0
+May 30 19:20:22 :: [   488450] return 0/0/0 async 0/0/0
+May 30 19:20:24 :: [   488500] return 0/0/0 async 0/0/0
+May 30 19:20:26 :: [   488550] return 0/0/0 async 0/0/0
+May 30 19:20:28 :: [   488600] return 0/0/0 async 0/0/0
+May 30 19:20:30 :: [   488650] return 0/0/1 async 0/0/0
+May 30 19:20:32 :: [   488700] return 0/0/0 async 0/0/0
+May 30 19:20:34 :: [   488750] return 0/0/0 async 0/0/0
+May 30 19:20:36 :: [   488800] return 0/0/0 async 0/0/0
+May 30 19:20:38 :: [   488850] return 0/0/0 async 0/0/0
+May 30 19:20:40 :: [   488900] return 0/0/1 async 0/0/0
+May 30 19:20:42 :: [   488950] return 0/0/0 async 0/0/0
+May 30 19:20:44 :: [   489000] return 0/0/0 async 0/0/0
+May 30 19:20:46 :: [   489050] return 0/0/0 async 0/0/0
+May 30 19:20:48 :: [   489100] return 0/0/0 async 0/0/0
+May 30 19:20:50 :: [   489150] return 0/0/1 async 0/0/0
+May 30 19:20:52 :: [   489200] return 0/0/0 async 0/0/0
+May 30 19:20:54 :: [   489250] return 0/0/0 async 0/0/0
+May 30 19:20:56 :: [   489300] return 0/0/0 async 0/0/0
+May 30 19:20:58 :: [   489350] return 0/0/0 async 0/0/0
+May 30 19:21:00 :: [   489400] return 0/0/1 async 0/0/0
+May 30 19:21:02 :: [   489450] return 0/0/0 async 0/0/0
+May 30 19:21:04 :: [   489500] return 0/0/0 async 0/0/0
+May 30 19:21:06 :: [   489550] return 0/0/0 async 0/0/0
+May 30 19:21:08 :: [   489600] return 0/0/0 async 0/0/0
+May 30 19:21:10 :: [   489650] return 0/0/1 async 0/0/0
+May 30 19:21:12 :: [   489700] return 0/0/0 async 0/0/0
+May 30 19:21:14 :: [   489750] return 0/0/0 async 0/0/0
+May 30 19:21:16 :: [   489800] return 0/0/0 async 0/0/0
+May 30 19:21:18 :: [   489850] return 0/0/0 async 0/0/0
+May 30 19:21:20 :: [   489900] return 0/0/1 async 0/0/0
+May 30 19:21:22 :: [   489950] return 0/0/0 async 0/0/0
+May 30 19:21:24 :: [   490000] return 0/0/0 async 0/0/0
+May 30 19:21:26 :: [   490050] return 0/0/0 async 0/0/0
+May 30 19:21:28 :: [   490100] return 0/0/0 async 0/0/0
+May 30 19:21:30 :: [   490150] return 0/0/1 async 0/0/0
+May 30 19:21:32 :: [   490200] return 0/0/0 async 0/0/0
+May 30 19:21:34 :: [   490250] return 0/0/0 async 0/0/0
+May 30 19:21:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:21:36 :: ITEM_CACHE: save 14 id 50057401
+May 30 19:21:36 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:21:36 :: ITEM_CACHE: save 14 id 50057402
+May 30 19:21:36 :: [   490300] return 0/0/0 async 0/0/0
+May 30 19:21:38 :: [   490350] return 0/0/0 async 0/0/0
+May 30 19:21:40 :: [   490400] return 0/0/1 async 0/0/0
+May 30 19:21:41 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:21:41 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:21:42 :: [   490450] return 0/0/0 async 0/0/0
+May 30 19:21:44 :: [   490500] return 0/0/0 async 0/0/0
+May 30 19:21:46 :: [   490550] return 0/0/0 async 0/0/0
+May 30 19:21:48 :: [   490600] return 0/0/0 async 0/0/0
+May 30 19:21:50 :: [   490650] return 0/0/1 async 0/0/0
+May 30 19:21:52 :: [   490700] return 0/0/0 async 0/0/0
+May 30 19:21:54 :: [   490750] return 0/0/0 async 0/0/0
+May 30 19:21:56 :: [   490800] return 0/0/0 async 0/0/0
+May 30 19:21:58 :: [   490850] return 0/0/0 async 0/0/0
+May 30 19:22:00 :: [   490900] return 0/0/1 async 0/0/0
+May 30 19:22:02 :: [   490950] return 0/0/0 async 0/0/0
+May 30 19:22:04 :: [   491000] return 0/0/0 async 0/0/0
+May 30 19:22:06 :: [   491050] return 0/0/0 async 0/0/0
+May 30 19:22:08 :: [   491100] return 0/0/0 async 0/0/0
+May 30 19:22:10 :: [   491150] return 0/0/1 async 0/0/0
+May 30 19:22:12 :: [   491200] return 0/0/0 async 0/0/0
+May 30 19:22:14 :: [   491250] return 0/0/0 async 0/0/0
+May 30 19:22:16 :: [   491300] return 0/0/0 async 0/0/0
+May 30 19:22:18 :: [   491350] return 0/0/0 async 0/0/0
+May 30 19:22:20 :: [   491400] return 0/0/1 async 0/0/0
+May 30 19:22:22 :: [   491450] return 0/0/0 async 0/0/0
+May 30 19:22:24 :: [   491500] return 0/0/0 async 0/0/0
+May 30 19:22:26 :: [   491550] return 0/0/0 async 0/0/0
+May 30 19:22:28 :: [   491600] return 0/0/0 async 0/0/0
+May 30 19:22:30 :: [   491650] return 0/0/1 async 0/0/0
+May 30 19:22:32 :: [   491700] return 0/0/0 async 0/0/0
+May 30 19:22:34 :: [   491750] return 0/0/0 async 0/0/0
+May 30 19:22:36 :: [   491800] return 0/0/0 async 0/0/0
+May 30 19:22:38 :: [   491850] return 0/0/0 async 0/0/0
+May 30 19:22:40 :: [   491900] return 0/0/1 async 0/0/0
+May 30 19:22:42 :: [   491950] return 0/0/0 async 0/0/0
+May 30 19:22:44 :: [   492000] return 0/0/0 async 0/0/0
+May 30 19:22:46 :: [   492050] return 0/0/0 async 0/0/0
+May 30 19:22:48 :: [   492100] return 0/0/0 async 0/0/0
+May 30 19:22:50 :: [   492150] return 0/0/1 async 0/0/0
+May 30 19:22:52 :: [   492200] return 0/0/0 async 0/0/0
+May 30 19:22:54 :: [   492250] return 0/0/0 async 0/0/0
+May 30 19:22:56 :: [   492300] return 0/0/0 async 0/0/0
+May 30 19:22:58 :: [   492350] return 0/0/0 async 0/0/0
+May 30 19:23:00 :: [   492400] return 0/0/1 async 0/0/0
+May 30 19:23:02 :: [   492450] return 0/0/0 async 0/0/0
+May 30 19:23:04 :: [   492500] return 0/0/0 async 0/0/0
+May 30 19:23:06 :: [   492550] return 0/0/0 async 0/0/0
+May 30 19:23:08 :: [   492600] return 0/0/0 async 0/0/0
+May 30 19:23:10 :: [   492650] return 0/0/1 async 0/0/0
+May 30 19:23:12 :: [   492700] return 0/0/0 async 0/0/0
+May 30 19:23:14 :: [   492750] return 0/0/0 async 0/0/0
+May 30 19:23:16 :: [   492800] return 0/0/0 async 0/0/0
+May 30 19:23:18 :: [   492850] return 0/0/0 async 0/0/0
+May 30 19:23:20 :: [   492900] return 0/0/1 async 0/0/0
+May 30 19:23:22 :: [   492950] return 0/0/0 async 0/0/0
+May 30 19:23:24 :: [   493000] return 0/0/0 async 0/0/0
+May 30 19:23:26 :: [   493050] return 0/0/0 async 0/0/0
+May 30 19:23:28 :: [   493100] return 0/0/0 async 0/0/0
+May 30 19:23:30 :: [   493150] return 0/0/1 async 0/0/0
+May 30 19:23:32 :: [   493200] return 0/0/0 async 0/0/0
+May 30 19:23:34 :: [   493250] return 0/0/0 async 0/0/0
+May 30 19:23:36 :: [   493300] return 0/0/0 async 0/0/0
+May 30 19:23:38 :: [   493350] return 0/0/0 async 0/0/0
+May 30 19:23:40 :: [   493400] return 0/0/1 async 0/0/0
+May 30 19:23:42 :: [   493450] return 0/0/0 async 0/0/0
+May 30 19:23:44 :: [   493500] return 0/0/0 async 0/0/0
+May 30 19:23:46 :: [   493550] return 0/0/0 async 0/0/0
+May 30 19:23:48 :: [   493600] return 0/0/0 async 0/0/0
+May 30 19:23:50 :: [   493650] return 0/0/1 async 0/0/0
+May 30 19:23:52 :: [   493700] return 0/0/0 async 0/0/0
+May 30 19:23:54 :: [   493750] return 0/0/0 async 0/0/0
+May 30 19:23:56 :: [   493800] return 0/0/0 async 0/0/0
+May 30 19:23:58 :: [   493850] return 0/0/0 async 0/0/0
+May 30 19:24:00 :: [   493900] return 0/0/1 async 0/0/0
+May 30 19:24:02 :: [   493950] return 0/0/0 async 0/0/0
+May 30 19:24:04 :: [   494000] return 0/0/0 async 0/0/0
+May 30 19:24:06 :: [   494050] return 0/0/0 async 0/0/0
+May 30 19:24:08 :: [   494100] return 0/0/0 async 0/0/0
+May 30 19:24:10 :: [   494150] return 0/0/1 async 0/0/0
+May 30 19:24:12 :: [   494200] return 0/0/0 async 0/0/0
+May 30 19:24:14 :: [   494250] return 0/0/0 async 0/0/0
+May 30 19:24:16 :: [   494300] return 0/0/0 async 0/0/0
+May 30 19:24:18 :: [   494350] return 0/0/0 async 0/0/0
+May 30 19:24:20 :: [   494400] return 0/0/1 async 0/0/0
+May 30 19:24:22 :: [   494450] return 0/0/0 async 0/0/0
+May 30 19:24:24 :: [   494500] return 0/0/0 async 0/0/0
+May 30 19:24:26 :: [   494550] return 0/0/0 async 0/0/0
+May 30 19:24:28 :: [   494600] return 0/0/0 async 0/0/0
+May 30 19:24:30 :: [   494650] return 0/0/1 async 0/0/0
+May 30 19:24:32 :: [   494700] return 0/0/0 async 0/0/0
+May 30 19:24:34 :: [   494750] return 0/0/0 async 0/0/0
+May 30 19:24:36 :: [   494800] return 0/0/0 async 0/0/0
+May 30 19:24:38 :: [   494850] return 0/0/0 async 0/0/0
+May 30 19:24:40 :: [   494900] return 0/0/1 async 0/0/0
+May 30 19:24:42 :: [   494950] return 0/0/0 async 0/0/0
+May 30 19:24:44 :: [   495000] return 0/0/0 async 0/0/0
+May 30 19:24:46 :: [   495050] return 0/0/0 async 0/0/0
+May 30 19:24:48 :: [   495100] return 0/0/0 async 0/0/0
+May 30 19:24:50 :: [   495150] return 0/0/1 async 0/0/0
+May 30 19:24:52 :: [   495200] return 0/0/0 async 0/0/0
+May 30 19:24:54 :: [   495250] return 0/0/0 async 0/0/0
+May 30 19:24:56 :: [   495300] return 0/0/0 async 0/0/0
+May 30 19:24:58 :: [   495350] return 0/0/0 async 0/0/0
+May 30 19:25:00 :: [   495400] return 0/0/1 async 0/0/0
+May 30 19:25:02 :: [   495450] return 0/0/0 async 0/0/0
+May 30 19:25:04 :: [   495500] return 0/0/0 async 0/0/0
+May 30 19:25:06 :: [   495550] return 0/0/0 async 0/0/0
+May 30 19:25:08 :: [   495600] return 0/0/0 async 0/0/0
+May 30 19:25:10 :: [   495650] return 0/0/1 async 0/0/0
+May 30 19:25:12 :: [   495700] return 0/0/0 async 0/0/0
+May 30 19:25:14 :: [   495750] return 0/0/0 async 0/0/0
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:25:15 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:25:15 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:25:15 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:25:15 :: LOGOUT: Insert player pid(14)
+May 30 19:25:15 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:25:15 :: LOGOUT: Insert player pid(39)
+May 30 19:25:15 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:25:15 :: LOGOUT: Insert player pid(90)
+May 30 19:25:15 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:25:15 :: LOGOUT: Insert player pid(91)
+May 30 19:25:15 :: SetPlay off 1706265882 abyss
+May 30 19:25:15 :: LOGOUT abyss 
+May 30 19:25:15 :: AUTH_PEER_WRITE: size 18
+May 30 19:25:16 :: [   495800] return 0/0/7 async 0/0/0
+May 30 19:25:18 :: [   495850] return 0/0/0 async 0/0/0
+May 30 19:25:20 :: [   495900] return 0/0/1 async 0/0/0
+May 30 19:25:22 :: [   495950] return 0/0/0 async 0/0/0
+May 30 19:25:24 :: [   496000] return 0/0/0 async 0/0/0
+May 30 19:25:26 :: [   496050] return 0/0/0 async 0/0/0
+May 30 19:25:28 :: [   496100] return 0/0/0 async 0/0/0
+May 30 19:25:29 :: AUTH_PEER_READ: size 190
+May 30 19:25:29 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(420783879), client_key(2026039690 1148362998 1101371797 1594238686)
+May 30 19:25:29 :: AUTH_PEER_WRITE: size 10
+May 30 19:25:30 :: LOGIN_BY_KEY success abyss 420783879 46.247.137.201
+May 30 19:25:30 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:25:30 :: abyss 959435 272709 hair 31
+May 30 19:25:30 :: hrss 466345 520349 hair 0
+May 30 19:25:30 :: bella 63800 166400 hair 0
+May 30 19:25:30 :: [   496150] return 0/0/3 async 0/0/0
+May 30 19:25:32 :: [   496200] return 0/0/0 async 0/0/0
+May 30 19:25:33 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:25:33 :: LOGOUT: Update player time pid(14)
+May 30 19:25:33 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:25:33 :: LOGOUT: Update player time pid(39)
+May 30 19:25:33 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:25:33 :: LOGOUT: Update player time pid(90)
+May 30 19:25:33 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:25:33 :: LOGOUT: Update player time pid(91)
+May 30 19:25:33 :: LOGOUT abyss 
+May 30 19:25:33 :: LOGIN_BY_KEY success abyss 420783879 46.247.137.201
+May 30 19:25:33 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:25:33 :: abyss 959435 272709 hair 31
+May 30 19:25:33 :: hrss 466345 520349 hair 0
+May 30 19:25:33 :: bella 63800 166400 hair 0
+May 30 19:25:34 :: [PLAYER_LOAD] Load from PlayerDB pid[91]
+May 30 19:25:34 :: QID_PLAYER 47 91
+May 30 19:25:34 :: SetPlay on 420783879 abyss
+May 30 19:25:34 :: QID_ITEM 47
+May 30 19:25:34 :: ITEM_CACHE: new cache 91
+May 30 19:25:34 :: ITEM_LOAD: count 11 pid 91
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000122 vnum1009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000122
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000123 vnum2009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000123
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000124 vnum19 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000124
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000125 vnum11409 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000125
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000126 vnum12349 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000126
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000127 vnum13009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000127
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000128 vnum14009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000128
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000129 vnum15009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000129
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000130 vnum16009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000130
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000131 vnum17009 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000131
+May 30 19:25:34 :: ITEM_CACHE: PutItemCache ==> New CItemCache id70000132 vnum50187 new owner91
+May 30 19:25:34 :: ITEM_CACHE: save 91 id 70000132
+May 30 19:25:34 :: QID_QUEST 47
+May 30 19:25:34 :: QUEST_LOAD: count 2 PID 91
+May 30 19:25:34 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 19:25:34 :: QID_AFFECT 47
+May 30 19:25:34 :: AFFECT_LOAD: count 1 PID 91
+May 30 19:25:34 :: QID_BATTLE_PASS 47
+May 30 19:25:34 :: BATTLE_PASS_LOAD: count 0 PID 91
+May 30 19:25:34 :: QID_SKILL_COLOR 47 91
+May 30 19:25:34 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 19:25:34 :: AUTH_PEER_WRITE: size 18
+May 30 19:25:34 :: [   496250] return 0/0/6 async 0/0/0
+May 30 19:25:36 :: [   496300] return 0/0/0 async 0/0/0
+May 30 19:25:38 :: [   496350] return 0/0/0 async 0/0/2
+May 30 19:25:40 :: [   496400] return 0/0/1 async 0/0/0
+May 30 19:25:42 :: [   496450] return 0/0/0 async 0/0/1
+May 30 19:25:44 :: [   496500] return 0/0/0 async 0/0/0
+May 30 19:25:46 :: [   496550] return 0/0/0 async 0/0/0
+May 30 19:25:48 :: [   496600] return 0/0/0 async 0/0/0
+May 30 19:25:50 :: [   496650] return 0/0/1 async 0/0/0
+May 30 19:25:52 :: [   496700] return 0/0/0 async 0/0/0
+May 30 19:25:54 :: [   496750] return 0/0/0 async 0/0/0
+May 30 19:25:56 :: [   496800] return 0/0/0 async 0/0/0
+May 30 19:25:58 :: [   496850] return 0/0/0 async 0/0/0
+May 30 19:26:00 :: [   496900] return 0/0/1 async 0/0/0
+May 30 19:26:02 :: [   496950] return 0/0/0 async 0/0/0
+May 30 19:26:04 :: [   497000] return 0/0/0 async 0/0/0
+May 30 19:26:06 :: [   497050] return 0/0/0 async 0/0/0
+May 30 19:26:08 :: [   497100] return 0/0/0 async 0/0/0
+May 30 19:26:10 :: [   497150] return 0/0/1 async 0/0/0
+May 30 19:26:12 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:26:12 :: LOGOUT: Insert player pid(14)
+May 30 19:26:12 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:26:12 :: LOGOUT: Insert player pid(39)
+May 30 19:26:12 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:26:12 :: LOGOUT: Insert player pid(90)
+May 30 19:26:12 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:26:12 :: LOGOUT: Insert player pid(91)
+May 30 19:26:12 :: SetPlay off 420783879 abyss
+May 30 19:26:12 :: LOGOUT abyss 
+May 30 19:26:12 :: AUTH_PEER_WRITE: size 18
+May 30 19:26:12 :: LOGIN_BY_KEY success abyss 420783879 46.247.137.201
+May 30 19:26:12 :: RESULT_LOGIN: login success abyss rows: 3
+May 30 19:26:12 :: abyss 959435 272709 hair 31
+May 30 19:26:12 :: hrss 466345 520349 hair 0
+May 30 19:26:12 :: bella 63800 166400 hair 0
+May 30 19:26:12 :: [   497200] return 0/0/2 async 0/0/0
+May 30 19:26:13 :: SetPlay on 420783879 abyss
+May 30 19:26:13 :: [PLAYER_LOAD] ID abyss pid 14 gold 64788586625 
+May 30 19:26:13 :: [PLAYER_LOAD] ID abyss pid 14 gaya 185 
+May 30 19:26:13 :: AUTH_PEER_WRITE: size 18
+May 30 19:26:13 :: QID_QUEST 48
+May 30 19:26:13 :: QUEST_LOAD: count 47 PID 14
+May 30 19:26:13 :: info of pLoginData1 before call ItemAwardfunction 678700928
+May 30 19:26:13 :: QID_AFFECT 48
+May 30 19:26:13 :: AFFECT_LOAD: count 11 PID 14
+May 30 19:26:13 :: QID_BATTLE_PASS 48
+May 30 19:26:13 :: BATTLE_PASS_LOAD: count 5 PID 14
+May 30 19:26:13 :: QID_SKILL_COLOR 48 14
+May 30 19:26:13 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 19:26:14 :: [   497250] return 0/0/0 async 0/0/0
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057426
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057423
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 30066459
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10034437
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057422
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057416
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057398
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057417
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50031626
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057436
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057418
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057427
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057425
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 30066460
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10034439
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50037851
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10034442
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057419
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057424
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057421
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 50057420
+May 30 19:26:16 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:26:16 :: ITEM_CACHE: save 14 id 10034446
+May 30 19:26:16 :: [   497300] return 0/0/0 async 0/0/0
+May 30 19:26:18 :: [   497350] return 0/0/0 async 0/0/0
+May 30 19:26:20 :: [   497400] return 0/0/1 async 0/0/0
+May 30 19:26:22 :: [   497450] return 0/0/0 async 0/0/0
+May 30 19:26:24 :: [   497500] return 0/0/0 async 0/0/0
+May 30 19:26:26 :: [   497550] return 0/0/0 async 0/0/0
+May 30 19:26:28 :: [   497600] return 0/0/0 async 0/0/0
+May 30 19:26:30 :: [   497650] return 0/0/1 async 0/0/0
+May 30 19:26:32 :: [   497700] return 0/0/0 async 0/0/0
+May 30 19:26:34 :: [   497750] return 0/0/0 async 0/0/0
+May 30 19:26:36 :: [   497800] return 0/0/0 async 0/0/0
+May 30 19:26:38 :: [   497850] return 0/0/0 async 0/0/0
+May 30 19:26:40 :: [   497900] return 0/0/1 async 0/0/0
+May 30 19:26:42 :: [   497950] return 0/0/0 async 0/0/0
+May 30 19:26:44 :: [   498000] return 0/0/0 async 0/0/0
+May 30 19:26:46 :: [   498050] return 0/0/0 async 0/0/0
+May 30 19:26:48 :: [   498100] return 0/0/0 async 0/0/0
+May 30 19:26:50 :: [   498150] return 0/0/1 async 0/0/0
+May 30 19:26:52 :: [   498200] return 0/0/0 async 0/0/0
+May 30 19:26:54 :: [   498250] return 0/0/0 async 0/0/0
+May 30 19:26:56 :: [   498300] return 0/0/0 async 0/0/0
+May 30 19:26:58 :: [   498350] return 0/0/0 async 0/0/0
+May 30 19:27:00 :: [   498400] return 0/0/1 async 0/0/0
+May 30 19:27:02 :: [   498450] return 0/0/0 async 0/0/0
+May 30 19:27:04 :: [   498500] return 0/0/0 async 0/0/0
+May 30 19:27:06 :: [   498550] return 0/0/0 async 0/0/0
+May 30 19:27:08 :: [   498600] return 0/0/0 async 0/0/0
+May 30 19:27:10 :: [   498650] return 0/0/1 async 0/0/0
+May 30 19:27:12 :: [   498700] return 0/0/0 async 0/0/0
+May 30 19:27:14 :: [   498750] return 0/0/0 async 0/0/0
+May 30 19:27:16 :: [   498800] return 0/0/0 async 0/0/0
+May 30 19:27:18 :: [   498850] return 0/0/0 async 0/0/0
+May 30 19:27:20 :: [   498900] return 0/0/1 async 0/0/0
+May 30 19:27:22 :: [   498950] return 0/0/0 async 0/0/0
+May 30 19:27:24 :: [   499000] return 0/0/0 async 0/0/0
+May 30 19:27:26 :: [   499050] return 0/0/0 async 0/0/0
+May 30 19:27:28 :: [   499100] return 0/0/0 async 0/0/0
+May 30 19:27:30 :: [   499150] return 0/0/1 async 0/0/0
+May 30 19:27:32 :: [   499200] return 0/0/0 async 0/0/0
+May 30 19:27:34 :: [   499250] return 0/0/0 async 0/0/0
+May 30 19:27:36 :: [   499300] return 0/0/0 async 0/0/0
+May 30 19:27:38 :: [   499350] return 0/0/0 async 0/0/0
+May 30 19:27:40 :: [   499400] return 0/0/1 async 0/0/0
+May 30 19:27:42 :: [   499450] return 0/0/0 async 0/0/0
+May 30 19:27:44 :: [   499500] return 0/0/0 async 0/0/0
+May 30 19:27:46 :: [   499550] return 0/0/0 async 0/0/0
+May 30 19:27:48 :: [   499600] return 0/0/0 async 0/0/0
+May 30 19:27:50 :: [   499650] return 0/0/1 async 0/0/0
+May 30 19:27:52 :: [   499700] return 0/0/0 async 0/0/0
+May 30 19:27:54 :: [   499750] return 0/0/0 async 0/0/0
+May 30 19:27:56 :: [   499800] return 0/0/0 async 0/0/0
+May 30 19:27:58 :: [   499850] return 0/0/0 async 0/0/0
+May 30 19:28:00 :: [   499900] return 0/0/1 async 0/0/0
+May 30 19:28:02 :: [   499950] return 0/0/0 async 0/0/0
+May 30 19:28:04 :: [   500000] return 0/0/0 async 0/0/0
+May 30 19:28:06 :: [   500050] return 0/0/0 async 0/0/0
+May 30 19:28:08 :: [   500100] return 0/0/0 async 0/0/0
+May 30 19:28:10 :: [   500150] return 0/0/1 async 0/0/0
+May 30 19:28:12 :: [   500200] return 0/0/0 async 0/0/0
+May 30 19:28:14 :: [   500250] return 0/0/0 async 0/0/0
+May 30 19:28:16 :: [   500300] return 0/0/0 async 0/0/0
+May 30 19:28:18 :: [   500350] return 0/0/0 async 0/0/0
+May 30 19:28:20 :: [   500400] return 0/0/1 async 0/0/0
+May 30 19:28:22 :: [   500450] return 0/0/0 async 0/0/0
+May 30 19:28:24 :: [   500500] return 0/0/0 async 0/0/0
+May 30 19:28:26 :: [   500550] return 0/0/0 async 0/0/0
+May 30 19:28:28 :: [   500600] return 0/0/0 async 0/0/0
+May 30 19:28:30 :: [   500650] return 0/0/1 async 0/0/0
+May 30 19:28:32 :: [   500700] return 0/0/0 async 0/0/0
+May 30 19:28:34 :: [   500750] return 0/0/0 async 0/0/0
+May 30 19:28:36 :: [   500800] return 0/0/0 async 0/0/0
+May 30 19:28:38 :: [   500850] return 0/0/0 async 0/0/0
+May 30 19:28:40 :: [   500900] return 0/0/1 async 0/0/0
+May 30 19:28:42 :: [   500950] return 0/0/0 async 0/0/0
+May 30 19:28:44 :: [   501000] return 0/0/0 async 0/0/0
+May 30 19:28:46 :: [   501050] return 0/0/0 async 0/0/0
+May 30 19:28:48 :: [   501100] return 0/0/0 async 0/0/0
+May 30 19:28:50 :: [   501150] return 0/0/1 async 0/0/0
+May 30 19:28:52 :: [   501200] return 0/0/0 async 0/0/0
+May 30 19:28:54 :: [   501250] return 0/0/0 async 0/0/0
+May 30 19:28:56 :: [   501300] return 0/0/0 async 0/0/0
+May 30 19:28:58 :: [   501350] return 0/0/0 async 0/0/0
+May 30 19:29:00 :: [   501400] return 0/0/1 async 0/0/0
+May 30 19:29:02 :: [   501450] return 0/0/0 async 0/0/0
+May 30 19:29:04 :: [   501500] return 0/0/0 async 0/0/0
+May 30 19:29:06 :: [   501550] return 0/0/0 async 0/0/0
+May 30 19:29:08 :: [   501600] return 0/0/0 async 0/0/0
+May 30 19:29:10 :: [   501650] return 0/0/1 async 0/0/0
+May 30 19:29:12 :: [   501700] return 0/0/0 async 0/0/0
+May 30 19:29:14 :: [   501750] return 0/0/0 async 0/0/0
+May 30 19:29:16 :: [   501800] return 0/0/0 async 0/0/0
+May 30 19:29:18 :: [   501850] return 0/0/0 async 0/0/0
+May 30 19:29:20 :: [   501900] return 0/0/1 async 0/0/0
+May 30 19:29:22 :: [   501950] return 0/0/0 async 0/0/0
+May 30 19:29:24 :: [   502000] return 0/0/0 async 0/0/0
+May 30 19:29:26 :: [   502050] return 0/0/0 async 0/0/0
+May 30 19:29:28 :: [   502100] return 0/0/0 async 0/0/0
+May 30 19:29:30 :: [   502150] return 0/0/1 async 0/0/0
+May 30 19:29:32 :: [   502200] return 0/0/0 async 0/0/0
+May 30 19:29:34 :: [   502250] return 0/0/0 async 0/0/0
+May 30 19:29:36 :: [   502300] return 0/0/0 async 0/0/0
+May 30 19:29:38 :: [   502350] return 0/0/0 async 0/0/0
+May 30 19:29:40 :: [   502400] return 0/0/1 async 0/0/0
+May 30 19:29:42 :: [   502450] return 0/0/0 async 0/0/0
+May 30 19:29:44 :: [   502500] return 0/0/0 async 0/0/0
+May 30 19:29:46 :: [   502550] return 0/0/0 async 0/0/0
+May 30 19:29:48 :: [   502600] return 0/0/0 async 0/0/0
+May 30 19:29:50 :: [   502650] return 0/0/1 async 0/0/0
+May 30 19:29:52 :: [   502700] return 0/0/0 async 0/0/0
+May 30 19:29:54 :: [   502750] return 0/0/0 async 0/0/0
+May 30 19:29:56 :: [   502800] return 0/0/0 async 0/0/0
+May 30 19:29:58 :: [   502850] return 0/0/0 async 0/0/0
+May 30 19:30:00 :: [   502900] return 0/0/1 async 0/0/0
+May 30 19:30:02 :: [   502950] return 0/0/0 async 0/0/0
+May 30 19:30:04 :: [   503000] return 0/0/0 async 0/0/0
+May 30 19:30:06 :: [   503050] return 0/0/0 async 0/0/0
+May 30 19:30:08 :: [   503100] return 0/0/0 async 0/0/0
+May 30 19:30:10 :: [   503150] return 0/0/3 async 0/0/0
+May 30 19:30:12 :: [   503200] return 0/0/0 async 0/0/0
+May 30 19:30:14 :: [   503250] return 0/0/0 async 0/0/0
+May 30 19:30:16 :: [   503300] return 0/0/0 async 0/0/0
+May 30 19:30:18 :: [   503350] return 0/0/0 async 0/0/0
+May 30 19:30:20 :: [   503400] return 0/0/1 async 0/0/0
+May 30 19:30:22 :: [   503450] return 0/0/0 async 0/0/0
+May 30 19:30:24 :: [   503500] return 0/0/0 async 0/0/0
+May 30 19:30:26 :: [   503550] return 0/0/0 async 0/0/0
+May 30 19:30:28 :: [   503600] return 0/0/0 async 0/0/0
+May 30 19:30:30 :: [   503650] return 0/0/1 async 0/0/0
+May 30 19:30:32 :: [   503700] return 0/0/0 async 0/0/0
+May 30 19:30:34 :: [   503750] return 0/0/0 async 0/0/0
+May 30 19:30:36 :: [   503800] return 0/0/0 async 0/0/0
+May 30 19:30:38 :: [   503850] return 0/0/0 async 0/0/0
+May 30 19:30:40 :: [   503900] return 0/0/1 async 0/0/0
+May 30 19:30:42 :: [   503950] return 0/0/0 async 0/0/0
+May 30 19:30:44 :: [   504000] return 0/0/0 async 0/0/0
+May 30 19:30:46 :: [   504050] return 0/0/0 async 0/0/0
+May 30 19:30:48 :: [   504100] return 0/0/0 async 0/0/0
+May 30 19:30:50 :: [   504150] return 0/0/1 async 0/0/0
+May 30 19:30:52 :: [   504200] return 0/0/0 async 0/0/0
+May 30 19:30:54 :: [   504250] return 0/0/0 async 0/0/0
+May 30 19:30:56 :: [   504300] return 0/0/0 async 0/0/0
+May 30 19:30:58 :: [   504350] return 0/0/0 async 0/0/0
+May 30 19:31:00 :: [   504400] return 0/0/1 async 0/0/0
+May 30 19:31:02 :: [   504450] return 0/0/0 async 0/0/0
+May 30 19:31:04 :: [   504500] return 0/0/0 async 0/0/0
+May 30 19:31:06 :: [   504550] return 0/0/0 async 0/0/0
+May 30 19:31:08 :: [   504600] return 0/0/0 async 0/0/0
+May 30 19:31:08 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 19:31:08 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 19:31:10 :: [   504650] return 0/0/1 async 0/0/0
+May 30 19:31:12 :: [   504700] return 0/0/0 async 0/0/0
+May 30 19:31:14 :: [   504750] return 0/0/0 async 0/0/0
+May 30 19:31:16 :: [   504800] return 0/0/0 async 0/0/0
+May 30 19:31:18 :: [   504850] return 0/0/0 async 0/0/0
+May 30 19:31:20 :: [   504900] return 0/0/1 async 0/0/0
+May 30 19:31:22 :: [   504950] return 0/0/0 async 0/0/0
+May 30 19:31:24 :: [   505000] return 0/0/0 async 0/0/0
+May 30 19:31:26 :: [   505050] return 0/0/0 async 0/0/0
+May 30 19:31:28 :: [   505100] return 0/0/0 async 0/0/0
+May 30 19:31:30 :: [   505150] return 0/0/1 async 0/0/0
+May 30 19:31:32 :: [   505200] return 0/0/0 async 0/0/0
+May 30 19:31:34 :: [   505250] return 0/0/0 async 0/0/0
+May 30 19:31:36 :: [   505300] return 0/0/0 async 0/0/0
+May 30 19:31:38 :: [   505350] return 0/0/0 async 0/0/0
+May 30 19:31:40 :: [   505400] return 0/0/1 async 0/0/0
+May 30 19:31:42 :: [   505450] return 0/0/0 async 0/0/0
+May 30 19:31:44 :: [   505500] return 0/0/0 async 0/0/0
+May 30 19:31:46 :: [   505550] return 0/0/0 async 0/0/0
+May 30 19:31:48 :: [   505600] return 0/0/0 async 0/0/0
+May 30 19:31:50 :: [   505650] return 0/0/1 async 0/0/0
+May 30 19:31:52 :: [   505700] return 0/0/0 async 0/0/0
+May 30 19:31:54 :: [   505750] return 0/0/0 async 0/0/0
+May 30 19:31:56 :: [   505800] return 0/0/0 async 0/0/0
+May 30 19:31:58 :: [   505850] return 0/0/0 async 0/0/0
+May 30 19:32:00 :: [   505900] return 0/0/1 async 0/0/0
+May 30 19:32:02 :: [   505950] return 0/0/0 async 0/0/0
+May 30 19:32:04 :: [   506000] return 0/0/0 async 0/0/0
+May 30 19:32:06 :: [   506050] return 0/0/0 async 0/0/0
+May 30 19:32:08 :: [   506100] return 0/0/0 async 0/0/0
+May 30 19:32:10 :: [   506150] return 0/0/1 async 0/0/0
+May 30 19:32:12 :: [   506200] return 0/0/0 async 0/0/0
+May 30 19:32:14 :: [   506250] return 0/0/0 async 0/0/0
+May 30 19:32:16 :: [   506300] return 0/0/0 async 0/0/0
+May 30 19:32:18 :: [   506350] return 0/0/0 async 0/0/0
+May 30 19:32:20 :: [   506400] return 0/0/1 async 0/0/0
+May 30 19:32:22 :: [   506450] return 0/0/0 async 0/0/0
+May 30 19:32:24 :: [   506500] return 0/0/0 async 0/0/0
+May 30 19:32:26 :: [   506550] return 0/0/0 async 0/0/0
+May 30 19:32:28 :: [   506600] return 0/0/0 async 0/0/0
+May 30 19:32:30 :: [   506650] return 0/0/1 async 0/0/0
+May 30 19:32:32 :: [   506700] return 0/0/0 async 0/0/0
+May 30 19:32:34 :: [   506750] return 0/0/0 async 0/0/0
+May 30 19:32:36 :: [   506800] return 0/0/0 async 0/0/0
+May 30 19:32:38 :: [   506850] return 0/0/0 async 0/0/0
+May 30 19:32:40 :: [   506900] return 0/0/1 async 0/0/5
+May 30 19:32:42 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:32:42 :: ITEM_CACHE: save 14 id 50057412
+May 30 19:32:42 :: [   506950] return 0/0/0 async 0/0/0
+May 30 19:32:44 :: [   507000] return 0/0/0 async 0/0/0
+May 30 19:32:46 :: [   507050] return 0/0/0 async 0/0/0
+May 30 19:32:48 :: [   507100] return 0/0/0 async 0/0/0
+May 30 19:32:50 :: [   507150] return 0/0/1 async 0/0/0
+May 30 19:32:52 :: [   507200] return 0/0/0 async 0/0/0
+May 30 19:32:54 :: [   507250] return 0/0/0 async 0/0/0
+May 30 19:32:56 :: [   507300] return 0/0/0 async 0/0/0
+May 30 19:32:58 :: [   507350] return 0/0/0 async 0/0/0
+May 30 19:33:00 :: [   507400] return 0/0/1 async 0/0/0
+May 30 19:33:02 :: [   507450] return 0/0/0 async 0/0/0
+May 30 19:33:04 :: [   507500] return 0/0/0 async 0/0/0
+May 30 19:33:06 :: [   507550] return 0/0/0 async 0/0/0
+May 30 19:33:08 :: [   507600] return 0/0/0 async 0/0/0
+May 30 19:33:10 :: [   507650] return 0/0/1 async 0/0/0
+May 30 19:33:12 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:33:12 :: ITEM_CACHE: save 14 id 50057412
+May 30 19:33:12 :: [   507700] return 0/0/0 async 0/0/0
+May 30 19:33:14 :: [   507750] return 0/0/0 async 0/0/0
+May 30 19:33:16 :: [   507800] return 0/0/0 async 0/0/0
+May 30 19:33:18 :: [   507850] return 0/0/0 async 0/0/0
+May 30 19:33:20 :: [   507900] return 0/0/1 async 0/0/0
+May 30 19:33:22 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:33:22 :: ITEM_CACHE: save 14 id 50057413
+May 30 19:33:22 :: [   507950] return 0/0/0 async 0/0/1
+May 30 19:33:24 :: [   508000] return 0/0/0 async 0/0/0
+May 30 19:33:26 :: [   508050] return 0/0/0 async 0/0/0
+May 30 19:33:28 :: [   508100] return 0/0/0 async 0/0/0
+May 30 19:33:30 :: [   508150] return 0/0/1 async 0/0/0
+May 30 19:33:32 :: [   508200] return 0/0/0 async 0/0/0
+May 30 19:33:34 :: [   508250] return 0/0/0 async 0/0/0
+May 30 19:33:36 :: [   508300] return 0/0/0 async 0/0/0
+May 30 19:33:38 :: [   508350] return 0/0/0 async 0/0/0
+May 30 19:33:40 :: [   508400] return 0/0/1 async 0/0/0
+May 30 19:33:42 :: [   508450] return 0/0/0 async 0/0/0
+May 30 19:33:44 :: [   508500] return 0/0/0 async 0/0/0
+May 30 19:33:46 :: [   508550] return 0/0/0 async 0/0/0
+May 30 19:33:48 :: [   508600] return 0/0/0 async 0/0/0
+May 30 19:33:50 :: [   508650] return 0/0/1 async 0/0/0
+May 30 19:33:52 :: [   508700] return 0/0/0 async 0/0/0
+May 30 19:33:54 :: [   508750] return 0/0/0 async 0/0/0
+May 30 19:33:56 :: [   508800] return 0/0/0 async 0/0/0
+May 30 19:33:58 :: [   508850] return 0/0/0 async 0/0/0
+May 30 19:34:00 :: [   508900] return 0/0/1 async 0/0/0
+May 30 19:34:02 :: [   508950] return 0/0/0 async 0/0/0
+May 30 19:34:04 :: [   509000] return 0/0/0 async 0/0/0
+May 30 19:34:06 :: [   509050] return 0/0/0 async 0/0/0
+May 30 19:34:08 :: [   509100] return 0/0/0 async 0/0/0
+May 30 19:34:10 :: [   509150] return 0/0/1 async 0/0/0
+May 30 19:34:12 :: [   509200] return 0/0/0 async 0/0/0
+May 30 19:34:14 :: [   509250] return 0/0/0 async 0/0/0
+May 30 19:34:16 :: [   509300] return 0/0/0 async 0/0/0
+May 30 19:34:18 :: [   509350] return 0/0/0 async 0/0/0
+May 30 19:34:20 :: [   509400] return 0/0/1 async 0/0/0
+May 30 19:34:22 :: [   509450] return 0/0/0 async 0/0/0
+May 30 19:34:24 :: [   509500] return 0/0/0 async 0/0/0
+May 30 19:34:26 :: [   509550] return 0/0/0 async 0/0/0
+May 30 19:34:28 :: [   509600] return 0/0/0 async 0/0/0
+May 30 19:34:30 :: [   509650] return 0/0/1 async 0/0/0
+May 30 19:34:32 :: [   509700] return 0/0/0 async 0/0/0
+May 30 19:34:34 :: [   509750] return 0/0/0 async 0/0/0
+May 30 19:34:36 :: [   509800] return 0/0/0 async 0/0/0
+May 30 19:34:38 :: [   509850] return 0/0/0 async 0/0/0
+May 30 19:34:40 :: [   509900] return 0/0/1 async 0/0/0
+May 30 19:34:42 :: [   509950] return 0/0/0 async 0/0/0
+May 30 19:34:44 :: [   510000] return 0/0/0 async 0/0/0
+May 30 19:34:46 :: [   510050] return 0/0/0 async 0/0/0
+May 30 19:34:48 :: [   510100] return 0/0/0 async 0/0/0
+May 30 19:34:50 :: [   510150] return 0/0/1 async 0/0/0
+May 30 19:34:52 :: [   510200] return 0/0/0 async 0/0/0
+May 30 19:34:54 :: [   510250] return 0/0/0 async 0/0/0
+May 30 19:34:56 :: [   510300] return 0/0/0 async 0/0/0
+May 30 19:34:58 :: [   510350] return 0/0/0 async 0/0/0
+May 30 19:35:00 :: [   510400] return 0/0/1 async 0/0/0
+May 30 19:35:02 :: [   510450] return 0/0/0 async 0/0/0
+May 30 19:35:04 :: [   510500] return 0/0/0 async 0/0/0
+May 30 19:35:06 :: [   510550] return 0/0/0 async 0/0/0
+May 30 19:35:08 :: [   510600] return 0/0/0 async 0/0/0
+May 30 19:35:10 :: [   510650] return 0/0/1 async 0/0/0
+May 30 19:35:12 :: [   510700] return 0/0/0 async 0/0/0
+May 30 19:35:14 :: [   510750] return 0/0/0 async 0/0/0
+May 30 19:35:16 :: [   510800] return 0/0/0 async 0/0/0
+May 30 19:35:18 :: [   510850] return 0/0/1 async 0/0/0
+May 30 19:35:20 :: [   510900] return 0/0/1 async 0/0/0
+May 30 19:35:22 :: [   510950] return 0/0/0 async 0/0/0
+May 30 19:35:24 :: [   511000] return 0/0/0 async 0/0/0
+May 30 19:35:26 :: [   511050] return 0/0/0 async 0/0/0
+May 30 19:35:28 :: [   511100] return 0/0/0 async 0/0/0
+May 30 19:35:30 :: [   511150] return 0/0/1 async 0/0/0
+May 30 19:35:32 :: [   511200] return 0/0/0 async 0/0/0
+May 30 19:35:34 :: [   511250] return 0/0/0 async 0/0/0
+May 30 19:35:36 :: [   511300] return 0/0/0 async 0/0/0
+May 30 19:35:38 :: [   511350] return 0/0/0 async 0/0/0
+May 30 19:35:40 :: [   511400] return 0/0/1 async 0/0/0
+May 30 19:35:42 :: [   511450] return 0/0/0 async 0/0/0
+May 30 19:35:44 :: [   511500] return 0/0/0 async 0/0/0
+May 30 19:35:46 :: [   511550] return 0/0/0 async 0/0/0
+May 30 19:35:48 :: [   511600] return 0/0/0 async 0/0/0
+May 30 19:35:50 :: [   511650] return 0/0/1 async 0/0/0
+May 30 19:35:52 :: [   511700] return 0/0/0 async 0/0/0
+May 30 19:35:54 :: [   511750] return 0/0/0 async 0/0/0
+May 30 19:35:56 :: [   511800] return 0/0/0 async 0/0/0
+May 30 19:35:58 :: [   511850] return 0/0/0 async 0/0/0
+May 30 19:36:00 :: [   511900] return 0/0/1 async 0/0/0
+May 30 19:36:02 :: [   511950] return 0/0/0 async 0/0/0
+May 30 19:36:04 :: [   512000] return 0/0/0 async 0/0/0
+May 30 19:36:06 :: [   512050] return 0/0/0 async 0/0/0
+May 30 19:36:08 :: [   512100] return 0/0/0 async 0/0/0
+May 30 19:36:09 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 19:36:09 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 19:36:10 :: [   512150] return 0/0/1 async 0/0/0
+May 30 19:36:12 :: [   512200] return 0/0/0 async 0/0/0
+May 30 19:36:14 :: [   512250] return 0/0/0 async 0/0/0
+May 30 19:36:16 :: [   512300] return 0/0/0 async 0/0/0
+May 30 19:36:18 :: [   512350] return 0/0/0 async 0/0/0
+May 30 19:36:20 :: [   512400] return 0/0/1 async 0/0/0
+May 30 19:36:22 :: [   512450] return 0/0/0 async 0/0/0
+May 30 19:36:24 :: [   512500] return 0/0/0 async 0/0/0
+May 30 19:36:26 :: [   512550] return 0/0/0 async 0/0/0
+May 30 19:36:28 :: [   512600] return 0/0/0 async 0/0/0
+May 30 19:36:30 :: [   512650] return 0/0/1 async 0/0/0
+May 30 19:36:32 :: [   512700] return 0/0/0 async 0/0/0
+May 30 19:36:34 :: [   512750] return 0/0/0 async 0/0/0
+May 30 19:36:36 :: [   512800] return 0/0/0 async 0/0/0
+May 30 19:36:38 :: [   512850] return 0/0/0 async 0/0/0
+May 30 19:36:40 :: [   512900] return 0/0/1 async 0/0/0
+May 30 19:36:42 :: [   512950] return 0/0/0 async 0/0/0
+May 30 19:36:44 :: [   513000] return 0/0/0 async 0/0/0
+May 30 19:36:46 :: [   513050] return 0/0/0 async 0/0/0
+May 30 19:36:48 :: [   513100] return 0/0/0 async 0/0/0
+May 30 19:36:50 :: [   513150] return 0/0/1 async 0/0/0
+May 30 19:36:52 :: [   513200] return 0/0/0 async 0/0/0
+May 30 19:36:54 :: [   513250] return 0/0/0 async 0/0/0
+May 30 19:36:56 :: [   513300] return 0/0/0 async 0/0/0
+May 30 19:36:58 :: [   513350] return 0/0/0 async 0/0/0
+May 30 19:37:00 :: [   513400] return 0/0/1 async 0/0/0
+May 30 19:37:02 :: [   513450] return 0/0/0 async 0/0/0
+May 30 19:37:04 :: [   513500] return 0/0/0 async 0/0/0
+May 30 19:37:06 :: [   513550] return 0/0/0 async 0/0/0
+May 30 19:37:08 :: [   513600] return 0/0/0 async 0/0/0
+May 30 19:37:10 :: [   513650] return 0/0/1 async 0/0/0
+May 30 19:37:12 :: [   513700] return 0/0/0 async 0/0/0
+May 30 19:37:14 :: [   513750] return 0/0/0 async 0/0/0
+May 30 19:37:16 :: [   513800] return 0/0/0 async 0/0/0
+May 30 19:37:18 :: [   513850] return 0/0/0 async 0/0/0
+May 30 19:37:20 :: [   513900] return 0/0/1 async 0/0/0
+May 30 19:37:22 :: [   513950] return 0/0/0 async 0/0/0
+May 30 19:37:24 :: [   514000] return 0/0/0 async 0/0/0
+May 30 19:37:26 :: [   514050] return 0/0/0 async 0/0/0
+May 30 19:37:28 :: [   514100] return 0/0/0 async 0/0/0
+May 30 19:37:30 :: [   514150] return 0/0/1 async 0/0/0
+May 30 19:37:32 :: [   514200] return 0/0/0 async 0/0/0
+May 30 19:37:34 :: [   514250] return 0/0/0 async 0/0/0
+May 30 19:37:36 :: [   514300] return 0/0/0 async 0/0/0
+May 30 19:37:38 :: [   514350] return 0/0/0 async 0/0/0
+May 30 19:37:40 :: [   514400] return 0/0/1 async 0/0/0
+May 30 19:37:42 :: [   514450] return 0/0/0 async 0/0/0
+May 30 19:37:44 :: [   514500] return 0/0/1 async 0/0/0
+May 30 19:37:46 :: [   514550] return 0/0/0 async 0/0/0
+May 30 19:37:48 :: [   514600] return 0/0/0 async 0/0/0
+May 30 19:37:50 :: [   514650] return 0/0/1 async 0/0/0
+May 30 19:37:52 :: [   514700] return 0/0/0 async 0/0/0
+May 30 19:37:54 :: [   514750] return 0/0/0 async 0/0/0
+May 30 19:37:56 :: [   514800] return 0/0/0 async 0/0/0
+May 30 19:37:58 :: [   514850] return 0/0/0 async 0/0/0
+May 30 19:38:00 :: [   514900] return 0/0/1 async 0/0/0
+May 30 19:38:02 :: [   514950] return 0/0/0 async 0/0/0
+May 30 19:38:04 :: [   515000] return 0/0/0 async 0/0/0
+May 30 19:38:06 :: [   515050] return 0/0/0 async 0/0/0
+May 30 19:38:08 :: [   515100] return 0/0/0 async 0/0/0
+May 30 19:38:10 :: [   515150] return 0/0/1 async 0/0/0
+May 30 19:38:12 :: [   515200] return 0/0/0 async 0/0/0
+May 30 19:38:14 :: [   515250] return 0/0/0 async 0/0/0
+May 30 19:38:16 :: [   515300] return 0/0/0 async 0/0/0
+May 30 19:38:18 :: [   515350] return 0/0/0 async 0/0/0
+May 30 19:38:20 :: [   515400] return 0/0/1 async 0/0/0
+May 30 19:38:22 :: [   515450] return 0/0/0 async 0/0/0
+May 30 19:38:24 :: [   515500] return 0/0/0 async 0/0/0
+May 30 19:38:26 :: [   515550] return 0/0/0 async 0/0/0
+May 30 19:38:28 :: [   515600] return 0/0/0 async 0/0/0
+May 30 19:38:30 :: [   515650] return 0/0/1 async 0/0/0
+May 30 19:38:32 :: [   515700] return 0/0/0 async 0/0/0
+May 30 19:38:34 :: [   515750] return 0/0/0 async 0/0/0
+May 30 19:38:36 :: [   515800] return 0/0/0 async 0/0/0
+May 30 19:38:38 :: [   515850] return 0/0/0 async 0/0/0
+May 30 19:38:40 :: [   515900] return 0/0/1 async 0/0/0
+May 30 19:38:42 :: [   515950] return 0/0/0 async 0/0/0
+May 30 19:38:44 :: [   516000] return 0/0/0 async 0/0/0
+May 30 19:38:46 :: [   516050] return 0/0/0 async 0/0/0
+May 30 19:38:48 :: [   516100] return 0/0/0 async 0/0/0
+May 30 19:38:50 :: [   516150] return 0/0/1 async 0/0/0
+May 30 19:38:52 :: [   516200] return 0/0/0 async 0/0/0
+May 30 19:38:54 :: [   516250] return 0/0/0 async 0/0/0
+May 30 19:38:56 :: [   516300] return 0/0/0 async 0/0/0
+May 30 19:38:58 :: [   516350] return 0/0/0 async 0/0/0
+May 30 19:39:00 :: [   516400] return 0/0/1 async 0/0/0
+May 30 19:39:02 :: [   516450] return 0/0/0 async 0/0/0
+May 30 19:39:04 :: [   516500] return 0/0/0 async 0/0/0
+May 30 19:39:06 :: [   516550] return 0/0/0 async 0/0/0
+May 30 19:39:08 :: [   516600] return 0/0/0 async 0/0/0
+May 30 19:39:10 :: [   516650] return 0/0/1 async 0/0/0
+May 30 19:39:12 :: [   516700] return 0/0/0 async 0/0/0
+May 30 19:39:14 :: [   516750] return 0/0/0 async 0/0/0
+May 30 19:39:16 :: [   516800] return 0/0/0 async 0/0/0
+May 30 19:39:18 :: [   516850] return 0/0/0 async 0/0/0
+May 30 19:39:20 :: [   516900] return 0/0/1 async 0/0/0
+May 30 19:39:22 :: [   516950] return 0/0/0 async 0/0/0
+May 30 19:39:24 :: [   517000] return 0/0/0 async 0/0/0
+May 30 19:39:26 :: [   517050] return 0/0/0 async 0/0/0
+May 30 19:39:28 :: [   517100] return 0/0/0 async 0/0/0
+May 30 19:39:30 :: [   517150] return 0/0/1 async 0/0/0
+May 30 19:39:32 :: [   517200] return 0/0/0 async 0/0/0
+May 30 19:39:34 :: [   517250] return 0/0/0 async 0/0/0
+May 30 19:39:36 :: [   517300] return 0/0/0 async 0/0/0
+May 30 19:39:38 :: [   517350] return 0/0/0 async 0/0/0
+May 30 19:39:40 :: [   517400] return 0/0/1 async 0/0/0
+May 30 19:39:42 :: [   517450] return 0/0/0 async 0/0/0
+May 30 19:39:44 :: [   517500] return 0/0/0 async 0/0/0
+May 30 19:39:46 :: [   517550] return 0/0/0 async 0/0/0
+May 30 19:39:48 :: [   517600] return 0/0/0 async 0/0/0
+May 30 19:39:50 :: [   517650] return 0/0/1 async 0/0/0
+May 30 19:39:52 :: [   517700] return 0/0/0 async 0/0/0
+May 30 19:39:54 :: [   517750] return 0/0/0 async 0/0/0
+May 30 19:39:56 :: [   517800] return 0/0/0 async 0/0/0
+May 30 19:39:58 :: [   517850] return 0/0/0 async 0/0/0
+May 30 19:40:00 :: [   517900] return 0/0/1 async 0/0/0
+May 30 19:40:02 :: [   517950] return 0/0/0 async 0/0/0
+May 30 19:40:04 :: [   518000] return 0/0/0 async 0/0/0
+May 30 19:40:06 :: [   518050] return 0/0/0 async 0/0/0
+May 30 19:40:08 :: [   518100] return 0/0/0 async 0/0/0
+May 30 19:40:10 :: [   518150] return 0/0/1 async 0/0/0
+May 30 19:40:12 :: [   518200] return 0/0/1 async 0/0/0
+May 30 19:40:14 :: [   518250] return 0/0/0 async 0/0/0
+May 30 19:40:16 :: [   518300] return 0/0/0 async 0/0/0
+May 30 19:40:18 :: [   518350] return 0/0/0 async 0/0/0
+May 30 19:40:20 :: [   518400] return 0/0/1 async 0/0/0
+May 30 19:40:22 :: [   518450] return 0/0/0 async 0/0/0
+May 30 19:40:24 :: [   518500] return 0/0/0 async 0/0/0
+May 30 19:40:26 :: [   518550] return 0/0/0 async 0/0/0
+May 30 19:40:28 :: [   518600] return 0/0/0 async 0/0/0
+May 30 19:40:30 :: [   518650] return 0/0/1 async 0/0/0
+May 30 19:40:32 :: [   518700] return 0/0/0 async 0/0/0
+May 30 19:40:34 :: [   518750] return 0/0/0 async 0/0/0
+May 30 19:40:36 :: [   518800] return 0/0/0 async 0/0/0
+May 30 19:40:38 :: [   518850] return 0/0/0 async 0/0/0
+May 30 19:40:40 :: [   518900] return 0/0/1 async 0/0/0
+May 30 19:40:42 :: [   518950] return 0/0/0 async 0/0/0
+May 30 19:40:44 :: [   519000] return 0/0/0 async 0/0/0
+May 30 19:40:46 :: [   519050] return 0/0/0 async 0/0/0
+May 30 19:40:48 :: [   519100] return 0/0/0 async 0/0/0
+May 30 19:40:50 :: [   519150] return 0/0/1 async 0/0/0
+May 30 19:40:52 :: [   519200] return 0/0/0 async 0/0/0
+May 30 19:40:54 :: [   519250] return 0/0/0 async 0/0/0
+May 30 19:40:56 :: [   519300] return 0/0/0 async 0/0/0
+May 30 19:40:58 :: [   519350] return 0/0/0 async 0/0/0
+May 30 19:41:00 :: [   519400] return 0/0/1 async 0/0/0
+May 30 19:41:02 :: [   519450] return 0/0/0 async 0/0/0
+May 30 19:41:04 :: [   519500] return 0/0/0 async 0/0/0
+May 30 19:41:06 :: [   519550] return 0/0/0 async 0/0/0
+May 30 19:41:08 :: [   519600] return 0/0/0 async 0/0/0
+May 30 19:41:10 :: [   519650] return 0/0/1 async 0/0/0
+May 30 19:41:10 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 19:41:10 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 19:41:12 :: [   519700] return 0/0/0 async 0/0/0
+May 30 19:41:14 :: [   519750] return 0/0/0 async 0/0/0
+May 30 19:41:16 :: [   519800] return 0/0/0 async 0/0/0
+May 30 19:41:18 :: [   519850] return 0/0/0 async 0/0/0
+May 30 19:41:20 :: [   519900] return 0/0/1 async 0/0/0
+May 30 19:41:22 :: [   519950] return 0/0/0 async 0/0/0
+May 30 19:41:24 :: [   520000] return 0/0/0 async 0/0/0
+May 30 19:41:26 :: [   520050] return 0/0/0 async 0/0/0
+May 30 19:41:28 :: [   520100] return 0/0/0 async 0/0/0
+May 30 19:41:30 :: [   520150] return 0/0/1 async 0/0/0
+May 30 19:41:32 :: [   520200] return 0/0/0 async 0/0/0
+May 30 19:41:34 :: [   520250] return 0/0/0 async 0/0/0
+May 30 19:41:36 :: [   520300] return 0/0/0 async 0/0/0
+May 30 19:41:38 :: [   520350] return 0/0/0 async 0/0/0
+May 30 19:41:40 :: [   520400] return 0/0/1 async 0/0/0
+May 30 19:41:42 :: [   520450] return 0/0/0 async 0/0/0
+May 30 19:41:44 :: [   520500] return 0/0/0 async 0/0/0
+May 30 19:41:46 :: [   520550] return 0/0/0 async 0/0/0
+May 30 19:41:48 :: [   520600] return 0/0/0 async 0/0/0
+May 30 19:41:50 :: [   520650] return 0/0/1 async 0/0/0
+May 30 19:41:52 :: [   520700] return 0/0/0 async 0/0/0
+May 30 19:41:54 :: [   520750] return 0/0/0 async 0/0/0
+May 30 19:41:56 :: [   520800] return 0/0/0 async 0/0/0
+May 30 19:41:58 :: [   520850] return 0/0/0 async 0/0/0
+May 30 19:42:00 :: [   520900] return 0/0/1 async 0/0/0
+May 30 19:42:02 :: [   520950] return 0/0/0 async 0/0/0
+May 30 19:42:04 :: [   521000] return 0/0/0 async 0/0/0
+May 30 19:42:06 :: [   521050] return 0/0/0 async 0/0/0
+May 30 19:42:08 :: [   521100] return 0/0/0 async 0/0/0
+May 30 19:42:10 :: [   521150] return 0/0/1 async 0/0/0
+May 30 19:42:12 :: [   521200] return 0/0/0 async 0/0/0
+May 30 19:42:14 :: [   521250] return 0/0/0 async 0/0/0
+May 30 19:42:16 :: [   521300] return 0/0/0 async 0/0/0
+May 30 19:42:18 :: [   521350] return 0/0/0 async 0/0/0
+May 30 19:42:20 :: [   521400] return 0/0/1 async 0/0/0
+May 30 19:42:22 :: [   521450] return 0/0/0 async 0/0/0
+May 30 19:42:24 :: [   521500] return 0/0/0 async 0/0/0
+May 30 19:42:26 :: [   521550] return 0/0/0 async 0/0/0
+May 30 19:42:28 :: [   521600] return 0/0/0 async 0/0/0
+May 30 19:42:30 :: [   521650] return 0/0/1 async 0/0/0
+May 30 19:42:32 :: [   521700] return 0/0/0 async 0/0/0
+May 30 19:42:34 :: [   521750] return 0/0/0 async 0/0/0
+May 30 19:42:36 :: [   521800] return 0/0/0 async 0/0/0
+May 30 19:42:38 :: [   521850] return 0/0/0 async 0/0/0
+May 30 19:42:40 :: [   521900] return 0/0/1 async 0/0/0
+May 30 19:42:42 :: [   521950] return 0/0/0 async 0/0/0
+May 30 19:42:44 :: [   522000] return 0/0/0 async 0/0/0
+May 30 19:42:46 :: [   522050] return 0/0/0 async 0/0/0
+May 30 19:42:48 :: [   522100] return 0/0/0 async 0/0/0
+May 30 19:42:50 :: [   522150] return 0/0/1 async 0/0/0
+May 30 19:42:52 :: [   522200] return 0/0/0 async 0/0/0
+May 30 19:42:54 :: [   522250] return 0/0/0 async 0/0/0
+May 30 19:42:56 :: [   522300] return 0/0/0 async 0/0/0
+May 30 19:42:58 :: [   522350] return 0/0/0 async 0/0/0
+May 30 19:43:00 :: [   522400] return 0/0/1 async 0/0/0
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030379
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030381
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030104
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030375
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030380
+May 30 19:43:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 19:43:02 :: ITEM_CACHE: save 14 id 10030382
+May 30 19:43:02 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 19:43:02 :: LOGOUT: Insert player pid(14)
+May 30 19:43:02 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 19:43:02 :: LOGOUT: Insert player pid(39)
+May 30 19:43:02 :: LOGOUT InsertLogoutPlayer abyss 90
+May 30 19:43:02 :: LOGOUT: Insert player pid(90)
+May 30 19:43:02 :: LOGOUT InsertLogoutPlayer abyss 91
+May 30 19:43:02 :: LOGOUT: Insert player pid(91)
+May 30 19:43:02 :: SetPlay off 420783879 abyss
+May 30 19:43:02 :: LOGOUT abyss 
+May 30 19:43:02 :: AUTH_PEER_WRITE: size 18
+May 30 19:43:02 :: [   522450] return 0/0/0 async 0/0/5
+May 30 19:43:04 :: [   522500] return 0/0/0 async 0/0/0
+May 30 19:43:06 :: [   522550] return 0/0/0 async 0/0/0
+May 30 19:43:08 :: [   522600] return 0/0/0 async 0/0/0
+May 30 19:43:10 :: [   522650] return 0/0/1 async 0/0/0
+May 30 19:43:12 :: [   522700] return 0/0/0 async 0/0/0
+May 30 19:43:14 :: [   522750] return 0/0/0 async 0/0/0
+May 30 19:43:16 :: [   522800] return 0/0/0 async 0/0/0
+May 30 19:43:18 :: [   522850] return 0/0/0 async 0/0/0
+May 30 19:43:20 :: [   522900] return 0/0/1 async 0/0/0
+May 30 19:43:22 :: [   522950] return 0/0/0 async 0/0/0
+May 30 19:43:24 :: [   523000] return 0/0/0 async 0/0/0
+May 30 19:43:26 :: [   523050] return 0/0/0 async 0/0/0
+May 30 19:43:28 :: [   523100] return 0/0/0 async 0/0/0
+May 30 19:43:30 :: [   523150] return 0/0/1 async 0/0/0
+May 30 19:43:32 :: [   523200] return 0/0/0 async 0/0/0
+May 30 19:43:34 :: [   523250] return 0/0/0 async 0/0/0
+May 30 19:43:36 :: [   523300] return 0/0/0 async 0/0/0
+May 30 19:43:38 :: [   523350] return 0/0/0 async 0/0/0
+May 30 19:43:40 :: [   523400] return 0/0/1 async 0/0/0
+May 30 19:43:42 :: [   523450] return 0/0/0 async 0/0/0
+May 30 19:43:44 :: [   523500] return 0/0/0 async 0/0/0
+May 30 19:43:46 :: [   523550] return 0/0/0 async 0/0/0
+May 30 19:43:48 :: [   523600] return 0/0/0 async 0/0/0
+May 30 19:43:50 :: [   523650] return 0/0/1 async 0/0/0
+May 30 19:43:52 :: [   523700] return 0/0/0 async 0/0/0
+May 30 19:43:54 :: [   523750] return 0/0/0 async 0/0/0
+May 30 19:43:56 :: [   523800] return 0/0/0 async 0/0/0
+May 30 19:43:58 :: [   523850] return 0/0/0 async 0/0/0
+May 30 19:44:00 :: [   523900] return 0/0/1 async 0/0/0
+May 30 19:44:02 :: [   523950] return 0/0/0 async 0/0/0
+May 30 19:44:04 :: [   524000] return 0/0/0 async 0/0/0
+May 30 19:44:06 :: [   524050] return 0/0/0 async 0/0/0
+May 30 19:44:08 :: [   524100] return 0/0/0 async 0/0/0
+May 30 19:44:10 :: [   524150] return 0/0/1 async 0/0/0
+May 30 19:44:12 :: [   524200] return 0/0/0 async 0/0/0
+May 30 19:44:14 :: [   524250] return 0/0/0 async 0/0/0
+May 30 19:44:16 :: [   524300] return 0/0/0 async 0/0/0
+May 30 19:44:18 :: [   524350] return 0/0/0 async 0/0/0
+May 30 19:44:20 :: [   524400] return 0/0/1 async 0/0/0
+May 30 19:44:22 :: [   524450] return 0/0/0 async 0/0/0
+May 30 19:44:24 :: [   524500] return 0/0/0 async 0/0/0
+May 30 19:44:26 :: [   524550] return 0/0/0 async 0/0/0
+May 30 19:44:28 :: [   524600] return 0/0/0 async 0/0/0
+May 30 19:44:30 :: [   524650] return 0/0/1 async 0/0/0
+May 30 19:44:32 :: [   524700] return 0/0/0 async 0/0/0
+May 30 19:44:34 :: [   524750] return 0/0/0 async 0/0/0
+May 30 19:44:36 :: [   524800] return 0/0/0 async 0/0/0
+May 30 19:44:38 :: [   524850] return 0/0/0 async 0/0/0
+May 30 19:44:40 :: [   524900] return 0/0/1 async 0/0/0
+May 30 19:44:42 :: [   524950] return 0/0/0 async 0/0/0
+May 30 19:44:44 :: [   525000] return 0/0/0 async 0/0/0
+May 30 19:44:46 :: [   525050] return 0/0/0 async 0/0/0
+May 30 19:44:48 :: [   525100] return 0/0/0 async 0/0/0
+May 30 19:44:50 :: [   525150] return 0/0/1 async 0/0/0
+May 30 19:44:52 :: [   525200] return 0/0/0 async 0/0/0
+May 30 19:44:54 :: [   525250] return 0/0/0 async 0/0/0
+May 30 19:44:56 :: [   525300] return 0/0/0 async 0/0/0
+May 30 19:44:58 :: [   525350] return 0/0/0 async 0/0/0
+May 30 19:45:00 :: [   525400] return 0/0/1 async 0/0/0
+May 30 19:45:02 :: [   525450] return 0/0/0 async 0/0/0
+May 30 19:45:04 :: [   525500] return 0/0/0 async 0/0/0
+May 30 19:45:06 :: [   525550] return 0/0/0 async 0/0/0
+May 30 19:45:08 :: [   525600] return 0/0/0 async 0/0/0
+May 30 19:45:10 :: [   525650] return 0/0/1 async 0/0/0
+May 30 19:45:12 :: [   525700] return 0/0/0 async 0/0/0
+May 30 19:45:14 :: [   525750] return 0/0/0 async 0/0/0
+May 30 19:45:16 :: [   525800] return 0/0/0 async 0/0/0
+May 30 19:45:18 :: [   525850] return 0/0/0 async 0/0/0
+May 30 19:45:20 :: [   525900] return 0/0/1 async 0/0/0
+May 30 19:45:22 :: [   525950] return 0/0/0 async 0/0/0
+May 30 19:45:24 :: [   526000] return 0/0/0 async 0/0/0
+May 30 19:45:26 :: [   526050] return 0/0/0 async 0/0/0
+May 30 19:45:28 :: [   526100] return 0/0/0 async 0/0/0
+May 30 19:45:30 :: [   526150] return 0/0/1 async 0/0/0
+May 30 19:45:32 :: [   526200] return 0/0/0 async 0/0/0
+May 30 19:45:34 :: [   526250] return 0/0/0 async 0/0/0
+May 30 19:45:36 :: [   526300] return 0/0/0 async 0/0/0
+May 30 19:45:38 :: [   526350] return 0/0/0 async 0/0/0
+May 30 19:45:40 :: [   526400] return 0/0/1 async 0/0/0
+May 30 19:45:42 :: [   526450] return 0/0/0 async 0/0/0
+May 30 19:45:44 :: [   526500] return 0/0/0 async 0/0/0
+May 30 19:45:46 :: [   526550] return 0/0/0 async 0/0/0
+May 30 19:45:48 :: [   526600] return 0/0/0 async 0/0/0
+May 30 19:45:50 :: [   526650] return 0/0/1 async 0/0/0
+May 30 19:45:52 :: [   526700] return 0/0/0 async 0/0/0
+May 30 19:45:54 :: [   526750] return 0/0/0 async 0/0/0
+May 30 19:45:56 :: [   526800] return 0/0/0 async 0/0/0
+May 30 19:45:58 :: [   526850] return 0/0/0 async 0/0/0
+May 30 19:46:00 :: [   526900] return 0/0/1 async 0/0/0
+May 30 19:46:02 :: [   526950] return 0/0/0 async 0/0/0
+May 30 19:46:04 :: [   527000] return 0/0/0 async 0/0/0
+May 30 19:46:06 :: [   527050] return 0/0/0 async 0/0/0
+May 30 19:46:08 :: [   527100] return 0/0/0 async 0/0/0
+May 30 19:46:10 :: [   527150] return 0/0/1 async 0/0/0
+May 30 19:46:11 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 19:46:11 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 19:46:12 :: [   527200] return 0/0/0 async 0/0/0
+May 30 19:46:14 :: [   527250] return 0/0/0 async 0/0/0
+May 30 19:46:16 :: [   527300] return 0/0/0 async 0/0/0
+May 30 19:46:18 :: [   527350] return 0/0/0 async 0/0/0
+May 30 19:46:20 :: [   527400] return 0/0/1 async 0/0/0
+May 30 19:46:22 :: [   527450] return 0/0/0 async 0/0/0
+May 30 19:46:24 :: [   527500] return 0/0/0 async 0/0/0
+May 30 19:46:26 :: [   527550] return 0/0/0 async 0/0/0
+May 30 19:46:28 :: [   527600] return 0/0/0 async 0/0/0
+May 30 19:46:30 :: [   527650] return 0/0/1 async 0/0/0
+May 30 19:46:32 :: [   527700] return 0/0/0 async 0/0/0
+May 30 19:46:34 :: [   527750] return 0/0/0 async 0/0/0
+May 30 19:46:36 :: [   527800] return 0/0/0 async 0/0/0
+May 30 19:46:38 :: [   527850] return 0/0/0 async 0/0/0
+May 30 19:46:40 :: [   527900] return 0/0/1 async 0/0/0
+May 30 19:46:42 :: [   527950] return 0/0/0 async 0/0/0
+May 30 19:46:44 :: [   528000] return 0/0/0 async 0/0/0
+May 30 19:46:46 :: [   528050] return 0/0/0 async 0/0/0
+May 30 19:46:48 :: [   528100] return 0/0/0 async 0/0/0
+May 30 19:46:50 :: [   528150] return 0/0/1 async 0/0/0
+May 30 19:46:52 :: [   528200] return 0/0/0 async 0/0/0
+May 30 19:46:54 :: [   528250] return 0/0/0 async 0/0/0
+May 30 19:46:56 :: [   528300] return 0/0/0 async 0/0/0
+May 30 19:46:58 :: [   528350] return 0/0/0 async 0/0/0
+May 30 19:47:00 :: [   528400] return 0/0/1 async 0/0/0
+May 30 19:47:02 :: [   528450] return 0/0/0 async 0/0/0
+May 30 19:47:04 :: [   528500] return 0/0/0 async 0/0/0
+May 30 19:47:06 :: [   528550] return 0/0/0 async 0/0/0
+May 30 19:47:08 :: [   528600] return 0/0/0 async 0/0/0
+May 30 19:47:10 :: [   528650] return 0/0/1 async 0/0/0
+May 30 19:47:12 :: [   528700] return 0/0/0 async 0/0/0
+May 30 19:47:14 :: [   528750] return 0/0/0 async 0/0/0
+May 30 19:47:16 :: [   528800] return 0/0/0 async 0/0/0
+May 30 19:47:18 :: [   528850] return 0/0/0 async 0/0/0
+May 30 19:47:20 :: [   528900] return 0/0/1 async 0/0/0
+May 30 19:47:22 :: [   528950] return 0/0/0 async 0/0/0
+May 30 19:47:24 :: [   529000] return 0/0/0 async 0/0/0
+May 30 19:47:26 :: [   529050] return 0/0/0 async 0/0/0
+May 30 19:47:28 :: [   529100] return 0/0/0 async 0/0/0
+May 30 19:47:30 :: [   529150] return 0/0/1 async 0/0/0
+May 30 19:47:32 :: [   529200] return 0/0/0 async 0/0/0
+May 30 19:47:34 :: [   529250] return 0/0/0 async 0/0/0
+May 30 19:47:36 :: [   529300] return 0/0/0 async 0/0/0
+May 30 19:47:38 :: [   529350] return 0/0/0 async 0/0/0
+May 30 19:47:40 :: [   529400] return 0/0/1 async 0/0/0
+May 30 19:47:42 :: [   529450] return 0/0/0 async 0/0/0
+May 30 19:47:44 :: [   529500] return 0/0/0 async 0/0/0
+May 30 19:47:46 :: [   529550] return 0/0/0 async 0/0/0
+May 30 19:47:48 :: [   529600] return 0/0/0 async 0/0/0
+May 30 19:47:50 :: [   529650] return 0/0/1 async 0/0/0
+May 30 19:47:52 :: [   529700] return 0/0/0 async 0/0/0
+May 30 19:47:54 :: [   529750] return 0/0/0 async 0/0/0
+May 30 19:47:56 :: [   529800] return 0/0/0 async 0/0/0
+May 30 19:47:58 :: [   529850] return 0/0/0 async 0/0/0
+May 30 19:48:00 :: [   529900] return 0/0/1 async 0/0/0
+May 30 19:48:02 :: [   529950] return 0/0/0 async 0/0/0
+May 30 19:48:03 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 14 abyss 
+May 30 19:48:03 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(14)
+May 30 19:48:04 :: [   530000] return 0/0/0 async 0/0/0
+May 30 19:48:06 :: [   530050] return 0/0/0 async 0/0/0
+May 30 19:48:08 :: [   530100] return 0/0/0 async 0/0/0
+May 30 19:48:10 :: [   530150] return 0/0/1 async 0/0/0
+May 30 19:48:12 :: [   530200] return 0/0/0 async 0/0/0
+May 30 19:48:14 :: [   530250] return 0/0/0 async 0/0/0
+May 30 19:48:16 :: [   530300] return 0/0/0 async 0/0/0
+May 30 19:48:18 :: [   530350] return 0/0/0 async 0/0/0
+May 30 19:48:20 :: [   530400] return 0/0/1 async 0/0/0
+May 30 19:48:22 :: [   530450] return 0/0/0 async 0/0/0
+May 30 19:48:24 :: [   530500] return 0/0/0 async 0/0/0
+May 30 19:48:26 :: [   530550] return 0/0/0 async 0/0/0
+May 30 19:48:28 :: [   530600] return 0/0/0 async 0/0/0
+May 30 19:48:30 :: [   530650] return 0/0/1 async 0/0/0
+May 30 19:48:32 :: [   530700] return 0/0/0 async 0/0/0
+May 30 19:48:34 :: [   530750] return 0/0/0 async 0/0/0
+May 30 19:48:36 :: [   530800] return 0/0/0 async 0/0/0
+May 30 19:48:38 :: [   530850] return 0/0/0 async 0/0/0
+May 30 19:48:40 :: [   530900] return 0/0/1 async 0/0/0
+May 30 19:48:42 :: [   530950] return 0/0/0 async 0/0/0
+May 30 19:48:44 :: [   531000] return 0/0/0 async 0/0/0
+May 30 19:48:46 :: [   531050] return 0/0/0 async 0/0/0
+May 30 19:48:48 :: [   531100] return 0/0/0 async 0/0/0
+May 30 19:48:50 :: [   531150] return 0/0/1 async 0/0/0
+May 30 19:48:52 :: [   531200] return 0/0/0 async 0/0/0
+May 30 19:48:54 :: [   531250] return 0/0/0 async 0/0/0
+May 30 19:48:56 :: [   531300] return 0/0/0 async 0/0/0
+May 30 19:48:58 :: [   531350] return 0/0/0 async 0/0/0
+May 30 19:49:00 :: [   531400] return 0/0/1 async 0/0/0
+May 30 19:49:02 :: [   531450] return 0/0/0 async 0/0/0
+May 30 19:49:04 :: [   531500] return 0/0/0 async 0/0/0
+May 30 19:49:06 :: [   531550] return 0/0/0 async 0/0/0
+May 30 19:49:08 :: [   531600] return 0/0/0 async 0/0/0
+May 30 19:49:10 :: [   531650] return 0/0/1 async 0/0/0
+May 30 19:49:12 :: [   531700] return 0/0/0 async 0/0/0
+May 30 19:49:14 :: [   531750] return 0/0/0 async 0/0/0
+May 30 19:49:16 :: [   531800] return 0/0/0 async 0/0/0
+May 30 19:49:18 :: [   531850] return 0/0/0 async 0/0/0
+May 30 19:49:20 :: [   531900] return 0/0/1 async 0/0/0
+May 30 19:49:22 :: [   531950] return 0/0/0 async 0/0/0
+May 30 19:49:24 :: [   532000] return 0/0/0 async 0/0/0
+May 30 19:49:26 :: [   532050] return 0/0/0 async 0/0/0
+May 30 19:49:28 :: [   532100] return 0/0/0 async 0/0/0
+May 30 19:49:30 :: [   532150] return 0/0/1 async 0/0/0
+May 30 19:49:32 :: [   532200] return 0/0/0 async 0/0/0
+May 30 19:49:34 :: [   532250] return 0/0/0 async 0/0/0
+May 30 19:49:36 :: [   532300] return 0/0/0 async 0/0/0
+May 30 19:49:38 :: [   532350] return 0/0/0 async 0/0/0
+May 30 19:49:40 :: [   532400] return 0/0/1 async 0/0/0
+May 30 19:49:42 :: [   532450] return 0/0/0 async 0/0/0
+May 30 19:49:44 :: [   532500] return 0/0/0 async 0/0/0
+May 30 19:49:46 :: [   532550] return 0/0/0 async 0/0/0
+May 30 19:49:48 :: [   532600] return 0/0/0 async 0/0/0
+May 30 19:49:50 :: [   532650] return 0/0/1 async 0/0/0
+May 30 19:49:52 :: [   532700] return 0/0/0 async 0/0/0
+May 30 19:49:54 :: [   532750] return 0/0/0 async 0/0/0
+May 30 19:49:56 :: [   532800] return 0/0/0 async 0/0/0
+May 30 19:49:58 :: [   532850] return 0/0/0 async 0/0/0
+May 30 19:50:00 :: [   532900] return 0/0/1 async 0/0/0
+May 30 19:50:02 :: [   532950] return 0/0/0 async 0/0/0
+May 30 19:50:04 :: [   533000] return 0/0/0 async 0/0/0
+May 30 19:50:06 :: [   533050] return 0/0/0 async 0/0/0
+May 30 19:50:08 :: [   533100] return 0/0/0 async 0/0/0
+May 30 19:50:10 :: [   533150] return 0/0/1 async 0/0/0
+May 30 19:50:12 :: [   533200] return 0/0/0 async 0/0/0
+May 30 19:50:14 :: [   533250] return 0/0/0 async 0/0/0
+May 30 19:50:16 :: [   533300] return 0/0/0 async 0/0/0
+May 30 19:50:18 :: [   533350] return 0/0/0 async 0/0/0
+May 30 19:50:20 :: [   533400] return 0/0/1 async 0/0/0
+May 30 19:50:22 :: [   533450] return 0/0/0 async 0/0/0
+May 30 19:50:24 :: [   533500] return 0/0/0 async 0/0/0
+May 30 19:50:26 :: [   533550] return 0/0/0 async 0/0/0
+May 30 19:50:28 :: [   533600] return 0/0/0 async 0/0/0
+May 30 19:50:30 :: [   533650] return 0/0/1 async 0/0/0
+May 30 19:50:32 :: [   533700] return 0/0/0 async 0/0/0
+May 30 19:50:34 :: [   533750] return 0/0/0 async 0/0/0
+May 30 19:50:36 :: [   533800] return 0/0/0 async 0/0/0
+May 30 19:50:38 :: [   533850] return 0/0/0 async 0/0/0
+May 30 19:50:40 :: [   533900] return 0/0/1 async 0/0/0
+May 30 19:50:42 :: [   533950] return 0/0/0 async 0/0/0
+May 30 19:50:44 :: [   534000] return 0/0/0 async 0/0/0
+May 30 19:50:46 :: [   534050] return 0/0/0 async 0/0/0
+May 30 19:50:48 :: [   534100] return 0/0/0 async 0/0/0
+May 30 19:50:50 :: [   534150] return 0/0/1 async 0/0/0
+May 30 19:50:52 :: [   534200] return 0/0/0 async 0/0/0
+May 30 19:50:54 :: [   534250] return 0/0/0 async 0/0/0
+May 30 19:50:56 :: [   534300] return 0/0/0 async 0/0/0
+May 30 19:50:58 :: [   534350] return 0/0/0 async 0/0/0
+May 30 19:51:00 :: [   534400] return 0/0/1 async 0/0/0
+May 30 19:51:02 :: [   534450] return 0/0/0 async 0/0/0
+May 30 19:51:04 :: [   534500] return 0/0/0 async 0/0/0
+May 30 19:51:06 :: [   534550] return 0/0/0 async 0/0/0
+May 30 19:51:08 :: [   534600] return 0/0/0 async 0/0/0
+May 30 19:51:10 :: [   534650] return 0/0/1 async 0/0/0
+May 30 19:51:12 :: [   534700] return 0/0/0 async 0/0/0
+May 30 19:51:12 :: UPDATE : UpdatePlayerCache() ==> FlushPlayerCache 91 hrss 
+May 30 19:51:12 :: UPDATE_ITEMCACHESET : UpdateItemCachsSet pid(91)
+May 30 19:51:14 :: [   534750] return 0/0/0 async 0/0/0
+May 30 19:51:16 :: [   534800] return 0/0/0 async 0/0/0
+May 30 19:51:18 :: [   534850] return 0/0/0 async 0/0/0
+May 30 19:51:20 :: [   534900] return 0/0/1 async 0/0/0
+May 30 19:51:22 :: [   534950] return 0/0/0 async 0/0/0
+May 30 19:51:24 :: [   535000] return 0/0/0 async 0/0/0
+May 30 19:51:26 :: [   535050] return 0/0/0 async 0/0/0
+May 30 19:51:28 :: [   535100] return 0/0/0 async 0/0/0
+May 30 19:51:30 :: [   535150] return 0/0/1 async 0/0/0
+May 30 19:51:32 :: [   535200] return 0/0/0 async 0/0/0
+May 30 19:51:34 :: [   535250] return 0/0/0 async 0/0/0
+May 30 19:51:36 :: [   535300] return 0/0/0 async 0/0/0
+May 30 19:51:38 :: [   535350] return 0/0/0 async 0/0/0
+May 30 19:51:40 :: [   535400] return 0/0/1 async 0/0/0
+May 30 19:51:42 :: [   535450] return 0/0/0 async 0/0/0
+May 30 19:51:44 :: [   535500] return 0/0/0 async 0/0/0
+May 30 19:51:46 :: [   535550] return 0/0/0 async 0/0/0
+May 30 19:51:48 :: [   535600] return 0/0/0 async 0/0/0
+May 30 19:51:50 :: [   535650] return 0/0/1 async 0/0/0
+May 30 19:51:52 :: [   535700] return 0/0/0 async 0/0/0
+May 30 19:51:54 :: [   535750] return 0/0/0 async 0/0/0
+May 30 19:51:56 :: [   535800] return 0/0/0 async 0/0/0
+May 30 19:51:58 :: [   535850] return 0/0/0 async 0/0/0
+May 30 19:52:00 :: [   535900] return 0/0/1 async 0/0/0
+May 30 19:52:02 :: [   535950] return 0/0/0 async 0/0/0
+May 30 19:52:04 :: [   536000] return 0/0/0 async 0/0/0
+May 30 19:52:06 :: [   536050] return 0/0/0 async 0/0/0
+May 30 19:52:08 :: [   536100] return 0/0/0 async 0/0/0
+May 30 19:52:10 :: [   536150] return 0/0/1 async 0/0/0
+May 30 19:52:12 :: [   536200] return 0/0/0 async 0/0/0
+May 30 19:52:14 :: [   536250] return 0/0/0 async 0/0/0
+May 30 19:52:16 :: [   536300] return 0/0/0 async 0/0/0
+May 30 19:52:18 :: [   536350] return 0/0/0 async 0/0/0
+May 30 19:52:20 :: [   536400] return 0/0/1 async 0/0/0
+May 30 19:52:22 :: [   536450] return 0/0/0 async 0/0/0
+May 30 19:52:24 :: [   536500] return 0/0/0 async 0/0/0
+May 30 19:52:26 :: [   536550] return 0/0/0 async 0/0/0
+May 30 19:52:28 :: [   536600] return 0/0/0 async 0/0/0
+May 30 19:52:30 :: [   536650] return 0/0/1 async 0/0/0
+May 30 19:52:32 :: [   536700] return 0/0/0 async 0/0/0
+May 30 19:52:34 :: [   536750] return 0/0/0 async 0/0/0
+May 30 19:52:36 :: [   536800] return 0/0/0 async 0/0/0
+May 30 19:52:38 :: [   536850] return 0/0/0 async 0/0/0
+May 30 19:52:40 :: [   536900] return 0/0/1 async 0/0/0
+May 30 19:52:42 :: [   536950] return 0/0/0 async 0/0/0
+May 30 19:52:44 :: [   537000] return 0/0/0 async 0/0/0
+May 30 19:52:46 :: [   537050] return 0/0/0 async 0/0/0
+May 30 19:52:48 :: [   537100] return 0/0/0 async 0/0/0
+May 30 19:52:50 :: [   537150] return 0/0/1 async 0/0/0
+May 30 19:52:52 :: [   537200] return 0/0/0 async 0/0/0
+May 30 19:52:54 :: [   537250] return 0/0/0 async 0/0/0
+May 30 19:52:56 :: [   537300] return 0/0/0 async 0/0/0
+May 30 19:52:58 :: [   537350] return 0/0/0 async 0/0/0
+May 30 19:53:00 :: [   537400] return 0/0/1 async 0/0/0
+May 30 19:53:02 :: [   537450] return 0/0/0 async 0/0/0
+May 30 19:53:03 :: FLUSH_ITEMCACHESET : Deleted pid(91)
+May 30 19:53:03 :: FLUSH_ITEMCACHESET : No ItemCacheSet pid(90)
+May 30 19:53:03 :: FLUSH_ITEMCACHESET : No ItemCacheSet pid(39)
+May 30 19:53:03 :: FLUSH_ITEMCACHESET : Deleted pid(14)
+May 30 19:53:04 :: [   537500] return 0/0/0 async 0/0/0
+May 30 19:53:06 :: [   537550] return 0/0/0 async 0/0/0
+May 30 19:53:08 :: [   537600] return 0/0/0 async 0/0/0
+May 30 19:53:10 :: [   537650] return 0/0/1 async 0/0/0
+May 30 19:53:12 :: [   537700] return 0/0/0 async 0/0/0
+May 30 19:53:14 :: [   537750] return 0/0/0 async 0/0/0
+May 30 19:53:16 :: [   537800] return 0/0/0 async 0/0/0
+May 30 19:53:18 :: [   537850] return 0/0/0 async 0/0/0
+May 30 19:53:20 :: [   537900] return 0/0/1 async 0/0/0
+May 30 19:53:22 :: [   537950] return 0/0/0 async 0/0/0
+May 30 19:53:24 :: [   538000] return 0/0/0 async 0/0/0
+May 30 19:53:26 :: [   538050] return 0/0/0 async 0/0/0
+May 30 19:53:28 :: [   538100] return 0/0/0 async 0/0/0
+May 30 19:53:30 :: [   538150] return 0/0/1 async 0/0/0
+May 30 19:53:32 :: [   538200] return 0/0/0 async 0/0/0
+May 30 19:53:34 :: [   538250] return 0/0/0 async 0/0/0
+May 30 19:53:36 :: [   538300] return 0/0/0 async 0/0/0
+May 30 19:53:38 :: [   538350] return 0/0/0 async 0/0/0
+May 30 19:53:40 :: [   538400] return 0/0/1 async 0/0/0
+May 30 19:53:42 :: [   538450] return 0/0/0 async 0/0/0
+May 30 19:53:44 :: [   538500] return 0/0/0 async 0/0/0
+May 30 19:53:46 :: [   538550] return 0/0/0 async 0/0/0
+May 30 19:53:48 :: [   538600] return 0/0/0 async 0/0/0
+May 30 19:53:50 :: [   538650] return 0/0/1 async 0/0/0
+May 30 19:53:52 :: [   538700] return 0/0/0 async 0/0/0
+May 30 19:53:54 :: [   538750] return 0/0/0 async 0/0/0
+May 30 19:53:56 :: [   538800] return 0/0/0 async 0/0/0
+May 30 19:53:58 :: [   538850] return 0/0/0 async 0/0/0
+May 30 19:54:00 :: [   538900] return 0/0/1 async 0/0/0
+May 30 19:54:02 :: [   538950] return 0/0/0 async 0/0/0
+May 30 19:54:04 :: [   539000] return 0/0/0 async 0/0/0
+May 30 19:54:06 :: [   539050] return 0/0/0 async 0/0/0
+May 30 19:54:08 :: [   539100] return 0/0/0 async 0/0/0
+May 30 19:54:10 :: [   539150] return 0/0/1 async 0/0/0
+May 30 19:54:12 :: [   539200] return 0/0/0 async 0/0/0
+May 30 19:54:14 :: [   539250] return 0/0/0 async 0/0/0
+May 30 19:54:16 :: [   539300] return 0/0/0 async 0/0/0
+May 30 19:54:18 :: [   539350] return 0/0/0 async 0/0/0
+May 30 19:54:20 :: [   539400] return 0/0/1 async 0/0/0
+May 30 19:54:22 :: [   539450] return 0/0/0 async 0/0/0
+May 30 19:54:24 :: [   539500] return 0/0/0 async 0/0/0
+May 30 19:54:26 :: [   539550] return 0/0/0 async 0/0/0
+May 30 19:54:28 :: [   539600] return 0/0/0 async 0/0/0
+May 30 19:54:30 :: [   539650] return 0/0/1 async 0/0/0
+May 30 19:54:32 :: [   539700] return 0/0/0 async 0/0/0
+May 30 19:54:34 :: [   539750] return 0/0/0 async 0/0/0
+May 30 19:54:36 :: [   539800] return 0/0/0 async 0/0/0
+May 30 19:54:38 :: [   539850] return 0/0/0 async 0/0/0
+May 30 19:54:40 :: [   539900] return 0/0/1 async 0/0/0
+May 30 19:54:42 :: [   539950] return 0/0/0 async 0/0/0
+May 30 19:54:44 :: [   540000] return 0/0/0 async 0/0/0
+May 30 19:54:46 :: [   540050] return 0/0/0 async 0/0/0
+May 30 19:54:48 :: [   540100] return 0/0/0 async 0/0/0
+May 30 19:54:50 :: [   540150] return 0/0/1 async 0/0/0
+May 30 19:54:52 :: [   540200] return 0/0/0 async 0/0/0
+May 30 19:54:54 :: [   540250] return 0/0/0 async 0/0/0
+May 30 19:54:56 :: [   540300] return 0/0/0 async 0/0/0
+May 30 19:54:58 :: [   540350] return 0/0/0 async 0/0/0
+May 30 19:55:00 :: [   540400] return 0/0/1 async 0/0/0
+May 30 19:55:02 :: [   540450] return 0/0/0 async 0/0/0
+May 30 19:55:04 :: [   540500] return 0/0/0 async 0/0/0
+May 30 19:55:06 :: [   540550] return 0/0/0 async 0/0/0
+May 30 19:55:08 :: [   540600] return 0/0/0 async 0/0/0
+May 30 19:55:10 :: [   540650] return 0/0/1 async 0/0/0
+May 30 19:55:12 :: [   540700] return 0/0/0 async 0/0/0
+May 30 19:55:14 :: [   540750] return 0/0/0 async 0/0/0
+May 30 19:55:16 :: [   540800] return 0/0/0 async 0/0/0
+May 30 19:55:18 :: [   540850] return 0/0/0 async 0/0/0
+May 30 19:55:20 :: [   540900] return 0/0/1 async 0/0/0
+May 30 19:55:22 :: [   540950] return 0/0/0 async 0/0/0
+May 30 19:55:24 :: [   541000] return 0/0/0 async 0/0/0
+May 30 19:55:26 :: [   541050] return 0/0/0 async 0/0/0
+May 30 19:55:28 :: [   541100] return 0/0/0 async 0/0/0
+May 30 19:55:30 :: [   541150] return 0/0/1 async 0/0/0
+May 30 19:55:32 :: [   541200] return 0/0/0 async 0/0/0
+May 30 19:55:34 :: [   541250] return 0/0/0 async 0/0/0
+May 30 19:55:36 :: [   541300] return 0/0/0 async 0/0/0
+May 30 19:55:38 :: [   541350] return 0/0/0 async 0/0/0
+May 30 19:55:40 :: [   541400] return 0/0/1 async 0/0/0
+May 30 19:55:42 :: [   541450] return 0/0/0 async 0/0/0
+May 30 19:55:44 :: [   541500] return 0/0/0 async 0/0/0
+May 30 19:55:46 :: [   541550] return 0/0/0 async 0/0/0
+May 30 19:55:48 :: [   541600] return 0/0/0 async 0/0/0
+May 30 19:55:50 :: [   541650] return 0/0/1 async 0/0/0
+May 30 19:55:52 :: [   541700] return 0/0/0 async 0/0/0
+May 30 19:55:54 :: [   541750] return 0/0/0 async 0/0/0
+May 30 19:55:56 :: [   541800] return 0/0/0 async 0/0/0
+May 30 19:55:58 :: [   541850] return 0/0/0 async 0/0/0
+May 30 19:56:00 :: [   541900] return 0/0/1 async 0/0/0
+May 30 19:56:02 :: [   541950] return 0/0/0 async 0/0/0
+May 30 19:56:04 :: [   542000] return 0/0/0 async 0/0/0
+May 30 19:56:06 :: [   542050] return 0/0/0 async 0/0/0
+May 30 19:56:08 :: [   542100] return 0/0/0 async 0/0/0
+May 30 19:56:10 :: [   542150] return 0/0/1 async 0/0/0
+May 30 19:56:12 :: [   542200] return 0/0/0 async 0/0/0
+May 30 19:56:14 :: [   542250] return 0/0/0 async 0/0/0
+May 30 19:56:16 :: [   542300] return 0/0/0 async 0/0/0
+May 30 19:56:18 :: [   542350] return 0/0/0 async 0/0/0
+May 30 19:56:20 :: [   542400] return 0/0/1 async 0/0/0
+May 30 19:56:22 :: [   542450] return 0/0/0 async 0/0/0
+May 30 19:56:24 :: [   542500] return 0/0/0 async 0/0/0
+May 30 19:56:26 :: [   542550] return 0/0/0 async 0/0/0
+May 30 19:56:28 :: [   542600] return 0/0/0 async 0/0/0
+May 30 19:56:30 :: [   542650] return 0/0/1 async 0/0/0
+May 30 19:56:32 :: [   542700] return 0/0/0 async 0/0/0
+May 30 19:56:34 :: [   542750] return 0/0/0 async 0/0/0
+May 30 19:56:36 :: [   542800] return 0/0/0 async 0/0/0
+May 30 19:56:38 :: [   542850] return 0/0/0 async 0/0/0
+May 30 19:56:40 :: [   542900] return 0/0/1 async 0/0/0
+May 30 19:56:42 :: [   542950] return 0/0/0 async 0/0/0
+May 30 19:56:44 :: [   543000] return 0/0/0 async 0/0/0
+May 30 19:56:46 :: [   543050] return 0/0/0 async 0/0/0
+May 30 19:56:48 :: [   543100] return 0/0/0 async 0/0/0
+May 30 19:56:50 :: [   543150] return 0/0/1 async 0/0/0
+May 30 19:56:52 :: [   543200] return 0/0/0 async 0/0/0
+May 30 19:56:54 :: [   543250] return 0/0/0 async 0/0/0
+May 30 19:56:56 :: [   543300] return 0/0/0 async 0/0/0
+May 30 19:56:58 :: [   543350] return 0/0/0 async 0/0/0
+May 30 19:57:00 :: [   543400] return 0/0/1 async 0/0/0
+May 30 19:57:02 :: [   543450] return 0/0/0 async 0/0/0
+May 30 19:57:04 :: [   543500] return 0/0/0 async 0/0/0
+May 30 19:57:06 :: [   543550] return 0/0/0 async 0/0/0
+May 30 19:57:08 :: [   543600] return 0/0/0 async 0/0/0
+May 30 19:57:10 :: [   543650] return 0/0/1 async 0/0/0
+May 30 19:57:12 :: [   543700] return 0/0/0 async 0/0/0
+May 30 19:57:14 :: [   543750] return 0/0/0 async 0/0/0
+May 30 19:57:16 :: [   543800] return 0/0/0 async 0/0/0
+May 30 19:57:18 :: [   543850] return 0/0/0 async 0/0/0
+May 30 19:57:20 :: [   543900] return 0/0/1 async 0/0/0
+May 30 19:57:22 :: [   543950] return 0/0/0 async 0/0/0
+May 30 19:57:24 :: [   544000] return 0/0/0 async 0/0/0
+May 30 19:57:26 :: [   544050] return 0/0/0 async 0/0/0
+May 30 19:57:28 :: [   544100] return 0/0/0 async 0/0/0
+May 30 19:57:30 :: [   544150] return 0/0/1 async 0/0/0
+May 30 19:57:32 :: [   544200] return 0/0/0 async 0/0/0
+May 30 19:57:34 :: [   544250] return 0/0/0 async 0/0/0
+May 30 19:57:36 :: [   544300] return 0/0/0 async 0/0/0
+May 30 19:57:38 :: [   544350] return 0/0/0 async 0/0/0
+May 30 19:57:40 :: [   544400] return 0/0/1 async 0/0/0
+May 30 19:57:42 :: [   544450] return 0/0/0 async 0/0/0
+May 30 19:57:44 :: [   544500] return 0/0/0 async 0/0/0
+May 30 19:57:46 :: [   544550] return 0/0/0 async 0/0/0
+May 30 19:57:48 :: [   544600] return 0/0/0 async 0/0/0
+May 30 19:57:50 :: [   544650] return 0/0/1 async 0/0/0
+May 30 19:57:52 :: [   544700] return 0/0/0 async 0/0/0
+May 30 19:57:54 :: [   544750] return 0/0/0 async 0/0/0
+May 30 19:57:56 :: [   544800] return 0/0/0 async 0/0/0
+May 30 19:57:58 :: [   544850] return 0/0/0 async 0/0/0
+May 30 19:58:00 :: [   544900] return 0/0/1 async 0/0/0
+May 30 19:58:02 :: [   544950] return 0/0/0 async 0/0/0
+May 30 19:58:04 :: [   545000] return 0/0/0 async 0/0/0
+May 30 19:58:06 :: [   545050] return 0/0/0 async 0/0/0
+May 30 19:58:08 :: [   545100] return 0/0/0 async 0/0/0
+May 30 19:58:10 :: [   545150] return 0/0/1 async 0/0/0
+May 30 19:58:12 :: [   545200] return 0/0/0 async 0/0/0
+May 30 19:58:14 :: [   545250] return 0/0/0 async 0/0/0
+May 30 19:58:16 :: [   545300] return 0/0/0 async 0/0/0
+May 30 19:58:18 :: [   545350] return 0/0/0 async 0/0/0
+May 30 19:58:20 :: [   545400] return 0/0/1 async 0/0/0
+May 30 19:58:22 :: [   545450] return 0/0/0 async 0/0/0
+May 30 19:58:24 :: [   545500] return 0/0/0 async 0/0/0
+May 30 19:58:26 :: [   545550] return 0/0/0 async 0/0/0
+May 30 19:58:28 :: [   545600] return 0/0/0 async 0/0/0
+May 30 19:58:30 :: [   545650] return 0/0/1 async 0/0/0
+May 30 19:58:32 :: [   545700] return 0/0/0 async 0/0/0
+May 30 19:58:34 :: [   545750] return 0/0/0 async 0/0/0
+May 30 19:58:36 :: [   545800] return 0/0/0 async 0/0/0
+May 30 19:58:38 :: [   545850] return 0/0/0 async 0/0/0
+May 30 19:58:40 :: [   545900] return 0/0/1 async 0/0/0
+May 30 19:58:42 :: [   545950] return 0/0/0 async 0/0/0
+May 30 19:58:44 :: [   546000] return 0/0/0 async 0/0/0
+May 30 19:58:46 :: [   546050] return 0/0/0 async 0/0/0
+May 30 19:58:48 :: [   546100] return 0/0/0 async 0/0/0
+May 30 19:58:50 :: [   546150] return 0/0/1 async 0/0/0
+May 30 19:58:52 :: [   546200] return 0/0/0 async 0/0/0
+May 30 19:58:54 :: [   546250] return 0/0/0 async 0/0/0
+May 30 19:58:56 :: [   546300] return 0/0/0 async 0/0/0
+May 30 19:58:58 :: [   546350] return 0/0/0 async 0/0/0
+May 30 19:59:00 :: [   546400] return 0/0/1 async 0/0/0
+May 30 19:59:02 :: [   546450] return 0/0/0 async 0/0/0
+May 30 19:59:04 :: [   546500] return 0/0/0 async 0/0/0
+May 30 19:59:06 :: [   546550] return 0/0/0 async 0/0/0
+May 30 19:59:08 :: [   546600] return 0/0/0 async 0/0/0
+May 30 19:59:10 :: [   546650] return 0/0/1 async 0/0/0
+May 30 19:59:12 :: [   546700] return 0/0/0 async 0/0/0
+May 30 19:59:14 :: [   546750] return 0/0/0 async 0/0/0
+May 30 19:59:16 :: [   546800] return 0/0/0 async 0/0/0
+May 30 19:59:18 :: [   546850] return 0/0/0 async 0/0/0
+May 30 19:59:20 :: [   546900] return 0/0/1 async 0/0/0
+May 30 19:59:22 :: [   546950] return 0/0/0 async 0/0/0
+May 30 19:59:24 :: [   547000] return 0/0/0 async 0/0/0
+May 30 19:59:26 :: [   547050] return 0/0/0 async 0/0/0
+May 30 19:59:28 :: [   547100] return 0/0/0 async 0/0/0
+May 30 19:59:30 :: [   547150] return 0/0/1 async 0/0/0
+May 30 19:59:32 :: [   547200] return 0/0/0 async 0/0/0
+May 30 19:59:34 :: [   547250] return 0/0/0 async 0/0/0
+May 30 19:59:36 :: [   547300] return 0/0/0 async 0/0/0
+May 30 19:59:38 :: [   547350] return 0/0/0 async 0/0/0
+May 30 19:59:40 :: [   547400] return 0/0/1 async 0/0/0
+May 30 19:59:42 :: [   547450] return 0/0/0 async 0/0/0
+May 30 19:59:44 :: [   547500] return 0/0/0 async 0/0/0
+May 30 19:59:46 :: [   547550] return 0/0/0 async 0/0/0
+May 30 19:59:48 :: [   547600] return 0/0/0 async 0/0/0
+May 30 19:59:50 :: [   547650] return 0/0/1 async 0/0/0
+May 30 19:59:52 :: [   547700] return 0/0/0 async 0/0/0
+May 30 19:59:54 :: [   547750] return 0/0/0 async 0/0/0
+May 30 19:59:56 :: [   547800] return 0/0/0 async 0/0/0
+May 30 19:59:58 :: [   547850] return 0/0/0 async 0/0/0
+May 30 20:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 19)

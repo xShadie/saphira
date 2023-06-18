@@ -1,0 +1,1052 @@
+May 30 16:08:52 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 3236344521 output input_len 0, ptr 0x2b571700
+May 30 16:08:52 :: P2P: Logout abyss
+May 30 16:08:52 :: Handshake: lower than zero -19
+May 30 16:08:52 :: Handshake: lower than zero -20
+May 30 16:08:53 :: Handshake: client_time 0 server_time 8045147
+May 30 16:08:53 :: LOGIN_BY_KEY: abyss key 1208229170
+May 30 16:08:53 :: LoginSuccess
+May 30 16:08:53 :: 	player(abyss).job(0)
+May 30 16:08:53 :: 	player().job(0)
+May 30 16:08:53 :: 	player().job(0)
+May 30 16:08:53 :: 	player().job(0)
+May 30 16:08:53 :: 	player().job(0)
+May 30 16:08:53 :: success to 51.254.23.214:30245
+May 30 16:08:53 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:08:53 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:08:53 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:08:53 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:08:53 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:08:53 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:08:53 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:08:53 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:08:53 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:08:53 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:08:53 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:08:53 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:08:53 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:08:53 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:08:53 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:08:53 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:08:53 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:08:53 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:08:53 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:08:53 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:08:53 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:08:53 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:08:53 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:08:53 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:08:53 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:08:53 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:08:53 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:08:53 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:08:53 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:08:53 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:08:53 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:08:53 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:08:53 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:08:53 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:08:53 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:08:53 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:08:53 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:08:53 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:08:53 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:08:53 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:08:53 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:08:53 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:08:53 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:08:53 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:08:53 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:08:53 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:08:53 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:08:53 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:08:53 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:08:53 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:08:53 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:08:53 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:08:53 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:08:53 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:08:53 :: success to 51.254.23.214:30247
+May 30 16:08:53 :: InputDB::login_success: abyss
+May 30 16:08:54 :: player_select: login: abyss index: 0
+May 30 16:08:54 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 16:08:54 :: PK_MODE: abyss 3
+May 30 16:08:54 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 2 PTR: 0x58b02340
+May 30 16:08:54 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(544100, 1440100)
+May 30 16:08:54 :: InputDB: player_load abyss 544100x1440100x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 16:08:54 :: ITEM_LOAD: COUNT abyss 338
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: RegisterRaceNumMap Royal Tiger (gold) 20122
+May 30 16:08:54 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:08:54 :: QUEST_LOAD: count 42
+May 30 16:08:54 ::             biologist.delivered 1
+May 30 16:08:54 ::             biologist.time 1685442993
+May 30 16:08:54 ::             comandos_tm.iniciar 1
+May 30 16:08:54 ::             dragonlair_zone.ch 1
+May 30 16:08:54 ::             dragonlair_zone.cooldown 1659211304
+May 30 16:08:54 ::             dragonlair_zone.disconnect 1659206253
+May 30 16:08:54 ::             dragonlair_zone.enter_time 1659205904
+May 30 16:08:54 ::             dragonlair_zone.idx 2080001
+May 30 16:08:54 ::             enchanted_forest.cooldown 1685413567
+May 30 16:08:54 ::             enchanted_forest.disconnect 1685408497
+May 30 16:08:54 ::             enchanted_forest.idx 2100000
+May 30 16:08:54 ::             give_basic_weapon.__status 668443392
+May 30 16:08:54 ::             guild_manage.new_disband_time 1685407521
+May 30 16:08:54 ::             horse_name.valid_till 1784830353
+May 30 16:08:54 ::             hydra_zone.ch 1
+May 30 16:08:54 ::             hydra_zone.cooldown 1685414368
+May 30 16:08:54 ::             hydra_zone.disconnect 1685409294
+May 30 16:08:54 ::             hydra_zone.enter_time 1685408968
+May 30 16:08:54 ::             hydra_zone.idx 3530000
+May 30 16:08:54 ::             item_attr_mission.attr_type_1 5
+May 30 16:08:54 ::             item_attr_mission.attr_type_2 21
+May 30 16:08:54 ::             item_attr_mission.attr_type_3 22
+May 30 16:08:54 ::             item_attr_mission.attr_type_4 9
+May 30 16:08:54 ::             item_attr_mission.attr_value_1 12
+May 30 16:08:54 ::             item_attr_mission.attr_value_2 20
+May 30 16:08:54 ::             item_attr_mission.attr_value_3 20
+May 30 16:08:54 ::             item_attr_mission.attr_value_4 20
+May 30 16:08:54 ::             item_attr_mission.id_ask_elected 4
+May 30 16:08:54 ::             item_attr_mission.saved_day 8
+May 30 16:08:54 ::             main_quest_lv1.__status -1147521841
+May 30 16:08:54 ::             pyramide_zone.ch 1
+May 30 16:08:54 ::             pyramide_zone.cooldown 1685411947
+May 30 16:08:54 ::             pyramide_zone.disconnect 1685408926
+May 30 16:08:54 ::             pyramide_zone.enter_time 1685408347
+May 30 16:08:54 ::             pyramide_zone.idx 3570000
+May 30 16:08:54 ::             rune.__status 777843330
+May 30 16:08:54 ::             rune_zone.ch 1
+May 30 16:08:54 ::             rune_zone.cooldown 1685416006
+May 30 16:08:54 ::             rune_zone.disconnect 1685409238
+May 30 16:08:54 ::             rune_zone.enter_time 1685408806
+May 30 16:08:54 ::             rune_zone.idx 2180000
+May 30 16:08:54 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 16:08:54 :: SAVE: abyss 544100x1440100
+May 30 16:08:58 :: VERSION: abyss 1215955205 Demonz2.exe
+May 30 16:08:59 :: SHOW: abyss 544100x1440100x0
+May 30 16:08:59 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 16:08:59 :: ENTERGAME: abyss 544100x1440100x0 88.24.209.246 map_index 219
+May 30 16:08:59 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 16:08:59 :: HORSE STAMINA REGEN EVENT CREATE 0x58b4eb60
+May 30 16:08:59 :: SendLandList map 219 count 0 elem_size: 0
+May 30 16:08:59 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 0 16879861min
+May 30 16:08:59 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 1 16879861min
+May 30 16:08:59 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 2 16879861min
+May 30 16:08:59 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 3 16879861min
+May 30 16:08:59 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 4 16879861min
+May 30 16:08:59 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 5 16879861min
+May 30 16:08:59 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16879861
+May 30 16:08:59 :: PREMIUM: abyss type 6 16879861min
+May 30 16:08:59 :: VERSION CHECK 1215955205 1215955205
+May 30 16:08:59 :: reallocating buffer to 4096, current 1024
+May 30 16:08:59 :: HORSENAME: update 14 [TM]Ragnar Horse
+May 30 16:08:59 :: QUEST_LOAD: Login pc 14 by event
+May 30 16:08:59 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 16:09:00 :: RegisterRaceNumMap Bonsai 34066
+May 30 16:09:00 :: AddAffect abyss type 587 apply 0 0 flag 50057413 duration 1892160000
+May 30 16:09:03 :: SECTREE DIFFER: abyss 84x225 was 85x225 dist 1.0m
+May 30 16:09:06 :: SECTREE DIFFER: abyss 84x224 was 84x225 dist 1.0m
+May 30 16:09:07 :: COMMAND: abyss: ride
+May 30 16:09:07 :: AddAffect abyss type 533 apply 53 20 flag 0 duration 86400
+May 30 16:09:07 :: AddAffect abyss type 533 apply 159 20 flag 0 duration 86400
+May 30 16:09:07 :: AddAffect abyss type 533 apply 162 8 flag 0 duration 86400
+May 30 16:09:07 :: AddAffect abyss type 533 apply 19 50 flag 0 duration 86400
+May 30 16:09:07 :: AddAffect abyss type 221 apply 109 20122 flag 0 duration 86400
+May 30 16:09:10 ::       in same sectree
+May 30 16:09:11 :: SECTREE DIFFER: abyss 84x223 was 84x224 dist 1.0m
+May 30 16:09:12 :: SECTREE DIFFER: abyss 83x223 was 84x223 dist 1.0m
+May 30 16:09:16 :: OnClick Lee Chung[vnum: 20369 vid: 14882] by abyss
+May 30 16:09:16 :: CQuestManager::Click(pid=14, target_npc_name=Lee Chung) - NOT EXIST NPC RACE VNUM[20369]
+May 30 16:09:16 :: reallocating buffer to 16384, current 1024
+May 30 16:09:16 :: SHOP: START: abyss
+May 30 16:09:21 :: SHOP: END: abyss
+May 30 16:09:24 :: SECTREE DIFFER: abyss 83x222 was 83x223 dist 1.0m
+May 30 16:09:31 :: OnClick Demon Tower Guard[vnum: 20348 vid: 14877] by abyss
+May 30 16:09:32 :: QUEST ScriptAnswer pid 14 answer 0
+May 30 16:09:34 :: QUEST ScriptAnswer pid 14 answer 0
+May 30 16:09:36 :: QUEST ScriptAnswer pid 14 answer 0
+May 30 16:09:37 :: QUEST ScriptAnswer pid 14 answer 254
+May 30 16:09:37 :: PRIVATE_MAP: 660000 created (original 66)
+May 30 16:09:37 :: WarpSet abyss 377400 2704000 current map 219 target map 660000
+May 30 16:09:37 :: QUEST eventflag ww_66_1 1685455782 prev_value 1661143394
+May 30 16:09:38 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 16:09:38 :: SAVE: abyss 377400x2704000
+May 30 16:09:38 :: QUEST clear timer 0
+May 30 16:09:38 :: SYSTEM: closing socket. DESC #18
+May 30 16:09:38 :: SYSTEM: new connection from [88.24.209.246] fd: 18 handshake 3291582111 output input_len 0, ptr 0x2b571700
+May 30 16:09:38 :: Handshake: lower than zero -20
+May 30 16:09:38 :: Handshake: client_time 0 server_time 8090516
+May 30 16:09:38 :: LOGIN_BY_KEY: abyss key 1208229170
+May 30 16:09:39 :: LoginSuccess
+May 30 16:09:39 :: 	player(abyss).job(0)
+May 30 16:09:39 :: 	player().job(0)
+May 30 16:09:39 :: 	player().job(0)
+May 30 16:09:39 :: 	player().job(0)
+May 30 16:09:39 :: 	player().job(0)
+May 30 16:09:39 :: success to 51.254.23.214:30245
+May 30 16:09:39 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:09:39 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:09:39 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:09:39 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:09:39 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:09:39 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:09:39 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:09:39 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:09:39 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:09:39 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:09:39 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:09:39 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:09:39 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:09:39 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:09:39 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:09:39 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:09:39 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:09:39 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:09:39 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:09:39 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:09:39 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:09:39 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:09:39 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:09:39 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:09:39 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:09:39 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:09:39 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:09:39 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:09:39 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:09:39 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:09:39 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:09:39 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:09:39 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:09:39 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:09:39 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:09:39 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:09:39 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:09:39 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:09:39 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:09:39 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:09:39 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:09:39 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:09:39 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:09:39 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:09:39 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:09:39 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:09:39 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:09:39 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:09:39 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:09:39 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:09:39 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:09:39 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:09:39 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:09:39 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:09:39 :: success to 51.254.23.214:30247
+May 30 16:09:39 :: InputDB::login_success: abyss
+May 30 16:09:39 :: player_select: login: abyss index: 0
+May 30 16:09:39 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 16:09:39 :: PK_MODE: abyss 3
+May 30 16:09:39 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 1 PTR: 0x58b02580
+May 30 16:09:39 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(377400, 2704000)
+May 30 16:09:39 :: bgm_info.play(660000, DEFAULT_BGM_NAME)
+May 30 16:09:39 :: InputDB: player_load abyss 377400x2704000x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 16:09:39 :: ITEM_LOAD: COUNT abyss 338
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: RegisterRaceNumMap Royal Tiger (gold) 20122
+May 30 16:09:39 :: AddAffect abyss type 533 apply 53 20 flag 0 duration 86400
+May 30 16:09:39 :: AddAffect abyss type 533 apply 159 20 flag 0 duration 86400
+May 30 16:09:39 :: AddAffect abyss type 533 apply 162 8 flag 0 duration 86400
+May 30 16:09:39 :: AddAffect abyss type 533 apply 19 50 flag 0 duration 86400
+May 30 16:09:39 :: AddAffect abyss type 221 apply 109 20122 flag 0 duration 86400
+May 30 16:09:39 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:09:39 :: QUEST_LOAD: count 44
+May 30 16:09:39 ::             biologist.delivered 1
+May 30 16:09:39 ::             biologist.time 1685442993
+May 30 16:09:39 ::             comandos_tm.iniciar 1
+May 30 16:09:39 ::             deviltower_zone.cooldown 1685456377
+May 30 16:09:39 ::             deviltower_zone.enter_time 1685455777
+May 30 16:09:39 ::             dragonlair_zone.ch 1
+May 30 16:09:39 ::             dragonlair_zone.cooldown 1659211304
+May 30 16:09:39 ::             dragonlair_zone.disconnect 1659206253
+May 30 16:09:39 ::             dragonlair_zone.enter_time 1659205904
+May 30 16:09:39 ::             dragonlair_zone.idx 2080001
+May 30 16:09:39 ::             enchanted_forest.cooldown 1685413567
+May 30 16:09:39 ::             enchanted_forest.disconnect 1685408497
+May 30 16:09:39 ::             enchanted_forest.idx 2100000
+May 30 16:09:39 ::             give_basic_weapon.__status 668443392
+May 30 16:09:39 ::             guild_manage.new_disband_time 1685407521
+May 30 16:09:39 ::             horse_name.valid_till 1784830353
+May 30 16:09:39 ::             hydra_zone.ch 1
+May 30 16:09:39 ::             hydra_zone.cooldown 1685414368
+May 30 16:09:39 ::             hydra_zone.disconnect 1685409294
+May 30 16:09:39 ::             hydra_zone.enter_time 1685408968
+May 30 16:09:39 ::             hydra_zone.idx 3530000
+May 30 16:09:39 ::             item_attr_mission.attr_type_1 5
+May 30 16:09:39 ::             item_attr_mission.attr_type_2 21
+May 30 16:09:39 ::             item_attr_mission.attr_type_3 22
+May 30 16:09:39 ::             item_attr_mission.attr_type_4 9
+May 30 16:09:39 ::             item_attr_mission.attr_value_1 12
+May 30 16:09:39 ::             item_attr_mission.attr_value_2 20
+May 30 16:09:39 ::             item_attr_mission.attr_value_3 20
+May 30 16:09:39 ::             item_attr_mission.attr_value_4 20
+May 30 16:09:39 ::             item_attr_mission.id_ask_elected 4
+May 30 16:09:39 ::             item_attr_mission.saved_day 8
+May 30 16:09:39 ::             main_quest_lv1.__status -1147521841
+May 30 16:09:39 ::             pyramide_zone.ch 1
+May 30 16:09:39 ::             pyramide_zone.cooldown 1685411947
+May 30 16:09:39 ::             pyramide_zone.disconnect 1685408926
+May 30 16:09:39 ::             pyramide_zone.enter_time 1685408347
+May 30 16:09:39 ::             pyramide_zone.idx 3570000
+May 30 16:09:39 ::             rune.__status 777843330
+May 30 16:09:39 ::             rune_zone.ch 1
+May 30 16:09:39 ::             rune_zone.cooldown 1685416006
+May 30 16:09:39 ::             rune_zone.disconnect 1685409238
+May 30 16:09:39 ::             rune_zone.enter_time 1685408806
+May 30 16:09:39 ::             rune_zone.idx 2180000
+May 30 16:09:39 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 16:09:40 :: SAVE: abyss 535462x1422127
+May 30 16:09:40 :: VERSION: abyss 1215955205 Demonz2.exe
+May 30 16:09:41 :: SHOW: abyss 377400x2704000x0
+May 30 16:09:41 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 16:09:41 :: ENTERGAME: abyss 377400x2704000x0 88.24.209.246 map_index 660000
+May 30 16:09:41 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 16:09:41 :: HORSE STAMINA REGEN EVENT CREATE 0x58b5e420
+May 30 16:09:41 :: SendLandList map 660000 count 0 elem_size: 0
+May 30 16:09:41 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 0 16879819min
+May 30 16:09:41 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 1 16879819min
+May 30 16:09:41 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 2 16879819min
+May 30 16:09:41 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 3 16879819min
+May 30 16:09:41 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 4 16879819min
+May 30 16:09:41 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 5 16879819min
+May 30 16:09:41 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16879819
+May 30 16:09:41 :: PREMIUM: abyss type 6 16879819min
+May 30 16:09:41 :: VERSION CHECK 1215955205 1215955205
+May 30 16:09:41 :: reallocating buffer to 4096, current 1024
+May 30 16:09:41 :: QUEST_LOAD: Login pc 14 by event
+May 30 16:09:41 :: QUEST loading locale/germany/quest/object/deviltower_prepare/server_timer/deviltower_zone.start : deviltower_zone [STATE] start
+May 30 16:09:41 :: XXX AddServerTimer deviltower_prepare 660000 0x58b5e760
+May 30 16:09:41 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 16:09:42 :: RegisterRaceNumMap Bonsai 34066
+May 30 16:09:42 :: AddAffect abyss type 587 apply 0 0 flag 50057413 duration 1892160000
+May 30 16:09:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967295 arg 660000
+May 30 16:09:42 :: QUEST loading locale/germany/quest/object/deviltower_end/server_timer/deviltower_zone.start : deviltower_zone [STATE] start
+May 30 16:09:42 :: XXX AddServerTimer deviltower_end 660000 0x58cdef00
+May 30 16:09:42 :: QUEST loading locale/germany/quest/object/deviltower_checker/server_timer/deviltower_zone.start : deviltower_zone [STATE] start
+May 30 16:09:42 :: XXX AddServerTimer deviltower_checker 660000 0x58cdefa0
+May 30 16:09:42 :: XXX Dungeon Notice 0x58cab4e0 60
+May 30 16:09:42 :: XXX Dungeon Notice 0x58cab4e0 
+May 30 16:09:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:45 :: SECTREE DIFFER: abyss 59x422 was 58x422 dist 1.0m
+May 30 16:09:46 :: SECTREE DIFFER: abyss 59x423 was 59x422 dist 1.0m
+May 30 16:09:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:52 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:09:52 :: GIVE_GOLD: abyss 1618
+May 30 16:09:52 :: GIVE_GOLD: abyss 1618
+May 30 16:09:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:52 :: SAVE: abyss 535400x1428400
+May 30 16:09:54 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:54 :: GIVE_GOLD: abyss 1200
+May 30 16:09:54 :: GIVE_GOLD: abyss 1200
+May 30 16:09:54 :: GIVE_GOLD: abyss 1200
+May 30 16:09:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:54 :: GIVE_GOLD: abyss 2071
+May 30 16:09:54 :: GIVE_GOLD: abyss 2071
+May 30 16:09:54 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:54 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:54 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:55 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:55 :: SAVE: abyss 535400x1428400
+May 30 16:09:55 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:55 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:55 :: GIVE_GOLD: abyss 3752
+May 30 16:09:55 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:55 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:55 :: GIVE_GOLD: abyss 3277
+May 30 16:09:55 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:56 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:56 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:56 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:56 :: GIVE_GOLD: abyss 3292
+May 30 16:09:56 :: SAVE: abyss 535400x1428400
+May 30 16:09:56 :: abyss: USE_ITEM Tapferkeitsumhang (inven 1, cell: 7)
+May 30 16:09:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:57 :: GIVE_GOLD: abyss 1104
+May 30 16:09:57 :: GIVE_GOLD: abyss 1104
+May 30 16:09:57 :: GIVE_GOLD: abyss 1104
+May 30 16:09:57 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:09:57 :: SAVE: abyss 535400x1428400
+May 30 16:09:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:58 :: GIVE_GOLD: abyss 1673
+May 30 16:09:58 :: GIVE_GOLD: abyss 1673
+May 30 16:09:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:09:58 :: SAVE: abyss 535400x1428400
+May 30 16:09:58 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:58 :: GIVE_GOLD: abyss 2091
+May 30 16:09:58 :: GIVE_GOLD: abyss 2091
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:59 :: GIVE_GOLD: abyss 4035
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1004)
+May 30 16:09:59 :: GIVE_GOLD: abyss 3445
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:59 :: GIVE_GOLD: abyss 2120
+May 30 16:09:59 :: GIVE_GOLD: abyss 2120
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:09:59 :: GIVE_GOLD: abyss 3374
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:09:59 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:09:59 :: GIVE_GOLD: abyss 1428
+May 30 16:09:59 :: GIVE_GOLD: abyss 1428
+May 30 16:09:59 :: GIVE_GOLD: abyss 1428
+May 30 16:09:59 :: SAVE: abyss 535400x1428400
+May 30 16:10:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:00 :: GIVE_GOLD: abyss 1580
+May 30 16:10:00 :: GIVE_GOLD: abyss 1580
+May 30 16:10:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:00 :: GIVE_GOLD: abyss 3282
+May 30 16:10:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:00 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:10:00 :: GIVE_GOLD: abyss 1954
+May 30 16:10:00 :: GIVE_GOLD: abyss 1954
+May 30 16:10:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:01 :: SAVE: abyss 535400x1428400
+May 30 16:10:01 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:02 :: SAVE: abyss 535400x1428400
+May 30 16:10:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:02 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:10:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:10:03 :: GIVE_GOLD: abyss 3916
+May 30 16:10:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:10:03 :: GIVE_GOLD: abyss 1071
+May 30 16:10:03 :: GIVE_GOLD: abyss 1071
+May 30 16:10:03 :: GIVE_GOLD: abyss 1071
+May 30 16:10:03 :: CQuestManager::Kill QUEST_DIE_EVENT (pc=14, npc=1003)
+May 30 16:10:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:03 :: GIVE_GOLD: abyss 3083
+May 30 16:10:03 :: SAVE: abyss 535400x1428400
+May 30 16:10:03 :: KILL_AND_GO: Demon Shaman distance 798.0
+May 30 16:10:03 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:10:03 :: GIVE_GOLD: abyss 2006
+May 30 16:10:03 :: GIVE_GOLD: abyss 2006
+May 30 16:10:04 :: KILL_AND_GO: Demon Spearman distance 675.0
+May 30 16:10:04 :: KILL_AND_GO: Demon Shaman distance 1169.0
+May 30 16:10:04 :: SAVE: abyss 535400x1428400
+May 30 16:10:04 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:10:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:04 :: KILL_AND_GO: Demon Shaman distance 733.0
+May 30 16:10:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:05 :: GIVE_GOLD: abyss 1071
+May 30 16:10:05 :: GIVE_GOLD: abyss 1071
+May 30 16:10:05 :: GIVE_GOLD: abyss 1071
+May 30 16:10:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1002)
+May 30 16:10:05 :: GIVE_GOLD: abyss 3560
+May 30 16:10:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:05 :: GIVE_GOLD: abyss 3337
+May 30 16:10:05 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1001)
+May 30 16:10:05 :: GIVE_GOLD: abyss 1307
+May 30 16:10:05 :: GIVE_GOLD: abyss 1307
+May 30 16:10:05 :: GIVE_GOLD: abyss 1307
+May 30 16:10:05 :: SAVE: abyss 535400x1428400
+May 30 16:10:06 :: CQuestManager::Kill QUEST_KILL_EVENT (pc=14, npc=1003)
+May 30 16:10:06 :: GIVE_GOLD: abyss 1207
+May 30 16:10:06 :: GIVE_GOLD: abyss 1207
+May 30 16:10:06 :: GIVE_GOLD: abyss 1207
+May 30 16:10:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:06 :: SAVE: abyss 535400x1428400
+May 30 16:10:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:10 :: COMMAND: abyss: quit
+May 30 16:10:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:14 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 16:10:14 :: SAVE: abyss 535400x1428400
+May 30 16:10:14 :: QUEST clear timer 0
+May 30 16:10:14 :: SYSTEM: closing socket. DESC #18
+May 30 16:10:16 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:18 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:20 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:22 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:24 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:26 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:28 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:30 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:32 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:34 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:36 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:38 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:40 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:10:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:16 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:18 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:20 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:22 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:24 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:26 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:28 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:30 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:32 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:34 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:36 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:38 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:40 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:11:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:16 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:18 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:20 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:22 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:24 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:26 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:28 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:30 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:32 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:34 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:36 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:38 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:40 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:12:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:16 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:18 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:20 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:22 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:24 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:26 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:28 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:30 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:32 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:34 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:36 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:38 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:40 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:13:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:16 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:18 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:20 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:22 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:24 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:26 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:28 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:30 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:32 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:34 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:36 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:38 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:40 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:42 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:44 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:46 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:48 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:50 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:52 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:54 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:56 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:14:58 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:00 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:02 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:04 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:06 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:08 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:10 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:12 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:14 :: XXX ServerTimer Call NPC 0x58cdc6b4 vnum 4294967293 arg 660000
+May 30 16:15:14 :: DUNGEON destroy : map index 0
+May 30 16:15:14 :: PRIVATE_MAP: 660000 destroyed
+May 30 16:46:16 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 548300824 output input_len 0, ptr 0x2b571700
+May 30 16:46:16 :: Handshake: lower than zero -20
+May 30 16:46:16 :: Handshake: client_time 0 server_time 10288555
+May 30 16:46:16 :: LOGIN_BY_KEY: abyss key 505037375
+May 30 16:46:16 :: LoginSuccess
+May 30 16:46:16 :: 	player(abyss).job(0)
+May 30 16:46:16 :: 	player().job(0)
+May 30 16:46:16 :: 	player().job(0)
+May 30 16:46:16 :: 	player().job(0)
+May 30 16:46:16 :: 	player().job(0)
+May 30 16:46:16 :: success to 51.254.23.214:30245
+May 30 16:46:16 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:46:16 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:46:16 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:46:16 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:46:16 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:46:16 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:46:16 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:46:16 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:46:16 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:46:16 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:46:16 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:46:16 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:46:16 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:46:16 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:46:16 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:46:16 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:46:16 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:46:16 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:46:16 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:46:16 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:46:16 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:46:16 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:46:16 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:46:16 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:46:16 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:46:16 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:46:16 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:46:16 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:46:16 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:46:16 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:46:16 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:46:16 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:46:16 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:46:16 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:46:16 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:46:16 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:46:16 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:46:16 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:46:16 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:46:16 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:46:16 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:46:16 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:46:16 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:46:16 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:46:16 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:46:16 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:46:16 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:46:16 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:46:16 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:46:16 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:46:16 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:46:16 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:46:16 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:46:16 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:46:16 :: success to 51.254.23.214:30247
+May 30 16:46:16 :: InputDB::login_success: abyss
+May 30 16:46:17 :: SYSTEM: closing socket. DESC #18
+May 30 16:51:25 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 994487106 output input_len 0, ptr 0x2b571700
+May 30 16:51:25 :: Handshake: client_time 0 server_time 10597994
+May 30 16:51:26 :: LOGIN_BY_KEY: abyss key 620139422
+May 30 16:51:26 :: LoginSuccess
+May 30 16:51:26 :: 	player(abyss).job(0)
+May 30 16:51:26 :: 	player().job(0)
+May 30 16:51:26 :: 	player().job(0)
+May 30 16:51:26 :: 	player().job(0)
+May 30 16:51:26 :: 	player().job(0)
+May 30 16:51:26 :: success to 51.254.23.214:30245
+May 30 16:51:26 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:51:26 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:51:26 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:51:26 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:51:26 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:51:26 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:51:26 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:51:26 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:51:26 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:51:26 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:51:26 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:51:26 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:51:26 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:51:26 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:51:26 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:51:26 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:51:26 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:51:26 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:51:26 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:51:26 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:51:26 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:51:26 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:51:26 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:51:26 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:51:26 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:51:26 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:51:26 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:51:26 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:51:26 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:51:26 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:51:26 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:51:26 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:51:26 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:51:26 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:51:26 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:51:26 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:51:26 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:51:26 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:51:26 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:51:26 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:51:26 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:51:26 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:51:26 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:51:26 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:51:26 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:51:26 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:51:26 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:51:26 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:51:26 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:51:26 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:51:26 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:51:26 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:51:26 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:51:26 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:51:26 :: success to 51.254.23.214:30247
+May 30 16:51:26 :: InputDB::login_success: abyss
+May 30 16:51:26 :: SYSTEM: closing socket. DESC #18
+May 30 16:52:31 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 484304107 output input_len 0, ptr 0x2b571700
+May 30 16:52:32 :: Handshake: lower than zero -20
+May 30 16:52:32 :: Handshake: client_time 0 server_time 10664435
+May 30 16:52:32 :: LOGIN_BY_KEY: abyss key 412201954
+May 30 16:52:32 :: LoginSuccess
+May 30 16:52:32 :: 	player(abyss).job(0)
+May 30 16:52:32 :: 	player().job(0)
+May 30 16:52:32 :: 	player().job(0)
+May 30 16:52:32 :: 	player().job(0)
+May 30 16:52:32 :: 	player().job(0)
+May 30 16:52:32 :: success to 51.254.23.214:30245
+May 30 16:52:32 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:52:32 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:52:32 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:52:32 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:52:32 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:52:32 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:52:32 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:52:32 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:52:32 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:52:32 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:52:32 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:52:32 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:52:32 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:52:32 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:52:32 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:52:32 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:52:32 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:52:32 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:52:32 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:52:32 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:52:32 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:52:32 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:52:32 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:52:32 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:52:32 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:52:32 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:52:32 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:52:32 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:52:32 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:52:32 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:52:32 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:52:32 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:52:32 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:52:32 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:52:32 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:52:32 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:52:32 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:52:32 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:52:32 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:52:32 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:52:32 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:52:32 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:52:32 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:52:32 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:52:32 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:52:32 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:52:32 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:52:32 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:52:32 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:52:32 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:52:32 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:52:32 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:52:32 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:52:32 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:52:32 :: success to 51.254.23.214:30247
+May 30 16:52:32 :: InputDB::login_success: abyss
+May 30 16:52:32 :: SYSTEM: closing socket. DESC #18
+May 30 16:54:31 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 1839113466 output input_len 0, ptr 0x2b571700
+May 30 16:54:31 :: Handshake: lower than zero -38
+May 30 16:54:31 :: Handshake: client_time 0 server_time 10783994
+May 30 16:54:32 :: LOGIN_BY_KEY: abyss key 673390758
+May 30 16:54:32 :: LoginSuccess
+May 30 16:54:32 :: 	player(abyss).job(0)
+May 30 16:54:32 :: 	player().job(0)
+May 30 16:54:32 :: 	player().job(0)
+May 30 16:54:32 :: 	player().job(0)
+May 30 16:54:32 :: 	player().job(0)
+May 30 16:54:32 :: success to 51.254.23.214:30245
+May 30 16:54:32 :: SECTREE_MANAGER::GetMapIndex(0, 0)
+May 30 16:54:32 :: 1: (409600, 896000) ~ (512000, 1024000)
+May 30 16:54:32 :: 3: (307200, 819200) ~ (409600, 921600)
+May 30 16:54:32 :: 21: (0, 102400) ~ (102400, 230400)
+May 30 16:54:32 :: 23: (102400, 204800) ~ (204800, 307200)
+May 30 16:54:32 :: 41: (921600, 204800) ~ (1024000, 332800)
+May 30 16:54:32 :: 43: (819200, 204800) ~ (921600, 307200)
+May 30 16:54:32 :: 25: (2252800, 3046400) ~ (2355200, 3148800)
+May 30 16:54:32 :: 26: (0, 2252800) ~ (128000, 2329600)
+May 30 16:54:32 :: 27: (921600, 102400) ~ (972800, 153600)
+May 30 16:54:32 :: 61: (358400, 153600) ~ (512000, 307200)
+May 30 16:54:32 :: 62: (588800, 614400) ~ (742400, 768000)
+May 30 16:54:32 :: 63: (204800, 486400) ~ (358400, 640000)
+May 30 16:54:32 :: 64: (256000, 665600) ~ (409600, 819200)
+May 30 16:54:32 :: 65: (537600, 51200) ~ (640000, 153600)
+May 30 16:54:32 :: 66: (364800, 2665600) ~ (441600, 2742400)
+May 30 16:54:32 :: 67: (281600, 0) ~ (332800, 51200)
+May 30 16:54:32 :: 68: (1049600, 0) ~ (1126400, 76800)
+May 30 16:54:32 :: 69: (1049600, 716800) ~ (1152000, 819200)
+May 30 16:54:32 :: 70: (819200, 716800) ~ (870400, 768000)
+May 30 16:54:32 :: 71: (665600, 435200) ~ (768000, 537600)
+May 30 16:54:32 :: 72: (0, 1203200) ~ (153600, 1356800)
+May 30 16:54:32 :: 73: (153600, 1203200) ~ (307200, 1356800)
+May 30 16:54:32 :: 81: (819200, 0) ~ (844800, 25600)
+May 30 16:54:32 :: 103: (0, 25600) ~ (76800, 102400)
+May 30 16:54:32 :: 104: (51200, 486400) ~ (128000, 563200)
+May 30 16:54:32 :: 105: (6400, 0) ~ (32000, 25600)
+May 30 16:54:32 :: 110: (32000, 0) ~ (57600, 25600)
+May 30 16:54:32 :: 111: (57600, 0) ~ (83200, 25600)
+May 30 16:54:32 :: 113: (870400, 0) ~ (921600, 51200)
+May 30 16:54:32 :: 208: (819200, 1049600) ~ (870400, 1100800)
+May 30 16:54:32 :: 209: (844800, 1408000) ~ (921600, 1484800)
+May 30 16:54:32 :: 210: (768000, 1408000) ~ (844800, 1510400)
+May 30 16:54:32 :: 212: (307200, 1510400) ~ (332800, 1536000)
+May 30 16:54:32 :: 214: (358400, 409600) ~ (563200, 614400)
+May 30 16:54:32 :: 215: (512000, 1305600) ~ (614400, 1408000)
+May 30 16:54:32 :: 216: (307200, 1203200) ~ (512000, 1408000)
+May 30 16:54:32 :: 217: (51200, 563200) ~ (128000, 640000)
+May 30 16:54:32 :: 218: (614400, 1408000) ~ (716800, 1510400)
+May 30 16:54:32 :: 219: (512000, 1408000) ~ (614400, 1510400)
+May 30 16:54:32 :: 241: (101200, 24400) ~ (126800, 50000)
+May 30 16:54:32 :: 301: (1024000, 1664000) ~ (1177600, 1817600)
+May 30 16:54:32 :: 302: (1177600, 1664000) ~ (1356800, 1766400)
+May 30 16:54:32 :: 303: (1049600, 1510400) ~ (1126400, 1664000)
+May 30 16:54:32 :: 304: (1126400, 1510400) ~ (1228800, 1664000)
+May 30 16:54:32 :: 351: (742400, 614400) ~ (819200, 691200)
+May 30 16:54:32 :: 352: (512000, 153600) ~ (614400, 230400)
+May 30 16:54:32 :: 353: (128000, 486400) ~ (204800, 563200)
+May 30 16:54:32 :: 354: (128000, 563200) ~ (204800, 640000)
+May 30 16:54:32 :: 355: (204800, 256000) ~ (281600, 409600)
+May 30 16:54:32 :: 356: (1492000, 2252800) ~ (1568800, 2329600)
+May 30 16:54:32 :: 357: (896000, 2252800) ~ (1024000, 2380800)
+May 30 16:54:32 :: CMapLocation::Get - Error MapIndex[0]
+SYSERR: May 30 16:54:32 :: GetServerLocation: location error name  mapindex 0 0 x 0 empire 3
+May 30 16:54:32 :: success to 51.254.23.214:30247
+May 30 16:54:32 :: InputDB::login_success: abyss
+May 30 16:54:32 :: player_select: login: abyss index: 0
+May 30 16:54:32 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 16:54:32 :: PK_MODE: abyss 3
+May 30 16:54:32 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 2412 PTR: 0x58ce8f80
+May 30 16:54:32 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(535400, 1428400)
+May 30 16:54:32 :: InputDB: player_load abyss 535400x1428400x0 LEVEL 42 MOV_SPEED 200 JOB 0 ATG 0 DFG 96 GMLv 0
+May 30 16:54:32 :: ITEM_LOAD: COUNT abyss 338
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: RegisterRaceNumMap Royal Tiger (gold) 20122
+May 30 16:54:32 :: AddAffect abyss type 533 apply 53 20 flag 0 duration 86400
+May 30 16:54:32 :: AddAffect abyss type 533 apply 159 20 flag 0 duration 86400
+May 30 16:54:32 :: AddAffect abyss type 533 apply 162 8 flag 0 duration 86400
+May 30 16:54:32 :: AddAffect abyss type 533 apply 19 50 flag 0 duration 86400
+May 30 16:54:32 :: AddAffect abyss type 221 apply 109 20122 flag 0 duration 86400
+May 30 16:54:32 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 16:54:32 :: QUEST_LOAD: count 47
+May 30 16:54:32 ::             biologist.delivered 1
+May 30 16:54:32 ::             biologist.time 1685442993
+May 30 16:54:32 ::             comandos_tm.iniciar 1
+May 30 16:54:32 ::             deviltower_zone.ch 1
+May 30 16:54:32 ::             deviltower_zone.cooldown 1685456377
+May 30 16:54:32 ::             deviltower_zone.disconnect 1685456114
+May 30 16:54:32 ::             deviltower_zone.enter_time 1685455777
+May 30 16:54:32 ::             deviltower_zone.idx 660000
+May 30 16:54:32 ::             dragonlair_zone.ch 1
+May 30 16:54:32 ::             dragonlair_zone.cooldown 1659211304
+May 30 16:54:32 ::             dragonlair_zone.disconnect 1659206253
+May 30 16:54:32 ::             dragonlair_zone.enter_time 1659205904
+May 30 16:54:32 ::             dragonlair_zone.idx 2080001
+May 30 16:54:32 ::             enchanted_forest.cooldown 1685413567
+May 30 16:54:32 ::             enchanted_forest.disconnect 1685408497
+May 30 16:54:32 ::             enchanted_forest.idx 2100000
+May 30 16:54:32 ::             give_basic_weapon.__status 668443392
+May 30 16:54:32 ::             guild_manage.new_disband_time 1685407521
+May 30 16:54:32 ::             horse_name.valid_till 1784830353
+May 30 16:54:32 ::             hydra_zone.ch 1
+May 30 16:54:32 ::             hydra_zone.cooldown 1685414368
+May 30 16:54:32 ::             hydra_zone.disconnect 1685409294
+May 30 16:54:32 ::             hydra_zone.enter_time 1685408968
+May 30 16:54:32 ::             hydra_zone.idx 3530000
+May 30 16:54:32 ::             item_attr_mission.attr_type_1 5
+May 30 16:54:32 ::             item_attr_mission.attr_type_2 21
+May 30 16:54:32 ::             item_attr_mission.attr_type_3 22
+May 30 16:54:32 ::             item_attr_mission.attr_type_4 9
+May 30 16:54:32 ::             item_attr_mission.attr_value_1 12
+May 30 16:54:32 ::             item_attr_mission.attr_value_2 20
+May 30 16:54:32 ::             item_attr_mission.attr_value_3 20
+May 30 16:54:32 ::             item_attr_mission.attr_value_4 20
+May 30 16:54:32 ::             item_attr_mission.id_ask_elected 4
+May 30 16:54:32 ::             item_attr_mission.saved_day 8
+May 30 16:54:32 ::             main_quest_lv1.__status -1147521841
+May 30 16:54:32 ::             pyramide_zone.ch 1
+May 30 16:54:32 ::             pyramide_zone.cooldown 1685411947
+May 30 16:54:32 ::             pyramide_zone.disconnect 1685408926
+May 30 16:54:32 ::             pyramide_zone.enter_time 1685408347
+May 30 16:54:32 ::             pyramide_zone.idx 3570000
+May 30 16:54:32 ::             rune.__status 777843330
+May 30 16:54:32 ::             rune_zone.ch 1
+May 30 16:54:32 ::             rune_zone.cooldown 1685416006
+May 30 16:54:32 ::             rune_zone.disconnect 1685409238
+May 30 16:54:32 ::             rune_zone.enter_time 1685408806
+May 30 16:54:32 ::             rune_zone.idx 2180000
+May 30 16:54:32 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 16:54:33 :: SAVE: abyss 535400x1428400
+May 30 16:54:34 :: VERSION: abyss 1215955205 metin2client.exe
+May 30 16:54:36 :: SHOW: abyss 535400x1428400x0
+May 30 16:54:36 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 16:54:36 :: ENTERGAME: abyss 535400x1428400x0 46.247.137.201 map_index 219
+May 30 16:54:36 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 16:54:36 :: HORSE STAMINA REGEN EVENT CREATE 0x58ccd2c0
+May 30 16:54:36 :: SendLandList map 219 count 0 elem_size: 0
+May 30 16:54:36 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 0 16877124min
+May 30 16:54:36 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 1 16877124min
+May 30 16:54:36 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 2 16877124min
+May 30 16:54:36 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 3 16877124min
+May 30 16:54:36 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 4 16877124min
+May 30 16:54:36 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 5 16877124min
+May 30 16:54:36 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16877124
+May 30 16:54:36 :: PREMIUM: abyss type 6 16877124min
+May 30 16:54:36 :: VERSION CHECK 1215955205 1215955205
+May 30 16:54:36 :: reallocating buffer to 4096, current 1024
+May 30 16:54:36 :: QUEST_LOAD: Login pc 14 by event
+May 30 16:54:36 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+May 30 16:54:37 :: RegisterRaceNumMap Bonsai 34066
+May 30 16:54:37 :: AddAffect abyss type 587 apply 0 0 flag 50057413 duration 1892160000
+May 30 16:54:40 :: COMMAND: abyss: goto
+May 30 16:54:40 :: WarpSet abyss 469300 964200 current map 219 target map 1
+May 30 16:54:40 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 16:54:40 :: SAVE: abyss 469300x964200
+May 30 16:54:40 :: QUEST clear timer 0
+May 30 16:54:40 :: SYSTEM: closing socket. DESC #18
+May 30 16:59:23 :: P2P: Login bella
+May 30 16:59:40 :: P2P: Logout bella
+May 30 17:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 16)

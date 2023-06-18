@@ -1,0 +1,32 @@
+[
+    {
+        "serv": "server", 
+        "path": "server/logs/server/database", 
+        "chan": 0, 
+        "type": 1
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/logs/server/authentication", 
+        "chan": 0, 
+        "type": 2
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/logs/server/channels/channel_1/core_1", 
+        "chan": 1, 
+        "type": 5
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/logs/server/channels/channel_1/core_2", 
+        "chan": 1, 
+        "type": 5
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/logs/server/channels/channel_99/core_99", 
+        "chan": 99, 
+        "type": 5
+    }
+]

@@ -1,0 +1,6 @@
+May 31 23:35:43 :: P2P: Login testa
+May 31 23:49:28 :: P2P: Logout testa
+May 31 23:51:02 :: P2P: Login testa
+May 31 23:51:49 :: P2P: Logout testa
+Jun  1 00:00:00 :: SYSTEM_CMD: rm -rf ./log/20230529
+Jun  1 00:00:00 :: SYSTEM: LOG ROTATE (2023-06-01 23)

@@ -1,0 +1,268 @@
+May 31 09:11:53 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 3836976853 output input_len 0, ptr 0x2898ca00
+May 31 09:11:53 :: Handshake: client_time 0 server_time 69425468
+May 31 09:11:53 :: AUTH_PHASE 0x2898ca00
+May 31 09:11:53 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:11:53 :: SetLoginKey 416310437
+May 31 09:11:53 :: InputAuth::Login: key (416310437) login (abyss)
+May 31 09:11:53 :: QID_AUTH_LOGIN: START 416310437 0x2898ca00
+May 31 09:11:53 :: Create_Time 0 19700101
+May 31 09:11:53 :: Block Time -2 
+May 31 09:11:53 :: SetRemainSecs abyss 0 type 2
+May 31 09:11:53 :: SendAuthLogin abyss key 1
+May 31 09:11:53 :: AuthLogin result 1 key 416310437
+May 31 09:11:53 :: SYSTEM: closing socket. DESC #16
+May 31 09:17:42 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 527906157 output input_len 0, ptr 0x2898ca00
+May 31 09:17:42 :: Handshake: lower than zero -2
+May 31 09:17:42 :: Handshake: client_time 0 server_time 69774306
+May 31 09:17:42 :: AUTH_PHASE 0x2898ca00
+May 31 09:17:42 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:17:42 :: SetLoginKey 1850626850
+May 31 09:17:42 :: InputAuth::Login: key (1850626850) login (abyss)
+May 31 09:17:42 :: QID_AUTH_LOGIN: START 1850626850 0x2898ca00
+May 31 09:17:42 :: Create_Time 0 19700101
+May 31 09:17:42 :: Block Time -2 
+May 31 09:17:42 :: SetRemainSecs abyss 0 type 2
+May 31 09:17:42 :: SendAuthLogin abyss key 1
+May 31 09:17:42 :: AuthLogin result 1 key 1850626850
+May 31 09:17:42 :: SYSTEM: closing socket. DESC #16
+May 31 09:19:59 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 4268196346 output input_len 0, ptr 0x2898ca00
+May 31 09:19:59 :: Handshake: client_time 0 server_time 69911348
+May 31 09:19:59 :: AUTH_PHASE 0x2898ca00
+May 31 09:19:59 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:19:59 :: SetLoginKey 147397441
+May 31 09:19:59 :: InputAuth::Login: key (147397441) login (abyss)
+May 31 09:19:59 :: QID_AUTH_LOGIN: START 147397441 0x2898ca00
+May 31 09:19:59 :: Create_Time 0 19700101
+May 31 09:19:59 :: Block Time -2 
+May 31 09:19:59 :: SetRemainSecs abyss 0 type 2
+May 31 09:19:59 :: SendAuthLogin abyss key 1
+May 31 09:19:59 :: AuthLogin result 1 key 147397441
+May 31 09:19:59 :: SYSTEM: closing socket. DESC #16
+May 31 09:21:29 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 3147555086 output input_len 0, ptr 0x2898ca00
+May 31 09:21:29 :: Handshake: client_time 0 server_time 70001868
+May 31 09:21:29 :: AUTH_PHASE 0x2898ca00
+May 31 09:21:30 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:21:30 :: SetLoginKey 1765457134
+May 31 09:21:30 :: InputAuth::Login: key (1765457134) login (abyss)
+May 31 09:21:30 :: QID_AUTH_LOGIN: START 1765457134 0x2898ca00
+May 31 09:21:30 :: Create_Time 0 19700101
+May 31 09:21:30 :: Block Time -2 
+May 31 09:21:30 :: SetRemainSecs abyss 0 type 2
+May 31 09:21:30 :: SendAuthLogin abyss key 1
+May 31 09:21:30 :: AuthLogin result 1 key 1765457134
+May 31 09:21:30 :: SYSTEM: closing socket. DESC #16
+May 31 09:22:44 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 1889046451 output input_len 0, ptr 0x2898ca00
+May 31 09:22:44 :: Handshake: lower than zero -2
+May 31 09:22:44 :: Handshake: client_time 0 server_time 70076906
+May 31 09:22:44 :: AUTH_PHASE 0x2898ca00
+May 31 09:22:45 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:22:45 :: SetLoginKey 1246358855
+May 31 09:22:45 :: InputAuth::Login: key (1246358855) login (abyss)
+May 31 09:22:45 :: QID_AUTH_LOGIN: START 1246358855 0x2898ca00
+May 31 09:22:45 :: Create_Time 0 19700101
+May 31 09:22:45 :: Block Time -2 
+May 31 09:22:45 :: SetRemainSecs abyss 0 type 2
+May 31 09:22:45 :: SendAuthLogin abyss key 1
+May 31 09:22:45 :: AuthLogin result 1 key 1246358855
+May 31 09:22:45 :: SYSTEM: closing socket. DESC #16
+May 31 09:27:47 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 1463367497 output input_len 0, ptr 0x2898ca00
+May 31 09:27:47 :: Handshake: client_time 0 server_time 70379228
+May 31 09:27:47 :: AUTH_PHASE 0x2898ca00
+May 31 09:27:47 :: InputAuth::Login : abyss(5) desc 0x2898ca00
+May 31 09:27:47 :: SetLoginKey 1673059186
+May 31 09:27:47 :: InputAuth::Login: key (1673059186) login (abyss)
+May 31 09:27:47 :: QID_AUTH_LOGIN: START 1673059186 0x2898ca00
+May 31 09:27:47 :: Create_Time 0 19700101
+May 31 09:27:47 :: Block Time -2 
+May 31 09:27:47 ::    WRONGPWD
+May 31 09:27:49 :: SYSTEM: new connection from [46.247.137.170] fd: 17 handshake 3019323271 output input_len 0, ptr 0x2898cf00
+May 31 09:27:49 :: SYSTEM: closing socket. DESC #16
+May 31 09:27:49 :: Handshake: lower than zero -19
+May 31 09:27:49 :: Handshake: client_time 0 server_time 70381508
+May 31 09:27:49 :: AUTH_PHASE 0x2898cf00
+May 31 09:27:49 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:27:49 :: SetLoginKey 1961240652
+May 31 09:27:49 :: InputAuth::Login: key (1961240652) login (abyss)
+May 31 09:27:49 :: QID_AUTH_LOGIN: START 1961240652 0x2898cf00
+May 31 09:27:49 :: Create_Time 0 19700101
+May 31 09:27:49 :: Block Time -2 
+May 31 09:27:49 :: SetRemainSecs abyss 0 type 2
+May 31 09:27:49 :: SendAuthLogin abyss key 1
+May 31 09:27:49 :: AuthLogin result 1 key 1961240652
+May 31 09:27:49 :: SYSTEM: closing socket. DESC #17
+May 31 09:27:55 :: DeleteLoginData abyss 0x288f9980
+May 31 09:27:55 :: BILLING: ON abyss key 1961240652 ptr 0x288f9e80
+May 31 09:33:26 :: SetRemainSecs abyss 0 type 2
+May 31 09:33:26 :: BILLING: PUSH abyss 331 type 2
+May 31 09:33:26 :: BILLING: OFF abyss key 1961240652 ptr 0x288f9e80
+May 31 09:33:26 :: FLUSH_USE_TIME: count 1
+May 31 09:33:49 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 2441205079 output input_len 0, ptr 0x2898cf00
+May 31 09:33:49 :: Handshake: client_time 0 server_time 70741508
+May 31 09:33:49 :: AUTH_PHASE 0x2898cf00
+May 31 09:33:49 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:33:49 :: SetLoginKey 175430324
+May 31 09:33:49 :: InputAuth::Login: key (175430324) login (abyss)
+May 31 09:33:49 :: QID_AUTH_LOGIN: START 175430324 0x2898cf00
+May 31 09:33:49 :: Create_Time 0 19700101
+May 31 09:33:49 :: Block Time -2 
+May 31 09:33:49 :: SetRemainSecs abyss 0 type 2
+May 31 09:33:49 :: SendAuthLogin abyss key 1
+May 31 09:33:49 :: AuthLogin result 1 key 175430324
+May 31 09:33:49 :: SYSTEM: closing socket. DESC #16
+May 31 09:33:54 :: DeleteLoginData abyss 0x288f9e80
+May 31 09:33:54 :: BILLING: ON abyss key 175430324 ptr 0x288f9980
+May 31 09:36:27 :: SetRemainSecs abyss 0 type 2
+May 31 09:36:27 :: BILLING: PUSH abyss 152 type 2
+May 31 09:36:27 :: BILLING: OFF abyss key 175430324 ptr 0x288f9980
+May 31 09:36:27 :: FLUSH_USE_TIME: count 1
+May 31 09:37:17 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 4201012090 output input_len 0, ptr 0x2898cf00
+May 31 09:37:17 :: Handshake: client_time 0 server_time 70949986
+May 31 09:37:18 :: AUTH_PHASE 0x2898cf00
+May 31 09:37:18 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:37:18 :: SetLoginKey 116064945
+May 31 09:37:18 :: InputAuth::Login: key (116064945) login (abyss)
+May 31 09:37:18 :: QID_AUTH_LOGIN: START 116064945 0x2898cf00
+May 31 09:37:18 :: Create_Time 0 19700101
+May 31 09:37:18 :: Block Time -2 
+May 31 09:37:18 :: SetRemainSecs abyss 0 type 2
+May 31 09:37:18 :: SendAuthLogin abyss key 1
+May 31 09:37:18 :: AuthLogin result 1 key 116064945
+May 31 09:37:18 :: SYSTEM: closing socket. DESC #16
+May 31 09:37:25 :: DeleteLoginData abyss 0x288f9980
+May 31 09:37:25 :: BILLING: ON abyss key 116064945 ptr 0x288f9e80
+May 31 09:39:16 :: SetRemainSecs abyss 0 type 2
+May 31 09:39:16 :: BILLING: PUSH abyss 110 type 2
+May 31 09:39:16 :: BILLING: OFF abyss key 116064945 ptr 0x288f9e80
+May 31 09:39:16 :: FLUSH_USE_TIME: count 1
+May 31 09:46:01 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 1691184008 output input_len 0, ptr 0x2898cf00
+May 31 09:46:01 :: Handshake: client_time 0 server_time 71473188
+May 31 09:46:01 :: AUTH_PHASE 0x2898cf00
+May 31 09:46:01 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:46:01 :: SetLoginKey 1944013586
+May 31 09:46:01 :: InputAuth::Login: key (1944013586) login (abyss)
+May 31 09:46:01 :: QID_AUTH_LOGIN: START 1944013586 0x2898cf00
+May 31 09:46:01 :: Create_Time 0 19700101
+May 31 09:46:01 :: Block Time -2 
+May 31 09:46:01 :: SetRemainSecs abyss 0 type 2
+May 31 09:46:01 :: SendAuthLogin abyss key 1
+May 31 09:46:01 :: AuthLogin result 1 key 1944013586
+May 31 09:46:01 :: SYSTEM: closing socket. DESC #16
+May 31 09:46:08 :: DeleteLoginData abyss 0x288f9e80
+May 31 09:46:08 :: BILLING: ON abyss key 1944013586 ptr 0x288f9980
+May 31 09:46:52 :: SetRemainSecs abyss 0 type 2
+May 31 09:46:52 :: BILLING: PUSH abyss 44 type 2
+May 31 09:46:52 :: BILLING: OFF abyss key 1944013586 ptr 0x288f9980
+May 31 09:46:52 :: FLUSH_USE_TIME: count 1
+May 31 09:48:52 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 125819223 output input_len 0, ptr 0x2898cf00
+May 31 09:48:52 :: Handshake: lower than zero -17
+May 31 09:48:52 :: Handshake: lower than zero -1
+May 31 09:48:52 :: Handshake: lower than zero -1
+May 31 09:48:52 :: Handshake: client_time 0 server_time 71644748
+May 31 09:48:52 :: AUTH_PHASE 0x2898cf00
+May 31 09:48:52 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:48:52 :: SetLoginKey 182579732
+May 31 09:48:52 :: InputAuth::Login: key (182579732) login (abyss)
+May 31 09:48:52 :: QID_AUTH_LOGIN: START 182579732 0x2898cf00
+May 31 09:48:52 :: Create_Time 0 19700101
+May 31 09:48:52 :: Block Time -2 
+May 31 09:48:52 :: SetRemainSecs abyss 0 type 2
+May 31 09:48:52 :: SendAuthLogin abyss key 1
+May 31 09:48:53 :: AuthLogin result 1 key 182579732
+May 31 09:48:53 :: SYSTEM: closing socket. DESC #16
+May 31 09:52:06 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 2793401281 output input_len 0, ptr 0x2898cf00
+May 31 09:52:06 :: Handshake: client_time 0 server_time 71838826
+May 31 09:52:06 :: AUTH_PHASE 0x2898cf00
+May 31 09:52:07 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:52:07 :: SetLoginKey 1244609849
+May 31 09:52:07 :: InputAuth::Login: key (1244609849) login (abyss)
+May 31 09:52:07 :: QID_AUTH_LOGIN: START 1244609849 0x2898cf00
+May 31 09:52:07 :: Create_Time 0 19700101
+May 31 09:52:07 :: Block Time -2 
+May 31 09:52:07 :: SetRemainSecs abyss 0 type 2
+May 31 09:52:07 :: SendAuthLogin abyss key 1
+May 31 09:52:07 :: AuthLogin result 1 key 1244609849
+May 31 09:52:07 :: SYSTEM: closing socket. DESC #16
+May 31 09:52:12 :: DeleteLoginData abyss 0x288f9980
+May 31 09:52:12 :: BILLING: ON abyss key 1244609849 ptr 0x288f9f00
+May 31 09:52:30 :: SetRemainSecs abyss 0 type 2
+May 31 09:52:30 :: BILLING: PUSH abyss 18 type 2
+May 31 09:52:30 :: BILLING: OFF abyss key 1244609849 ptr 0x288f9f00
+May 31 09:52:30 :: FLUSH_USE_TIME: count 1
+May 31 09:52:31 :: BILLING: ON abyss key 1244609849 ptr 0x288f9f00
+May 31 09:53:08 :: SetRemainSecs abyss 0 type 2
+May 31 09:53:08 :: BILLING: PUSH abyss 37 type 2
+May 31 09:53:08 :: BILLING: OFF abyss key 1244609849 ptr 0x288f9f00
+May 31 09:53:08 :: FLUSH_USE_TIME: count 1
+May 31 09:54:49 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 1122776659 output input_len 0, ptr 0x2898cf00
+May 31 09:54:49 :: Handshake: client_time 0 server_time 72001986
+May 31 09:54:50 :: AUTH_PHASE 0x2898cf00
+May 31 09:54:50 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:54:50 :: SetLoginKey 980596972
+May 31 09:54:50 :: InputAuth::Login: key (980596972) login (abyss)
+May 31 09:54:50 :: QID_AUTH_LOGIN: START 980596972 0x2898cf00
+May 31 09:54:50 :: Create_Time 0 19700101
+May 31 09:54:50 :: Block Time -2 
+May 31 09:54:50 :: SetRemainSecs abyss 0 type 2
+May 31 09:54:50 :: SendAuthLogin abyss key 1
+May 31 09:54:50 :: AuthLogin result 1 key 980596972
+May 31 09:54:50 :: SYSTEM: closing socket. DESC #16
+May 31 09:54:55 :: DeleteLoginData abyss 0x288f9f00
+May 31 09:54:55 :: BILLING: ON abyss key 980596972 ptr 0x288f9980
+May 31 09:55:11 :: SetRemainSecs abyss 0 type 2
+May 31 09:55:11 :: BILLING: PUSH abyss 15 type 2
+May 31 09:55:11 :: BILLING: OFF abyss key 980596972 ptr 0x288f9980
+May 31 09:55:11 :: FLUSH_USE_TIME: count 1
+May 31 09:55:12 :: BILLING: ON abyss key 980596972 ptr 0x288f9980
+May 31 09:57:06 :: SetRemainSecs abyss 0 type 2
+May 31 09:57:06 :: BILLING: PUSH abyss 113 type 2
+May 31 09:57:06 :: BILLING: OFF abyss key 980596972 ptr 0x288f9980
+May 31 09:57:06 :: FLUSH_USE_TIME: count 1
+May 31 09:57:10 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 699396389 output input_len 0, ptr 0x2898cf00
+May 31 09:57:11 :: Handshake: client_time 0 server_time 72143066
+May 31 09:57:11 :: AUTH_PHASE 0x2898cf00
+May 31 09:57:11 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:57:11 :: SetLoginKey 154319821
+May 31 09:57:11 :: InputAuth::Login: key (154319821) login (abyss)
+May 31 09:57:11 :: QID_AUTH_LOGIN: START 154319821 0x2898cf00
+May 31 09:57:11 :: Create_Time 0 19700101
+May 31 09:57:11 :: Block Time -2 
+May 31 09:57:11 :: SetRemainSecs abyss 0 type 2
+May 31 09:57:11 :: SendAuthLogin abyss key 1
+May 31 09:57:11 :: AuthLogin result 1 key 154319821
+May 31 09:57:11 :: SYSTEM: closing socket. DESC #16
+May 31 09:57:17 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 2696334192 output input_len 0, ptr 0x2898cf00
+May 31 09:57:17 :: Handshake: client_time 0 server_time 72149546
+May 31 09:57:17 :: AUTH_PHASE 0x2898cf00
+May 31 09:57:17 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:57:17 :: SetLoginKey 1430727413
+May 31 09:57:17 :: InputAuth::Login: key (1430727413) login (abyss)
+May 31 09:57:17 :: QID_AUTH_LOGIN: START 1430727413 0x2898cf00
+May 31 09:57:17 :: Create_Time 0 19700101
+May 31 09:57:17 :: Block Time -2 
+May 31 09:57:17 :: SetRemainSecs abyss 0 type 2
+May 31 09:57:17 :: SendAuthLogin abyss key 1
+May 31 09:57:17 :: AuthLogin result 1 key 1430727413
+May 31 09:57:17 :: SYSTEM: closing socket. DESC #16
+May 31 09:57:23 :: DeleteLoginData abyss 0x288f9980
+May 31 09:57:23 :: BILLING: ON abyss key 1430727413 ptr 0x288f9f80
+May 31 09:57:37 :: SetRemainSecs abyss 0 type 2
+May 31 09:57:37 :: BILLING: PUSH abyss 14 type 2
+May 31 09:57:37 :: BILLING: OFF abyss key 1430727413 ptr 0x288f9f80
+May 31 09:57:38 :: FLUSH_USE_TIME: count 1
+May 31 09:58:09 :: SYSTEM: new connection from [46.247.137.170] fd: 16 handshake 518073194 output input_len 0, ptr 0x2898cf00
+May 31 09:58:09 :: Handshake: lower than zero -2
+May 31 09:58:09 :: Handshake: client_time 0 server_time 72201668
+May 31 09:58:09 :: AUTH_PHASE 0x2898cf00
+May 31 09:58:09 :: InputAuth::Login : abyss(5) desc 0x2898cf00
+May 31 09:58:09 :: SetLoginKey 1494311987
+May 31 09:58:09 :: InputAuth::Login: key (1494311987) login (abyss)
+May 31 09:58:09 :: QID_AUTH_LOGIN: START 1494311987 0x2898cf00
+May 31 09:58:09 :: Create_Time 0 19700101
+May 31 09:58:09 :: Block Time -2 
+May 31 09:58:09 :: SetRemainSecs abyss 0 type 2
+May 31 09:58:09 :: SendAuthLogin abyss key 1
+May 31 09:58:09 :: AuthLogin result 1 key 1494311987
+May 31 09:58:10 :: SYSTEM: closing socket. DESC #16
+May 31 09:58:17 :: DeleteLoginData abyss 0x288f9f80
+May 31 09:58:17 :: BILLING: ON abyss key 1494311987 ptr 0x288f9980
+May 31 10:00:00 :: SYSTEM: LOG ROTATE (2023-05-31 9)

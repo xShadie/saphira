@@ -1,0 +1,911 @@
+May 30 13:56:31 :: [     2650] return 0/0/1 async 0/0/0
+May 30 13:56:33 :: [     2700] return 0/0/0 async 0/0/0
+May 30 13:56:35 :: [     2750] return 0/0/0 async 0/0/0
+May 30 13:56:37 :: [     2800] return 0/0/0 async 0/0/0
+May 30 13:56:39 :: [     2850] return 0/0/0 async 0/0/0
+May 30 13:56:40 :: Connection accepted. (host: 127.0.0.1 handle: 5 fd: 18)
+May 30 13:56:40 :: ACCEPT FROM 127.0.0.1
+May 30 13:56:41 :: GMHOST: 127.0.0.1
+May 30 13:56:41 :: GM: PID 1 Login abyss Character abyss ContactIP  ServerIP ALL Authority 5[IMPLEMENTOR]
+May 30 13:56:41 :: GM: PID 2 Login meley Character TestRuna ContactIP  ServerIP ALL Authority 5[IMPLEMENTOR]
+May 30 13:56:41 :: GM: PID 3 Login skun Character [2D]Skun ContactIP  ServerIP ALL Authority 5[IMPLEMENTOR]
+May 30 13:56:41 :: GM: PID 4 Login canarion Character [YT]Canarion ContactIP  ServerIP ALL Authority 5[IMPLEMENTOR]
+May 30 13:56:41 :: QUERY_BOOT : AdminInfo (Request ServerIp 51.254.23.214) 
+May 30 13:56:41 :: BOOT: PACKET: 6876451
+May 30 13:56:41 :: BOOT: VERSION: 6
+May 30 13:56:41 :: sizeof(TMobTable) = 505
+May 30 13:56:41 :: sizeof(TItemTable) = 706
+May 30 13:56:41 :: sizeof(TShopTable) = 2409
+May 30 13:56:41 :: sizeof(TSkillTable) = 1475
+May 30 13:56:41 :: sizeof(TRefineTable) = 53
+May 30 13:56:41 :: sizeof(TItemAttrTable) = 94
+May 30 13:56:41 :: sizeof(TItemRareTable) = 94
+May 30 13:56:41 :: sizeof(TBanwordTable) = 25
+May 30 13:56:41 :: sizeof(TLand) = 36
+May 30 13:56:41 :: sizeof(TObjectProto) = 96
+May 30 13:56:41 :: sizeof(TObject) = 40
+May 30 13:56:41 :: sizeof(tAdminInfo) = 416 * 678330880 
+May 30 13:56:41 :: reallocating buffer to 8388608, current 2097152
+May 30 13:56:41 :: ItemIDRange: SET  70000001 ~ 80000000 start: 70000019
+May 30 13:56:41 :: ItemIDRange: SPARE SET  80000001 ~ 90000000 start: 80000001
+May 30 13:56:41 :: GMHosts 127.0.0.1
+May 30 13:56:41 :: Admin name abyss ConntactIP 
+May 30 13:56:41 :: Admin name TestRuna ConntactIP 
+May 30 13:56:41 :: Admin name [2D]Skun ConntactIP 
+May 30 13:56:41 :: Admin name [YT]Canarion ConntactIP 
+May 30 13:56:41 :: SETUP: channel 1 listen 30243 p2p 30244 count 3
+May 30 13:56:41 :: HEADER_GD_SET_EVENT_FLAG : No Changed CClientmanager::SetEventFlag(oxevent_status 0) 
+May 30 13:56:41 :: [     2900] return 0/0/1 async 0/0/0
+May 30 13:56:43 :: [     2950] return 0/0/0 async 0/0/0
+May 30 13:56:45 :: [     3000] return 0/0/0 async 0/0/0
+May 30 13:56:47 :: [     3050] return 0/0/0 async 0/0/0
+May 30 13:56:49 :: [     3100] return 0/0/0 async 0/0/0
+May 30 13:56:50 :: AUTH_PEER_READ: size 190
+May 30 13:56:50 :: AUTH_LOGIN id(1) login(abyss) social_id(1111111) login_key(1225694520), client_key(1355814013 217138174 866574165 277897201)
+May 30 13:56:50 :: AUTH_PEER_WRITE: size 10
+May 30 13:56:50 :: [     3150] return 0/0/1 async 0/0/0
+May 30 13:56:52 :: [     3200] return 0/0/0 async 0/0/0
+May 30 13:56:53 :: LOGIN_BY_KEY success abyss 1225694520 46.247.137.201
+May 30 13:56:53 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 13:56:53 :: abyss 961571 263834 hair 31
+May 30 13:56:53 :: Testing 876099 219286 hair 0
+May 30 13:56:54 :: [     3250] return 0/0/0 async 0/0/0
+May 30 13:56:56 :: [     3300] return 0/0/0 async 0/0/0
+May 30 13:56:58 :: [     3350] return 0/0/0 async 0/0/0
+May 30 13:57:00 :: [     3400] return 0/0/1 async 0/0/0
+May 30 13:57:01 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 13:57:01 :: LOGOUT: Insert player pid(14)
+May 30 13:57:01 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 13:57:01 :: LOGOUT: Insert player pid(39)
+May 30 13:57:01 :: LOGOUT abyss 
+May 30 13:57:02 :: LOGIN_BY_KEY success abyss 1225694520 46.247.137.201
+May 30 13:57:02 :: RESULT_LOGIN: login success abyss rows: 2
+May 30 13:57:02 :: abyss 961571 263834 hair 31
+May 30 13:57:02 :: Testing 876099 219286 hair 0
+May 30 13:57:02 :: [PLAYER_LOAD] Load from PlayerDB pid[14]
+May 30 13:57:02 :: QID_PLAYER 1 14
+May 30 13:57:02 :: SetPlay on 1225694520 abyss
+May 30 13:57:02 :: AUTH_PEER_WRITE: size 18
+May 30 13:57:02 :: QID_ITEM 1
+May 30 13:57:02 :: ITEM_CACHE: new cache 14
+May 30 13:57:02 :: ITEM_LOAD: count 334 pid 14
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030104 vnum88972 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030104
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031850 vnum30033 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031850
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031849 vnum30012 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031849
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031848 vnum30041 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031848
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031847 vnum30030 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031847
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055883 vnum30612 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055883
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30008177 vnum30271 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30008177
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037706 vnum50333 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50037706
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055830 vnum30616 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055830
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30031583 vnum70102 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30031583
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055723 vnum30506 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055723
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055918 vnum30284 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055918
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055927 vnum30280 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055927
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031843 vnum30031 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031843
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060458 vnum80024 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060458
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30031586 vnum50513 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30031586
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055722 vnum30518 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055722
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30061231 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30061231
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031846 vnum30021 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031846
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031845 vnum30105 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031845
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031844 vnum30032 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031844
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060436 vnum80025 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060436
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055885 vnum30505 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055885
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051177 vnum71206 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051177
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051383 vnum28343 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051383
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30052411 vnum71206 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30052411
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057403 vnum189 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057403
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081285 vnum30516 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10081285
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055928 vnum30524 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055928
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060484 vnum80023 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060484
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057508 vnum18900 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057508
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057495 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057495
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057250 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057250
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057251 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057251
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057249 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057249
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057391 vnum50435 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057391
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031370 vnum187 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031370
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031374 vnum187 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031374
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060446 vnum80026 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060446
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031373 vnum187 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031373
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057401 vnum88242 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057401
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081287 vnum30618 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10081287
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060505 vnum80027 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060505
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057497 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057497
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055926 vnum30275 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055926
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081284 vnum30505 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10081284
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10081286 vnum30610 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10081286
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057437 vnum11299 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057437
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10037711 vnum86050 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10037711
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030284 vnum28334 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030284
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030290 vnum28337 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030290
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060431 vnum80022 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060431
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030385 vnum88976 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030385
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060434 vnum30279 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060434
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030127 vnum71085 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030127
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051362 vnum28332 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051362
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030382 vnum88975 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030382
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030380 vnum88974 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030380
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030379 vnum88970 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030379
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030375 vnum88973 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030375
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10030381 vnum88971 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10030381
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060442 vnum80019 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060442
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051170 vnum50143 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051170
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031842 vnum30011 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031842
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051247 vnum28115 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051247
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051365 vnum28040 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051365
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037705 vnum50336 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50037705
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031731 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031731
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031728 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031728
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034446 vnum70402 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10034446
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057494 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057494
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029899 vnum28034 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029899
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029886 vnum28236 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029886
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029772 vnum39052 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029772
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029773 vnum28232 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029773
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029777 vnum39048 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029777
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029778 vnum28341 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029778
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029781 vnum72310 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029781
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029785 vnum28338 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029785
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029794 vnum28231 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029794
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029809 vnum71094 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029809
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029812 vnum28438 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029812
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037708 vnum50334 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50037708
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029819 vnum28335 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029819
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029833 vnum28130 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029833
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029841 vnum28238 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029841
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029849 vnum39050 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029849
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029850 vnum28136 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029850
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029858 vnum28039 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029858
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029875 vnum39054 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029875
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029876 vnum28234 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029876
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029905 vnum28331 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029905
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029919 vnum28336 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029919
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029926 vnum28235 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029926
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029931 vnum28333 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029931
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029948 vnum28131 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029948
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029954 vnum28233 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029954
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029961 vnum28243 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029961
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029976 vnum28237 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029976
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50029987 vnum28133 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50029987
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030000 vnum28437 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030000
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030007 vnum28442 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030007
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030020 vnum28140 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030020
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030025 vnum28139 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030025
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030052 vnum28143 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030052
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030137 vnum28035 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030137
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030062 vnum28041 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030062
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030081 vnum28339 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030081
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030069 vnum28242 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030069
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030105 vnum28240 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030105
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030119 vnum28135 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030119
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030180 vnum28330 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030180
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030187 vnum28031 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030187
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030199 vnum28141 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030199
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030204 vnum28441 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030204
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030276 vnum28239 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030276
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030228 vnum28230 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030228
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030243 vnum28431 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030243
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030253 vnum28142 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030253
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030259 vnum28042 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030259
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030265 vnum28435 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030265
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030350 vnum28134 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030350
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50030371 vnum28340 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50030371
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055882 vnum30516 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055882
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031446 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031446
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031627 vnum187 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031627
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031626 vnum70402 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031626
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031724 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031724
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031726 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031726
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031721 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031721
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031725 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031725
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031727 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031727
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031433 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031433
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031444 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031444
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031432 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031432
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031440 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031440
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031436 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031436
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031447 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031447
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031434 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031434
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031445 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031445
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031431 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031431
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031441 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031441
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031442 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031442
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031438 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031438
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031430 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031430
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031439 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031439
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031722 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031722
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031435 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031435
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031443 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031443
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031437 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031437
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031462 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031462
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031467 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031467
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031463 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031463
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031459 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031459
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031470 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031470
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031460 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031460
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031471 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031471
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031468 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031468
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031465 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031465
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031449 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031449
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031461 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031461
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031466 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031466
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031469 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031469
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031464 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031464
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031454 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031454
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031448 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031448
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031452 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031452
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031453 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031453
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031451 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031451
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031455 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031455
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031450 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031450
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031456 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031456
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031457 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031457
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031458 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031458
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031473 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031473
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031483 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031483
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031479 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031479
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031476 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031476
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031474 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031474
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031484 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031484
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031480 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031480
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031477 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031477
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031481 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031481
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031475 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031475
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031472 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031472
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031482 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031482
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031478 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031478
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031729 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031729
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031730 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031730
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031723 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031723
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031851 vnum30147 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031851
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031852 vnum30007 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031852
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031853 vnum30060 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031853
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031854 vnum30059 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031854
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031855 vnum30048 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031855
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031856 vnum30049 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031856
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031857 vnum33431 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031857
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031859 vnum33433 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031859
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031860 vnum33434 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031860
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031858 vnum33432 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031858
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50031861 vnum33435 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50031861
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034442 vnum70402 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10034442
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051171 vnum71203 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051171
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034437 vnum70402 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10034437
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051158 vnum71204 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051158
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10034439 vnum70402 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10034439
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075595 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10075595
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055831 vnum30520 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055831
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055923 vnum27994 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055923
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055884 vnum30587 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055884
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057498 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057498
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057493 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057493
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060652 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060652
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30065514 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30065514
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30060433 vnum30277 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30060433
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051194 vnum71205 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051194
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057416 vnum88922 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057416
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057402 vnum88241 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057402
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50037851 vnum45242 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50037851
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057507 vnum18060 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057507
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051392 vnum28342 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051392
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051452 vnum28036 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051452
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066396 vnum30613 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066396
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051678 vnum86051 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051678
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051675 vnum55005 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051675
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051708 vnum86052 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051708
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051730 vnum55004 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051730
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057436 vnum41307 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057436
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055540 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055540
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057281 vnum16109 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057281
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057276 vnum15189 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057276
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057488 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057488
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057392 vnum50447 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057392
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075866 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10075866
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057489 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057489
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057490 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057490
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30064710 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30064710
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066251 vnum28043 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066251
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066281 vnum28038 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066281
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066356 vnum28241 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066356
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066384 vnum28137 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066384
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066392 vnum28439 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066392
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066602 vnum28030 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066602
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066609 vnum28430 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066609
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066684 vnum28440 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066684
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066691 vnum28138 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066691
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066711 vnum28132 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066711
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057496 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057496
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10066978 vnum28032 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10066978
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067156 vnum28436 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10067156
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067186 vnum28037 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10067186
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067404 vnum28433 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10067404
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10067780 vnum28443 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10067780
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068016 vnum28033 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10068016
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068075 vnum28432 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10068075
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10068156 vnum28434 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10068156
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10071192 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10071192
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057492 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057492
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10074158 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10074158
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50054217 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50054217
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10074953 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10074953
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075320 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10075320
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10075389 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10075389
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055922 vnum27993 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055922
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055921 vnum27992 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055921
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10076760 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10076760
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id10077490 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 10077490
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057257 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057257
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057254 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057254
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057252 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057252
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057256 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057256
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057255 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057255
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057253 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057253
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057260 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057260
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057258 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057258
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057259 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057259
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057262 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057262
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057261 vnum71084 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057261
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057280 vnum17109 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057280
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057275 vnum13049 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057275
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057278 vnum12249 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057278
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057279 vnum14109 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057279
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057435 vnum14106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057435
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057487 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057487
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066401 vnum70031 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066401
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066398 vnum86055 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066398
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066399 vnum70401 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066399
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066407 vnum72320 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066407
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066402 vnum50266 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066402
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066409 vnum86053 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066409
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066413 vnum30798 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066413
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066415 vnum30801 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066415
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066416 vnum30802 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066416
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066417 vnum30803 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066417
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066418 vnum89101 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066418
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066419 vnum89106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066419
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066420 vnum89107 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066420
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057414 vnum70038 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057414
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057417 vnum88923 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057417
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057418 vnum88924 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057418
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057419 vnum88925 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057419
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057420 vnum88926 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057420
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057422 vnum88948 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057422
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057423 vnum88949 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057423
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057424 vnum88950 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057424
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057426 vnum88946 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057426
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057427 vnum88947 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057427
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057428 vnum30256 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057428
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057399 vnum88246 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057399
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057430 vnum11456 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057430
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057431 vnum15106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057431
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057432 vnum15106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057432
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057433 vnum16106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057433
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057434 vnum16106 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057434
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50055888 vnum20765 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50055888
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057415 vnum71148 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057415
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057413 vnum53256 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057413
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066403 vnum50099 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066403
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057400 vnum88244 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057400
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057425 vnum88951 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057425
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066421 vnum10951 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066421
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066422 vnum30179 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066422
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057483 vnum50067 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057483
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066406 vnum55009 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066406
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057421 vnum88927 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057421
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30051948 vnum41775 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30051948
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066412 vnum76025 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066412
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066400 vnum86075 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066400
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057429 vnum73005 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057429
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066414 vnum30800 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 30066414
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057412 vnum71139 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057412
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057491 vnum30006 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057491
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057397 vnum19 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057397
+May 30 13:57:02 :: ITEM_CACHE: PutItemCache ==> New CItemCache id50057398 vnum8240 new owner14
+May 30 13:57:02 :: ITEM_CACHE: save 14 id 50057398
+May 30 13:57:02 :: QID_QUEST 1
+May 30 13:57:02 :: QUEST_LOAD: count 43 PID 14
+May 30 13:57:02 :: info of pLoginData1 before call ItemAwardfunction 678699008
+May 30 13:57:02 :: QID_AFFECT 1
+May 30 13:57:02 :: AFFECT_LOAD: count 10 PID 14
+May 30 13:57:02 :: QID_BATTLE_PASS 1
+May 30 13:57:02 :: BATTLE_PASS_LOAD: count 4 PID 14
+May 30 13:57:02 :: QID_SKILL_COLOR 1 14
+May 30 13:57:02 :: SKILL_COLOR_LOAD 0, 0, 0, 0,
+May 30 13:57:02 :: [     3450] return 0/0/8 async 0/0/0
+May 30 13:57:04 :: [     3500] return 0/0/0 async 0/0/2
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030381
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030104
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057420
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057426
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030375
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057419
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057424
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057416
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10034437
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50031626
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030379
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057418
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057398
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057423
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030380
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057421
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057417
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057436
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057422
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057425
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10034442
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10034446
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50057427
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 50037851
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10030382
+May 30 13:57:05 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:57:05 :: ITEM_CACHE: save 14 id 10034439
+May 30 13:57:06 :: [     3550] return 0/0/0 async 0/0/0
+May 30 13:57:08 :: [     3600] return 0/0/0 async 0/0/0
+May 30 13:57:10 :: [     3650] return 0/0/1 async 0/0/0
+May 30 13:57:12 :: [     3700] return 0/0/0 async 0/0/0
+May 30 13:57:14 :: [     3750] return 0/0/0 async 0/0/0
+May 30 13:57:15 :: ITEM_CACHE: PutItemCache ==> New CItemCache id30066423 vnum19 new owner14
+May 30 13:57:15 :: ITEM_CACHE: save 14 id 30066423
+May 30 13:57:16 :: [     3800] return 0/0/0 async 0/0/0
+May 30 13:57:18 :: [     3850] return 0/0/0 async 0/0/0
+May 30 13:57:20 :: [     3900] return 0/0/1 async 0/0/0
+May 30 13:57:22 :: [     3950] return 0/0/0 async 0/0/0
+May 30 13:57:24 :: [     4000] return 0/0/0 async 0/0/0
+May 30 13:57:26 :: [     4050] return 0/0/0 async 0/0/0
+May 30 13:57:28 :: [     4100] return 0/0/0 async 0/0/0
+May 30 13:57:30 :: [     4150] return 0/0/1 async 0/0/0
+May 30 13:57:32 :: [     4200] return 0/0/0 async 0/0/0
+May 30 13:57:34 :: [     4250] return 0/0/0 async 0/0/0
+May 30 13:57:36 :: [     4300] return 0/0/0 async 0/0/0
+May 30 13:57:38 :: [     4350] return 0/0/0 async 0/0/0
+May 30 13:57:40 :: [     4400] return 0/0/1 async 0/0/0
+May 30 13:57:42 :: [     4450] return 0/0/0 async 0/0/0
+May 30 13:57:44 :: [     4500] return 0/0/0 async 0/0/0
+May 30 13:57:46 :: [     4550] return 0/0/0 async 0/0/0
+May 30 13:57:48 :: [     4600] return 0/0/0 async 0/0/0
+May 30 13:57:50 :: [     4650] return 0/0/1 async 0/0/0
+May 30 13:57:52 :: [     4700] return 0/0/0 async 0/0/0
+May 30 13:57:54 :: [     4750] return 0/0/0 async 0/0/0
+May 30 13:57:56 :: [     4800] return 0/0/0 async 0/0/0
+May 30 13:57:58 :: [     4850] return 0/0/0 async 0/0/0
+May 30 13:58:00 :: [     4900] return 0/0/1 async 0/0/0
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030379
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030381
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030104
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030375
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030380
+May 30 13:58:02 :: ITEM_CACHE: PutItemCache ==> Have Cache
+May 30 13:58:02 :: ITEM_CACHE: save 14 id 10030382
+May 30 13:58:02 :: LOGOUT InsertLogoutPlayer abyss 14
+May 30 13:58:02 :: LOGOUT: Insert player pid(14)
+May 30 13:58:02 :: LOGOUT InsertLogoutPlayer abyss 39
+May 30 13:58:02 :: LOGOUT: Insert player pid(39)
+May 30 13:58:02 :: SetPlay off 1225694520 abyss
+May 30 13:58:02 :: LOGOUT abyss 
+May 30 13:58:02 :: AUTH_PEER_WRITE: size 18
+May 30 13:58:02 :: [     4950] return 0/0/1 async 0/0/5
+May 30 13:58:04 :: [     5000] return 0/0/0 async 0/0/0
+May 30 13:58:06 :: [     5050] return 0/0/0 async 0/0/0
+May 30 13:58:08 :: [     5100] return 0/0/0 async 0/0/0
+May 30 13:58:10 :: [     5150] return 0/0/1 async 0/0/0
+May 30 13:58:12 :: [     5200] return 0/0/0 async 0/0/0
+May 30 13:58:14 :: [     5250] return 0/0/0 async 0/0/0
+May 30 13:58:16 :: [     5300] return 0/0/0 async 0/0/0
+May 30 13:58:18 :: [     5350] return 0/0/0 async 0/0/0
+May 30 13:58:20 :: [     5400] return 0/0/1 async 0/0/0
+May 30 13:58:22 :: [     5450] return 0/0/0 async 0/0/0
+May 30 13:58:24 :: [     5500] return 0/0/0 async 0/0/0
+May 30 13:58:26 :: [     5550] return 0/0/0 async 0/0/0
+May 30 13:58:28 :: [     5600] return 0/0/0 async 0/0/0
+May 30 13:58:30 :: [     5650] return 0/0/1 async 0/0/0
+May 30 13:58:32 :: [     5700] return 0/0/0 async 0/0/0
+May 30 13:58:34 :: [     5750] return 0/0/0 async 0/0/0
+May 30 13:58:36 :: [     5800] return 0/0/0 async 0/0/0
+May 30 13:58:38 :: [     5850] return 0/0/0 async 0/0/0
+May 30 13:58:40 :: [     5900] return 0/0/1 async 0/0/0
+May 30 13:58:42 :: [     5950] return 0/0/0 async 0/0/0
+May 30 13:58:44 :: [     6000] return 0/0/0 async 0/0/0
+May 30 13:58:46 :: [     6050] return 0/0/0 async 0/0/0
+May 30 13:58:48 :: [     6100] return 0/0/0 async 0/0/0
+May 30 13:58:50 :: [     6150] return 0/0/1 async 0/0/0
+May 30 13:58:52 :: [     6200] return 0/0/0 async 0/0/0
+May 30 13:58:54 :: [     6250] return 0/0/0 async 0/0/0
+May 30 13:58:56 :: [     6300] return 0/0/0 async 0/0/0
+May 30 13:58:58 :: [     6350] return 0/0/0 async 0/0/0
+May 30 13:59:00 :: [     6400] return 0/0/1 async 0/0/0
+May 30 13:59:02 :: [     6450] return 0/0/0 async 0/0/0
+May 30 13:59:04 :: [     6500] return 0/0/0 async 0/0/0
+May 30 13:59:06 :: [     6550] return 0/0/0 async 0/0/0
+May 30 13:59:08 :: [     6600] return 0/0/0 async 0/0/0
+May 30 13:59:10 :: [     6650] return 0/0/1 async 0/0/0
+May 30 13:59:12 :: [     6700] return 0/0/0 async 0/0/0
+May 30 13:59:14 :: [     6750] return 0/0/0 async 0/0/0
+May 30 13:59:16 :: [     6800] return 0/0/0 async 0/0/0
+May 30 13:59:18 :: [     6850] return 0/0/0 async 0/0/0
+May 30 13:59:20 :: [     6900] return 0/0/1 async 0/0/0
+May 30 13:59:22 :: [     6950] return 0/0/0 async 0/0/0
+May 30 13:59:24 :: [     7000] return 0/0/0 async 0/0/0
+May 30 13:59:26 :: [     7050] return 0/0/0 async 0/0/0
+May 30 13:59:28 :: [     7100] return 0/0/0 async 0/0/0
+May 30 13:59:30 :: [     7150] return 0/0/1 async 0/0/0
+May 30 13:59:32 :: [     7200] return 0/0/0 async 0/0/0
+May 30 13:59:34 :: [     7250] return 0/0/0 async 0/0/0
+May 30 13:59:36 :: [     7300] return 0/0/0 async 0/0/0
+May 30 13:59:38 :: [     7350] return 0/0/0 async 0/0/0
+May 30 13:59:40 :: [     7400] return 0/0/1 async 0/0/0
+May 30 13:59:42 :: [     7450] return 0/0/0 async 0/0/0
+May 30 13:59:44 :: [     7500] return 0/0/0 async 0/0/0
+May 30 13:59:46 :: [     7550] return 0/0/0 async 0/0/0
+May 30 13:59:48 :: [     7600] return 0/0/0 async 0/0/0
+May 30 13:59:50 :: [     7650] return 0/0/1 async 0/0/0
+May 30 13:59:52 :: [     7700] return 0/0/0 async 0/0/0
+May 30 13:59:54 :: [     7750] return 0/0/0 async 0/0/0
+May 30 13:59:56 :: [     7800] return 0/0/0 async 0/0/0
+May 30 13:59:58 :: [     7850] return 0/0/0 async 0/0/0
+May 30 14:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 13)

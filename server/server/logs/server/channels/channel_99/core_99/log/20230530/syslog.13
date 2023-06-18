@@ -1,0 +1,467 @@
+SYSERR: May 30 13:56:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:33 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:34 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:35 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:36 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:37 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:39 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:56:41 :: InputDB::MapLocations 1
+May 30 13:56:41 :: MapLocation::Insert : 3 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 23 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 25 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 26 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 43 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 61 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 62 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 63 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 64 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 65 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 67 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 68 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 69 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 70 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 210 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 215 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 218 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 302 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 304 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 353 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 354 51.254.23.214 30243
+May 30 13:56:41 :: MapLocation::Insert : 357 51.254.23.214 30243
+May 30 13:56:41 :: InputDB:P2P 51.254.23.214:30244
+May 30 13:56:41 :: SYSTEM: Trying to connect to 51.254.23.214:30244
+May 30 13:56:41 :: SYSTEM: connected to server (fd 17, ptr 0x2b85c200)
+May 30 13:56:41 :: P2P Connector opened (host 51.254.23.214)
+May 30 13:56:41 :: QUEST eventflag oxevent_status 0 prev_value 0
+SYSERR: May 30 13:56:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:43 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:44 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:45 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:46 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:47 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:49 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:53 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:54 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:55 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:56 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:57 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:56:59 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:01 :: SYSTEM: new connection from [46.247.137.201] fd: 18 handshake 939142446 output input_len 0, ptr 0x2b570c00
+SYSERR: May 30 13:57:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:01 :: Handshake: lower than zero -16
+May 30 13:57:01 :: Handshake: lower than zero -5
+May 30 13:57:01 :: Handshake: client_time 0 server_time 133951
+May 30 13:57:02 :: LOGIN_BY_KEY: abyss key 1225694520
+May 30 13:57:02 :: LoginSuccess
+May 30 13:57:02 :: 	player(abyss).job(0)
+May 30 13:57:02 :: 	player(Testing).job(2)
+May 30 13:57:02 :: 	player().job(0)
+May 30 13:57:02 :: 	player().job(0)
+May 30 13:57:02 :: 	player().job(0)
+May 30 13:57:02 :: success to 51.254.23.214:30247
+May 30 13:57:02 :: success to 51.254.23.214:30243
+May 30 13:57:02 :: InputDB::login_success: abyss
+May 30 13:57:02 :: player_select: login: abyss index: 0
+May 30 13:57:02 :: GM_NEW_GET_LEVEL : FIND ACCOUNT
+May 30 13:57:02 :: PK_MODE: abyss 3
+May 30 13:57:02 :: PLAYER_LOAD: abyss PREMIUM 1702335600 1702335600, LOGGOFF_INTERVAL 142 PTR: 0x4d0bd040
+May 30 13:57:02 :: GM_LOGIN(gmlevel=5, name=abyss(14), pos=(961571, 263834)
+May 30 13:57:02 :: InputDB: player_load abyss 961571x263834x0 LEVEL 35 MOV_SPEED 200 JOB 0 ATG 0 DFG 82 GMLv 0
+SYSERR: May 30 13:57:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:02 :: ITEM_LOAD: COUNT abyss 334
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: REAL_TIME_EXPIRE: StartRealTimeExpireEvent
+May 30 13:57:02 :: QUEST_LOAD: count 43
+May 30 13:57:02 ::             biologist.delivered 1
+May 30 13:57:02 ::             biologist.time 1685442993
+May 30 13:57:02 ::             comandos_tm.iniciar 1
+May 30 13:57:02 ::             dragonlair_zone.ch 1
+May 30 13:57:02 ::             dragonlair_zone.cooldown 1659211304
+May 30 13:57:02 ::             dragonlair_zone.disconnect 1659206253
+May 30 13:57:02 ::             dragonlair_zone.enter_time 1659205904
+May 30 13:57:02 ::             dragonlair_zone.idx 2080001
+May 30 13:57:02 ::             enchanted_forest.cooldown 1685413567
+May 30 13:57:02 ::             enchanted_forest.disconnect 1685408497
+May 30 13:57:02 ::             enchanted_forest.idx 2100000
+May 30 13:57:02 ::             exp.stat 1
+May 30 13:57:02 ::             give_basic_weapon.__status 668443392
+May 30 13:57:02 ::             guild_manage.new_disband_time 1685407521
+May 30 13:57:02 ::             horse_name.valid_till 1784830353
+May 30 13:57:02 ::             hydra_zone.ch 1
+May 30 13:57:02 ::             hydra_zone.cooldown 1685414368
+May 30 13:57:02 ::             hydra_zone.disconnect 1685409294
+May 30 13:57:02 ::             hydra_zone.enter_time 1685408968
+May 30 13:57:02 ::             hydra_zone.idx 3530000
+May 30 13:57:02 ::             item_attr_mission.attr_type_1 5
+May 30 13:57:02 ::             item_attr_mission.attr_type_2 21
+May 30 13:57:02 ::             item_attr_mission.attr_type_3 22
+May 30 13:57:02 ::             item_attr_mission.attr_type_4 9
+May 30 13:57:02 ::             item_attr_mission.attr_value_1 12
+May 30 13:57:02 ::             item_attr_mission.attr_value_2 20
+May 30 13:57:02 ::             item_attr_mission.attr_value_3 20
+May 30 13:57:02 ::             item_attr_mission.attr_value_4 20
+May 30 13:57:02 ::             item_attr_mission.id_ask_elected 4
+May 30 13:57:02 ::             item_attr_mission.saved_day 8
+May 30 13:57:02 ::             main_quest_lv1.__status -1147521841
+May 30 13:57:02 ::             pyramide_zone.ch 1
+May 30 13:57:02 ::             pyramide_zone.cooldown 1685411947
+May 30 13:57:02 ::             pyramide_zone.disconnect 1685408926
+May 30 13:57:02 ::             pyramide_zone.enter_time 1685408347
+May 30 13:57:02 ::             pyramide_zone.idx 3570000
+May 30 13:57:02 ::             rune.__status 777843330
+May 30 13:57:02 ::             rune_zone.ch 1
+May 30 13:57:02 ::             rune_zone.cooldown 1685416006
+May 30 13:57:02 ::             rune_zone.disconnect 1685409238
+May 30 13:57:02 ::             rune_zone.enter_time 1685408806
+May 30 13:57:02 ::             rune_zone.idx 2180000
+May 30 13:57:02 ::             system_gaya.gaya_time_world_4 1685423752
+May 30 13:57:03 :: VERSION: abyss 1215955205 metin2client.exe
+SYSERR: May 30 13:57:03 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:03 :: SAVE: abyss 961571x263834
+May 30 13:57:04 :: SHOW: abyss 961571x263834x0
+May 30 13:57:04 :: AddAffect abyss type 215 apply 0 0 flag 28 duration 5
+May 30 13:57:04 :: ENTERGAME: abyss 961571x263834x0 46.247.137.201 map_index 41
+May 30 13:57:04 :: HORSE STAMINA CONSUME EVENT CANCEL 0x0
+May 30 13:57:04 :: HORSE STAMINA REGEN EVENT CREATE 0x4d0e43e0
+May 30 13:57:04 :: SendLandList map 41 count 0 elem_size: 0
+May 30 13:57:04 :: AddAffect abyss type 500 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 0 16887776min
+May 30 13:57:04 :: AddAffect abyss type 501 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 1 16887776min
+May 30 13:57:04 :: AddAffect abyss type 502 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 2 16887776min
+May 30 13:57:04 :: AddAffect abyss type 503 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 3 16887776min
+May 30 13:57:04 :: AddAffect abyss type 504 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 4 16887776min
+May 30 13:57:04 :: AddAffect abyss type 505 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 5 16887776min
+May 30 13:57:04 :: AddAffect abyss type 506 apply 0 0 flag 0 duration 16887776
+May 30 13:57:04 :: PREMIUM: abyss type 6 16887776min
+May 30 13:57:04 :: VERSION CHECK 1215955205 1215955205
+May 30 13:57:04 :: reallocating buffer to 4096, current 1024
+May 30 13:57:04 :: HORSENAME: update 14 [TM]Ragnar Horse
+SYSERR: May 30 13:57:04 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:04 :: QUEST_LOAD: Login pc 14 by event
+May 30 13:57:04 :: CreateTarget : target pid 14 quest 24 name __TARGET__ arg 2 11565 0
+May 30 13:57:04 :: CreateTarget : target pid 14 quest 50 name __TARGET__ arg 2 11559 0
+May 30 13:57:04 :: AddAffect abyss type 999 apply 0 0 flag 0 duration 31536000
+SYSERR: May 30 13:57:05 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:05 :: SendTargetUpdatePacket 1 960100x260700
+May 30 13:57:05 :: SendTargetUpdatePacket 2 968400x276200
+SYSERR: May 30 13:57:06 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:07 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:09 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:13 :: COMMAND: abyss: item
+SYSERR: May 30 13:57:13 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:14 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:15 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:16 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:17 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:19 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:23 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:24 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:25 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:26 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:27 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:29 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:30 :: SECTREE DIFFER: abyss 150x42 was 150x41 dist 1.0m
+SYSERR: May 30 13:57:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:33 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:34 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:35 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:36 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:37 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:39 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:43 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:44 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:45 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:46 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:47 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:48 :: COMMAND: abyss: manage_exp
+SYSERR: May 30 13:57:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:49 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:53 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:54 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:55 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:56 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:57 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:57:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:57:58 :: COMMAND: abyss: quit
+SYSERR: May 30 13:57:59 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 13:58:02 :: DISCONNECT: abyss (DESC::~DESC)
+May 30 13:58:02 :: SAVE: abyss 960771x269743
+May 30 13:58:02 :: QUEST clear timer 0
+May 30 13:58:02 :: SYSTEM: closing socket. DESC #18
+SYSERR: May 30 13:58:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:03 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:04 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:05 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:06 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:07 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:09 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:13 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:14 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:15 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:16 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:17 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:19 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:23 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:24 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:25 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:26 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:27 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:29 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:33 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:34 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:35 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:36 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:37 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:39 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:43 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:44 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:45 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:46 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:47 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:49 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:53 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:54 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:55 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:56 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:57 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:58:59 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:00 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:01 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:02 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:03 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:04 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:05 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:06 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:07 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:08 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:09 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:10 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:11 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:12 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:13 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:14 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:15 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:16 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:17 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:18 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:19 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:20 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:21 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:22 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:23 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:24 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:25 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:26 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:27 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:28 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:29 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:30 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:31 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:32 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:33 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:34 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:35 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:36 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:37 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:38 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:39 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:40 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:41 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:42 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:43 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:44 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:45 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:46 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:47 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:48 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:49 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:50 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:51 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:52 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:53 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:54 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:55 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:56 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:57 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:58 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+SYSERR: May 30 13:59:59 :: SpawnGroup: NOT_EXIST_GROUP_VNUM(165) Map(214) 
+May 30 14:00:00 :: SYSTEM: LOG ROTATE (2023-05-30 13)

@@ -1,0 +1,37 @@
+[
+    {
+        "serv": "server", 
+        "path": "server/database", 
+        "chan": 0, 
+        "type": 1, 
+        "name": "server-database"
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/authentication", 
+        "chan": 0, 
+        "type": 2, 
+        "name": "server-authentication"
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/channels/channel_1/core_1", 
+        "chan": 1, 
+        "type": 5, 
+        "name": "server-ch1-core_1"
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/channels/channel_1/core_2", 
+        "chan": 1, 
+        "type": 5, 
+        "name": "server-ch1-core_2"
+    }, 
+    {
+        "serv": "server", 
+        "path": "server/channels/channel_99/core_99", 
+        "chan": 99, 
+        "type": 5, 
+        "name": "server-ch99-core_99"
+    }
+]
