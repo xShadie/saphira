@@ -1,0 +1,21 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.53e+06 and idx < 3.54e+06 then 
+if d . getf ( idx , "step" ) == 10 then 
+d . setf ( idx , "step" , 11 ) 
+d . clear_regen ( idx ) 
+d . kill_all_monstershydra ( idx ) 
+d . setf ( idx , "repaired" , 0 ) 
+local treepos = { 
+[ 1 ] = { [ "x" ] = 401 , [ "y" ] = 388 } , 
+[ 2 ] = { [ "x" ] = 401 , [ "y" ] = 416 } , 
+[ 3 ] = { [ "x" ] = 386 , [ "y" ] = 416 } , 
+[ 4 ] = { [ "x" ] = 367 , [ "y" ] = 416 } , 
+[ 5 ] = { [ "x" ] = 367 , [ "y" ] = 388 } 
+} 
+for index , position in ipairs ( treepos ) begin 
+local vid = d . spawn_mob ( idx , 20437 , position [ "x" ] , position [ "y" ] ) 
+end 
+d . cmdchat ( idx , "BINARY_Update_Mast_Timer 5" ) 
+end 
+end 
+ return end 

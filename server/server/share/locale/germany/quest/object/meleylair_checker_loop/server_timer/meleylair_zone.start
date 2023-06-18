@@ -1,0 +1,29 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 5 then 
+d . attack_meley ( arg ) 
+d . setf ( arg , "floor" , 6 ) 
+server_timer ( "meleylair_checker" , 3 , arg ) 
+elseif f == 11 then 
+d . attack_meley ( arg ) 
+d . setf ( arg , "floor" , 12 ) 
+server_timer ( "meleylair_checker" , 3 , arg ) 
+elseif f == 17 then 
+clear_server_timer ( "meleylair_stone_spawn2" , arg ) 
+d . attack_meley ( arg ) 
+d . setf ( arg , "floor" , 18 ) 
+d . kill_all_monsters ( arg ) 
+d . clear_regen ( arg ) 
+server_timer ( "meleylair_checker" , 3 , arg ) 
+elseif f == 19 then 
+if d . getf ( arg , "killed_count" ) == 4 then 
+clear_server_timer ( "meleylair_stone_limit" , arg ) 
+d . setf ( arg , "floor" , 20 ) 
+server_timer ( "meleylair_kill_boss" , 1 , arg ) 
+end 
+end 
+else 
+clear_server_timer ( "meleylair_checker_loop" , arg ) 
+meleylair_zone . clear ( arg ) 
+end 

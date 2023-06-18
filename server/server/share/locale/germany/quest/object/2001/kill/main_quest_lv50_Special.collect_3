@@ -1,0 +1,11 @@
+if pc . count_item ( 30059 ) <= 25 then local lang = pc . get_language ( ) 
+local s = number ( 1 , 100 ) 
+if s <= 5 then 
+pc . give_item2 ( 30059 , 1 ) 
+if pc . count_item ( 30059 ) >= 25 then 
+say ( gameforge [ lang ] . main_quest . _mission_orc_79 ) 
+say_item_vnum ( 30059 ) 
+csay . red ( gameforge [ lang ] . main_quest . _mission_orc_47 ) 
+end 
+end 
+ return end 

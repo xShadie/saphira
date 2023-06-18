@@ -1,0 +1,81 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30804 then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 6 then 
+item . remove ( ) 
+local c = d . getf ( idx , "count" ) 
+if c == 1 then 
+if npc . get_vid ( ) == d . getf ( idx , "uniue_vid_anu1" ) then 
+d . setf ( idx , "count" , 2 ) 
+npc . kill ( ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+local pos = { 
+[ 1 ] = { [ "x" ] = 157 , [ "y" ] = 1042 } , 
+[ 2 ] = { [ "x" ] = 195 , [ "y" ] = 1015 } , 
+[ 3 ] = { [ "x" ] = 202 , [ "y" ] = 1040 } , 
+[ 4 ] = { [ "x" ] = 151 , [ "y" ] = 1019 } , 
+[ 5 ] = { [ "x" ] = 163 , [ "y" ] = 1009 } , 
+[ 6 ] = { [ "x" ] = 176 , [ "y" ] = 1053 } 
+} 
+table_shuffle ( pos ) 
+d . spawn_mob ( idx , 8474 , pos [ 1 ] [ "x" ] , pos [ 1 ] [ "y" ] ) 
+d . notice ( idx , 1184 , "" , true ) 
+else 
+d . setf ( idx , "count" , 0 ) 
+d . notice ( idx , 1182 , "" , true ) 
+end 
+elseif c == 3 then 
+if npc . get_vid ( ) == d . getf ( idx , "uniue_vid_anu2" ) then 
+d . setf ( idx , "count" , 4 ) 
+npc . kill ( ) 
+d . kill_all_monsters ( idx ) 
+d . set_regen_file ( idx , "data/dungeon/pyramide/regen2.txt" ) 
+d . notice ( idx , 1186 , "" , true ) 
+else 
+local pos = { 
+[ 1 ] = { [ "x" ] = 157 , [ "y" ] = 1042 } , 
+[ 2 ] = { [ "x" ] = 195 , [ "y" ] = 1015 } , 
+[ 3 ] = { [ "x" ] = 202 , [ "y" ] = 1040 } , 
+[ 4 ] = { [ "x" ] = 151 , [ "y" ] = 1019 } , 
+[ 5 ] = { [ "x" ] = 163 , [ "y" ] = 1009 } , 
+[ 6 ] = { [ "x" ] = 176 , [ "y" ] = 1053 } 
+} 
+table_shuffle ( pos ) 
+d . spawn_mob ( idx , 8474 , pos [ 1 ] [ "x" ] , pos [ 1 ] [ "y" ] ) 
+d . notice ( idx , 1182 , "" , true ) 
+d . setf ( idx , "count" , 2 ) 
+end 
+elseif c == 5 then 
+if npc . get_vid ( ) == d . getf ( idx , "uniue_vid_anu3" ) then 
+d . setf ( idx , "count" , 6 ) 
+d . setf ( idx , "killed" , 0 ) 
+npc . kill ( ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+local pos = { 
+[ 1 ] = { [ "x" ] = 157 , [ "y" ] = 1042 } , 
+[ 2 ] = { [ "x" ] = 195 , [ "y" ] = 1015 } , 
+[ 3 ] = { [ "x" ] = 202 , [ "y" ] = 1040 } , 
+[ 4 ] = { [ "x" ] = 151 , [ "y" ] = 1019 } , 
+[ 5 ] = { [ "x" ] = 163 , [ "y" ] = 1009 } , 
+[ 6 ] = { [ "x" ] = 176 , [ "y" ] = 1053 } 
+} 
+for index , position in ipairs ( pos ) begin 
+d . spawn_mob ( idx , 8474 , position [ "x" ] , position [ "y" ] ) 
+end 
+d . notice ( idx , 1184 , "" , true ) 
+else 
+d . notice ( idx , 1182 , "" , true ) 
+d . setf ( idx , "count" , 4 ) 
+end 
+elseif c == 7 then 
+d . setf ( idx , "count" , 8 ) 
+npc . kill ( ) 
+d . kill_all_monsters ( idx ) 
+d . spawn_mob ( idx , 4157 , 177 , 1031 ) 
+d . notice ( idx , 1188 , "" , true ) 
+d . notice ( idx , 1189 , "" , true ) 
+end 
+end 
+end 
+ return end 

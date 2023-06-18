@@ -1,0 +1,6 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+pc . remove_item ( 30095 , 1 ) 
+pc . change_gold ( 400000 * number ( 1 , 3 ) ) 

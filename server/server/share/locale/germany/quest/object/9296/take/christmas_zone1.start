@@ -1,0 +1,24 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30773 then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 then 
+if d . getf ( idx , "step" ) == 4 then 
+item . remove ( ) 
+local g = d . getf ( idx , "gift" ) - 1 
+if g <= 0 then 
+d . clear_regen ( idx ) 
+d . setf ( idx , "step" , 3 ) 
+npc . kill ( ) 
+d . notice ( idx , 1316 , "" , true ) 
+else 
+if g == 1 then 
+d . notice ( idx , 1322 , "" , true ) 
+else 
+d . notice ( idx , 1321 , string . format ( "%d" , g ) , true ) 
+end 
+d . setf ( idx , "gift" , g ) 
+end 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,29 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+server_timer ( "meleylair_end" , 3599 , arg ) 
+local bossvid = d . spawn_mob ( arg , 6193 , 130 , 77 , 360 ) 
+d . setf ( arg , "boss" , bossvid ) 
+local success = d . set_vid_invincible ( bossvid , true ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 123 , [ "y" ] = 137 , [ "dir" ] = 225 } , 
+[ 2 ] = { [ "x" ] = 123 , [ "y" ] = 124 , [ "dir" ] = 225 } , 
+[ 3 ] = { [ "x" ] = 136 , [ "y" ] = 123 , [ "dir" ] = 225 } , 
+[ 4 ] = { [ "x" ] = 137 , [ "y" ] = 137 , [ "dir" ] = 225 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( arg , 6118 , position [ "x" ] , position [ "y" ] , position [ "dir" ] ) 
+d . setf ( arg , string . format ( "statue_vid%d" , index ) , vid ) 
+end 
+d . set_regen_file ( arg , "data/dungeon/meley/regen1.txt" ) 
+server_loop_timer ( "meleylair_checker_loop" , 2 , arg ) 
+d . notice ( arg , 599 , "" , true ) 
+d . notice ( arg , 600 , string . format ( "%d" , 60 ) , true ) 
+d . notice ( arg , 1296 , "75" , true ) 
+end 
+else 
+meleylair_zone . clear ( arg ) 
+end 

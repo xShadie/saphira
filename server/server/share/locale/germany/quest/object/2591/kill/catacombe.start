@@ -1,0 +1,14 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.16e+06 and idx < 2.17e+06 then 
+if d . getf ( idx , "floor" ) == 2 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "dropped" , 1 ) 
+game . drop_item ( 30312 , 1 ) 
+d . notice ( idx , 1000 , "" , true ) 
+d . notice ( idx , 1001 , "" , true ) 
+else 
+d . notice ( idx , 1002 , "" , true ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,10 @@
+say_title ( string . format ( "%s:" , mob_name ( 60003 ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+say ( gameforge [ lang ] . sash . _1 ) 
+local confirm = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if confirm == 2 then 
+return 
+end 
+pc . open_sash ( true ) 
+setskin ( NOWINDOW ) 

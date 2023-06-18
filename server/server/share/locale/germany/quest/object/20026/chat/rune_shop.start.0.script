@@ -1,0 +1,31 @@
+target . delete ( "__TARGET__" ) 
+local lang = pc . get_language ( ) 
+if rune_shop . hasAllRunes ( ) then 
+setskin ( 0 ) 
+syschat ( gameforge [ lang ] . runa_shop . _1 ) 
+return 
+end 
+local data = rune_shop . data ( ) 
+if pc . level < data . level_req then 
+setskin ( 0 ) 
+syschat ( string . format ( gameforge [ lang ] . runa_shop . _2 , data . level_req ) ) 
+return 
+end 
+say_title ( gameforge [ lang ] . chat_npc_translate . _9 ) 
+local runes_vnum , runes_name = rune_shop . createTableSelectRunes ( ) 
+local sel_rune_name = select_table ( runes_name ) 
+if sel_rune_name >= table . getn ( runes_name ) then 
+return 
+end 
+local rune_vnum = runes_vnum [ sel_rune_name ] 
+say_title ( string . format ( gameforge [ lang ] . runa_shop . _3 , item_name ( rune_vnum ) ) ) 
+say ( gameforge [ lang ] . runa_shop . _4 ) 
+rune_shop . sayCost ( rune_vnum ) 
+if select ( gameforge [ lang ] . runa_shop . _buy , gameforge [ lang ] . common . _close ) == 1 then 
+if rune_shop . hasEnoughItems ( rune_vnum ) then 
+rune_shop . removeItemCost ( rune_vnum ) 
+pc . give_item2 ( rune_vnum ) 
+else 
+syschat ( gameforge [ lang ] . runa_shop . _5 ) 
+end 
+end 

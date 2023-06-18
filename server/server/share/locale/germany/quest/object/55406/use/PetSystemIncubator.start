@@ -1,0 +1,6 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+newpet . EggRequest ( item . get_vnum ( ) ) 
+cmdchat ( string . format ( "OpenPetIncubator %d " , ( item . get_vnum ( ) - 55401 ) ) ) 

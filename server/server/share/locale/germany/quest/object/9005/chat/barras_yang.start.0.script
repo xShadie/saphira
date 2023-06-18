@@ -1,0 +1,11 @@
+say_title ( gameforge [ pc . get_language ( ) ] . magazzino . _21 ) 
+say ( gameforge [ pc . get_language ( ) ] . magazzino . _22 ) 
+local yangbar = { 1e+08 , 5e+08 , 2e+10 , 1e+11 , 5e+11 } 
+local item = { 22110 , 22111 , 22112 , 22113 , 22114 } 
+local bas = { "100kk" , "500kk" , "20kkk" , "100kkk" , "500kkk" , "Salir" } 
+local s = select_table ( bas ) 
+if s >= table . getn ( bas ) or s < 1 then return end 
+if pc . get_gold ( ) >= yangbar [ s ] then 
+pc . give_item2 ( item [ s ] , 1 ) 
+pc . changegold ( - yangbar [ s ] ) 
+end 

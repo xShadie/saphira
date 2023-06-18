@@ -1,0 +1,21 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 6 then 
+if d . getf ( idx , "count" ) == 8 then 
+d . setf ( idx , "floor" , 7 ) 
+d . setf ( idx , "canpick" , 0 ) 
+d . setf ( idx , "opened" , 0 ) 
+d . spawn_mob ( idx , 9334 , 985 , 1162 , 270 ) 
+d . spawn_mob ( idx , 9334 , 985 , 1123 , 270 ) 
+d . spawn_mob ( idx , 9335 , 978 , 1162 , 270 ) 
+d . spawn_mob ( idx , 9335 , 978 , 1123 , 270 ) 
+local vid = d . spawn_mob ( idx , 9336 , 1012 , 1144 , 270 ) 
+d . set_unique ( idx , "final_boss" , vid ) 
+d . regen_file ( idx , "data/dungeon/pyramide/regen3.txt" ) 
+server_loop_timer ( "pyramide_zone_check" , 2 , idx ) 
+d . notice ( idx , 1190 , "" , true ) 
+server_timer ( "pyramide_zone_warp" , 3 , idx ) 
+end 
+end 
+end 
+ return end 

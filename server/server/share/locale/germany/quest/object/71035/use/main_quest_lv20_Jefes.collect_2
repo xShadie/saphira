@@ -1,0 +1,17 @@
+local lang = pc . get_language ( ) 
+if get_time ( ) < pc . getqf ( "duration" ) then 
+say ( gameforge [ lang ] . main_quest . _elixir_1 ) 
+return 
+end 
+if pc . getqf ( "drink_drug" ) == 1 then 
+say ( gameforge [ lang ] . main_quest . _elixir_2 ) 
+return 
+end 
+if pc . count_item ( 30031 ) == 0 then 
+say_title ( string . format ( "%s:" , mob_name ( 20354 ) ) ) 
+say ( gameforge [ lang ] . main_quest . _elixir_3 ) 
+say_item_vnum ( 30031 ) 
+return 
+end 
+pc . remove_item ( 71035 , 1 ) 
+pc . setqf ( "drink_drug" , 1 ) 

@@ -1,0 +1,13 @@
+local yang = { 
+[ 22110 ] = 1e+08 , 
+[ 22111 ] = 5e+08 , 
+[ 22112 ] = 2e+10 , 
+[ 22113 ] = 1e+11 , 
+[ 22114 ] = 5e+11 , 
+} 
+if pc . getgold ( ) + yang [ item . get_vnum ( ) ] < 1e+14 then 
+pc . changegold ( yang [ item . get_vnum ( ) ] ) 
+pc . remove_item ( item . get_vnum ( ) , 1 ) 
+else 
+chat ( "You can't convert the ticket to yang because you exceed yang on inventory" ) 
+end 

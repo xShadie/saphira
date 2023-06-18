@@ -1,0 +1,12 @@
+nemere_zone={["start"]=0,clear= function (arg)clear_server_timer ( "nemere_zone_prepare" , arg ) 
+clear_server_timer ( "nemere_zone_warp" , arg ) 
+clear_server_timer ( "nemere_zone_check" , arg ) 
+clear_server_timer ( "nemere_zone_end" , arg ) 
+clear_server_timer ( "nemere_zone_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 1 ) 
+end 
+end }

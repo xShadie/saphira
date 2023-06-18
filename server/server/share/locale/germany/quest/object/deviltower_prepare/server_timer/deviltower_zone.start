@@ -1,0 +1,10 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . regen_file ( arg , "data/dungeon/deviltower/regen2.txt" ) 
+server_timer ( "deviltower_end" , 2999 , arg ) 
+server_loop_timer ( "deviltower_checker" , 2 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 60 ) , true ) 
+d . notice ( arg , 930 , "" , true ) 
+else 
+deviltower_zone . clear ( arg ) 
+end 

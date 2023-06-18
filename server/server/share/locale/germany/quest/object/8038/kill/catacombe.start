@@ -1,0 +1,31 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.16e+06 and idx < 2.17e+06 then 
+if d . getf ( idx , "floor" ) == 1 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "floor" , 2 ) 
+d . clear_regen ( idx ) 
+d . kill_all ( idx ) 
+d . spawn_mob ( idx , 30102 , 848 , 740 ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 851 , [ "y" ] = 597 } , 
+[ 2 ] = { [ "x" ] = 705 , [ "y" ] = 818 } , 
+[ 3 ] = { [ "x" ] = 717 , [ "y" ] = 655 } , 
+[ 4 ] = { [ "x" ] = 981 , [ "y" ] = 663 } , 
+[ 5 ] = { [ "x" ] = 984 , [ "y" ] = 827 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( idx , 2591 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( idx , "unique_vid" , vid ) 
+end 
+end 
+d . set_regen_file ( idx , "data/dungeon/devilcatacomb/regen2.txt" ) 
+d . notice ( idx , 1015 , "" , true ) 
+server_timer ( "catacombe_warp" , 2 , idx ) 
+else 
+d . notice ( idx , 1016 , "" , true ) 
+end 
+end 
+end 
+ return end 

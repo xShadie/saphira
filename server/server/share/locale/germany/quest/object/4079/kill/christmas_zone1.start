@@ -1,0 +1,26 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 then 
+if d . getf ( idx , "step" ) == 5 then 
+d . setf ( idx , "step" , 1 ) 
+d . setf ( idx , "floor" , 3 ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1003 , "" , true ) 
+server_timer ( "christmas_zone1_warp" , 2 , idx ) 
+end 
+elseif f == 3 then 
+if d . getf ( idx , "step" ) == 4 then 
+d . setf ( idx , "step" , 5 ) 
+d . setf ( idx , "tokill" , 7 ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone1/regen_3floor_2.txt" ) 
+game . drop_item ( 30775 , 1 ) 
+d . notice ( idx , 1328 , "" , true ) 
+d . notice ( idx , 1329 , "" , true ) 
+end 
+end 
+end 
+ return end 

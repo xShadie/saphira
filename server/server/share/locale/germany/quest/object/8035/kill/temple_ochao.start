@@ -1,0 +1,20 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.09e+06 and idx < 2.1e+06 then 
+if d . getf ( idx , "floor" ) == 3 then 
+local c = d . getf ( idx , "count2" ) + 1 
+if c == 4 then 
+d . setf ( idx , "floor" , 4 ) 
+d . spawn_mob ( idx , 6393 , 399 , 407 ) 
+d . notice ( idx , 1214 , "" , true ) 
+d . notice ( idx , 1215 , "" , true ) 
+else 
+if c == 3 then 
+d . notice ( idx , 1212 , "1" , true ) 
+else 
+d . notice ( idx , 1213 , string . format ( "%d" , 4 - c ) , true ) 
+end 
+d . setf ( idx , "count2" , c ) 
+end 
+end 
+end 
+ return end 

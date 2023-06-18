@@ -1,0 +1,6 @@
+if item . get_vnum ( ) == 33434 then local lang = pc . get_language ( ) 
+say_item_vnum ( 33434 ) 
+say ( gameforge [ lang ] . main_quest . _mission_sohan_41 ) 
+pc . remove_item ( "33434" , 200 ) 
+set_state ( "piedra_preciosa5" ) 
+ return end 

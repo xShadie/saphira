@@ -1,0 +1,18 @@
+setskin ( NOWINDOW ) 
+local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 or f == 3 then 
+if pc . count_item ( 30800 ) > 0 and pc . count_item ( 30801 ) > 0 and pc . count_item ( 30802 ) > 0 and pc . count_item ( 30803 ) > 0 then 
+npc . kill ( ) 
+pc . remove_item ( 30800 , pc . count_item ( 30800 ) ) 
+pc . remove_item ( 30801 , pc . count_item ( 30801 ) ) 
+pc . remove_item ( 30802 , pc . count_item ( 30802 ) ) 
+pc . remove_item ( 30803 , pc . count_item ( 30803 ) ) 
+d . spawn_mob ( idx , 4154 , 306 , 126 ) 
+d . notice ( idx , 1167 , "" , true ) 
+else 
+syschat ( gameforge [ pc . get_language ( ) ] . PyramidDungeon_zone . _9 ) 
+end 
+end 
+end 

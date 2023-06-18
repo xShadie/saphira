@@ -1,0 +1,6 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , gameforge [ lang ] . main_quest . _black_soul_mission_special50 ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . main_quest . _mission_orc_55 , mob_name ( 20409 ) ) ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_56 ) 
+set_state ( "boss_lider_sohan" ) 

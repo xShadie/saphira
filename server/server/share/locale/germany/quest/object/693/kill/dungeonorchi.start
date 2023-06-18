@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+if d . getf ( idx , "floor" ) == 2 and d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 693 , 2400 , 355 , "dungeonorchi" ) 
+if party . is_party ( ) then 
+notice_all ( 1272 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1273 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1054 , "" , true ) 
+d . notice ( idx , 1055 , "" , true ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5001 , 138 , 885 ) 
+end 
+server_timer ( "orchi_complete" , 30 , idx ) 
+end 
+end 
+ return end 

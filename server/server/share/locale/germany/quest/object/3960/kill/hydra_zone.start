@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.53e+06 and idx < 3.54e+06 then 
+if d . getf ( idx , "step" ) == 6 then 
+d . setf ( idx , "step" , 7 ) 
+d . clear_regen ( idx ) 
+d . kill_all_monstershydra ( idx ) 
+d . notice ( idx , 1235 , "" , true ) 
+server_timer ( "hydra_zone_warp" , 3 , idx ) 
+end 
+end 
+ return end 

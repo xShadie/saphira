@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+pc . setf ( "pyramide_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

@@ -1,0 +1,25 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.52e+06 and idx < 3.53e+06 then 
+if d . getf ( idx , "floor" ) == 5 then 
+d . setf ( idx , "floor" , 6 ) 
+d . set_regen_file ( idx , "data/dungeon/nemere/regen4.txt" ) 
+local bosspos = { 
+[ 1 ] = { [ "x" ] = 746 , [ "y" ] = 490 } , 
+[ 2 ] = { [ "x" ] = 765 , [ "y" ] = 478 } , 
+[ 3 ] = { [ "x" ] = 763 , [ "y" ] = 449 } , 
+[ 4 ] = { [ "x" ] = 737 , [ "y" ] = 446 } , 
+[ 5 ] = { [ "x" ] = 725 , [ "y" ] = 465 } 
+} 
+local random_num = number ( 1 , table . getn ( bosspos ) ) 
+for index , position in ipairs ( bosspos ) begin 
+local vid = d . spawn_mob ( idx , 6151 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( idx , "unique_vid" , vid ) 
+end 
+end 
+d . notice ( idx , 1108 , "" , true ) 
+d . notice ( idx , 1097 , "" , true ) 
+server_timer ( "nemere_zone_warp" , 2 , idx ) 
+end 
+end 
+ return end 

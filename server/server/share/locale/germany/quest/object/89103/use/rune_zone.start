@@ -1,0 +1,8 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+if d . getf ( idx , "type" ) == 1 then 
+pc . remove_item ( 89103 , 1 ) 
+rune_zone . create_randomfloor ( idx ) 
+end 
+end 
+ return end 

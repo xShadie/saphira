@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 6 then 
+d . setf ( idx , "floor" , 7 ) 
+d . notice ( idx , 1026 , "" , true ) 
+party . give_blacksmith ( ) 
+local reward = { 20074 , 20075 , 20076 } 
+d . spawn_mob ( idx , reward [ number ( 1 , 3 ) ] , 425 , 216 , 60 ) 
+end 
+end 
+ return end 

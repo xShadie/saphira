@@ -1,0 +1,5 @@
+if pc . get_level ( ) >= 70 then 
+cmdchat ( "rune 1" ) 
+else 
+set_state ( "gotoinfo" ) 
+end 

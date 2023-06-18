@@ -1,0 +1,15 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20031 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . events_mgr . _19 , pc . get_name ( ) ) ) 
+local menu = select ( gameforge [ lang ] . events_mgr . _20 , gameforge [ lang ] . events_mgr . _21 , gameforge [ lang ] . events_mgr . _22 , gameforge [ lang ] . common . close ) 
+if menu == 1 then 
+npc . open_shop ( 71 ) 
+setskin ( NOWINDOW ) 
+elseif menu == 2 then 
+command ( "cube open" ) 
+setskin ( NOWINDOW ) 
+elseif menu == 3 then 
+cmdchat ( "BINARY_WHEEL_ASKOPEN" ) 
+setskin ( NOWINDOW ) 
+end 

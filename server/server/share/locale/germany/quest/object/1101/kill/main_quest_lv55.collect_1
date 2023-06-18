@@ -1,0 +1,11 @@
+if pc . count_item ( 30048 ) <= 20 then local lang = pc . get_language ( ) 
+local s = number ( 1 , 100 ) 
+if s <= 5 then 
+pc . give_item2 ( 30048 , 1 ) 
+if pc . count_item ( 30048 ) >= 20 then 
+say ( gameforge [ lang ] . main_quest . _mission_sohan_12_1 ) 
+say_item_vnum ( 30048 ) 
+say_reward ( string . format ( gameforge [ lang ] . main_quest . _mission_sohan_08_2 , pc . getqf ( "collect_count" ) ) ) 
+end 
+end 
+ return end 

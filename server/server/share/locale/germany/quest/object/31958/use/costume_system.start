@@ -1,0 +1,30 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+if pc . count_item ( 31958 ) < 1 then 
+return 
+end 
+pc . remove_item ( "31958" , 1 ) 
+local a1 = number ( 1 , 10 ) 
+if a1 == 1 then 
+pc . give_item2 ( "45278" , 1 ) 
+elseif a1 == 2 then 
+pc . give_item2 ( "45279" , 1 ) 
+elseif a1 == 3 then 
+pc . give_item2 ( "45294" , 1 ) 
+elseif a1 == 4 then 
+pc . give_item2 ( "45295" , 1 ) 
+elseif a1 == 5 then 
+pc . give_item2 ( "45238" , 1 ) 
+elseif a1 == 6 then 
+pc . give_item2 ( "45239" , 1 ) 
+elseif a1 == 7 then 
+pc . give_item2 ( "45254" , 1 ) 
+elseif a1 == 8 then 
+pc . give_item2 ( "45255" , 1 ) 
+elseif a1 == 9 then 
+pc . give_item2 ( "45210" , 1 ) 
+elseif a1 == 10 then 
+pc . give_item2 ( "45211" , 1 ) 
+end 

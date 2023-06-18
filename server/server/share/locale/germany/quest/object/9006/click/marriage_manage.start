@@ -1,0 +1,229 @@
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+say ( gameforge [ lang ] . common . choose ) 
+local s = select ( gameforge [ lang ] . marriage_manage . _1 , gameforge [ lang ] . marriage_manage . _2 , gameforge [ lang ] . marriage_manage . _3 , gameforge [ lang ] . marriage_manage . _178 , gameforge [ lang ] . common . close ) 
+if s == 1 then 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if pc . is_engaged_or_married ( ) then 
+say ( gameforge [ lang ] . marriage_manage . _4 ) 
+return 
+end 
+if not npc . lock ( ) then 
+say ( gameforge [ lang ] . marriage_manage . _5 ) 
+return 
+end 
+if pc . level < 25 then 
+say ( gameforge [ lang ] . marriage_manage . _6 ) 
+say ( gameforge [ lang ] . marriage_manage . _7 ) 
+say ( gameforge [ lang ] . marriage_manage . _8 ) 
+npc . unlock ( ) 
+return 
+end 
+local m_ring_num = pc . countitem ( 70301 ) 
+local m_has_ring = m_ring_num > 0 
+if not m_has_ring then 
+say ( gameforge [ lang ] . marriage_manage . _9 ) 
+say ( gameforge [ lang ] . marriage_manage . _10 ) 
+say ( "" ) 
+say_item ( gameforge [ lang ] . marriage_manage . _11 , 70301 , "" ) 
+say ( gameforge [ lang ] . marriage_manage . _12 ) 
+npc . unlock ( ) 
+return 
+end 
+local m_sex = pc . get_sex ( ) 
+if not marriage_manage . is_equip_wedding_dress ( ) then 
+say ( gameforge [ lang ] . marriage_manage . _13 ) 
+say ( gameforge [ lang ] . marriage_manage . _14 ) 
+say ( gameforge [ lang ] . marriage_manage . _15 ) 
+say ( "" ) 
+if m_sex == 0 then 
+say_item ( gameforge [ lang ] . marriage_manage . _16 , marriage_manage . get_wedding_dress ( pc . get_job ( ) ) , "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _17 ) 
+else 
+say_item ( gameforge [ lang ] . marriage_manage . _16 , marriage_manage . get_wedding_dress ( pc . get_job ( ) ) , "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _17 ) 
+end 
+npc . unlock ( ) 
+return 
+end 
+if pc . get_money ( ) < 1e+06 then 
+say ( gameforge [ lang ] . marriage_manage . _18 ) 
+say ( gameforge [ lang ] . marriage_manage . _19 ) 
+say ( gameforge [ lang ] . marriage_manage . _20 ) 
+say ( gameforge [ lang ] . marriage_manage . _21 ) 
+npc . unlock ( ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _22 ) 
+say ( gameforge [ lang ] . marriage_manage . _23 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _24 ) 
+local sname = input ( ) 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if sname == "" then 
+say ( gameforge [ lang ] . marriage_manage . _25 ) 
+say ( gameforge [ lang ] . marriage_manage . _26 ) 
+npc . unlock ( ) 
+return 
+end 
+local u_vid = find_pc_by_name ( sname ) 
+local m_vid = pc . get_vid ( ) 
+if u_vid == 0 then 
+say ( gameforge [ lang ] . marriage_manage . _27 ) 
+say ( "" ) 
+say_reward ( string . format ( gameforge [ lang ] . marriage_manage . _28 , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+if not npc . is_near_vid ( u_vid , 10 ) then 
+say ( gameforge [ lang ] . marriage_manage . _29 ) 
+say ( gameforge [ lang ] . marriage_manage . _30 ) 
+say ( gameforge [ lang ] . marriage_manage . _31 ) 
+say ( "" ) 
+say_reward ( string . format ( gameforge [ lang ] . marriage_manage . _32 , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+local old = pc . select ( u_vid ) 
+local u_level = pc . get_level ( ) 
+local u_lang = pc . get_language ( ) 
+local u_job = pc . get_job ( ) 
+local u_sex = pc . get_sex ( ) 
+local u_name = pc . name local u_gold = pc . get_money ( ) 
+local u_married = pc . is_married ( ) 
+local u_has_ring = pc . countitem ( 70301 ) > 0 
+local u_wear = marriage_manage . is_equip_wedding_dress ( ) 
+pc . select ( old ) 
+local m_level = pc . get_level ( ) 
+if u_vid == m_vid then 
+say ( gameforge [ lang ] . marriage_manage . _33 ) 
+say ( gameforge [ lang ] . marriage_manage . _34 ) 
+say ( gameforge [ lang ] . marriage_manage . _35 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _36 ) 
+npc . unlock ( ) 
+return 
+end 
+if u_married then 
+say ( gameforge [ lang ] . marriage_manage . _37 ) 
+say ( gameforge [ lang ] . marriage_manage . _38 ) 
+say ( gameforge [ lang ] . marriage_manage . _39 ) 
+say ( "" ) 
+say_reward ( string . format ( gameforge [ lang ] . marriage_manage . _40 , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+if u_level <= 25 then 
+say ( gameforge [ lang ] . marriage_manage . _41 ) 
+say ( gameforge [ lang ] . marriage_manage . _42 ) 
+say ( gameforge [ lang ] . marriage_manage . _43 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _44 ) 
+npc . unlock ( ) 
+return 
+end 
+if m_level - u_level > 15 or u_level - m_level > 15 then 
+say ( gameforge [ lang ] . marriage_manage . _45 ) 
+say ( gameforge [ lang ] . marriage_manage . _46 ) 
+say ( gameforge [ lang ] . marriage_manage . _47 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _48 ) 
+npc . unlock ( ) 
+return 
+end 
+if not u_has_ring then 
+say ( gameforge [ lang ] . marriage_manage . _49 ) 
+say ( gameforge [ lang ] . marriage_manage . _50 ) 
+say_item ( "" , 70301 , "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _51 ) 
+npc . unlock ( ) 
+return 
+end 
+if not u_wear then 
+say ( gameforge [ lang ] . marriage_manage . _52 ) 
+say ( gameforge [ lang ] . marriage_manage . _53 ) 
+say ( gameforge [ lang ] . marriage_manage . _54 ) 
+say ( "" ) 
+if u_sex == 0 then 
+say_item ( gameforge [ lang ] . marriage_manage . _16 , marriage_manage . get_wedding_dress ( u_job ) , "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _17 ) 
+else 
+say_item ( gameforge [ lang ] . marriage_manage . _16 , marriage_manage . get_wedding_dress ( u_job ) , "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _17 ) 
+end 
+npc . unlock ( ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , string . format ( gameforge [ u_lang ] . marriage_manage . _55 , pc . name ) , 30 ) 
+if ok_sign == CONFIRM_OK then 
+local m_name = pc . name if pc . get_gold ( ) >= 1e+06 then 
+pc . change_gold ( - 1e+06 ) 
+pc . removeitem ( 70301 , 1 ) 
+pc . give_item2 ( 70302 , 1 ) 
+local old = pc . select ( u_vid ) 
+pc . removeitem ( 70301 , 1 ) 
+pc . give_item2 ( 70302 , 1 ) 
+pc . select ( old ) 
+say ( gameforge [ lang ] . marriage_manage . _60 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . marriage_manage . _61 ) 
+say ( gameforge [ lang ] . marriage_manage . _62 ) 
+say ( gameforge [ lang ] . marriage_manage . _63 ) 
+say ( gameforge [ lang ] . marriage_manage . _64 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _65 ) 
+select ( gameforge [ lang ] . common . wait ) 
+setskin ( NOWINDOW ) 
+marriage . engage_to ( u_vid ) 
+end 
+else 
+say ( gameforge [ lang ] . marriage_manage . _56 ) 
+say ( gameforge [ lang ] . marriage_manage . _57 ) 
+say ( gameforge [ lang ] . marriage_manage . _58 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _59 ) 
+end 
+npc . unlock ( ) 
+elseif s == 2 then 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if not pc . is_engaged ( ) then 
+say ( gameforge [ lang ] . marriage_manage . _4 ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _66 ) 
+say ( gameforge [ lang ] . marriage_manage . _67 ) 
+say ( gameforge [ lang ] . marriage_manage . _68 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . marriage_manage . _69 ) 
+say ( gameforge [ lang ] . marriage_manage . _70 ) 
+select ( gameforge [ lang ] . common . wait ) 
+setskin ( NOWINDOW ) 
+marriage . warp_to_my_marriage_map ( ) 
+elseif s == 3 then 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if pc . is_engaged ( ) then 
+say ( gameforge [ lang ] . marriage_manage . _4 ) 
+return 
+end 
+local t = marriage . get_wedding_list ( ) 
+if table . getn ( t ) == 0 then 
+say ( gameforge [ lang ] . marriage_manage . _71 ) 
+else 
+local wedding_names = { } 
+table . foreachi ( t , function ( n , p ) wedding_names [ n ] = p [ 3 ] .. " - " .. p [ 4 ] .. "!" end ) 
+wedding_names [ table . getn ( t ) + 1 ] = gameforge [ lang ] . common . confirm local s = select_table ( wedding_names ) 
+if s ~= table . getn ( wedding_names ) then 
+marriage . join_wedding ( t [ s ] [ 1 ] , t [ s ] [ 2 ] ) 
+end 
+end 
+elseif s == 4 then 
+setskin ( NOWINDOW ) 
+npc . open_shop ( 6 ) 
+else 
+setskin ( NOWINDOW ) 
+end 

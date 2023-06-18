@@ -1,0 +1,21 @@
+local idx = pc . get_map_index ( ) 
+if idx == 66 then 
+pc . warp ( 535400 , 1.4284e+06 ) 
+elseif idx >= 660000 and idx < 670000 then 
+pc . set_warp_location ( 219 , 5354 , 14284 ) 
+pc . setf ( "deviltower_zone" , "idx" , idx ) 
+pc . setf ( "deviltower_zone" , "ch" , pc . get_channel_id ( ) ) 
+if d . getf ( idx , "floor" ) == 0 then 
+if not party . is_party ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "deviltower_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+else 
+if party . is_leader ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "deviltower_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+end 
+end 
+end 
+end 

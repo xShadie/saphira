@@ -1,0 +1,14 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 7 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "pyramide_zone_check" , arg ) 
+d . clear_regen ( arg ) 
+d . setf ( arg , "canpick" , 1 ) 
+d . notice ( arg , 1193 , "" , true ) 
+end 
+end 
+else 
+pyramide_zone . clear ( arg ) 
+end 

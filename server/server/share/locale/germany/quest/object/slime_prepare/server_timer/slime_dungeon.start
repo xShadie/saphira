@@ -1,0 +1,7 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 8430 , 245 , 256 ) 
+server_timer ( "slime_end" , 1799 , arg ) 
+else 
+slime_dungeon . clear ( arg ) 
+end 

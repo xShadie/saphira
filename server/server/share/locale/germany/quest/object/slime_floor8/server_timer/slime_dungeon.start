@@ -1,0 +1,6 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 768 , 285 , 260 ) 
+else 
+slime_dungeon . clear ( arg ) 
+end 

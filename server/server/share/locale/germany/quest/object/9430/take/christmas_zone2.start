@@ -1,0 +1,35 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30892 then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+if d . getf ( idx , "floor" ) == 2 and d . getf ( idx , "can" ) == 1 then 
+local s = d . getf ( idx , "step" ) 
+if s >= 4 and s < 8 then 
+d . setf ( idx , "step" , s + 1 ) 
+d . setf ( idx , "can" , 0 ) 
+item . remove ( ) 
+local vid = npc . get_vid ( ) 
+if vid == d . getf ( idx , "treevid_1" ) then 
+npc . purge ( ) 
+d . spawn_mob ( idx , 9431 , 844 , 907 , 90 ) 
+elseif vid == d . getf ( idx , "treevid_2" ) then 
+npc . purge ( ) 
+d . spawn_mob ( idx , 9431 , 770 , 907 , 90 ) 
+elseif vid == d . getf ( idx , "treevid_3" ) then 
+npc . purge ( ) 
+d . spawn_mob ( idx , 9431 , 770 , 990 , 270 ) 
+elseif vid == d . getf ( idx , "treevid_4" ) then 
+npc . purge ( ) 
+d . spawn_mob ( idx , 9431 , 844 , 990 , 270 ) 
+end 
+if s == 4 or s == 5 or s == 6 then 
+d . setf ( idx , "dropped" , 0 ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone2/regen_2f_mobs.txt" ) 
+d . notice ( idx , 1339 , "" , true ) 
+server_loop_timer ( "christmas_zone2_check" , 2 , idx ) 
+elseif s == 7 then 
+d . spawn_mob ( idx , 4479 , 766 , 950 ) 
+d . notice ( idx , 1356 , "" , true ) 
+end 
+end 
+end 
+end 
+ return end 

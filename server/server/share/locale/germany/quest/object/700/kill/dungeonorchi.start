@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+if d . getf ( idx , "step" ) == 0 and d . getf ( idx , "first_drop" ) ~= 1 then 
+if number ( 1 , 100 ) == 100 then 
+game . drop_item ( 89104 , 1 ) 
+d . setf ( idx , "first_drop" , 1 ) 
+d . notice ( idx , 1047 , "" , true ) 
+end 
+end 
+end 
+ return end 

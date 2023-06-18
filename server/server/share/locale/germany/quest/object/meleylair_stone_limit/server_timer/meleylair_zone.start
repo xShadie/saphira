@@ -1,0 +1,6 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . notice ( arg , 946 , "" , true ) 
+d . notice ( arg , 947 , "" , true ) 
+end 
+meleylair_zone . clear ( arg ) 

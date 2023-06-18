@@ -1,0 +1,19 @@
+local goldReward = { 10960 , 10963 , 10966 } 
+local silverReward = { 10961 , 10964 , 10967 } 
+local bronzeReward = { 10962 , 10965 , 10968 } 
+local guildsGOLD = game . mysql_query ( "SELECT * FROM guild WHERE trophies >= 50 ORDER BY trophies DESC LIMIT 3" ) 
+for i = 1 , table . getn ( guildsGOLD ) begin 
+game . give_guild_reward ( guildsGOLD [ i ] [ 1 ] , goldReward [ i ] ) 
+notice_all ( 925 , string . format ( "%s#%d" , guildsGOLD [ i ] [ 2 ] , i ) ) 
+end 
+local guildsSILVER = game . mysql_query ( "SELECT * FROM guild WHERE trophies >= 30 AND trophies < 50 ORDER BY trophies DESC LIMIT 3" ) 
+for i = 1 , table . getn ( guildsSILVER ) begin 
+game . give_guild_reward ( guildsSILVER [ i ] [ 1 ] , silverReward [ i ] ) 
+notice_all ( 926 , string . format ( "%s#%d" , guildsSILVER [ i ] [ 2 ] , i ) ) 
+end 
+local guildsBRONZE = game . mysql_query ( "SELECT * FROM guild WHERE trophies >= 5 AND trophies < 30 ORDER BY trophies DESC LIMIT 3" ) 
+for i = 1 , table . getn ( guildsBRONZE ) begin 
+game . give_guild_reward ( guildsBRONZE [ i ] [ 1 ] , bronzeReward [ i ] ) 
+notice_all ( 927 , string . format ( "%s#%d" , guildsBRONZE [ i ] [ 2 ] , i ) ) 
+end 
+game . reset_guild_war_stats ( ) 

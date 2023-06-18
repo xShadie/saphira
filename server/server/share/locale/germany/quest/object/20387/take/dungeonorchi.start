@@ -1,0 +1,12 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 89105 then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+if d . getf ( idx , "bosskilled" ) == 1 then 
+pc . remove_item ( 89105 , pc . count_item ( 89105 ) ) 
+d . kill_all ( idx ) 
+d . setf ( idx , "floor" , 2 ) 
+d . notice ( idx , 1045 , "" , true ) 
+d . notice ( idx , 1046 , "" , true ) 
+server_timer ( "orchi_floor2" , 3 , idx ) 
+end 
+end 
+ return end 

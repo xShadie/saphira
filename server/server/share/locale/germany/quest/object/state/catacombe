@@ -1,0 +1,12 @@
+catacombe={["start"]=0,clear= function (arg)clear_server_timer ( "catacombe_prepare" , arg ) 
+clear_server_timer ( "catacombe_warp" , arg ) 
+clear_server_timer ( "catacombe_checker" , arg ) 
+clear_server_timer ( "catacombe_end" , arg ) 
+clear_server_timer ( "catacombe_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 1 ) 
+end 
+end }

@@ -1,0 +1,9 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+if newpet . getlevel ( ) >= 80 and newpet . getevo ( ) == 3 then 
+if newpet . increaseskill ( newpetstuff . book_skill ( item . get_vnum ( ) ) ) then 
+pc . remove_item ( item . get_vnum ( ) , 1 ) 
+end 
+end 

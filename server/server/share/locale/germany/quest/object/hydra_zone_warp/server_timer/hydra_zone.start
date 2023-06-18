@@ -1,0 +1,25 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "hydra_zone_warp" , arg ) 
+if d . find ( arg ) then 
+local s = d . getf ( arg , "step" ) 
+if s == 2 then 
+d . setf ( arg , "step" , 3 ) 
+d . setf ( arg , "second" , 5 ) 
+d . jump_all ( arg , 1665 , 5221 ) 
+server_loop_timer ( "hydra_zone_check" , 1 , arg ) 
+elseif s == 7 then 
+d . setf ( arg , "step" , 8 ) 
+d . setf ( arg , "second" , 5 ) 
+hydra_zone . spawndoors ( arg , 0 ) 
+d . jump_all ( arg , 1665 , 5221 ) 
+server_loop_timer ( "hydra_zone_check" , 1 , arg ) 
+elseif s == 12 then 
+d . setf ( arg , "step" , 13 ) 
+d . setf ( arg , "second" , 5 ) 
+hydra_zone . spawndoors ( arg , 0 ) 
+d . jump_all ( arg , 1665 , 5221 ) 
+server_loop_timer ( "hydra_zone_check" , 1 , arg ) 
+end 
+else 
+hydra_zone . clear ( arg ) 
+end 

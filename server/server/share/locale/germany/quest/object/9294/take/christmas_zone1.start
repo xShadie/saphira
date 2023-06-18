@@ -1,0 +1,14 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30772 then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+if d . getf ( idx , "step" ) == 3 then 
+d . setf ( idx , "floor" , 2 ) 
+d . setf ( idx , "step" , 1 ) 
+d . setf ( idx , "unique_vid" , 0 ) 
+npc . kill ( ) 
+item . remove ( ) 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1003 , "" , true ) 
+server_timer ( "christmas_zone1_warp" , 2 , idx ) 
+end 
+end 
+ return end 

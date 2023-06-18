@@ -1,0 +1,18 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local boss = d . spawn_mob ( arg , 2493 , 181 , 173 ) 
+local success = d . set_vid_invincible ( boss , true ) 
+if not success then 
+d . notice ( arg , 1014 , "" , true ) 
+dragonlair_zone . clear ( arg ) 
+else 
+d . setf ( arg , "boss" , boss ) 
+d . regen_file ( arg , "data/dungeon/dragonlair/regen.txt" ) 
+d . setf ( arg , "count" , 4 ) 
+server_timer ( "dragonlair_end" , 1799 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 30 ) , true ) 
+d . notice ( arg , 1279 , "" , true ) 
+end 
+else 
+dragonlair_zone . clear ( arg ) 
+end 

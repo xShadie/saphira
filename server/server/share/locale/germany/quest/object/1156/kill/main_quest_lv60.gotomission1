@@ -1,0 +1,24 @@
+local n = string . format ( "%s" , npc . get_race ( ) ) 
+local c = pc . getqf ( n ) 
+if c > 0 then 
+pc . setqf ( n , c - 1 ) 
+end 
+local t = pc . getqf ( "1101" ) + 
+pc . getqf ( "1102" ) + 
+pc . getqf ( "1103" ) + 
+pc . getqf ( "1104" ) + 
+pc . getqf ( "1105" ) + 
+pc . getqf ( "1106" ) + 
+pc . getqf ( "1107" ) + 
+pc . getqf ( "1151" ) + 
+pc . getqf ( "1152" ) + 
+pc . getqf ( "1153" ) + 
+pc . getqf ( "1154" ) + 
+pc . getqf ( "1155" ) + 
+pc . getqf ( "1156" ) + 
+pc . getqf ( "1157" ) + 
+pc . getqf ( "8011" ) + 
+pc . getqf ( "8013" ) 
+if t == 0 then 
+set_state ( "gotoreward" ) 
+end 

@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 2 then 
+if number ( 1 , 100 ) > 96 then 
+local c = d . getf ( idx , "count" ) + 1 
+d . setf ( idx , "count" , c ) 
+if c == 1 then 
+game . drop_item ( 30800 ) 
+elseif c == 2 then 
+game . drop_item ( 30801 ) 
+elseif c == 3 then 
+game . drop_item ( 30802 ) 
+elseif c == 4 then 
+d . setf ( idx , "floor" , 3 ) 
+game . drop_item ( 30803 ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+end 
+end 
+end 
+end 
+ return end 

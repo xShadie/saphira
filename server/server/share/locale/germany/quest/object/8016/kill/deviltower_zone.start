@@ -1,0 +1,21 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 3 then 
+d . setf ( idx , "floor" , 4 ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 385 , [ "y" ] = 678 } , 
+[ 2 ] = { [ "x" ] = 417 , [ "y" ] = 664 } , 
+[ 3 ] = { [ "x" ] = 404 , [ "y" ] = 636 } , 
+[ 4 ] = { [ "x" ] = 372 , [ "y" ] = 648 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( idx , 8017 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( idx , "unique_vid" , vid ) 
+end 
+end 
+d . notice ( idx , 1013 , "" , true ) 
+end 
+end 
+ return end 

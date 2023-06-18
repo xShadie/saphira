@@ -1,0 +1,23 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 4 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "floor" , 5 ) 
+d . setf ( idx , "count1" , 0 ) 
+d . setf ( idx , "count2" , 0 ) 
+d . clear_regen ( idx ) 
+d . kill_all ( idx ) 
+d . spawn_mob ( idx , 20073 , 421 , 452 ) 
+d . spawn_mob ( idx , 20073 , 380 , 460 ) 
+d . spawn_mob ( idx , 20073 , 428 , 414 ) 
+d . spawn_mob ( idx , 20073 , 398 , 392 ) 
+d . spawn_mob ( idx , 20073 , 359 , 426 ) 
+d . set_regen_file ( idx , "data/dungeon/deviltower/regen5.txt" ) 
+d . notice ( idx , 1015 , "" , true ) 
+server_timer ( "deviltower_warp" , 2 , idx ) 
+else 
+d . notice ( idx , 1016 , "" , true ) 
+end 
+end 
+end 
+ return end 

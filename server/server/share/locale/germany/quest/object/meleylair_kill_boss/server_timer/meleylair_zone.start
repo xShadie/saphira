@@ -1,0 +1,11 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "meleylair_kill_boss" , arg ) 
+if d . find ( arg ) then 
+d . kill_meley ( arg ) 
+d . setf ( arg , "was_completed" , 1 ) 
+d . notice ( arg , 1207 , "" , true ) 
+d . notice ( arg , 1208 , "" , true ) 
+d . notice ( arg , 1252 , "" , true ) 
+d . spawn_mob ( arg , 20420 , 130 , 130 , 180 ) 
+server_timer ( "meleylair_complete" , 180 , arg ) 
+end 

@@ -1,0 +1,4 @@
+local lang = pc . get_language ( ) 
+chat ( string . format ( gameforge [ lang ] . give_basic_weapon . _10 , pc . get_name ( ) ) ) 
+chat ( gameforge [ lang ] . give_basic_weapon . _11 ) 
+chat ( gameforge [ lang ] . give_basic_weapon . _12 ) 

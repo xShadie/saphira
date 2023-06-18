@@ -1,0 +1,5 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , gameforge [ lang ] . main_quest . _city2_Jefe_104 ) ) 
+say ( gameforge [ lang ] . main_quest . _city2_Jefe_105 ) 
+say_item_vnum ( 30105 ) 
+say_reward ( string . format ( gameforge [ lang ] . main_quest . _city2_Jefe_collect_30105 , pc . getqf ( "collect_count" ) ) ) 

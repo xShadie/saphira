@@ -1,0 +1,26 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+clear_server_timer ( "deviltower_warp" , arg ) 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+d . jump_all ( arg , 3782 , 26803 ) 
+elseif f == 3 then 
+d . jump_all ( arg , 4017 , 27285 ) 
+elseif f == 5 then 
+d . jump_all ( arg , 4017 , 27057 ) 
+d . notice ( arg , 1017 , "" , true ) 
+elseif f == 6 then 
+d . jump_all ( arg , 4022 , 26823 ) 
+d . notice ( arg , 1025 , "" , true ) 
+elseif f == 8 then 
+d . jump_all ( arg , 4238 , 27294 ) 
+elseif f == 11 then 
+d . jump_all ( arg , 4238 , 27059 ) 
+d . notice ( arg , 1031 , "" , true ) 
+elseif f == 13 then 
+d . jump_all ( arg , 4238 , 26811 ) 
+d . notice ( arg , 1034 , "" , true ) 
+end 
+else 
+deviltower_zone . clear ( arg ) 
+end 

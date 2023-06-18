@@ -1,0 +1,97 @@
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+if marriage . get_married_time ( ) < 86400 then 
+say ( gameforge [ lang ] . marriage_manage . _120 ) 
+say ( gameforge [ lang ] . marriage_manage . _121 ) 
+return 
+end 
+local u_vid = marriage . find_married_vid ( ) 
+if u_vid == 0 or not npc . is_near_vid ( u_vid , 10 ) then 
+say ( gameforge [ lang ] . marriage_manage . _122 ) 
+say ( gameforge [ lang ] . marriage_manage . _123 ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _124 ) 
+say ( gameforge [ lang ] . marriage_manage . _125 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . marriage_manage . _126 ) 
+say ( gameforge [ lang ] . marriage_manage . _127 ) 
+say ( "" ) 
+local s = select ( gameforge [ lang ] . marriage_manage . _128 , gameforge [ lang ] . marriage_manage . _129 ) 
+if s == 1 then 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+local m_enough_money = pc . gold > 500000 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . gold > 500000 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if not m_have_ring then 
+say ( gameforge [ lang ] . marriage_manage . _130 ) 
+say_item ( gameforge [ lang ] . marriage_manage . _131 , "70302" , gameforge [ lang ] . marriage_manage . _132 ) 
+return 
+end 
+if not u_have_ring then 
+say ( gameforge [ lang ] . marriage_manage . _133 ) 
+say_item ( gameforge [ lang ] . marriage_manage . _131 , "70302" , gameforge [ lang ] . marriage_manage . _132 ) 
+return 
+end 
+if not m_enough_money then 
+say ( gameforge [ lang ] . marriage_manage . _134 ) 
+say ( gameforge [ lang ] . marriage_manage . _135 ) 
+say ( gameforge [ lang ] . marriage_manage . _136 ) 
+return 
+end 
+if not u_enough_money then 
+say ( gameforge [ lang ] . marriage_manage . _134 ) 
+say ( gameforge [ lang ] . marriage_manage . _137 ) 
+say ( gameforge [ lang ] . marriage_manage . _136 ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _138 ) 
+say ( gameforge [ lang ] . marriage_manage . _139 ) 
+say ( gameforge [ lang ] . marriage_manage . _140 ) 
+say ( gameforge [ lang ] . marriage_manage . _141 ) 
+say ( "" ) 
+local c = select ( gameforge [ lang ] . marriage_manage . _142 , gameforge [ lang ] . marriage_manage . _143 ) 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if 2 == c then 
+say ( gameforge [ lang ] . marriage_manage . _144 ) 
+say ( gameforge [ lang ] . marriage_manage . _145 ) 
+say ( gameforge [ lang ] . marriage_manage . _146 ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , string . format ( gameforge [ lang ] . marriage_manage . _147 , pc . name ) , 30 ) 
+if ok_sign == CONFIRM_OK then 
+local m_enough_money = pc . gold > 500000 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . gold > 500000 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if m_have_ring and m_enough_money and u_have_ring and u_enough_money then 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - 500000 ) 
+local old = pc . select ( u_vid ) 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - 500000 ) 
+pc . select ( old ) 
+say ( gameforge [ lang ] . marriage_manage . _148 ) 
+say ( gameforge [ lang ] . marriage_manage . _149 ) 
+say ( gameforge [ lang ] . marriage_manage . _150 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _150 ) 
+marriage . remove ( ) 
+else 
+say ( gameforge [ lang ] . marriage_manage . _152 ) 
+say ( gameforge [ lang ] . marriage_manage . _153 ) 
+end 
+else 
+say ( gameforge [ lang ] . marriage_manage . _154 ) 
+say ( gameforge [ lang ] . marriage_manage . _155 ) 
+say ( gameforge [ lang ] . marriage_manage . _156 ) 
+end 
+end 

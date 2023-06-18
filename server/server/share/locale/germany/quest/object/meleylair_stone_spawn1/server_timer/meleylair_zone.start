@@ -1,0 +1,39 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "meleylair_stone_spawn1" , arg ) 
+if d . find ( arg ) then 
+local statue_vid = d . getf ( arg , "statue_vid1" ) 
+local success = d . set_vid_invincible ( statue_vid , true ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid2" ) 
+success = d . set_vid_invincible ( statue_vid , true ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid3" ) 
+success = d . set_vid_invincible ( statue_vid , true ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid4" ) 
+success = d . set_vid_invincible ( statue_vid , true ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+d . setf ( arg , "killed_count" , 0 ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 140 , [ "y" ] = 131 } , 
+[ 2 ] = { [ "x" ] = 130 , [ "y" ] = 122 } , 
+[ 3 ] = { [ "x" ] = 121 , [ "y" ] = 128 } , 
+[ 4 ] = { [ "x" ] = 128 , [ "y" ] = 140 } 
+} 
+for index , position in ipairs ( stonepos ) begin 
+d . spawn_mob ( arg , 20422 , position [ "x" ] , position [ "y" ] ) 
+end 
+d . notice ( arg , 1297 , "" , true ) 
+end 
+end 
+end 
+end 
+end 

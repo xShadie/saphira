@@ -1,0 +1,1 @@
+send_letter ( gameforge [ pc . get_language ( ) ] . main_quest . subtitle_1 ) 

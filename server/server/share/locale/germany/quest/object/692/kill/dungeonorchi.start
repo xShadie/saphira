@@ -1,0 +1,9 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+if d . getf ( idx , "floor" ) == 1 and d . getf ( idx , "bosskilled" ) == 0 then 
+d . setf ( idx , "bosskilled" , 1 ) 
+game . drop_item ( 89105 , 1 ) 
+d . notice ( idx , 1049 , "" , true ) 
+end 
+end 
+ return end 

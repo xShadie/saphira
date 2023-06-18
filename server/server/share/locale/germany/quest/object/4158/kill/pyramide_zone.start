@@ -1,0 +1,24 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 7 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 4158 , 3600 , 357 , "pyramide_zone" ) 
+if party . is_party ( ) then 
+notice_all ( 1270 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1271 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1207 , "" , true ) 
+d . notice ( idx , 1208 , "" , true ) 
+d . notice ( idx , 1252 , "" , true ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+d . spawn_mob ( idx , 9337 , 992 , 1142 , 270 ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5003 , 992 , 1142 ) 
+end 
+server_timer ( "pyramide_zone_complete" , 180 , idx ) 
+end 
+end 
+ return end 

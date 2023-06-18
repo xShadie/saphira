@@ -1,0 +1,7 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+clear_server_timer ( "razador_zone_warp" , arg ) 
+d . jump_all ( arg , 8109 , 6867 ) 
+else 
+razador_zone . clear ( arg ) 
+end 

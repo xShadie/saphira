@@ -1,0 +1,60 @@
+local idx = pc . get_map_index ( ) 
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20420 ) ) ) 
+say ( "" ) 
+if idx >= 2.12e+06 and idx < 2.13e+06 then 
+if d . getf ( idx , "notice_world" ) ~= 1 then 
+d . setf ( idx , "notice_world" , 1 ) 
+d . complete ( 6118 , 10800 , 212 , "meleylair_zone" ) 
+if party . is_party ( ) then 
+notice_all ( 1301 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1302 , pc . get_name ( ) ) 
+end 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5003 , 135 , 135 ) 
+end 
+end 
+if pc . can_drop ( ) then 
+local reward = d . getf ( idx , string . format ( pc . get_player_id ( ) ) ) 
+if reward == 1 then 
+say ( gameforge [ lang ] . meleylair_zone . _2 ) 
+else 
+say ( gameforge [ lang ] . meleylair_zone . _3 ) 
+say ( gameforge [ lang ] . meleylair_zone . _4 ) 
+say ( "" ) 
+local reward_menu = select ( item_name ( 50270 ) , item_name ( 50271 ) , gameforge [ lang ] . common . close ) 
+if reward_menu == 1 then 
+say_title ( string . format ( "%s:" , mob_name ( 20420 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . meleylair_zone . _5 , item_name ( 50270 ) ) ) 
+say ( "" ) 
+local agree = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if agree == 1 then 
+d . setf ( idx , string . format ( pc . get_player_id ( ) ) , 1 ) 
+pc . give_item2 ( 50270 , 1 ) 
+say_title ( string . format ( "%s:" , mob_name ( 20420 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . meleylair_zone . _6 ) 
+end 
+elseif reward_menu == 2 then 
+say_title ( string . format ( "%s:" , mob_name ( 20420 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . meleylair_zone . _5 , item_name ( 50271 ) ) ) 
+local agree = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if agree == 1 then 
+d . setf ( idx , string . format ( pc . get_player_id ( ) ) , 1 ) 
+pc . give_item2 ( 50271 , 1 ) 
+say_title ( string . format ( "%s:" , mob_name ( 20420 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . meleylair_zone . _6 ) 
+end 
+end 
+end 
+else 
+say ( gameforge [ lang ] . meleylair_zone . _7 ) 
+end 
+else 
+say ( gameforge [ lang ] . meleylair_zone . _1 ) 
+end 

@@ -1,0 +1,28 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.17e+06 and idx < 2.18e+06 then 
+if d . getf ( idx , "floor" ) == 2 then 
+d . setf ( idx , "floor" , 3 ) 
+d . setf ( idx , "count" , 9 ) 
+pc . remove_item ( 30327 , pc . count_item ( 30327 ) ) 
+d . spawn_mob ( idx , 2095 , 400 , 566 ) 
+d . spawn_mob ( idx , 2095 , 400 , 594 ) 
+d . spawn_mob ( idx , 2095 , 362 , 600 ) 
+d . spawn_mob ( idx , 2095 , 337 , 599 ) 
+d . spawn_mob ( idx , 2095 , 335 , 581 ) 
+d . spawn_mob ( idx , 2095 , 344 , 562 ) 
+d . spawn_mob ( idx , 2095 , 364 , 588 ) 
+d . spawn_mob ( idx , 2095 , 379 , 562 ) 
+d . spawn_mob ( idx , 2095 , 368 , 525 ) 
+local boss = d . spawn_mob ( idx , 2092 , 367 , 588 ) 
+local success = d . set_vid_invincible ( boss , true ) 
+if not success then 
+d . notice ( idx , 1133 , "" , true ) 
+dungeon_spider . clear ( arg ) 
+else 
+d . setf ( idx , "boss" , boss ) 
+d . notice ( idx , 1131 , "" , true ) 
+d . notice ( idx , 1132 , "" , true ) 
+end 
+end 
+end 
+ return end 

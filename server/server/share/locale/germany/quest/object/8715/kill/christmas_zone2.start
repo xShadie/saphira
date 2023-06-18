@@ -1,0 +1,15 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+if d . getf ( idx , "floor" ) == 2 and d . getf ( idx , "step" ) == 1 then 
+d . setf ( idx , "step" , 2 ) 
+d . kill_all_monsters ( idx ) 
+game . drop_item ( 30891 , 1 ) 
+d . notice ( idx , 1351 , "" , true ) 
+d . notice ( idx , 1352 , "" , true ) 
+end 
+else 
+d . notice ( idx , 1350 , "" , true ) 
+end 
+end 
+ return end 

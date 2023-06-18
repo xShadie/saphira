@@ -1,0 +1,105 @@
+rune_zone={["start"]=0,clear= function (arg)clear_server_timer ( "rune_zone_prepare" , arg ) 
+clear_server_timer ( "rune_zone_end" , arg ) 
+clear_server_timer ( "rune_step_limit" , arg ) 
+clear_server_timer ( "rune_zone_check" , arg ) 
+clear_server_timer ( "rune_zone_warp" , arg ) 
+clear_server_timer ( "rune_zone_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 2 ) 
+end 
+end ,create_randomfloor= function (arg)if d . find ( arg ) then 
+clear_server_timer ( "rune_step_limit" , arg ) 
+d . kill_all_monsters ( arg ) 
+d . clear_regen ( arg ) 
+local f = d . getf ( arg , "floor" ) 
+if f == 1 then 
+d . setf ( arg , "floor" , 2 ) 
+local t = number ( 1 , 3 ) 
+d . setf ( arg , "type" , t ) 
+if t == 1 then 
+d . set_regen_file ( arg , "data/dungeon/rune/regen2_type1.txt" ) 
+elseif t == 2 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "step" , 0 ) 
+local vid = d . spawn_mob ( arg , 3997 , 146 , 377 ) 
+d . setf ( arg , "boss" , vid ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+elseif t == 3 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "step" , 0 ) 
+d . regen_file ( arg , "data/dungeon/rune/regen2_type3a.txt" ) 
+d . regen_file ( arg , "data/dungeon/rune/regen2_type3b.txt" ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+end 
+server_timer ( "rune_step_limit" , 1199 , arg ) 
+server_timer ( "rune_zone_warp" , 3 , arg ) 
+d . notice ( arg , 979 , "" , true ) 
+d . notice ( arg , 980 , "" , true ) 
+elseif f == 2 then 
+d . setf ( arg , "floor" , 3 ) 
+local t = number ( 1 , 3 ) 
+d . setf ( arg , "type" , t ) 
+if t == 1 then 
+d . set_regen_file ( arg , "data/dungeon/rune/regen3_type1.txt" ) 
+elseif t == 2 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "step" , 0 ) 
+local vid = d . spawn_mob ( arg , 3998 , 592 , 377 ) 
+d . setf ( arg , "boss" , vid ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+elseif t == 3 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "step" , 0 ) 
+d . regen_file ( arg , "data/dungeon/rune/regen3_type3a.txt" ) 
+d . regen_file ( arg , "data/dungeon/rune/regen3_type3b.txt" ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+end 
+server_timer ( "rune_step_limit" , 1199 , arg ) 
+server_timer ( "rune_zone_warp" , 3 , arg ) 
+d . notice ( arg , 952 , "" , true ) 
+elseif f == 3 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "floor" , 4 ) 
+local t = number ( 1 , 3 ) 
+d . setf ( arg , "type" , t ) 
+if t == 1 then 
+d . set_regen_file ( arg , "data/dungeon/rune/regen4_type1.txt" ) 
+elseif t == 2 then 
+d . setf ( arg , "step" , 0 ) 
+local vid = d . spawn_mob ( arg , 3996 , 414 , 121 ) 
+d . setf ( arg , "boss" , vid ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+elseif t == 3 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "step" , 0 ) 
+d . regen_file ( arg , "data/dungeon/rune/regen4_type3a.txt" ) 
+d . regen_file ( arg , "data/dungeon/rune/regen4_type3b.txt" ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+end 
+server_timer ( "rune_step_limit" , 1199 , arg ) 
+server_timer ( "rune_zone_warp" , 3 , arg ) 
+d . notice ( arg , 953 , "" , true ) 
+elseif f == 4 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "floor" , 5 ) 
+d . setf ( arg , "type" , 4 ) 
+local vid = d . spawn_mob ( arg , 4012 , 794 , 107 ) 
+d . setf ( arg , "boss" , vid ) 
+local success = d . set_vid_invincible ( vid , true ) 
+if not success then 
+d . notice ( arg , 982 , "" , true ) 
+rune_zone . clear ( arg ) 
+else 
+d . regen_file ( arg , "data/dungeon/rune/regen5.txt" ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+server_timer ( "rune_step_limit" , 1799 , arg ) 
+server_timer ( "rune_zone_warp" , 3 , arg ) 
+end 
+end 
+else 
+rune_zone . clear ( arg ) 
+end 
+end }

@@ -1,0 +1,18 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.52e+06 and idx < 3.53e+06 then 
+if d . getf ( idx , "floor" ) == 6 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "floor" , 7 ) 
+d . clear_regen ( idx ) 
+d . kill_all ( idx ) 
+d . spawn_mob ( idx , 20399 , 850 , 655 ) 
+d . regen_file ( idx , "data/dungeon/nemere/regen5.txt" ) 
+d . notice ( idx , 1112 , "" , true ) 
+d . notice ( idx , 1097 , "" , true ) 
+server_timer ( "nemere_zone_warp" , 2 , idx ) 
+else 
+d . notice ( idx , 1259 , "" , true ) 
+end 
+end 
+end 
+ return end 

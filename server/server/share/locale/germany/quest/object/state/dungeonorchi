@@ -1,0 +1,11 @@
+dungeonorchi={["start"]=0,clear= function (arg)clear_server_timer ( "orchi_prepare" , arg ) 
+clear_server_timer ( "orchi_floor2" , arg ) 
+clear_server_timer ( "orchi_end" , arg ) 
+clear_server_timer ( "orchi_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 1 ) 
+end 
+end }

@@ -1,0 +1,31 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 20385 , 352 , 362 ) 
+local lock1 = { 
+[ 1 ] = { [ "x" ] = 320 , [ "y" ] = 394 , [ "dir" ] = 135 } , 
+[ 2 ] = { [ "x" ] = 293 , [ "y" ] = 359 , [ "dir" ] = 90 } , 
+[ 3 ] = { [ "x" ] = 333 , [ "y" ] = 321 , [ "dir" ] = 210 } , 
+[ 4 ] = { [ "x" ] = 378 , [ "y" ] = 320 , [ "dir" ] = 152 } , 
+[ 5 ] = { [ "x" ] = 400 , [ "y" ] = 355 , [ "dir" ] = 90 } , 
+[ 6 ] = { [ "x" ] = 394 , [ "y" ] = 401 , [ "dir" ] = 223 } 
+} 
+for index1 , position1 in ipairs ( lock1 ) begin 
+d . set_unique ( arg , string . format ( "unique1_vid%d" , index1 ) , d . spawn_mob ( arg , 20387 , position1 [ "x" ] , position1 [ "y" ] , position1 [ "dir" ] ) ) 
+end 
+local lock2 = { 
+[ 1 ] = { [ "x" ] = 268 , [ "y" ] = 447 , [ "dir" ] = 135 } , 
+[ 2 ] = { [ "x" ] = 234 , [ "y" ] = 359 , [ "dir" ] = 90 } , 
+[ 3 ] = { [ "x" ] = 300 , [ "y" ] = 264 , [ "dir" ] = 210 } , 
+[ 4 ] = { [ "x" ] = 454 , [ "y" ] = 217 , [ "dir" ] = 135 } , 
+[ 5 ] = { [ "x" ] = 470 , [ "y" ] = 355 , [ "dir" ] = 90 } , 
+[ 6 ] = { [ "x" ] = 467 , [ "y" ] = 469 , [ "dir" ] = 239 } 
+} 
+for index2 , position2 in ipairs ( lock2 ) begin 
+d . set_unique ( arg , string . format ( "unique2_vid%d" , index2 ) , d . spawn_mob ( arg , 20388 , position2 [ "x" ] , position2 [ "y" ] , position2 [ "dir" ] ) ) 
+end 
+server_timer ( "razador_zone_end" , 2999 , arg ) 
+d . notice ( arg , 1128 , "50" , true ) 
+d . notice ( arg , 1082 , "" , true ) 
+else 
+razador_zone . clear ( arg ) 
+end 

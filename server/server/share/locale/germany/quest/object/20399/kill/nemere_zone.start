@@ -1,0 +1,16 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.52e+06 and idx < 3.53e+06 then 
+if d . getf ( idx , "floor" ) == 7 then 
+d . setf ( idx , "floor" , 8 ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+d . spawn_mob ( idx , 20397 , 850 , 635 ) 
+d . notice ( idx , 1116 , "" , true ) 
+if party . is_party ( ) then 
+d . notice ( idx , 1117 , "" , true ) 
+else 
+d . notice ( idx , 1118 , "" , true ) 
+end 
+end 
+end 
+ return end 

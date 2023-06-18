@@ -1,0 +1,23 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30889 then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+local vid = npc . get_vid ( ) 
+local s = d . getf ( idx , "step" ) 
+if s == 3 then 
+d . setf ( idx , "step" , 4 ) 
+item . remove ( ) 
+local bossvid = d . spawn_mob ( idx , 4477 , 503 , 515 ) 
+if d . getf ( idx , "stronger" ) == 1 then 
+npc . set_vid_attack_mul ( bossvid , 2.2 ) 
+npc . set_vid_damage_mul ( bossvid , 2.2 ) 
+else 
+npc . set_vid_attack_mul ( bossvid , 1.4 ) 
+npc . set_vid_damage_mul ( bossvid , 1.4 ) 
+end 
+npc . kill ( ) 
+d . notice ( idx , 1341 , "" , true ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,2514 @@
+section
+"49051"
+npc	20031
+item	49061	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49051	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49052"
+npc	20031
+item	49062	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49052	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49053"
+npc	20031
+item	49063	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49053	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49054"
+npc	20031
+item	49064	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49054	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49055"
+npc	20031
+item	49065	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49055	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49056"
+npc	20031
+item	49066	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49056	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49071"
+npc	20031
+item	49081	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49071	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49072"
+npc	20031
+item	49082	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49072	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49073"
+npc	20031
+item	49083	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49073	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49074"
+npc	20031
+item	49084	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49074	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49075"
+npc	20031
+item	49085	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49075	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49076"
+npc	20031
+item	49086	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49076	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49091"
+npc	20031
+item	49101	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49091	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49092"
+npc	20031
+item	49102	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49092	1
+allow_copy	49102
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49093"
+npc	20031
+item	49103	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49093	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49094"
+npc	20031
+item	49104	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49094	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49095"
+npc	20031
+item	49105	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49095	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49096"
+npc	20031
+item	49106	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49096	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49111"
+npc	20031
+item	49121	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49111	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49112"
+npc	20031
+item	49122	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49112	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49113"
+npc	20031
+item	49123	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49113	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49114"
+npc	20031
+item	49124	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49114	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49115"
+npc	20031
+item	49125	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49115	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49116"
+npc	20031
+item	49126	1
+item	78101	40
+item	78206	50
+item	78205	80
+reward	49116	1
+allow_copy	
+category	christmas2021_costumes_weapons
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49057"
+npc	20031
+item	49067	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49057	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49058"
+npc	20031
+item	49068	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49058	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49077"
+npc	20031
+item	49087	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49077	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49078"
+npc	20031
+item	49088	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49078	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49097"
+npc	20031
+item	49107	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49097	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49098"
+npc	20031
+item	49108	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49098	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49117"
+npc	20031
+item	49127	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49117	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49118"
+npc	20031
+item	49128	1
+item	78102	40
+item	78206	50
+item	78205	80
+reward	49118	1
+allow_copy	
+category	christmas2021_costumes_armor
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49907"
+npc	20031
+item	49909	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49907	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49908"
+npc	20031
+item	49910	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49908	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49911"
+npc	20031
+item	49913	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49911	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49912"
+npc	20031
+item	49914	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49912	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49915"
+npc	20031
+item	49917	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49915	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49916"
+npc	20031
+item	49918	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49916	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49919"
+npc	20031
+item	49921	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49919	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"49920"
+npc	20031
+item	49922	1
+item	78103	40
+item	78206	50
+item	78205	80
+reward	49920	1
+allow_copy	
+category	christmas2021_costumes_hair
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"85124"
+npc	20031
+item	85128	1
+item	78104	40
+item	78206	50
+item	78205	80
+reward	85124	1
+allow_copy	
+category	christmas2021_costumes_stole
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"85132"
+npc	20031
+item	85136	1
+item	78104	40
+item	78206	50
+item	78205	80
+reward	85132	1
+allow_copy	
+category	christmas2021_costumes_stole
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"85140"
+npc	20031
+item	85144	1
+item	78104	40
+item	78206	50
+item	78205	80
+reward	85140	1
+allow_copy	
+category	christmas2021_costumes_stole
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"85148"
+npc	20031
+item	85152	1
+item	78104	40
+item	78206	50
+item	78205	80
+reward	85148	1
+allow_copy	
+category	christmas2021_costumes_stole
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"60001"
+npc	20031
+item	60002	1
+item	78105	40
+item	78206	50
+item	78205	80
+reward	60001	1
+allow_copy	
+category	christmas2021_mounts
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"60003"
+npc	20031
+item	60004	1
+item	78105	40
+item	78206	50
+item	78205	80
+reward	60003	1
+allow_copy	
+category	christmas2021_mounts
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"60101"
+npc	20031
+item	60102	1
+item	78106	40
+item	78206	50
+item	78205	80
+reward	60101	1
+allow_copy	
+category	christmas2021_pet
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"60103"
+npc	20031
+item	60104	1
+item	78106	40
+item	78206	50
+item	78205	80
+reward	60103	1
+allow_copy	
+category	christmas2021_pet
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78005"
+npc	20031
+item	78006	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78005	1
+allow_copy	
+category	christmas2021_effects2
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78009"
+npc	20031
+item	78010	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78009	1
+allow_copy	
+category	christmas2021_effects2
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78013"
+npc	20031
+item	78014	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78013	1
+allow_copy	
+category	christmas2021_effects2
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78003"
+npc	20031
+item	78004	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78003	1
+allow_copy	
+category	christmas2021_effects1
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78007"
+npc	20031
+item	78008	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78007	1
+allow_copy	
+category	christmas2021_effects1
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+"78011"
+npc	20031
+item	78012	1
+item	78107	40
+item	78206	50
+item	78205	80
+reward	78011	1
+allow_copy	
+category	christmas2021_effects1
+percent	100
+gold	100000000
+gaya	0
+end
+
+section
+Sig. Tigre reale perma
+npc	20349
+item	71126	1
+item	71125	1
+reward	71139	1
+allow_copy	
+category	Mount_craft
+percent	100
+gold	200000000
+gaya	15
+end
+
+section
+Leopardo perma
+npc	20349
+item	52040	1
+item	71126	1
+reward	71177	1
+allow_copy	
+category	Mount_craft
+percent	100
+gold	200000000
+gaya	15
+end
+
+section
+griffy
+npc	20349
+item	53017	1
+reward	53263	1
+allow_copy	
+category	Pet_craft
+percent	100
+gold	200000000
+gaya	15
+end
+
+section
+Baby leopardo
+npc	20349
+item	53011	1
+item	53013	1
+item	53012	1
+reward	53025	1
+allow_copy	
+category	Pet_craft
+percent	100
+gold	200000000
+gaya	15
+end
+
+section
+Gemme
+npc	20503
+item	28030	5
+item	28130	5
+item	28230	5
+item	28330	5
+reward	50926	5
+allow_copy	
+category	pietre_perforazione
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28031	5
+item	28131	5
+item	28231	5
+item	28331	5
+reward	50926	5
+allow_copy	
+category	pietre_Colpo_Mort
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28032	5
+item	28132	5
+item	28232	5
+item	28332	5
+reward	50926	5
+allow_copy	
+category	pietre_Ripetiz
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28033	5
+item	28133	5
+item	28233	5
+item	28333	5
+reward	50926	5
+allow_copy	
+category	pietre_Guerriero
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28034	5
+item	28134	5
+item	28234	5
+item	28334	5
+reward	50926	5
+allow_copy	
+category	pietre_Ninja
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28035	5
+item	28135	5
+item	28235	5
+item	28335	5
+reward	50926	5
+allow_copy	
+category	pietre_sura
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28036	5
+item	28136	5
+item	28236	5
+item	28336	5
+reward	50926	5
+allow_copy	
+category	pietre_Shamana
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28037	5
+item	28137	5
+item	28237	5
+item	28337	5
+reward	50926	5
+allow_copy	
+category	pietre_Mostro
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28038	5
+item	28138	5
+item	28238	5
+item	28338	5
+reward	50926	5
+allow_copy	
+category	pietre_Evasione
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28039	5
+item	28139	5
+item	28239	5
+item	28339	5
+reward	50926	5
+allow_copy	
+category	pietre_Inchino
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28040	5
+item	28140	5
+item	28240	5
+item	28340	5
+reward	50926	5
+allow_copy	
+category	pietre_Magia
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28041	5
+item	28141	5
+item	28241	5
+item	28341	5
+reward	50926	5
+allow_copy	
+category	pietre_Vitalità
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28042	5
+item	28142	5
+item	28242	5
+item	28342	5
+reward	50926	5
+allow_copy	
+category	pietre_Difesa
+percent	100
+gold	25000000
+end
+
+section
+Gemme
+npc	20503
+item	28043	5
+item	28143	5
+item	28243	5
+item	28343	5
+reward	50926	5
+allow_copy	
+category	pietre_Fretta
+percent	100
+gold	25000000
+end
+
+
+section
+Pend.Cr.Alma
+npc	20092
+item	33436	10
+item	33437	10
+item	33438	10
+item	30271	20
+item	17209	1
+reward	17220	1
+allow_copy	17209
+category	Accesory_PVM
+percent	100
+gold	200000000
+gaya	3
+end
+
+section
+Collar.Cr.Alma
+npc	20092
+item	33436	10
+item	33437	10
+item	33438	10
+item	30271	20
+item	16209	1
+reward	16220	1
+allow_copy	16209
+category	Accesory_PVM
+percent	100
+gold	200000000
+gaya	3
+end
+
+section
+Brazal.Cr.Alma
+npc	20092
+item	33436	10
+item	33437	10
+item	33438	10
+item	30271	20
+item	14209	1
+reward	14220	1
+allow_copy	14209
+category	Accesory_PVM
+percent	100
+gold	200000000
+gaya	3
+end
+
+section
+Scudo.PVM.80
+npc	20092
+item	33436	10
+item	33437	10
+item	33438	10
+item	30271	40
+reward	13160	1
+category	Accesory_PVM
+percent	100
+gold	300000000
+gaya	3
+end
+
+section
+scarpe del fuoco
+npc	20092
+item	15379	1
+item	15439	1
+item	27992	15
+item	27993	8
+item	27994	5
+reward	15440	1
+allow_copy	15379
+category	Scarpe_PvM_100
+percent	100
+gold	300000000
+gaya	3
+end
+
+section
+Bracciale con Rubini
+npc	20092
+item	14209	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	14500	1
+allow_copy	14209
+category	Bracciali_LV90
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Bracciale con Granati
+npc	20092
+item	14149	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	14520	1
+allow_copy	14149
+category	Bracciali_LV90
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Bracciale con Smeraldi
+npc	20092
+item	14169	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	14540	1
+allow_copy	14169
+category	Bracciali_LV90
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Bracciale con Zaffiri
+npc	20092
+item	14189	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	14560	1
+allow_copy	14189
+category	Bracciali_LV90
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Collana con Rubini
+npc	20092
+item	16209	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	16500	1
+allow_copy	16209
+category	Collane_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Collana con Granati
+npc	20092
+item	16149	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	16520	1
+allow_copy	16149
+category	Collane_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Collana con Smeraldi
+npc	20092
+item	16169	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	16540	1
+allow_copy	16169
+category	Collane_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Collana con Zaffiri
+npc	20092
+item	16189	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	16560	1
+allow_copy	16189
+category	Collane_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Orecchini con Rubini
+npc	20092
+item	17209	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	17500	1
+allow_copy	17209
+category	Orecchini_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Orecchini con Granati
+npc	20092
+item	17149	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	17520	1
+allow_copy	17149
+category	Orecchini_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Orecchini con Smeraldi
+npc	20092
+item	17169	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	17540	1
+allow_copy	17169
+category	Orecchini_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Orecchini con Zaffiri
+npc	20092
+item	17189	1
+item	27992	5
+item	27993	3
+item	27994	2
+reward	17560	1
+allow_copy	17189
+category	Orecchini_PvP
+percent	100
+gold	20000000
+gaya	3
+end
+
+section
+Bracciale di Cianite
+npc	20092
+item	14569	1
+item	14509	1
+item	14529	1
+item	14549	1
+item	70031	10
+reward	14580	1
+allow_copy	14569
+category	JEWELRY_LV100
+percent	100
+gold	300000000
+gaya	15
+end
+
+section
+Scudo dei Titani
+npc	20092
+item	13073	1
+item	13113	1
+item	13133	1
+item	13093	1
+item	70031	10
+reward	13140	1
+allow_copy	13073
+category	JEWELRY_LV100
+percent	100
+gold	800000000
+gaya	15
+end
+
+section
+Collana di Cianite
+npc	20092
+item	16509	1
+item	16529	1
+item	16549	1
+item	16569	1
+item	70031	10
+reward	16580	1
+allow_copy	16509
+category	JEWELRY_LV100
+percent	100
+gold	300000000
+gaya	15
+end
+
+section
+Orecchini di Cianite
+npc	20092
+item	17509	1
+item	17529	1
+item	17549	1
+item	17569	1
+item	70031	10
+reward	17570	1
+allow_copy	17509
+category	JEWELRY_LV100
+percent	100
+gold	300000000
+gaya	15
+end
+
+section
+scarpe oceano
+npc	20092
+item	15399	1
+item	15419	1
+item	70031	10
+item	71129	10
+item	71123	10
+reward	15450	1
+allow_copy	15399
+category	Scarpe_PvP_105
+percent	100
+gold	700000000
+gaya	15
+end
+
+section
+Cintura anime
+npc	20090
+item	18009	1
+item	18019	1
+item	18029	1
+item	70031	5
+item	71123	3
+reward	18080	1
+allow_copy	18029
+category	Cinture_PvM
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Cintura di tormalina
+npc	20090
+item	18089	1
+item	70031	10
+item	71123	10
+item	71129	10
+item	30271	25
+reward	18090	1
+allow_copy	18089
+category	Cinture_PvM
+percent	100
+gold	250000000
+gaya	10
+end
+
+section
+Cintura tigre bianca
+npc	20090
+item	18059	1
+item	18069	1
+item	70031	10
+item	71129	5
+item	27993	5
+reward	18100	1
+allow_copy	18059
+category	Cinture_PvP
+percent	100
+gold	500000000
+gaya	7
+end
+
+section
+Cintura di Cianite
+npc	20090
+item	18109	1
+item	70031	12
+item	71123	10
+item	71129	10
+item	30271	40
+reward	18110	1
+allow_copy	18109
+category	Cinture_PvP
+percent	100
+gold	500000000
+gaya	15
+end
+
+section
+Spada dello Zodiaco
+npc	20378
+item	439	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	310	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Lama dello Zodiaco
+npc	20378
+item	619	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	300	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Glaive dello Zodiaco
+npc	20378
+item	659	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	3220	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Arco dello Zodiaco
+npc	20378
+item	699	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	2200	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Pugnale Zodiaco
+npc	20378
+item	739	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	1180	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Ventaglio dello Zodiaco
+npc	20378
+item	779	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	7300	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Campana dello Zodiaco
+npc	20378
+item	779	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	5160	1
+category	Armi_110_PvM
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Spada di Tritone
+npc	20378
+item	149	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	270	1
+allow_copy	149
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Spada Santa
+npc	20378
+item	159	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	280	1
+allow_copy	159
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Uccidi Drago Blu
+npc	20378
+item	3139	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	3180	1
+allow_copy	3139
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Arco Diavolo Gigante
+npc	20378
+item	2149	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	2160	1
+allow_copy	2149
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Coltello Senz'anima
+npc	20378
+item	1109	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	4040	1
+allow_copy	1109
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Ventaglio del Demone
+npc	20378
+item	7149	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	7190	1
+allow_copy	7149
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Campana Fauci di Drago
+npc	20378
+item	5109	1
+item	70031	3
+item	71129	3
+item	71123	4
+item	27992	10
+reward	5330	1
+allow_copy	5109
+category	Armi_90
+percent	100
+gold	40000000
+gaya	2
+end
+
+section
+Spada Runica
+npc	20378
+item	279	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	460	1
+allow_copy	279
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Lama Dente di Drago
+npc	20378
+item	289	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	470	1
+allow_copy	289
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Lama Solare
+npc	20378
+item	3189	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	3190	1
+allow_copy	3189
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Arco della Fenice
+npc	20378
+item	2169	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	2370	1
+allow_copy	2169
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Lama Cinque Elementi
+npc	20378
+item	4049	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	1340	1
+allow_copy	4049
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Ventaglio del Drago
+npc	20378
+item	7199	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	7370	1
+allow_copy	7199
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Campana Spirito Drago
+npc	20378
+item	5339	1
+item	70031	5
+item	71129	7
+item	71123	6
+item	27993	10
+reward	5340	1
+allow_copy	5339
+category	Armi_100
+percent	100
+gold	100000000
+gaya	5
+end
+
+section
+Spada Cianite
+npc	20378
+item	469	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	500	1
+allow_copy	469
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Lama Cianite
+npc	20378
+item	479	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	510	1
+allow_copy	479
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Spadone di Cianite
+npc	20378
+item	3199	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	3500	1
+allow_copy	3199
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Arco di Cianite
+npc	20378
+item	2379	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	2500	1
+allow_copy	2379
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Pugnali di Cianite
+npc	20378
+item	1349	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	1500	1
+allow_copy	1349
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Ventaglio di Cianite
+npc	20378
+item	7379	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	7500	1
+allow_copy	7379
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+Campana Cianite
+npc	20378
+item	5349	1
+item	70031	10
+item	71129	10
+item	71123	10
+item	27994	15
+reward	5500	1
+allow_copy	5349
+category	Armi_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+corazza d'acciaio blu
+npc	20377
+item	11299	1
+item	70031	1
+item	27992	3
+item	27993	2
+item	27994	1
+reward	12010	1
+allow_copy	11299
+category	Armature_PvM_80
+percent	100
+gold	30000000
+end
+
+section
+corazza dell'aura
+npc	20377
+item	11699	1
+item	70031	1
+item	27992	3
+item	27993	2
+item	27994	1
+reward	12030	1
+allow_copy	11699
+category	Armature_PvM_80
+percent	100
+gold	30000000
+end
+
+section
+vestito blu del drago
+npc	20377
+item	11499	1
+item	70031	1
+item	27992	3
+item	27993	2
+item	27994	1
+reward	12020	1
+allow_copy	11499
+category	Armature_PvM_80
+percent	100
+gold	30000000
+end
+
+section
+vestito del drago
+npc	20377
+item	11899	1
+item	70031	1
+item	27992	3
+item	27993	2
+item	27994	1
+reward	12040	1
+allow_copy	11899
+category	Armature_PvM_80
+percent	100
+gold	30000000
+end
+
+section
+corazza aurora
+npc	20377
+item	12019	1
+item	70031	3
+item	71129	4
+item	71123	4
+item	27992	5
+reward	20760	1
+allow_copy	12019
+category	Armature_PvM_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+corazza artiglio diabolico
+npc	20377
+item	12039	1
+item	70031	3
+item	71129	4
+item	71123	4
+item	27992	5
+reward	20780	1
+allow_copy	12039
+category	Armature_PvM_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+abito tranello
+npc	20377
+item	12029	1
+item	70031	3
+item	71129	4
+item	71123	4
+item	27992	5
+reward	20770	1
+allow_copy	12029
+category	Armature_PvM_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+vestito della fede
+npc	20377
+item	12049	1
+item	70031	3
+item	71129	4
+item	71123	4
+item	27992	5
+reward	20790	1
+allow_copy	12049
+category	Armature_PvM_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+Armatura dello Zodiaco
+npc	20377
+item	20769	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	19290	1
+category	Armature_PvM_110
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Corazza dello Zodiaco
+npc	20377
+item	20789	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	19690	1
+category	Armature_PvM_110
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Abito dello Zodiaco
+npc	20377
+item	20779	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	19490	1
+category	Armature_PvM_110
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+Vestito dello Zodiaco
+npc	20377
+item	20799	1
+item	30271	100
+item	30280	3
+item	30278	2
+reward	19890	1
+category	Armature_PvM_110
+percent	100
+gold	250000000
+gaya	15
+end
+
+section
+corazza corno diavolo
+npc	20377
+item	11299	1
+item	70031	3
+item	71129	5
+item	71123	4
+item	27993	8
+reward	20000	1
+allow_copy	11299
+category	Armature_PvP_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+armatura a placche ossee
+npc	20377
+item	11699	1
+item	70031	3
+item	71129	5
+item	71123	4
+item	27993	8
+reward	20500	1
+allow_copy	11699
+category	Armature_PvP_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+abito cavalcadraghi
+npc	20377
+item	11499	1
+item	70031	3
+item	71129	5
+item	71123	4
+item	27993	8
+reward	20250	1
+allow_copy	11499
+category	Armature_PvP_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+abbigliamento dorato
+npc	20377
+item	11899	1
+item	70031	3
+item	71129	5
+item	71123	4
+item	27993	8
+reward	20750	1
+allow_copy	11899
+category	Armature_PvP_90
+percent	100
+gold	50000000
+gaya	3
+end
+
+section
+corazza pioggiacenere
+npc	20377
+item	20009	1
+item	70031	4
+item	71129	7
+item	71123	6
+item	27994	8
+reward	20910	1
+allow_copy	20009
+category	Armature_PvP_105
+percent	100
+gold	100000000
+gaya	10
+end
+
+section
+corazza fuoco nero
+npc	20377
+item	20509	1
+item	70031	4
+item	71129	7
+item	71123	6
+item	27994	8
+reward	20930	1
+allow_copy	20509
+category	Armature_PvP_105
+percent	100
+gold	100000000
+gaya	10
+end
+
+section
+abito notte mortale
+npc	20377
+item	20259	1
+item	70031	4
+item	71129	7
+item	71123	6
+item	27994	8
+reward	20920	1
+allow_copy	20259
+category	Armature_PvP_105
+percent	100
+gold	100000000
+gaya	10
+end
+
+section
+vestito lunare
+npc	20377
+item	20759	1
+item	70031	4
+item	71129	7
+item	71123	6
+item	27994	8
+reward	20940	1
+allow_copy	20759
+category	Armature_PvP_105
+percent	100
+gold	100000000
+gaya	10
+end
+
+section
+armatura di cianite
+npc	20377
+item	20919	1
+item	70031	8
+item	71129	10
+item	71123	10
+item	27994	15
+reward	12050	1
+allow_copy	20919
+category	Armature_PvP_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+corazza di cianite
+npc	20377
+item	20939	1
+item	70031	8
+item	71129	10
+item	71123	10
+item	27994	15
+reward	12070	1
+allow_copy	20939
+category	Armature_PvP_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+abito di cianite
+npc	20377
+item	20929	1
+item	70031	8
+item	71129	10
+item	71123	10
+item	27994	15
+reward	12060	1
+allow_copy	20929
+category	Armature_PvP_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+vestito di cianite
+npc	20377
+item	20949	1
+item	70031	8
+item	71129	10
+item	71123	10
+item	27994	15
+reward	12080	1
+allow_copy	20949
+category	Armature_PvP_110
+percent	100
+gold	800000000
+gaya	20
+end
+
+section
+elmo maestro guerra
+npc	20018
+item	12269	1
+item	27992	8
+item	27993	5
+item	27994	3
+reward	12280	1
+allow_copy	12269
+category	Elmi_pvm_80
+percent	100
+gold	40000000
+end
+
+section
+elmo magico
+npc	20018
+item	12539	1
+item	27992	8
+item	27993	5
+item	27994	3
+reward	12540	1
+allow_copy	12539
+category	Elmi_pvm_80
+percent	100
+gold	40000000
+end
+
+section
+Cappuccio del Ragno
+npc	20018
+item	12399	1
+item	27992	8
+item	27993	5
+item	27994	3
+reward	12400	1
+allow_copy	12399
+category	Elmi_pvm_80
+percent	100
+gold	40000000
+end
+
+section
+cappello anima
+npc	20018
+item	12679	1
+item	27992	8
+item	27993	5
+item	27994	3
+reward	12680	1
+allow_copy	12679
+category	Elmi_pvm_80
+percent	100
+gold	40000000
+end
+
+section
+elmo drago scuro
+npc	20018
+item	12289	1
+item	70031	10
+item	71129	10
+item	71123	8
+item	27994	8
+reward	12780	1
+allow_copy	12289
+category	Elmi_pvm_95
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo drago magico
+npc	20018
+item	12549	1
+item	70031	10
+item	71129	10
+item	71123	8
+item	27994	8
+reward	12800	1
+allow_copy	12549
+category	Elmi_pvm_95
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo drago del vento
+npc	20018
+item	12409	1
+item	70031	10
+item	71129	10
+item	71123	8
+item	27994	8
+reward	12820	1
+allow_copy	12409
+category	Elmi_pvm_95
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo drago divino
+npc	20018
+item	12689	1
+item	70031	10
+item	71129	10
+item	71123	8
+item	27994	8
+reward	12840	1
+allow_copy	12689
+category	Elmi_pvm_95
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo d'acciaio draconico
+npc	20018
+item	12269	1
+item	70031	8
+item	71129	9
+item	71123	5
+item	27993	10
+reward	12730	1
+allow_copy	12269
+category	Elmi_pvp_105
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo corazzato draconico
+npc	20018
+item	12539	1
+item	70031	8
+item	71129	9
+item	71123	5
+item	27993	10
+reward	12750	1
+allow_copy	12539
+category	Elmi_pvp_105
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+copricapo draconico
+npc	20018
+item	12399	1
+item	70031	8
+item	71129	9
+item	71123	5
+item	27993	10
+reward	12740	1
+allow_copy	12399
+category	Elmi_pvp_105
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+cappello draconico
+npc	20018
+item	12679	1
+item	70031	8
+item	71129	9
+item	71123	5
+item	27993	10
+reward	12760	1
+allow_copy	12679
+category	Elmi_pvp_105
+percent	100
+gold	200000000
+gaya	5
+end
+
+section
+elmo d'acciaio del drago
+npc	20018
+item	12739	1
+item	70031	10
+item	71129	12
+item	71123	10
+item	27994	10
+reward	12690	1
+allow_copy	12739
+category	Elmi_pvp_115
+percent	100
+gold	500000000
+gaya	10
+end
+
+section
+elmo corazzato del drago
+npc	20018
+item	12759	1
+item	70031	10
+item	71129	12
+item	71123	10
+item	27994	10
+reward	12710	1
+allow_copy	12759
+category	Elmi_pvp_115
+percent	100
+gold	500000000
+gaya	10
+end
+
+section
+copricapo del drago
+npc	20018
+item	12749	1
+item	70031	10
+item	71129	12
+item	71123	10
+item	27994	10
+reward	12700	1
+allow_copy	12749
+category	Elmi_pvp_115
+percent	100
+gold	500000000
+gaya	10
+end
+
+section
+cappello del drago
+npc	20018
+item	12769	1
+item	70031	10
+item	71129	12
+item	71123	10
+item	27994	10
+reward	12720	1
+allow_copy	12769
+category	Elmi_pvp_115
+percent	100
+gold	500000000
+gaya	10
+end

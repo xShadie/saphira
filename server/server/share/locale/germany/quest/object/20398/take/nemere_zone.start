@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30332 then local idx = pc . get_map_index ( ) 
+if idx >= 3.52e+06 and idx < 3.53e+06 then 
+if d . getf ( idx , "floor" ) == 3 then 
+npc . purge ( ) 
+item . remove ( ) 
+local c = d . getf ( idx , "opened" ) + 1 
+if c == 5 then 
+d . setf ( idx , "floor" , 4 ) 
+pc . remove_item ( 30332 , pc . count_item ( 30332 ) ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+d . regen_file ( idx , "data/dungeon/nemere/regen3.txt" ) 
+d . notice ( idx , 1106 , "" , true ) 
+d . notice ( idx , 1097 , "" , true ) 
+server_timer ( "nemere_zone_warp" , 2 , idx ) 
+else 
+d . setf ( idx , "opened" , c ) 
+d . notice ( idx , 1104 , "" , true ) 
+end 
+end 
+end 
+ return end 

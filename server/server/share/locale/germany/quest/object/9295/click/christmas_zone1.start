@@ -1,0 +1,56 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 then 
+if d . getf ( idx , "step" ) == 3 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+npc . kill ( ) 
+clear_server_timer ( "christmas_zone1_loop" , idx ) 
+d . setf ( idx , "step" , 5 ) 
+d . spawn_mob ( idx , 4079 , 194 , 540 ) 
+d . notice ( idx , 1323 , "" , true ) 
+d . notice ( idx , 1324 , "" , true ) 
+else 
+npc . kill ( ) 
+local w = d . getf ( idx , "wrong" ) 
+d . setf ( idx , "wrong" , w + 1 ) 
+d . notice ( idx , 1314 , "" , true ) 
+if w == 0 then 
+d . setf ( idx , "step" , 4 ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone1/regen_2floor_1.txt" ) 
+d . notice ( idx , 1315 , "" , true ) 
+server_loop_timer ( "christmas_zone1_loop" , 2 , idx ) 
+elseif w == 1 then 
+d . setf ( idx , "step" , 4 ) 
+d . setf ( idx , "gift" , 5 ) 
+d . spawn_mob ( idx , 9296 , 195 , 538 ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone1/regen_2floor_2.txt" ) 
+d . notice ( idx , 1317 , "" , true ) 
+elseif w == 2 then 
+d . setf ( idx , "step" , 4 ) 
+d . setf ( idx , "killed_all" , 6 ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone1/regen_2floor_3.txt" ) 
+d . notice ( idx , 1319 , "" , true ) 
+elseif w == 3 then 
+d . setf ( idx , "step" , 4 ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 231 , [ "y" ] = 476 } , 
+[ 2 ] = { [ "x" ] = 149 , [ "y" ] = 491 } , 
+[ 3 ] = { [ "x" ] = 128 , [ "y" ] = 564 } , 
+[ 4 ] = { [ "x" ] = 202 , [ "y" ] = 621 } , 
+[ 5 ] = { [ "x" ] = 262 , [ "y" ] = 570 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( idx , 8455 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( idx , "unique_vid2" , vid ) 
+end 
+end 
+d . notice ( idx , 1308 , "" , true ) 
+end 
+end 
+end 
+end 
+end 
+ return end 

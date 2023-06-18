@@ -1,0 +1,17 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 4 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "nemere_zone_check" , arg ) 
+d . setf ( arg , "floor" , 5 ) 
+d . clear_regen ( arg ) 
+d . spawn_mob ( arg , 8058 , 570 , 649 ) 
+d . notice ( arg , 1090 , "" , true ) 
+d . notice ( arg , 1107 , "" , true ) 
+server_timer ( "nemere_zone_warp" , 2 , arg ) 
+end 
+end 
+else 
+nemere_zone . clear ( arg ) 
+end 

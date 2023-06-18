@@ -1,0 +1,19 @@
+local n = string . format ( "%s" , npc . get_race ( ) ) 
+local c = pc . getqf ( n ) 
+if c <= 0 then 
+return 
+else 
+pc . setqf ( n , c - 1 ) 
+end 
+if pc . getqf ( n ) <= 0 then 
+chat ( string . format ( "%s Terminado" , mob_name ( n ) ) ) 
+end 
+local t = pc . getqf ( "191" ) + 
+pc . getqf ( "192" ) + 
+pc . getqf ( "193" ) + 
+pc . getqf ( "194" ) + 
+pc . getqf ( "394" ) 
+if t <= 0 then 
+chat ( "Has Finalizado todos." ) 
+set_state ( "gotoreward" ) 
+end 

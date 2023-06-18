@@ -1,0 +1,16 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "christmas_zone2_prepare" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "killed" , 3 ) 
+d . setf ( arg , "stronger" , 0 ) 
+d . regen_file ( arg , "data/dungeon/christmas_zone2/regen_1f_stones.txt" ) 
+d . spawn_mob ( arg , 9425 , 664 , 529 , 270 ) 
+d . spawn_mob ( arg , 9424 , 563 , 488 , 270 ) 
+server_timer ( "christmas_zone2_end" , 2699 , arg ) 
+d . notice ( arg , 1128 , "45" , true ) 
+d . notice ( arg , 1335 , "" , true ) 
+d . notice ( arg , 1336 , "" , true ) 
+server_timer ( "christmas_zone2_first_stone" , 299 , arg ) 
+else 
+christmas_zone2 . clear ( arg ) 
+end 

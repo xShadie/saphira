@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+if d . getf ( idx , "floor" ) == 3 then 
+local s = d . getf ( idx , "step" ) 
+if s == 3 then 
+d . setf ( idx , "step" , 4 ) 
+d . spawn_mob ( idx , 4079 , 1050 , 428 ) 
+game . drop_item ( 30774 , 1 ) 
+d . notice ( idx , 1326 , "" , true ) 
+d . notice ( idx , 1327 , "" , true ) 
+elseif s == 5 then 
+local c = d . getf ( idx , "tokill" ) - 1 
+d . setf ( idx , "tokill" , c ) 
+if c == 0 then 
+d . setf ( idx , "step" , 6 ) 
+game . drop_item ( 30776 , 1 ) 
+d . notice ( idx , 1330 , "" , true ) 
+end 
+end 
+end 
+end 
+ return end 

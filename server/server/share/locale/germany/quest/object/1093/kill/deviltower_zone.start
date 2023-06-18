@@ -1,0 +1,16 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 13 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 1093 , 600 , 66 , "deviltower_zone" ) 
+if party . is_party ( ) then 
+notice_all ( 1124 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1064 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1068 , "" , true ) 
+d . notice ( idx , 1261 , "" , true ) 
+server_timer ( "deviltower_complete" , 30 , idx ) 
+end 
+end 
+ return end 

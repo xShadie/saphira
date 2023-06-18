@@ -1,0 +1,25 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.53e+06 and idx < 3.54e+06 then 
+npc . lock ( ) 
+if d . getf ( idx , "step" ) == 11 then 
+party . give_gold ( 1e+07 ) 
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20437 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . defance_wave . _3 ) 
+npc . purge ( ) 
+d . restore_mast_partial_hp ( idx ) 
+local c = d . getf ( idx , "repaired" ) + 1 
+if c == 5 then 
+d . setf ( idx , "step" , 12 ) 
+d . notice ( idx , 1235 , "" , true ) 
+server_timer ( "hydra_zone_warp" , 3 , idx ) 
+else 
+d . setf ( idx , "repaired" , c ) 
+end 
+else 
+npc . unlock ( ) 
+setskin ( NOWINDOW ) 
+end 
+end 
+ return end 

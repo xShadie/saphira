@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 2.12e+06 and idx < 2.13e+06 then 
+pc . setf ( "meleylair_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

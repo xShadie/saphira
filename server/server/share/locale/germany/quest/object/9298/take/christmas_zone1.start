@@ -1,0 +1,12 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30777 then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+if d . getf ( idx , "floor" ) == 3 and d . getf ( idx , "step" ) == 7 then 
+d . setf ( idx , "step" , 8 ) 
+npc . kill ( ) 
+item . remove ( ) 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1332 , "" , true ) 
+d . spawn_mob ( idx , 4081 , 1050 , 428 ) 
+end 
+end 
+ return end 

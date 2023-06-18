@@ -1,0 +1,10 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 7 then 
+clear_server_timer ( "pyramide_zone_spawn" , arg ) 
+d . regen_file ( arg , "data/dungeon/pyramide/regen3.txt" ) 
+end 
+else 
+pyramide_zone . clear ( arg ) 
+end 

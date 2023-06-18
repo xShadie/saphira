@@ -1,0 +1,9 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 2094 , 367 , 588 , 0 , 0 ) 
+d . set_regen_file ( arg , "data/dungeon/spider_baroness/regen.txt" ) 
+server_timer ( "spider_end" , 1799 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 30 ) , true ) 
+else 
+dungeon_spider . clear ( arg ) 
+end 

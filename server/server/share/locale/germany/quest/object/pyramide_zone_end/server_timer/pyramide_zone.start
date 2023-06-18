@@ -1,0 +1,4 @@
+local arg = get_server_timer_arg ( ) 
+d . notice ( arg , 1040 , "" , true ) 
+d . notice ( arg , 1041 , "" , true ) 
+pyramide_zone . clear ( arg ) 

@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 2.08e+06 and idx < 2.09e+06 then 
+pc . setf ( "dragonlair_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

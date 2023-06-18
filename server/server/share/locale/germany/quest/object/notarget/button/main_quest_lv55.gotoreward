@@ -1,0 +1,6 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , gameforge [ lang ] . main_quest . _black_sohan_mission_I_end ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . main_quest . _black_sohan_mission_end1 ) 
+say ( gameforge [ lang ] . main_quest . _mission_sohan_02 ) 
+say ( string . format ( gameforge [ lang ] . main_quest . _50 , mob_name ( 20409 ) ) ) 

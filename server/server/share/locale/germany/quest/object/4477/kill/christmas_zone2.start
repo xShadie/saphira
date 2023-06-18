@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+local s = d . getf ( idx , "step" ) 
+if s == 4 then 
+d . setf ( idx , "step" , 5 ) 
+d . notice ( idx , 1342 , "" , true ) 
+d . notice ( idx , 1343 , "" , true ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,39 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+if d . getf ( idx , "step" ) == 1 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "step" , 2 ) 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1309 , "" , true ) 
+d . notice ( idx , 1310 , "" , true ) 
+server_timer ( "christmas_zone1_wave" , 2 , idx ) 
+else 
+d . notice ( idx , 1311 , "" , true ) 
+end 
+end 
+elseif f == 2 then 
+if d . getf ( idx , "step" ) == 4 then 
+local w = d . getf ( idx , "wrong" ) 
+if w == 3 then 
+local c = d . getf ( idx , "killed_all" ) - 1 
+d . setf ( idx , "killed_all" , c ) 
+if c == 0 then 
+d . setf ( idx , "step" , 3 ) 
+d . notice ( idx , 1316 , "" , true ) 
+end 
+elseif w == 4 then 
+if d . getf ( idx , "unique_vid2" ) == npc . get_vid ( ) then 
+d . setf ( idx , "step" , 3 ) 
+d . kill_all_monsters ( idx ) 
+d . notice ( idx , 1320 , "" , true ) 
+d . notice ( idx , 1316 , "" , true ) 
+else 
+d . notice ( idx , 1311 , "" , true ) 
+end 
+end 
+end 
+end 
+end 
+ return end 

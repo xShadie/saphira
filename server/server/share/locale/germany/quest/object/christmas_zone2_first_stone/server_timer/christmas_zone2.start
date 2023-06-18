@@ -1,0 +1,7 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "christmas_zone2_prepare" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "stronger" , 1 ) 
+else 
+christmas_zone2 . clear ( arg ) 
+end 

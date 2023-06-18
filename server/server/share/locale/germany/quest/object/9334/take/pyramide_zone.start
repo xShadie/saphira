@@ -1,0 +1,20 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30805 then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 7 then 
+item . remove ( ) 
+npc . kill ( ) 
+if d . getf ( idx , "opened" ) == 1 then 
+d . kill_unique ( idx , "final_boss" ) 
+d . spawn_mob ( idx , 4158 , 1012 , 1144 , 270 ) 
+else 
+d . setf ( idx , "opened" , 1 ) 
+d . spawn_mob ( idx , 8475 , 948 , 1142 ) 
+d . notice ( idx , 1194 , "" , true ) 
+d . notice ( idx , 1195 , "" , true ) 
+d . notice ( idx , 1197 , "" , true ) 
+d . notice ( idx , 1196 , "" , true ) 
+server_timer ( "pyramide_zone_spawn" , 299 , idx ) 
+end 
+end 
+end 
+ return end 

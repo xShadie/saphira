@@ -1,0 +1,50 @@
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+if marriage . get_married_time ( ) < 86400 then 
+say ( gameforge [ lang ] . marriage_manage . _120 ) 
+say ( gameforge [ lang ] . marriage_manage . _121 ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _157 ) 
+say ( gameforge [ lang ] . marriage_manage . _158 ) 
+say ( gameforge [ lang ] . marriage_manage . _159 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . marriage_manage . _160 ) 
+say ( "" ) 
+local s = select ( gameforge [ lang ] . marriage_manage . _161 , gameforge [ lang ] . marriage_manage . _162 ) 
+if s == 2 then 
+return 
+end 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if pc . money < 1e+06 then 
+say ( gameforge [ lang ] . marriage_manage . _163 ) 
+say ( gameforge [ lang ] . marriage_manage . _164 ) 
+say ( gameforge [ lang ] . marriage_manage . _165 ) 
+return 
+end 
+say ( gameforge [ lang ] . marriage_manage . _166 ) 
+say ( gameforge [ lang ] . marriage_manage . _167 ) 
+local c = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+if c == 2 then 
+say ( gameforge [ lang ] . marriage_manage . _168 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . marriage_manage . _169 ) 
+say ( gameforge [ lang ] . marriage_manage . _170 ) 
+say ( gameforge [ lang ] . marriage_manage . _171 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _172 ) 
+return 
+end 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_gold ( - 1e+06 ) 
+marriage . remove ( ) 
+say ( gameforge [ lang ] . marriage_manage . _173 ) 
+say ( gameforge [ lang ] . marriage_manage . _174 ) 
+say ( gameforge [ lang ] . marriage_manage . _175 ) 
+say ( gameforge [ lang ] . marriage_manage . _176 ) 
+say ( "" ) 
+say_reward ( gameforge [ lang ] . marriage_manage . _177 ) 

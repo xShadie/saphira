@@ -1,0 +1,28 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "nemere_zone_warp" , arg ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 3 then 
+d . jump_all ( arg , 5540 , 2070 ) 
+d . notice ( arg , 1098 , "" , true ) 
+d . notice ( arg , 1099 , "5" , true ) 
+elseif f == 4 then 
+d . jump_all ( arg , 5691 , 2230 ) 
+server_loop_timer ( "nemere_zone_check" , 2 , arg ) 
+d . notice ( arg , 1089 , "" , true ) 
+elseif f == 6 then 
+d . jump_all ( arg , 5866 , 2068 ) 
+d . notice ( arg , 1109 , "" , true ) 
+elseif f == 7 then 
+d . jump_all ( arg , 5969 , 2225 ) 
+d . notice ( arg , 1115 , "" , true ) 
+elseif f == 8 then 
+d . jump_all ( arg , 5969 , 2225 ) 
+d . notice ( arg , 1115 , "" , true ) 
+elseif f == 9 then 
+d . jump_all ( arg , 6047 , 1926 ) 
+d . notice ( arg , 1119 , "" , true ) 
+end 
+else 
+nemere_zone . clear ( arg ) 
+end 

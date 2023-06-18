@@ -1,0 +1,15 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 1 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "deviltower_checker" , arg ) 
+d . setf ( arg , "floor" , 2 ) 
+d . spawn_mob ( arg , 1091 , 210 , 210 ) 
+d . notice ( arg , 1097 , "" , true ) 
+server_timer ( "deviltower_warp" , 2 , arg ) 
+end 
+end 
+else 
+deviltower_zone . clear ( arg ) 
+end 

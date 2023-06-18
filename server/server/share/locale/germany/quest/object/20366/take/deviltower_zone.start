@@ -1,0 +1,15 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30304 then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 12 then 
+npc . purge ( ) 
+d . setf ( idx , "floor" , 13 ) 
+d . clear_regen ( idx ) 
+d . kill_all ( idx ) 
+pc . remove_item ( 30304 , pc . count_item ( 30304 ) ) 
+d . spawn_mob ( idx , 1093 , 647 , 157 ) 
+d . notice ( idx , 1032 , "" , true ) 
+d . notice ( idx , 1033 , "" , true ) 
+server_timer ( "deviltower_warp" , 2 , idx ) 
+end 
+end 
+ return end 

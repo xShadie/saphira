@@ -1,0 +1,34 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+clear_server_timer ( "rune_zone_warp" , arg ) 
+local f = d . getf ( arg , "floor" ) 
+local notice = false 
+if f == 2 then 
+d . jump_all ( arg , 6273 , 14468 ) 
+notice = true 
+elseif f == 3 then 
+d . jump_all ( arg , 6732 , 14440 ) 
+notice = true 
+elseif f == 4 then 
+d . jump_all ( arg , 6554 , 14212 ) 
+notice = true 
+elseif f == 5 then 
+d . jump_all ( arg , 6955 , 14213 ) 
+d . notice ( arg , 961 , "30" , true ) 
+d . notice ( arg , 962 , "" , true ) 
+end 
+if notice then 
+local t = d . getf ( arg , "type" ) 
+if t == 1 then 
+d . notice ( arg , 957 , "20" , true ) 
+d . notice ( arg , 958 , "" , true ) 
+elseif t == 2 then 
+d . notice ( arg , 959 , "20" , true ) 
+elseif t == 3 then 
+d . notice ( arg , 959 , "20" , true ) 
+d . notice ( arg , 960 , "" , true ) 
+end 
+end 
+else 
+rune_zone . clear ( arg ) 
+end 

@@ -1,0 +1,25 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 1 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "razador_zone_check" , arg ) 
+d . setf ( arg , "floor" , 2 ) 
+d . setf ( arg , "step" , 0 ) 
+d . clear_regen ( arg ) 
+d . notice ( arg , 1090 , "" , true ) 
+d . notice ( arg , 1082 , "" , true ) 
+end 
+elseif f == 3 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "razador_zone_check" , arg ) 
+d . setf ( arg , "floor" , 4 ) 
+d . setf ( arg , "step" , 0 ) 
+d . clear_regen ( arg ) 
+d . notice ( arg , 1090 , "" , true ) 
+d . notice ( arg , 1082 , "" , true ) 
+end 
+end 
+else 
+razador_zone . clear ( arg ) 
+end 

@@ -1,0 +1,78 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+local t = d . getf ( arg , "type" ) 
+if f == 1 then 
+if d . count_monster ( arg ) == 6 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+local stone = number ( 1 , 6 ) 
+local success = d . set_vid_invincible ( d . getf ( arg , string . format ( "unique_vid%d" , stone ) ) , false ) 
+if success then 
+d . notice ( arg , 975 , "" , true ) 
+d . notice ( arg , 976 , "" , true ) 
+else 
+d . notice ( arg , 977 , "" , true ) 
+rune_zone . clear ( arg ) 
+end 
+end 
+elseif t == 2 then 
+local s = d . getf ( arg , "step" ) 
+if ( s == 1 or s == 3 ) and d . count_monster ( arg ) == 1 then 
+local success = d . set_vid_invincible ( d . getf ( arg , "boss" ) , false ) 
+if success then 
+if s == 1 then 
+d . setf ( arg , "step" , 2 ) 
+elseif s == 3 then 
+d . setf ( arg , "step" , 4 ) 
+end 
+d . notice ( arg , 938 , "" , true ) 
+else 
+d . notice ( arg , 981 , "" , true ) 
+rune_zone . clear ( arg ) 
+end 
+end 
+elseif t == 3 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+if f == 2 then 
+d . spawn_mob ( arg , 3997 , 146 , 377 ) 
+elseif f == 3 then 
+d . spawn_mob ( arg , 3998 , 592 , 377 ) 
+elseif f == 4 then 
+d . spawn_mob ( arg , 3996 , 414 , 121 ) 
+end 
+d . notice ( arg , 939 , "" , true ) 
+d . notice ( arg , 940 , "" , true ) 
+end 
+elseif t == 4 then 
+if d . count_monster ( arg ) == 1 then 
+clear_server_timer ( "rune_zone_check" , arg ) 
+d . setf ( arg , "type" , 5 ) 
+local success = d . set_vid_invincible ( d . getf ( arg , "boss" ) , false ) 
+if success then 
+d . notice ( arg , 938 , "" , true ) 
+else 
+d . notice ( arg , 983 , "" , true ) 
+rune_zone . clear ( arg ) 
+end 
+end 
+elseif t == 8 then 
+local s = d . getf ( arg , "step" ) 
+if ( s == 1 or s == 3 ) and d . count_monster ( arg ) == 1 then 
+local success = d . set_vid_invincible ( d . getf ( arg , "boss" ) , false ) 
+if success then 
+if s == 1 then 
+d . setf ( arg , "step" , 2 ) 
+elseif s == 3 then 
+d . setf ( arg , "step" , 4 ) 
+end 
+d . notice ( arg , 938 , "" , true ) 
+else 
+d . notice ( arg , 983 , "" , true ) 
+rune_zone . clear ( arg ) 
+end 
+end 
+end 
+else 
+rune_zone . clear ( arg ) 
+end 

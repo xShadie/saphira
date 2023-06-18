@@ -1,0 +1,11 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . setf ( arg , "count1" , 0 ) 
+d . regen_file ( arg , "data/dungeon/temple_ochao/regen_1.txt" ) 
+server_timer ( "temple_ochao_end" , 1799 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 30 ) , true ) 
+d . notice ( arg , 1220 , "" , true ) 
+server_loop_timer ( "temple_ochao_check" , 10 , arg ) 
+else 
+temple_ochao . clear ( arg ) 
+end 

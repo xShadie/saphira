@@ -1,0 +1,13 @@
+pda_perf_quest={["start"]=0,GetSkillList= function ()local skill_list = special . active_skill_list [ pc . get_job ( ) + 1 ] [ pc . get_skill_group ( ) ] 
+local vnum_list = { } 
+local name_list = { } 
+for i = 1 , table . getn ( skill_list ) begin 
+local skill_vnum = skill_list [ i ] 
+local skill_level = pc . get_skill_level ( skill_vnum ) 
+if skill_level >= 30 and skill_level < 40 then 
+table . insert ( vnum_list , skill_list [ i ] ) 
+table . insert ( name_list , locale . GM_SKILL_NAME_DICT [ skill_vnum ] ) 
+end 
+end 
+return vnum_list , name_list 
+end }

@@ -1,0 +1,8 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+if d . getf ( arg , "floor" ) == 1 then 
+d . notice ( arg , 1223 , string . format ( "%d" , 100 - d . getf ( arg , "count1" ) ) , true ) 
+end 
+else 
+temple_ochao . clear ( arg ) 
+end 

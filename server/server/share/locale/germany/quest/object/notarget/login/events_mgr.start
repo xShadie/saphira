@@ -1,0 +1,6 @@
+local lang = pc . get_language ( ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if bonus > 100 then 
+bonus = 100 
+end 
+notice ( string . format ( gameforge [ lang ] . events_mgr . _1 , bonus ) ) 

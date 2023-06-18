@@ -1,0 +1,23 @@
+local idx = pc . get_map_index ( ) 
+if idx == 26 then 
+pc . warp ( 536900 , 1.3314e+06 ) 
+elseif idx >= 260000 and idx < 270000 then 
+pc . set_warp_location ( 215 , 5369 , 13314 ) 
+pc . setf ( "christmas_zone1" , "idx" , idx ) 
+pc . setf ( "christmas_zone1" , "ch" , pc . get_channel_id ( ) ) 
+if d . getf ( idx , "floor" ) == 0 then 
+if not party . is_party ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+d . setf ( idx , "step" , 1 ) 
+server_timer ( "christmas_zone1_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+else 
+if party . is_leader ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+d . setf ( idx , "step" , 1 ) 
+server_timer ( "christmas_zone1_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+end 
+end 
+end 
+end 

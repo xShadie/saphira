@@ -1,0 +1,22 @@
+local idx = pc . get_map_index ( ) 
+local lang = pc . get_language ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 7 then 
+d . setf ( idx , "floor" , 8 ) 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . deviltower_zone . _1 ) 
+say ( gameforge [ lang ] . deviltower_zone . _2 ) 
+say ( gameforge [ lang ] . deviltower_zone . _3 ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+d . setf ( idx , "count" , 0 ) 
+d . spawn_mob ( idx , 8018 , 639 , 658 ) 
+d . spawn_mob ( idx , 8018 , 611 , 637 ) 
+d . spawn_mob ( idx , 8018 , 596 , 674 ) 
+d . spawn_mob ( idx , 8018 , 629 , 670 ) 
+d . notice ( idx , 1022 , "" , true ) 
+server_timer ( "deviltower_warp" , 2 , idx ) 
+npc . purge ( ) 
+end 
+end 

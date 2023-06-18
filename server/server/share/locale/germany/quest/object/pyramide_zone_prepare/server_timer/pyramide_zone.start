@@ -1,0 +1,11 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 8472 , 91 , 130 ) 
+server_timer ( "pyramide_zone_end" , 1799 , arg ) 
+server_timer ( "pyramide_zone_limit" , 239 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 30 ) , true ) 
+d . notice ( arg , 1160 , "" , true ) 
+d . notice ( arg , 1161 , "" , true ) 
+else 
+pyramide_zone . clear ( arg ) 
+end 

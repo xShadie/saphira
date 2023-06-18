@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 270000 and idx < 280000 then 
+if d . getf ( idx , "floor" ) == 1 then 
+d . setf ( idx , "floor" , 2 ) 
+d . notice ( idx , 1138 , "" , true ) 
+d . notice ( idx , 1139 , "" , true ) 
+d . notice ( idx , 1140 , "" , true ) 
+server_timer ( "slime_floor2" , 2 , idx ) 
+elseif d . getf ( idx , "floor" ) == 4 then 
+local c = d . getf ( idx , "count" ) - 1 
+if c == 0 then 
+d . setf ( idx , "floor" , 5 ) 
+d . notice ( idx , 1142 , "" , true ) 
+d . notice ( idx , 1143 , "" , true ) 
+game . drop_item ( 30623 , 1 ) 
+else 
+d . setf ( idx , "count" , c ) 
+d . notice ( idx , 1141 , c , true ) 
+end 
+end 
+end 
+ return end 

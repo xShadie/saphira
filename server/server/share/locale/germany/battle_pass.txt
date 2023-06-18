@@ -1,0 +1,117 @@
+Group BattlePass
+{
+	#--#	BattlePassName	BattlePassID
+	1	battlepass_april_2019	1
+}
+
+Group battlepass_april_2019
+{
+	Group Reward
+	{
+		#--#	ItemVnum	ItemCount
+		1	70610	2
+		2	40004	1
+	}
+		
+	Group Mission_1
+	{
+		#--#	InfoDesc	InfoName
+		1	type	MONSTER_KILL
+		2	vnum	101
+		3	count	1500
+		
+		4	40143	2
+	}
+	
+	Group Mission_2
+	{
+		#--#	InfoDesc	InfoName
+		1	type	USE_ITEM
+		2	vnum	71084
+		3	count	15000
+		
+		4	89100	2
+	}
+	
+	Group Mission_3
+	{
+		#--#	InfoDesc	InfoName
+		1	type	SELL_ITEM
+		2	vnum	30284
+		3	count	250
+		
+		4	40144	2
+	}
+	
+	Group Mission_4
+	{
+		#--#	InfoDesc	InfoName
+		1	type	REFINE_ITEM
+		2	vnum	14208
+		3	count	2
+		
+		4	88980	15
+	}
+	
+	Group Mission_5
+	{
+		#--#	InfoDesc	InfoName
+		1	type	DESTROY_ITEM
+		2	vnum	30277
+		3	count	150
+		
+		4	71175	2
+	}
+	
+	Group Mission_6
+	{
+		#--#	InfoDesc	InfoName
+		1	type	COLLECT_ITEM
+		2	vnum	30279
+		3	count	650
+		
+		4	30280	2
+		5	30278	2
+	}
+	
+	Group Mission_7
+	{
+		#--#	InfoDesc	InfoName
+		1	type	FRY_FISH
+		2	count	100
+		
+		3	88980	10
+		4	30094	10
+		6	71127	1
+	}
+	
+	Group Mission_8
+	{
+		#--#	InfoDesc	InfoName
+		1	type	CATCH_FISH
+		2	count	100
+		
+		3	76025	2
+	}
+	
+	Group Mission_9
+	{
+		#--#	InfoDesc	InfoName
+		1	type	FARM_YANG
+		2	value	2000000000
+		
+		3	88963	5
+		3	71084	2000
+	}
+	
+	Group Mission_10
+	{
+		#--#	InfoDesc	InfoName
+		1	type	COMPLETE_DUNGEON
+		2	id	1
+		3	count	45
+		
+		4	89101	2
+		5	30179	2
+	}
+}

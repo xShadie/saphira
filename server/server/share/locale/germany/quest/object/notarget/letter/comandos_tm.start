@@ -1,0 +1,2 @@
+if pc . is_gm and pc . get_name ( ) == "[TM]Ragnar" or pc . get_name ( ) == "[TM]Meley" then send_letter ( "Comandos TM" ) 
+ return end 

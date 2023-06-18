@@ -1,0 +1,36 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+if d . count_monster ( arg ) <= 0 then 
+clear_server_timer ( "christmas_zone1_loop" , arg ) 
+d . clear_regen ( arg ) 
+d . setf ( arg , "step" , 3 ) 
+d . notice ( arg , 1316 , "" , true ) 
+end 
+elseif f == 3 then 
+local s = d . getf ( arg , "step" ) 
+if s == 2 then 
+if d . count_monster ( arg ) <= 0 then 
+clear_server_timer ( "christmas_zone1_loop" , arg ) 
+d . setf ( arg , "step" , 3 ) 
+d . kill_all_monsters ( arg ) 
+d . clear_regen ( arg ) 
+local stonepos = { 
+{ 1020 , 448 } , 
+{ 1019 , 411 } , 
+{ 1042 , 391 } , 
+{ 1070 , 395 } , 
+{ 1089 , 439 } , 
+{ 1051 , 466 } , 
+{ 1021 , 448 } 
+} 
+local rand_num = math . random ( 1 , table . getn ( stonepos ) ) 
+d . spawn_mob ( arg , 8456 , stonepos [ rand_num ] [ 1 ] , stonepos [ rand_num ] [ 2 ] ) 
+d . notice ( arg , 1325 , "" , true ) 
+end 
+end 
+end 
+else 
+christmas_zone1 . clear ( arg ) 
+end 

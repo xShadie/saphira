@@ -1,0 +1,17 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . setf ( arg , "step" , 0 ) 
+d . setf ( arg , "bosskilled" , 0 ) 
+d . setf ( arg , "first_drop" , 0 ) 
+d . set_unique ( arg , "sig1" , d . spawn_mob ( arg , 20387 , 272 , 205 , 45 ) ) 
+d . set_unique ( arg , "sig2" , d . spawn_mob ( arg , 20387 , 256 , 219 , 28 ) ) 
+d . spawn_mob ( arg , 20100 , 120 , 500 ) 
+d . set_regen_file ( arg , "data/dungeon/orkmaze/regen1.txt" ) 
+server_timer ( "orchi_end" , 1799 , arg ) 
+d . notice ( arg , 1056 , string . format ( "%d" , 30 ) , true ) 
+d . notice ( arg , 1057 , "" , true ) 
+d . notice ( arg , 1058 , "" , true ) 
+d . notice ( arg , 1059 , "" , true ) 
+else 
+dungeonorchi . clear ( arg ) 
+end 

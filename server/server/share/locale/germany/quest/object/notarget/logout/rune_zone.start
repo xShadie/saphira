@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+pc . setf ( "rune_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

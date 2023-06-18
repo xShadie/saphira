@@ -1,0 +1,16 @@
+PetSystems={["start"]=0,get_pet_info= function (itemVnum)pet_info_map = { 
+[ 55701 ] = { 34041 , "NoName" , 0 } , 
+[ 55702 ] = { 34045 , "NoName" , 0 } , 
+[ 55703 ] = { 34049 , "NoName" , 0 } , 
+[ 55704 ] = { 34053 , "NoName" , 0 } , 
+[ 55705 ] = { 34036 , "NoName" , 0 } , 
+[ 55706 ] = { 34064 , "NoName" , 0 } , 
+[ 55707 ] = { 34073 , "NoName" , 0 } , 
+[ 55708 ] = { 34075 , "NoName" , 0 } , 
+[ 55709 ] = { 34080 , "NoName" , 0 } , 
+[ 55710 ] = { 34082 , "NoName" , 0 } , 
+[ 55711 ] = { 34095 , "NoName" , 0 } , 
+} 
+itemVnum = tonumber ( itemVnum ) 
+return pet_info_map [ itemVnum ] 
+end }

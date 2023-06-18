@@ -1,0 +1,10 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.53e+06 and idx < 3.54e+06 then 
+if d . getf ( idx , "step" ) == 5 then 
+d . setf ( idx , "step" , 6 ) 
+d . purge_vid ( d . getf ( idx , "boss_vid1" ) ) 
+d . spawn_mob ( idx , 3960 , 384 , 374 , 360 ) 
+d . cmdchat ( idx , "BINARY_Update_Mast_Timer 0" ) 
+end 
+end 
+ return end 

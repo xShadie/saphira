@@ -1,0 +1,6 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . notice ( arg , 1040 , "" , true ) 
+d . notice ( arg , 1041 , "" , true ) 
+end 
+rune_zone . clear ( arg ) 

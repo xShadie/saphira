@@ -1,0 +1,6 @@
+if item . get_vnum ( ) == 30147 then local lang = pc . get_language ( ) 
+say_item_vnum ( 30147 ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_29 ) 
+pc . remove_item ( "30147" , 200 ) 
+set_state ( "gotomission4" ) 
+ return end 

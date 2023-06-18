@@ -1,0 +1,9 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+if d . getf ( idx , "type" ) == 6 then 
+if number ( 1 , 100 ) > 97 then 
+game . drop_item ( 89103 , 1 ) 
+end 
+end 
+end 
+ return end 

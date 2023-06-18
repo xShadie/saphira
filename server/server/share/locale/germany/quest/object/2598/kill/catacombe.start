@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.16e+06 and idx < 2.17e+06 then 
+if d . getf ( idx , "floor" ) == 4 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 2598 , 3600 , 216 , "catacombe" ) 
+if party . is_party ( ) then 
+notice_all ( 933 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1123 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1008 , "" , true ) 
+d . notice ( idx , 1009 , "" , true ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5002 , 74 , 1110 ) 
+end 
+server_timer ( "catacombe_complete" , 30 , idx ) 
+end 
+end 
+ return end 

@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 1 then 
+clear_server_timer ( "pyramide_zone_limit" , idx ) 
+d . setf ( idx , "floor" , 2 ) 
+d . setf ( idx , "count" , 0 ) 
+d . spawn_mob ( idx , 9332 , 306 , 158 , 45 ) 
+d . set_regen_file ( idx , "data/dungeon/pyramide/regen1.txt" ) 
+d . notice ( idx , 993 , "" , true ) 
+server_timer ( "pyramide_zone_warp" , 3 , idx ) 
+end 
+end 
+ return end 

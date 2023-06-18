@@ -1,0 +1,21 @@
+if pc . has_guild ( ) then 
+if guild . get_wins ( ) == 0 then 
+pc . setqf ( "guild_rewards" , 0 ) 
+end 
+if guild . get_wins ( ) >= 5 and pc . getqf ( "guild_rewards" ) == 0 then 
+pc . setqf ( "guild_rewards" , 1 ) 
+pc . give_gaya ( 1 ) 
+syschat ( gameforge [ pc . get_language ( ) ] . guild_rank . _1 ) 
+end 
+if guild . get_wins ( ) >= 10 and pc . getqf ( "guild_rewards" ) == 1 then 
+pc . setqf ( "guild_rewards" , 2 ) 
+pc . give_gaya ( 3 ) 
+syschat ( gameforge [ pc . get_language ( ) ] . guild_rank . _2 ) 
+end 
+if guild . get_wins ( ) >= 15 and pc . getqf ( "guild_rewards" ) == 2 then 
+pc . setqf ( "guild_rewards" , 3 ) 
+pc . give_gaya ( 15 ) 
+syschat ( gameforge [ pc . get_language ( ) ] . guild_rank . _3 ) 
+end 
+end 
+cmdchat ( "callGuildRankId " .. q . getcurrentquestindex ( ) ) 

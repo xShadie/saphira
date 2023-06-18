@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 270000 and idx < 280000 then 
+pc . setf ( "slime_dungeon" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

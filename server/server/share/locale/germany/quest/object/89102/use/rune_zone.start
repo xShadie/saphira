@@ -1,0 +1,19 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 or f == 3 or f == 4 then 
+if d . getf ( idx , "type" ) == 1 then 
+if pc . count_item ( 89102 ) < 10 then 
+syschat ( gameforge [ lang ] . rune_dungeon . _27 ) 
+return 
+end 
+if party . is_party ( ) and not party . is_leader ( ) then 
+syschat ( gameforge [ lang ] . rune_dungeon . _28 ) 
+return 
+end 
+pc . remove_item ( 89102 , 10 ) 
+pc . give_item2 ( 89103 , 1 ) 
+end 
+end 
+end 
+ return end 

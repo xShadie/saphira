@@ -1,0 +1,24 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 3.52e+06 and idx < 3.53e+06 then 
+if d . getf ( idx , "floor" ) == 8 then 
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20397 ) ) ) 
+say ( "" ) 
+if party . is_party ( ) and not party . is_leader ( ) then 
+say ( gameforge [ lang ] . common . dungeon_24 ) 
+return 
+end 
+say ( gameforge [ lang ] . common . dungeon_23 ) 
+local agree = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if agree == 2 then 
+return 
+end 
+d . setf ( idx , "floor" , 9 ) 
+d . spawn_mob ( idx , 6191 , 927 , 335 ) 
+d . regen_file ( idx , "data/dungeon/nemere/regen6.txt" ) 
+d . notice ( idx , 1097 , "" , true ) 
+server_timer ( "nemere_zone_warp" , 2 , idx ) 
+else 
+setskin ( NOWINDOW ) 
+end 
+end 

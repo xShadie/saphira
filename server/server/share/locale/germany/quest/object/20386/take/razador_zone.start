@@ -1,0 +1,32 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.51e+06 and idx < 3.52e+06 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 3 and d . getf ( idx , "step" ) == 1 then 
+if item . get_vnum ( ) == 30329 then 
+npc . purge ( ) 
+item . remove ( ) 
+d . setf ( idx , "step" , 0 ) 
+d . notice ( idx , 1083 , "" , true ) 
+d . notice ( idx , 1082 , "" , true ) 
+end 
+elseif f == 5 then 
+if item . get_vnum ( ) == 30330 then 
+npc . purge ( ) 
+item . remove ( ) 
+local c = d . getf ( idx , "opened" ) + 1 
+if c == 7 then 
+d . setf ( idx , "floor" , 6 ) 
+d . setf ( idx , "step" , 0 ) 
+pc . remove_item ( 30330 , pc . count_item ( 30330 ) ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1085 , "" , true ) 
+d . notice ( idx , 1082 , "" , true ) 
+else 
+d . setf ( idx , "opened" , c ) 
+d . notice ( idx , 1265 , "" , true ) 
+end 
+end 
+end 
+end 
+ return end 

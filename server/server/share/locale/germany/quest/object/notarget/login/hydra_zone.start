@@ -1,0 +1,24 @@
+local idx = pc . get_map_index ( ) 
+if idx == 353 then 
+pc . warp ( 536900 , 1.3314e+06 ) 
+elseif idx >= 3.53e+06 and idx < 3.54e+06 then 
+pc . set_warp_location ( 215 , 5369 , 13314 ) 
+pc . setf ( "hydra_zone" , "idx" , idx ) 
+pc . setf ( "hydra_zone" , "ch" , pc . get_channel_id ( ) ) 
+if d . getf ( idx , "floor" ) == 0 then 
+if not party . is_party ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "hydra_zone_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+else 
+if party . is_leader ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "hydra_zone_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+end 
+end 
+end 
+cmdchat ( "BINARY_Update_Mast_Window 1" ) 
+else 
+cmdchat ( "BINARY_Update_Mast_Window 0" ) 
+end 

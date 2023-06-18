@@ -1,0 +1,18 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 89104 then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+if d . getf ( idx , "first_drop" ) == 1 and d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+npc . purge ( ) 
+pc . remove_item ( 89104 , pc . count_item ( 89104 ) ) 
+d . clear_regen ( idx ) 
+d . kill_unique ( idx , "sig1" ) 
+d . spawn_mob ( idx , 8109 , 401 , 225 ) 
+d . spawn_mob ( idx , 8109 , 423 , 207 ) 
+d . spawn_mob ( idx , 8109 , 408 , 190 ) 
+d . spawn_mob ( idx , 8109 , 389 , 216 ) 
+d . regen_file ( idx , "data/dungeon/orkmaze/regen2.txt" ) 
+d . notice ( idx , 1043 , "" , true ) 
+d . notice ( idx , 1044 , "" , true ) 
+end 
+end 
+ return end 

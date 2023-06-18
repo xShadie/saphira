@@ -1,0 +1,28 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "christmas_zone1_prepare" , arg ) 
+if d . find ( arg ) then 
+d . set_regen_file ( arg , "data/dungeon/christmas_zone1/regen_snowflakes.txt" ) 
+d . spawn_mob ( arg , 9294 , 569 , 343 , 180 ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 556 , [ "y" ] = 208 } , 
+[ 2 ] = { [ "x" ] = 546 , [ "y" ] = 269 } , 
+[ 3 ] = { [ "x" ] = 515 , [ "y" ] = 332 } , 
+[ 4 ] = { [ "x" ] = 577 , [ "y" ] = 339 } , 
+[ 5 ] = { [ "x" ] = 580 , [ "y" ] = 304 } , 
+[ 6 ] = { [ "x" ] = 618 , [ "y" ] = 293 } , 
+[ 7 ] = { [ "x" ] = 591 , [ "y" ] = 258 } , 
+[ 8 ] = { [ "x" ] = 546 , [ "y" ] = 302 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( arg , 8455 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( arg , "unique_vid" , vid ) 
+end 
+end 
+server_timer ( "christmas_zone1_end" , 2699 , arg ) 
+d . notice ( arg , 1128 , "45" , true ) 
+d . notice ( arg , 1308 , "" , true ) 
+else 
+christmas_zone1 . clear ( arg ) 
+end 

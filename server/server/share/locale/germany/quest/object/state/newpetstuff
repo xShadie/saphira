@@ -1,0 +1,2 @@
+newpetstuff={["start"]=0,book_skill= function (value)return value - 55009 
+end }

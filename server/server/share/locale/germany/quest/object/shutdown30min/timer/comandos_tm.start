@@ -1,0 +1,3 @@
+notice_all ( "ATENCION ATENCION !!!" ) 
+notice_all ( "Mantenimiento: El server va a estar en mantenimiento dentro de 30 minutos!" ) 
+timer ( "shutdown15min" , 60 * 15 ) 

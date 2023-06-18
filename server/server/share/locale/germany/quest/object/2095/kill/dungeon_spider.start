@@ -1,0 +1,20 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.17e+06 and idx < 2.18e+06 then 
+if d . getf ( idx , "floor" ) == 3 then 
+local c = d . getf ( idx , "count" ) - 1 
+if c == 0 then 
+d . setf ( idx , "floor" , 4 ) 
+local success = d . set_vid_invincible ( d . getf ( idx , "boss" ) , false ) 
+if not success then 
+d . notice ( idx , 1135 , "" , true ) 
+dungeon_spider . clear ( arg ) 
+else 
+d . clear_regen ( idx ) 
+d . notice ( idx , 1134 , "" , true ) 
+end 
+else 
+d . setf ( idx , "count" , c ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,7 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20356 ) ) ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_10 ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_11 ) 
+say_item_vnum ( 30012 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_12 ) 

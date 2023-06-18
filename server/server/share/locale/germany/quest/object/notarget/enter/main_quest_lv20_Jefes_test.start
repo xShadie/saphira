@@ -1,0 +1,2 @@
+if pc . get_name ( ) == "Thor" then set_state ( "gototeacher" ) 
+ return end 

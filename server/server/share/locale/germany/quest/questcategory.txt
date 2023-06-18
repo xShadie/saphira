@@ -1,0 +1,1 @@
+3	guild_war_join

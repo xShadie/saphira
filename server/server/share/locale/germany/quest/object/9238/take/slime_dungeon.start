@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30623 then local idx = pc . get_map_index ( ) 
+if idx >= 270000 and idx < 280000 then 
+if d . getf ( idx , "floor" ) == 5 then 
+d . setf ( idx , "floor" , 6 ) 
+pc . remove_item ( 30623 , pc . count_item ( 30623 ) ) 
+pc . give_item2 ( 30624 , 1 ) 
+npc . purge ( ) 
+d . notice ( idx , 1144 , "" , true ) 
+end 
+end 
+ return end 

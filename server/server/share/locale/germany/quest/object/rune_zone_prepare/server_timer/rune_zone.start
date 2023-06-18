@@ -1,0 +1,39 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . setf ( arg , "type" , 0 ) 
+d . regen_file ( arg , "data/dungeon/rune/regen1.txt" ) 
+local stones = { 
+[ 1 ] = { [ "x" ] = 145 , [ "y" ] = 106 } , 
+[ 2 ] = { [ "x" ] = 126 , [ "y" ] = 127 } , 
+[ 3 ] = { [ "x" ] = 132 , [ "y" ] = 156 } , 
+[ 4 ] = { [ "x" ] = 170 , [ "y" ] = 155 } , 
+[ 5 ] = { [ "x" ] = 163 , [ "y" ] = 115 } , 
+[ 6 ] = { [ "x" ] = 161 , [ "y" ] = 133 } 
+} 
+table_shuffle ( stones ) 
+local success = true 
+for index , position in ipairs ( stones ) begin 
+local vid = d . spawn_mob ( arg , 8202 , position [ "x" ] , position [ "y" ] ) 
+success = d . set_vid_invincible ( vid , true ) 
+if not success then 
+break 
+else 
+d . setf ( arg , string . format ( "unique_vid%d" , index ) , vid ) 
+d . setf ( arg , string . format ( "done_vid%d" , index ) , 0 ) 
+end 
+end 
+if not success then 
+d . notice ( arg , 948 , "" , true ) 
+rune_zone . clear ( arg ) 
+else 
+d . setf ( arg , "count" , 0 ) 
+server_timer ( "rune_step_limit" , 899 , arg ) 
+server_timer ( "rune_zone_end" , 3899 , arg ) 
+server_loop_timer ( "rune_zone_check" , 2 , arg ) 
+d . notice ( arg , 949 , "15" , true ) 
+d . notice ( arg , 950 , "" , true ) 
+d . notice ( arg , 951 , "" , true ) 
+end 
+else 
+rune_zone . clear ( arg ) 
+end 

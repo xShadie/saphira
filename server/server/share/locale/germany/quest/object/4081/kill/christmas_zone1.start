@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+if d . getf ( idx , "floor" ) == 3 and d . getf ( idx , "step" ) == 8 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 4081 , 4200 , 26 , "christmas_zone1" ) 
+if party . is_party ( ) then 
+notice_all ( 1333 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1334 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1136 , "" , true ) 
+d . notice ( idx , 1137 , "" , true ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5001 , 1050 , 428 ) 
+end 
+server_timer ( "christmas_zone1_complete" , 30 , idx ) 
+end 
+end 
+ return end 

@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 3.51e+06 and idx < 3.52e+06 then 
+pc . setf ( "razador_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

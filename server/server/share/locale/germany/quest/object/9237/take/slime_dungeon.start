@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30624 then local idx = pc . get_map_index ( ) 
+if idx >= 270000 and idx < 280000 then 
+if d . getf ( idx , "floor" ) == 6 then 
+d . setf ( idx , "floor" , 7 ) 
+pc . remove_item ( 30624 , pc . count_item ( 30624 ) ) 
+npc . kill ( ) 
+d . notice ( idx , 1145 , "" , true ) 
+d . notice ( idx , 1139 , "" , true ) 
+d . notice ( idx , 1140 , "" , true ) 
+server_timer ( "slime_floor7" , 2 , idx ) 
+end 
+end 
+ return end 

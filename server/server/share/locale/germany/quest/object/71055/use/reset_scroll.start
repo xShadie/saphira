@@ -1,0 +1,36 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+ResetScroll . ShowRequisites ( item . get_vnum ( ) ) ; 
+if ( not ResetScroll . CheckRequisites ( item . get_vnum ( ) ) ) then 
+return ; 
+end 
+local lang = pc . get_language ( ) 
+say ( gameforge [ lang ] . reset_scroll . _39 ) 
+local new_name = input ( ) 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+local old_name = pc . get_name ( ) ; 
+if ( new_name == old_name ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _40 ) 
+return 
+end 
+local ret = pc . change_name ( new_name ) ; 
+if ( ret == 0 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _41 ) 
+elseif ( ret == 1 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _42 ) 
+elseif ( ret == 2 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _43 ) 
+elseif ( ret == 3 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _44 ) 
+elseif ( ret == 4 ) then 
+pc . remove_item ( 71055 , 1 ) ; 
+say_reward ( gameforge [ lang ] . reset_scroll . _45 ) 
+say_reward ( gameforge [ lang ] . reset_scroll . _46 ) 
+else 
+say_reward ( gameforge [ lang ] . reset_scroll . _47 ) 
+end 

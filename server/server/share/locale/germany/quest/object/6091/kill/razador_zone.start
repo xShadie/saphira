@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.51e+06 and idx < 3.52e+06 then 
+if d . getf ( idx , "floor" ) == 8 then 
+d . setf ( idx , "was_completed" , 1 ) 
+d . complete ( 6091 , 3600 , 351 , "razador_zone" ) 
+if party . is_party ( ) then 
+notice_all ( 1242 , party . get_leader_name ( ) ) 
+else 
+notice_all ( 1243 , pc . get_name ( ) ) 
+end 
+d . notice ( idx , 1263 , "" , true ) 
+d . notice ( idx , 1261 , "" , true ) 
+d . kill_all ( idx ) 
+d . clear_regen ( idx ) 
+local bonus = 10 + game . get_event_flag ( "dungeon_bonus" ) 
+if math . random ( 1 , 100 ) <= bonus then 
+d . spawn_mob ( idx , 5002 , 686 , 637 ) 
+end 
+server_timer ( "razador_zone_complete" , 30 , idx ) 
+end 
+end 
+ return end 

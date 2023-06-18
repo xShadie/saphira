@@ -1,0 +1,17 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30312 then local idx = pc . get_map_index ( ) 
+if idx >= 2.16e+06 and idx < 2.17e+06 then 
+if d . getf ( idx , "floor" ) == 2 then 
+d . setf ( idx , "floor" , 3 ) 
+npc . purge ( ) 
+pc . remove_item ( 30312 , pc . count_item ( 30312 ) ) 
+d . clear_regen ( idx ) 
+d . kill_all ( idx ) 
+d . spawn_mob ( idx , 8038 , 1270 , 712 ) 
+d . spawn_mob ( idx , 8038 , 1318 , 737 ) 
+d . spawn_mob ( idx , 8038 , 1317 , 665 ) 
+d . regen_file ( idx , "data/dungeon/devilcatacomb/regen3.txt" ) 
+d . notice ( idx , 1003 , "" , true ) 
+server_timer ( "catacombe_warp" , 2 , idx ) 
+end 
+end 
+ return end 

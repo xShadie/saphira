@@ -1,0 +1,31 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.55e+06 and idx < 3.56e+06 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+local s = d . getf ( idx , "step" ) + 1 
+d . setf ( idx , "step" , s ) 
+if s == 5 then 
+d . spawn_mob ( idx , 692 , 401 , 225 ) 
+d . notice ( idx , 1048 , "" , true ) 
+end 
+elseif f == 2 then 
+local s = d . getf ( idx , "step" ) - 1 
+if s == 0 then 
+local try = d . set_vid_invincible ( d . getf ( idx , "boss" ) , false ) 
+if not try then 
+d . notice ( idx , 1050 , "" , true ) 
+dungeonorchi . clear ( arg ) 
+else 
+d . notice ( idx , 1051 , "" , true ) 
+end 
+else 
+d . notice ( idx , 1052 , string . format ( "%d" , s ) , true ) 
+d . notice ( idx , 1053 , "" , true ) 
+local dmg = math . floor ( ( 6 - s ) / 1.6 ) 
+npc . set_vid_attack_mul ( d . getf ( idx , "boss" ) , dmg ) 
+npc . set_vid_damage_mul ( d . getf ( idx , "boss" ) , dmg ) 
+end 
+d . setf ( idx , "step" , s ) 
+end 
+end 
+ return end 

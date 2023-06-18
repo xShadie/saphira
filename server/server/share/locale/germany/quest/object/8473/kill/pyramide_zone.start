@@ -1,0 +1,17 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 4 then 
+if d . getf ( idx , "unique_vid" ) == npc . get_vid ( ) then 
+d . setf ( idx , "floor" , 5 ) 
+d . kill_all_monsters ( idx ) 
+d . clear_regen ( idx ) 
+d . spawn_mob ( idx , 4155 , 577 , 136 ) 
+d . notice ( idx , 1171 , "" , true ) 
+d . notice ( idx , 1172 , "" , true ) 
+else 
+d . spawn_mob ( idx , 4154 , pc . get_x ( ) - 8960 , pc . get_y ( ) - 22528 ) 
+d . notice ( idx , 1173 , "" , true ) 
+end 
+end 
+end 
+ return end 

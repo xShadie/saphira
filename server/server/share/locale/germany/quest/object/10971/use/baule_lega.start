@@ -1,0 +1,13 @@
+if pc . get_level ( ) >= 1 then 
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+pc . remove_item ( 10971 , 1 ) 
+local lang = pc . get_language ( ) 
+chat ( string . format ( gameforge [ lang ] . baule_start . _1 , item_name ( 10971 ) ) ) 
+chat ( gameforge [ lang ] . baule_start . _2 ) 
+pc . give_item2 ( 71188 , 1 ) 
+pc . give_item2 ( 53248 , 1 ) 
+pc . give_item2 ( 71225 , 1 ) 
+end 

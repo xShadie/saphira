@@ -1,0 +1,22 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 5 then 
+d . setf ( idx , "floor" , 6 ) 
+clear_server_timer ( "pyramide_zone_limit" , idx ) 
+local npcpos = { 
+[ 1 ] = { [ "x" ] = 166 , [ "y" ] = 1044 , [ "dir" ] = 135 } , 
+[ 2 ] = { [ "x" ] = 188 , [ "y" ] = 1045 , [ "dir" ] = 225 } , 
+[ 3 ] = { [ "x" ] = 188 , [ "y" ] = 1016 , [ "dir" ] = 315 } , 
+[ 4 ] = { [ "x" ] = 166 , [ "y" ] = 1015 , [ "dir" ] = 45 } 
+} 
+table_shuffle ( npcpos ) 
+for index , position in ipairs ( npcpos ) begin 
+local vid = d . spawn_mob ( idx , 9333 , position [ "x" ] , position [ "y" ] , position [ "dir" ] ) 
+d . setf ( idx , string . format ( "uniue_vid_anu%d" , index ) , vid ) 
+end 
+d . set_regen_file ( idx , "data/dungeon/pyramide/regen2.txt" ) 
+d . notice ( idx , 1175 , "" , true ) 
+server_timer ( "pyramide_zone_warp" , 3 , idx ) 
+end 
+end 
+ return end 

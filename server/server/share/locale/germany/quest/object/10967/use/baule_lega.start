@@ -1,0 +1,23 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+local drop = { 
+{ 71084 , 70 } , 
+{ 71084 , 140 } , 
+{ 70401 , 1 } , 
+{ 86062 , 1 } , 
+{ 50926 , 1 } , 
+{ 25040 , 1 } , 
+{ 25040 , 2 } , 
+{ 39065 , 1 } , 
+{ 39070 , 1 } , 
+{ 39075 , 1 } 
+} 
+pc . remove_item ( 10967 , 1 ) 
+local c = number ( 1 , 10 ) 
+local lang = pc . get_language ( ) 
+chat ( string . format ( gameforge [ lang ] . baule_lega . _1 , item_name ( 10967 ) ) ) 
+chat ( gameforge [ lang ] . baule_lega . _2 ) 
+pc . give_item2 ( drop [ c ] [ 1 ] , drop [ c ] [ 2 ] ) 
+pc . give_gold ( 4e+07 ) 

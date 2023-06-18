@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+pc . setf ( "deviltower_zone" , "disconnect" , get_global_time ( ) + 300 ) 
+end 

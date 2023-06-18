@@ -1,0 +1,49 @@
+local cmd = mall_v3 . get_quest_cmd ( ) 
+if cmd [ 1 ] == "OPEN_STARTPAGE" then 
+local client_last_edit_mall_overview = cmd [ 2 ] 
+local last_edit_mall_overview = mall_v3 . get_last_edit_mall_overview ( ) 
+if client_last_edit_mall_overview ~= last_edit_mall_overview then 
+mall_v3 . set_client_loadingbar_percent ( 0 ) 
+mall_v3 . set_client_startpage_banners ( ) 
+mall_v3 . set_client_loadingbar_percent ( 50 ) 
+mall_v3 . set_client_startpage_malls ( ) 
+mall_v3 . set_client_last_edit_mall_overview ( last_edit_mall_overview ) 
+mall_v3 . set_client_loadingbar_percent ( 100 ) 
+mall_v3 . open_client_startpage ( ) 
+else 
+mall_v3 . open_client_startpage ( ) 
+end 
+elseif cmd [ 1 ] == "OPEN" then 
+local mall_id = tonumber ( cmd [ 2 ] ) 
+if not mall_v3 . IsFinite ( mall_id ) then return end 
+if not mall_id then return end 
+local client_last_edit_mall = cmd [ 3 ] 
+local last_edit_mall = mall_v3 . get_last_edit_mall ( mall_id ) 
+if client_last_edit_mall ~= last_edit_mall then 
+mall_v3 . set_client_loadingbar_percent ( 0 ) 
+if mall_v3 . create_client_mall ( mall_id ) then 
+mall_v3 . set_client_loadingbar_percent ( 35 ) 
+mall_v3 . set_client_categories ( mall_id ) 
+mall_v3 . set_client_loadingbar_percent ( 70 ) 
+mall_v3 . set_client_items ( mall_id ) 
+mall_v3 . set_client_last_edit_mall ( mall_id , last_edit_mall ) 
+mall_v3 . set_client_loadingbar_percent ( 100 ) 
+mall_v3 . set_client_currency ( mall_id ) 
+mall_v3 . open_client_mall ( mall_id ) 
+end 
+else 
+mall_v3 . set_client_currency ( mall_id ) 
+mall_v3 . open_client_mall ( mall_id ) 
+end 
+elseif cmd [ 1 ] == "BUY" then 
+local item_id = tonumber ( cmd [ 2 ] ) 
+if not mall_v3 . IsFinite ( item_id ) then return end 
+if not item_id then return end 
+if item_id < 1 then return end 
+local amount = tonumber ( cmd [ 3 ] ) 
+if not mall_v3 . IsFinite ( amount ) then return end 
+if not amount then return end 
+if amount > 200 then return end 
+if amount < 1 then return end 
+mall_v3 . buy_item ( item_id , amount ) 
+end 

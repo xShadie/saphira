@@ -1,0 +1,19 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.57e+06 and idx < 3.58e+06 then 
+if d . getf ( idx , "floor" ) == 6 then 
+local c = d . getf ( idx , "count" ) 
+if c == 2 then 
+d . setf ( idx , "count" , 3 ) 
+game . drop_item ( 30804 ) 
+elseif c == 6 then 
+local c = d . getf ( idx , "killed" ) + 1 
+if c == 6 then 
+d . setf ( idx , "count" , 7 ) 
+game . drop_item ( 30804 ) 
+else 
+d . setf ( idx , "killed" , c ) 
+end 
+end 
+end 
+end 
+ return end 

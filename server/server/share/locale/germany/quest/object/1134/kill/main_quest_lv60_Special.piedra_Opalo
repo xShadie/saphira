@@ -1,0 +1,8 @@
+local lang = pc . get_language ( ) 
+local s = number ( 1 , 1000 ) 
+if s <= 5 then 
+pc . give_item2 ( 33434 , 1 ) 
+say ( gameforge [ lang ] . main_quest . _mission_sohan_65 ) 
+say_item_vnum ( 33434 ) 
+say ( gameforge [ lang ] . main_quest . _mission_sohan_40 ) 
+end 

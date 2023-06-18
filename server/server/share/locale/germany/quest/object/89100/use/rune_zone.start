@@ -1,0 +1,30 @@
+say_title ( string . format ( "%s:" , item_name ( 89100 ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+say ( gameforge [ lang ] . rune_dungeon . _1 ) 
+local cooldown = pc . getf ( "rune_zone" , "cooldown" ) - get_global_time ( ) 
+if cooldown < 0 then 
+cooldown = 0 
+end 
+local h = math . floor ( cooldown / 3600 ) 
+local m = math . floor ( ( cooldown - ( 3600 * h ) ) / 60 ) 
+local hS = gameforge [ lang ] . common . hours if h == 1 then 
+hS = gameforge [ lang ] . common . hour end 
+local mS = gameforge [ lang ] . common . minutes if m == 1 then 
+mS = gameforge [ lang ] . common . minute end 
+say ( string . format ( gameforge [ lang ] . rune_dungeon . _2 , h , hS , m , mS ) ) 
+if cooldown > 0 then 
+say ( gameforge [ lang ] . rune_dungeon . _3 ) 
+local s = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if s == 2 then 
+return 
+end 
+pc . setf ( "rune_zone" , "disconnect" , 0 ) 
+pc . setf ( "rune_zone" , "idx" , 0 ) 
+pc . setf ( "rune_zone" , "ch" , 0 ) 
+pc . setf ( "rune_zone" , "cooldown" , 0 ) 
+pc . remove_item ( 89100 , 1 ) 
+say_title ( string . format ( "%s:" , item_name ( 89100 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . rune_dungeon . _4 ) 
+end 

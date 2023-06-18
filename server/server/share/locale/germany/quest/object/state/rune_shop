@@ -1,0 +1,58 @@
+rune_shop={["start"]=0,data= function ()return { 
+level_req = 70 , 
+rune_cost = { 
+[ 88970 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88971 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88972 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88973 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88974 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88975 ] = { { 88980 , 300 } , { 30278 , 1 } } , 
+[ 88976 ] = { { 88980 , 500 } , { 30280 , 2 } , { 30278 , 1 } } 
+} 
+} 
+end ,createTableSelectRunes= function ()local data = rune_shop . data ( ) 
+local t_vnum = { } 
+local t_name = { } 
+local cont = 0 
+for k , v in pairs ( data . rune_cost ) begin 
+local cell = 32 + math . mod ( k , 10 ) 
+if pc . get_wear ( cell ) == nil then 
+table . insert ( t_vnum , k ) 
+table . insert ( t_name , item_name ( k ) ) 
+end 
+cont = cont + 1 
+end 
+table . insert ( t_vnum , "Close" ) 
+table . insert ( t_name , "Close" ) 
+return t_vnum , t_name 
+end ,hasEnoughItems= function (rune_vnum)local data = rune_shop . data ( ) 
+for i = 1 , table . getn ( data . rune_cost [ rune_vnum ] ) begin 
+local item_vnum = data . rune_cost [ rune_vnum ] [ i ] [ 1 ] 
+local item_count = data . rune_cost [ rune_vnum ] [ i ] [ 2 ] 
+if pc . count_item ( item_vnum ) < item_count then 
+return false 
+end 
+end 
+return true 
+end ,removeItemCost= function (rune_vnum)local data = rune_shop . data ( ) 
+for i = 1 , table . getn ( data . rune_cost [ rune_vnum ] ) begin 
+local item_vnum = data . rune_cost [ rune_vnum ] [ i ] [ 1 ] 
+local item_count = data . rune_cost [ rune_vnum ] [ i ] [ 2 ] 
+pc . remove_item ( item_vnum , item_count ) 
+end 
+end ,sayCost= function (rune_vnum)local data = rune_shop . data ( ) 
+for i = 1 , table . getn ( data . rune_cost [ rune_vnum ] ) begin 
+local item_vnum = data . rune_cost [ rune_vnum ] [ i ] [ 1 ] 
+local item_count = data . rune_cost [ rune_vnum ] [ i ] [ 2 ] 
+say_reward ( string . format ( "%s. x%s %s" , i , item_count , item_name ( item_vnum ) ) ) 
+end 
+end ,hasAllRunes= function ()local data = rune_shop . data ( ) 
+local cont = 0 
+for k , v in pairs ( data . rune_cost ) begin 
+local cell = 32 + math . mod ( k , 10 ) 
+if pc . get_wear ( cell ) == nil then 
+return false 
+end 
+end 
+return true 
+end }

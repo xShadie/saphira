@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30341 then local idx = pc . get_map_index ( ) 
+if idx >= 2.12e+06 and idx < 2.13e+06 then 
+if d . getf ( idx , "floor" ) == 19 then 
+local vid = npc . get_vid ( ) 
+if d . getf ( idx , string . format ( "a_%d" , vid ) ) ~= 1 then 
+d . setf ( idx , string . format ( "a_%d" , vid ) , 1 ) 
+item . remove ( ) 
+d . set_meley_last_statue ( idx , vid ) 
+d . setf ( idx , "killed_count" , d . getf ( idx , "killed_count" ) + 1 ) 
+end 
+end 
+end 
+ return end 

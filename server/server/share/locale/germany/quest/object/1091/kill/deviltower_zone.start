@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 2 then 
+d . kill_all ( idx ) 
+d . setf ( idx , "floor" , 3 ) 
+d . spawn_mob ( idx , 8016 , 371 , 633 ) 
+d . notice ( idx , 1097 , "" , true ) 
+server_timer ( "deviltower_warp" , 2 , idx ) 
+end 
+end 
+ return end 

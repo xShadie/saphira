@@ -1,0 +1,13 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 3 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "catacombe_checker" , arg ) 
+d . spawn_mob ( arg , 2597 , 1300 , 710 ) 
+d . notice ( arg , 1004 , "" , true ) 
+end 
+end 
+else 
+catacombe . clear ( arg ) 
+end 

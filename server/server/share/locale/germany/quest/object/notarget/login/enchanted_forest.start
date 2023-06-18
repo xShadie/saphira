@@ -1,0 +1,19 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 2.1e+06 and idx < 2.11e+06 then 
+pc . set_warp_location ( 215 , 5369 , 13314 ) 
+pc . setf ( "enchanted_forest" , "idx" , idx ) 
+pc . setf ( "enchanted_forest" , "ch" , pc . get_channel_id ( ) ) 
+if d . getf ( idx , "floor" ) == 0 then 
+if not party . is_party ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "enchanted_forest_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+else 
+if party . is_leader ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "enchanted_forest_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+end 
+end 
+end 
+end 

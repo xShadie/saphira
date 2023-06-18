@@ -1,0 +1,72 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.12e+06 and idx < 2.13e+06 then 
+local f = d . getf ( idx , "floor" ) 
+if f >= 13 then 
+local c = d . getf ( idx , "killed_count" ) + 1 
+if c > 5 then 
+local statue_vid = d . getf ( idx , "statue_vid1" ) 
+local success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid2" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid3" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid4" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+d . setf ( idx , "killed_count" , 0 ) 
+server_timer ( "meleylair_stone_spawn2" , 30 , idx ) 
+d . notice ( idx , 1298 , "" , true ) 
+end 
+end 
+end 
+end 
+else 
+d . setf ( idx , "killed_count" , c ) 
+end 
+else 
+local c = d . getf ( idx , "killed_count" ) + 1 
+if c > 3 then 
+local statue_vid = d . getf ( idx , "statue_vid1" ) 
+local success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid2" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid3" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+statue_vid = d . getf ( idx , "statue_vid4" ) 
+success = d . set_vid_invincible ( statue_vid , false , true ) 
+if not success then 
+meleylair_zone . clear ( idx ) 
+else 
+d . setf ( idx , "killed_count" , 0 ) 
+server_timer ( "meleylair_stone_spawn1" , 30 , idx ) 
+d . notice ( idx , 1298 , "" , true ) 
+end 
+end 
+end 
+end 
+else 
+d . setf ( idx , "killed_count" , c ) 
+end 
+end 
+end 
+ return end 

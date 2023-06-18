@@ -1,0 +1,72 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "meleylair_checker" , arg ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 6 then 
+local statue_vid = d . getf ( arg , "statue_vid1" ) 
+local success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid2" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid3" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid4" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+d . setf ( arg , "floor" , 7 ) 
+d . set_regen_file ( arg , "data/dungeon/meley/regen2.txt" ) 
+server_timer ( "meleylair_stone_spawn1" , 30 , arg ) 
+d . notice ( arg , 1296 , "50" , true ) 
+end 
+end 
+end 
+end 
+elseif f == 12 then 
+local statue_vid = d . getf ( arg , "statue_vid1" ) 
+local success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid2" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid3" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+statue_vid = d . getf ( arg , "statue_vid4" ) 
+success = d . set_vid_invincible ( statue_vid , false ) 
+if not success then 
+meleylair_zone . clear ( arg ) 
+else 
+clear_server_timer ( "meleylair_stone_spawn1" , arg ) 
+d . setf ( arg , "floor" , 13 ) 
+d . set_regen_file ( arg , "data/dungeon/meley/regen3.txt" ) 
+server_timer ( "meleylair_stone_spawn2" , 30 , arg ) 
+d . notice ( arg , 1296 , "5" , true ) 
+end 
+end 
+end 
+end 
+elseif f == 18 then 
+d . setf ( arg , "floor" , 19 ) 
+d . notice ( arg , 1300 , "" , true ) 
+d . setf ( arg , "killed_count" , 0 ) 
+server_timer ( "meleylair_stone_limit" , 20 , arg ) 
+end 
+else 
+meleylair_zone . clear ( arg ) 
+end 

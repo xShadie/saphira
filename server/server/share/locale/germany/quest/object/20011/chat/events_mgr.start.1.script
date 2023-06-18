@@ -1,0 +1,46 @@
+local lang = pc . get_language ( ) 
+local stat = game . get_event_flag ( "oxevent_status" ) 
+say_title ( string . format ( "%s:" , mob_name ( 20011 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . events_mgr . _2 ) 
+say ( gameforge [ lang ] . events_mgr . _3 ) 
+say ( gameforge [ lang ] . events_mgr . _4 ) 
+say ( "" ) 
+if stat == 0 then 
+say ( gameforge [ lang ] . events_mgr . _5 ) 
+say ( gameforge [ lang ] . events_mgr . _6 ) 
+elseif stat == 1 then 
+say ( gameforge [ lang ] . events_mgr . _7 ) 
+say ( gameforge [ lang ] . events_mgr . _8 ) 
+say ( "" ) 
+local what = select ( gameforge [ lang ] . events_mgr . _9 , gameforge [ lang ] . events_mgr . _10 , gameforge [ lang ] . events_mgr . _11 ) 
+if what == 1 then 
+say_title ( string . format ( "%s:" , mob_name ( 20011 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . events_mgr . _12 ) 
+say ( "" ) 
+wait ( ) 
+pc . warp ( 896500 , 24600 ) 
+elseif what == 2 then 
+say_title ( string . format ( "%s:" , mob_name ( 20011 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . events_mgr . _13 ) 
+say ( gameforge [ lang ] . events_mgr . _14 ) 
+say ( "" ) 
+wait ( ) 
+pc . warp ( 896300 , 28900 ) 
+end 
+elseif stat == 2 then 
+say ( gameforge [ lang ] . events_mgr . _15 ) 
+say ( gameforge [ lang ] . events_mgr . _16 ) 
+say ( gameforge [ lang ] . events_mgr . _17 ) 
+local agree = select ( gameforge [ lang ] . common . yes , gameforge [ lang ] . common . no ) 
+if agree == 1 then 
+say_title ( string . format ( "%s:" , mob_name ( 20011 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . events_mgr . _18 ) 
+say ( "" ) 
+wait ( ) 
+pc . warp ( 896300 , 28900 ) 
+end 
+end 

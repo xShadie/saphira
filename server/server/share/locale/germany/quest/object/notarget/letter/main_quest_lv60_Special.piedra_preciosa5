@@ -1,0 +1,6 @@
+local lang = pc . get_language ( ) 
+local v = find_npc_by_vnum ( 20409 ) 
+if v ~= 0 then 
+target . vid ( "__TARGET__" , v , gameforge [ lang ] . main_quest . _black_sohan_mission_special60 ) 
+end 
+send_letter ( gameforge [ lang ] . main_quest . _black_sohan_mission_special60 ) 

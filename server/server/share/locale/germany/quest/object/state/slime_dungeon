@@ -1,0 +1,16 @@
+slime_dungeon={["start"]=0,clear= function (arg)clear_server_timer ( "slime_prepare" , arg ) 
+clear_server_timer ( "slime_checker" , arg ) 
+clear_server_timer ( "slime_floor2" , arg ) 
+clear_server_timer ( "slime_floor3" , arg ) 
+clear_server_timer ( "slime_floor4" , arg ) 
+clear_server_timer ( "slime_floor7" , arg ) 
+clear_server_timer ( "slime_floor8" , arg ) 
+clear_server_timer ( "slime_end" , arg ) 
+clear_server_timer ( "slime_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 1 ) 
+end 
+end }

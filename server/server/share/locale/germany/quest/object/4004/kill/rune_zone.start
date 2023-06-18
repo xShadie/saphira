@@ -1,0 +1,19 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+if d . getf ( idx , "type" ) == 1 then 
+if number ( 1 , 100 ) > 95 then 
+if not party . is_party ( ) then 
+if pc . count_item ( 89102 ) < 10 and pc . count_item ( 89103 ) < 1 then 
+pc . give_item2 ( 89102 , 1 ) 
+end 
+else 
+if party . is_leader ( ) then 
+if pc . count_item ( 89102 ) < 10 and pc . count_item ( 89103 ) < 1 then 
+pc . give_item2 ( 89102 , 1 ) 
+end 
+end 
+end 
+end 
+end 
+end 
+ return end 

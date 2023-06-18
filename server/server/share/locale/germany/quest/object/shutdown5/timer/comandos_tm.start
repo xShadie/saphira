@@ -1,0 +1,4 @@
+notice_all ( "ATENCION ATENCION !!!" ) 
+notice_all ( "Mantenimiento: El server va a estar en mantenimiento dentro de 1 minutos!" ) 
+notice_all ( "Porfavor , desconectate ahora para no reclamar la perdida de items , Gracias Saludos Survival!" ) 
+timer ( "shutdown6" , 15 ) 

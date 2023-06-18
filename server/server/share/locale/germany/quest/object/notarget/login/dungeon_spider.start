@@ -1,0 +1,19 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 2.17e+06 and idx < 2.18e+06 then 
+pc . set_warp_location ( 219 , 5354 , 14284 ) 
+pc . setf ( "dungeon_spider" , "idx" , idx ) 
+pc . setf ( "dungeon_spider" , "ch" , pc . get_channel_id ( ) ) 
+if d . getf ( idx , "floor" ) == 0 then 
+if not party . is_party ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "spider_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+else 
+if party . is_leader ( ) then 
+d . setf ( idx , "floor" , 1 ) 
+server_timer ( "spider_prepare" , 1 , idx ) 
+d . setf ( idx , "was_completed" , 0 ) 
+end 
+end 
+end 
+end 

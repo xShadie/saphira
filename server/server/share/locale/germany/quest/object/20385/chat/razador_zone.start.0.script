@@ -1,0 +1,86 @@
+setskin ( NOWINDOW ) 
+local idx = pc . get_map_index ( ) 
+if idx >= 3.51e+06 and idx < 3.52e+06 then 
+if party . is_party ( ) and not party . is_leader ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . common . dungeon_24 ) 
+return 
+end 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+server_loop_timer ( "razador_zone_check" , 2 , idx ) 
+d . kill_unique ( idx , "unique1_vid1" ) 
+d . kill_unique ( idx , "unique2_vid1" ) 
+d . regen_file ( idx , "data/dungeon/razador/regen1.txt" ) 
+d . notice ( idx , 1069 , "" , true ) 
+d . notice ( idx , 1070 , "" , true ) 
+end 
+elseif f == 2 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+d . spawn_mob ( idx , 20386 , 195 , 352 ) 
+d . kill_unique ( idx , "unique1_vid2" ) 
+d . kill_unique ( idx , "unique2_vid2" ) 
+d . set_regen_file ( idx , "data/dungeon/razador/regen2.txt" ) 
+d . notice ( idx , 1071 , "" , true ) 
+end 
+elseif f == 3 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+server_loop_timer ( "razador_zone_check" , 2 , idx ) 
+d . kill_unique ( idx , "unique1_vid3" ) 
+d . kill_unique ( idx , "unique2_vid3" ) 
+d . regen_file ( idx , "data/dungeon/razador/regen3.txt" ) 
+d . notice ( idx , 1072 , "" , true ) 
+d . notice ( idx , 1073 , "" , true ) 
+end 
+elseif f == 4 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+d . spawn_mob ( idx , 6051 , 470 , 175 ) 
+d . kill_unique ( idx , "unique1_vid4" ) 
+d . kill_unique ( idx , "unique2_vid4" ) 
+d . set_regen_file ( idx , "data/dungeon/razador/regen4.txt" ) 
+d . notice ( idx , 1074 , "" , true ) 
+end 
+elseif f == 5 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+d . setf ( idx , "opened" , 0 ) 
+d . spawn_mob ( idx , 20386 , 486 , 345 ) 
+d . spawn_mob ( idx , 20386 , 511 , 336 ) 
+d . spawn_mob ( idx , 20386 , 525 , 349 ) 
+d . spawn_mob ( idx , 20386 , 521 , 365 ) 
+d . spawn_mob ( idx , 20386 , 503 , 372 ) 
+d . spawn_mob ( idx , 20386 , 486 , 365 ) 
+d . spawn_mob ( idx , 20386 , 500 , 354 ) 
+d . kill_unique ( idx , "unique1_vid5" ) 
+d . kill_unique ( idx , "unique2_vid5" ) 
+d . set_regen_file ( idx , "data/dungeon/razador/regen5.txt" ) 
+d . notice ( idx , 1075 , "" , true ) 
+d . notice ( idx , 1076 , "" , true ) 
+end 
+elseif f == 6 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "step" , 1 ) 
+d . setf ( idx , "opened" , 0 ) 
+d . spawn_mob ( idx , 8057 , 511 , 480 ) 
+d . kill_unique ( idx , "unique1_vid6" ) 
+d . kill_unique ( idx , "unique2_vid6" ) 
+d . set_regen_file ( idx , "data/dungeon/razador/regen6.txt" ) 
+d . notice ( idx , 1079 , "" , true ) 
+d . notice ( idx , 1080 , "" , true ) 
+end 
+elseif f == 7 then 
+if d . getf ( idx , "step" ) == 0 then 
+d . setf ( idx , "floor" , 8 ) 
+d . setf ( idx , "step" , 1 ) 
+d . setf ( idx , "opened" , 0 ) 
+d . spawn_mob ( idx , 6091 , 686 , 637 ) 
+d . set_regen_file ( idx , "data/dungeon/razador/regen7.txt" ) 
+d . notice ( idx , 1060 , "" , true ) 
+server_timer ( "razador_zone_warp" , 2 , idx ) 
+end 
+end 
+end 

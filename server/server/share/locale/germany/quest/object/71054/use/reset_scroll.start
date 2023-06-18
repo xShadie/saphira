@@ -1,0 +1,41 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+local lang = pc . get_language ( ) 
+ResetScroll . ShowRequisites ( item . get_vnum ( ) ) ; 
+if ( not ResetScroll . CheckRequisites ( item . get_vnum ( ) ) ) then 
+return 
+end 
+if ( select ( gameforge [ lang ] . reset_scroll . _1 , gameforge [ lang ] . reset_scroll . _2 ) == 1 ) then 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . reset_scroll . _7 ) 
+local emp = select ( 
+gameforge [ lang ] . reset_scroll . _3 , 
+gameforge [ lang ] . reset_scroll . _4 , 
+gameforge [ lang ] . reset_scroll . _5 , 
+gameforge [ lang ] . reset_scroll . _6 ) 
+if ( emp == 4 ) then 
+return 
+end 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+local ret = pc . change_empire ( emp ) 
+if ( ret == 1 ) then 
+say_reward ( string . format ( gameforge [ lang ] . reset_scroll . _8 , locale . empire_names [ pc . get_empire ( ) ] ) ) 
+return 
+elseif ( ret == 2 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _9 ) 
+say_reward ( gameforge [ lang ] . reset_scroll . _10 ) 
+return 
+elseif ( ret == 3 ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _11 ) 
+say_reward ( gameforge [ lang ] . reset_scroll . _12 ) 
+return 
+end 
+pc . remove_item ( 71054 , 1 ) ; 
+say ( gameforge [ lang ] . reset_scroll . _13 ) 
+end 

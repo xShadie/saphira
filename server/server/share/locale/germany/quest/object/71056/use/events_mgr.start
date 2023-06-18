@@ -1,0 +1,22 @@
+pc . remove_item ( 71056 , 1 ) 
+local sex = pc . get_sex ( ) 
+if sex == 0 then 
+pc . give_item2 ( 49028 , 1 ) 
+else 
+pc . give_item2 ( 49027 , 1 ) 
+end 
+local job = pc . get_job ( ) 
+if job == 0 then 
+pc . give_item2 ( 49021 , 1 ) 
+pc . give_item2 ( 49024 , 1 ) 
+elseif job == 1 then 
+pc . give_item2 ( 49021 , 1 ) 
+pc . give_item2 ( 49022 , 1 ) 
+pc . give_item2 ( 49023 , 1 ) 
+elseif job == 2 then 
+pc . give_item2 ( 49021 , 1 ) 
+elseif job == 3 then 
+pc . give_item2 ( 49025 , 1 ) 
+pc . give_item2 ( 49026 , 1 ) 
+end 
+pc . give_item2 ( 85112 , 1 ) 

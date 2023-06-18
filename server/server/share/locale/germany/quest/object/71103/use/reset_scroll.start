@@ -1,0 +1,25 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+local item_vnum = item . get_vnum ( ) 
+local lang = pc . get_language ( ) 
+local status_name = { 
+[ 71103 ] = gameforge [ lang ] . reset_scroll . _28 , 
+[ 71104 ] = gameforge [ lang ] . reset_scroll . _29 , 
+[ 71105 ] = gameforge [ lang ] . reset_scroll . _30 , 
+[ 71106 ] = gameforge [ lang ] . reset_scroll . _31 , 
+} 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+if ( select ( gameforge [ lang ] . reset_scroll . _1 , gameforge [ lang ] . reset_scroll . _2 ) == 1 ) then 
+local ret = pc . reset_status ( item_vnum - 71103 ) ; 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+if ( not ret ) then 
+say_reward ( gameforge [ lang ] . reset_scroll . _32 ) 
+return 
+end 
+pc . remove_item ( item_vnum , 1 ) ; 
+say ( string . format ( gameforge [ lang ] . reset_scroll . _33 , status_name [ item_vnum ] ) ) 
+end 

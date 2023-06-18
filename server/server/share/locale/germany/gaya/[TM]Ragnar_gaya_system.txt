@@ -1,0 +1,10 @@
+Item	40144	1	1
+Item	55002	15	1
+Item	72320	2	1
+Item	55008	4	1
+Item	72730	3	1
+Item	72730	3	1
+Item	40144	1	1
+Item	40143	2	1
+Item	71153	3	1
+Slots_Desblock	0	0	0	0	0	0

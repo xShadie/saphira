@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+if d . getf ( idx , "type" ) == 7 then 
+d . setf ( idx , "step" , 0 ) 
+d . setf ( idx , "type" , 8 ) 
+local vid = d . spawn_mob ( idx , 4011 , 794 , 107 ) 
+d . setf ( idx , "boss" , vid ) 
+server_loop_timer ( "rune_zone_check" , 2 , idx ) 
+d . notice ( idx , 965 , "" , true ) 
+d . notice ( idx , 966 , "" , true ) 
+end 
+end 
+ return end 

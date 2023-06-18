@@ -1,0 +1,25 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+clear_server_timer ( "pyramide_zone_warp" , arg ) 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+d . jump_all ( arg , 9266 , 22621 ) 
+server_timer ( "pyramide_zone_limit" , 1199 , arg ) 
+d . notice ( arg , 1164 , "" , true ) 
+d . notice ( arg , 1165 , "" , true ) 
+elseif f == 4 then 
+d . jump_all ( arg , 9536 , 22608 ) 
+d . notice ( arg , 1169 , "" , true ) 
+d . notice ( arg , 1170 , "" , true ) 
+elseif f == 6 then 
+d . jump_all ( arg , 9137 , 23558 ) 
+d . notice ( arg , 1181 , "" , true ) 
+d . notice ( arg , 1182 , "" , true ) 
+elseif f == 7 then 
+d . jump_all ( arg , 9759 , 23655 ) 
+d . notice ( arg , 1191 , "" , true ) 
+d . notice ( arg , 1192 , "" , true ) 
+end 
+else 
+pyramide_zone . clear ( arg ) 
+end 

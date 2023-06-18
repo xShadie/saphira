@@ -1,0 +1,3 @@
+notice_all ( "ATENCION ATENCION !!!" ) 
+notice_all ( "Mantenimiento: El server va a estar en mantenimiento ahora!" ) 
+timer ( "shutdown7" , 5 ) 

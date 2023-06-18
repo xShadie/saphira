@@ -1,0 +1,12 @@
+local c = 10 
+local m = pc . count_item ( 86053 ) 
+if m >= c then 
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+pc . remove_item ( 86053 , c ) 
+pc . give_item2 ( 86056 , 1 ) 
+else 
+syschat ( string . format ( gameforge [ pc . get_language ( ) ] . cristalli . _1 , c - m , item_name ( 86053 ) , item_name ( 86056 ) ) ) 
+end 

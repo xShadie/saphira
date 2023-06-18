@@ -1,0 +1,18 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , gameforge [ lang ] . guild_rank_manager . _1 ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . guild_rank_manager . _2 ) 
+local a = select ( gameforge [ lang ] . guild_rank_manager . _3 , gameforge [ lang ] . guild_rank_manager . _4 , gameforge [ lang ] . guild_rank_manager . _5 ) 
+if a == 1 then 
+server_timer ( "guild_rank_manager" , 1 ) 
+elseif a == 2 then 
+say_title ( string . format ( "%s:" , gameforge [ lang ] . guild_rank_manager . _1 ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . guild_rank_manager . _6 ) 
+local days = tonumber ( input ( ) ) 
+clear_server_timer ( "guild_rank_manager" ) 
+server_loop_timer ( "guild_rank_manager" , 86400 * days ) 
+syschat ( gameforge [ lang ] . guild_rank_manager . _7 ) 
+elseif a == 3 then 
+clear_server_timer ( "guild_rank_manager" ) 
+end 

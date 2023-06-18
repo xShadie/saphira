@@ -1,0 +1,1 @@
+cmdchat ( "teleportpanel " .. string . format ( "SET_QUEST_ID(%d)" , q . getcurrentquestindex ( ) ) ) 

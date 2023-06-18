@@ -1,0 +1,24 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "slime_checker" , arg ) 
+d . setf ( arg , "floor" , 3 ) 
+d . notice ( arg , 1151 , "" , true ) 
+d . notice ( arg , 1152 , "" , true ) 
+d . notice ( arg , 1153 , "" , true ) 
+server_timer ( "slime_floor3" , 2 , arg ) 
+end 
+elseif f == 7 then 
+if d . count_monster ( arg ) == 0 then 
+clear_server_timer ( "slime_checker" , arg ) 
+d . setf ( arg , "floor" , 8 ) 
+d . notice ( arg , 1154 , "" , true ) 
+d . notice ( arg , 1155 , "" , true ) 
+server_timer ( "slime_floor8" , 2 , arg ) 
+end 
+end 
+else 
+slime_dungeon . clear ( arg ) 
+end 

@@ -1,0 +1,11 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "christmas_zone2_warp" , arg ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+d . jump_all ( arg , 23515 , 31415 ) 
+d . notice ( arg , 1349 , "" , true ) 
+end 
+else 
+christmas_zone2 . clear ( arg ) 
+end 

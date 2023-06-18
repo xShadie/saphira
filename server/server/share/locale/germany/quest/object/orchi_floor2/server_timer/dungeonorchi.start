@@ -1,0 +1,19 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . setf ( arg , "step" , 4 ) 
+d . spawn_mob ( arg , 8109 , 125 , 892 ) 
+d . spawn_mob ( arg , 8109 , 149 , 892 ) 
+d . spawn_mob ( arg , 8109 , 125 , 915 ) 
+d . spawn_mob ( arg , 8109 , 149 , 915 ) 
+local boss = d . spawn_mob ( arg , 693 , 138 , 885 ) 
+d . setf ( arg , "boss" , boss ) 
+local try = d . set_vid_invincible ( boss , true ) 
+if not try then 
+d . notice ( arg , 1042 , "" , true ) 
+dungeonorchi . clear ( arg ) 
+else 
+d . jump_all ( arg , 2048 + 138 , 2560 + 929 ) 
+end 
+else 
+dungeonorchi . clear ( arg ) 
+end 

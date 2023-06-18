@@ -1,0 +1,24 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.08e+06 and idx < 2.09e+06 then 
+if d . getf ( idx , "floor" ) == 1 then 
+local c = d . getf ( idx , "count" ) - 1 
+if c == 0 then 
+d . setf ( idx , "floor" , 2 ) 
+local success = d . set_vid_invincible ( d . getf ( idx , "boss" ) , false ) 
+if not success then 
+d . notice ( idx , 1014 , "" , true ) 
+dragonlair_zone . clear ( arg ) 
+else 
+d . notice ( idx , 1276 , "" , true ) 
+end 
+else 
+d . setf ( idx , "count" , c ) 
+if 1 == 3 then 
+d . notice ( idx , 1278 , "" , true ) 
+else 
+d . notice ( idx , 1277 , string . format ( "%d" , c ) , true ) 
+end 
+end 
+end 
+end 
+ return end 

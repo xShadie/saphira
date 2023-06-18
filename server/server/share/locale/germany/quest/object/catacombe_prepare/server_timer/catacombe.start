@@ -1,0 +1,25 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 1340 , [ "y" ] = 348 } , 
+[ 2 ] = { [ "x" ] = 1243 , [ "y" ] = 357 } , 
+[ 3 ] = { [ "x" ] = 1334 , [ "y" ] = 151 } , 
+[ 4 ] = { [ "x" ] = 1252 , [ "y" ] = 148 } , 
+[ 5 ] = { [ "x" ] = 1149 , [ "y" ] = 148 } , 
+[ 6 ] = { [ "x" ] = 1139 , [ "y" ] = 244 } , 
+[ 7 ] = { [ "x" ] = 1148 , [ "y" ] = 355 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( arg , 8038 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( arg , "unique_vid" , vid ) 
+end 
+end 
+d . set_regen_file ( arg , "data/dungeon/devilcatacomb/regen1.txt" ) 
+server_timer ( "catacombe_end" , 2399 , arg ) 
+d . notice ( arg , 1128 , string . format ( "%d" , 40 ) , true ) 
+d . notice ( arg , 995 , "" , true ) 
+else 
+catacombe . clear ( arg ) 
+end 

@@ -1,0 +1,8 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . spawn_mob ( arg , 767 , 285 , 260 ) 
+d . regen_file ( arg , "data/dungeon/slime_cave/regen_1.txt" ) 
+server_loop_timer ( "slime_checker" , 2 , arg ) 
+else 
+slime_dungeon . clear ( arg ) 
+end 

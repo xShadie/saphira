@@ -1,0 +1,21 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30890 then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+local s = d . getf ( idx , "step" ) 
+if s == 5 then 
+d . setf ( idx , "step" , 6 ) 
+item . remove ( ) 
+game . drop_item ( 30890 , 1 ) 
+d . spawn_mob ( idx , 9426 , 664 , 529 , 270 ) 
+npc . kill ( ) 
+d . clear_regen ( idx ) 
+d . kill_all_monsters ( idx ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone2/regen_1f_mobs.txt" ) 
+d . notice ( idx , 1344 , "" , true ) 
+d . notice ( idx , 1339 , "" , true ) 
+server_loop_timer ( "christmas_zone2_check" , 2 , idx ) 
+end 
+end 
+end 
+ return end 

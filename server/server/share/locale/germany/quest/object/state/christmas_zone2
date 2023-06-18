@@ -1,0 +1,13 @@
+christmas_zone2={["start"]=0,clear= function (arg)clear_server_timer ( "christmas_zone2_prepare" , arg ) 
+clear_server_timer ( "christmas_zone2_end" , arg ) 
+clear_server_timer ( "christmas_zone2_complete" , arg ) 
+clear_server_timer ( "christmas_zone2_first_stone" , arg ) 
+clear_server_timer ( "christmas_zone2_check" , arg ) 
+clear_server_timer ( "christmas_zone2_warp" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 2 ) 
+end 
+end }

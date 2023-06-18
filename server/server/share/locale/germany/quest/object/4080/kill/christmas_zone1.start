@@ -1,0 +1,11 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 then 
+if d . getf ( idx , "step" ) == 4 then 
+game . drop_item ( 30773 , 1 ) 
+d . notice ( idx , 1318 , "" , true ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,33 @@
+local MAP_DICT = teleportpanel_aslan . MAP_DICT ( ) 
+local cmd = teleportpanel_aslan . get_quest_cmd ( ) 
+for i = 1 , table . getn ( MAP_DICT ) , 1 begin 
+if MAP_DICT [ i ] [ "command" ] == cmd [ 2 ] then 
+if pc . can_warp ( ) == false then 
+syschat ( "Du kannst dich gerade nicht teleportieren." ) 
+return 
+end 
+if pc . get_level ( ) < MAP_DICT [ i ] [ "min_lv" ] and pc . get_level ( ) > MAP_DICT [ i ] [ "max_lv" ] then 
+syschat ( "Du bist ausserhalb der Levellimits." ) 
+return 
+end 
+if pc . get_gold ( ) < MAP_DICT [ i ] [ "money_cost" ] then 
+syschat ( "Du hast nicht genug Yang." ) 
+return 
+end 
+if MAP_DICT [ i ] [ "item_cost_vnum" ] ~= 0 and pc . count_item ( MAP_DICT [ i ] [ "item_cost_vnum" ] ) < MAP_DICT [ i ] [ "item_cost_count" ] then 
+syschat ( "Du hast nicht genug Gegenstände." ) 
+return 
+else 
+pc . remove_item ( MAP_DICT [ i ] [ "item_cost_vnum" ] , MAP_DICT [ i ] [ "item_cost_count" ] ) 
+end 
+pc . change_gold ( - MAP_DICT [ i ] [ "money_cost" ] ) 
+if pc . get_empire ( ) == 1 then 
+pc . warp ( MAP_DICT [ i ] [ "coord_red" ] [ 1 ] , MAP_DICT [ i ] [ "coord_red" ] [ 2 ] ) 
+elseif pc . get_empire ( ) == 2 then 
+pc . warp ( MAP_DICT [ i ] [ "coord_yel" ] [ 1 ] , MAP_DICT [ i ] [ "coord_yel" ] [ 2 ] ) 
+elseif pc . get_empire ( ) == 3 then 
+pc . warp ( MAP_DICT [ i ] [ "coord_blu" ] [ 1 ] , MAP_DICT [ i ] [ "coord_blu" ] [ 2 ] ) 
+end 
+return 
+end 
+end 

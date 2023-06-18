@@ -1,0 +1,10 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 11 then 
+if number ( 1 , 100 ) > 97 then 
+d . setf ( idx , "floor" , 12 ) 
+game . drop_item ( 30304 , 1 ) 
+end 
+end 
+end 
+ return end 

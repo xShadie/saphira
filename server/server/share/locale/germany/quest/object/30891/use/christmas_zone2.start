@@ -1,0 +1,21 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+if d . getf ( idx , "floor" ) == 2 and d . getf ( idx , "step" ) == 2 then 
+pc . remove_item ( 30891 , 1 ) 
+d . setf ( idx , "step" , 3 ) 
+local treepos = { 
+[ 1 ] = { [ "x" ] = 844 , [ "y" ] = 907 , [ "dir" ] = 90 } , 
+[ 2 ] = { [ "x" ] = 770 , [ "y" ] = 907 , [ "dir" ] = 90 } , 
+[ 3 ] = { [ "x" ] = 770 , [ "y" ] = 990 , [ "dir" ] = 270 } , 
+[ 4 ] = { [ "x" ] = 844 , [ "y" ] = 990 , [ "dir" ] = 270 } 
+} 
+for index , position in ipairs ( treepos ) begin 
+local vid = d . spawn_mob ( idx , 9430 , position [ "x" ] , position [ "y" ] , position [ "dir" ] ) 
+d . setf ( idx , string . format ( "treevid_%d" , index ) , vid ) 
+end 
+d . spawn_mob ( idx , 4478 , 813 , 953 ) 
+d . notice ( idx , 1353 , "" , true ) 
+d . notice ( idx , 1354 , "" , true ) 
+end 
+end 
+ return end 

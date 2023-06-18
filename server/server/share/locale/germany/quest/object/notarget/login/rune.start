@@ -1,0 +1,6 @@
+if pc . get_level ( ) >= 70 then local lang = pc . get_language ( ) 
+syschat ( gameforge [ lang ] . rune . _1 ) 
+syschat ( gameforge [ lang ] . rune . _2 ) 
+cmdchat ( "rune 2" ) 
+set_state ( "gotoinfo" ) 
+ return end 

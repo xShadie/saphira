@@ -1,0 +1,32 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 2.18e+06 and idx < 2.19e+06 then 
+if d . getf ( idx , "floor" ) == 1 then 
+local c = d . getf ( idx , "count" , 0 ) + 1 
+if c == 6 then 
+rune_zone . create_randomfloor ( idx ) 
+elseif c < 6 then 
+local vid = npc . get_vid ( ) 
+for i = 1 , 6 begin 
+if d . getf ( idx , string . format ( "unique_vid%d" , i ) ) == vid then 
+d . setf ( idx , string . format ( "done_vid%d" , i ) , 1 ) 
+end 
+end 
+for i = 1 , 6 begin 
+if d . getf ( idx , string . format ( "done_vid%d" , i ) ) == 0 then 
+local success = d . set_vid_invincible ( d . getf ( idx , string . format ( "unique_vid%d" , i ) ) , false ) 
+if not success then 
+d . notice ( idx , 977 , "" , true ) 
+rune_zone . clear ( idx ) 
+break 
+else 
+d . setf ( idx , string . format ( "done_vid%d" , i ) , 1 ) 
+break 
+end 
+end 
+end 
+d . notice ( idx , 978 , string . format ( "%d" , 6 - c ) , true ) 
+end 
+d . setf ( idx , "count" , c ) 
+end 
+end 
+ return end 

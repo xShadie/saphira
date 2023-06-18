@@ -1,0 +1,18 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 3.53e+06 and idx < 3.54e+06 then 
+if d . getf ( idx , "step" ) == 15 then 
+local c = d . getf ( idx , "killed" ) + 1 
+if c == 4 then 
+local success = d . set_vid_invincible ( d . getf ( idx , "boss" ) , false ) 
+if not success then 
+hydra_zone . clear ( idx ) 
+else 
+d . setf ( idx , "step" , 16 ) 
+d . cmdchat ( idx , "BINARY_Update_Mast_Timer 0" ) 
+end 
+else 
+d . setf ( idx , "killed" , c ) 
+end 
+end 
+end 
+ return end 

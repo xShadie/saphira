@@ -1,0 +1,14 @@
+if pc . in_dungeon ( ) then local idx = pc . get_map_index ( ) 
+if idx >= 660000 and idx < 670000 then 
+if d . getf ( idx , "floor" ) == 8 then 
+local c = d . getf ( idx , "count" ) + 1 
+if c == 4 then 
+d . setf ( idx , "floor" , 9 ) 
+d . notice ( idx , 1028 , "" , true ) 
+d . spawn_mob ( idx , 8019 , 617 , 676 ) 
+else 
+d . setf ( idx , "count" , c ) 
+end 
+end 
+end 
+ return end 

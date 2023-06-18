@@ -1,0 +1,39 @@
+if not pc . can_warp ( ) then 
+syschat ( gameforge [ pc . get_language ( ) ] . reset_scroll . _35 ) 
+return 
+end 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+ResetScroll . ShowRequisites ( item . get_vnum ( ) ) ; 
+if ( not ResetScroll . CheckRequisites ( item . get_vnum ( ) ) ) then 
+return ; 
+end 
+local lang = pc . get_language ( ) 
+if ( select ( gameforge [ lang ] . reset_scroll . _1 , gameforge [ lang ] . reset_scroll . _2 ) == 1 ) then 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . reset_scroll . _21 ) 
+say_title ( string . format ( "%s:[ENTER]" , item_name ( item . get_vnum ( ) ) ) ) 
+local s = input ( ) ; 
+say_title ( string . format ( "%s:" , item_name ( item . get_vnum ( ) ) ) ) 
+say ( "" ) 
+if ( pc . get_name ( ) == s ) then 
+say ( gameforge [ lang ] . reset_scroll . _22 ) 
+return 
+elseif ( s == nil ) then 
+say ( gameforge [ lang ] . reset_scroll . _23 ) 
+return 
+end 
+local ret = guild . change_master ( s ) 
+if ( ret == 0 or ret == 1 or ret == 4 ) then 
+say_reward ( string . format ( gameforge [ lang ] . reset_scroll . _24 , ret ) ) ; 
+return 
+elseif ( ret == 2 ) then 
+say_reward ( string . format ( gameforge [ lang ] . reset_scroll . _25 , s ) ) 
+say_reward ( gameforge [ lang ] . reset_scroll . _26 ) 
+return ; 
+end 
+pc . remove_item ( 71099 , 1 ) 
+say ( gameforge [ lang ] . reset_scroll . _27 ) 
+big_notice_all ( 911 , string . format ( "%s#%s#%s" , pc . get_name ( ) , guild . get_name ( guild . get_id0 ( ) ) , s ) ) 
+end 

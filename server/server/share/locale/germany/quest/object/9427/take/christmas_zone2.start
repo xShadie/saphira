@@ -1,0 +1,34 @@
+if pc . in_dungeon ( ) and item . get_vnum ( ) == 30890 then local idx = pc . get_map_index ( ) 
+if idx >= 250000 and idx < 260000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 1 then 
+local s = d . getf ( idx , "step" ) 
+if s == 9 then 
+d . setf ( idx , "floor" , 2 ) 
+d . setf ( idx , "step" , 1 ) 
+item . remove ( ) 
+npc . kill ( ) 
+d . clear_regen ( idx ) 
+d . kill_all_monsters ( idx ) 
+local stonepos = { 
+[ 1 ] = { [ "x" ] = 842 , [ "y" ] = 921 } , 
+[ 2 ] = { [ "x" ] = 799 , [ "y" ] = 921 } , 
+[ 3 ] = { [ "x" ] = 763 , [ "y" ] = 921 } , 
+[ 4 ] = { [ "x" ] = 763 , [ "y" ] = 980 } , 
+[ 5 ] = { [ "x" ] = 799 , [ "y" ] = 980 } , 
+[ 6 ] = { [ "x" ] = 842 , [ "y" ] = 980 } 
+} 
+local random_num = number ( 1 , table . getn ( stonepos ) ) 
+for index , position in ipairs ( stonepos ) begin 
+local vid = d . spawn_mob ( idx , 8715 , position [ "x" ] , position [ "y" ] ) 
+if random_num == index then 
+d . setf ( idx , "unique_vid" , vid ) 
+end 
+end 
+d . regen_file ( idx , "data/dungeon/christmas_zone2/regen_2f_gifts.txt" ) 
+d . notice ( idx , 1003 , "" , true ) 
+server_timer ( "christmas_zone2_warp" , 2 , idx ) 
+end 
+end 
+end 
+ return end 

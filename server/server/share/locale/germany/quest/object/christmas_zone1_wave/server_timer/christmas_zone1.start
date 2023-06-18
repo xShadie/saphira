@@ -1,0 +1,13 @@
+local arg = get_server_timer_arg ( ) 
+clear_server_timer ( "christmas_zone1_wave" , arg ) 
+if d . find ( arg ) then 
+local f = d . getf ( arg , "floor" ) 
+if f == 1 then 
+local s = d . getf ( arg , "step" ) 
+if s == 2 then 
+d . set_regen_file ( arg , "data/dungeon/christmas_zone1/regen_1floor.txt" ) 
+end 
+end 
+else 
+christmas_zone1 . clear ( arg ) 
+end 

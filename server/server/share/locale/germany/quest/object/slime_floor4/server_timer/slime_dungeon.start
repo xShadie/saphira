@@ -1,0 +1,6 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+d . regen_file ( arg , "data/dungeon/slime_cave/regen_3.txt" ) 
+else 
+slime_dungeon . clear ( arg ) 
+end 

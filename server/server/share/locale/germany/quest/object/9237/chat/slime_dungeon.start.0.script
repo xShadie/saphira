@@ -1,0 +1,21 @@
+local idx = pc . get_map_index ( ) 
+if idx >= 270000 and idx < 280000 then 
+if d . getf ( idx , "floor" ) == 3 then 
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 9237 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . slime_dungeon . _1 ) 
+say ( gameforge [ lang ] . slime_dungeon . _2 ) 
+say ( gameforge [ lang ] . slime_dungeon . _3 ) 
+say ( gameforge [ lang ] . slime_dungeon . _4 ) 
+d . setf ( idx , "floor" , 4 ) 
+d . setf ( idx , "count" , 4 ) 
+d . notice ( idx , 1149 , "" , true ) 
+d . notice ( idx , 1150 , "" , true ) 
+server_timer ( "slime_floor4" , 2 , idx ) 
+else 
+setskin ( NOWINDOW ) 
+end 
+else 
+setskin ( NOWINDOW ) 
+end 

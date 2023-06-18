@@ -1,0 +1,3 @@
+if pc . get_war_map ( ) == 0 and guild . get_any_war ( ) ~= 0 then 
+send_letter ( gameforge [ pc . get_language ( ) ] . guild_war_join . _1 ) 
+end 

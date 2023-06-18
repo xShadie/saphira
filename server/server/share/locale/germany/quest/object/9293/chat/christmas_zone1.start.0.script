@@ -1,0 +1,107 @@
+local idx = pc . get_map_index ( ) 
+local lang = pc . get_language ( ) 
+if idx >= 260000 and idx < 270000 then 
+local f = d . getf ( idx , "floor" ) 
+if f == 2 then 
+if party . is_party ( ) and not party . is_leader ( ) then 
+say ( gameforge [ lang ] . common . dungeon_24 ) 
+return 
+end 
+local s = d . getf ( idx , "step" ) 
+if s == 1 then 
+d . setf ( idx , "step" , 2 ) 
+addimage ( 25 , 10 , "christmas2019_bg02.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . christmas_zone1 . _1 ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+npc . kill ( ) 
+d . setf ( idx , "step" , 3 ) 
+d . setf ( idx , "wrong" , 0 ) 
+else 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . common . unknownerr ) 
+end 
+elseif f == 3 then 
+local s = d . getf ( idx , "step" ) 
+if s == 1 then 
+d . setf ( idx , "step" , 2 ) 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . christmas_zone1 . _2 , mob_name ( 9298 ) , item_name ( 30777 ) ) ) 
+wait ( ) 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . christmas_zone1 . _3 ) 
+addimage ( 25 , 130 , "christmas2019_3floor_items.tga" ) 
+say_reward ( gameforge [ lang ] . christmas_zone1 . _4 ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+d . setf ( idx , "crafted" , 0 ) 
+d . regen_file ( idx , "data/dungeon/christmas_zone1/regen_3floor_1.txt" ) 
+d . notice ( idx , 1315 , "" , true ) 
+server_loop_timer ( "christmas_zone1_loop" , 2 , idx ) 
+elseif s == 6 then 
+if pc . count_item ( 30774 ) > 0 and pc . count_item ( 30775 ) > 0 and pc . count_item ( 30776 ) > 0 then 
+pc . remove_item ( 30774 , 1 ) 
+pc . remove_item ( 30775 , 1 ) 
+pc . remove_item ( 30776 , 1 ) 
+d . setf ( idx , "step" , 7 ) 
+d . notice ( idx , 1331 , "" , true ) 
+pc . give_item2 ( 30777 , 1 ) 
+setskin ( NOWINDOW ) 
+npc . purge ( ) 
+else 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . christmas_zone1 . _2 , mob_name ( 9298 ) , item_name ( 30777 ) ) ) 
+wait ( ) 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . christmas_zone1 . _3 ) 
+addimage ( 25 , 130 , "christmas2019_3floor_items.tga" ) 
+say_reward ( gameforge [ lang ] . christmas_zone1 . _4 ) 
+end 
+else 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( string . format ( gameforge [ lang ] . christmas_zone1 . _2 , mob_name ( 9298 ) , item_name ( 30777 ) ) ) 
+wait ( ) 
+addimage ( 25 , 10 , "christmas2019_bg04.tga" ) 
+addimage ( 225 , 150 , "santa.tga" ) 
+say ( "[ENTER][ENTER]" ) 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . christmas_zone1 . _3 ) 
+addimage ( 25 , 130 , "christmas2019_3floor_items.tga" ) 
+say_reward ( gameforge [ lang ] . christmas_zone1 . _4 ) 
+end 
+else 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . christmas_zone1 . _1 ) 
+end 
+else 
+say_title ( string . format ( "%s:" , mob_name ( 9293 ) ) ) 
+say ( "" ) 
+say ( gameforge [ lang ] . common . unknownerr ) 
+end 

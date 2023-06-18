@@ -1,0 +1,10 @@
+dragonlair_zone={["start"]=0,clear= function (arg)clear_server_timer ( "dragonlair_prepare" , arg ) 
+clear_server_timer ( "dragonlair_end" , arg ) 
+clear_server_timer ( "dragonlair_complete" , arg ) 
+if d . find ( arg ) then 
+d . setf ( arg , "was_completed" , 1 ) 
+d . kill_all ( arg ) 
+d . clear_regen ( arg ) 
+d . exit_all_lobby ( arg , 1 ) 
+end 
+end }

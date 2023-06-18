@@ -1,0 +1,8 @@
+local lang = pc . get_language ( ) 
+say_title ( string . format ( "%s:" , mob_name ( 20356 ) ) ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_78 ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_77 ) 
+say_item_vnum ( 30059 ) 
+say ( "" ) 
+say ( gameforge [ lang ] . main_quest . _mission_orc_76 ) 
+say_reward ( string . format ( gameforge [ lang ] . main_quest . _mission_orc_79_2 , pc . getqf ( "collect_count" ) ) ) 

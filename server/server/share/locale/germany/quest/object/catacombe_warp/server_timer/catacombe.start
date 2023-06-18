@@ -1,0 +1,18 @@
+local arg = get_server_timer_arg ( ) 
+if d . find ( arg ) then 
+clear_server_timer ( "catacombe_warp" , arg ) 
+local f = d . getf ( arg , "floor" ) 
+if f == 2 then 
+d . jump_all ( arg , 3917 , 12932 ) 
+d . notice ( arg , 999 , "" , true ) 
+elseif f == 3 then 
+d . jump_all ( arg , 4434 , 12698 ) 
+d . notice ( arg , 1089 , "" , true ) 
+server_loop_timer ( "catacombe_checker" , 2 , arg ) 
+elseif f == 4 then 
+d . jump_all ( arg , 3147 , 13187 ) 
+d . notice ( arg , 1007 , "" , true ) 
+end 
+else 
+catacombe . clear ( arg ) 
+end 
