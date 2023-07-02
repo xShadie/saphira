@@ -1339,3 +1339,6 @@
 31367	Truhe mit 3 zufällig ausgewählten Fertigkeitsbüchern.
 31365	Truhe mit 3 zufällig ausgewählten Fertigkeitsbüchern.
 31363	Truhe mit 3 zufällig ausgewählten Fertigkeitsbüchern.
+56660	Dungeon-Pass (einfach)	Ein mystisches Relikt, das verborgene Schleier zerreißt, um den Zugang zu geheimen Dungeons zu gewähren. Nur die Mutigsten wagen sich in diese unbekannten Abgründe.
+56661	Dungeon-Pass (mittel)	Ein mystisches Relikt, das verborgene Schleier zerreißt, um den Zugang zu geheimen Dungeons zu gewähren. Nur die Mutigsten wagen sich in diese unbekannten Abgründe.
+56662	Dungeon-Pass (schwer)	Ein mystisches Relikt, das verborgene Schleier zerreißt, um den Zugang zu geheimen Dungeons zu gewähren. Nur die Mutigsten wagen sich in diese unbekannten Abgründe.

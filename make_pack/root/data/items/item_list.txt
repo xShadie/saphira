@@ -9296,9 +9296,9 @@
 30274	ETC	icon/item/30274.tga
 30275	ETC	icon/item/30275.tga
 30276	ETC	icon/item/30276.tga
-30277	ETC	icon/item/30277.tga
+30277	ETC	icon/item/bluekristall.tga
 30278	ETC	icon/item/30278.tga
-30279	ETC	icon/item/30279.tga
+30279	ETC	icon/item/redkristall.tga
 30280	ETC	icon/item/30280.tga
 30282	ETC	icon/item/30282.tga
 30283	ETC	icon/item/30283.tga
@@ -9473,10 +9473,10 @@
 39030	ETC	icon/item/71094.tga
 39039	ETC	icon/item/72725.tga
 39042	ETC	icon/item/72729.tga
-39048	ETC	icon/item/cofr_habs_x10_warrior.tga
-39050	ETC	icon/item/cofr_habs_x10_assassin.tga
-39052	ETC	icon/item/cofr_habs_x10_sura.tga
-39054	ETC	icon/item/cofr_habs_x10_shaman.tga
+39048	ETC	icon/item/99201.tga
+39050	ETC	icon/item/99202.tga
+39052	ETC	icon/item/99203.tga
+39054	ETC	icon/item/99204.tga
 39063	ETC	icon/item/39063.tga
 39064	ETC	icon/item/39064.tga
 39085	ETC	icon/item/39085.tga
@@ -12756,3 +12756,6 @@
 31370	ETC	icon/item/31370.tga
 31371	ETC	icon/item/31371.tga
 31372	ETC	icon/item/31372.tga
+56660	ETC	icon/item/56660.tga
+56661	ETC	icon/item/56661.tga
+56662	ETC	icon/item/56663.tga

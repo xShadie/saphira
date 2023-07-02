@@ -1339,3 +1339,4 @@
 31369	Ninja's Chest	Ninja Pack containing 3 randomly selected Skill Books.
 31365	Sura's Chest	Surah pack containing 3 randomly selected Skill Books.
 31363	Shamano's Chest	Shaman Pack containing 3 randomly selected Skill Books.
+56660	A magical entrance ticket for easier dungeons. Opens the door to adventure!

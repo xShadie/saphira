@@ -251,6 +251,21 @@ window = {
 
 					"image" : ROOT + "TaskBar/EXP_Gauge_Point.sub",
 				},
+                ## Anti_exp Button
+                {
+                    "name" : "AntiexpButton",
+                    "type" : "button",
+
+                    "x" : 30,
+                    "y" : 3 + Y_ADD_POSITION,
+
+                    "tooltip_text" : "Exp Aç/Kapa",
+
+                    "default_image" : "d:/ymir work/ui/game/TaskBar/anti_exp_01.png",
+                    "over_image" : "d:/ymir work/ui/game/TaskBar/anti_exp_02.png",
+                    "down_image" : "d:/ymir work/ui/game/TaskBar/anti_exp_03.png",
+
+                },
 				{
 					"name" : "EXPGauge_02",
 					"type" : "expanded_image",

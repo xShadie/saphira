@@ -32,7 +32,7 @@ window = {
 			"name" : "button_camera",
 			"type" : "button",
 
-			"x" : 265,
+			"x" : -30,
 			"y" : 3,
 
 			"tooltip_text" : uiscriptlocale.MOUSEBUTTON_ANTIEXP,
