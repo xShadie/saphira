@@ -1,1 +1,1 @@
-Qui puoi modificare le immagini che vengono mostrate nella finestra. Ogni immagine deve avere il nome dell'index della mappa del dungeon per essere visualizzata correttamente.
+Hier kannst du die Bilder bearbeiten, die im Fenster angezeigt werden. Jedes Bild muss den Namen des Index der Dungeon-Karte haben, um korrekt angezeigt zu werden.
