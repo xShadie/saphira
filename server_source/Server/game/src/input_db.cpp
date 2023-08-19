@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "stdafx.h" 
 #include "constants.h"
 #include "config.h"
 #include "utils.h"
@@ -20,7 +20,6 @@
 #include "start_position.h"
 #include "party.h"
 #include "refine.h"
-#include "banword.h"
 #include "priv_manager.h"
 #include "db.h"
 #include "building.h"
@@ -28,33 +27,24 @@
 #include "wedding.h"
 #include "login_data.h"
 #include "unique_item.h"
-
 #include "affect.h"
 #include "motion.h"
-
-#include "dev_log.h"
-
 #include "log.h"
-
 #include "horsename_manager.h"
-#include "pcbang.h"
 #include "gm.h"
 #include "map_location.h"
 #include "DragonSoul.h"
-
-#ifdef ENABLE_BATTLE_PASS
-#include "battle_pass.h"
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+#include "HAntiMultipleFarm.h"
+#endif
+#ifdef ENABLE_ITEMSHOP
+#include "itemshop.h"
 #endif
 
-#include "shutdown_manager.h"
-#include "../../common/CommonDefines.h"
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-#include "new_offlineshop.h"
-#include "new_offlineshop_manager.h"
-#endif
-#ifdef ENABLE_HWID
-#include "hwidmanager.h"
-#endif
+extern BYTE		g_bAuthServer;
+extern void gm_insert(const char * name, BYTE level);
+extern BYTE	gm_get_level(const char * name, const char * host, const char* account );
+extern void gm_host_insert(const char * host);
 
 #define MAPNAME_DEFAULT	"none"
 
@@ -70,11 +60,7 @@ bool GetServerLocation(TAccountTable & rTab, BYTE bEmpire)
 		bFound = true;
 		long lIndex = 0;
 
-		if (!CMapLocation::instance().Get(
-#ifdef ENABLE_GENERAL_CH
-rTab.bChannel, 
-#endif
-					rTab.players[i].x,
+		if (!CMapLocation::instance().Get(rTab.players[i].x,
 					rTab.players[i].y,
 					lIndex,
 					rTab.players[i].lAddr,
@@ -88,13 +74,9 @@ rTab.bChannel,
 
 			lIndex = 0;
 
-			if (!CMapLocation::instance().Get(
-#ifdef ENABLE_GENERAL_CH
-rTab.bChannel, 
-#endif
-			rTab.players[i].x, rTab.players[i].y, lIndex, rTab.players[i].lAddr, rTab.players[i].wPort))
+			if (!CMapLocation::instance().Get(rTab.players[i].x, rTab.players[i].y, lIndex, rTab.players[i].lAddr, rTab.players[i].wPort))
 			{
-				sys_err("cannot find server for mapindex %d %d x %d (name %s)",
+				sys_err("cannot find server for mapindex %d %d x %d (name %s)", 
 						lIndex,
 						rTab.players[i].x,
 						rTab.players[i].y,
@@ -121,7 +103,7 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 
 	TAccountTable * pTab = (TAccountTable *) data;
 
-	itertype(g_sim) it = g_sim.find(pTab->id);
+	auto it = g_sim.find(pTab->id);
 	if (g_sim.end() != it)
 	{
 		sys_log(0, "CInputDB::LoginSuccess - already exist sim [%s]", pTab->login);
@@ -142,7 +124,7 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 		return;
 	}
 
-	if (strcmp(pTab->status, "OK")) // OK가 아니면
+	if (strcmp(pTab->status, "OK"))
 	{
 		sys_log(0, "CInputDB::LoginSuccess - status[%s] is not OK [%s]", pTab->status, pTab->login);
 
@@ -163,14 +145,9 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 
 	bool bFound = GetServerLocation(*pTab, pTab->bEmpire);
 
-//#ifdef ENABLE_GENERAL_CH
-//	pTab->bChannel = g_bChannel;
-//#endif
-
 	d->BindAccountTable(pTab);
 
-
-	if (!bFound) // 캐릭터가 없으면 랜덤한 제국으로 보낸다.. -_-
+	if (!bFound)
 	{
 		TPacketGCEmpire pe;
 		pe.bHeader = HEADER_GC_EMPIRE;
@@ -187,9 +164,6 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 
 	d->SetPhase(PHASE_SELECT);
 	d->SendLoginSuccessPacket();
-
-	// __SHUTDOWN::Shutdown Register
-	CShutdownManager::Instance().AddDesc(d);
 
 	sys_log(0, "InputDB::login_success: %s", pTab->login);
 }
@@ -222,17 +196,13 @@ void CInputDB::PlayerCreateSuccess(LPDESC d, const char * data)
 
 	long lIndex = 0;
 
-	if (!CMapLocation::instance().Get(
-#ifdef ENABLE_GENERAL_CH
-d->GetAccountTable().bChannel, 
-#endif
-				pPacketDB->player.x,
+	if (!CMapLocation::instance().Get(pPacketDB->player.x,
 				pPacketDB->player.y,
 				lIndex,
 				pPacketDB->player.lAddr,
 				pPacketDB->player.wPort))
 	{
-		sys_err("InputDB::PlayerCreateSuccess: cannot find server for mapindex %d %d x %d (name %s)",
+		sys_err("InputDB::PlayerCreateSuccess: cannot find server for mapindex %d %d x %d (name %s)", 
 				lIndex,
 				pPacketDB->player.x,
 				pPacketDB->player.y,
@@ -249,166 +219,8 @@ d->GetAccountTable().bChannel,
 	pack.player = pPacketDB->player;
 
 	d->Packet(&pack, sizeof(TPacketGCPlayerCreateSuccess));
-
-#ifdef ENABLE_REWARD_AT_START
 	TPlayerItem t;
 	memset(&t, 0, sizeof(t));
-	t.owner	= r_Tab.players[pPacketDB->bAccountCharacterIndex].dwID;
-
-	struct SInitialItem
-	{
-		BYTE	window;
-		WORD	pos;
-		DWORD	count;
-		DWORD	dwVnum;
-		TPlayerItemAttribute	aAttr[5];
-	};
-
-	static SInitialItem initialItems[MAIN_RACE_MAX_NUM][11] =
-	{
-		/* MAIN_RACE_WARRIOR_M */
-		{
-			{INVENTORY, 0, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 1, 1, 3009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 3 slot
-			{INVENTORY, 2, 1, 11209, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 3, 1, 12209, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 8, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 9, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 10, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 12, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 13, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_ASSASSIN_W */
-		{
-			{INVENTORY, 0, 1, 1009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 1, 1, 2009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 2, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 3, 1, 11409, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 4, 1, 12349, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 5, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 9, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 10, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 11, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 12, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 13, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_SURA_M */
-		{
-			{INVENTORY, 0, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 1, 1, 11609, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 2, 1, 12489, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 3, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 7, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 8, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 9, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 10, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_SHAMAN_W */
-		{
-			{INVENTORY, 0, 1, 5009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 1, 1, 7009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 2, 1, 11809, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 3, 1, 12629, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_REFLECT_MELEE, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 5, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 6, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_STUN_PCT, 8, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 8, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_STUN_PCT, 8}},							// 1 slot
-			{INVENTORY, 9, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 10, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_WARRIOR_W */
-		{
-			{INVENTORY, 0, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 1, 1, 3009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 3 slot
-			{INVENTORY, 2, 1, 11209, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 3, 1, 12209, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 8, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 9, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 10, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 12, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 13, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_ASSASSIN_M */
-		{
-			{INVENTORY, 0, 1, 1009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 1, 1, 2009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 2, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 3, 1, 11409, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 4, 1, 12349, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 5, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 9, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 10, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 11, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 12, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 13, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-		},
-		/* MAIN_RACE_SURA_W */
-		{
-			{INVENTORY, 0, 1, 19, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 2 slot
-			{INVENTORY, 1, 1, 11609, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 2, 1, 12489, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 3, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 7, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 9, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 9, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 10, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		},
-		/* MAIN_RACE_SHAMAN_M */
-		{
-			{INVENTORY, 0, 1, 5009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 1, 1, 7009, {APPLY_STR, 12, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_POISON_PCT, 10, APPLY_STUN_PCT, 8}},								// 1 slot
-			{INVENTORY, 2, 1, 11809, {APPLY_MAX_HP, 3000, APPLY_ATT_GRADE_BONUS, 50, APPLY_STEAL_HP, 10, APPLY_REFLECT_MELEE, 10, APPLY_CAST_SPEED, 20}},					// 2 slot
-			{INVENTORY, 3, 1, 12629, {APPLY_HP_REGEN, 30, APPLY_POISON_PCT, 10, APPLY_DODGE, 10, APPLY_ATT_SPEED, 10, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 4, 1, 13009, {APPLY_IMMUNE_STUN, 1, APPLY_STR, 12, APPLY_BLOCK, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_ATTBONUS_ORC, 20}},								// 1 slot
-			{INVENTORY, 5, 1, 14009, {APPLY_MAX_HP, 3000, APPLY_PENETRATE_PCT, 15, APPLY_STEAL_HP, 10, APPLY_ATTBONUS_ORC, 20, APPLY_ITEM_DROP_BONUS, 20}},					// 1 slot
-			{INVENTORY, 6, 1, 15009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_DODGE, 10, APPLY_EXP_DOUBLE_BONUS, 20, APPLY_GOLD_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 8, 1, 16009, {APPLY_MAX_HP, 3000, APPLY_CRITICAL_PCT, 15, APPLY_PENETRATE_PCT, 15, APPLY_HP_REGEN, 30, APPLY_EXP_DOUBLE_BONUS, 20}},						// 1 slot
-			{INVENTORY, 9, 1, 17009, {APPLY_POISON_REDUCE, 10, APPLY_ITEM_DROP_BONUS, 20, APPLY_ATTBONUS_ORC, 20, APPLY_ATTBONUS_MILGYO, 20, APPLY_ATTBONUS_ANIMAL, 20}},	// 1 slot
-			{INVENTORY, 10, 1, 50187, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}},
-			{INVENTORY, 0, 0, 0, {0, 10, 0, 0, 0, 0, 0, 0, 0, 0}}
-		}
-	};
-
-	unsigned job = pPacketDB->player.byJob;
-	for (int i = 0; i < 11; i++) {
-		if (initialItems[job][i].dwVnum == 0)
-			continue;
-
-		t.id = ITEM_MANAGER::instance().GetNewID();
-		t.window = initialItems[job][i].window;
-		t.pos = initialItems[job][i].pos;
-		t.count = initialItems[job][i].count;
-		t.vnum = initialItems[job][i].dwVnum;
-		for (int x = 0; x < ITEM_SOCKET_MAX_NUM; ++x) {
-			t.alSockets[x] = 0;
-		}
-
-		for (int x = 0; x < 5; ++x) {
-			t.aAttr[x].bType = initialItems[job][i].aAttr[x].bType;
-			t.aAttr[x].sValue = initialItems[job][i].aAttr[x].sValue;
-		}
-
-#ifdef ATTR_LOCK
-		t.lockedattr = -1;
-#endif
-
-		db_clientdesc->DBPacketHeader(HEADER_GD_ITEM_SAVE, 0, sizeof(TPlayerItem));
-		db_clientdesc->Packet(&t, sizeof(TPlayerItem));
-	}
-#endif
-
-	LogManager::instance().CharLog(pack.player.dwID, 0, 0, 0, "CREATE PLAYER", "", d->GetHostName());
 }
 
 void CInputDB::PlayerDeleteSuccess(LPDESC d, const char * data)
@@ -430,9 +242,6 @@ void CInputDB::PlayerDeleteFail(LPDESC d)
 		return;
 
 	d->Packet(encode_byte(HEADER_GC_CHARACTER_DELETE_WRONG_SOCIAL_ID),	1);
-	//d->Packet(encode_byte(account_index),			1);
-
-	//d->GetAccountTable().players[account_index].dwID = 0;
 }
 
 void CInputDB::ChangeName(LPDESC d, const char * data)
@@ -464,7 +273,6 @@ void CInputDB::ChangeName(LPDESC d, const char * data)
 		}
 }
 
-#define ENABLE_GOHOME_IF_MAP_NOT_EXIST
 void CInputDB::PlayerLoad(LPDESC d, const char * data)
 {
 	TPlayerTable * pTab = (TPlayerTable *) data;
@@ -479,7 +287,7 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	{
 		lMapIndex = SECTREE_MANAGER::instance().GetMapIndex(pTab->x, pTab->y);
 
-		if (lMapIndex == 0) // 좌표를 찾을 수 없다.
+		if (lMapIndex == 0)
 		{
 			lMapIndex = EMPIRE_START_MAP(d->GetAccountTable().bEmpire);
 			pos.x = EMPIRE_START_X(d->GetAccountTable().bEmpire);
@@ -493,23 +301,11 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	}
 	pTab->lMapIndex = lMapIndex;
 
-	// Private 맵에 있었는데, Private 맵이 사라진 상태라면 출구로 돌아가야 한다.
-	// ----
-	// 근데 출구로 돌아가야 한다면서... 왜 출구가 아니라 private map 상에 대응되는 pulic map의 위치를 찾냐고...
-	// 역사를 모르니... 또 하드코딩 한다.
-	// 아귀동굴이면, 출구로...
-	// by rtsummit
 	if (!SECTREE_MANAGER::instance().GetValidLocation(pTab->lMapIndex, pTab->x, pTab->y, lMapIndex, pos, d->GetEmpire()))
 	{
 		sys_err("InputDB::PlayerLoad : cannot find valid location %d x %d (name: %s)", pTab->x, pTab->y, pTab->name);
-#ifdef ENABLE_GOHOME_IF_MAP_NOT_EXIST
-		lMapIndex = EMPIRE_START_MAP(d->GetAccountTable().bEmpire);
-		pos.x = EMPIRE_START_X(d->GetAccountTable().bEmpire);
-		pos.y = EMPIRE_START_Y(d->GetAccountTable().bEmpire);
-#else
 		d->SetPhase(PHASE_CLOSE);
 		return;
-#endif
 	}
 
 	pTab->x = pos.x;
@@ -536,9 +332,11 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	ch->SetEmpire(d->GetEmpire());
 
 	d->BindCharacter(ch);
-
+#ifdef ENABLE_ANTI_MULTIPLE_FARM //@fix core cross-fire
+	CAntiMultipleFarm::instance().Login(d->GetLoginMacAdress(), ch->GetPlayerID());
+#endif
+	
 	{
-		// P2P Login
 		TPacketGGLogin p;
 
 		p.bHeader = HEADER_GG_LOGIN;
@@ -547,37 +345,22 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 		p.bEmpire = ch->GetEmpire();
 		p.lMapIndex = SECTREE_MANAGER::instance().GetMapIndex(ch->GetX(), ch->GetY());
 		p.bChannel = g_bChannel;
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+		strlcpy(p.cMAIf, d->GetLoginMacAdress(), sizeof(p.cMAIf));
+		p.i8BlockState = static_cast<int8_t>(CAntiMultipleFarm::instance().GetPlayerDropState(d->GetLoginMacAdress(), ch->GetPlayerID()));
+#endif
 
 		P2P_MANAGER::instance().Send(&p, sizeof(TPacketGGLogin));
-
-		char buf[51];
-#ifdef ENABLE_LONG_LONG
-		snprintf(buf, sizeof(buf), "%s %lld %d %ld %d",
-#else
-		snprintf(buf, sizeof(buf), "%s %d %d %ld %d",
-#endif
-				inet_ntoa(ch->GetDesc()->GetAddr().sin_addr), ch->GetGold(), g_bChannel, ch->GetMapIndex(), ch->GetAlignment());
-		LogManager::instance().CharLog(ch, 0, "LOGIN", buf);
-
-#ifdef ENABLE_PCBANG_FEATURE // @warme006
-		{
-			LogManager::instance().LoginLog(true,
-					ch->GetDesc()->GetAccountTable().id, ch->GetPlayerID(), ch->GetLevel(), ch->GetJob(), ch->GetRealPoint(POINT_PLAYTIME));
-
-			if (0)
-				ch->SetPCBang(CPCBangManager::instance().IsPCBangIP(ch->GetDesc()->GetHostName()));
-		}
-#endif
 	}
 
 	d->SetPhase(PHASE_LOADING);
 	ch->MainCharacterPacket();
 
 	long lPublicMapIndex = lMapIndex >= 10000 ? lMapIndex / 10000 : lMapIndex;
-	//if (!map_allow_find(lMapIndex >= 10000 ? lMapIndex / 10000 : lMapIndex) || !CheckEmpire(ch, lMapIndex))
+
 	if (!map_allow_find(lPublicMapIndex))
 	{
-		sys_err("InputDB::PlayerLoad : entering %d map is not allowed here (name: %s, empire %u)",
+		sys_err("InputDB::PlayerLoad : entering %d map is not allowed here (name: %s, empire %u)", 
 				lMapIndex, pTab->name, d->GetEmpire());
 
 		ch->SetWarpLocation(EMPIRE_START_MAP(d->GetEmpire()),
@@ -597,7 +380,7 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	ch->SkillLevelPacket();
 
 	sys_log(0, "InputDB: player_load %s %dx%dx%d LEVEL %d MOV_SPEED %d JOB %d ATG %d DFG %d GMLv %d",
-			pTab->name,
+			pTab->name, 
 			ch->GetX(), ch->GetY(), ch->GetZ(),
 			ch->GetLevel(),
 			ch->GetPoint(POINT_MOV_SPEED),
@@ -612,12 +395,9 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 void CInputDB::Boot(const char* data)
 {
 	signal_timer_disable();
-
-	// 패킷 사이즈 체크
 	DWORD dwPacketSize = decode_4bytes(data);
 	data += 4;
 
-	// 패킷 버전 체크
 	BYTE bVersion = decode_byte(data);
 	data += 1;
 
@@ -629,26 +409,7 @@ void CInputDB::Boot(const char* data)
 		thecore_shutdown();
 	}
 
-	sys_log(0, "sizeof(TMobTable) = %d", sizeof(TMobTable));
-	sys_log(0, "sizeof(TItemTable) = %d", sizeof(TItemTable));
-	sys_log(0, "sizeof(TShopTable) = %d", sizeof(TShopTable));
-	sys_log(0, "sizeof(TSkillTable) = %d", sizeof(TSkillTable));
-	sys_log(0, "sizeof(TRefineTable) = %d", sizeof(TRefineTable));
-	sys_log(0, "sizeof(TItemAttrTable) = %d", sizeof(TItemAttrTable));
-	sys_log(0, "sizeof(TItemRareTable) = %d", sizeof(TItemAttrTable));
-	sys_log(0, "sizeof(TBanwordTable) = %d", sizeof(TBanwordTable));
-	sys_log(0, "sizeof(TLand) = %d", sizeof(building::TLand));
-	sys_log(0, "sizeof(TObjectProto) = %d", sizeof(building::TObjectProto));
-	sys_log(0, "sizeof(TObject) = %d", sizeof(building::TObject));
-	//ADMIN_MANAGER
-	sys_log(0, "sizeof(TAdminManager) = %d", sizeof (TAdminInfo) );
-	//END_ADMIN_MANAGER
-
 	WORD size;
-
-	/*
-	 * MOB
-	 */
 
 	if (decode_2bytes(data)!=sizeof(TMobTable))
 	{
@@ -668,10 +429,6 @@ void CInputDB::Boot(const char* data)
 		data += size * sizeof(TMobTable);
 	}
 
-	/*
-	 * ITEM
-	 */
-
 	if (decode_2bytes(data) != sizeof(TItemTable))
 	{
 		sys_err("item table size error");
@@ -690,10 +447,6 @@ void CInputDB::Boot(const char* data)
 		ITEM_MANAGER::instance().Initialize((TItemTable *) data, size);
 		data += size * sizeof(TItemTable);
 	}
-
-	/*
-	 * SHOP
-	 */
 
 	if (decode_2bytes(data) != sizeof(TShopTable))
 	{
@@ -719,10 +472,6 @@ void CInputDB::Boot(const char* data)
 		data += size * sizeof(TShopTable);
 	}
 
-	/*
-	 * SKILL
-	 */
-
 	if (decode_2bytes(data) != sizeof(TSkillTable))
 	{
 		sys_err("skill table size error");
@@ -747,10 +496,6 @@ void CInputDB::Boot(const char* data)
 		data += size * sizeof(TSkillTable);
 	}
 
-
-	/*
-	 * REFINE RECIPE
-	 */
 	if (decode_2bytes(data) != sizeof(TRefineTable))
 	{
 		sys_err("refine table size error");
@@ -769,9 +514,44 @@ void CInputDB::Boot(const char* data)
 		data += size * sizeof(TRefineTable);
 	}
 
-	/*
-	 * ITEM ATTR
-	 */
+#ifdef ENABLE_ITEMSHOP
+	if (decode_2bytes(data) != sizeof(TItemshopCategoryTable))
+	{
+		sys_err("itemshop table category size error");
+		thecore_shutdown();
+		return;
+	}
+	data += 2;
+
+	size = decode_2bytes(data);
+	data += 2;
+	sys_log(0, "BOOT: ITEMSHOP: %d", size);
+
+	if (size)
+	{
+		CItemshopManager::instance().InitializeCategories((TItemshopCategoryTable*)data, size);
+		data += size * sizeof(TItemshopCategoryTable);
+	}
+
+	if (decode_2bytes(data) != sizeof(TItemshopItemTable))
+	{
+		sys_err("itemshop item table size error");
+		thecore_shutdown();
+		return;
+	}
+	data += 2;
+
+	size = decode_2bytes(data);
+	data += 2;
+	sys_log(0, "BOOT: ITEMSHOP: %d", size);
+
+	if (size)
+	{
+		CItemshopManager::instance().InitializeItems((TItemshopItemTable*)data, size);
+		data += size * sizeof(TItemshopItemTable);
+	}
+#endif
+
 	if (decode_2bytes(data) != sizeof(TItemAttrTable))
 	{
 		sys_err("item attr table size error");
@@ -794,16 +574,11 @@ void CInputDB::Boot(const char* data)
 				continue;
 
 			g_map_itemAttr[p->dwApplyIndex] = *p;
-			sys_log(0, "ITEM_ATTR[%d]: %s %u", p->dwApplyIndex, p->szApply, p->dwProb);
 		}
 	}
 
 	data += size * sizeof(TItemAttrTable);
 
-
-	/*
-     * ITEM RARE
-     */
 	if (decode_2bytes(data) != sizeof(TItemAttrTable))
 	{
 		sys_err("item rare table size error");
@@ -814,7 +589,6 @@ void CInputDB::Boot(const char* data)
 
 	size = decode_2bytes(data);
 	data += 2;
-	sys_log(0, "BOOT: ITEM_RARE: %d", size);
 
 	if (size)
 	{
@@ -826,20 +600,14 @@ void CInputDB::Boot(const char* data)
 				continue;
 
 			g_map_itemRare[p->dwApplyIndex] = *p;
-			sys_log(0, "ITEM_RARE[%d]: %s %u", p->dwApplyIndex, p->szApply, p->dwProb);
 		}
 	}
 
 	data += size * sizeof(TItemAttrTable);
 
-
-	/*
-	 * BANWORDS
-	 */
-
-	if (decode_2bytes(data) != sizeof(TBanwordTable))
+	if (decode_2bytes(data) != sizeof(TItemAttrTable))
 	{
-		sys_err("ban word table size error");
+		sys_err("item costume table size error");
 		thecore_shutdown();
 		return;
 	}
@@ -848,15 +616,22 @@ void CInputDB::Boot(const char* data)
 	size = decode_2bytes(data);
 	data += 2;
 
-	CBanwordManager::instance().Initialize((TBanwordTable *) data, size);
-	data += size * sizeof(TBanwordTable);
+	if (size)
+	{
+		TItemAttrTable* p = (TItemAttrTable*)data;
 
+		for (int i = 0; i < size; ++i, ++p)
+		{
+			if (p->dwApplyIndex >= MAX_APPLY_NUM)
+				continue;
+
+			g_map_itemCostume[p->dwApplyIndex] = *p;
+		}
+	}
+
+	data += size * sizeof(TItemAttrTable);
 	{
 		using namespace building;
-
-		/*
-		 * LANDS
-		 */
 
 		if (decode_2bytes(data) != sizeof(TLand))
 		{
@@ -875,10 +650,6 @@ void CInputDB::Boot(const char* data)
 		for (WORD i = 0; i < size; ++i, ++kLand)
 			CManager::instance().LoadLand(kLand);
 
-		/*
-		 * OBJECT PROTO
-		 */
-
 		if (decode_2bytes(data) != sizeof(TObjectProto))
 		{
 			sys_err("object proto table size error");
@@ -893,9 +664,6 @@ void CInputDB::Boot(const char* data)
 		CManager::instance().LoadObjectProto((TObjectProto *) data, size);
 		data += size * sizeof(TObjectProto);
 
-		/*
-		 * OBJECT
-		 */
 		if (decode_2bytes(data) != sizeof(TObject))
 		{
 			sys_err("object table size error");
@@ -913,7 +681,6 @@ void CInputDB::Boot(const char* data)
 		for (WORD i = 0; i < size; ++i, ++kObj)
 			CManager::instance().LoadObject(kObj, true);
 	}
-
 	set_global_time(*(time_t *) data);
 	data += sizeof(time_t);
 
@@ -934,8 +701,6 @@ void CInputDB::Boot(const char* data)
 	TItemIDRangeTable* rangespare = (TItemIDRangeTable*) data;
 	data += size * sizeof(TItemIDRangeTable);
 
-	//ADMIN_MANAGER
-	//관리자 등록
 	int ChunkSize = decode_2bytes(data );
 	data += 2;
 	int HostSize = decode_2bytes(data );
@@ -944,11 +709,11 @@ void CInputDB::Boot(const char* data)
 	for (int n = 0; n < HostSize; ++n )
 	{
 		gm_new_host_inert(data );
-		sys_log(0, "GM HOST : IP[%s] ", data );
+		sys_log(0, "GM HOST : IP[%s] ", data );		
 		data += ChunkSize;
 	}
-
-
+	
+	
 	data += 2;
 	int adminsize = decode_2bytes(data );
 	data += 2;
@@ -958,11 +723,9 @@ void CInputDB::Boot(const char* data)
 		tAdminInfo& rAdminInfo = *(tAdminInfo*)data;
 
 		gm_new_insert(rAdminInfo );
-
+		
 		data += sizeof(rAdminInfo );
 	}
-
-	//END_ADMIN_MANAGER
 
 	WORD endCheck=decode_2bytes(data);
 	if (endCheck != 0xffff)
@@ -973,7 +736,7 @@ void CInputDB::Boot(const char* data)
 	}
 	else
 		sys_log(0, "boot packet end check ok [%x]==0xffff", endCheck );
-	data +=2;
+	data +=2; 
 
 	if (!ITEM_MANAGER::instance().SetMaxItemID(*range))
 	{
@@ -989,9 +752,6 @@ void CInputDB::Boot(const char* data)
 		return;
 	}
 
-
-
-	// LOCALE_SERVICE
 	const int FILE_NAME_LEN = 256;
 	char szCommonDropItemFileName[FILE_NAME_LEN];
 	char szETCDropItemFileName[FILE_NAME_LEN];
@@ -1020,7 +780,12 @@ void CInputDB::Boot(const char* data)
 			"%s/dragon_soul_table.txt", LocaleService_GetBasePath().c_str());
 
 	sys_log(0, "Initializing Informations of Cube System");
-	Cube_InformationInitialize();
+	if (!Cube_InformationInitialize())
+	{
+		sys_err("cannot init cube infomation.");
+		thecore_shutdown();
+		return;
+	}
 
 	sys_log(0, "LoadLocaleFile: CommonDropItem: %s", szCommonDropItemFileName);
 	if (!ITEM_MANAGER::instance().ReadCommonDropItemFile(szCommonDropItemFileName))
@@ -1080,39 +845,23 @@ void CInputDB::Boot(const char* data)
 	if (!DSManager::instance().ReadDragonSoulTableFile(szDragonSoulTableFileName))
 	{
 		sys_err("cannot load DragonSoulTable: %s", szDragonSoulTableFileName);
-		//thecore_shutdown();
-		//return;
 	}
-
-	// END_OF_LOCALE_SERVICE
-
-#ifdef ENABLE_BATTLE_PASS
-	sys_log(0, "LoadLocaleFile: BattlePassInfo");
-	if (!CBattlePass::instance().ReadBattlePassFile())
-	{
-		sys_err("Cannot load battle_pass.txt");
-	}
-#endif
 
 	building::CManager::instance().FinalizeBoot();
 
 	CMotionManager::instance().Build();
 
 	signal_timer_enable(30);
-
-	if (test_server)
-	{
-		CMobManager::instance().DumpRegenCount("mob_count");
-	}
-
-	CPCBangManager::instance().RequestUpdateIPList(0);
+#ifdef ENABLE_REWARD_SYSTEM
+	CHARACTER_MANAGER::Instance().LoadRewardData();
+#endif
 }
 
 EVENTINFO(quest_login_event_info)
 {
 	DWORD dwPID;
 
-	quest_login_event_info()
+	quest_login_event_info() 
 	: dwPID( 0 )
 	{
 	}
@@ -1229,7 +978,7 @@ void CInputDB::QuestLoad(LPDESC d, const char * c_pData)
 
 			event_create(quest_login_event, info, PASSES_PER_SEC(1));
 		}
-	}
+	}	
 }
 
 void CInputDB::SafeboxLoad(LPDESC d, const char * c_pData)
@@ -1252,38 +1001,18 @@ void CInputDB::SafeboxLoad(LPDESC d, const char * c_pData)
 
 	LPCHARACTER ch = d->GetCharacter();
 
-	//PREVENT_TRADE_WINDOW
-	if (ch->GetShopOwner() || ch->GetExchange() || ch->GetMyShop() || ch->IsCubeOpen() )
+	if (ch->GetShopOwner() || ch->GetExchange() || ch->GetMyShop() || ch->IsCubeOpen() || ch->IsAcceWindowOpen())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 296, "");
-#endif
+		d->GetCharacter()->ChatPacket(CHAT_TYPE_INFO, "[LS;441]");
 		d->GetCharacter()->CancelSafeboxLoad();
 		return;
 	}
-	
-#ifdef __ATTR_TRANSFER_SYSTEM__
-	if (ch->IsAttrTransferOpen())
-	{
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 296, "");
-#endif
-		d->GetCharacter()->CancelSafeboxLoad();
-		return;
-	}
-#endif
-	//END_PREVENT_TRADE_WINDOW
 
-	// ADD_PREMIUM
-	if (d->GetCharacter()->GetPremiumRemainSeconds(PREMIUM_SAFEBOX) > 0 || d->GetCharacter()->IsEquipUniqueGroup(UNIQUE_GROUP_LARGE_SAFEBOX))
+	if (d->GetCharacter()->GetPremiumRemainSeconds(PREMIUM_SAFEBOX) > 0 ||
+			d->GetCharacter()->IsEquipUniqueGroup(UNIQUE_GROUP_LARGE_SAFEBOX))
 		bSize = 3;
-	// END_OF_ADD_PREMIUM
 
-	//if (d->GetCharacter()->IsEquipUniqueItem(UNIQUE_ITEM_SAFEBOX_EXPAND))
-	//bSize = 3; // 창고확장권
-
-	//d->GetCharacter()->LoadSafebox(p->bSize * SAFEBOX_PAGE_SIZE, p->dwGold, p->wItemCount, (TPlayerItem *) (c_pData + sizeof(TSafeboxTable)));
-	d->GetCharacter()->LoadSafebox(bSize * SAFEBOX_PAGE_SIZE, p->dwGold, p->wItemCount, (TPlayerItem *) (c_pData + sizeof(TSafeboxTable)));
+	d->GetCharacter()->LoadSafebox(bSize * SAFEBOX_PAGE_SIZE, p->lldGold, p->wItemCount, (TPlayerItem *) (c_pData + sizeof(TSafeboxTable)));
 }
 
 void CInputDB::SafeboxChangeSize(LPDESC d, const char * c_pData)
@@ -1299,9 +1028,6 @@ void CInputDB::SafeboxChangeSize(LPDESC d, const char * c_pData)
 	d->GetCharacter()->ChangeSafeboxSize(bSize);
 }
 
-//
-// @version	05/06/20 Bang2ni - ReqSafeboxLoad 의 취소
-//
 void CInputDB::SafeboxWrongPassword(LPDESC d)
 {
 	if (!d)
@@ -1325,15 +1051,15 @@ void CInputDB::SafeboxChangePasswordAnswer(LPDESC d, const char* c_pData)
 	if (!d->GetCharacter())
 		return;
 
-#ifdef TEXTS_IMPROVEMENT
 	TSafeboxChangePasswordPacketAnswer* p = (TSafeboxChangePasswordPacketAnswer*) c_pData;
-	if (p->flag) {
-		d->GetCharacter()->ChatPacketNew(CHAT_TYPE_INFO, 187, "");
+	if (p->flag)
+	{
+		d->GetCharacter()->ChatPacket(CHAT_TYPE_INFO, "[LS;774]");
 	}
-	else {
-		d->GetCharacter()->ChatPacketNew(CHAT_TYPE_INFO, 186, "");
+	else
+	{
+		d->GetCharacter()->ChatPacket(CHAT_TYPE_INFO, "[LS;775]");
 	}
-#endif
 }
 
 void CInputDB::MallLoad(LPDESC d, const char * c_pData)
@@ -1360,8 +1086,7 @@ void CInputDB::LoginAlready(LPDESC d, const char * c_pData)
 	if (!d)
 		return;
 
-	// INTERNATIONAL_VERSION 이미 접속중이면 접속 끊음
-	{
+	{ 
 		TPacketDGLoginAlready * p = (TPacketDGLoginAlready *) c_pData;
 
 		LPDESC d2 = DESC_MANAGER::instance().FindByLoginName(p->szLogin);
@@ -1378,8 +1103,6 @@ void CInputDB::LoginAlready(LPDESC d, const char * c_pData)
 			P2P_MANAGER::instance().Send(&pgg, sizeof(TPacketGGDisconnect));
 		}
 	}
-	// END_OF_INTERNATIONAL_VERSION
-
 	LoginFailure(d, "ALREADY");
 }
 
@@ -1398,7 +1121,7 @@ void CInputDB::EmpireSelect(LPDESC d, const char * c_pData)
 	pe.bEmpire = rTable.bEmpire;
 	d->Packet(&pe, sizeof(pe));
 
-	for (int i = 0; i < PLAYER_PER_ACCOUNT; ++i)
+	for (int i = 0; i < PLAYER_PER_ACCOUNT; ++i) 
 		if (rTable.players[i].dwID)
 		{
 			rTable.players[i].x = EMPIRE_START_X(rTable.bEmpire);
@@ -1420,16 +1143,12 @@ void CInputDB::MapLocations(const char * c_pData)
 
 	while (bCount--)
 	{
-		for (int i = 0; i < MAP_ALLOW_LIMIT; ++i)
+		for (int i = 0; i < 32; ++i)
 		{
 			if (0 == pLoc->alMaps[i])
 				break;
 
-			CMapLocation::instance().Insert(pLoc->alMaps[i], pLoc->szHost, pLoc->wPort
-#ifdef ENABLE_GENERAL_CH
-			, pLoc->bChannel
-#endif
-			);
+			CMapLocation::instance().Insert(pLoc->alMaps[i], pLoc->szHost, pLoc->wPort);
 		}
 
 		pLoc++;
@@ -1519,13 +1238,6 @@ void CInputDB::GuildWar(const char* c_pData)
 	}
 }
 
-#ifdef ADVANCED_GUILD_INFO
-void CInputDB::GuildResetStats(const char* c_pData)
-{
-	CGuildManager::instance().ResetStatsToAll();
-}
-#endif
-
 void CInputDB::GuildWarScore(const char* c_pData)
 {
 	TPacketGuildWarScore* p = (TPacketGuildWarScore*) c_pData;
@@ -1602,18 +1314,6 @@ void CInputDB::GuildLadder(const char* c_pData)
 	g->SetWarData(p->lWin, p->lDraw, p->lLoss);
 }
 
-#ifdef __SKILL_COLOR_SYSTEM__
-void CInputDB::SkillColorLoad(LPDESC d, const char * c_pData)
-{
-	LPCHARACTER ch;
-
-	if (!d || !(ch = d->GetCharacter()))
-		return;
-
-	ch->SetSkillColor((DWORD*)c_pData);
-}
-#endif
-
 void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 {
 	LPCHARACTER ch;
@@ -1630,6 +1330,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 	sys_log(0, "ITEM_LOAD: COUNT %s %u", ch->GetName(), dwCount);
 
 	std::vector<LPITEM> v;
+
 	TPlayerItem * p = (TPlayerItem *) c_pData;
 
 	for (DWORD i = 0; i < dwCount; ++i, ++p)
@@ -1645,16 +1346,6 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 		item->SetSkipSave(true);
 		item->SetSockets(p->alSockets);
 		item->SetAttributes(p->aAttr);
-#ifdef ATTR_LOCK
-		item->SetLockedAttr(p->lockedattr);
-#endif
-#ifdef ENABLE_BELT_INVENTORY_EX
-		if (p->window == BELT_INVENTORY)
-		{
-			p->window = INVENTORY;
-			p->pos = p->pos + BELT_INVENTORY_SLOT_START;
-		}
-#endif
 
 		if ((p->window == INVENTORY && ch->GetInventoryItem(p->pos)) ||
 				(p->window == EQUIPMENT && ch->GetWear(p->pos)))
@@ -1668,18 +1359,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 			{
 				case INVENTORY:
 				case DRAGON_SOUL_INVENTORY:
-#ifdef ENABLE_EXTRA_INVENTORY
-				case EXTRA_INVENTORY:
-#endif
-#ifdef ENABLE_SWITCHBOT
-				case SWITCHBOT:
-#endif
-
-#ifdef __HIGHLIGHT_SYSTEM__
-					item->AddToCharacter(ch, TItemPos(p->window, p->pos), false);
-#else
 					item->AddToCharacter(ch, TItemPos(p->window, p->pos));
-#endif
 					break;
 
 				case EQUIPMENT:
@@ -1704,7 +1384,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 		item->SetSkipSave(false);
 	}
 
-	itertype(v) it = v.begin();
+	auto it = v.begin();
 
 	while (it != v.end())
 	{
@@ -1723,11 +1403,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 			item->StartDestroyEvent();
 		}
 		else
-#ifdef __HIGHLIGHT_SYSTEM__
-			item->AddToCharacter(ch, TItemPos(INVENTORY, pos), false);
-#else
 			item->AddToCharacter(ch, TItemPos(INVENTORY, pos));
-#endif
 	}
 
 	ch->CheckMaximumPoints();
@@ -1735,89 +1411,6 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 
 	ch->SetItemLoaded();
 }
-
-#ifdef ENABLE_BATTLE_PASS
-void CInputDB::BattlePassLoad(LPDESC d, const char * c_pData)
-{
-	//sys_err("BattlePassLoad");
-	if (!d || !d->GetCharacter())
-		return;
-
-	LPCHARACTER ch = d->GetCharacter();
-	if (!ch)
-		return;
-
-	DWORD dwPID = decode_4bytes(c_pData);
-	c_pData += sizeof(DWORD);
-
-	DWORD dwCount = decode_4bytes(c_pData);
-	c_pData += sizeof(DWORD);
-
-	if (ch->GetPlayerID() != dwPID)
-		return;
-
-	ch->LoadBattlePass(dwCount, (TPlayerBattlePassMission *)c_pData);
-}
-
-void CInputDB::BattlePassLoadRanking(LPDESC d, const char * c_pData)
-{
-	//sys_err("BattlePassLoadRanking");
-	if (!d || !d->GetCharacter())
-		return;
-
-	LPCHARACTER ch = d->GetCharacter();
-	if (!ch)
-		return;
-
-	DWORD dwPID = decode_4bytes(c_pData);
-	c_pData += sizeof(DWORD);
-	
-	BYTE bIsGlobal = decode_byte(c_pData);
-	c_pData += sizeof(BYTE);
-
-	DWORD dwCount = decode_4bytes(c_pData);
-	c_pData += sizeof(DWORD);
-
-	//sys_err("BattlePassLoadRanking count %d playerid %d", dwCount, dwPID);
-	
-	if (ch->GetPlayerID() != dwPID)
-		return;
-	
-	if(dwCount)
-	{
-		std::vector<TBattlePassRanking> sendVector;
-		sendVector.resize(dwCount);
-		
-		TBattlePassRanking* p = (TBattlePassRanking*) c_pData;
-		
-		for (unsigned int i = 0; i < dwCount; ++i, ++p)
-		{
-			TBattlePassRanking newRanking;
-			newRanking.bPos = p->bPos;
-			strlcpy(newRanking.playerName, p->playerName, sizeof(newRanking.playerName));
-			newRanking.dwFinishTime = p->dwFinishTime;
-			
-			sendVector.push_back(newRanking);
-		}
-		
-		if(!sendVector.empty())
-		{
-			TPacketGCBattlePassRanking packet;
-			packet.bHeader = HEADER_GC_BATTLE_PASS_RANKING;
-			packet.wSize = sizeof(packet) + sizeof(TBattlePassRanking) * sendVector.size();
-			packet.bIsGlobal = bIsGlobal;
-
-			ch->GetDesc()->BufferedPacket(&packet, sizeof(packet));
-			ch->GetDesc()->Packet(&sendVector[0], sizeof(TBattlePassRanking) * sendVector.size());
-		}
-	}
-#ifdef TEXTS_IMPROVEMENT
-	else {
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 762, "");
-	}
-#endif
-}
-#endif
 
 void CInputDB::AffectLoad(LPDESC d, const char * c_pData)
 {
@@ -1839,9 +1432,9 @@ void CInputDB::AffectLoad(LPDESC d, const char * c_pData)
 		return;
 
 	ch->LoadAffect(dwCount, (TPacketAffectElement *) c_pData);
-
+	
 }
-
+	
 
 
 void CInputDB::PartyCreate(const char* c_pData)
@@ -1895,31 +1488,15 @@ void CInputDB::Time(const char * c_pData)
 	set_global_time(*(time_t *) c_pData);
 }
 
-#ifdef REGEN_ANDRA
 void CInputDB::ReloadProto(const char * c_pData)
 {
 	WORD wSize;
 
-	/*
-	 * Skill
-	 */
 	wSize = decode_2bytes(c_pData);
 	c_pData += sizeof(WORD);
 	if (wSize) CSkillManager::instance().Initialize((TSkillTable *) c_pData, wSize);
 	c_pData += sizeof(TSkillTable) * wSize;
 
-	/*
-	 * Banwords
-	 */
-
-	wSize = decode_2bytes(c_pData);
-	c_pData += sizeof(WORD);
-	CBanwordManager::instance().Initialize((TBanwordTable *) c_pData, wSize);
-	c_pData += sizeof(TBanwordTable) * wSize;
-
-	/*
-	 * ITEM
-	 */
 	wSize = decode_2bytes(c_pData);
 	c_pData += 2;
 	sys_log(0, "RELOAD: ITEM: %d", wSize);
@@ -1930,133 +1507,6 @@ void CInputDB::ReloadProto(const char * c_pData)
 		c_pData += wSize * sizeof(TItemTable);
 	}
 
-	/*
-	 * MONSTER
-	 */
-	wSize = decode_2bytes(c_pData);
-	c_pData += 2;
-	sys_log(0, "RELOAD: MOB: %d", wSize);
-
-	if (wSize)
-	{
-		CMobManager::instance().Initialize((TMobTable *) c_pData, wSize);
-		c_pData += wSize * sizeof(TMobTable);
-	}
-
-	/*
-	* SHOP
-	*/
-
-	wSize = decode_2bytes(c_pData);
-	c_pData += sizeof(WORD);
-	sys_log(0, "RELOAD: SHOP: %d", wSize);
-
-
-	if (wSize)
-	{
-		CShopManager::instance().Initialize((TShopTable *)c_pData, wSize);
-		c_pData += wSize * sizeof(TShopTable);
-	}
-
-	/*
-	* REFINE
-	*/
-	wSize = decode_2bytes(c_pData);
-	c_pData += 2;
-	sys_log(0, "RELOAD: REFINE: %d", wSize);
-
-	if (wSize)
-	{
-		CRefineManager::instance().Initialize((TRefineTable *)c_pData, wSize);
-		c_pData += wSize * sizeof(TRefineTable);
-	}
-
-	/*
-	* ATTR
-	*/
-	wSize = decode_2bytes(c_pData);
-	c_pData += 2;
-	sys_log(0, "RELOAD: ItemAtt: %d", wSize);
-
-	if (wSize)
-	{
-		TItemAttrTable * p = (TItemAttrTable *)c_pData;
-		g_map_itemAttr.clear();
-		for (int i = 0; i < wSize; ++i, ++p)
-		{
-			if (p->dwApplyIndex >= MAX_APPLY_NUM)
-				continue;
-
-			g_map_itemAttr[p->dwApplyIndex] = *p;
-			sys_log(0, "ITEM_ATTR[%d]: %s %u", p->dwApplyIndex, p->szApply, p->dwProb);
-		}
-		c_pData += wSize*sizeof(TItemAttrTable);
-	}
-
-	/*
-	* ATTR_RARE
-	*/
-	wSize = decode_2bytes(c_pData);
-	c_pData += 2;
-	sys_log(0, "RELOAD: ItemRareAtt: %d", wSize);
-
-	if (wSize)
-	{
-		TItemAttrTable * p = (TItemAttrTable *)c_pData;
-		g_map_itemRare.clear();
-		for (int i = 0; i < wSize; ++i, ++p)
-		{
-			if (p->dwApplyIndex >= MAX_APPLY_NUM)
-				continue;
-
-			g_map_itemRare[p->dwApplyIndex] = *p;
-			sys_log(0, "ITEM_RARE[%d]: %s %u", p->dwApplyIndex, p->szApply, p->dwProb);
-		}
-		c_pData += wSize*sizeof(TItemAttrTable);
-	}
-
-	CMotionManager::instance().Build();
-
-	CHARACTER_MANAGER::instance().for_each_pc(std::mem_fun(&CHARACTER::ComputePoints));
-}
-#else
-void CInputDB::ReloadProto(const char * c_pData)
-{
-	WORD wSize;
-
-	/*
-	 * Skill
-	 */
-	wSize = decode_2bytes(c_pData);
-	c_pData += sizeof(WORD);
-	if (wSize) CSkillManager::instance().Initialize((TSkillTable *) c_pData, wSize);
-	c_pData += sizeof(TSkillTable) * wSize;
-
-	/*
-	 * Banwords
-	 */
-
-	wSize = decode_2bytes(c_pData);
-	c_pData += sizeof(WORD);
-	CBanwordManager::instance().Initialize((TBanwordTable *) c_pData, wSize);
-	c_pData += sizeof(TBanwordTable) * wSize;
-
-	/*
-	 * ITEM
-	 */
-	wSize = decode_2bytes(c_pData);
-	c_pData += 2;
-	sys_log(0, "RELOAD: ITEM: %d", wSize);
-
-	if (wSize)
-	{
-		ITEM_MANAGER::instance().Initialize((TItemTable *) c_pData, wSize);
-		c_pData += wSize * sizeof(TItemTable);
-	}
-
-	/*
-	 * MONSTER
-	 */
 	wSize = decode_2bytes(c_pData);
 	c_pData += 2;
 	sys_log(0, "RELOAD: MOB: %d", wSize);
@@ -2069,9 +1519,8 @@ void CInputDB::ReloadProto(const char * c_pData)
 
 	CMotionManager::instance().Build();
 
-	CHARACTER_MANAGER::instance().for_each_pc(std::mem_fun(&CHARACTER::ComputePoints));
+	CHARACTER_MANAGER::instance().for_each_pc(std::mem_fn(&CHARACTER::ComputePoints));
 }
-#endif
 
 void CInputDB::GuildSkillUsableChange(const char* c_pData)
 {
@@ -2105,77 +1554,25 @@ void CInputDB::AuthLogin(LPDESC d, const char * c_pData)
 	ptoc.bResult = bResult;
 
 	d->Packet(&ptoc, sizeof(TPacketGCAuthSuccess));
-
-	sys_log(0, "AuthLogin result %u key %u", bResult, d->GetLoginKey());
-}
-
-void CInputDB::AuthLoginOpenID(LPDESC d, const char * c_pData)
-{
-	if (!d)
-		return;
-
-	BYTE bResult = *(BYTE *) c_pData;
-
-	TPacketGCAuthSuccessOpenID ptoc;
-
-	ptoc.bHeader = HEADER_GC_AUTH_SUCCESS_OPENID;
-
-	if (bResult)
-	{
-		ptoc.dwLoginKey = d->GetLoginKey();
-	}
-	else
-	{
-		ptoc.dwLoginKey = 0;
-	}
-
-	strcpy(ptoc.login, d->GetLogin().c_str());
-
-	ptoc.bResult = bResult;
-
-	d->Packet(&ptoc, sizeof(TPacketGCAuthSuccessOpenID));
-
 	sys_log(0, "AuthLogin result %u key %u", bResult, d->GetLoginKey());
 }
 
 void CInputDB::ChangeEmpirePriv(const char* c_pData)
 {
 	TPacketDGChangeEmpirePriv* p = (TPacketDGChangeEmpirePriv*) c_pData;
-
-	// ADD_EMPIRE_PRIV_TIME
 	CPrivManager::instance().GiveEmpirePriv(p->empire, p->type, p->value, p->bLog, p->end_time_sec);
-	// END_OF_ADD_EMPIRE_PRIV_TIME
 }
 
-/**
- * @version 05/06/08	Bang2ni - 지속시간 추가
- */
 void CInputDB::ChangeGuildPriv(const char* c_pData)
 {
 	TPacketDGChangeGuildPriv* p = (TPacketDGChangeGuildPriv*) c_pData;
-
-	// ADD_GUILD_PRIV_TIME
 	CPrivManager::instance().GiveGuildPriv(p->guild_id, p->type, p->value, p->bLog, p->end_time_sec);
-	// END_OF_ADD_GUILD_PRIV_TIME
 }
 
 void CInputDB::ChangeCharacterPriv(const char* c_pData)
 {
 	TPacketDGChangeCharacterPriv* p = (TPacketDGChangeCharacterPriv*) c_pData;
 	CPrivManager::instance().GiveCharacterPriv(p->pid, p->type, p->value, p->bLog);
-}
-
-void CInputDB::MoneyLog(const char* c_pData)
-{
-	TPacketMoneyLog * p = (TPacketMoneyLog *) c_pData;
-
-	if (p->type == 4) // QUEST_MONEY_LOG_SKIP
-		return;
-
-	if (g_bAuthServer ==true )
-		return;
-
-	LogManager::instance().MoneyLog(p->type, p->vnum, p->gold);
 }
 
 void CInputDB::GuildMoneyChange(const char* c_pData)
@@ -2185,7 +1582,7 @@ void CInputDB::GuildMoneyChange(const char* c_pData)
 	CGuild* g = CGuildManager::instance().TouchGuild(p->dwGuild);
 	if (g)
 	{
-		g->RecvMoneyChange(p->iTotalGold);
+		g->RecvMoneyChange(p->lldTotalGold);
 	}
 }
 
@@ -2196,7 +1593,7 @@ void CInputDB::GuildWithdrawMoney(const char* c_pData)
 	CGuild* g = CGuildManager::instance().TouchGuild(p->dwGuild);
 	if (g)
 	{
-		g->RecvWithdrawMoneyGive(p->iChangeGold);
+		g->RecvWithdrawMoneyGive(p->lldChangeGold);
 	}
 }
 
@@ -2224,153 +1621,15 @@ void CInputDB::UpdateLand(const char * c_pData)
 	CManager::instance().UpdateLand((TLand *) c_pData);
 }
 
-////////////////////////////////////////////////////////////////////
-// Billing
-////////////////////////////////////////////////////////////////////
-void CInputDB::BillingRepair(const char * c_pData)
-{
-	DWORD dwCount = *(DWORD *) c_pData;
-	c_pData += sizeof(DWORD);
-
-	TPacketBillingRepair * p = (TPacketBillingRepair *) c_pData;
-
-	for (DWORD i = 0; i < dwCount; ++i, ++p)
-	{
-		CLoginData * pkLD = M2_NEW CLoginData;
-
-		pkLD->SetKey(p->dwLoginKey);
-		pkLD->SetLogin(p->szLogin);
-		pkLD->SetIP(p->szHost);
-
-		sys_log(0, "BILLING: REPAIR %s host %s", p->szLogin, p->szHost);
-	}
-}
-
-void CInputDB::BillingExpire(const char * c_pData)
-{
-	TPacketBillingExpire * p = (TPacketBillingExpire *) c_pData;
-
-	LPDESC d = DESC_MANAGER::instance().FindByLoginName(p->szLogin);
-
-	if (!d)
-		return;
-
-	LPCHARACTER ch = d->GetCharacter();
-
-	if (p->dwRemainSeconds <= 60)
-	{
-		int i = MAX(5, p->dwRemainSeconds);
-		sys_log(0, "BILLING_EXPIRE: %s %u", p->szLogin, p->dwRemainSeconds);
-		d->DelayedDisconnect(i);
-	}
-	else
-	{
-		if ((p->dwRemainSeconds - d->GetBillingExpireSecond()) > 60)
-		{
-			d->SetBillingExpireSecond(p->dwRemainSeconds);
-#ifdef TEXTS_IMPROVEMENT
-			if (ch) {
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 241, "%d", (p->dwRemainSeconds / 60));
-			}
-#endif
-		}
-	}
-}
-
-void CInputDB::BillingLogin(const char * c_pData)
-{
-	if (NULL == c_pData)
-		return;
-
-	TPacketBillingLogin * p;
-
-	DWORD dwCount = *(DWORD *) c_pData;
-	c_pData += sizeof(DWORD);
-
-	p = (TPacketBillingLogin *) c_pData;
-
-	for (DWORD i = 0; i < dwCount; ++i, ++p)
-	{
-		DBManager::instance().SetBilling(p->dwLoginKey, p->bLogin);
-	}
-}
-
-void CInputDB::BillingCheck(const char * c_pData)
-{
-	DWORD size = *(DWORD *) c_pData;
-	c_pData += sizeof(DWORD);
-
-	for (DWORD i = 0; i < size; ++i)
-	{
-		DWORD dwKey = *(DWORD *) c_pData;
-		c_pData += sizeof(DWORD);
-
-		sys_log(0, "BILLING: NOT_LOGIN %u", dwKey);
-		DBManager::instance().SetBilling(dwKey, 0, true);
-	}
-}
-
 void CInputDB::Notice(const char * c_pData)
 {
+	extern void SendNotice(const char* c_pszBuf);
+
 	char szBuf[256+1];
 	strlcpy(szBuf, c_pData, sizeof(szBuf));
 
+	sys_log(0, "InputDB:: Notice: %s", szBuf);
 	SendNotice(szBuf);
-}
-
-void CInputDB::VCard(const char * c_pData)
-{
-	TPacketGDVCard * p = (TPacketGDVCard *) c_pData;
-
-	sys_log(0, "VCARD: %u %s %s %s %s", p->dwID, p->szSellCharacter, p->szSellAccount, p->szBuyCharacter, p->szBuyAccount);
-
-	std::unique_ptr<SQLMsg> pmsg(DBManager::instance().DirectQuery("SELECT sell_account, buy_account, time FROM vcard WHERE id=%u", p->dwID));
-	if (pmsg->Get()->uiNumRows != 1)
-	{
-		sys_log(0, "VCARD_FAIL: no data");
-		return;
-	}
-
-	MYSQL_ROW row = mysql_fetch_row(pmsg->Get()->pSQLResult);
-
-	if (strcmp(row[0], p->szSellAccount))
-	{
-		sys_log(0, "VCARD_FAIL: sell account differ %s", row[0]);
-		return;
-	}
-
-	if (!row[1] || *row[1])
-	{
-		sys_log(0, "VCARD_FAIL: buy account already exist");
-		return;
-	}
-
-	int time = 0;
-	str_to_number(time, row[2]);
-
-	if (!row[2] || time < 0)
-	{
-		sys_log(0, "VCARD_FAIL: time null");
-		return;
-	}
-
-	std::unique_ptr<SQLMsg> pmsg1(DBManager::instance().DirectQuery("UPDATE GameTime SET LimitTime=LimitTime+%d WHERE UserID='%s'", time, p->szBuyAccount));
-
-	if (pmsg1->Get()->uiAffectedRows == 0 || pmsg1->Get()->uiAffectedRows == (uint32_t)-1)
-	{
-		sys_log(0, "VCARD_FAIL: cannot modify GameTime table");
-		return;
-	}
-
-	std::unique_ptr<SQLMsg> pmsg2(DBManager::instance().DirectQuery("UPDATE vcard,GameTime SET sell_pid='%s', buy_pid='%s', buy_account='%s', sell_time=NOW(), new_time=GameTime.LimitTime WHERE vcard.id=%u AND GameTime.UserID='%s'", p->szSellCharacter, p->szBuyCharacter, p->szBuyAccount, p->dwID, p->szBuyAccount));
-
-	if (pmsg2->Get()->uiAffectedRows == 0 || pmsg2->Get()->uiAffectedRows == (uint32_t)-1)
-	{
-		sys_log(0, "VCARD_FAIL: cannot modify vcard table");
-		return;
-	}
-
-	sys_log(0, "VCARD_SUCCESS: %s %s", p->szBuyAccount, p->szBuyCharacter);
 }
 
 void CInputDB::GuildWarReserveAdd(TGuildWarReserve * p)
@@ -2429,7 +1688,6 @@ void CInputDB::WeddingEnd(TPacketWeddingEnd* p)
 	marriage::CManager::instance().WeddingEnd(p->dwPID1, p->dwPID2);
 }
 
-// MYSHOP_PRICE_LIST
 void CInputDB::MyshopPricelistRes(LPDESC d, const TPacketMyshopPricelistHeader* p )
 {
 	LPCHARACTER ch;
@@ -2441,10 +1699,7 @@ void CInputDB::MyshopPricelistRes(LPDESC d, const TPacketMyshopPricelistHeader* 
 	ch->UseSilkBotaryReal(p );
 
 }
-// END_OF_MYSHOP_PRICE_LIST
 
-
-//RELOAD_ADMIN
 void CInputDB::ReloadAdmin(const char * c_pData )
 {
 	gm_new_clear();
@@ -2452,18 +1707,18 @@ void CInputDB::ReloadAdmin(const char * c_pData )
 	c_pData += 2;
 	int HostSize = decode_2bytes(c_pData );
 	c_pData += 2;
-
+	
 	for (int n = 0; n < HostSize; ++n )
 	{
 		gm_new_host_inert(c_pData );
 		c_pData += ChunkSize;
 	}
-
-
+	
+	
 	c_pData += 2;
 	int size = 	decode_2bytes(c_pData );
 	c_pData += 2;
-
+	
 	for (int n = 0; n < size; ++n )
 	{
 		tAdminInfo& rAdminInfo = *(tAdminInfo*)c_pData;
@@ -2471,502 +1726,16 @@ void CInputDB::ReloadAdmin(const char * c_pData )
 		gm_new_insert(rAdminInfo );
 
 		c_pData += sizeof (tAdminInfo );
-
+	
 		LPCHARACTER pChar = CHARACTER_MANAGER::instance().FindPC(rAdminInfo.m_szName );
 		if (pChar )
 		{
 			pChar->SetGMLevel();
 		}
 	}
-
-}
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-template <class T>
-const char* Decode(T*& pObj, const char* data){
-	pObj = (T*) data;
-	return data + sizeof(T);
-}
-
-void OfflineShopLoadTables(const char* data)
-{
-	offlineshop::TSubPacketDGLoadTables* pSubPack = nullptr;
-	data = Decode(pSubPack, data);
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
 	
-	OFFSHOP_DEBUG("shop count %u , offer count %u , auction count %u, auction offers %u ",pSubPack->dwShopCount , pSubPack->dwOfferCount, pSubPack->dwAuctionCount , pSubPack->dwAuctionOfferCount);
-
-	for (DWORD i = 0; i < pSubPack->dwShopCount; i++)
-	{
-		offlineshop::TShopInfo* pShop = nullptr;
-		offlineshop::TItemInfo* pItem = nullptr;
-
-		DWORD* pdwSoldCount= nullptr;
-
-		data = Decode(pShop, data);
-		data = Decode(pdwSoldCount, data);
-
-		OFFSHOP_DEBUG("shop %u %s (solds %u) ",pShop->dwOwnerID , pShop->szName , *pdwSoldCount);
-
-		offlineshop::CShop* pkShop = rManager.PutsNewShop(pShop);
-
-		
-		for (DWORD j = 0; j < pShop->dwCount; j++)
-		{
-			data = Decode(pItem, data);
-			offlineshop::CShopItem kItem(pItem->dwItemID);
-			
-			kItem.SetOwnerID(pItem->dwOwnerID);
-			kItem.SetInfo(pItem->item);
-			kItem.SetPrice(pItem->price);
-			kItem.SetWindow(NEW_OFFSHOP);
-
-			OFFSHOP_DEBUG("for sale item %u ",pItem->dwItemID);
-			pkShop->AddItem(kItem);
-		}
-
-
-		for (DWORD j = 0; j < *pdwSoldCount; j++)
-		{
-			data = Decode(pItem, data);
-			offlineshop::CShopItem kItem(pItem->dwItemID);
-
-			kItem.SetOwnerID(pItem->dwOwnerID);
-			kItem.SetInfo(pItem->item);
-			kItem.SetPrice(pItem->price);
-			kItem.SetWindow(NEW_OFFSHOP);
-
-			OFFSHOP_DEBUG("sold item %u ",pItem->dwItemID);
-			pkShop->AddItemSold(kItem);
-		}
-	}
-
-	offlineshop::TOfferInfo* pOffer=nullptr;
-
-	for (DWORD i = 0; i < pSubPack->dwOfferCount; i++)
-	{
-		data = Decode(pOffer, data);
-		OFFSHOP_DEBUG("offer shop : id %u , shopid %u, itemid %u, buyer %u ",pOffer->dwOfferID, pOffer->dwOwnerID, pOffer->dwItemID , pOffer->dwOffererID);
-		offlineshop::CShop* pkShop = rManager.GetShopByOwnerID(pOffer->dwOwnerID);
-
-		if (!pkShop)
-		{
-			sys_err("CANNOT FIND SHOP BY OWNERID (TOfferInfo) %d ",pOffer->dwOwnerID);
-			continue;
-		}
-
-		pkShop->AddOffer(pOffer);
-
-		//if(!pOffer->bAccepted)
-		rManager.PutsNewOffer(pOffer);
-	}
-
-
-	offlineshop::TAuctionInfo*		pTempAuction=nullptr;
-	offlineshop::TAuctionOfferInfo* pTempAuctionOffer=nullptr;
-
-
-	for (DWORD i = 0; i < pSubPack->dwAuctionCount; i++)
-	{
-		data = Decode(pTempAuction, data);
-		rManager.PutsAuction(*pTempAuction);
-
-		OFFSHOP_DEBUG("auction %u id , %s name , %u minutes ",pTempAuction->dwOwnerID , pTempAuction->szOwnerName, pTempAuction->dwDuration);
-	}
-
-
-	for (DWORD i = 0; i < pSubPack->dwAuctionOfferCount; i++)
-	{
-		data = Decode(pTempAuctionOffer, data);
-		rManager.PutsAuctionOffer(*pTempAuctionOffer);
-
-		OFFSHOP_DEBUG("offer %u shop , %s buyer ",pTempAuctionOffer->dwOwnerID, pTempAuctionOffer->szBuyerName);
-	}
 }
 
-
-void OfflineShopBuyItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGBuyItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopBuyDBPacket(subpack->dwBuyerID, subpack->dwOwnerID, subpack->dwItemID);
-}
-
-
-void OfflineShopLockedBuyItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGLockedBuyItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopLockedBuyItemDBPacket(subpack->dwBuyerID, subpack->dwOwnerID, subpack->dwItemID);
-}
-
-
-void OfflineShopEditItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGEditItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopEditItemDBPacket(subpack->dwOwnerID , subpack->dwItemID, subpack->price);
-}
-
-
-void OfflineShopRemoveItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGRemoveItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopRemoveItemDBPacket(subpack->dwOwnerID , subpack->dwItemID);
-}
-
-
-void OfflineShopAddItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGAddItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopAddItemDBPacket(subpack->dwOwnerID, subpack->item);
-}
-
-
-void OfflineShopForceClosePacket(const char* data)
-{
-	offlineshop::TSubPacketDGShopForceClose* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopForceCloseDBPacket(subpack->dwOwnerID);
-}
-
-
-void OfflineShopShopCreateNewPacket(const char* data)
-{
-	offlineshop::TSubPacketDGShopCreateNew* subpack;
-	data = Decode(subpack, data);
-
-	OFFSHOP_DEBUG("shop %u , dur %u , count %u ",subpack->shop.dwOwnerID , subpack->shop.dwDuration , subpack->shop.dwCount);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-
-	std::vector<offlineshop::TItemInfo> vec;
-	vec.reserve(subpack->shop.dwCount);
-
-	offlineshop::TItemInfo* pItemInfo=nullptr;
-
-	for (DWORD i = 0; i < subpack->shop.dwCount; i++)
-	{
-		data = Decode(pItemInfo, data);
-		vec.push_back(*pItemInfo);
-
-		OFFSHOP_DEBUG("item id %u , item vnum %u , item count %u ",pItemInfo->dwItemID , pItemInfo->item.dwVnum , pItemInfo->item.dwCount);
-	}
-
-
-	rManager.RecvShopCreateNewDBPacket(subpack->shop, vec);
-}
-
-
-void OfflineShopShopChangeNamePacket(const char* data)
-{
-	offlineshop::TSubPacketDGShopChangeName* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopChangeNameDBPacket(subpack->dwOwnerID , subpack->szName);
-}
-
-
-void OfflineShopOfferCreatePacket(const char* data)
-{
-	offlineshop::TSubPacketDGOfferCreate* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopOfferNewDBPacket(subpack->offer);
-}
-
-
-void OfflineShopOfferNotifiedPacket(const char* data)
-{
-	offlineshop::TSubPacketDGOfferNotified* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopOfferNotifiedDBPacket(subpack->dwOfferID , subpack->dwOwnerID);
-}
-
-
-void OfflineShopOfferAcceptPacket(const char* data)
-{
-	offlineshop::TSubPacketDGOfferAccept* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopOfferAcceptDBPacket(subpack->dwOfferID , subpack->dwOwnerID);
-}
-
-
-
-
-void OfflineShopOfferCancelPacket(const char* data)
-{
-	offlineshop::TSubPacketDGOfferCancel* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopOfferCancelDBPacket(subpack->dwOfferID , subpack->dwOwnerID, subpack->IsRemovingItem);//offlineshop-updated 05/08/19
-}
-
-
-
-
-void OfflineShopSafeboxAddItemPacket(const char* data)
-{
-	offlineshop::TSubPacketDGSafeboxAddItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopSafeboxAddItemDBPacket(subpack->dwOwnerID , subpack->dwItemID , subpack->item);
-}
-
-
-void OfflineShopSafeboxAddValutesPacket(const char* data)
-{
-	offlineshop::TSubPacketDGSafeboxAddValutes* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopSafeboxAddValutesDBPacket(subpack->dwOwnerID , subpack->valute);
-}
-
-
-
-void OfflineShopSafeboxLoad(const char* data)
-{
-	offlineshop::TSubPacketDGSafeboxLoad* subpack;
-	data = Decode(subpack, data);
-
-	std::vector<DWORD> ids;
-	std::vector<offlineshop::TItemInfoEx> items;
-
-	ids.reserve(subpack->dwItemCount);
-	items.reserve(subpack->dwItemCount);
-
-	DWORD* pdwItemID=nullptr;
-	offlineshop::TItemInfoEx* temp;
-
-	for (DWORD i = 0; i < subpack->dwItemCount; i++)
-	{
-		data = Decode(pdwItemID, data);
-		data = Decode(temp, data);
-
-		ids.push_back(*pdwItemID);
-		items.push_back(*temp);
-	}
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopSafeboxLoadDBPacket(subpack->dwOwnerID , subpack->valute , ids, items);
-}
-
-
-//patch 08-03-2020
-void OfflineshopSafeboxExpiredItem(const char* data) {
-	offlineshop::TSubPacketDGSafeboxExpiredItem* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopSafeboxExpiredItemDBPacket(subpack->dwOwnerID, subpack->dwItemID);
-}
-
-
-void OfflineShopAuctionCreate(const char* data)
-{
-	offlineshop::TSubPacketDGAuctionCreate* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::GetManager().RecvAuctionCreateDBPacket(subpack->auction);
-}
-
-
-
-void OfflineShopAuctionAddOffer(const char* data)
-{
-	offlineshop::TSubPacketDGAuctionAddOffer* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::GetManager().RecvAuctionAddOfferDBPacket(subpack->offer);
-}
-
-
-
-void OfflineShopAuctionExpired(const char* data)
-{
-	offlineshop::TSubPacketDGAuctionExpired* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::GetManager().RecvAuctionExpiredDBPacket(subpack->dwOwnerID);
-}
-
-
-
-
-
-
-void OfflineshopShopExpired(const char* data)
-{
-	offlineshop::TSubPacketDGShopExpired* subpack;
-	data = Decode(subpack, data);
-
-	offlineshop::CShopManager& rManager = offlineshop::GetManager();
-	rManager.RecvShopExpiredDBPacket(subpack->dwOwnerID);
-}
-
-
-
-
-
-
-void OfflineshopPacket(const char* data)
-{
-	TPacketDGNewOfflineShop* pPack=nullptr;
-	data = Decode(pPack, data);
-
-	OFFSHOP_DEBUG("recv subheader %d",pPack->bSubHeader);
-
-	switch (pPack->bSubHeader)
-	{
-	case offlineshop::SUBHEADER_DG_LOAD_TABLES:
-		OfflineShopLoadTables(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_BUY_ITEM:
-		OfflineShopBuyItemPacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_LOCKED_BUY_ITEM:
-		OfflineShopLockedBuyItemPacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_EDIT_ITEM:
-		OfflineShopEditItemPacket(data);
-		return;
-	case offlineshop::SUBHEADER_DG_REMOVE_ITEM:
-		OfflineShopRemoveItemPacket(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_ADD_ITEM:
-		OfflineShopAddItemPacket(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_SHOP_FORCE_CLOSE:
-		OfflineShopForceClosePacket(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_SHOP_CREATE_NEW:
-		OfflineShopShopCreateNewPacket(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_SHOP_CHANGE_NAME:
-		OfflineShopShopChangeNamePacket(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_SHOP_EXPIRED:
-		OfflineshopShopExpired(data);
-		break;
-
-
-	case offlineshop::SUBHEADER_DG_OFFER_CREATE:
-		OfflineShopOfferCreatePacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_OFFER_NOTIFIED:
-		OfflineShopOfferNotifiedPacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_OFFER_ACCEPT:
-		OfflineShopOfferAcceptPacket(data);
-		return;
-	
-	case offlineshop::SUBHEADER_DG_OFFER_CANCEL:
-		OfflineShopOfferCancelPacket(data);
-		return;
-
-	
-
-	case offlineshop::SUBHEADER_DG_SAFEBOX_ADD_ITEM:
-		OfflineShopSafeboxAddItemPacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_SAFEBOX_ADD_VALUTES:
-		OfflineShopSafeboxAddValutesPacket(data);
-		return;
-
-	case offlineshop::SUBHEADER_DG_SAFEBOX_LOAD:
-		OfflineShopSafeboxLoad(data);
-		return;
-
-	//patch 08-03-2020
-	case offlineshop::SUBHEADER_DG_SAFEBOX_EXPIRED_ITEM:
-		OfflineshopSafeboxExpiredItem(data);
-		return;
-
-
-	//AUCTION
-	case offlineshop::SUBHEADER_DG_AUCTION_CREATE:
-		OfflineShopAuctionCreate(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_AUCTION_ADD_OFFER:
-		OfflineShopAuctionAddOffer(data);
-		return;
-
-
-	case offlineshop::SUBHEADER_DG_AUCTION_EXPIRED:
-		OfflineShopAuctionExpired(data);
-		return;
-
-
-
-	default:
-		sys_err("UKNOWN SUB HEADER %d ", pPack->bSubHeader);
-		return;
-	}
-}
-#endif
-//END_RELOAD_ADMIN
-
-
-#ifdef ENABLE_ITEM_EXTRA_PROTO
-void LoadItemExtraProto(const char* data)
-{
-	TPacketDGLoadItemExtraProto* Pack = (TPacketDGLoadItemExtraProto*)data;
-	if (Pack->dwTableSize != sizeof(TItemExtraProto)) {
-		sys_err("Invalid TItemExtraProto size %u (known %u) ", Pack->dwTableSize, sizeof(TItemExtraProto));
-		return;
-	}
-
-	ITEM_MANAGER::instance().InitializeExtraProto((TItemExtraProto*)(data + sizeof(TPacketDGLoadItemExtraProto)), Pack->dwCount);
-}
-#endif
-
-
-
-
-////////////////////////////////////////////////////////////////////
-// Analyze
-// @version	05/06/10 Bang2ni - 아이템 가격정보 리스트 패킷(HEADER_DG_MYSHOP_PRICELIST_RES) 처리루틴 추가.
-////////////////////////////////////////////////////////////////////
 int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 {
 	switch (bHeader)
@@ -3012,11 +1781,9 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		break;
 
 	case HEADER_DG_PLAYER_LOAD_FAILED:
-		//sys_log(0, "PLAYER_LOAD_FAILED");
 		break;
 
 	case HEADER_DG_PLAYER_DELETE_FAILED:
-		//sys_log(0, "PLAYER_DELETE_FAILED");
 		PlayerDeleteFail(DESC_MANAGER::instance().FindByHandle(m_dwHandle));
 		break;
 
@@ -3031,16 +1798,6 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 	case HEADER_DG_AFFECT_LOAD:
 		AffectLoad(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
 		break;
-
-#ifdef ENABLE_BATTLE_PASS
-	case HEADER_DG_BATTLE_PASS_LOAD:
-		BattlePassLoad(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
-		break;
-		
-	case HEADER_DG_BATTLE_PASS_LOAD_RANKING:
-		BattlePassLoadRanking(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
-		break;
-#endif
 
 	case HEADER_DG_SAFEBOX_LOAD:
 		SafeboxLoad(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
@@ -3111,7 +1868,7 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		break;
 
 	case HEADER_DG_PARTY_SET_MEMBER_LEVEL:
-		PartySetMemberLevel(c_pData);
+		PartySetMemberLevel(c_pData);    
 		break;
 
 	case HEADER_DG_TIME:
@@ -3142,6 +1899,32 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		ReloadProto(c_pData);
 		break;
 
+#ifdef ENABLE_ITEMSHOP
+	case HEADER_DG_RELOAD_ITEMSHOP:
+		ReloadItemshop(c_pData);
+		break;
+
+	case HEADER_DG_REFRESH_ITEMSHOP_SINGLE_ITEM:
+		CItemshopManager::instance().RefreshSingleItem((TItemshopItemTable*)c_pData);
+		break;
+
+	case HEADER_DG_REMOVE_ITEMSHOP_SINGLE_ITEM:
+		CItemshopManager::instance().RemoveSingleItem((TItemshopItemTable*)c_pData);
+		break;
+
+	case HEADER_DG_ADD_ITEMSHOP_SINGLE_ITEM:
+		CItemshopManager::instance().AddSingleItem((TItemshopItemTable*)c_pData);
+		break;
+
+	case HEADER_DG_BUY_ITEMSHOP_ITEM:
+		ItemshopBuyAnswer(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
+		break;
+
+	case HEADER_DG_PROMOTION_CODE_REDEEM:
+		RedeemPromotionCode(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
+		break;
+#endif
+
 	case HEADER_DG_GUILD_WAR:
 		GuildWar(c_pData);
 		break;
@@ -3149,12 +1932,6 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 	case HEADER_DG_GUILD_WAR_SCORE:
 		GuildWarScore(c_pData);
 		break;
-
-#ifdef ADVANCED_GUILD_INFO
-	case HEADER_DG_GUILD_WAR_RESET:
-		GuildResetStats(c_pData);
-		break;
-#endif
 
 	case HEADER_DG_GUILD_LADDER:
 		GuildLadder(c_pData);
@@ -3169,10 +1946,7 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		break;
 
 	case HEADER_DG_AUTH_LOGIN:
-		if (openid_server)
-			AuthLoginOpenID(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
-		else
-			AuthLogin(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
+		AuthLogin(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
 		break;
 
 	case HEADER_DG_CHANGE_EMPIRE_PRIV:
@@ -3187,10 +1961,6 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		ChangeCharacterPriv(c_pData);
 		break;
 
-	case HEADER_DG_MONEY_LOG:
-		MoneyLog(c_pData);
-		break;
-
 	case HEADER_DG_GUILD_WITHDRAW_MONEY_GIVE:
 		GuildWithdrawMoney(c_pData);
 		break;
@@ -3201,26 +1971,6 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 	case HEADER_DG_SET_EVENT_FLAG:
 		SetEventFlag(c_pData);
-		break;
-
-	case HEADER_DG_BILLING_REPAIR:
-		BillingRepair(c_pData);
-		break;
-
-	case HEADER_DG_BILLING_EXPIRE:
-		BillingExpire(c_pData);
-		break;
-
-	case HEADER_DG_BILLING_LOGIN:
-		BillingLogin(c_pData);
-		break;
-
-	case HEADER_DG_BILLING_CHECK:
-		BillingCheck(c_pData);
-		break;
-
-	case HEADER_DG_VCARD:
-		VCard(c_pData);
 		break;
 
 	case HEADER_DG_CREATE_OBJECT:
@@ -3279,27 +2029,17 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		WeddingEnd((TPacketWeddingEnd*) c_pData);
 		break;
 
-		// MYSHOP_PRICE_LIST
 	case HEADER_DG_MYSHOP_PRICELIST_RES:
 		MyshopPricelistRes(DESC_MANAGER::instance().FindByHandle(m_dwHandle), (TPacketMyshopPricelistHeader*) c_pData );
 		break;
-		// END_OF_MYSHOP_PRICE_LIST
-		//
-	// RELOAD_ADMIN
-	case HEADER_DG_RELOAD_ADMIN:
-		ReloadAdmin(c_pData );
-		break;
-	//END_RELOAD_ADMIN
 
-#ifdef ENABLE_EVENT_MANAGER
-	case HEADER_DG_EVENT_MANAGER:
-		EventManager(c_pData);
+	case HEADER_DG_RELOAD_ADMIN:
+		ReloadAdmin(c_pData );		
 		break;
-#endif
 
 	case HEADER_DG_ACK_CHANGE_GUILD_MASTER :
 		this->GuildChangeMaster((TPacketChangeGuildMaster*) c_pData);
-		break;
+		break;	
 	case HEADER_DG_ACK_SPARE_ITEM_ID_RANGE :
 		ITEM_MANAGER::instance().SetMaxSpareItemID(*((TItemIDRangeTable*)c_pData) );
 		break;
@@ -3307,66 +2047,30 @@ int CInputDB::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 	case HEADER_DG_UPDATE_HORSE_NAME :
 	case HEADER_DG_ACK_HORSE_NAME :
 		CHorseNameManager::instance().UpdateHorseName(
-				((TPacketUpdateHorseName*)c_pData)->dwPlayerID,
+				((TPacketUpdateHorseName*)c_pData)->dwPlayerID, 
 				((TPacketUpdateHorseName*)c_pData)->szHorseName);
 		break;
 
 	case HEADER_DG_NEED_LOGIN_LOG:
-		DetailLog( (TPacketNeedLoginLogInfo*) c_pData );
 		break;
-	// 독일 선물 기능 테스트
+
 	case HEADER_DG_ITEMAWARD_INFORMER:
 		ItemAwardInformer((TPacketItemAwardInfromer*) c_pData);
 		break;
-#if defined(BL_OFFLINE_MESSAGE)
-	case HEADER_DG_RESPOND_OFFLINE_MESSAGES:
-		ReadOfflineMessages(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
-		break;
-#endif
+
 	case HEADER_DG_RESPOND_CHANNELSTATUS:
 		RespondChannelStatus(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
 		break;
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-	case HEADER_DG_NEW_OFFLINESHOP:
-		OfflineshopPacket(c_pData);
-		break;
-#endif
-#ifdef ENABLE_CHANNEL_SWITCH_SYSTEM
-	case HEADER_DG_CHANNEL_RESULT:
-		ChangeChannel(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
+
+#ifndef _IMPROVED_PACKET_ENCRYPTION_
+	case HEADER_DG_SHUTDOWN:
+		{
+			TPacketShutdown * p = (TPacketShutdown*)c_pData;
+			g_isShutdowned = p->state;
+		}
 		break;
 #endif
 
-#ifdef ENABLE_ITEM_EXTRA_PROTO
-	case HEADER_DG_ITEM_EXTRA_PROTO_LOAD:
-		LoadItemExtraProto(c_pData);
-		break;
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	case HEADER_DG_SKILL_COLOR_LOAD:
-		SkillColorLoad(DESC_MANAGER::instance().FindByHandle(m_dwHandle), c_pData);
-		break;
-#endif
-#ifdef ENABLE_HWID
-	case HEADER_DG_BLOCKHWID:
-		{
-			if (g_bAuthServer) {
-				const THwidRequest* p = reinterpret_cast<const THwidRequest*>(c_pData);
-				CHwidManager::instance().RecvBlockHwid(p->whoname, p->targetname);
-			}
-			break;
-		}
-		break;
-	case HEADER_DG_UNBLOCKHWID:
-		{
-			if (g_bAuthServer) {
-				const THwidRequest* p = reinterpret_cast<const THwidRequest*>(c_pData);
-				CHwidManager::instance().RecvUnblockHwid(p->whoname, p->targetname);
-			}
-			break;
-		}
-#endif
 	default:
 		return (-1);
 	}
@@ -3386,11 +2090,11 @@ bool CInputDB::Process(LPDESC d, const void * orig, int bytes, int & r_iBytesPro
 		if (m_iBufferLeft < 9)
 			return true;
 
-		bHeader		= *((BYTE *) (c_pData));	// 1
-		m_dwHandle	= *((DWORD *) (c_pData + 1));	// 4
-		iSize		= *((DWORD *) (c_pData + 5));	// 4
+		bHeader		= *((BYTE *) (c_pData));
+		m_dwHandle	= *((DWORD *) (c_pData + 1));
+		iSize		= *((DWORD *) (c_pData + 5));
 
-		sys_log(1, "DBCLIENT: header %d handle %d size %d bytes %d", bHeader, m_dwHandle, iSize, bytes);
+		sys_log(1, "DBCLIENT: header %d handle %d size %d bytes %d", bHeader, m_dwHandle, iSize, bytes); 
 
 		if (m_iBufferLeft - 9 < iSize)
 			return true;
@@ -3401,9 +2105,6 @@ bool CInputDB::Process(LPDESC d, const void * orig, int bytes, int & r_iBytesPro
 		{
 			sys_err("in InputDB: UNKNOWN HEADER: %d, LAST HEADER: %d(%d), REMAIN BYTES: %d, DESC: %d",
 					bHeader, bLastHeader, iLastPacketLen, m_iBufferLeft, d->GetSocket());
-
-			//printdata((BYTE*) orig, bytes);
-			//d->SetPhase(PHASE_CLOSE);
 		}
 
 		c_pData		+= 9 + iSize;
@@ -3422,39 +2123,29 @@ void CInputDB::GuildChangeMaster(TPacketChangeGuildMaster* p)
 	CGuildManager::instance().ChangeMaster(p->dwGuildID);
 }
 
-void CInputDB::DetailLog(const TPacketNeedLoginLogInfo* info)
-{
-	LPCHARACTER pChar = CHARACTER_MANAGER::instance().FindByPID( info->dwPlayerID );
-
-	if (NULL != pChar)
-	{
-		LogManager::instance().DetailLoginLog(true, pChar);
-	}
-}
-
 void CInputDB::ItemAwardInformer(TPacketItemAwardInfromer *data)
-{
-	LPDESC d = DESC_MANAGER::instance().FindByLoginName(data->login);	//login정보
-
+{	
+	LPDESC d = DESC_MANAGER::instance().FindByLoginName(data->login);
+	
 	if(d == NULL)
 		return;
 	else
 	{
 		if (d->GetCharacter())
 		{
-			LPCHARACTER ch = d->GetCharacter();
-			ch->SetItemAward_vnum(data->vnum);	// ch 에 임시 저장해놨다가 QuestLoad 함수에서 처리
-			ch->SetItemAward_cmd(data->command);
+			LPCHARACTER ch = d->GetCharacter();	
+			ch->SetItemAward_vnum(data->vnum);
+			ch->SetItemAward_cmd(data->command);		
 
-			if(d->IsPhase(PHASE_GAME))			//게임페이즈일때
+			if(d->IsPhase(PHASE_GAME))
 			{
-				quest::CQuestManager::instance().ItemInformer(ch->GetPlayerID(),ch->GetItemAward_vnum());	//questmanager 호출
+				quest::CQuestManager::instance().ItemInformer(ch->GetPlayerID(),ch->GetItemAward_vnum());
 			}
 		}
 	}
 }
 
-void CInputDB::RespondChannelStatus(LPDESC desc, const char* pcData)
+void CInputDB::RespondChannelStatus(LPDESC desc, const char* pcData) 
 {
 	if (!desc) {
 		return;
@@ -3473,99 +2164,127 @@ void CInputDB::RespondChannelStatus(LPDESC desc, const char* pcData)
 	desc->SetChannelStatusRequested(false);
 }
 
-#ifdef ENABLE_CHANNEL_SWITCH_SYSTEM
-void CInputDB::ChangeChannel(LPDESC d, const char* pcData)
+#ifdef ENABLE_ITEMSHOP
+void CInputDB::ItemshopBuyAnswer(LPDESC d, const char* c_pData)
 {
-	if (!d || !d->GetCharacter())
+	if (!d)
+		return;
+
+	if (!d->GetCharacter())
+		return;
+
+	TItemshopBuyAnswer* buy_answer = (TItemshopBuyAnswer*)c_pData;
+
+	LPCHARACTER ch = d->GetCharacter();
+
+	if (buy_answer->canBuy)
 	{
-		sys_err("Change channel request with empty or invalid description handle!");
-		return;
+		CItemshopManager::instance().BuyItem(ch, buy_answer->code, buy_answer->wCount);
 	}
-
-	TPacketReturnChannel* p = (TPacketReturnChannel*)pcData;
-	if (!p->lAddr || !p->port) {
-#ifdef TEXTS_IMPROVEMENT
-		d->GetCharacter()->ChatPacketNew(CHAT_TYPE_INFO, 636, "");
-#endif
-		return;
-	}
-
-	// Execute
-	d->GetCharacter()->StartChannelSwitch(p->lAddr, p->port);
-}
-#endif
-
-#if defined(BL_OFFLINE_MESSAGE)
-#include "buffer_manager.h"
-void CInputDB::ReadOfflineMessages(LPDESC desc, const char* pcData)
-{
-	if (!desc || !desc->GetCharacter())
-		return;
-
-	if (desc->GetCharacter()->IsBlockMode(BLOCK_WHISPER))
-		return;
-	
-	auto p = reinterpret_cast<const TPacketDGReadOfflineMessage*>(pcData);
-
-	TPacketGCWhisper pack;
-	int len = MIN(CHAT_MAX_LEN, strlen(p->szMessage) + 1);
-	pack.bHeader = HEADER_GC_WHISPER;
-	pack.wSize = static_cast<WORD>(sizeof(TPacketGCWhisper) + len);
-	pack.bType = WHISPER_TYPE_OFFLINE;
-	strlcpy(pack.szNameFrom, p->szFrom, sizeof(pack.szNameFrom));
-
-	TEMP_BUFFER buf;
-	buf.write(&pack, sizeof(TPacketGCWhisper));
-	buf.write(p->szMessage, len);
-	desc->Packet(buf.read_peek(), buf.size());
-}
-#endif
-
-#ifdef ENABLE_EVENT_MANAGER
-void CInputDB::EventManager(const char* c_pData)
-{
-	CHARACTER_MANAGER& chrMngr = CHARACTER_MANAGER::Instance();
-	const BYTE subIndex = *(BYTE*)c_pData;
-	c_pData += sizeof(BYTE);
-	if (subIndex == EVENT_MANAGER_LOAD)
+	else
 	{
-		chrMngr.ClearEventData();
-		const BYTE dayCount = *(BYTE*)c_pData;
-		c_pData += sizeof(BYTE);
+		ch->ChatPacket(CHAT_TYPE_INFO, "cannot buy");
+	}
+}
 
-		const bool updateFromGameMaster = *(bool*)c_pData;
-		c_pData += sizeof(bool);
+void CInputDB::RedeemPromotionCode(LPDESC d, const char* c_pData)
+{
+	if (!d)
+		return;
 
-		for (DWORD x = 0; x < dayCount; ++x)
+	if (!d->GetCharacter())
+		return;
+
+	TPromotionRedeemAnswer* redeem_answer = (TPromotionRedeemAnswer*)c_pData;
+
+	LPCHARACTER ch = d->GetCharacter();
+
+	std::vector <TPromotionItemTable> itemsGiven;
+
+	if (redeem_answer->byRedeemAnswer == REDEEM_SUCCESS)
+	{
+		TPromotionItemTable* rewards = (TPromotionItemTable*)(c_pData + sizeof(TPromotionRedeemAnswer));
+
+		for (int i = 0; i < redeem_answer->reward_count; ++i, ++rewards)
 		{
-			const BYTE dayIndex = *(BYTE*)c_pData;
-			c_pData += sizeof(BYTE);
-
-			const BYTE dayEventCount = *(BYTE*)c_pData;
-			c_pData += sizeof(BYTE);
-
-			if (dayEventCount > 0)
+			const TItemTable* item_table = ITEM_MANAGER::instance().GetTable(rewards->dwVnum);
+			if (item_table)
 			{
-				std::vector<TEventManagerData> m_vec;
-				m_vec.resize(dayEventCount);
-				thecore_memcpy(&m_vec[0], c_pData, dayEventCount*sizeof(TEventManagerData));
-				c_pData += dayEventCount * sizeof(TEventManagerData);
-				chrMngr.SetEventData(dayIndex, m_vec);
-
+				// NOTE: Stupid admin i guess
+				if (rewards->wCount > 1 && ((IS_SET(item_table->dwAntiFlags, ITEM_ANTIFLAG_STACK)) || !(IS_SET(item_table->dwFlags, ITEM_FLAG_STACKABLE))))
+					rewards->wCount = 1;
 			}
+
+
+			LPITEM item = ITEM_MANAGER::instance().CreateItem(rewards->dwVnum, rewards->wCount);
+
+			if (!item)
+			{
+				ch->ChatPacket(CHAT_TYPE_INFO, "item does not exist, contact SA for free coins :)");
+				return;
+			}
+
+			bool forcedSockets = false;
+
+			if (rewards->alSockets[0])
+			{
+				for (int i = 0; i < ITEM_LIMIT_MAX_NUM; i++)
+				{
+					if (LIMIT_REAL_TIME == item->GetLimitType(i))
+					{
+						// NOTE: We set socket0 as time value, but only if socket is set so we still can use default times in createitem
+						item->SetSocket(0, time(0) + rewards->alSockets[0]);
+						// NOTE: We dont have to start realtime event because createitem does
+						forcedSockets = true;
+
+					}
+					else if (LIMIT_TIMER_BASED_ON_WEAR == item->GetLimitType(i))
+					{
+						// NOTE: We force socket0 if set
+						item->SetSocket(0, rewards->alSockets[0]);
+						forcedSockets = true;
+					}
+				}
+			}
+
+			// NOTE: I dont have systems where i need to set multible sockets in createitem but you can still do:
+			/*
+
+			for(const auto& socket : itemInfo.alSockets){
+				if (socket)
+				{
+					Funny socket method here
+				}
+			}
+
+			*/
+			if (!forcedSockets)
+				item->SetSockets(rewards->alSockets);
+
+			// NOTE: You can adjust this if you want to use bAlterToMagicItemPct
+			item->SetAttributes(rewards->aAttr);
+
+			ch->AutoGiveItem(item);
+			itemsGiven.push_back(*rewards);
 		}
-		if (updateFromGameMaster)
-			chrMngr.UpdateAllPlayerEventData();
 	}
-	else if (EVENT_MANAGER_EVENT_STATUS == subIndex)
-	{
-		const WORD& eventID = *(WORD*)c_pData;
-		c_pData += sizeof(WORD);
-		const bool& eventStatus = *(bool*)c_pData;
-		c_pData += sizeof(bool);
-		const int& endTime = *(int*)c_pData;
-		c_pData += sizeof(int);
-		chrMngr.SetEventStatus(eventID, eventStatus, endTime);
-	}
+
+	ch->SendPromotionRewardPacket(redeem_answer->byRedeemAnswer, itemsGiven);
+}
+
+void CInputDB::ReloadItemshop(const char* c_pData)
+{
+	WORD* category_size = (WORD*)c_pData;
+	c_pData += sizeof(WORD);
+	WORD* item_size = (WORD*)c_pData;
+	c_pData += sizeof(WORD);
+
+	CItemshopManager::instance().InitializeCategories((TItemshopCategoryTable*)c_pData, *category_size);
+	c_pData += sizeof(TItemshopCategoryTable) * (*category_size);
+
+	CItemshopManager::instance().InitializeItems((TItemshopItemTable*)c_pData, *item_size);
+	c_pData += sizeof(TItemshopItemTable) * (*item_size);
+
+	CHARACTER_MANAGER::instance().SendItemshopItems();
 }
 #endif

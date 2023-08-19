@@ -4,12 +4,9 @@
 #include "sectree_manager.h"
 #include "target.h"
 
-namespace quest
+namespace quest 
 {
-	//
-	// "target" Lua functions
-	//
-	ALUA(target_pos)
+	int target_pos(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		int iQuestIndex = CQuestManager::instance().GetCurrentPC()->GetCurrentQuestIndex();
@@ -44,7 +41,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(target_vid)
+	int target_vid(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		int iQuestIndex = CQuestManager::instance().GetCurrentPC()->GetCurrentQuestIndex();
@@ -69,8 +66,7 @@ namespace quest
 		return 0;
 	}
 
-	// 현재 퀘스트에 등록된 타겟을 삭제 한다.
-	ALUA(target_delete)
+	int target_delete(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		int iQuestIndex = CQuestManager::instance().GetCurrentPC()->GetCurrentQuestIndex();
@@ -86,8 +82,7 @@ namespace quest
 		return 0;
 	}
 
-	// 현재 퀘스트 인덱스로 되어있는 타겟을 모두 삭제한다.
-	ALUA(target_clear)
+	int target_clear(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		int iQuestIndex = CQuestManager::instance().GetCurrentPC()->GetCurrentQuestIndex();
@@ -97,7 +92,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(target_id)
+	int target_id(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		DWORD dwQuestIndex = CQuestManager::instance().GetCurrentPC()->GetCurrentQuestIndex();
@@ -137,14 +132,14 @@ namespace quest
 	{
 		luaL_reg target_functions[] =
 		{
-			{ "pos",			target_pos		},
-			{ "vid",			target_vid		},
-			{ "npc",			target_vid		}, // TODO: delete this
-			{ "pc",			target_vid		}, // TODO: delete this
-			{ "delete",			target_delete		},
-			{ "clear",			target_clear		},
-			{ "id",			target_id		},
-			{ NULL,			NULL			},
+			{ "pos",	target_pos		},
+			{ "vid",	target_vid		},
+			{ "npc",	target_vid		},
+			{ "pc",		target_vid		},
+			{ "delete",	target_delete	},
+			{ "clear",	target_clear	},
+			{ "id",		target_id		},
+			{ NULL,		NULL			},
 		};
 
 		CQuestManager::instance().AddLuaFunctionTable("target", target_functions);

@@ -9,91 +9,44 @@
 #include "item.h"
 #include "horsename_manager.h"
 #include "locale_service.h"
-#include "arena.h"
-#include "desc.h"
-
 #include "../../common/VnumHelper.h"
+#include "mob_manager.h"
 
 bool CHARACTER::StartRiding()
 {
-#ifdef ENABLE_BUG_FIXES
-	if (IsRiding()) {
-		return false;
-	}
-#endif
-
-#ifdef BLOCK_RIDING_INSIDE_WAR
-	if (GetWarMap()) {
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 852, "");
-#endif
-		RemoveAffect(AFFECT_MOUNT);
-		RemoveAffect(AFFECT_MOUNT_BONUS);
-		if (IsRiding())
-			StopRiding();
-		return false;
-	}
-#endif
-
-#ifdef ENABLE_NEWSTUFF
-	if (g_NoMountAtGuildWar && GetWarMap())
-	{
-		RemoveAffect(AFFECT_MOUNT);
-		RemoveAffect(AFFECT_MOUNT_BONUS);
-		if (IsRiding())
-			StopRiding();
-		return false;
-	}
-#endif
 	if (IsDead() == true)
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 356, "");
-#endif
 		return false;
 	}
-
+	
 	if (IsPolymorphed())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 355, "");
-#endif
+		ChatPacket(CHAT_TYPE_INFO, "[LS;882]");
 		return false;
 	}
 
-	// 턱시도 입은 상태의 말 타기 금지
 	LPITEM armor = GetWear(WEAR_BODY);
 
 	if (armor && (armor->GetVnum() >= 11901 && armor->GetVnum() <= 11904))
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 410, "");
-#endif
+		ChatPacket(CHAT_TYPE_INFO, "[LS;883]");
 		return false;
 	}
-
-	// @warme005
-	if (CArenaManager::instance().IsArenaMap(GetMapIndex()) == true)
-		return false;
-
 
 	DWORD dwMountVnum = m_chHorse ? m_chHorse->GetRaceNum() : GetMyHorseVnum();
 
 	if (false == CHorseRider::StartRiding())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		if (GetHorseLevel() <= 0) {
-			ChatPacketNew(CHAT_TYPE_INFO, 333, "");
-		} else if (GetHorseHealth() <= 0) {
-			ChatPacketNew(CHAT_TYPE_INFO, 335, "");
-		} else if (GetHorseStamina() <= 0) {
-			ChatPacketNew(CHAT_TYPE_INFO, 334, "");
-		}
-#endif
+		if (GetHorseLevel() <= 0)
+			ChatPacket(CHAT_TYPE_INFO, "[LS;844]");
+		else if (GetHorseHealth() <= 0)
+			ChatPacket(CHAT_TYPE_INFO, "[LS;885]");
+		else if (GetHorseStamina() <= 0)
+			ChatPacket(CHAT_TYPE_INFO, "[LS;886]");
+
 		return false;
 	}
 
-	// 소환한 말 없애고
 	HorseSummon(false);
 
 	MountVnum(dwMountVnum);
@@ -114,8 +67,6 @@ bool CHARACTER::StopRiding()
 		{
 			DWORD dwOldVnum = GetMountVnum();
 			MountVnum(0);
-
-			// [NOTE] 말에서 내릴 땐 자기가 탔던걸 소환하도록 수정
 			HorseSummon(true, false, dwOldVnum);
 		}
 		else
@@ -146,7 +97,6 @@ EVENTFUNC(horse_dead_event)
 		return 0;
 	}
 
-	// <Factor>
 	LPCHARACTER ch = info->ch;
 	if (ch == NULL) {
 		return 0;
@@ -176,14 +126,12 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 {
 	if ( bSummon )
 	{
-		//NOTE : summon했는데 이미 horse가 있으면 아무것도 안한다.
 		if( m_chHorse != NULL )
 			return;
 
 		if (GetHorseLevel() <= 0)
 			return;
 
-		// 무언가를 타고 있다면 실패
 		if (IsRiding())
 			return;
 
@@ -207,25 +155,20 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 		}
 
 		m_chHorse = CHARACTER_MANAGER::instance().SpawnMob(
-				(0 == dwVnum) ? GetMyHorseVnum() : dwVnum,
-				GetMapIndex(),
+				(0 == dwVnum) ? GetMyHorseVnum() : dwVnum, 
+				GetMapIndex(), 
 				x, y,
 				GetZ(), false, (int)(GetRotation()+180), false);
 
 		if (!m_chHorse)
 		{
-#ifdef TEXTS_IMPROVEMENT
-			ChatPacketNew(CHAT_TYPE_INFO, 328, "");
-#endif
+			ChatPacket(CHAT_TYPE_INFO, "[LS;887]");
 			return;
 		}
 
 		if (GetHorseHealth() <= 0)
 		{
-			// 죽은거처럼 있게 하는 처리
 			m_chHorse->SetPosition(POS_DEAD);
-
-			// 일정시간있다 사라지게 하자.
 			char_event_info* info = AllocEventInfo<char_event_info>();
 			info->ch = this;
 			m_chHorse->m_pkDeadEvent = event_create(horse_dead_event, info, PASSES_PER_SEC(60));
@@ -235,20 +178,30 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 
 		const char* pHorseName = CHorseNameManager::instance().GetHorseName(GetPlayerID());
 
-		if ( pHorseName != NULL && strlen(pHorseName) != 0 )
+		if (pHorseName != NULL && strlen(pHorseName) != 0)
 		{
 			m_chHorse->m_stName = pHorseName;
 		}
 		else
 		{
-			BYTE bLang = 0;
-			if (GetDesc()) {
-				bLang = GetDesc()->GetLanguage(); 
+			LPITEM pkMountCostume = GetWear(WEAR_COSTUME_MOUNT);
+			if (pkMountCostume)
+			{
+				const CMob* pMob = CMobManager::instance().Get(pkMountCostume->GetValue(0));
+				if (!pMob)
+				{
+					sys_err("Cannot find mount_vnum %d for mount_costume %d", pkMountCostume->GetValue(0), pkMountCostume->GetVnum());
+				}
+				else
+				{
+					m_chHorse->m_stName = GetName();
+				}
 			}
-			
+		}
+
+		if (strlen(m_chHorse->m_stName.c_str()) == 0)
+		{
 			m_chHorse->m_stName = GetName();
-			m_chHorse->m_stName += " ";
-			m_chHorse->m_stName += m_horseText[bLang];
 		}
 
 		if (!m_chHorse->Show(GetMapIndex(), x, y, GetZ()))
@@ -276,11 +229,7 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 
 		LPCHARACTER chHorse = m_chHorse;
 
-		chHorse->SetRider(NULL); // m_chHorse assign to NULL
-
-		// 말시체가 소환되어 있을때 상점 열면 bFromFar를 false로 만들어 말 시체를 사라지게 한다.
-		if ((GetHorseHealth() <= 0))
-			bFromFar = false;
+		chHorse->SetRider(NULL);
 
 		if (!bFromFar)
 		{
@@ -288,7 +237,6 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 		}
 		else
 		{
-			// 멀어지면서 사라지는 처리 하기
 			chHorse->SetNowWalking(false);
 			float fx, fy;
 			chHorse->SetRotation(GetDegreeFromPositionXY(chHorse->GetX(), chHorse->GetY(), GetX(), GetY())+180);
@@ -298,7 +246,6 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 		}
 
 		m_chHorse = NULL;
-
 	}
 }
 
@@ -312,6 +259,12 @@ DWORD CHARACTER::GetMyHorseVnum() const
 
 		if (GetGuild()->GetMasterPID() == GetPlayerID())
 			++delta;
+	}
+
+	LPITEM pkCostumeMount = GetWear(WEAR_COSTUME_MOUNT);
+	if (pkCostumeMount)
+	{
+		return pkCostumeMount->GetValue(0);
 	}
 
 	return c_aHorseStat[GetHorseLevel()].iNPCRace + delta;
@@ -355,53 +308,38 @@ void CHARACTER::SendHorseInfo()
 	{
 		int iHealthGrade;
 		int iStaminaGrade;
-		/*
-		   HP
-3: 70% < ~ <= 100%
-2: 30% < ~ <= 70%
-1:  0% < ~ <= 30%
-0: 사망
 
-STM
-
-3: 71% < ~ <= 100%
-2: 31% < ~ <= 70%
-1: 10% < ~ <= 30%
-0:	 ~ <= 10%
-		 */
 		if (GetHorseHealth() == 0)
 			iHealthGrade = 0;
-		else if (GetHorseHealth() * 10 <= GetHorseMaxHealth() * 3)
+		else if (GetHorseHealth() * 10 <= GetHorseMaxHealth() * 3) 
 			iHealthGrade = 1;
-		else if (GetHorseHealth() * 10 <= GetHorseMaxHealth() * 7)
+		else if (GetHorseHealth() * 10 <= GetHorseMaxHealth() * 7) 
 			iHealthGrade = 2;
 		else
 			iHealthGrade = 3;
 
 		if (GetHorseStamina() * 10 <= GetHorseMaxStamina())
 			iStaminaGrade = 0;
-		else if (GetHorseStamina() * 10 <= GetHorseMaxStamina() * 3)
+		else if (GetHorseStamina() * 10 <= GetHorseMaxStamina() * 3) 
 			iStaminaGrade = 1;
-		else if (GetHorseStamina() * 10 <= GetHorseMaxStamina() * 7)
+		else if (GetHorseStamina() * 10 <= GetHorseMaxStamina() * 7) 
 			iStaminaGrade = 2;
 		else
 			iStaminaGrade = 3;
 
-		if (m_bSendHorseLevel != GetHorseLevel() ||
-				m_bSendHorseHealthGrade != iHealthGrade ||
+		if (m_bSendHorseLevel != GetHorseLevel() || 
+				m_bSendHorseHealthGrade != iHealthGrade || 
 				m_bSendHorseStaminaGrade != iStaminaGrade)
 		{
 			ChatPacket(CHAT_TYPE_COMMAND, "horse_state %d %d %d", GetHorseLevel(), iHealthGrade, iStaminaGrade);
 
-			// FIX : 클라이언트에 "말 상태 버프" 아이콘을 표시하지 않을 목적으로 함수 초입에 return함으로써 아래 코드를 무시한다면
-			// 말을 무한대로 소환하는 무시무시한 버그가 생김.. 정확한 원인은 파악 안해봐서 모름.
 			m_bSendHorseLevel = GetHorseLevel();
 			m_bSendHorseHealthGrade = iHealthGrade;
 			m_bSendHorseStaminaGrade = iStaminaGrade;
 		}
 	}
 }
-
+		
 bool CHARACTER::CanUseHorseSkill()
 {
 	if(IsRiding())
@@ -414,10 +352,6 @@ bool CHARACTER::CanUseHorseSkill()
 		if(GetMountVnum())
 		{
 			if (GetMountVnum() >= 20209 && GetMountVnum() <= 20212)
-				return true;
-
-			//라마단 흑마
-			if (CMobVnumHelper::IsRamadanBlackHorse(GetMountVnum()))
 				return true;
 		}
 		else

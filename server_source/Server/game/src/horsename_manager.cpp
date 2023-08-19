@@ -14,9 +14,7 @@ CHorseNameManager::CHorseNameManager()
 
 const char* CHorseNameManager::GetHorseName(DWORD dwPlayerID)
 {
-	std::map<DWORD, std::string>::iterator iter;
-
-	iter = m_mapHorseNames.find(dwPlayerID);
+	auto iter = m_mapHorseNames.find(dwPlayerID);
 
 	if ( iter != m_mapHorseNames.end() )
 	{

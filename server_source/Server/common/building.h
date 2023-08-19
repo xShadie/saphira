@@ -1,7 +1,6 @@
-#ifndef __METIN_II_COMMON_BUILDING_H__
-#define __METIN_II_COMMON_BUILDING_H__
+#pragma once
 
-namespace building
+namespace building 
 {
 	enum
 	{
@@ -10,13 +9,13 @@ namespace building
 
 	typedef struct SLand
 	{
-		DWORD	dwID;
-		long	lMapIndex;
-		long	x, y;
-		long	width, height;
-		DWORD	dwGuildID;
-		BYTE	bGuildLevelLimit;
-		DWORD	dwPrice;
+		DWORD		dwID;
+		long		lMapIndex;
+		long		x, y;
+		long		width, height;
+		DWORD		dwGuildID;
+		BYTE		bGuildLevelLimit;
+		long long	lldPrice;
 	} TLand;
 
 	typedef struct SObjectMaterial
@@ -27,8 +26,8 @@ namespace building
 
 	typedef struct SObjectProto
 	{
-		DWORD	dwVnum;
-		DWORD	dwPrice;
+		DWORD		dwVnum;
+		long long	lldPrice;
 
 		TObjectMaterial kMaterials[OBJECT_MATERIAL_MAX_NUM];
 
@@ -41,8 +40,8 @@ namespace building
 		long	lNPCX;
 		long	lNPCY;
 
-		DWORD	dwGroupVnum; // 같은 그룹은 하나만 건설가능
-		DWORD	dwDependOnGroupVnum; // 지어져 있어야하는 그룹
+		DWORD	dwGroupVnum;
+		DWORD	dwDependOnGroupVnum;
 	} TObjectProto;
 
 	typedef struct SObject
@@ -59,5 +58,3 @@ namespace building
 		long	lLife;
 	} TObject;
 };
-
-#endif

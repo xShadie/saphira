@@ -1,7 +1,4 @@
-#ifndef __INC_FISHING_H
-#define __INC_FISHING_H
-
-#include "../../common/service.h"
+#pragma once
 #include "item.h"
 
 namespace fishing
@@ -19,7 +16,6 @@ namespace fishing
 		int		step;
 		DWORD	hang_time;
 		int		fish_id;
-		bool	canna;
 
 		fishing_event_info()
 		: pid(0)
@@ -30,21 +26,13 @@ namespace fishing
 		}
 	};
 
-	extern void Initialize();
-	extern LPEVENT CreateFishingEvent(LPCHARACTER ch);
-	extern void Take(fishing_event_info* info, LPCHARACTER ch);
-	extern void Simulation(int level, int count, int map_grade, LPCHARACTER ch);
-	extern void UseFish(LPCHARACTER ch, LPITEM item);
-	extern void Grill(LPCHARACTER ch, LPITEM item);
+	extern void		Initialize();
+	extern LPEVENT	CreateFishingEvent(LPCHARACTER ch);
+	extern void		Take(fishing_event_info* info, LPCHARACTER ch);
+	extern void		Simulation(int level, int count, int map_grade, LPCHARACTER ch);
+	extern void		UseFish(LPCHARACTER ch, LPITEM item);
+	extern void		Grill(LPCHARACTER ch, LPITEM item);
 
-	extern bool RefinableRod(LPITEM rod);
-	extern int RealRefineRod(LPCHARACTER ch, LPITEM rod);
+	extern bool		RefinableRod(LPITEM rod);
+	extern int		RealRefineRod(LPCHARACTER ch, LPITEM rod);
 }
-
-#ifdef ENABLE_NEW_FISHING_SYSTEM
-namespace fishingnew
-{
-	extern DWORD GetFishCatchedVnum(BYTE normal_chance, BYTE rare_chance, bool second);
-}
-#endif
-#endif

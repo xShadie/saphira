@@ -1,18 +1,9 @@
-/*********************************************************************
- * date        : 2007.11.16
- * file        : ani.cpp
- * author      : mhh
- * description :
- */
-
 #define _ani_cpp_
 
 #include "stdafx.h"
 #include "char.h"
 #include "item.h"
 #include "ani.h"
-#include "dev_log.h"
-#include "../../common/CommonDefines.h"
 
 const char* FN_race_name(int race)
 {
@@ -27,7 +18,7 @@ const char* FN_race_name(int race)
 		FN_NAME(MAIN_RACE_ASSASSIN_M);
 		FN_NAME(MAIN_RACE_SURA_W);
 		FN_NAME(MAIN_RACE_SHAMAN_M);
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		FN_NAME(MAIN_RACE_WOLFMAN_M);
 #endif
 		FN_NAME(MAIN_RACE_MAX_NUM);
@@ -50,9 +41,10 @@ const char* FN_weapon_type(int weapon)
 		FN_NAME(WEAPON_FAN);
 		FN_NAME(WEAPON_ARROW);
 		FN_NAME(WEAPON_MOUNT_SPEAR);
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		FN_NAME(WEAPON_CLAW);
 #endif
+		FN_NAME(WEAPON_QUIVER);
 		FN_NAME(WEAPON_NUM_TYPES);
 	}
 
@@ -63,7 +55,6 @@ const char* FN_weapon_type(int weapon)
 class ANI
 {
 	protected:
-		// [종족][일반0탈것1][무기][콤보]
 		DWORD m_speed[MAIN_RACE_MAX_NUM][2][WEAPON_NUM_TYPES][9];
 
 	public:
@@ -117,7 +108,6 @@ DWORD FN_attack_speed_from_file(const char *file)
 
 ANI::ANI()
 {
-	// set default value
 	for (int race = 0; race < MAIN_RACE_MAX_NUM; ++race)
 	{
 		for (int weapon = 0; weapon < WEAPON_NUM_TYPES; ++weapon)
@@ -133,17 +123,18 @@ ANI::ANI()
 
 bool ANI::load()
 {
-	const char*	dir_name[MAIN_RACE_MAX_NUM] = {
-		"data/pc/warrior",		// 무사(남)
-		"data/pc/assassin",		// 자객(여)
-		"data/pc/sura",			// 수라(남)
-		"data/pc/shaman",		// 무당(여)
-		"data/pc2/warrior",		// 무사(여)
-		"data/pc2/assassin",	// 자객(남)
-		"data/pc2/sura",		// 수라(여)
-		"data/pc2/shaman",		// 무당(남)
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		"data/pc3/wolfman",		// 수인족
+	const char*	dir_name[MAIN_RACE_MAX_NUM] = 
+	{
+		"share/data/pc/warrior",
+		"share/data/pc/assassin",
+		"share/data/pc/sura",
+		"share/data/pc/shaman",
+		"share/data/pc2/warrior",
+		"share/data/pc2/assassin",
+		"share/data/pc2/sura",
+		"share/data/pc2/shaman",
+#ifdef ENABLE_WOLFMAN
+		"share/data/pc3/wolfman",
 #endif
 	};
 
@@ -190,7 +181,7 @@ DWORD ANI::load_one_weapon(const char *dir_name, int weapon, BYTE combo, bool ho
 			strlcpy(format, "%s/%sfan/combo_%02d.msa", sizeof(format));
 			break;
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case WEAPON_CLAW:
 			strlcpy(format, "%s/%sclaw/combo_%02d.msa", sizeof(format));
 			break;
@@ -216,25 +207,14 @@ bool ANI::load_one_race(int race, const char *dir_name)
 
 	for (int weapon = WEAPON_SWORD; weapon < WEAPON_NUM_TYPES; ++weapon)
 	{
-		dev_log(LOG_DEB0, "ANI (%s,%s)", FN_race_name(race), FN_weapon_type(weapon));
-
 		for (BYTE combo = 1; combo <= 8; ++combo)
 		{
-			// 말 안탔을 때
 			m_speed[race][0][weapon][combo] = load_one_weapon(dir_name, weapon, combo, false);
-			m_speed[race][0][weapon][0] = MIN(m_speed[race][0][weapon][0], m_speed[race][0][weapon][combo]); // 최소값
-
-			// 말 탔을 때
+			m_speed[race][0][weapon][0] = MIN(m_speed[race][0][weapon][0], m_speed[race][0][weapon][combo]);
 			m_speed[race][1][weapon][combo] = load_one_weapon(dir_name, weapon, combo, true);
-			m_speed[race][1][weapon][0] = MIN(m_speed[race][1][weapon][0], m_speed[race][1][weapon][combo]); // 최소값
-
-			dev_log(LOG_DEB0, "combo%02d speed=%d horse=%d",
-					combo, m_speed[race][0][weapon][combo], m_speed[race][1][weapon][combo]);
+			m_speed[race][1][weapon][0] = MIN(m_speed[race][1][weapon][0], m_speed[race][1][weapon][combo]);
 		}
-
-		dev_log(LOG_DEB0, "minspeed=%u", m_speed[race][0][weapon][0]);
 	}
-
 	return true;
 }
 
@@ -250,7 +230,7 @@ DWORD ANI::attack_speed(int race, int weapon, BYTE combo, bool horse)
 		case MAIN_RACE_ASSASSIN_M:
 		case MAIN_RACE_SURA_W:
 		case MAIN_RACE_SHAMAN_M:
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case MAIN_RACE_WOLFMAN_M:
 #endif
 			break;
@@ -268,9 +248,10 @@ DWORD ANI::attack_speed(int race, int weapon, BYTE combo, bool horse)
 		case WEAPON_FAN:
 		case WEAPON_ARROW:
 		case WEAPON_MOUNT_SPEAR:
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case WEAPON_CLAW:
 #endif
+		case WEAPON_QUIVER:
 			break;
 		default:
 			return 1000;
@@ -292,7 +273,7 @@ const char* FN_race_string(int race)
 		case MAIN_RACE_ASSASSIN_M:	return "ASSASSIN_M";
 		case MAIN_RACE_SURA_W:		return "SURA_W";
 		case MAIN_RACE_SHAMAN_M:	return "SHAMAN_M";
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case MAIN_RACE_WOLFMAN_M:	return "WOLFMAN_M";
 #endif
 	}
@@ -312,9 +293,10 @@ const char* FN_weapon_string(int weapon)
 		case WEAPON_FAN:		return "FAN";
 		case WEAPON_ARROW:		return "ARROW";
 		case WEAPON_MOUNT_SPEAR:return "WEAPON_MOUNT_SPEAR";
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case WEAPON_CLAW:		return "CLAW";
 #endif
+		case WEAPON_QUIVER:		return "WEAPON_QUIVER";
 	}
 
 	return "UNKNOWN";
@@ -358,16 +340,6 @@ DWORD ani_attack_speed(LPCHARACTER ch)
 	int race = ch->GetRaceNum();
 	int weapon = item->GetSubType();
 
-	/*
-	dev_log(LOG_DEB0, "%s : (race,weapon) = (%s,%s) POINT_ATT_SPEED = %d",
-			ch->GetName(),
-			FN_race_name(race),
-			FN_weapon_type(weapon),
-			ch->GetPoint(POINT_ATT_SPEED));
-	*/
-
-	/* 투핸디드 소드의 경우 삼연참공격과 승마시 */
-	/* 오류가 많아 한손검 속도로 생각하자       */
 	if (weapon == WEAPON_TWO_HANDED)
 		weapon = WEAPON_SWORD;
 

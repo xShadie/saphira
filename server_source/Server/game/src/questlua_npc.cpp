@@ -4,18 +4,17 @@
 #include "questmanager.h"
 #include "char.h"
 #include "party.h"
+#include "xmas_event.h"
 #include "char_manager.h"
 #include "shop_manager.h"
 #include "guild.h"
 
 namespace quest
 {
-	//
-	// "npc" lua functions
-	//
-	ALUA(npc_open_shop)
+	int npc_open_shop(lua_State * L)
 	{
 		int iShopVnum = 0;
+
 		if (lua_gettop(L) == 1)
 		{
 			if (lua_isnumber(L, 1))
@@ -27,7 +26,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(npc_is_pc)
+	int npc_is_pc(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
@@ -38,7 +37,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_get_empire)
+	int npc_get_empire(lua_State * L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
@@ -49,13 +48,13 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_get_race)
+	int npc_get_race(lua_State * L)
 	{
 		lua_pushnumber(L, CQuestManager::instance().GetCurrentNPCRace());
 		return 1;
 	}
 
-	ALUA(npc_get_guild)
+	int npc_get_guild(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
@@ -67,7 +66,53 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_is_quest)
+	int npc_get_remain_skill_book_count(lua_State* L)
+	{
+		LPCHARACTER npc = CQuestManager::instance().GetCurrentNPCCharacterPtr();
+		if (!npc || npc->IsPC() || npc->GetRaceNum() != xmas::MOB_SANTA_VNUM)
+		{
+			lua_pushnumber(L, 0);
+			return 1;
+		}
+		lua_pushnumber(L, MAX(0, npc->GetPoint(POINT_ATT_GRADE_BONUS)));
+		return 1;
+	}
+
+	int npc_dec_remain_skill_book_count(lua_State* L)
+	{
+		LPCHARACTER npc = CQuestManager::instance().GetCurrentNPCCharacterPtr();
+		if (!npc || npc->IsPC() || npc->GetRaceNum() != xmas::MOB_SANTA_VNUM)
+		{
+			return 0;
+		}
+		npc->SetPoint(POINT_ATT_GRADE_BONUS, MAX(0, npc->GetPoint(POINT_ATT_GRADE_BONUS)-1));
+		return 0;
+	}
+
+	int npc_get_remain_hairdye_count(lua_State* L)
+	{
+		LPCHARACTER npc = CQuestManager::instance().GetCurrentNPCCharacterPtr();
+		if (!npc || npc->IsPC() || npc->GetRaceNum() != xmas::MOB_SANTA_VNUM)
+		{
+			lua_pushnumber(L, 0);
+			return 1;
+		}
+		lua_pushnumber(L, MAX(0, npc->GetPoint(POINT_DEF_GRADE_BONUS)));
+		return 1;
+	}
+
+	int npc_dec_remain_hairdye_count(lua_State* L)
+	{
+		LPCHARACTER npc = CQuestManager::instance().GetCurrentNPCCharacterPtr();
+		if (!npc || npc->IsPC() || npc->GetRaceNum() != xmas::MOB_SANTA_VNUM)
+		{
+			return 0;
+		}
+		npc->SetPoint(POINT_DEF_GRADE_BONUS, MAX(0, npc->GetPoint(POINT_DEF_GRADE_BONUS)-1));
+		return 0;
+	}
+
+	int npc_is_quest(lua_State * L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
@@ -87,7 +132,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_kill)
+	int npc_kill(lua_State * L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -101,7 +146,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(npc_purge)
+	int npc_purge(lua_State * L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -115,7 +160,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(npc_is_near)
+	int npc_is_near(lua_State * L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -138,7 +183,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_is_near_vid)
+	int npc_is_near_vid(lua_State* L)
 	{
 		if (!lua_isnumber(L, 1))
 		{
@@ -168,7 +213,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_unlock)
+	int npc_unlock(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -187,7 +232,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(npc_lock)
+	int npc_lock(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -212,172 +257,106 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(npc_get_leader_vid)
+	int npc_get_leader_vid(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
 
-#ifdef ENABLE_BUG_FIXES
-		LPPARTY party = npc ? npc->GetParty() : NULL;
-		LPCHARACTER leader = party ? party->GetLeader() : NULL;
-		lua_pushnumber(L, leader ? leader->GetVID() : 0);
-#else
-		PPARTY party = npc->GetParty();
+		LPPARTY party = npc->GetParty();
+
+		if (!party)
+		{
+			sys_err("npc_get_leader_vid: Function triggered without party");
+			return 1;
+		}
+
 		LPCHARACTER leader = party->GetLeader();
 
 		if (leader)
 			lua_pushnumber(L, leader->GetVID());
 		else
 			lua_pushnumber(L, 0);
-#endif
+
+
 		return 1;
 	}
 
-	ALUA(npc_get_vid)
+	int npc_get_vid(lua_State* L)
 	{
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
+		
 		lua_pushnumber(L, npc->GetVID());
 
 
 		return 1;
 	}
 
-	ALUA(npc_get_vid_attack_mul)
+	int npc_get_vid_attack_mul(lua_State* L)
 	{
-		if (lua_gettop(L) < 1 || !lua_isnumber(L, 1))
-		{
-			sys_err("not enough arguments.");
-			lua_pushnumber(L, 0);
-			return 1;
-		}
+		CQuestManager& q = CQuestManager::instance();
 
-		int32_t vid = (int32_t)lua_tonumber(L, 1);
+		lua_Number vid = lua_tonumber(L, 1);
+		LPCHARACTER targetChar = CHARACTER_MANAGER::instance().Find(vid);
 
-		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(vid);
-		if (!ch) {
-			sys_err("The vid %d not exist.", vid);
+		if (targetChar)
+			lua_pushnumber(L, targetChar->GetAttMul());
+		else
 			lua_pushnumber(L, 0);
-			return 1;
-		}
-		
-		lua_pushnumber(L, ch->GetAttMul());
+
+
 		return 1;
 	}
-
-	ALUA(npc_set_vid_attack_mul)
+	
+	int npc_set_vid_attack_mul(lua_State* L)
 	{
-		if (lua_gettop(L) < 2 || !lua_isnumber(L, 1) || !lua_isnumber(L, 2))
-		{
-			sys_err("not enough arguments.");
-			return 0;
-		}
+		CQuestManager& q = CQuestManager::instance();
 
-		int32_t vid = (int32_t)lua_tonumber(L, 1);
+		lua_Number vid = lua_tonumber(L, 1);
+		lua_Number attack_mul = lua_tonumber(L, 2);
 
-		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(vid);
-		if (!ch) {
-			sys_err("The vid %d not exist.", vid);
-			return 0;
-		}
+		LPCHARACTER targetChar = CHARACTER_MANAGER::instance().Find(vid);
 
-		ch->SetAttMul((float)lua_tonumber(L, 2));
+		if (targetChar)
+			targetChar->SetAttMul(attack_mul);
+
 		return 0;
 	}
 
-	ALUA(npc_get_vid_damage_mul)
+	int npc_get_vid_damage_mul(lua_State* L)
 	{
-		if (lua_gettop(L) < 1 || !lua_isnumber(L, 1))
-		{
-			sys_err("not enough arguments.");
+		CQuestManager& q = CQuestManager::instance();
+
+		lua_Number vid = lua_tonumber(L, 1);
+		LPCHARACTER targetChar = CHARACTER_MANAGER::instance().Find(vid);
+
+		if (targetChar)
+			lua_pushnumber(L, targetChar->GetDamMul());
+		else
 			lua_pushnumber(L, 0);
-			return 1;
-		}
 
-		int32_t vid = (int32_t)lua_tonumber(L, 1);
 
-		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(vid);
-		if (!ch) {
-			sys_err("The vid %d not exist.", vid);
-			lua_pushnumber(L, 0);
-			return 1;
-		}
-
-		lua_pushnumber(L, ch->GetDamMul());
 		return 1;
 	}
-
-	ALUA(npc_set_vid_damage_mul)
+	
+	int npc_set_vid_damage_mul(lua_State* L)
 	{
-		if (lua_gettop(L) < 2 || !lua_isnumber(L, 1) || !lua_isnumber(L, 2))
-		{
-			sys_err("not enough arguments.");
-			return 0;
-		}
+		CQuestManager& q = CQuestManager::instance();
 
-		int32_t vid = (int32_t)lua_tonumber(L, 1);
+		lua_Number vid = lua_tonumber(L, 1);
+		lua_Number damage_mul = lua_tonumber(L, 2);
 
-		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(vid);
-		if (!ch) {
-			sys_err("The vid %d not exist.", vid);
-			return 0;
-		}
+		LPCHARACTER targetChar = CHARACTER_MANAGER::instance().Find(vid);
 
-		ch->SetDamMul((float)lua_tonumber(L, 2));
+		if (targetChar)
+			targetChar->SetDamMul(damage_mul);
+
 		return 0;
 	}
 
-#ifdef ENABLE_NEWSTUFF
-	ALUA(npc_get_level0)
-	{
-		CQuestManager& q = CQuestManager::instance();
-		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
-		lua_pushnumber(L, npc->GetLevel());
-		return 1;
-	}
-
-	ALUA(npc_get_name0)
-	{
-		CQuestManager& q = CQuestManager::instance();
-		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
-		lua_pushstring(L, npc->GetName());
-		return 1;
-	}
-
-	ALUA(npc_get_pid0)
-	{
-		CQuestManager& q = CQuestManager::instance();
-		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
-		lua_pushnumber(L, npc->GetPlayerID());
-		return 1;
-	}
-
-	ALUA(npc_get_vnum0)
-	{
-		CQuestManager& q = CQuestManager::instance();
-		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
-		lua_pushnumber(L, npc->GetRaceNum());
-		return 1;
-	}
-
-	ALUA(npc_is_available0)
-	{
-		CQuestManager& q = CQuestManager::instance();
-		LPCHARACTER npc = q.GetCurrentNPCCharacterPtr();
-
-		lua_pushboolean(L, npc!=NULL);
-		return 1;
-	}
-
-#endif
 	void RegisterNPCFunctionTable()
 	{
-		luaL_reg npc_functions[] =
+		luaL_reg npc_functions[] = 
 		{
 			{ "getrace",			npc_get_race			},
 			{ "get_race",			npc_get_race			},
@@ -394,17 +373,14 @@ namespace quest
 			{ "get_guild",			npc_get_guild			},
 			{ "get_leader_vid",		npc_get_leader_vid	},
 			{ "get_vid",			npc_get_vid	},
-			{"get_vid_attack_mul", npc_get_vid_attack_mul},
-			{"set_vid_attack_mul", npc_set_vid_attack_mul},
-			{"get_vid_damage_mul", npc_get_vid_damage_mul},
-			{"set_vid_damage_mul", npc_set_vid_damage_mul},
-#ifdef ENABLE_NEWSTUFF
-			{ "get_level0",			npc_get_level0},	// [return lua number]
-			{ "get_name0",			npc_get_name0},		// [return lua string]
-			{ "get_pid0",			npc_get_pid0},		// [return lua number]
-			{ "get_vnum0",			npc_get_vnum0},		// [return lua number]
-			{ "is_available0",		npc_is_available0},	// [return lua boolean]
-#endif
+			{ "get_vid_attack_mul",		npc_get_vid_attack_mul	},
+			{ "set_vid_attack_mul",		npc_set_vid_attack_mul	},
+			{ "get_vid_damage_mul",		npc_get_vid_damage_mul	},
+			{ "set_vid_damage_mul",		npc_set_vid_damage_mul	},
+			{ "get_remain_skill_book_count",	npc_get_remain_skill_book_count },
+			{ "dec_remain_skill_book_count",	npc_dec_remain_skill_book_count },
+			{ "get_remain_hairdye_count",	npc_get_remain_hairdye_count	},
+			{ "dec_remain_hairdye_count",	npc_dec_remain_hairdye_count	},
 			{ NULL,				NULL			    	}
 		};
 

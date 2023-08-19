@@ -1,15 +1,8 @@
-#ifndef __METIN2_SERVER_QUEST_H__
-#define __METIN2_SERVER_QUEST_H__
-
+#pragma once
 #define INDUCTION_LEVEL3	(1 << 0)
 #define INDUCTION_LEVEL8	(1 << 1)
 #define INDUCTION_LEVEL2	(1 << 2)
-
-//#define QUEST_DIR "./quest/"
-
-#include "lua_incl.h"
-
-#define ENABLE_QUEST_DIE_EVENT
+#include <lua/lua.hpp>
 
 namespace quest
 {
@@ -57,18 +50,13 @@ namespace quest
 		QUEST_TARGET_EVENT,
 		QUEST_PARTY_KILL_EVENT,
 		QUEST_UNMOUNT_EVENT,
+		QUEST_ITEM_PICK_EVENT,
 		QUEST_SIG_USE_EVENT,
 		QUEST_ITEM_INFORMER_EVENT,
-#ifdef ENABLE_QUEST_DIE_EVENT
-		QUEST_DIE_EVENT,
-#endif
-#if defined(__DUNGEON_INFO_SYSTEM__)
-		QUEST_DAMAGE_EVENT,
-#endif
 		QUEST_EVENT_COUNT
 	};
 
-	enum
+	enum 
 	{
 		SUSPEND_STATE_NONE,
 		SUSPEND_STATE_PAUSE,
@@ -95,14 +83,8 @@ namespace quest
 
 	struct AArgScript
 	{
-		//
-		// script syntax example
-		//
-		// when namespace.func.arg with when_condition begin ...
-		//                     ---      --------------
-		//                      |             +
-		std::string arg;  // <--+             |
-		std::vector<char> when_condition;// <-+
+		std::string arg;
+		std::vector<char> when_condition;
 		AStateScriptType script;
 		unsigned int quest_index;
 		int state_index;
@@ -137,4 +119,3 @@ namespace quest
 		{}
 	};
 }
-#endif

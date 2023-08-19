@@ -1,5 +1,4 @@
-#ifndef QUEST_NPC
-#define QUEST_NPC
+#pragma once
 
 #include "questpc.h"
 
@@ -21,16 +20,9 @@ namespace quest
 	class NPC
 	{
 		public:
-			// 인자가 없는 스크립트들
-			// first: state number
 			typedef map<int, AStateScriptType> AQuestScriptType;
-			// first: quest number
 			typedef map<unsigned int, AQuestScriptType> QuestMapType;
-
-			// 인자가 있는 스크립트들
-			// first: state number
 			typedef map<int, vector<AArgScript> > AArgQuestScriptType;
-			// first: quest number
 			typedef map<unsigned int, AArgQuestScriptType> ArgQuestMapType;
 
 			NPC();
@@ -53,12 +45,6 @@ namespace quest
 			bool	OnClick(PC& pc);
 			bool	OnKill(PC& pc);
 			bool	OnPartyKill(PC& pc);
-#ifdef ENABLE_QUEST_DIE_EVENT
-			bool	OnDie(PC& pc);
-#endif
-#if defined(__DUNGEON_INFO_SYSTEM__)
-			bool	OnQuestDamage(PC& pc);
-#endif
 			bool	OnTimer(PC& pc);
 			bool	OnLevelUp(PC& pc);
 			bool	OnLogin(PC& pc, const char * c_pszQuestName = NULL);
@@ -75,12 +61,11 @@ namespace quest
 			bool	OnChat(PC& pc);
 			bool	HasChat();
 
-			bool	OnItemInformer(PC& pc,unsigned int vnum);	// 독일 선물 기능 테스트
+			bool	OnItemInformer(PC& pc,unsigned int vnum);
 
 			bool	OnTarget(PC& pc, DWORD dwQuestIndex, const char * c_pszTargetName, const char * c_pszVerb, bool & bRet);
 			bool	OnUnmount(PC& pc);
-
-			// Special item group USE EVENT
+			bool	OnPickupItem(PC& pc);
 			bool	OnSIGUse(PC& pc, bool bReceiveAll);
 
 
@@ -97,14 +82,11 @@ namespace quest
 			template <typename TQuestMapType, typename FuncMatch, typename FuncMiss>
 				void MatchingQuest(PC& pc, TQuestMapType& QuestMap, FuncMatch& fMatch, FuncMiss& fMiss);
 
-			// true if quest still running, false if ended
-
 			void LoadStateScript(int idx, const char* filename, const char* script_name);
 
 			unsigned int m_vnum;
 			QuestMapType m_mapOwnQuest[QUEST_EVENT_COUNT];
 			ArgQuestMapType m_mapOwnArgQuest[QUEST_EVENT_COUNT];
-			//map<string, AStartConditionScriptType> m_mapStartCondition[QUEST_EVENT_COUNT];
 	};
 
 	template <typename TQuestMapType, typename FuncMatch, typename FuncMiss>
@@ -113,8 +95,8 @@ namespace quest
 			if (test_server)
 				sys_log(0, "Click Quest : MatchingQuest");
 
-			PC::QuestInfoIterator itPCQuest = pc.quest_begin();
-			typename TQuestMapType::iterator itQuestMap = QuestMap.begin();
+			auto itPCQuest = pc.quest_begin();
+			auto itQuestMap = QuestMap.begin();
 
 			while (itQuestMap != QuestMap.end())
 			{
@@ -136,4 +118,3 @@ namespace quest
 			}
 		}
 }
-#endif

@@ -1,6 +1,4 @@
-#ifndef __INC_METIN_II_AFFECT_FLAG_H__
-#define __INC_METIN_II_AFFECT_FLAG_H__
-
+#pragma once
 #ifndef IS_SET
 #define IS_SET(flag, bit)                ((flag) & (bit))
 #endif
@@ -25,11 +23,11 @@ struct TAffectFlag
 	inline TAffectFlag(DWORD v1, DWORD v2 = 0) {bits[0] = v1; bits[1] = v2;}
 
 	inline bool IsSet(int flag) const
-	{
+	{ 
 		if (AFF_BITS_MAX <= flag || 0 >= flag)
 			return false;
 
-		return IS_SET(bits[(flag - 1) >> 5], (((DWORD)1) << ((flag - 1) & 31)));
+		return IS_SET(bits[(flag - 1) >> 5], (((DWORD)1) << ((flag - 1) & 31))); 
 	}
 
 	inline void Set(int flag)
@@ -37,7 +35,7 @@ struct TAffectFlag
 		if (AFF_BITS_MAX <= flag || 0 >= flag)
 			return;
 
-		SET_BIT(bits[(flag-1)>>5], (((DWORD)1)<<((flag-1)&31)));
+		SET_BIT(bits[(flag-1)>>5], (((DWORD)1)<<((flag-1)&31))); 
 	}
 
 	inline void Reset(int flag)
@@ -65,5 +63,3 @@ inline bool operator != (const TAffectFlag& lhs, const TAffectFlag& rhs)
 {
 	return !(lhs == rhs);
 }
-
-#endif

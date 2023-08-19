@@ -35,7 +35,7 @@ bool CConfig::GetWord(FILE *fp, char *tar)
 
 	while ((c = fgetc(fp)) != EOF)
 	{
-		if (c == 13)
+		if (c == 13) 
 			continue;
 
 		if (semicolon_mode)
@@ -67,7 +67,6 @@ bool CConfig::GetWord(FILE *fp, char *tar)
 
 			if ((c == ' ' || c == '\t' || c == '\n'))
 			{
-				// ÅÜ.
 				tar[i] = '\0';
 				return true;
 			}
@@ -91,7 +90,7 @@ bool CConfig::GetLine(FILE* fp, char*dest)
 		dest[i] = c;
 		++i;
 	}
-	return true;
+	return true;	
 }
 
 bool CConfig::LoadFile(const char* filename)
@@ -123,7 +122,7 @@ bool CConfig::LoadFile(const char* filename)
 
 			case 1:
 				if (*szTmp == '=')
-					++mode;
+					++mode;				
 				break;
 
 			case 2:
@@ -132,26 +131,22 @@ bool CConfig::LoadFile(const char* filename)
 				break;
 		}
 
-		// ITEM_ID_RANGE
 		if (mode == 2 && strcmp(comment, "ITEM_ID_RANGE") == 0)
 		{
 			GetLine(fp, szTmp);
 			m_valueMap.insert(TValueMap::value_type(comment, szTmp));
-			mode = 0;
+			mode = 0;	
 
 		}
-		// ITEM_ID_RANGE_END
 	}
 
-
-	// ÆÄÀÏ ´Ý´Â ºÎºÐ.
 	fclose(fp);
 	return true;
 }
 
 std::string * CConfig::Search(const char* key)
 {
-	itertype(m_valueMap) i = m_valueMap.find(key);
+	auto i = m_valueMap.find(key); 
 
 	if (i == m_valueMap.end())
 		return NULL;
@@ -198,7 +193,7 @@ bool CConfig::GetValue(const char * key, int* dest)
 }
 
 bool CConfig::GetValue(const char * key, float *dest)
-{
+{ 
 	if (!Search(key))
 		return false;
 
@@ -207,7 +202,7 @@ bool CConfig::GetValue(const char * key, float *dest)
 }
 
 bool CConfig::GetValue(const char * key, DWORD *dest)
-{
+{ 
 	if (!Search(key))
 		return false;
 
@@ -216,7 +211,7 @@ bool CConfig::GetValue(const char * key, DWORD *dest)
 }
 
 bool CConfig::GetValue(const char * key, BYTE *dest)
-{
+{ 
 	if (!Search(key))
 		return false;
 
@@ -225,7 +220,7 @@ bool CConfig::GetValue(const char * key, BYTE *dest)
 }
 
 bool CConfig::GetValue(const char * key, char *dest, size_t destSize)
-{
+{ 
 	if (!Search(key))
 		return false;
 

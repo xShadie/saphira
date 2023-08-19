@@ -1,9 +1,5 @@
-#ifndef __INC_MAIN_H__
-#define __INC_MAIN_H__
+#pragma once
 
 int	Start();
-void End();
 const char * GetTablePostfix();
 const char * GetPlayerDBName();
-
-#endif

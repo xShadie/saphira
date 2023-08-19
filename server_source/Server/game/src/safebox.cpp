@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "../../libgame/include/grid.h"
+#include "../../libgame/src/grid.h"
 #include "constants.h"
 #include "safebox.h"
 #include "packet.h"
@@ -7,17 +7,14 @@
 #include "desc_client.h"
 #include "item.h"
 #include "item_manager.h"
-#include "config.h"
 
-CSafebox::CSafebox(LPCHARACTER pkChrOwner, int iSize, DWORD dwGold) : m_pkChrOwner(pkChrOwner), m_iSize(iSize), m_lGold(dwGold)
+CSafebox::CSafebox(LPCHARACTER pkChrOwner, int iSize, long long lldGold) : m_pkChrOwner(pkChrOwner), m_iSize(iSize), m_lldGold(lldGold)
 {
-	assert(m_pkChrOwner != NULL);
+	assert(m_pkChrOwner);
 	memset(m_pkItems, 0, sizeof(m_pkItems));
 
-	if (m_iSize)
-		m_pkGrid = M2_NEW CGrid(5, m_iSize);
-	else
-		m_pkGrid = NULL;
+	for (BYTE i = 0; i < m_iSize / 9; i++)
+		v_Grid.emplace_back(std::make_shared<CGrid>(5, 9));
 
 	m_bWindowMode = SAFEBOX;
 }
@@ -27,6 +24,16 @@ CSafebox::~CSafebox()
 	__Destroy();
 }
 
+static BYTE PosToPage(DWORD dwPos)
+{
+	return static_cast<BYTE>(dwPos / 45);
+}
+
+static BYTE PosToLocal(DWORD dwPos, BYTE Page)
+{
+	return static_cast<BYTE>(dwPos - (45 * Page));
+}
+
 void CSafebox::SetWindowMode(BYTE bMode)
 {
 	m_bWindowMode = bMode;
@@ -34,52 +41,46 @@ void CSafebox::SetWindowMode(BYTE bMode)
 
 void CSafebox::__Destroy()
 {
-	for (int i = 0; i < SAFEBOX_MAX_NUM; ++i)
-	{
-		if (m_pkItems[i])
-		{
+	for (int i = 0; i < SAFEBOX_MAX_NUM; ++i) {
+		if (m_pkItems[i]) {
 			m_pkItems[i]->SetSkipSave(true);
 			ITEM_MANAGER::instance().FlushDelayedSave(m_pkItems[i]);
-
 			M2_DESTROY_ITEM(m_pkItems[i]->RemoveFromCharacter());
 			m_pkItems[i] = NULL;
 		}
 	}
-
-	if (m_pkGrid)
-	{
-		M2_DELETE(m_pkGrid);
-		m_pkGrid = NULL;
-	}
+	v_Grid.clear();
 }
 
 bool CSafebox::Add(DWORD dwPos, LPITEM pkItem)
 {
 	if (!IsValidPosition(dwPos))
 	{
-		sys_err("SAFEBOX: item on wrong position at %d (size of grid = %d)", dwPos, m_pkGrid->GetSize());
+		sys_err("SAFEBOX: item on wrong position at %d (size of grid = %d)", dwPos, GetGridTotalSize());
 		return false;
 	}
 
 	pkItem->SetWindow(m_bWindowMode);
-	pkItem->SetCell(m_pkChrOwner, dwPos);
-	pkItem->Save(); // 강제로 Save를 불러줘야 한다.
+	pkItem->SetCell(m_pkChrOwner, static_cast<WORD>(dwPos));
+	pkItem->Save();
 	ITEM_MANAGER::instance().FlushDelayedSave(pkItem);
 
-	m_pkGrid->Put(dwPos, 1, pkItem->GetSize());
+	const BYTE Page = PosToPage(dwPos);
+	if (Page >= v_Grid.size())
+		return false;
+
+	v_Grid.at(Page)->Put(PosToLocal(dwPos, Page), 1, pkItem->GetSize());
+
 	m_pkItems[dwPos] = pkItem;
 
 	TPacketGCItemSet pack;
 
-	pack.header	= m_bWindowMode == SAFEBOX ? HEADER_GC_SAFEBOX_SET : HEADER_GC_MALL_SET;
-	pack.Cell	= TItemPos(m_bWindowMode, dwPos);
-	pack.vnum	= pkItem->GetVnum();
-	pack.count	= pkItem->GetCount();
-	pack.flags	= pkItem->GetFlag();
-#ifdef ATTR_LOCK
-	pack.lockedattr = pkItem->GetLockedAttr();
-#endif
-	pack.anti_flags	= pkItem->GetAntiFlag();
+	pack.header = m_bWindowMode == SAFEBOX ? HEADER_GC_SAFEBOX_SET : HEADER_GC_MALL_SET;
+	pack.Cell = TItemPos(m_bWindowMode, static_cast<WORD>(dwPos));
+	pack.vnum = pkItem->GetVnum();
+	pack.count = static_cast<WORD>(pkItem->GetCount());
+	pack.flags = pkItem->GetFlag();
+	pack.anti_flags = pkItem->GetAntiFlag();
 	thecore_memcpy(pack.alSockets, pkItem->GetSockets(), sizeof(pack.alSockets));
 	thecore_memcpy(pack.aAttr, pkItem->GetAttributes(), sizeof(pack.aAttr));
 
@@ -90,9 +91,8 @@ bool CSafebox::Add(DWORD dwPos, LPITEM pkItem)
 
 LPITEM CSafebox::Get(DWORD dwPos)
 {
-	if (dwPos >= m_pkGrid->GetSize())
-		return NULL;
-
+	if (dwPos >= GetGridTotalSize())
+		return nullptr;
 	return m_pkItems[dwPos];
 }
 
@@ -101,21 +101,20 @@ LPITEM CSafebox::Remove(DWORD dwPos)
 	LPITEM pkItem = Get(dwPos);
 
 	if (!pkItem)
-		return NULL;
+		return nullptr;
 
-	if (!m_pkGrid)
-		sys_err("Safebox::Remove : nil grid");
-	else
-		m_pkGrid->Get(dwPos, 1, pkItem->GetSize());
+	const BYTE Page = PosToPage(dwPos);
+	if (!v_Grid.empty() && Page < v_Grid.size())
+		v_Grid.at(Page)->Get(PosToLocal(dwPos, Page), 1, pkItem->GetSize());
 
 	pkItem->RemoveFromCharacter();
 
-	m_pkItems[dwPos] = NULL;
+	m_pkItems[dwPos] = nullptr;
 
 	TPacketGCItemDel pack;
 
-	pack.header	= m_bWindowMode == SAFEBOX ? HEADER_GC_SAFEBOX_DEL : HEADER_GC_MALL_DEL;
-	pack.pos	= dwPos;
+	pack.header = m_bWindowMode == SAFEBOX ? HEADER_GC_SAFEBOX_DEL : HEADER_GC_MALL_DEL;
+	pack.pos = static_cast<BYTE>(dwPos);
 
 	m_pkChrOwner->GetDesc()->Packet(&pack, sizeof(pack));
 	sys_log(1, "SAFEBOX: REMOVE %s %s count %d", m_pkChrOwner->GetName(), pkItem->GetName(), pkItem->GetCount());
@@ -129,7 +128,7 @@ void CSafebox::Save()
 	memset(&t, 0, sizeof(TSafeboxTable));
 
 	t.dwID = m_pkChrOwner->GetDesc()->GetAccountTable().id;
-	t.dwGold = m_lGold;
+	t.lldGold = m_lldGold;
 
 	db_clientdesc->DBPacket(HEADER_GD_SAFEBOX_SAVE, 0, &t, sizeof(TSafeboxTable));
 	sys_log(1, "SAFEBOX: SAVE %s", m_pkChrOwner->GetName());
@@ -137,30 +136,33 @@ void CSafebox::Save()
 
 bool CSafebox::IsEmpty(DWORD dwPos, BYTE bSize)
 {
-	if (!m_pkGrid)
+	if (v_Grid.empty())
 		return false;
 
-	return m_pkGrid->IsEmpty(dwPos, 1, bSize);
+	const BYTE Page = PosToPage(dwPos);
+	if (Page >= v_Grid.size())
+		return false;
+
+	return v_Grid.at(Page)->IsEmpty(PosToLocal(dwPos, Page), 1, bSize);
 }
+
+#if defined(ITEM_CHECKINOUT_UPDATE)
+int CSafebox::GetEmptySafebox(BYTE size)
+{
+	if (v_Grid.empty())
+		return -1;
+
+	for (unsigned int i = 0; i < GetGridTotalSize(); i++)
+		if (IsEmpty(i, size))
+			return i;
+
+	return -1;
+}
+#endif
 
 void CSafebox::ChangeSize(int iSize)
 {
-	// 현재 사이즈가 인자보다 크면 사이즈를 가만 둔다.
-	if (m_iSize >= iSize)
-		return;
-
-	m_iSize = iSize;
-
-	CGrid * pkOldGrid = m_pkGrid;
-
-	if (pkOldGrid) {
-		m_pkGrid = M2_NEW CGrid(pkOldGrid, 5, m_iSize);
-#ifdef ENABLE_BUG_FIXES
-		delete pkOldGrid;
-#endif
-	} else {
-		m_pkGrid = M2_NEW CGrid(5, m_iSize);
-	}
+	return;
 }
 
 LPITEM CSafebox::GetItem(BYTE bCell)
@@ -174,28 +176,8 @@ LPITEM CSafebox::GetItem(BYTE bCell)
 	return m_pkItems[bCell];
 }
 
-bool CSafebox::MoveItem(BYTE bCell, BYTE bDestCell,
-#ifdef ENABLE_NEW_STACK_LIMIT
-int 
-#else
-BYTE 
-#endif
-count)
+bool CSafebox::MoveItem(BYTE bCell, BYTE bDestCell, WORD count)
 {
-	bool stupid = false;
-	if (count < 0)
-	{
-		sys_err("I am a stupid hacker 5: %s %d", count);
-		stupid = true;
-	}
-
-	count = abs(count);
-	if (stupid)
-	{
-		sys_err("I am a stupid hacker 6: %s %d", count);
-		return false;
-	}
-
 	LPITEM item;
 
 	int max_position = 5 * m_iSize;
@@ -216,17 +198,17 @@ count)
 		LPITEM item2;
 
 		if ((item2 = GetItem(bDestCell)) && item != item2 && item2->IsStackable() &&
-				!IS_SET(item2->GetAntiFlag(), ITEM_ANTIFLAG_STACK) &&
-				item2->GetVnum() == item->GetVnum()) // 합칠 수 있는 아이템의 경우
+			!IS_SET(item2->GetAntiFlag(), ITEM_ANTIFLAG_STACK) &&
+			item2->GetVnum() == item->GetVnum())
 		{
 			for (int i = 0; i < ITEM_SOCKET_MAX_NUM; ++i)
 				if (item2->GetSocket(i) != item->GetSocket(i))
 					return false;
 
 			if (count == 0)
-				count = item->GetCount();
+				count = static_cast<WORD>(item->GetCount());
 
-			count = MIN(g_bItemCountLimit - item2->GetCount(), count);
+			count = MIN(MAX_ITEM_STACK - item2->GetCount(), count);
 
 			if (item->GetCount() >= count)
 				Remove(bCell);
@@ -241,17 +223,21 @@ count)
 		if (!IsEmpty(bDestCell, item->GetSize()))
 			return false;
 
-		m_pkGrid->Get(bCell, 1, item->GetSize());
+		const BYTE Page1 = PosToPage(bCell), Page2 = PosToPage(bDestCell);
+		if (Page1 >= v_Grid.size() || Page2 >= v_Grid.size())
+			return false;
 
-		if (!m_pkGrid->Put(bDestCell, 1, item->GetSize()))
+		v_Grid.at(Page1)->Get(PosToLocal(bCell, Page1), 1, item->GetSize());
+
+		if (!v_Grid.at(Page2)->Put(PosToLocal(bDestCell, Page2), 1, item->GetSize()))
 		{
-			m_pkGrid->Put(bCell, 1, item->GetSize());
+			v_Grid.at(Page1)->Put(PosToLocal(bCell, Page1), 1, item->GetSize());
 			return false;
 		}
 		else
 		{
-			m_pkGrid->Get(bDestCell, 1, item->GetSize());
-			m_pkGrid->Put(bCell, 1, item->GetSize());
+			v_Grid.at(Page2)->Get(PosToLocal(bDestCell, Page2), 1, item->GetSize());
+			v_Grid.at(Page1)->Put(PosToLocal(bCell, Page1), 1, item->GetSize());
 		}
 
 		sys_log(1, "SAFEBOX: MOVE %s %d -> %d %s count %d", m_pkChrOwner->GetName(), bCell, bDestCell, item->GetName(), item->GetCount());
@@ -263,14 +249,18 @@ count)
 	return true;
 }
 
+unsigned int CSafebox::GetGridTotalSize() const
+{
+	return v_Grid.size() * 45;
+}
+
 bool CSafebox::IsValidPosition(DWORD dwPos)
 {
-	if (!m_pkGrid)
+	if (v_Grid.empty())
 		return false;
 
-	if (dwPos >= m_pkGrid->GetSize())
+	if (dwPos >= GetGridTotalSize())
 		return false;
 
 	return true;
 }
-

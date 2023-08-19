@@ -1,4 +1,5 @@
-/*----- atoi function -----*/
+#include "service.h"
+
 inline bool str_to_number (bool& out, const char *in)
 {
 	if (0==in || 0==in[0])	return false;
@@ -105,5 +106,18 @@ inline bool str_to_number (long double& out, const char *in)
 }
 #endif
 
+#ifdef ENABLE_ITEMSHOP
+inline bool str_to_number(unsigned long long& out, const char* in)
+{
+	if (0 == in || 0 == in[0])	return false;
 
-/*----- atoi function -----*/
+	out = (unsigned long long)strtoull(in, NULL, 10);
+	return true;
+}
+
+template <typename T> inline bool check_mul_error(T a, T b) {
+	bool result = a == 0 || b == 0 || (
+		((T)(a * b) / a) != b);
+	return result;
+}
+#endif

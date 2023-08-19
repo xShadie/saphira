@@ -1,9 +1,5 @@
-
-#ifndef __POLYMORPH_UTILS__
-#define __POLYMORPH_UTILS__
-
+#pragma once
 #include <boost/unordered_map.hpp>
-
 #define POLYMORPH_SKILL_ID	129
 #define POLYMORPH_BOOK_ID	50322
 
@@ -32,5 +28,3 @@ class CPolymorphUtils : public singleton<CPolymorphUtils>
 		bool GiveBook(LPCHARACTER pChar, DWORD dwMobVnum, DWORD dwPracticeCount, BYTE BookLevel, BYTE LevelLimit);
 		bool BookUpgrade(LPCHARACTER pChar, LPITEM pItem);
 };
-
-#endif /*__POLYMORPH_UTILS__*/

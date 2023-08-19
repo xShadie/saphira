@@ -7,35 +7,9 @@
 #include "config.h"
 #include "locale_service.h"
 
-#ifdef ENABLE_NEWSTUFF
-static std::string stOxQuizFileName("");
-
-void __SetOxQuizFileName(const char* szOxQuizFN=NULL, bool bAddLocale=true);
-std::string & __GetOxQuizFileName();
-
-void __SetOxQuizFileName(const char* szOxQuizFN, bool bAddLocale)
-{
-	if (szOxQuizFN==NULL)
-		szOxQuizFN = "oxquiz.lua";
-	char script[256];
-	if (bAddLocale)
-		snprintf(script, sizeof(script), "%s/%s", LocaleService_GetBasePath().c_str(), szOxQuizFN);
-	else
-		snprintf(script, sizeof(script), "%s", szOxQuizFN);
-	stOxQuizFileName = script;
-}
-
-std::string & __GetOxQuizFileName()
-{
-	if (stOxQuizFileName.empty())
-		__SetOxQuizFileName();
-	return stOxQuizFileName;
-}
-#endif
-
 namespace quest
 {
-	ALUA(oxevent_get_status)
+	int oxevent_get_status(lua_State* L)
 	{
 		OXEventStatus ret = COXEventManager::instance().GetStatus();
 
@@ -43,36 +17,14 @@ namespace quest
 
 		return 1;
 	}
-#ifdef ENABLE_NEWSTUFF
-	ALUA(oxevent_get_oxquiz_fn)
-	{
-		lua_pushstring(L, __GetOxQuizFileName().c_str());
-		return 1;
-	}
 
-	ALUA(oxevent_set_oxquiz_fn)
-	{
-		__SetOxQuizFileName(lua_tostring(L, 1));
-		return 0;
-	}
-
-	ALUA(oxevent_set_oxquiz_fn0)
-	{
-		__SetOxQuizFileName(lua_tostring(L, 1), false);
-		return 0;
-	}
-#endif
-	ALUA(oxevent_open)
+	int oxevent_open(lua_State* L)
 	{
 		COXEventManager::instance().ClearQuiz();
 
-#ifdef ENABLE_NEWSTUFF
-		int result = lua_dofile(quest::CQuestManager::instance().GetLuaState(), __GetOxQuizFileName().c_str());
-#else
 		char script[256];
 		snprintf(script, sizeof(script), "%s/oxquiz.lua", LocaleService_GetBasePath().c_str());
 		int result = lua_dofile(quest::CQuestManager::instance().GetLuaState(), script);
-#endif
 
 		if (result != 0)
 		{
@@ -83,20 +35,20 @@ namespace quest
 		{
 			lua_pushnumber(L, 1);
 		}
-
+		
 		COXEventManager::instance().SetStatus(OXEVENT_OPEN);
 
 		return 1;
 	}
-
-	ALUA(oxevent_close)
+	
+	int oxevent_close(lua_State* L)
 	{
 		COXEventManager::instance().SetStatus(OXEVENT_CLOSE);
-
+		
 		return 0;
 	}
-
-	ALUA(oxevent_quiz)
+	
+	int oxevent_quiz(lua_State* L)
 	{
 		if (lua_isnumber(L, 1) && lua_isnumber(L, 2))
 		{
@@ -114,8 +66,8 @@ namespace quest
 
 		return 1;
 	}
-
-	ALUA(oxevent_get_attender)
+	
+	int oxevent_get_attender(lua_State* L)
 	{
 		lua_pushnumber(L, (int)COXEventManager::instance().GetAttenderCount());
 		return 1;
@@ -125,7 +77,7 @@ namespace quest
 	{
 		int empty;
 
-		end_oxevent_info()
+		end_oxevent_info() 
 		: empty( 0 )
 		{
 		}
@@ -137,7 +89,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(oxevent_end_event)
+	int oxevent_end_event(lua_State* L)
 	{
 		COXEventManager::instance().SetStatus(OXEVENT_FINISH);
 
@@ -147,7 +99,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(oxevent_end_event_force)
+	int oxevent_end_event_force(lua_State* L)
 	{
 		COXEventManager::instance().CloseEvent();
 		COXEventManager::instance().SetStatus(OXEVENT_FINISH);
@@ -155,7 +107,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(oxevent_give_item)
+	int oxevent_give_item(lua_State* L)
 	{
 		if (lua_isnumber(L, 1) && lua_isnumber(L, 2))
 		{
@@ -164,10 +116,10 @@ namespace quest
 
 		return 0;
 	}
-
+	
 	void RegisterOXEventFunctionTable()
 	{
-		luaL_reg oxevent_functions[] =
+		luaL_reg oxevent_functions[] = 
 		{
 			{	"get_status",	oxevent_get_status	},
 			{	"open",			oxevent_open		},
@@ -177,11 +129,7 @@ namespace quest
 			{	"end_event",	oxevent_end_event	},
 			{	"end_event_force",	oxevent_end_event_force	},
 			{	"give_item",	oxevent_give_item	},
-#ifdef ENABLE_NEWSTUFF
-			{	"get_oxquiz_fn",	oxevent_get_oxquiz_fn	}, // [return lua string]
-			{	"set_oxquiz_fn",	oxevent_set_oxquiz_fn	}, // [return nothing]
-			{	"set_oxquiz_fn0",	oxevent_set_oxquiz_fn0	}, // [return nothing]
-#endif
+
 			{ NULL, NULL}
 		};
 

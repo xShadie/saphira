@@ -6,23 +6,8 @@
 #include "mob_manager.h"
 #include "dungeon.h"
 
-
-#include "desc.h"
-
 LPREGEN	regen_list = NULL;
 LPREGEN_EXCEPTION regen_exception_list = NULL;
-
-#ifdef REGEN_ANDRA
-typedef struct SMapDataContainer
-{
-	char szBaseName[256];
-	int base_x;
-	int base_y;
-}TMapDataContainer;
-
-#define mbMapDataCType std::map<DWORD, TMapDataContainer*>
-mbMapDataCType mbMapDataContainer;
-#endif
 
 enum ERegenModes
 {
@@ -39,7 +24,7 @@ enum ERegenModes
 	MODE_VNUM
 };
 
-static bool get_word(FILE *fp, char *buf) // 워드단위로 받는다.
+static bool get_word(FILE *fp, char *buf)
 {
 	int i = 0;
 	int c;
@@ -187,7 +172,6 @@ static bool read_line(FILE *fp, LPREGEN regen)
 			case MODE_Z_SECTION:
 				str_to_number(regen->z_section, szTmp);
 
-				// 익셉션 이면 나가주자.
 				if (regen->type == REGEN_TYPE_EXCEPTION)
 					return true;
 
@@ -334,17 +318,6 @@ static void regen_spawn_dungeon(LPREGEN regen, LPDUNGEON pDungeon, bool bOnce)
 
 		if (ch && !bOnce)
 			ch->SetRegen(regen);
-		
-#ifdef __DEFENSE_WAVE__
-		if (pDungeon)
-		{
-			LPCHARACTER mast = pDungeon->GetMast();
-			if (mast)
-			{
-				ch->SetVictim(mast);
-			}
-		}
-#endif
 	}
 }
 
@@ -435,9 +408,6 @@ EVENTFUNC(dungeon_regen_event)
 
 bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDUNGEON pDungeon, bool bOnce)
 {
-	if (g_bNoRegen)
-		return true;
-
 	if ( lMapIndex >= 114 && lMapIndex <= 117 )
 		return true;
 
@@ -452,7 +422,9 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 
 	while (true)
 	{
-		REGEN tmp{};
+		REGEN tmp;
+
+		memset(&tmp, 0, sizeof(tmp));
 
 		if (!read_line(fp, &tmp))
 			break;
@@ -465,7 +437,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 			if (!bOnce)
 			{
 				regen = M2_NEW REGEN;
-				*regen = tmp;
+				memcpy(regen, &tmp, sizeof(REGEN));
 			}
 			else
 				regen = &tmp;
@@ -502,7 +474,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("No mob data by vnum %u", regen->vnum);
 					if (!bOnce) {
 						M2_DELETE(regen);
 					}
@@ -520,13 +492,9 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 				regen->event = event_create(dungeon_regen_event, info, PASSES_PER_SEC(number(0, 16)) + PASSES_PER_SEC(regen->time));
 
 				pDungeon->AddRegen(regen);
-				// regen_id should be determined at this point,
-				// before the call to CHARACTER::SetRegen()
 			}
 
-			// 처음엔 무조건 리젠 해준다.
 			regen_spawn_dungeon(regen, pDungeon, bOnce);
-
 		}
 	}
 
@@ -536,9 +504,6 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 
 bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int base_y)
 {
-	if (g_bNoRegen)
-		return true;
-
 	LPREGEN regen = NULL;
 	FILE * fp = fopen(filename, "rt");
 
@@ -550,7 +515,9 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 
 	while (true)
 	{
-		REGEN tmp{};
+		REGEN tmp;
+
+		memset(&tmp, 0, sizeof(tmp));
 
 		if (!read_line(fp, &tmp))
 			break;
@@ -593,12 +560,11 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("No mob data by vnum %u", regen->vnum);
 					continue;
 				}
 			}
 
-			// 처음엔 무조건 리젠 해준다.
 			regen_spawn(regen, true);
 		}
 	}
@@ -607,29 +573,6 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 	return true;
 }
 
-#ifdef REGEN_ANDRA
-EVENTFUNC(regen_event)
-{
-	regen_event_info* info = dynamic_cast<regen_event_info*>( event->info );
-
-	if ( info == NULL )
-	{
-		sys_err( "regen_event> <Factor> Null pointer" );
-		return 0;
-	}
-
-	LPREGEN	regen = info->regen;
-
-	if (!is_valid_regen(regen))
-		return 0;
-
-	if (regen->time == 0)
-		regen->event = NULL;
-
-	regen_spawn(regen, false);
-	return PASSES_PER_SEC(regen->time);
-}
-#else
 EVENTFUNC(regen_event)
 {
 	regen_event_info* info = dynamic_cast<regen_event_info*>( event->info );
@@ -655,17 +598,9 @@ EVENTFUNC(regen_event)
 
 	return PASSES_PER_SEC(1);
 }
-#endif
 
-#ifdef ENABLE_ATLAS_BOSS
-bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y, bool bossFile)
-#else
 bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
-#endif
 {
-	if (g_bNoRegen)
-		return true;
-
 	LPREGEN regen = NULL;
 	FILE* fp = fopen(filename, "rt");
 
@@ -677,7 +612,9 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 
 	while (true)
 	{
-		REGEN tmp{};
+		REGEN tmp;
+
+		memset(&tmp, 0, sizeof(tmp));
 
 		if (!read_line(fp, &tmp))
 			break;
@@ -693,7 +630,7 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 			}
 
 			regen = M2_NEW REGEN;
-			*regen = tmp;
+			memcpy(regen, &tmp, sizeof(REGEN));
 			INSERT_TO_TW_LIST(regen, regen_list, prev, next);
 
 			regen->lMapIndex = lMapIndex;
@@ -718,52 +655,27 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 				regen->ey ^= regen->sy;
 				regen->sy ^= regen->ey;
 			}
-			
+
 			if (regen->type == REGEN_TYPE_MOB)
 			{
 				const CMob * p = CMobManager::instance().Get(regen->vnum);
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("No mob data by vnum %u", regen->vnum);
 				}
 				else if (p->m_table.bType == CHAR_TYPE_NPC || p->m_table.bType == CHAR_TYPE_WARP || p->m_table.bType == CHAR_TYPE_GOTO)
 				{
 					SECTREE_MANAGER::instance().InsertNPCPosition(lMapIndex,
 							p->m_table.bType,
-#ifdef ENABLE_MULTI_NAMES
-							regen->vnum
-#else
-							p->m_table.szLocaleName
-#endif
-							, (regen->sx+regen->ex) / 2 - base_x,
+							p->m_table.szLocaleName,
+							(regen->sx+regen->ex) / 2 - base_x,
 							(regen->sy+regen->ey) / 2 - base_y);
 				}
 			}
-			
-#ifdef ENABLE_ATLAS_BOSS
-			if ((bossFile) && (tmp.type == REGEN_TYPE_MOB)) {
-				const CMob * p = CMobManager::instance().Get(regen->vnum);
-				if (!p)
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
-				else {
-					SECTREE_MANAGER::instance().InsertBossPosition(lMapIndex, p->m_table.bType, 
-#ifdef ENABLE_MULTI_NAMES
-					regen->vnum
-#else
-					p->m_table.szLocaleName
-#endif
-					, (regen->sx+regen->ex) / 2 - base_x, (regen->sy+regen->ey) / 2 - base_y, tmp.time);
-				}
-			}
-#endif
-			
-			//NO_REGEN
-			// Desc: 	regen.txt (외 리젠관련 텍스트 ) 에서 리젠 시간을 0으로 세팅할시
-			// 			리젠을 하지 안한다.
+
 			if (regen->time != 0)
 			{
-				// 처음엔 무조건 리젠 해준다.
 				regen_spawn(regen, false);
 
 				regen_event_info* info = AllocEventInfo<regen_event_info>();
@@ -772,7 +684,6 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 
 				regen->event = event_create(regen_event, info, PASSES_PER_SEC(1)); 
 			}
-			//END_NO_REGEN
 		}
 		else if (tmp.type == REGEN_TYPE_EXCEPTION)
 		{
@@ -828,78 +739,13 @@ void regen_reset(int x, int y)
 		if (!regen->event)
 			continue;
 
-		// 좌표가 있으면 좌표 내에 있는 리젠 리스트만 리젠 시킨다.
 		if (x != 0 || y != 0)
 		{
 			if (x >= regen->sx && x <= regen->ex)
 				if (y >= regen->sy && y <= regen->ey)
 					event_reset_time(regen->event, 1);
 		}
-		// 없으면 전부 리젠
 		else
 			event_reset_time(regen->event, 1);
 	}
 }
-
-#ifdef REGEN_ANDRA
-bool is_valid_regen(LPREGEN currRegen)
-{
-	LPREGEN		regen;
-
-	for (regen = regen_list; regen; regen = regen->next)
-	{
-		if (regen == currRegen)
-			return true;
-	}
-	return false;
-}
-
-void regen_free_map(long lMapIndex)
-{
-	LPREGEN		regen, prev, next;
-
-	for (regen = regen_list; regen; regen = regen->next)
-	{
-		if (regen->lMapIndex != lMapIndex)
-			continue;
-		event_cancel(&regen->event);
-		REMOVE_FROM_TW_LIST(regen, regen_list, prev, next);
-		M2_DELETE(regen);
-	}
-}
-
-void regen_reload(long lMapIndex)
-{
-	if (mbMapDataContainer.find(lMapIndex) == mbMapDataContainer.end())
-		return;
-
-	char szFilename[256];
-	
-	snprintf(szFilename, sizeof(szFilename), "%sregen.txt", mbMapDataContainer[lMapIndex]->szBaseName);
-	regen_load(szFilename, lMapIndex, mbMapDataContainer[lMapIndex]->base_x, mbMapDataContainer[lMapIndex]->base_y);
-
-	snprintf(szFilename, sizeof(szFilename), "%snpc.txt", mbMapDataContainer[lMapIndex]->szBaseName);
-	regen_load(szFilename, lMapIndex, mbMapDataContainer[lMapIndex]->base_x, mbMapDataContainer[lMapIndex]->base_y);
-
-	snprintf(szFilename, sizeof(szFilename), "%sboss.txt", mbMapDataContainer[lMapIndex]->szBaseName);
-	regen_load(szFilename, lMapIndex, mbMapDataContainer[lMapIndex]->base_x, mbMapDataContainer[lMapIndex]->base_y);
-
-	snprintf(szFilename, sizeof(szFilename), "%sstone.txt", mbMapDataContainer[lMapIndex]->szBaseName);
-	regen_load(szFilename, lMapIndex, mbMapDataContainer[lMapIndex]->base_x, mbMapDataContainer[lMapIndex]->base_y);
-}
-
-void regen_register_map(const char * szBaseName, long lMapIndex, int base_x, int base_y)
-{
-	TMapDataContainer* container = new TMapDataContainer;
-	memset(container->szBaseName, 0, sizeof(container->szBaseName));
-#ifdef __FreeBSD__
-	strlcpy(container->szBaseName, szBaseName, sizeof(container->szBaseName) - 1);
-#else
-	strncpy(container->szBaseName, szBaseName, sizeof(container->szBaseName) - 1);
-#endif
-	container->base_x = base_x;
-	container->base_y = base_y;
-	mbMapDataContainer[lMapIndex] = container;
-}
-#endif
-

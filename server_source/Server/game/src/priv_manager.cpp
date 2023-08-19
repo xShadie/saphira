@@ -102,15 +102,17 @@ void CPrivManager::GiveGuildPriv(DWORD guild_id, BYTE type, int value, BYTE bLog
 
 	if (g)
 	{
-#ifdef TEXTS_IMPROVEMENT
-		if (value) {
-			SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 573, "%s#%s#%d", GetPrivName(type), g->GetName(), value);
-		} else {
-			SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 574, "%s#%s", GetPrivName(type), g->GetName());
+		if (value)
+		{
+			char buf[100];
+			snprintf(buf, sizeof(buf), "[LS;724;%s;%s;%d]", g->GetName(), GetPrivName(type), value);
+			SendNotice(buf);
 		}
-#endif
-		if (bLog) {
-			LogManager::instance().CharLog(0, guild_id, type, value, "GUILD_PRIV", "", "");
+		else
+		{
+			char buf[100];
+			snprintf(buf, sizeof(buf), "[LS;726;%s;%s]", g->GetName(), GetPrivName(type));
+			SendNotice(buf);
 		}
 	}
 }
@@ -128,9 +130,6 @@ void CPrivManager::GiveCharacterPriv(DWORD pid, BYTE type, int value, BYTE bLog)
 	value = MINMAX(0, value, 100);
 
 	m_aPrivChar[type][pid] = value;
-
-	if (bLog)
-		LogManager::instance().CharLog(pid, 0, type, value, "CHARACTER_PRIV", "", "");
 }
 
 void CPrivManager::GiveEmpirePriv(BYTE empire, BYTE type, int value, BYTE bLog, time_t end_time_sec)
@@ -150,15 +149,25 @@ void CPrivManager::GiveEmpirePriv(BYTE empire, BYTE type, int value, BYTE bLog, 
 	rkPrivEmpireData.m_value = value;
 	rkPrivEmpireData.m_end_time_sec = end_time_sec;
 
-#ifdef TEXTS_IMPROVEMENT
-	if (value) {
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 575, "%s#%s#%d", GetPrivName(type), GetEmpireName(empire), value);
-	} else {
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 576, "%s#%s", GetPrivName(type), GetEmpireName(empire));
+	if (value)
+	{
+		char buf[100];
+		snprintf(buf, sizeof(buf), "[LS;724;%s;%s;%d]", GetEmpireName(empire), GetPrivName(type), value);
+
+		if (empire)
+			SendNotice(buf);
+		else
+			SendLog(buf);
 	}
-#endif
-	if (bLog) {
-		LogManager::instance().CharLog(0, empire, type, value, "EMPIRE_PRIV", "", "");
+	else
+	{
+		char buf[100];
+		snprintf(buf, sizeof(buf),"[LS;726;%s;%s]", GetEmpireName(empire), GetPrivName(type));
+
+		if (empire)
+			SendNotice(buf);
+		else
+			SendLog(buf);
 	}
 }
 
@@ -195,7 +204,7 @@ void CPrivManager::RemoveCharacterPriv(DWORD pid, BYTE type)
 		return;
 	}
 
-	itertype(m_aPrivChar[type]) it = m_aPrivChar[type].find(pid);
+	auto it = m_aPrivChar[type].find(pid);
 
 	if (it != m_aPrivChar[type].end())
 		m_aPrivChar[type].erase(it);
@@ -203,7 +212,6 @@ void CPrivManager::RemoveCharacterPriv(DWORD pid, BYTE type)
 
 int CPrivManager::GetPriv(LPCHARACTER ch, BYTE type)
 {
-	// 캐릭터의 변경 수치가 -라면 무조건 -만 적용되게
 	int val_ch = GetPrivByCharacter(ch->GetPlayerID(), type);
 
 	if (val_ch < 0 && !ch->IsEquipUniqueItem(UNIQUE_ITEM_NO_BAD_LUCK_EFFECT))
@@ -212,7 +220,6 @@ int CPrivManager::GetPriv(LPCHARACTER ch, BYTE type)
 	{
 		int val;
 
-		// 개인, 제국, 길드, 전체 중 큰 값을 취한다.
 		val = MAX(val_ch, GetPrivByEmpire(0, type));
 		val = MAX(val, GetPrivByEmpire(ch->GetEmpire(), type));
 
@@ -249,7 +256,7 @@ int CPrivManager::GetPrivByGuild(DWORD guild_id, BYTE type)
 	if (type >= MAX_PRIV_NUM)
 		return 0;
 
-	itertype( m_aPrivGuild[ type ] ) itFind = m_aPrivGuild[ type ].find( guild_id );
+	auto itFind = m_aPrivGuild[ type ].find( guild_id );
 
 	if ( itFind == m_aPrivGuild[ type ].end() )
 		return 0;
@@ -262,7 +269,7 @@ const CPrivManager::SPrivGuildData* CPrivManager::GetPrivByGuildEx( DWORD dwGuil
 	if ( byType >= MAX_PRIV_NUM )
 		return NULL;
 
-	itertype( m_aPrivGuild[ byType ] ) itFind = m_aPrivGuild[ byType ].find( dwGuildID );
+	auto itFind = m_aPrivGuild[ byType ].find( dwGuildID );
 
 	if ( itFind == m_aPrivGuild[ byType ].end() )
 		return NULL;
@@ -275,7 +282,7 @@ int CPrivManager::GetPrivByCharacter(DWORD pid, BYTE type)
 	if (type >= MAX_PRIV_NUM)
 		return 0;
 
-	itertype(m_aPrivChar[type]) it = m_aPrivChar[type].find(pid);
+	auto it = m_aPrivChar[type].find(pid);
 
 	if (it != m_aPrivChar[type].end())
 		return it->second;

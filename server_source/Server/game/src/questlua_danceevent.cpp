@@ -25,7 +25,7 @@ namespace quest
 		};
 	};
 
-	ALUA(dance_event_go_home)
+	int dance_event_go_home( lua_State* L )
 	{
 		LPSECTREE_MAP pSecMap = SECTREE_MANAGER::instance().GetMap( 115 );
 
@@ -46,7 +46,7 @@ namespace quest
 
 			{	NULL,	NULL}
 		};
-
+		
 		CQuestManager::instance().AddLuaFunctionTable("dance_event", dance_event_functions);
 	}
 }

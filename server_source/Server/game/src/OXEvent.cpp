@@ -42,16 +42,16 @@ OXEventStatus COXEventManager::GetStatus()
 	{
 		case 0 :
 			return OXEVENT_FINISH;
-
+			
 		case 1 :
 			return OXEVENT_OPEN;
-
+			
 		case 2 :
 			return OXEVENT_CLOSE;
-
+			
 		case 3 :
 			return OXEVENT_QUIZ;
-
+			
 		default :
 			return OXEVENT_ERR;
 	}
@@ -62,21 +62,21 @@ OXEventStatus COXEventManager::GetStatus()
 void COXEventManager::SetStatus(OXEventStatus status)
 {
 	BYTE val = 0;
-
+	
 	switch (status)
 	{
 		case OXEVENT_OPEN :
 			val = 1;
 			break;
-
+			
 		case OXEVENT_CLOSE :
 			val = 2;
 			break;
-
+			
 		case OXEVENT_QUIZ :
 			val = 3;
 			break;
-
+		
 		case OXEVENT_FINISH :
 		case OXEVENT_ERR :
 		default :
@@ -149,21 +149,17 @@ bool COXEventManager::AddQuiz(unsigned char level, const char* pszQuestion, bool
 
 bool COXEventManager::ShowQuizList(LPCHARACTER pkChar)
 {
-#ifdef TEXTS_IMPROVEMENT
 	int c = 0;
-
-	for (size_t i = 0; i < m_vec_quiz.size(); ++i) {
-		for (size_t j = 0; j < m_vec_quiz[i].size(); ++j, ++c) {
-			if (m_vec_quiz[i][j].answer) {
-				pkChar->ChatPacketNew(CHAT_TYPE_INFO, 608, "%s", m_vec_quiz[i][j].Quiz);
-			} else {
-				pkChar->ChatPacketNew(CHAT_TYPE_INFO, 609, "%s", m_vec_quiz[i][j].Quiz);
-			}
+	
+	for (size_t i = 0; i < m_vec_quiz.size(); ++i)
+	{
+		for (size_t j = 0; j < m_vec_quiz[i].size(); ++j, ++c)
+		{
+			pkChar->ChatPacket(CHAT_TYPE_INFO, "%d %s %s", m_vec_quiz[i][j].level, m_vec_quiz[i][j].Quiz, m_vec_quiz[i][j].answer ? "TRUE" : "FALSE");
 		}
 	}
 
-	pkChar->ChatPacketNew(CHAT_TYPE_INFO, 610, "%d", c);
-#endif
+	pkChar->ChatPacket(CHAT_TYPE_INFO, "[LS;880;%d]", c);
 	return true;
 }
 
@@ -201,39 +197,33 @@ EVENTFUNC(oxevent_timer)
 	switch (flag)
 	{
 		case 0:
-#ifdef TEXTS_IMPROVEMENT
-			SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 579, "");
-#endif
+			SendNoticeMap("[LS;892]", OXEVENT_MAP_INDEX, true);
 			flag++;
 			return PASSES_PER_SEC(10);
-
+			
 		case 1:
+			SendNoticeMap("[LS;903]", OXEVENT_MAP_INDEX, true);
+
 			if (info->answer == true)
 			{
 				COXEventManager::instance().CheckAnswer(true);
-#ifdef TEXTS_IMPROVEMENT
-				SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 580, "");
-#endif
+				SendNoticeMap("[LS;914]", OXEVENT_MAP_INDEX, true);
 			}
 			else
 			{
 				COXEventManager::instance().CheckAnswer(false);
-#ifdef TEXTS_IMPROVEMENT
-				SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 581, "");
-#endif
+				SendNoticeMap("[LS;925]", OXEVENT_MAP_INDEX, true);
 			}
 
-#ifdef TEXTS_IMPROVEMENT
-			SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 582, "");
-#endif
+			SendNoticeMap("[LS;936]", OXEVENT_MAP_INDEX, true);
+
 			flag++;
 			return PASSES_PER_SEC(5);
+
 		case 2:
 			COXEventManager::instance().WarpToAudience();
 			COXEventManager::instance().SetStatus(OXEVENT_CLOSE);
-#ifdef TEXTS_IMPROVEMENT
-			SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 583, "");
-#endif
+			SendNoticeMap("[LS;947]", OXEVENT_MAP_INDEX, true);
 			flag = 0;
 			break;
 	}
@@ -250,11 +240,10 @@ bool COXEventManager::Quiz(unsigned char level, int timelimit)
 
 	int idx = number(0, m_vec_quiz[level].size()-1);
 
-#ifdef TEXTS_IMPROVEMENT
-	SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 584, "");
-	SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, std::stoi(m_vec_quiz[level][idx].Quiz), "");
-	SendNoticeNew(CHAT_TYPE_BIG_NOTICE, 0, OXEVENT_MAP_INDEX, 585, "");
-#endif
+	SendNoticeMap("[LS;958]", OXEVENT_MAP_INDEX, true);
+	SendNoticeMap(m_vec_quiz[level][idx].Quiz, OXEVENT_MAP_INDEX, true);
+	SendNoticeMap("[LS;969]", OXEVENT_MAP_INDEX, true);
+
 	if (m_timedEvent != NULL) {
 		event_cancel(&m_timedEvent);
 	}
@@ -275,9 +264,8 @@ bool COXEventManager::Quiz(unsigned char level, int timelimit)
 bool COXEventManager::CheckAnswer(bool answer)
 {
 	if (m_map_attender.size() <= 0) return true;
-
-	itertype(m_map_attender) iter = m_map_attender.begin();
-	itertype(m_map_attender) iter_tmp;
+	
+	auto iter = m_map_attender.begin();
 
 	m_map_miss.clear();
 
@@ -296,7 +284,7 @@ bool COXEventManager::CheckAnswer(bool answer)
 		rect[2] = 900300;
 		rect[3] = 26400;
 	}
-
+	
 	LPCHARACTER pkChar = NULL;
 	PIXEL_POSITION pos;
 	for (; iter != m_map_attender.end();)
@@ -309,22 +297,21 @@ bool COXEventManager::CheckAnswer(bool answer)
 			if (pos.x < rect[0] || pos.x > rect[2] || pos.y < rect[1] || pos.y > rect[3])
 			{
 				pkChar->EffectPacket(SE_FAIL);
-				iter_tmp = iter;
-				iter++;
+				auto iter_tmp = iter;
+				++iter;
 				m_map_attender.erase(iter_tmp);
 				m_map_miss.insert(std::make_pair(pkChar->GetPlayerID(), pkChar->GetPlayerID()));
 			}
 			else
 			{
-				// pkChar->CreateFly(number(FLY_FIREWORK1, FLY_FIREWORK6), pkChar);
+				pkChar->ChatPacket(CHAT_TYPE_INFO, "[LS;980]");
 				char chatbuf[256];
-				int len = snprintf(chatbuf, sizeof(chatbuf), "%s %u %u", number(0, 1) == 1 ? "cheer1" : "cheer2", (DWORD)pkChar->GetVID(), 0);
+				int len = snprintf(chatbuf, sizeof(chatbuf), 
+						"%s %u %u", number(0, 1) == 1 ? "cheer1" : "cheer2", (DWORD)pkChar->GetVID(), 0);
 
-				// 리턴값이 sizeof(chatbuf) 이상일 경우 truncate되었다는 뜻..
 				if (len < 0 || len >= (int) sizeof(chatbuf))
 					len = sizeof(chatbuf) - 1;
 
-				// \0 문자 포함
 				++len;
 
 				TPacketGCChat pack_chat;
@@ -345,13 +332,13 @@ bool COXEventManager::CheckAnswer(bool answer)
 		}
 		else
 		{
-			itertype(m_map_char) err = m_map_char.find(iter->first);
+			auto err = m_map_char.find(iter->first);
 			if (err != m_map_char.end()) m_map_char.erase(err);
 
-			itertype(m_map_miss) err2 = m_map_miss.find(iter->first);
+			auto err2 = m_map_miss.find(iter->first);
 			if (err2 != m_map_miss.end()) m_map_miss.erase(err2);
 
-			iter_tmp = iter;
+			auto iter_tmp = iter;
 			++iter;
 			m_map_attender.erase(iter_tmp);
 		}
@@ -363,9 +350,9 @@ void COXEventManager::WarpToAudience()
 {
 	if (m_map_miss.size() <= 0) return;
 
-	itertype(m_map_miss) iter = m_map_miss.begin();
+	auto iter = m_map_miss.begin();
 	LPCHARACTER pkChar = NULL;
-
+	
 	for (; iter != m_map_miss.end(); ++iter)
 	{
 		pkChar = CHARACTER_MANAGER::instance().FindByPID(iter->second);
@@ -392,7 +379,7 @@ bool COXEventManager::CloseEvent()
 		event_cancel(&m_timedEvent);
 	}
 
-	itertype(m_map_char) iter = m_map_char.begin();
+	auto iter = m_map_char.begin();
 
 	LPCHARACTER pkChar = NULL;
 	for (; iter != m_map_char.end(); ++iter)
@@ -410,43 +397,27 @@ bool COXEventManager::CloseEvent()
 
 bool COXEventManager::LogWinner()
 {
-	itertype(m_map_attender) iter = m_map_attender.begin();
+	auto iter = m_map_attender.begin();
+	
+	for (; iter != m_map_attender.end(); ++iter)
+	{
+		LPCHARACTER pkChar = CHARACTER_MANAGER::instance().FindByPID(iter->second);
+	}
+
+	return true;
+}
+
+bool COXEventManager::GiveItemToAttender(DWORD dwItemVnum, WORD count)
+{
+	auto iter = m_map_attender.begin();
 
 	for (; iter != m_map_attender.end(); ++iter)
 	{
 		LPCHARACTER pkChar = CHARACTER_MANAGER::instance().FindByPID(iter->second);
 
 		if (pkChar)
-			LogManager::instance().CharLog(pkChar, 0, "OXEVENT", "LastManStanding");
-	}
-
-	return true;
-}
-
-bool COXEventManager::GiveItemToAttender(DWORD dwItemVnum,
-#ifdef ENABLE_NEW_STACK_LIMIT
-int 
-#else
-BYTE 
-#endif
-count)
-{
-	itertype(m_map_attender) iter = m_map_attender.begin();
-
-	for (; iter != m_map_attender.end(); ++iter)
-	{
-		LPCHARACTER pkChar = CHARACTER_MANAGER::instance().FindByPID(iter->second);
-		if (pkChar && pkChar->IsPC())
 		{
-#ifdef ENABLE_BLOCK_MULTIFARM
-			if (pkChar->FindAffect(AFFECT_DROP_UNBLOCK, APPLY_NONE)) {
-				pkChar->AutoGiveItem(dwItemVnum, count);
-				LogManager::instance().ItemLog(pkChar->GetPlayerID(), 0, count, dwItemVnum, "OXEVENT_REWARD", "", pkChar->GetDesc()->GetHostName(), dwItemVnum);
-			}
-#else
 			pkChar->AutoGiveItem(dwItemVnum, count);
-			LogManager::instance().ItemLog(pkChar->GetPlayerID(), 0, count, dwItemVnum, "OXEVENT_REWARD", "", pkChar->GetDesc()->GetHostName(), dwItemVnum);
-#endif
 		}
 	}
 

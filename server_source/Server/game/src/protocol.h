@@ -1,6 +1,4 @@
-#ifndef __PROTOCOL_H__
-#define __PROTOCOL_H__
-#include "../../common/service.h"
+#pragma once
 
 inline const char *encode_byte(char ind)
 {
@@ -40,9 +38,7 @@ inline INT decode_4bytes(const void *a)
 
 #define packet_encode(buf, data, len) __packet_encode(buf, data, len, __FILE__, __LINE__)
 
-//#define DEFAULT_PACKET_BUFFER_SIZE 32768
-//#define DEFAULT_PACKET_BUFFER_SIZE 65536
-#define DEFAULT_PACKET_BUFFER_SIZE (150*1024)
+#define DEFAULT_PACKET_BUFFER_SIZE 65536
 
 inline bool __packet_encode(LPBUFFER pbuf, const void * data, int length, const char * file, int line)
 {
@@ -51,15 +47,9 @@ inline bool __packet_encode(LPBUFFER pbuf, const void * data, int length, const 
 
 	if (buffer_has_space(pbuf) < length)
 	{
-		//sys_err("buffer length exceeded buffer size: %d, encoding %d bytes (%s:%d)", buffer_size(pbuf), length, file, line);
 		return false;
 	}
 
-#ifndef _IMPROVED_PACKET_ENCRYPTION_
-	buffer_adjust_size(pbuf, length);
-#endif
 	buffer_write(pbuf, data, length);
 	return true;
 }
-
-#endif

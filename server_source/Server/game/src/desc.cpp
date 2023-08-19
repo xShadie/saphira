@@ -11,12 +11,13 @@
 #include "sectree_manager.h"
 #include "p2p.h"
 #include "buffer_manager.h"
+#ifdef ENABLE_SEQUENCE_SYSTEM
 #include "sequence.h"
+#endif
 #include "guild.h"
 #include "guild_manager.h"
 #include "locale_service.h"
 #include "log.h"
-#include "shutdown_manager.h"
 
 extern int max_bytes_written;
 extern int current_bytes_written;
@@ -71,15 +72,16 @@ void DESC::Initialize()
 
 	m_wP2PPort = 0;
 	m_bP2PChannel = 0;
-
-	m_bAdminMode = false;
 	m_bPong = true;
 	m_bChannelStatusRequested = false;
 
+#ifdef ENABLE_SEQUENCE_SYSTEM
 	m_iCurrentSequence = 0;
+#endif
 
 	m_pkLoginKey = NULL;
 	m_dwLoginKey = 0;
+
 #ifndef _IMPROVED_PACKET_ENCRYPTION_
 	memset( m_adwDecryptionKey, 0, sizeof(m_adwDecryptionKey) );
 	memset( m_adwEncryptionKey, 0, sizeof(m_adwEncryptionKey) );
@@ -90,14 +92,15 @@ void DESC::Initialize()
 	m_dwFileCRC = 0;
 	m_bHackCRCQuery = 0;
 
-	m_dwBillingExpireSecond = 0;
-
 	m_outtime = 0;
 	m_playtime = 0;
 	m_offtime = 0;
 
 	m_pkDisconnectEvent = NULL;
+
+#ifdef ENABLE_SEQUENCE_SYSTEM
 	m_seq_vector.clear();
+#endif
 }
 
 void DESC::Destroy()
@@ -142,8 +145,6 @@ void DESC::Destroy()
 
 			db_clientdesc->DBPacket(HEADER_GD_LOGOUT, m_dwHandle, &pack, sizeof(TLogoutPacket));
 		}
-
-		CShutdownManager::instance().RemoveDesc((LPDESC)this);
 	}
 
 	if (m_sock != INVALID_SOCKET)
@@ -160,7 +161,9 @@ void DESC::Destroy()
 		m_sock = INVALID_SOCKET;
 	}
 
+#ifdef ENABLE_SEQUENCE_SYSTEM
 	m_seq_vector.clear();
+#endif
 }
 
 EVENTFUNC(ping_event)
@@ -174,9 +177,6 @@ EVENTFUNC(ping_event)
 	}
 
 	LPDESC desc = info->desc;
-
-	if (desc->IsAdminMode())
-		return (ping_event_second_cycle);
 
 	if (!desc->IsPong())
 	{
@@ -193,14 +193,6 @@ EVENTFUNC(ping_event)
 		desc->Packet(&p, sizeof(struct packet_ping));
 		desc->SetPong(false);
 	}
-
-#ifdef ENABLE_LIMIT_TIME
-	if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
-	{
-		sys_err("Server life time expired.");
-		exit(1);
-	}
-#endif
 
 	desc->SendHandshake(get_dword_time(), 0);
 
@@ -226,7 +218,6 @@ bool DESC::Setup(LPFDWATCH _fdw, socket_t _fd, const struct sockaddr_in & c_rSoc
 	m_wPort			= c_rSockAddr.sin_port;
 	m_dwHandle		= _handle;
 
-	//NOTE: 이걸 나라별로 다르게 잡아야할 이유가 있나?
 	m_lpOutputBuffer = buffer_new(DEFAULT_PACKET_BUFFER_SIZE * 2);
 
 	m_iMinInputBufferLen = MAX_INPUT_LEN >> 1;
@@ -236,7 +227,6 @@ bool DESC::Setup(LPFDWATCH _fdw, socket_t _fd, const struct sockaddr_in & c_rSoc
 
 	fdwatch_add_fd(m_lpFdw, m_sock, this, FDW_READ, false);
 
-	// Ping Event
 	desc_event_info* info = AllocEventInfo<desc_event_info>();
 
 	info->desc = this;
@@ -245,19 +235,12 @@ bool DESC::Setup(LPFDWATCH _fdw, socket_t _fd, const struct sockaddr_in & c_rSoc
 	m_pkPingEvent = event_create(ping_event, info, ping_event_second_cycle);
 
 #ifndef _IMPROVED_PACKET_ENCRYPTION_
-	thecore_memcpy(m_adwEncryptionKey, "1234abcd5678efgh", sizeof(DWORD) * 4);
-	thecore_memcpy(m_adwDecryptionKey, "1234abcd5678efgh", sizeof(DWORD) * 4);
-#endif // _IMPROVED_PACKET_ENCRYPTION_
+	thecore_memcpy(m_adwEncryptionKey, LSS_SECURITY_KEY, sizeof(DWORD) * 4);
+	thecore_memcpy(m_adwDecryptionKey, LSS_SECURITY_KEY, sizeof(DWORD) * 4);
+#endif
 
-	// Set Phase to handshake
 	SetPhase(PHASE_HANDSHAKE);
 	StartHandshake(_handshake);
-
-#if defined(__IMPROVED_HANDSHAKE_PROCESS__)
-	// Set host handshake time
-	DESC_MANAGER::instance().AcceptHandshake(m_stHost.c_str(),
-		thecore_pulse() + PASSES_PER_SEC(INTRUSIVE_HANDSHAKE_PULSE));
-#endif
 
 	sys_log(0, "SYSTEM: new connection from [%s] fd: %d handshake %u output input_len %d, ptr %p",
 			m_stHost.c_str(), m_sock, m_dwHandshake, buffer_size(m_lpInputBuffer), this);
@@ -277,27 +260,34 @@ int DESC::ProcessInput()
 	}
 
 	buffer_adjust_size(m_lpInputBuffer, m_iMinInputBufferLen);
-	bytes_read = socket_read(m_sock, (char *) buffer_write_peek(m_lpInputBuffer), buffer_has_space(m_lpInputBuffer));
+	bytes_read = socket_read(m_sock, (char*)buffer_write_peek(m_lpInputBuffer), buffer_has_space(m_lpInputBuffer));
 
 	if (bytes_read < 0)
+	{
 		return -1;
+	}
 	else if (bytes_read == 0)
+	{
 		return 0;
+	}
 
 	buffer_write_proceed(m_lpInputBuffer, bytes_read);
 
 	if (!m_pInputProcessor)
+	{
 		sys_err("no input processor");
+	}
+
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 	else
 	{
-		if (cipher_.activated()) {
+		if (cipher_.activated()) 
+		{
 			cipher_.Decrypt(const_cast<void*>(buffer_read_peek(m_lpInputBuffer)), buffer_size(m_lpInputBuffer));
 		}
 
 		int iBytesProceed = 0;
 
-		// false가 리턴 되면 다른 phase로 바뀐 것이므로 다시 프로세스로 돌입한다!
 		while (!m_pInputProcessor->Process(this, buffer_read_peek(m_lpInputBuffer), buffer_size(m_lpInputBuffer), iBytesProceed))
 		{
 			buffer_read_proceed(m_lpInputBuffer, iBytesProceed);
@@ -311,7 +301,6 @@ int DESC::ProcessInput()
 	{
 		int iBytesProceed = 0;
 
-		// false가 리턴 되면 다른 phase로 바뀐 것이므로 다시 프로세스로 돌입한다!
 		while (!m_pInputProcessor->Process(this, buffer_read_peek(m_lpInputBuffer), buffer_size(m_lpInputBuffer), iBytesProceed))
 		{
 			buffer_read_proceed(m_lpInputBuffer, iBytesProceed);
@@ -324,27 +313,24 @@ int DESC::ProcessInput()
 	{
 		int iSizeBuffer = buffer_size(m_lpInputBuffer);
 
-		// 8바이트 단위로만 처리한다. 8바이트 단위에 부족하면 잘못된 암호화 버퍼를 복호화
-		// 할 가능성이 있으므로 짤라서 처리하기로 한다.
-		if (iSizeBuffer & 7) // & 7은 % 8과 같다. 2의 승수에서만 가능
+		if (iSizeBuffer & 7)
+		{
 			iSizeBuffer -= iSizeBuffer & 7;
+		}
 
 		if (iSizeBuffer > 0)
 		{
-			TEMP_BUFFER	tempbuf;
-			LPBUFFER lpBufferDecrypt = tempbuf.getptr();
-			buffer_adjust_size(lpBufferDecrypt, iSizeBuffer);
+			LPBUFFER lpBufferDecrypt = buffer_new(iSizeBuffer);
 
-			int iSizeAfter = TEA_Decrypt((DWORD *) buffer_write_peek(lpBufferDecrypt),
-					(DWORD *) buffer_read_peek(m_lpInputBuffer),
-					GetDecryptionKey(),
-					iSizeBuffer);
+			int iSizeAfter = TEA_Decrypt((DWORD*)buffer_write_peek(lpBufferDecrypt),
+				(DWORD*)buffer_read_peek(m_lpInputBuffer),
+				GetDecryptionKey(),
+				iSizeBuffer);
 
 			buffer_write_proceed(lpBufferDecrypt, iSizeAfter);
 
 			int iBytesProceed = 0;
 
-			// false가 리턴 되면 다른 phase로 바뀐 것이므로 다시 프로세스로 돌입한다!
 			while (!m_pInputProcessor->Process(this, buffer_read_peek(lpBufferDecrypt), buffer_size(lpBufferDecrypt), iBytesProceed))
 			{
 				if (iBytesProceed > iSizeBuffer)
@@ -362,10 +348,11 @@ int DESC::ProcessInput()
 				iBytesProceed = 0;
 			}
 
+			buffer_delete(lpBufferDecrypt);
 			buffer_read_proceed(m_lpInputBuffer, iBytesProceed);
 		}
 	}
-#endif // _IMPROVED_PACKET_ENCRYPTION_
+#endif
 
 	return (bytes_read);
 }
@@ -389,8 +376,6 @@ int DESC::ProcessOutput()
 
 	if (result == 0)
 	{
-		//sys_log(0, "%d bytes written to %s first %u", bytes_to_write, GetHostName(), *(BYTE *) buffer_read_peek(m_lpOutputBuffer));
-		//Log("%d bytes written", bytes_to_write);
 		max_bytes_written = MAX(bytes_to_write, max_bytes_written);
 
 		total_bytes_written += bytes_to_write;
@@ -420,12 +405,11 @@ void DESC::Packet(const void * c_pvData, int iSize)
 {
 	assert(iSize > 0);
 
-	if (m_iPhase == PHASE_CLOSE) // 끊는 상태면 보내지 않는다.
+	if (m_iPhase == PHASE_CLOSE)
 		return;
 
 	if (m_stRelayName.length() != 0)
 	{
-		// Relay 패킷은 암호화하지 않는다.
 		TPacketGGRelay p;
 
 		p.bHeader = HEADER_GG_RELAY;
@@ -459,10 +443,10 @@ void DESC::Packet(const void * c_pvData, int iSize)
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 		void* buf = buffer_write_peek(m_lpOutputBuffer);
 
-
 		if (packet_encode(m_lpOutputBuffer, c_pvData, iSize))
 		{
-			if (cipher_.activated()) {
+			if (cipher_.activated()) 
+			{
 				cipher_.Encrypt(buf, iSize);
 			}
 		}
@@ -482,23 +466,13 @@ void DESC::Packet(const void * c_pvData, int iSize)
 		{
 			if (buffer_has_space(m_lpOutputBuffer) < iSize + 8)
 			{
-#ifndef _IMPROVED_PACKET_ENCRYPTION_
-				buffer_adjust_size(m_lpOutputBuffer, iSize);
-				if (buffer_has_space(m_lpOutputBuffer) < iSize + 8) {
-				sys_err("desc buffer mem_size overflow. memsize(%u) write_pos(%u) iSize(%d)", m_lpOutputBuffer->mem_size, m_lpOutputBuffer->write_point_pos, iSize);
-				m_iPhase = PHASE_CLOSE;
-				}
-#else
-				sys_err("desc buffer mem_size overflow. memsize(%u) write_pos(%u) iSize(%d)",
+				sys_err("desc buffer mem_size overflow. memsize(%u) write_pos(%u) iSize(%d)", 
 						m_lpOutputBuffer->mem_size, m_lpOutputBuffer->write_point_pos, iSize);
 
 				m_iPhase = PHASE_CLOSE;
-#endif
 			}
 			else
 			{
-				// 암호화에 필요한 충분한 버퍼 크기를 확보한다.
-				/* buffer_adjust_size(m_lpOutputBuffer, iSize + 8); */
 				DWORD * pdwWritePoint = (DWORD *) buffer_write_peek(m_lpOutputBuffer);
 
 				if (packet_encode(m_lpOutputBuffer, c_pvData, iSize))
@@ -510,12 +484,11 @@ void DESC::Packet(const void * c_pvData, int iSize)
 				}
 			}
 		}
-#endif // _IMPROVED_PACKET_ENCRYPTION_
+#endif
 
 		SAFE_BUFFER_DELETE(m_lpBufferedOutputBuffer);
 	}
 
-	//sys_log(0, "%d bytes written (first byte %d)", iSize, *(BYTE *) c_pvData);
 	if (m_iPhase != PHASE_CLOSE)
 		fdwatch_add_fd(m_lpFdw, m_sock, this, FDW_WRITE, true);
 }
@@ -540,8 +513,6 @@ void DESC::SetPhase(int _phase)
 	switch (m_iPhase)
 	{
 		case PHASE_CLOSE:
-			// 메신저가 캐릭터단위가 되면서 삭제
-			//MessengerManager::instance().Logout(GetAccountTable().login);
 			m_pInputProcessor = &m_inputClose;
 			break;
 
@@ -550,8 +521,6 @@ void DESC::SetPhase(int _phase)
 			break;
 
 		case PHASE_SELECT:
-			// 메신저가 캐릭터단위가 되면서 삭제
-			//MessengerManager::instance().Logout(GetAccountTable().login); // 의도적으로 break 안검
 		case PHASE_LOGIN:
 		case PHASE_LOADING:
 #ifndef _IMPROVED_PACKET_ENCRYPTION_
@@ -627,11 +596,8 @@ void DESC::Log(const char * format, ...)
 
 void DESC::StartHandshake(DWORD _handshake)
 {
-	// Handshake
 	m_dwHandshake = _handshake;
-
 	SendHandshake(get_dword_time(), 0);
-
 	m_iHandshakeRetry = 0;
 }
 
@@ -677,7 +643,7 @@ bool DESC::HandshakeProcess(DWORD dwTime, long lDelta, bool bInfiniteRetry)
 
 		m_dwClientTime = dwCurTime;
 		m_bHandshaking = false;
-		return true;
+		return true; 
 	}
 
 	long lNewDelta = (long) (dwCurTime - dwTime) / 2;
@@ -691,8 +657,10 @@ bool DESC::HandshakeProcess(DWORD dwTime, long lDelta, bool bInfiniteRetry)
 	sys_log(1, "Handshake: ServerTime %u dwTime %u lDelta %d SentTime %u lNewDelta %d", dwCurTime, dwTime, lDelta, m_dwHandshakeSentTime, lNewDelta);
 
 	if (!bInfiniteRetry)
-		if (++m_iHandshakeRetry > HANDSHAKE_RETRY_LIMIT) {
-			sys_err("handshake retry limit reached! (limit %d character %s)", HANDSHAKE_RETRY_LIMIT, GetCharacter() ? GetCharacter()->GetName() : "!NO CHARACTER!");
+		if (++m_iHandshakeRetry > HANDSHAKE_RETRY_LIMIT)
+		{
+			sys_err("handshake retry limit reached! (limit %d character %s)", 
+					HANDSHAKE_RETRY_LIMIT, GetCharacter() ? GetCharacter()->GetName() : "!NO CHARACTER!");
 			SetPhase(PHASE_CLOSE);
 			return false;
 		}
@@ -718,8 +686,8 @@ void DESC::SendKeyAgreement()
 
 	size_t data_length = TPacketKeyAgreement::MAX_DATA_LEN;
 	size_t agreed_length = cipher_.Prepare(packet.data, &data_length);
-	if (agreed_length == 0) {
-		// Initialization failure
+	if (agreed_length == 0) 
+	{
 		SetPhase(PHASE_CLOSE);
 		return;
 	}
@@ -750,7 +718,7 @@ bool DESC::IsCipherPrepared()
 {
 	return cipher_.IsKeyPrepared();
 }
-#endif // #ifdef _IMPROVED_PACKET_ENCRYPTION_
+#endif
 
 void DESC::SetRelay(const char * c_pszName)
 {
@@ -876,30 +844,21 @@ bool DESC::DelayedDisconnect(int iSec)
 
 void DESC::DisconnectOfSameLogin()
 {
-	if (GetCharacter()) {
+	if (GetCharacter())
+	{
 		if (m_pkDisconnectEvent)
 			return;
 
-#ifdef TEXTS_IMPROVEMENT
-		GetCharacter()->ChatPacketNew(CHAT_TYPE_INFO, 295, "");
-#endif
-		DelayedDisconnect(3);
+		GetCharacter()->ChatPacket(CHAT_TYPE_INFO, "[LS;486]");
+		DelayedDisconnect(5);
 	}
-	else {
+	else
+	{
 		SetPhase(PHASE_CLOSE);
 	}
 }
 
-void DESC::SetAdminMode()
-{
-	m_bAdminMode = true;
-}
-
-bool DESC::IsAdminMode()
-{
-	return m_bAdminMode;
-}
-
+#ifdef ENABLE_SEQUENCE_SYSTEM
 BYTE DESC::GetSequence()
 {
 	return gc_abSequence[m_iCurrentSequence];
@@ -910,6 +869,7 @@ void DESC::SetNextSequence()
 	if (++m_iCurrentSequence == SEQUENCE_MAX_NUM)
 		m_iCurrentSequence = 0;
 }
+#endif
 
 void DESC::SendLoginSuccessPacket()
 {
@@ -917,21 +877,21 @@ void DESC::SendLoginSuccessPacket()
 
 	TPacketGCLoginSuccess p;
 
-	p.bHeader    = HEADER_GC_LOGIN_SUCCESS_NEWSLOT;
+	p.bHeader    = HEADER_GC_LOGIN_SUCCESS;
 
 	p.handle     = GetHandle();
-	p.random_key = DESC_MANAGER::instance().MakeRandomKey(GetHandle()); // FOR MARK
+	p.random_key = DESC_MANAGER::instance().MakeRandomKey(GetHandle());
 	thecore_memcpy(p.players, rTable.players, sizeof(rTable.players));
 
 	for (int i = 0; i < PLAYER_PER_ACCOUNT; ++i)
-	{
+	{   
 		CGuild* g = CGuildManager::instance().GetLinkedGuild(rTable.players[i].dwID);
 
 		if (g)
-		{
+		{   
 			p.guild_id[i] = g->GetID();
 			strlcpy(p.guild_name[i], g->GetName(), sizeof(p.guild_name[i]));
-		}
+		}   
 		else
 		{
 			p.guild_id[i] = 0;
@@ -941,27 +901,6 @@ void DESC::SendLoginSuccessPacket()
 
 	Packet(&p, sizeof(TPacketGCLoginSuccess));
 }
-
-//void DESC::SendServerStatePacket(int nIndex)
-//{
-//	TPacketGCStateCheck rp;
-//
-//	int iTotal;
-//	int * paiEmpireUserCount;
-//	int iLocal;
-//
-//	DESC_MANAGER::instance().GetUserCount(iTotal, &paiEmpireUserCount, iLocal);
-//
-//	rp.header	= 1;
-//	rp.key		= 0;
-//	rp.index	= nIndex;
-//
-//	if (g_bNoMoreClient) rp.state = 0;
-//	else rp.state = iTotal > g_iFullUserCount ? 3 : iTotal > g_iBusyUserCount ? 2 : 1;
-//
-//	this->Packet(&rp, sizeof(rp));
-//	//printf("STATE_CHECK PACKET PROCESSED.\n");
-//}
 
 void DESC::SetLoginKey(DWORD dwKey)
 {
@@ -983,14 +922,14 @@ DWORD DESC::GetLoginKey()
 }
 
 const BYTE* GetKey_20050304Myevan()
-{
+{   
 	static bool bGenerated = false;
-	static DWORD s_adwKey[1938];
+	static DWORD s_adwKey[1938]; 
 
-	if (!bGenerated)
+	if (!bGenerated) 
 	{
 		bGenerated = true;
-		DWORD seed = 1491971513;
+		DWORD seed = 1491971513; 
 
 		for (UINT i = 0; i < BYTE(seed); ++i)
 		{
@@ -1014,11 +953,11 @@ void DESC::SetSecurityKey(const DWORD * c_pdwKey)
 	thecore_memcpy(&m_adwDecryptionKey, c_pdwKey, 16);
 	TEA_Encrypt(&m_adwEncryptionKey[0], &m_adwDecryptionKey[0], (const DWORD *) c_pszKey, 16);
 
-	sys_log(0, "SetSecurityKey decrypt %u %u %u %u encrypt %u %u %u %u",
+	sys_log(0, "SetSecurityKey decrypt %u %u %u %u encrypt %u %u %u %u", 
 			m_adwDecryptionKey[0], m_adwDecryptionKey[1], m_adwDecryptionKey[2], m_adwDecryptionKey[3],
 			m_adwEncryptionKey[0], m_adwEncryptionKey[1], m_adwEncryptionKey[2], m_adwEncryptionKey[3]);
 }
-#endif // _IMPROVED_PACKET_ENCRYPTION_
+#endif
 
 void DESC::AssembleCRCMagicCube(BYTE bProcPiece, BYTE bFilePiece)
 {
@@ -1046,16 +985,7 @@ void DESC::AssembleCRCMagicCube(BYTE bProcPiece, BYTE bFilePiece)
 	}
 }
 
-void DESC::SetBillingExpireSecond(DWORD dwSec)
-{
-	m_dwBillingExpireSecond = dwSec;
-}
-
-DWORD DESC::GetBillingExpireSecond()
-{
-	return m_dwBillingExpireSecond;
-}
-
+#ifdef ENABLE_SEQUENCE_SYSTEM
 void DESC::push_seq(BYTE hdr, BYTE seq)
 {
 	if (m_seq_vector.size()>=20)
@@ -1066,6 +996,7 @@ void DESC::push_seq(BYTE hdr, BYTE seq)
 	seq_t info = { hdr, seq };
 	m_seq_vector.push_back(info);
 }
+#endif
 
 BYTE DESC::GetEmpire()
 {
@@ -1095,41 +1026,4 @@ void DESC::ChatPacket(BYTE type, const char * format, ...)
 
 	Packet(buf.read_peek(), buf.size());
 }
-
-#ifdef TEXTS_IMPROVEMENT
-void DESC::ChatPacketNew(BYTE type, DWORD idx, const char * format, ...) {
-	if (type != CHAT_TYPE_INFO && 
-		type != CHAT_TYPE_NOTICE && 
-		type != CHAT_TYPE_BIG_NOTICE
-#ifdef ENABLE_DICE_SYSTEM
-		 && type != CHAT_TYPE_DICE_INFO
-#endif
-#ifdef ENABLE_NEW_CHAT
-		 && type != CHAT_TYPE_INFO_EXP
-		 && type != CHAT_TYPE_INFO_ITEM
-		 && type != CHAT_TYPE_INFO_VALUE
-#endif
-	)
-		return;
-
-	char chatbuf[256];
-	va_list args;
-	va_start(args, format);
-	int len = vsnprintf(chatbuf, sizeof(chatbuf), format, args);
-	va_end(args);
-
-	TPacketGCChatNew p;
-	p.header = HEADER_GC_CHAT_NEW;
-	p.type = type;
-	p.idx = idx;
-	p.size = sizeof(p) + len;
-
-	TEMP_BUFFER buf;
-	buf.write(&p, sizeof(p));
-	if (len > 0) {
-		buf.write(chatbuf, len);
-	}
-	Packet(buf.read_peek(), buf.size());
-}
-#endif
 

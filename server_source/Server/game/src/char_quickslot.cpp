@@ -6,10 +6,7 @@
 #include "packet.h"
 #include "item.h"
 
-/////////////////////////////////////////////////////////////////////////////
-// QUICKSLOT HANDLING
-/////////////////////////////////////////////////////////////////////////////
-void CHARACTER::SyncQuickslot(BYTE bType, BYTE bOldPos, BYTE bNewPos) // bNewPos == 255 ¸é DELETE
+void CHARACTER::SyncQuickslot(BYTE bType, BYTE bOldPos, BYTE bNewPos)
 {
 	if (bOldPos == bNewPos)
 		return;
@@ -60,33 +57,16 @@ bool CHARACTER::SetQuickslot(BYTE pos, TQuickslot & rSlot)
 			DelQuickslot(i);
 	}
 
-#ifdef ENABLE_EXTRA_INVENTORY
-	BYTE type = rSlot.type == QUICKSLOT_TYPE_ITEM_EXTRA ? EXTRA_INVENTORY : INVENTORY;
-	TItemPos srcCell(type, rSlot.pos);
-#else
 	TItemPos srcCell(INVENTORY, rSlot.pos);
-#endif
 
 	switch (rSlot.type)
 	{
-#ifdef ENABLE_EXTRA_INVENTORY
-		case QUICKSLOT_TYPE_ITEM_EXTRA:
-			{
-				if ((WORD) rSlot.pos >= EXTRA_INVENTORY_MAX_NUM) {
-					return false;
-				}
-
-				break;
-			}
-#endif
-
 		case QUICKSLOT_TYPE_ITEM:
-			{
-				if (false == srcCell.IsDefaultInventoryPosition() && false == srcCell.IsBeltInventoryPosition()) {
-					return false;
-				}
-			}
+			if (false == srcCell.IsDefaultInventoryPosition() && false == srcCell.IsBeltInventoryPosition())
+				return false;
+
 			break;
+
 		case QUICKSLOT_TYPE_SKILL:
 			if ((int) rSlot.pos >= SKILL_MAX_NUM)
 				return false;
@@ -138,7 +118,6 @@ bool CHARACTER::SwapQuickslot(BYTE a, BYTE b)
 	if (a >= QUICKSLOT_MAX_NUM || b >= QUICKSLOT_MAX_NUM)
 		return false;
 
-	// Äü ½½·Ô ÀÚ¸®¸¦ ¼­·Î ¹Ù²Û´Ù.
 	quickslot = m_quickslot[a];
 
 	m_quickslot[a] = m_quickslot[b];

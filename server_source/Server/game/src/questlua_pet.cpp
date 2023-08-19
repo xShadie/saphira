@@ -1,5 +1,4 @@
 #include "stdafx.h"
-
 #include "questlua.h"
 #include "questmanager.h"
 #include "horsename_manager.h"
@@ -7,22 +6,14 @@
 #include "affect.h"
 #include "config.h"
 #include "utils.h"
-
 #include "PetSystem.h"
+#include "quest_sys_err.h"
 
-#undef sys_err
-#ifndef __WIN32__
-#define sys_err(fmt, args...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, ##args)
-#else
-#define sys_err(fmt, ...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, __VA_ARGS__)
-#endif
+extern int (check_name) (const char * str);
 
 namespace quest
 {
-
-#ifdef __PET_SYSTEM__
-	// syntax in LUA: pet.summon(mob_vnum, pet's name, (bool)run to me from far away)
-	ALUA(pet_summon)
+	int pet_summon(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		CPetSystem* petSystem = ch->GetPetSystem();
@@ -33,28 +24,19 @@ namespace quest
 			return 1;
 		}
 
-#ifdef ENABLE_PVP_ADVANCED
-		if ((ch->GetDuel("BlockPet")))
-		{
-#ifdef TEXTS_IMPROVEMENT
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 516, "");
-#endif
-			lua_pushnumber (L, 0);
-			return 1;
-		}
-#endif
-
 		if (0 == petSystem)
 		{
 			lua_pushnumber (L, 0);
 			return 1;
 		}
 
-		// 소환수의 vnum
 		DWORD mobVnum= lua_isnumber(L, 1) ? lua_tonumber(L, 1) : 0;
 
-		// 소환수의 이름
-		CPetActor* pet = petSystem->Summon(mobVnum, pItem, "", false);
+		const char* petName = lua_isstring(L, 2) ? lua_tostring(L, 2) : 0;
+
+		bool bFromFar = lua_isboolean(L, 3) ? lua_toboolean(L, 3) : false;
+
+		CPetActor* pet = petSystem->Summon(mobVnum, pItem, petName, bFromFar);
 
 		if (pet != NULL)
 			lua_pushnumber (L, pet->GetVID());
@@ -64,33 +46,21 @@ namespace quest
 		return 1;
 	}
 
-	// syntax: pet.unsummon(mob_vnum)
-	ALUA(pet_unsummon)
+	int pet_unsummon(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-		if (!ch)
-			return 0;
-		
 		CPetSystem* petSystem = ch->GetPetSystem();
 
 		if (0 == petSystem)
 			return 0;
 
-		// 소환수의 vnum
 		DWORD mobVnum= lua_isnumber(L, 1) ? lua_tonumber(L, 1) : 0;
 
 		petSystem->Unsummon(mobVnum);
-#ifdef ENABLE_RECALL
-		const CAffect* pAffect = ch->FindAffect(AFFECT_RECALL1);
-		if (pAffect) {
-			ch->RemoveAffect(const_cast<CAffect*>(pAffect));
-		}
-#endif
 		return 1;
 	}
 
-	// syntax: pet.unsummon(mob_vnum)
-	ALUA(pet_count_summoned)
+	int pet_count_summoned(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		CPetSystem* petSystem = ch->GetPetSystem();
@@ -105,8 +75,7 @@ namespace quest
 		return 1;
 	}
 
-	// syntax: pet.is_summon(mob_vnum)
-	ALUA(pet_is_summon)
+	int pet_is_summon(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		CPetSystem* petSystem = ch->GetPetSystem();
@@ -114,7 +83,6 @@ namespace quest
 		if (0 == petSystem)
 			return 0;
 
-		// 소환수의 vnum
 		DWORD mobVnum= lua_isnumber(L, 1) ? lua_tonumber(L, 1) : 0;
 
 		CPetActor* petActor = petSystem->GetByVnum(mobVnum);
@@ -127,7 +95,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(pet_spawn_effect)
+	int pet_spawn_effect(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		CPetSystem* petSystem = ch->GetPetSystem();
@@ -165,6 +133,4 @@ namespace quest
 
 		CQuestManager::instance().AddLuaFunctionTable("pet", pet_functions);
 	}
-#endif
-
 }

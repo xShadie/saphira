@@ -29,7 +29,7 @@ void CMob::AddSkillSplash(int iIndex, DWORD dwTiming, DWORD dwHitDistance)
 {
 	if (iIndex >= MOB_SKILL_MAX_NUM || iIndex < 0)
 		return;
-	
+
 	m_mobSkillInfo[iIndex].vecSplashAttack.push_back(TMobSplashAttackInfo(dwTiming, dwHitDistance));
 }
 
@@ -65,11 +65,7 @@ bool CMobManager::Initialize(TMobTable * pTable, int iSize)
 		thecore_memcpy(&pkMob->m_table, t, sizeof(TMobTable));
 
 		m_map_pkMobByVnum.insert(std::map<DWORD, CMob *>::value_type(t->dwVnum, pkMob));
-#ifdef ENABLE_MULTI_NAMES
-		m_map_pkMobByName.insert(std::map<std::string, CMob *>::value_type(t->szLocaleName[DEFAULT_LANGUAGE], pkMob));
-#else
 		m_map_pkMobByName.insert(std::map<std::string, CMob *>::value_type(t->szLocaleName, pkMob));
-#endif 
 
 		int SkillCount = 0;
 
@@ -77,24 +73,12 @@ bool CMobManager::Initialize(TMobTable * pTable, int iSize)
 			if (pkMob->m_table.Skills[j].dwVnum)
 				++SkillCount;
 
-		sys_log(0, "MOB: #%-5d %-30s LEVEL %u HP %u DEF %u EXP %u DROP_ITEM_VNUM %u SKILL_COUNT %d",
-				t->dwVnum, 
-#ifdef ENABLE_MULTI_NAMES
-				t->szLocaleName[DEFAULT_LANGUAGE],
-#else
-				t->szLocaleName,
-#endif
-				t->bLevel, t->dwMaxHP, t->wDef, t->dwExp, t->dwDropItemVnum, SkillCount);
-
-
 		if (t->bType == CHAR_TYPE_NPC || t->bType == CHAR_TYPE_WARP || t->bType == CHAR_TYPE_GOTO)
 			CHARACTER_MANAGER::instance().RegisterRaceNum(t->dwVnum);
 
 		quest::CQuestManager::instance().RegisterNPCVnum(t->dwVnum);
 	}
 
-
-	// LOCALE_SERVICE
 	const int FILE_NAME_LEN = 256;
 	char szGroupFileName[FILE_NAME_LEN];
 	char szGroupGroupFileName[FILE_NAME_LEN];
@@ -103,7 +87,7 @@ bool CMobManager::Initialize(TMobTable * pTable, int iSize)
 			"%s/group.txt", LocaleService_GetBasePath().c_str());
 	snprintf(szGroupGroupFileName, sizeof(szGroupGroupFileName),
 			"%s/group_group.txt", LocaleService_GetBasePath().c_str());
-
+	
 	if (!LoadGroup(szGroupFileName))
 	{
 		sys_err("cannot load %s", szGroupFileName);
@@ -114,10 +98,8 @@ bool CMobManager::Initialize(TMobTable * pTable, int iSize)
 		sys_err("cannot load %s", szGroupGroupFileName);
 		thecore_shutdown();
 	}
-	// END_OF_LOCALE_SERVICE
 
-	//exit(1);
-	CHARACTER_MANAGER::instance().for_each_pc(std::bind1st(std::mem_fun(&CMobManager::RebindMobProto),this));
+	CHARACTER_MANAGER::instance().for_each_pc(std::bind(&CMobManager::RebindMobProto, this, std::placeholders::_1));
 	return true;
 }
 
@@ -134,7 +116,7 @@ void CMobManager::RebindMobProto(LPCHARACTER ch)
 
 const CMob * CMobManager::Get(DWORD dwVnum)
 {
-	std::map<DWORD, CMob *>::iterator it = m_map_pkMobByVnum.find(dwVnum);
+	auto it = m_map_pkMobByVnum.find(dwVnum);
 
 	if (it == m_map_pkMobByVnum.end())
 		return NULL;
@@ -144,11 +126,9 @@ const CMob * CMobManager::Get(DWORD dwVnum)
 
 const CMob * CMobManager::Get(const char * c_pszName, bool bIsAbbrev)
 {
-	std::map<std::string, CMob *>::iterator it;
-
 	if (!bIsAbbrev)
 	{
-		it = m_map_pkMobByName.find(c_pszName);
+		auto it = m_map_pkMobByName.find(c_pszName);
 
 		if (it == m_map_pkMobByName.end())
 			return NULL;
@@ -157,7 +137,7 @@ const CMob * CMobManager::Get(const char * c_pszName, bool bIsAbbrev)
 	}
 
 	int len = strlen(c_pszName);
-	it = m_map_pkMobByName.begin();
+	auto it = m_map_pkMobByName.begin();
 
 	while (it != m_map_pkMobByName.end())
 	{
@@ -192,7 +172,7 @@ void CMobManager::IncRegenCount(BYTE bRegenType, DWORD dwVnum, int iCount, int i
 
 		case REGEN_TYPE_GROUP_GROUP:
 			{
-				std::map<DWORD, CMobGroupGroup *>::iterator it = m_map_pkMobGroupGroup.find(dwVnum);
+				auto it = m_map_pkMobGroupGroup.find(dwVnum);
 
 				if (it == m_map_pkMobGroupGroup.end())
 					return;
@@ -200,7 +180,6 @@ void CMobManager::IncRegenCount(BYTE bRegenType, DWORD dwVnum, int iCount, int i
 				std::vector<DWORD>& v = it->second->m_vec_dwMemberVnum;
 				for (DWORD i=0; i<v.size(); i++)
 				{
-					//m_mapRegenCount[v[i]] += iCount * 86400. / iTime / v.size();
 					CMobGroup * pkGroup = CMobManager::Instance().GetGroup(v[i]);
 					if (!pkGroup)
 						return;
@@ -214,28 +193,9 @@ void CMobManager::IncRegenCount(BYTE bRegenType, DWORD dwVnum, int iCount, int i
 	}
 }
 
-void CMobManager::DumpRegenCount(const char* c_szFilename)
-{
-	FILE* fp = fopen(c_szFilename, "w");
-
-	if (fp)
-	{
-		std::map<DWORD, double>::iterator it;
-
-		fprintf(fp,"MOB_VNUM\tCOUNT\n");
-
-		for (it = m_mapRegenCount.begin(); it != m_mapRegenCount.end(); ++it)
-		{
-			fprintf(fp,"%u\t%g\n", it->first, it->second);
-		}
-
-		fclose(fp);
-	}
-}
-
 DWORD CMobManager::GetGroupFromGroupGroup(DWORD dwVnum)
 {
-	std::map<DWORD, CMobGroupGroup *>::iterator it = m_map_pkMobGroupGroup.find(dwVnum);
+	auto it = m_map_pkMobGroupGroup.find(dwVnum);
 
 	if (it == m_map_pkMobGroupGroup.end())
 		return 0;
@@ -245,7 +205,7 @@ DWORD CMobManager::GetGroupFromGroupGroup(DWORD dwVnum)
 
 CMobGroup * CMobManager::GetGroup(DWORD dwVnum)
 {
-	std::map<DWORD, CMobGroup *>::iterator it = m_map_pkMobGroup.find(dwVnum);
+	auto it = m_map_pkMobGroup.find(dwVnum);
 
 	if (it == m_map_pkMobGroup.end())
 		return NULL;
@@ -253,86 +213,6 @@ CMobGroup * CMobManager::GetGroup(DWORD dwVnum)
 	return it->second;
 }
 
-#ifdef REGEN_ANDRA
-bool CMobManager::LoadGroupGroup(const char * c_pszFileName, bool isReloading)
-{
-	CTextFileLoader loader;
-
-	if (!loader.Load(c_pszFileName))
-		return false;
-
-	std::string stName;
-
-	std::map<DWORD, CMobGroupGroup *> tempLoader;
-	if (isReloading)
-		sys_log(0, "RELOADING group group: %s", c_pszFileName);
-
-	for (DWORD i = 0; i < loader.GetChildNodeCount(); ++i)
-	{
-		loader.SetChildNode(i);
-
-		loader.GetCurrentNodeName(&stName);
-
-		int iVnum;
-
-		if (!loader.GetTokenInteger("vnum", &iVnum))
-		{
-			sys_err("LoadGroupGroup : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
-			loader.SetParentNode();
-			continue;
-		}
-
-		TTokenVector * pTok;
-
-		CMobGroupGroup * pkGroup = M2_NEW CMobGroupGroup(iVnum);
-
-		for (int k = 1; k < 256; ++k)
-		{
-			char buf[4];
-			snprintf(buf, sizeof(buf), "%d", k);
-
-			if (loader.GetTokenVector(buf, &pTok))
-			{
-				DWORD dwMobVnum = 0;
-				str_to_number(dwMobVnum, pTok->at(0).c_str());
-
-				// ADD_MOB_GROUP_GROUP_PROB
-				int prob = 1;
-				if (pTok->size() > 1)
-					str_to_number(prob, pTok->at(1).c_str());
-				// END_OF_ADD_MOB_GROUP_GROUP_PROB
-
-				if (dwMobVnum)
-					pkGroup->AddMember(dwMobVnum);
-
-				continue;
-			}
-
-			break;
-		}
-
-		loader.SetParentNode();
-
-		if (isReloading)
-			tempLoader.insert(std::make_pair((DWORD)iVnum, pkGroup));
-		else
-			m_map_pkMobGroupGroup.insert(std::make_pair((DWORD)iVnum, pkGroup));
-	}
-
-	if (isReloading)
-	{
-		for (std::map<DWORD, CMobGroupGroup *>::iterator it = m_map_pkMobGroupGroup.begin(); it != m_map_pkMobGroupGroup.end(); it++)
-			M2_DELETE(it->second);
-		m_map_pkMobGroupGroup.clear();
-		for (std::map<DWORD, CMobGroupGroup *>::iterator it = tempLoader.begin(); it != tempLoader.end(); it++)
-		{
-			m_map_pkMobGroupGroup[it->first] = it->second;
-		}
-	}
-
-	return true;
-}
-#else
 bool CMobManager::LoadGroupGroup(const char * c_pszFileName)
 {
 	CTextFileLoader loader;
@@ -371,11 +251,9 @@ bool CMobManager::LoadGroupGroup(const char * c_pszFileName)
 				DWORD dwMobVnum = 0;
 				str_to_number(dwMobVnum, pTok->at(0).c_str());
 
-				// ADD_MOB_GROUP_GROUP_PROB
 				int prob = 1;
 				if (pTok->size() > 1)
 					str_to_number(prob, pTok->at(1).c_str());
-				// END_OF_ADD_MOB_GROUP_GROUP_PROB
 
 				if (dwMobVnum)
 					pkGroup->AddMember(dwMobVnum);
@@ -393,101 +271,7 @@ bool CMobManager::LoadGroupGroup(const char * c_pszFileName)
 
 	return true;
 }
-#endif
 
-#ifdef REGEN_ANDRA
-bool CMobManager::LoadGroup(const char * c_pszFileName, bool isReloading)
-{
-	CTextFileLoader loader;
-
-	if (!loader.Load(c_pszFileName))
-		return false;
-
-	std::string stName;
-
-	std::map<DWORD, CMobGroup *> tempLoader;
-	if (isReloading)
-		sys_log(0, "RELOADING groups: %s", c_pszFileName);
-
-	for (DWORD i = 0; i < loader.GetChildNodeCount(); ++i)
-	{
-		loader.SetChildNode(i);
-
-		loader.GetCurrentNodeName(&stName);
-
-		int iVnum;
-
-		if (!loader.GetTokenInteger("vnum", &iVnum))
-		{
-			sys_err("LoadGroup : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
-			loader.SetParentNode();
-			continue;
-		}
-
-		TTokenVector * pTok;
-
-		if (!loader.GetTokenVector("leader", &pTok))
-		{
-			sys_err("LoadGroup : Syntax error %s : no leader, node %s", c_pszFileName, stName.c_str());
-			loader.SetParentNode();
-			continue;
-		}
-
-		if (pTok->size() < 2)
-		{
-			sys_err("LoadGroup : Syntax error %s : no leader vnum, node %s", c_pszFileName, stName.c_str());
-			loader.SetParentNode();
-			continue;
-		}
-
-		CMobGroup * pkGroup = M2_NEW CMobGroup;
-
-		pkGroup->Create(iVnum, stName);
-		DWORD vnum = 0;
-		str_to_number(vnum, pTok->at(1).c_str());
-		pkGroup->AddMember(vnum);
-
-		sys_log(0, "GROUP: %-5d %s", iVnum, stName.c_str());
-		sys_log(0, "               %s %s", pTok->at(0).c_str(), pTok->at(1).c_str());
-
-		for (int k = 1; k < 256; ++k)
-		{
-			char buf[4];
-			snprintf(buf, sizeof(buf), "%d", k);
-
-			if (loader.GetTokenVector(buf, &pTok))
-			{
-				sys_log(0, "               %s %s", pTok->at(0).c_str(), pTok->at(1).c_str());
-				DWORD vnum = 0;
-				str_to_number(vnum, pTok->at(1).c_str());
-				pkGroup->AddMember(vnum);
-				continue;
-			}
-
-			break;
-		}
-
-		loader.SetParentNode();
-		if (isReloading)
-			tempLoader.insert(std::map<DWORD, CMobGroup *>::value_type(iVnum, pkGroup));
-		else
-			m_map_pkMobGroup.insert(std::map<DWORD, CMobGroup *>::value_type(iVnum, pkGroup));
-	}
-
-	if (isReloading)
-	{
-		for (std::map<DWORD, CMobGroup *>::iterator it = m_map_pkMobGroup.begin(); it != m_map_pkMobGroup.end(); it++)
-			M2_DELETE(it->second);
-		m_map_pkMobGroup.clear();
-		for (std::map<DWORD, CMobGroup *>::iterator it = tempLoader.begin(); it != tempLoader.end(); it++)
-		{
-			m_map_pkMobGroup[it->first] = it->second;
-		}
-	}
-
-	return true;
-}
-#else
 bool CMobManager::LoadGroup(const char * c_pszFileName)
 {
 	CTextFileLoader loader;
@@ -535,9 +319,6 @@ bool CMobManager::LoadGroup(const char * c_pszFileName)
 		str_to_number(vnum, pTok->at(1).c_str());
 		pkGroup->AddMember(vnum);
 
-		sys_log(0, "GROUP: %-5d %s", iVnum, stName.c_str());
-		sys_log(0, "               %s %s", pTok->at(0).c_str(), pTok->at(1).c_str());
-
 		for (int k = 1; k < 256; ++k)
 		{
 			char buf[4];
@@ -545,7 +326,6 @@ bool CMobManager::LoadGroup(const char * c_pszFileName)
 
 			if (loader.GetTokenVector(buf, &pTok))
 			{
-				sys_log(0, "               %s %s", pTok->at(0).c_str(), pTok->at(1).c_str());
 				DWORD vnum = 0;
 				str_to_number(vnum, pTok->at(1).c_str());
 				pkGroup->AddMember(vnum);
@@ -561,5 +341,27 @@ bool CMobManager::LoadGroup(const char * c_pszFileName)
 
 	return true;
 }
-#endif
 
+void CMobManager::InsertCostumeMount(DWORD dwVnum)
+{
+	if (!dwVnum)
+	{
+		return;
+	}
+
+	if (m_set_CostumeMounts.find(dwVnum) != m_set_CostumeMounts.end())
+	{
+		return;
+	}
+
+	m_set_CostumeMounts.insert(dwVnum);
+}
+bool CMobManager::IsCostumeMount(DWORD dwVnum)
+{
+	if (m_set_CostumeMounts.find(dwVnum) != m_set_CostumeMounts.end())
+	{
+		return true;
+	}
+
+	return false;
+}

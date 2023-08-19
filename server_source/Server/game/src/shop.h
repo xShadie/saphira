@@ -1,5 +1,4 @@
-#ifndef __INC_METIN_II_GAME_SHOP_H__
-#define __INC_METIN_II_GAME_SHOP_H__
+#pragma once
 
 enum
 {
@@ -8,100 +7,61 @@ enum
 
 class CGrid;
 
-/* ---------------------------------------------------------------------------------- */
 class CShop
 {
 	public:
 		typedef struct shop_item
 		{
-			DWORD			vnum;
-#ifdef ENABLE_LONG_LONG
-			long long		price;
-#else
-			long			price;
-#endif
-#ifdef ENABLE_NEW_STACK_LIMIT
-			int				count;
-#else
-			BYTE			count;
-#endif
-			LPITEM			pkItem;
-			int				itemid;
-#ifdef ENABLE_BUY_WITH_ITEM
-			TShopItemPrice	itemprice[MAX_SHOP_PRICES];
-#endif
+			DWORD		vnum;
+			long long	price;
+			WORD		count;
+			LPITEM		pkItem;
+			int			itemid;
+			long		alSockets[ITEM_SOCKET_MAX_NUM];
+			TPlayerItemAttribute	aAttr[ITEM_ATTRIBUTE_MAX_NUM];
+			DWORD		price_type;
+			DWORD		price_vnum;
+
 			shop_item()
 			{
 				vnum = 0;
 				price = 0;
 				count = 0;
 				itemid = 0;
-#ifdef ENABLE_BUY_WITH_ITEM
-				memset(itemprice, 0, sizeof(itemprice));
-#endif
 				pkItem = NULL;
+				price_type = 1,
+				price_vnum = 0,
+				memset(&alSockets, 0, sizeof(alSockets));
+				memset(&aAttr, 0, sizeof(aAttr));
 			}
 		} SHOP_ITEM;
 
 		CShop();
-		virtual ~CShop(); // @fixme139 (+virtual)
+		virtual ~CShop();
 
-		bool	Create(DWORD dwVnum, DWORD dwNPCVnum, TShopItemTable * pItemTable);
-		void	SetShopItems(TShopItemTable * pItemTable, BYTE bItemCount);
-
+		bool			Create(DWORD dwVnum, DWORD dwNPCVnum, TShopItemTable * pItemTable);
+		void			SetShopItems(TShopItemTable * pItemTable, WORD wItemCount);
 		virtual void	SetPCShop(LPCHARACTER ch);
 		virtual bool	IsPCShop()	{ return m_pkPC ? true : false; }
-
-		// 게스트 추가/삭제
+		virtual bool	IsShopEx() const { return false; };
 		virtual bool	AddGuest(LPCHARACTER ch,DWORD owner_vid, bool bOtherEmpire);
-		void	RemoveGuest(LPCHARACTER ch);
-#ifdef REGEN_ANDRA
-		void	RemoveAllGuests();
-#endif
-
-		// 물건 구입
-#ifdef ENABLE_LONG_LONG
-		virtual long long	Buy(LPCHARACTER ch, BYTE pos
-#ifdef ENABLE_BUY_STACK_FROM_SHOP
-, bool multiple = false
-#endif
-);
-#else
-		virtual int	Buy(LPCHARACTER ch, BYTE pos
-#ifdef ENABLE_BUY_STACK_FROM_SHOP
-, bool multiple = false
-#endif
-);
-#endif
-#ifdef ENABLE_BUY_STACK_FROM_SHOP
-		virtual uint8_t MultipleBuy(LPCHARACTER ch, uint8_t p, uint8_t c);
-#endif
-		// 게스트에게 패킷을 보냄
-		void	BroadcastUpdateItem(BYTE pos);
-
-		// 판매중인 아이템의 갯수를 알려준다.
-		int		GetNumberByVnum(DWORD dwVnum);
-
-		// 아이템이 상점에 등록되어 있는지 알려준다.
+		void			RemoveGuest(LPCHARACTER ch);
+		virtual int		Buy(LPCHARACTER ch, BYTE pos);
+		void			BroadcastUpdateItem(BYTE pos);
+		int				GetNumberByVnum(DWORD dwVnum);
 		virtual bool	IsSellingItem(DWORD itemID);
-
-		DWORD	GetVnum() { return m_dwVnum; }
-		DWORD	GetNPCVnum() { return m_dwNPCVnum; }
-
-	protected:
-		void	Broadcast(const void * data, int bytes);
+		DWORD			GetVnum() { return m_dwVnum; }
+		DWORD			GetNPCVnum() { return m_dwNPCVnum; }
 
 	protected:
-		DWORD				m_dwVnum;
-		DWORD				m_dwNPCVnum;
+		void			Broadcast(const void * data, int bytes);
 
-		CGrid *				m_pGrid;
-
-		typedef TR1_NS::unordered_map<LPCHARACTER, bool> GuestMapType;
+	protected:
+		DWORD		m_dwVnum;
+		DWORD		m_dwNPCVnum;
+		CGrid *		m_pGrid;
+		typedef boost::unordered_map<LPCHARACTER, bool> GuestMapType;
 		GuestMapType m_map_guest;
-		std::vector<SHOP_ITEM>		m_itemVector;	// 이 상점에서 취급하는 물건들
-
-		LPCHARACTER			m_pkPC;
+		std::vector<SHOP_ITEM>	m_itemVector;
+		LPCHARACTER	m_pkPC;
 };
-
-#endif

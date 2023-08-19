@@ -9,12 +9,11 @@
 #include "log.h"
 #include "skill.h"
 
-#define ENABLE_PICKAXE_RENEWAL
 namespace mining
 {
 	enum
 	{
-		MAX_ORE = 19,
+		MAX_ORE = 18,
 		MAX_FRACTION_COUNT = 9,
 		ORE_COUNT_FOR_REFINE = 100,
 	};
@@ -46,7 +45,6 @@ namespace mining
 		{ 30303, 50616, 50636 },
 		{ 30304, 50617, 50637 },
 		{ 30305, 50618, 50638 },
-		{ 30306, 50619, 50639 },
 	};
 
 	int fraction_info[MAX_FRACTION_COUNT][3] =
@@ -70,17 +68,17 @@ namespace mining
 	int SkillLevelAddPct[SKILL_MAX_LEVEL + 1] =
 	{
 		0,
-		1, 1, 1, 1,		//  1 - 4
-		2, 2, 2, 2,		//  5 - 8
-		3, 3, 3, 3,		//  9 - 12
-		4, 4, 4, 4,		// 13 - 16
-		5, 5, 5, 5,		// 17 - 20
-		6, 6, 6, 6,		// 21 - 24
-		7, 7, 7, 7,		// 25 - 28
-		8, 8, 8, 8,		// 29 - 32
-		9, 9, 9, 9,		// 33 - 36
-		10, 10, 10, 	// 37 - 39
-		11,				// 40
+		1, 1, 1, 1,
+		2, 2, 2, 2,
+		3, 3, 3, 3,
+		4, 4, 4, 4,
+		5, 5, 5, 5,
+		6, 6, 6, 6,
+		7, 7, 7, 7,
+		8, 8, 8, 8,
+		9, 9, 9, 9,
+		10, 10, 10,
+		11,
 	};
 
 	DWORD GetRawOreFromLoad(DWORD dwLoadVnum)
@@ -115,7 +113,7 @@ namespace mining
 				r -= fraction_info[i][0];
 		}
 
-		return 0;
+		return 0; 
 	}
 
 	void OreDrop(LPCHARACTER ch, DWORD dwLoadVnum)
@@ -145,8 +143,6 @@ namespace mining
 		item->AddToGround(ch->GetMapIndex(), pos);
 		item->StartDestroyEvent();
 		item->SetOwnership(ch, 15);
-
-		DBManager::instance().SendMoneyLog(MONEY_LOG_DROP, item->GetVnum(), item->GetCount());
 	}
 
 	int GetOrePct(LPCHARACTER ch)
@@ -167,17 +163,16 @@ namespace mining
 		DWORD pid;
 		DWORD vid_load;
 
-		mining_event_info()
+		mining_event_info() 
 		: pid( 0 )
 		, vid_load( 0 )
 		{
 		}
 	};
 
-	// REFINE_PICK
 	bool Pick_Check(CItem& item)
 	{
-		if (item.GetType() != ITEM_PICK)
+		if (item.GetType() != ITEM_PICK)    
 			return false;
 
 		return true;
@@ -199,14 +194,6 @@ namespace mining
 		pick.SetSocket(0, cur + 1);
 	}
 
-#ifdef ENABLE_PICKAXE_RENEWAL
-	void Pick_SetPenaltyExp(CItem& pick)
-	{
-		int cur = Pick_GetCurExp(pick);
-		pick.SetSocket(0, (cur > 0) ? (cur - (cur * 10 / 100)) : 0);
-	}
-#endif
-
 	void Pick_MaxCurExp(CItem& pick)
 	{
 		int max = Pick_GetMaxExp(pick);
@@ -225,7 +212,7 @@ namespace mining
 	{
 		return (number(1,pick.GetValue(1))==1);
 	}
-
+	
 	bool Pick_IsRefineSuccess(CItem& pick)
 	{
 		return (number(1,100) <= pick.GetValue(3));
@@ -236,13 +223,11 @@ namespace mining
 		if (!ch || !item)
 			return 2;
 
-		LogManager& rkLogMgr = LogManager::instance();
 		ITEM_MANAGER& rkItemMgr = ITEM_MANAGER::instance();
 
 		if (!Pick_Check(*item))
 		{
 			sys_err("REFINE_PICK_HACK pid(%u) item(%s:%d) type(%d)", ch->GetPlayerID(), item->GetName(), item->GetID(), item->GetType());
-			rkLogMgr.RefineLog(ch->GetPlayerID(), item->GetName(), item->GetID(), -1, 1, "PICK_HACK");
 			return 2;
 		}
 
@@ -258,15 +243,12 @@ namespace mining
 
 		if (Pick_IsRefineSuccess(rkOldPick))
 		{
-			rkLogMgr.RefineLog(ch->GetPlayerID(), rkOldPick.GetName(), rkOldPick.GetID(), iAdv, 1, "PICK");
-
 			LPITEM pkNewPick = ITEM_MANAGER::instance().CreateItem(rkOldPick.GetRefinedVnum(), 1);
 			if (pkNewPick)
 			{
-				BYTE bCell = rkOldPick.GetCell();
+				WORD wCell = rkOldPick.GetCell();
 				rkItemMgr.RemoveItem(item, "REMOVE (REFINE PICK)");
-				pkNewPick->AddToCharacter(ch, TItemPos(INVENTORY, bCell));
-				LogManager::instance().ItemLog(ch, pkNewPick, "REFINE PICK SUCCESS", pkNewPick->GetName());
+				pkNewPick->AddToCharacter(ch, TItemPos(INVENTORY, wCell));
 				return 1;
 			}
 
@@ -274,26 +256,16 @@ namespace mining
 		}
 		else
 		{
-			rkLogMgr.RefineLog(ch->GetPlayerID(), rkOldPick.GetName(), rkOldPick.GetID(), iAdv, 0, "PICK");
-
-#ifdef ENABLE_PICKAXE_RENEWAL
-			{
-				Pick_SetPenaltyExp(*item);
-				rkLogMgr.ItemLog(ch, item, "REFINE PICK FAIL", item->GetName());
-				return 0;
-			}
-#else
 			LPITEM pkNewPick = ITEM_MANAGER::instance().CreateItem(rkOldPick.GetValue(4), 1);
 
 			if (pkNewPick)
 			{
-				BYTE bCell = rkOldPick.GetCell();
+				WORD wCell = rkOldPick.GetCell();
 				rkItemMgr.RemoveItem(item, "REMOVE (REFINE PICK)");
-				pkNewPick->AddToCharacter(ch, TItemPos(INVENTORY, bCell));
-				rkLogMgr.ItemLog(ch, pkNewPick, "REFINE PICK FAIL", pkNewPick->GetName());
+				pkNewPick->AddToCharacter(ch, TItemPos(INVENTORY, wCell));
 				return 0;
 			}
-#endif
+
 			return 2;
 		}
 	}
@@ -309,9 +281,7 @@ namespace mining
 		CItem& pick = *item;
 		Pick_MaxCurExp(pick);
 
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 249, "%d", Pick_GetCurExp(pick));
-#endif
+		ch->ChatPacket(CHAT_TYPE_INFO, "[LS;727;%d]", Pick_GetCurExp(pick));
 	}
 
 	void PracticePick(LPCHARACTER ch, LPITEM item)
@@ -331,23 +301,19 @@ namespace mining
 
 			if (Pick_Refinable(pick))
 			{
-#ifdef TEXTS_IMPROVEMENT
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 250, "");
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 273, "");
-#endif
+				ch->ChatPacket(CHAT_TYPE_INFO, "[LS;728]");
+				ch->ChatPacket(CHAT_TYPE_INFO, "[LS;729]");
 			}
 			else
 			{
-				Pick_IncCurExp(pick);
-#ifdef TEXTS_IMPROVEMENT
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 253, "%d#%d", Pick_GetCurExp(pick), Pick_GetMaxExp(pick));
-#endif
+				Pick_IncCurExp(pick);	
+
+				ch->ChatPacket(CHAT_TYPE_INFO, "[LS;730;%d;%d]", Pick_GetCurExp(pick), Pick_GetMaxExp(pick));
+
 				if (Pick_Refinable(pick))
 				{
-#ifdef TEXTS_IMPROVEMENT
-					ch->ChatPacketNew(CHAT_TYPE_INFO, 250, "");
-					ch->ChatPacketNew(CHAT_TYPE_INFO, 273, "");
-#endif
+					ch->ChatPacket(CHAT_TYPE_INFO, "[LS;728]");
+					ch->ChatPacket(CHAT_TYPE_INFO, "[LS;729]");
 				}
 			}
 		}
@@ -373,21 +339,15 @@ namespace mining
 
 		LPITEM pick = ch->GetWear(WEAR_WEAPON);
 
-		// REFINE_PICK
 		if (!pick || !Pick_Check(*pick))
 		{
-#ifdef TEXTS_IMPROVEMENT
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 251, "");
-#endif
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;731]");
 			return 0;
 		}
-		// END_OF_REFINE_PICK
 
 		if (!load)
 		{
-#ifdef TEXTS_IMPROVEMENT
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 309, "");
-#endif
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;732]");
 			return 0;
 		}
 
@@ -396,17 +356,15 @@ namespace mining
 		if (number(1, 100) <= iPct)
 		{
 			OreDrop(ch, load->GetRaceNum());
-#ifdef TEXTS_IMPROVEMENT
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 470, "");
-#endif
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;733]");
 		}
-#ifdef TEXTS_IMPROVEMENT
-		else {
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 471, "");
+		else
+		{
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;734]");
 		}
-#endif
 
 		PracticePick(ch, pick);
+
 		return 0;
 	}
 
@@ -419,7 +377,7 @@ namespace mining
 		return event_create(mining_event, info, PASSES_PER_SEC(2 * count));
 	}
 
-	bool OreRefine(LPCHARACTER ch, LPCHARACTER npc, LPITEM item, int cost, int pct, LPITEM metinstone_item)
+	bool OreRefine(LPCHARACTER ch, LPCHARACTER npc, LPITEM item, long long cost, int pct, LPITEM metinstone_item)
 	{
 		if (!ch || !npc)
 			return false;
@@ -443,12 +401,12 @@ namespace mining
 
 		ch->SetRefineNPC(npc);
 		item->SetCount(item->GetCount() - ORE_COUNT_FOR_REFINE);
-		int iCost = ch->ComputeRefineFee(cost, 1);
+		long long lldCost = ch->ComputeRefineFee(cost, 1);
 
-		if (ch->GetGold() < iCost)
+		if (ch->GetGold() < lldCost)
 			return false;
 
-		ch->PayRefineFee(iCost);
+		ch->PayRefineFee(lldCost);
 
 		if (metinstone_item)
 			ITEM_MANAGER::instance().RemoveItem(metinstone_item, "REMOVE (MELT)");

@@ -19,7 +19,7 @@ EVENTINFO(war_map_info)
 	int iStep;
 	CWarMap * pWarMap;
 
-	war_map_info()
+	war_map_info() 
 	: iStep( 0 )
 	, pWarMap( 0 )
 	{
@@ -87,7 +87,7 @@ void CWarMap::STeamData::Initialize()
 	dwID = 0;
 	pkGuild = NULL;
 	iMemberCount = 0;
-	iUsePotionPrice = 0;
+	lldUsePotionPrice = 0;
 	iScore = 0;
 	pkChrFlag = NULL;
 	pkChrFlagBase = NULL;
@@ -140,7 +140,7 @@ CWarMap::~CWarMap()
 
 	sys_log(0, "WarMap::~WarMap : map index %d", GetMapIndex());
 
-	itertype(m_set_pkChr) it = m_set_pkChr.begin();
+	auto it = m_set_pkChr.begin();
 
 	while (it != m_set_pkChr.end())
 	{
@@ -276,14 +276,14 @@ void CWarMap::UsePotion(LPCHARACTER ch, LPITEM item)
 	if (!item->GetProto())
 		return;
 
-	int iPrice = item->GetProto()->dwGold;
+	long long lldPrice = item->GetProto()->lldGold;
 
 	DWORD gid = ch->GetGuild()->GetID();
 
 	if (gid == m_TeamData[0].dwID)
-		m_TeamData[0].iUsePotionPrice += iPrice;
+		m_TeamData[0].lldUsePotionPrice += lldPrice;
 	else if (gid == m_TeamData[1].dwID)
-		m_TeamData[1].iUsePotionPrice += iPrice;
+		m_TeamData[1].lldUsePotionPrice += lldPrice;
 }
 
 int CWarMap::STeamData::GetAccumulatedJoinerCount()
@@ -304,7 +304,6 @@ void CWarMap::STeamData::AppendMember(LPCHARACTER ch)
 
 void CWarMap::STeamData::RemoveMember(LPCHARACTER ch)
 {
-	// set_pidJoiner 는 누적 인원을 계산하기 때문에 제거하지 않는다
 	--iMemberCount;
 }
 
@@ -330,10 +329,10 @@ struct FSendUserCount
 void CWarMap::UpdateUserCount()
 {
 	FSendUserCount f(
-			m_TeamData[0].dwID,
-			m_TeamData[0].GetAccumulatedJoinerCount(),
-			m_TeamData[1].dwID,
-			m_TeamData[1].GetAccumulatedJoinerCount(),
+			m_TeamData[0].dwID, 
+			m_TeamData[0].GetAccumulatedJoinerCount(), 
+			m_TeamData[1].dwID, 
+			m_TeamData[1].GetAccumulatedJoinerCount(), 
 			m_iObserverCount);
 
 	std::for_each(m_set_pkChr.begin(), m_set_pkChr.end(), f);
@@ -379,13 +378,10 @@ void CWarMap::IncMember(LPCHARACTER ch)
 	}
 	else
 	{
-		++m_iObserverCount;
+		++m_iObserverCount; 
 		sys_log(0, "WarMap +o %d", m_iObserverCount);
 		ch->SetObserverMode(true);
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 255, "");
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 448, "");
-#endif
+		ch->ChatPacket(CHAT_TYPE_INFO, "[LS;489]");
 	}
 
 	UpdateUserCount();
@@ -482,10 +478,11 @@ void CWarMap::CheckWarEnd()
 		if (m_pkTimeoutEvent)
 			return;
 
-#ifdef TEXTS_IMPROVEMENT
-		Notice(CHAT_TYPE_NOTICE, 701, "");
-		Notice(CHAT_TYPE_NOTICE, 702, "");
-#endif
+		Notice("[LS; 491]");
+		Notice("[LS; 493]");
+
+		sys_log(0, "CheckWarEnd: Timeout begin %u vs %u", m_TeamData[0].dwID, m_TeamData[1].dwID);
+
 		war_map_info* info = AllocEventInfo<war_map_info>();
 		info->pWarMap = this;
 
@@ -495,12 +492,12 @@ void CWarMap::CheckWarEnd()
 		CheckScore();
 }
 
-int CWarMap::GetRewardGold(BYTE bWinnerIdx)
+long long CWarMap::GetRewardGold(BYTE bWinnerIdx)
 {
-	int iRewardGold = m_WarInfo.iWarPrice;
-	iRewardGold += (m_TeamData[bWinnerIdx].iUsePotionPrice * m_WarInfo.iWinnerPotionRewardPctToWinner) / 100;
-	iRewardGold += (m_TeamData[bWinnerIdx ? 0 : 1].iUsePotionPrice * m_WarInfo.iLoserPotionRewardPctToWinner) / 100;
-	return iRewardGold;
+	long long lldRewardGold = m_WarInfo.lldWarPrice;
+	lldRewardGold += (m_TeamData[bWinnerIdx].lldUsePotionPrice * m_WarInfo.iWinnerPotionRewardPctToWinner) / 100;
+	lldRewardGold += (m_TeamData[bWinnerIdx ? 0 : 1].lldUsePotionPrice * m_WarInfo.iLoserPotionRewardPctToWinner) / 100;
+	return lldRewardGold;
 }
 
 void CWarMap::Draw()
@@ -520,13 +517,11 @@ void CWarMap::Timeout()
 
 	DWORD dwWinner = 0;
 	DWORD dwLoser = 0;
-	int iRewardGold = 0;
+	long long lldRewardGold = 0;
 
 	if (get_dword_time() - m_dwStartTime < 60000 * 5)
 	{
-#ifdef TEXTS_IMPROVEMENT
-		Notice(CHAT_TYPE_NOTICE, 703, "");
-#endif
+		Notice("[LS; 494]");
 		dwWinner = 0;
 		dwLoser = 0;
 	}
@@ -545,12 +540,12 @@ void CWarMap::Timeout()
 
 			if (dwWinner == m_TeamData[0].dwID)
 			{
-				iRewardGold = GetRewardGold(0);
+				lldRewardGold = GetRewardGold(0);
 				dwLoser = m_TeamData[1].dwID;
 			}
 			else if (dwWinner == m_TeamData[1].dwID)
 			{
-				iRewardGold = GetRewardGold(1);
+				lldRewardGold = GetRewardGold(1);
 				dwLoser = m_TeamData[0].dwID;
 			}
 
@@ -564,17 +559,17 @@ void CWarMap::Timeout()
 			dwWinner = m_TeamData[iWinnerIdx].dwID;
 			dwLoser = m_TeamData[iWinnerIdx == 0 ? 1 : 0].dwID;
 
-			iRewardGold = GetRewardGold(iWinnerIdx);
+			lldRewardGold = GetRewardGold(iWinnerIdx);
 		}
 	}
 
 	sys_log(0, "WarMap: Timeout %u %u winner %u loser %u reward %d map %d",
-			m_TeamData[0].dwID, m_TeamData[1].dwID, dwWinner, dwLoser, iRewardGold, m_kMapInfo.lMapIndex);
+			m_TeamData[0].dwID, m_TeamData[1].dwID, dwWinner, dwLoser, lldRewardGold, m_kMapInfo.lMapIndex);
 
 	if (dwWinner)
-		CGuildManager::instance().RequestWarOver(dwWinner, dwLoser, dwWinner, iRewardGold);
+		CGuildManager::instance().RequestWarOver(dwWinner, dwLoser, dwWinner, lldRewardGold);
 	else
-		CGuildManager::instance().RequestWarOver(m_TeamData[0].dwID, m_TeamData[1].dwID, dwWinner, iRewardGold);
+		CGuildManager::instance().RequestWarOver(m_TeamData[0].dwID, m_TeamData[1].dwID, dwWinner, lldRewardGold);
 
 	m_bTimeout = true;
 }
@@ -596,34 +591,26 @@ namespace
 		int m_iSize;
 	};
 
-#ifdef TEXTS_IMPROVEMENT
 	struct FNotice
 	{
-		BYTE m_type;
-		DWORD m_idx;
-		const char * m_format;
-		FNotice(BYTE type, DWORD idx, const char * format) : m_type(type), m_idx(idx), m_format(format) {}
-
-		void operator() (LPCHARACTER ch) {
-			ch->ChatPacketNew(m_type, m_idx, m_format);
+		FNotice(const char * psz) : m_psz(psz)
+		{
 		}
+
+		void operator() (LPCHARACTER ch)
+		{
+			ch->ChatPacket(CHAT_TYPE_NOTICE, "%s", m_psz);
+		}
+
+		const char * m_psz;
 	};
-#endif
 };
 
-#ifdef TEXTS_IMPROVEMENT
-void CWarMap::Notice(BYTE type, DWORD idx, const char * format, ...)
+void CWarMap::Notice(const char * psz)
 {
-	char chatbuf[256];
-	va_list args;
-	va_start(args, format);
-	vsnprintf(chatbuf, sizeof(chatbuf), format, args);
-	va_end(args);
-	
-	FNotice f(type, idx, chatbuf);
+	FNotice f(psz);
 	std::for_each(m_set_pkChr.begin(), m_set_pkChr.end(), f);
 }
-#endif
 
 void CWarMap::Packet(const void * p, int size)
 {
@@ -699,11 +686,9 @@ bool CWarMap::CheckScore()
 	if (m_bEnded)
 		return true;
 
-	// 30초 이후 부터 확인한다.
 	if (get_dword_time() - m_dwStartTime < 30000)
 		return false;
 
-	// 점수가 같으면 체크하지 않는다.
 	if (m_TeamData[0].iScore == m_TeamData[1].iScore)
 		return false;
 
@@ -727,23 +712,23 @@ bool CWarMap::CheckScore()
 	else
 		return false;
 
-	int iRewardGold = 0;
+	long long lldRewardGold = 0;
 
 	if (dwWinner == m_TeamData[0].dwID)
-		iRewardGold = GetRewardGold(0);
+		lldRewardGold = GetRewardGold(0);
 	else if (dwWinner == m_TeamData[1].dwID)
-		iRewardGold = GetRewardGold(1);
+		lldRewardGold = GetRewardGold(1);
 
-	sys_log(0, "WarMap::CheckScore end score %d guild1 %u score guild2 %d %u score %d winner %u reward %d",
+	sys_log(0, "WarMap::CheckScore end score %d guild1 %u score guild2 %d %u score %d winner %u reward %d", 
 			iEndScore,
 			m_TeamData[0].dwID,
 			m_TeamData[0].iScore,
 			m_TeamData[1].dwID,
 			m_TeamData[1].iScore,
 			dwWinner,
-			iRewardGold);
+			lldRewardGold);
 
-	CGuildManager::instance().RequestWarOver(dwWinner, dwLoser, dwWinner, iRewardGold);
+	CGuildManager::instance().RequestWarOver(dwWinner, dwLoser, dwWinner, lldRewardGold);
 	return true;
 }
 
@@ -973,16 +958,13 @@ void CWarMap::ResetFlag()
 	SetResetFlagEvent(event_create(war_reset_flag_event, info, PASSES_PER_SEC(10)));
 }
 
-/////////////////////////////////////////////////////////////////////////////////
-// WarMapManager
-/////////////////////////////////////////////////////////////////////////////////
 CWarMapManager::CWarMapManager()
 {
 }
 
 CWarMapManager::~CWarMapManager()
 {
-	for( std::map<long, TWarMapInfo *>::const_iterator iter = m_map_kWarMapInfo.begin() ; iter != m_map_kWarMapInfo.end() ; ++iter )
+	for(auto iter = m_map_kWarMapInfo.begin() ; iter != m_map_kWarMapInfo.end() ; ++iter )
 	{
 		M2_DELETE(iter->second);
 	}
@@ -1014,7 +996,7 @@ bool CWarMapManager::LoadWarMapInfo(const char * c_pszFileName)
 	k->posStart[0].x = 68 * 100 + 57600;
 	k->posStart[0].y = 69 * 100 + 0;
 	k->posStart[1].x = 171 * 100 + 57600;
-	k->posStart[1].y = 182 * 100 + 0;
+	k->posStart[1].y = 182 * 100 + 0; 
 	k->posStart[2].x = 122 * 100 + 57600;
 	k->posStart[2].y = 131 * 100 + 0;
 
@@ -1037,8 +1019,7 @@ bool CWarMapManager::GetStartPosition(long lMapIndex, BYTE bIdx, PIXEL_POSITION 
 	{
 		sys_log(0, "GetStartPosition FAILED [%d] WarMapInfoSize(%d)", lMapIndex, m_map_kWarMapInfo.size());
 
-		itertype(m_map_kWarMapInfo) it;
-		for (it	= m_map_kWarMapInfo.begin(); it != m_map_kWarMapInfo.end(); ++it)
+		for (auto it	= m_map_kWarMapInfo.begin(); it != m_map_kWarMapInfo.end(); ++it)
 		{
 			PIXEL_POSITION& cur=it->second->posStart[bIdx];
 			sys_log(0, "WarMap[%d]=Pos(%d, %d)", it->first, cur.x, cur.y);
@@ -1074,7 +1055,7 @@ TWarMapInfo * CWarMapManager::GetWarMapInfo(long lMapIndex)
 	if (lMapIndex >= 10000)
 		lMapIndex /= 10000;
 
-	itertype(m_map_kWarMapInfo) it = m_map_kWarMapInfo.find(lMapIndex);
+	auto it = m_map_kWarMapInfo.find(lMapIndex);
 
 	if (m_map_kWarMapInfo.end() == it)
 		return NULL;
@@ -1096,7 +1077,7 @@ void CWarMapManager::DestroyWarMap(CWarMap* pMap)
 
 CWarMap * CWarMapManager::Find(long lMapIndex)
 {
-	itertype(m_mapWarMap) it = m_mapWarMap.find(lMapIndex);
+	auto it = m_mapWarMap.find(lMapIndex);
 
 	if (it == m_mapWarMap.end())
 		return NULL;
@@ -1106,7 +1087,7 @@ CWarMap * CWarMapManager::Find(long lMapIndex)
 
 void CWarMapManager::OnShutdown()
 {
-	itertype(m_mapWarMap) it = m_mapWarMap.begin();
+	auto it = m_mapWarMap.begin();
 
 	while (it != m_mapWarMap.end())
 		(it++)->second->Draw();

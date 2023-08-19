@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "../../libgame/include/grid.h"
+#include "../../libgame/src/grid.h"
 #include "utils.h"
 #include "desc.h"
 #include "desc_client.h"
@@ -13,19 +13,10 @@
 #include "../../common/length.h"
 #include "exchange.h"
 #include "DragonSoul.h"
-#include "questmanager.h" // @fixme150
-#ifdef ENABLE_LONG_LONG
-void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, long long arg1, TItemPos arg2, DWORD arg3, void * pvData = NULL);
-#else
-void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, DWORD arg1, TItemPos arg2, DWORD arg3, void * pvData = NULL);
-#endif
+#include "questmanager.h"
 
-// 교환 패킷
-#ifdef ENABLE_LONG_LONG
+void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, long long arg1, TItemPos arg2, DWORD arg3, void * pvData = NULL);
 void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, long long arg1, TItemPos arg2, DWORD arg3, void * pvData)
-#else
-void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, DWORD arg1, TItemPos arg2, DWORD arg3, void * pvData)
-#endif
 {
 	if (!ch->GetDesc())
 		return;
@@ -41,103 +32,46 @@ void exchange_packet(LPCHARACTER ch, BYTE sub_header, bool is_me, DWORD arg1, TI
 
 	if (sub_header == EXCHANGE_SUBHEADER_GC_ITEM_ADD && pvData)
 	{
-#ifdef WJ_ENABLE_TRADABLE_ICON
-		pack_exchg.arg4 = TItemPos(((LPITEM) pvData)->GetWindow(), ((LPITEM) pvData)->GetCell());
-#endif
 		thecore_memcpy(&pack_exchg.alSockets, ((LPITEM) pvData)->GetSockets(), sizeof(pack_exchg.alSockets));
 		thecore_memcpy(&pack_exchg.aAttr, ((LPITEM) pvData)->GetAttributes(), sizeof(pack_exchg.aAttr));
-#ifdef ATTR_LOCK
-		pack_exchg.lockedattr = ((LPITEM) pvData)->GetLockedAttr();
-#endif
 	}
 	else
 	{
-#ifdef WJ_ENABLE_TRADABLE_ICON
-		pack_exchg.arg4 = TItemPos(RESERVED_WINDOW, 0);
-#endif
 		memset(&pack_exchg.alSockets, 0, sizeof(pack_exchg.alSockets));
 		memset(&pack_exchg.aAttr, 0, sizeof(pack_exchg.aAttr));
-#ifdef ATTR_LOCK
-		pack_exchg.lockedattr = -1;
-#endif
 	}
 
 	ch->GetDesc()->Packet(&pack_exchg, sizeof(pack_exchg));
 }
 
-// 교환을 시작
 bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 {
-	if (this == victim)	// 자기 자신과는 교환을 못한다.
+	if (this == victim)
 		return false;
 
 	if (IsObserverMode())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 256, "");
-#endif
+		ChatPacket(CHAT_TYPE_INFO, "[LS;893]");
 		return false;
 	}
 
 	if (victim->IsNPC())
 		return false;
 
-#ifdef ENABLE_PVP_ADVANCED
-	if ((GetDuel("BlockExchange")))
+	if ( IsOpenSafebox() || GetShopOwner() || GetMyShop() || IsCubeOpen() || IsAcceWindowOpen())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 516, "");
-#endif
-		return false;
-	}
-	
-	if ((victim->GetDuel("BlockExchange")))
-	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 517, "%s", victim->GetName());
-#endif
-		return false;
-	}
-#endif
-
-	//PREVENT_TRADE_WINDOW
-	if ( IsOpenSafebox() || GetShopOwner() || GetMyShop() || IsCubeOpen())
-	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 292, "");
-#endif
+		ChatPacket( CHAT_TYPE_INFO, "[LS;894]");
 		return false;
 	}
 
-	if ( victim->IsOpenSafebox() || victim->GetShopOwner() || victim->GetMyShop() || victim->IsCubeOpen() )
+	if ( victim->IsOpenSafebox() || victim->GetShopOwner() || victim->GetMyShop() || victim->IsCubeOpen() || victim->IsAcceWindowOpen())
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 293, "%s", victim->GetName());
-#endif
+		ChatPacket( CHAT_TYPE_INFO, "[LS;895]");
 		return false;
 	}
-	
-#ifdef __ATTR_TRANSFER_SYSTEM__
-	if (IsAttrTransferOpen())
-	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 292, "");
-#endif
-		return false;
-	}
-	
-	if (victim->IsAttrTransferOpen())
-	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 293, "%s", victim->GetName());
-#endif
-		return false;
-	}
-#endif
-	//END_PREVENT_TRADE_WINDOW
+
 	int iDist = DISTANCE_APPROX(GetX() - victim->GetX(), GetY() - victim->GetY());
 
-	// 거리 체크
 	if (iDist >= EXCHANGE_MAX_DISTANCE)
 		return false;
 
@@ -152,9 +86,7 @@ bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 
 	if (victim->IsBlockMode(BLOCK_EXCHANGE))
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ChatPacketNew(CHAT_TYPE_INFO, 368, "%s", victim->GetName());
-#endif
+		ChatPacket(CHAT_TYPE_INFO, "[LS;896]");
 		return false;
 	}
 
@@ -164,7 +96,6 @@ bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 	victim->GetExchange()->SetCompany(GetExchange());
 	GetExchange()->SetCompany(victim->GetExchange());
 
-	//
 	SetExchangeTime();
 	victim->SetExchangeTime();
 
@@ -192,11 +123,7 @@ CExchange::CExchange(LPCHARACTER pOwner)
 	m_pOwner = pOwner;
 	pOwner->SetExchange(this);
 
-#ifdef __NEW_EXCHANGE_WINDOW__
-	m_pGrid = M2_NEW CGrid(6, 4);
-#else
-	m_pGrid = M2_NEW CGrid(4, 3);
-#endif
+	m_pGrid = M2_NEW CGrid(4,3);
 }
 
 CExchange::~CExchange()
@@ -204,14 +131,26 @@ CExchange::~CExchange()
 	M2_DELETE(m_pGrid);
 }
 
+#if defined(ITEM_CHECKINOUT_UPDATE)
+int CExchange::GetEmptyExchange(BYTE size)
+{
+	for (unsigned int i = 0; m_pGrid && i < m_pGrid->GetSize(); i++)
+		if (m_pGrid->IsEmpty(i, 1, size))
+			return i;
+
+	return -1;
+}
+
+bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos, bool SelectPosAuto)
+#else
 bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
+#endif
 {
 	assert(m_pOwner != NULL && GetCompany());
 
 	if (!item_pos.IsValidItemPosition())
 		return false;
 
-	// 장비는 교환할 수 없음
 	if (item_pos.IsEquipPosition())
 		return false;
 
@@ -222,9 +161,7 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 
 	if (IS_SET(item->GetAntiFlag(), ITEM_ANTIFLAG_GIVE))
 	{
-#ifdef TEXTS_IMPROVEMENT
-		m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 402, "%s", item->GetName());
-#endif
+		m_pOwner->ChatPacket(CHAT_TYPE_INFO, "[LS;710]");
 		return false;
 	}
 
@@ -233,12 +170,24 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 		return false;
 	}
 
-	// 이미 교환창에 추가된 아이템인가?
 	if (item->IsExchanging())
 	{
 		sys_log(0, "EXCHANGE under exchanging");
 		return false;
 	}
+
+#if defined(ITEM_CHECKINOUT_UPDATE)
+	if (SelectPosAuto)
+	{
+		int AutoPos = GetEmptyExchange(item->GetSize());
+		if (AutoPos == -1)
+		{
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;1444]");
+			return false;
+		}
+		display_pos = AutoPos;
+	}
+#endif
 
 	if (!m_pGrid->IsEmpty(display_pos, 1, item->GetSize()))
 	{
@@ -261,7 +210,7 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 
 		item->SetExchanging(true);
 
-		exchange_packet(m_pOwner,
+		exchange_packet(m_pOwner, 
 				EXCHANGE_SUBHEADER_GC_ITEM_ADD,
 				true,
 				item->GetVnum(),
@@ -270,8 +219,8 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 				item);
 
 		exchange_packet(GetCompany()->GetOwner(),
-				EXCHANGE_SUBHEADER_GC_ITEM_ADD,
-				false,
+				EXCHANGE_SUBHEADER_GC_ITEM_ADD, 
+				false, 
 				item->GetVnum(),
 				TItemPos(RESERVED_WINDOW, display_pos),
 				item->GetCount(),
@@ -282,7 +231,6 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 		return true;
 	}
 
-	// 추가할 공간이 없음
 	return false;
 }
 
@@ -310,24 +258,24 @@ bool CExchange::RemoveItem(BYTE pos)
 	m_abItemDisplayPos[pos] = 0;
 	return true;
 }
-#ifdef ENABLE_LONG_LONG
+
 bool CExchange::AddGold(long long gold)
-#else
-bool CExchange::AddGold(long gold)
-#endif
 {
 	if (gold <= 0)
+	{
 		return false;
+	}
 
 	if (GetOwner()->GetGold() < gold)
 	{
-		// 가지고 있는 돈이 부족.
 		exchange_packet(GetOwner(), EXCHANGE_SUBHEADER_GC_LESS_GOLD, 0, 0, NPOS, 0);
 		return false;
 	}
 
-	if (m_lGold > 0)
+	if ( m_lGold > 0 )
+	{
 		return false;
+	}
 
 	Accept(false);
 	GetCompany()->Accept(false);
@@ -339,7 +287,6 @@ bool CExchange::AddGold(long gold)
 	return true;
 }
 
-// 돈이 충분히 있는지, 교환하려는 아이템이 실제로 있는지 확인 한다.
 bool CExchange::Check(int * piItemCount)
 {
 	if (GetOwner()->GetGold() < m_lGold)
@@ -367,558 +314,149 @@ bool CExchange::Check(int * piItemCount)
 
 bool CExchange::CheckSpace()
 {
-	CGrid * s_grid1 = new CGrid(5, 9);
-	CGrid * s_grid2 = new CGrid(5, 9);
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-	CGrid * s_grid3;
-	CGrid * s_grid4;
-#endif
-	
-	LPCHARACTER victim = GetCompany()->GetOwner();
+	static CGrid s_grid1(INVENTORY_WIDTH, INVENTORY_MAX_NUM / INVENTORY_WIDTH / INVENTORY_PAGE_NUM);
+	static CGrid s_grid2(INVENTORY_WIDTH, INVENTORY_MAX_NUM / INVENTORY_WIDTH / INVENTORY_PAGE_NUM);
+	static CGrid s_grid3(INVENTORY_WIDTH, INVENTORY_MAX_NUM / INVENTORY_WIDTH / INVENTORY_PAGE_NUM);
+	static CGrid s_grid4(INVENTORY_WIDTH, INVENTORY_MAX_NUM / INVENTORY_WIDTH / INVENTORY_PAGE_NUM);
+
+	s_grid1.Clear();
+	s_grid2.Clear();
+	s_grid3.Clear();
+	s_grid4.Clear();
+
+	LPCHARACTER	victim = GetCompany()->GetOwner();
 	LPITEM item;
+
 	int i;
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-	int gridsize = victim->Inven_Point();
-#endif
-	int INVEN_NUM_SLOT = 45;
-	
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-	if (gridsize >= 9) {
-		gridsize -= 9;
-		s_grid3 = new CGrid(5, 9);
-		s_grid4 = new CGrid(5, gridsize);
-	}
-	else {
-		s_grid3 = new CGrid(5, gridsize);
-		s_grid4 = new CGrid(5, 0);
-	}
-#endif
-	
-	s_grid1->Clear();
-	s_grid2->Clear();
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-	s_grid3->Clear();
-	s_grid4->Clear();
-#endif
-	
-	for (i = 0; i < INVEN_NUM_SLOT; ++i) {
+
+	const int perPageSlotCount = INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM;
+
+	for (i = 0; i < INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM; ++i)
+	{
 		if (!(item = victim->GetInventoryItem(i)))
 			continue;
-		
-		s_grid1->Put(i, 1, item->GetSize());
+
+		s_grid1.Put(i, 1, item->GetSize());
 	}
-	
-	for (i = INVEN_NUM_SLOT; i < INVEN_NUM_SLOT * 2; ++i) {
+	for (i = (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 1; i < (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 2; ++i)
+	{
 		if (!(item = victim->GetInventoryItem(i)))
 			continue;
-		
-		s_grid2->Put(i - INVEN_NUM_SLOT, 1, item->GetSize());
+
+		s_grid2.Put(i - (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 1, 1, item->GetSize());
 	}
-	
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-	for (i = INVEN_NUM_SLOT * 2; i < INVEN_NUM_SLOT * 3; ++i) {
+	for (i = (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 2; i < (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 3; ++i)
+	{
 		if (!(item = victim->GetInventoryItem(i)))
 			continue;
-		
-		s_grid3->Put(i - INVEN_NUM_SLOT * 2, 1, item->GetSize());
+
+		s_grid3.Put(i - (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 2, 1, item->GetSize());
 	}
-	
-	for (i = INVEN_NUM_SLOT * 3; i < INVEN_NUM_SLOT * 4; ++i) {
+	for (i = (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 3; i < INVENTORY_MAX_NUM; ++i)
+	{
 		if (!(item = victim->GetInventoryItem(i)))
 			continue;
-		
-		s_grid4->Put(i - INVEN_NUM_SLOT * 3, 1, item->GetSize());
-	}
-#endif
-	
-#ifdef ENABLE_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat1_1 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat1_2 = new CGrid(5, 9);
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat1_3;
-	CGrid * s_gridExtraCat1_4;
-	
-	int gridextra_size_cat1 = victim->GetPoint(POINT_EXTRA_INVENTORY1) + 4;
-	if (gridextra_size_cat1 >= 9) {
-		gridextra_size_cat1 -= 9;
-		s_gridExtraCat1_3 = new CGrid(5, 9);
-		s_gridExtraCat1_4 = new CGrid(5, gridextra_size_cat1);
-	}
-	else {
-		s_gridExtraCat1_3 = new CGrid(5, gridextra_size_cat1);
-		s_gridExtraCat1_4 = new CGrid(5, 0);
-	}
-#else
-	CGrid * s_gridExtraCat1_3 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat1_4 = new CGrid(5, 9);
-#endif
-	
-	s_gridExtraCat1_1->Clear();
-	s_gridExtraCat1_2->Clear();
-	s_gridExtraCat1_3->Clear();
-	s_gridExtraCat1_4->Clear();
-	
-	for (i = 0; i < EXTRA_INVENTORY_PAGE_SIZE * 1; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat1_1->Put(i, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 1; i < EXTRA_INVENTORY_PAGE_SIZE * 2; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat1_2->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 1, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 2; i < EXTRA_INVENTORY_PAGE_SIZE * 3; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat1_3->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 2, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 3; i < EXTRA_INVENTORY_PAGE_SIZE * 4; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat1_4->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 3, 1, item->GetSize());
-	}
-	
-	CGrid * s_gridExtraCat2_1 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat2_2 = new CGrid(5, 9);
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat2_3;
-	CGrid * s_gridExtraCat2_4;
-	
-	int gridextra_size_cat2 = victim->GetPoint(POINT_EXTRA_INVENTORY2) + 4;
-	if (gridextra_size_cat2 >= 9) {
-		gridextra_size_cat2 -= 9;
-		s_gridExtraCat2_3 = new CGrid(5, 9);
-		s_gridExtraCat2_4 = new CGrid(5, gridextra_size_cat2);
-	}
-	else {
-		s_gridExtraCat2_3 = new CGrid(5, gridextra_size_cat2);
-		s_gridExtraCat2_4 = new CGrid(5, 0);
-	}
-#else
-	CGrid * s_gridExtraCat2_3 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat2_4 = new CGrid(5, 9);
-#endif
-	
-	s_gridExtraCat2_1->Clear();
-	s_gridExtraCat2_2->Clear();
-	s_gridExtraCat2_3->Clear();
-	s_gridExtraCat2_4->Clear();
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 4; i < EXTRA_INVENTORY_PAGE_SIZE * 5; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat2_1->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 4, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 5; i < EXTRA_INVENTORY_PAGE_SIZE * 6; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat2_2->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 5, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 6; i < EXTRA_INVENTORY_PAGE_SIZE * 7; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat2_3->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 6, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 7; i < EXTRA_INVENTORY_PAGE_SIZE * 8; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat2_4->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 7, 1, item->GetSize());
-	}
-	
-	CGrid * s_gridExtraCat3_1 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat3_2 = new CGrid(5, 9);
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat3_3;
-	CGrid * s_gridExtraCat3_4;
-	
-	int gridextra_size_cat3 = victim->GetPoint(POINT_EXTRA_INVENTORY3) + 4;
-	if (gridextra_size_cat3 >= 9) {
-		gridextra_size_cat3 -= 9;
-		s_gridExtraCat3_3 = new CGrid(5, 9);
-		s_gridExtraCat3_4 = new CGrid(5, gridextra_size_cat3);
-	}
-	else {
-		s_gridExtraCat3_3 = new CGrid(5, gridextra_size_cat3);
-		s_gridExtraCat3_4 = new CGrid(5, 0);
-	}
-#else
-	CGrid * s_gridExtraCat3_3 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat3_4 = new CGrid(5, 9);
-#endif
-	
-	s_gridExtraCat3_1->Clear();
-	s_gridExtraCat3_2->Clear();
-	s_gridExtraCat3_3->Clear();
-	s_gridExtraCat3_4->Clear();
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 8; i < EXTRA_INVENTORY_PAGE_SIZE * 9; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat3_1->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 8, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 9; i < EXTRA_INVENTORY_PAGE_SIZE * 10; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat3_2->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 9, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 10; i < EXTRA_INVENTORY_PAGE_SIZE * 11; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat3_3->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 10, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 11; i < EXTRA_INVENTORY_PAGE_SIZE * 12; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat3_4->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 11, 1, item->GetSize());
-	}
-	
-	CGrid * s_gridExtraCat4_1 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat4_2 = new CGrid(5, 9);
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat4_3;
-	CGrid * s_gridExtraCat4_4;
-	
-	int gridextra_size_cat4 = victim->GetPoint(POINT_EXTRA_INVENTORY4) + 4;
-	if (gridextra_size_cat4 >= 9) {
-		gridextra_size_cat4 -= 9;
-		s_gridExtraCat4_3 = new CGrid(5, 9);
-		s_gridExtraCat4_4 = new CGrid(5, gridextra_size_cat4);
-	}
-	else {
-		s_gridExtraCat4_3 = new CGrid(5, gridextra_size_cat4);
-		s_gridExtraCat4_4 = new CGrid(5, 0);
-	}
-#else
-	CGrid * s_gridExtraCat4_3 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat4_4 = new CGrid(5, 9);
-#endif
-	
-	s_gridExtraCat4_1->Clear();
-	s_gridExtraCat4_2->Clear();
-	s_gridExtraCat4_3->Clear();
-	s_gridExtraCat4_4->Clear();
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 12; i < EXTRA_INVENTORY_PAGE_SIZE * 13; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat4_1->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 12, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 13; i < EXTRA_INVENTORY_PAGE_SIZE * 14; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat4_2->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 13, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 14; i < EXTRA_INVENTORY_PAGE_SIZE * 15; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat4_3->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 14, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 15; i < EXTRA_INVENTORY_PAGE_SIZE * 16; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat4_4->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 15, 1, item->GetSize());
+
+		s_grid4.Put(i - (INVENTORY_MAX_NUM / INVENTORY_PAGE_NUM) * 3, 1, item->GetSize());
 	}
 
-	CGrid * s_gridExtraCat5_1 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat5_2 = new CGrid(5, 9);
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	CGrid * s_gridExtraCat5_3;
-	CGrid * s_gridExtraCat5_4;
-	
-	int gridextra_size_cat5 = victim->GetPoint(POINT_EXTRA_INVENTORY5) + 4;
-	if (gridextra_size_cat5 >= 9) {
-		gridextra_size_cat5 -= 9;
-		s_gridExtraCat5_3 = new CGrid(5, 9);
-		s_gridExtraCat5_4 = new CGrid(5, gridextra_size_cat5);
-	}
-	else {
-		s_gridExtraCat5_3 = new CGrid(5, gridextra_size_cat5);
-		s_gridExtraCat5_4 = new CGrid(5, 0);
-	}
-#else
-	CGrid * s_gridExtraCat5_3 = new CGrid(5, 9);
-	CGrid * s_gridExtraCat5_4 = new CGrid(5, 9);
-#endif
-	
-	s_gridExtraCat5_1->Clear();
-	s_gridExtraCat5_2->Clear();
-	s_gridExtraCat5_3->Clear();
-	s_gridExtraCat5_4->Clear();
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 13; i < EXTRA_INVENTORY_PAGE_SIZE * 14; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat5_1->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 13, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 14; i < EXTRA_INVENTORY_PAGE_SIZE * 15; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat5_2->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 14, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 15; i < EXTRA_INVENTORY_PAGE_SIZE * 16; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat5_3->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 15, 1, item->GetSize());
-	}
-	
-	for (i = EXTRA_INVENTORY_PAGE_SIZE * 16; i < EXTRA_INVENTORY_PAGE_SIZE * 17; ++i) {
-		if (!(item = victim->GetExtraInventoryItem(i)))
-			continue;
-		
-		s_gridExtraCat5_4->Put(i - EXTRA_INVENTORY_PAGE_SIZE * 16, 1, item->GetSize());
-	}
-#endif
-	
-	static std::vector <WORD> s_vDSGrid(DRAGON_SOUL_INVENTORY_MAX_NUM);  
+	static std::vector <WORD> s_vDSGrid(DRAGON_SOUL_INVENTORY_MAX_NUM);
 	bool bDSInitialized = false;
 	
-	for (i = 0; i < EXCHANGE_ITEM_MAX_NUM; ++i) {
+	for (i = 0; i < EXCHANGE_ITEM_MAX_NUM; ++i)
+	{
 		if (!(item = m_apItems[i]))
 			continue;
-		
-		if (item->IsDragonSoul()) {
-			if (!bDSInitialized) {
+
+		if (item->IsDragonSoul())
+		{
+			if (!victim->DragonSoul_IsQualified())
+			{
+				return false;
+			}
+
+			if (!bDSInitialized)
+			{
 				bDSInitialized = true;
 				victim->CopyDragonSoulItemGrid(s_vDSGrid);
 			}
-			
+
 			bool bExistEmptySpace = false;
 			WORD wBasePos = DSManager::instance().GetBasePosition(item);
 			if (wBasePos >= DRAGON_SOUL_INVENTORY_MAX_NUM)
 				return false;
 			
-			for (int i = 0; i < DRAGON_SOUL_BOX_SIZE; i++) {
+			for (int i = 0; i < DRAGON_SOUL_BOX_SIZE; i++)
+			{
 				WORD wPos = wBasePos + i;
 				if (0 == s_vDSGrid[wPos])
 				{
 					bool bEmpty = true;
-					for (int j = 1; j < item->GetSize(); j++) {
-						if (s_vDSGrid[wPos + j * DRAGON_SOUL_BOX_COLUMN_NUM]) {
+					for (int j = 1; j < item->GetSize(); j++)
+					{
+						if (s_vDSGrid[wPos + j * DRAGON_SOUL_BOX_COLUMN_NUM])
+						{
 							bEmpty = false;
 							break;
 						}
 					}
-					
-					if (bEmpty) {
+					if (bEmpty)
+					{
 						for (int j = 0; j < item->GetSize(); j++)
+						{
 							s_vDSGrid[wPos + j * DRAGON_SOUL_BOX_COLUMN_NUM] =  wPos + 1;
-						
+						}
 						bExistEmptySpace = true;
 						break;
 					}
 				}
-				
 				if (bExistEmptySpace)
 					break;
 			}
 			if (!bExistEmptySpace)
 				return false;
-		}
-#ifdef ENABLE_EXTRA_INVENTORY
-		else if (item->IsExtraItem())
-		{
-			BYTE category = item->GetExtraCategory();
-			if (category == 0) {
-				int iPos = s_gridExtraCat1_1->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_gridExtraCat1_1->Put(iPos, 1, item->GetSize());
-				}
-				else {
-					iPos = s_gridExtraCat1_2->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_gridExtraCat1_2->Put(iPos, 1, item->GetSize());
-					}
-					else {
-						iPos = s_gridExtraCat1_3->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_gridExtraCat1_3->Put(iPos, 1, item->GetSize());
-						}
-						else {
-							iPos = s_gridExtraCat1_4->FindBlank(1, item->GetSize());
-							if (iPos >= 0) {
-								s_gridExtraCat1_4->Put(iPos, 1, item->GetSize());
-							}
-							else
-								return false;
-						}
-					}
-				}
-			}
-			else if (category == 1) {
-				int iPos = s_gridExtraCat2_1->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_gridExtraCat2_1->Put(iPos, 1, item->GetSize());
-				}
-				else {
-					iPos = s_gridExtraCat2_2->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_gridExtraCat2_2->Put(iPos, 1, item->GetSize());
-					}
-					else {
-						iPos = s_gridExtraCat2_3->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_gridExtraCat2_3->Put(iPos, 1, item->GetSize());
-						}
-						else {
-							iPos = s_gridExtraCat2_4->FindBlank(1, item->GetSize());
-							if (iPos >= 0) {
-								s_gridExtraCat2_4->Put(iPos, 1, item->GetSize());
-							}
-							else
-								return false;
-						}
-					}
-				}
-			}
-			else if (category == 2) {
-				int iPos = s_gridExtraCat3_1->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_gridExtraCat3_1->Put(iPos, 1, item->GetSize());
-				}
-				else {
-					iPos = s_gridExtraCat3_2->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_gridExtraCat3_2->Put(iPos, 1, item->GetSize());
-					}
-					else {
-						iPos = s_gridExtraCat3_3->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_gridExtraCat3_3->Put(iPos, 1, item->GetSize());
-						}
-						else {
-							iPos = s_gridExtraCat3_4->FindBlank(1, item->GetSize());
-							if (iPos >= 0) {
-								s_gridExtraCat3_4->Put(iPos, 1, item->GetSize());
-							}
-							else
-								return false;
-						}
-					}
-				}
-			}
-			else if (category == 3) {
-				int iPos = s_gridExtraCat4_1->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_gridExtraCat4_1->Put(iPos, 1, item->GetSize());
-				}
-				else {
-					iPos = s_gridExtraCat4_2->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_gridExtraCat4_2->Put(iPos, 1, item->GetSize());
-					}
-					else {
-						iPos = s_gridExtraCat4_3->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_gridExtraCat4_3->Put(iPos, 1, item->GetSize());
-						}
-						else {
-							iPos = s_gridExtraCat4_4->FindBlank(1, item->GetSize());
-							if (iPos >= 0) {
-								s_gridExtraCat4_4->Put(iPos, 1, item->GetSize());
-							}
-							else
-								return false;
-						}
-					}
-				}
-			}
-			else if (category == 4) {
-				int iPos = s_gridExtraCat5_1->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_gridExtraCat5_1->Put(iPos, 1, item->GetSize());
-				}
-				else {
-					iPos = s_gridExtraCat5_2->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_gridExtraCat5_2->Put(iPos, 1, item->GetSize());
-					}
-					else {
-						iPos = s_gridExtraCat5_3->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_gridExtraCat5_3->Put(iPos, 1, item->GetSize());
-						}
-						else {
-							iPos = s_gridExtraCat5_4->FindBlank(1, item->GetSize());
-							if (iPos >= 0) {
-								s_gridExtraCat5_4->Put(iPos, 1, item->GetSize());
-							}
-							else
-								return false;
-						}
-					}
-				}
-			}
-		}
-#endif
+}
 		else
 		{
-			int iPos = s_grid1->FindBlank(1, item->GetSize());
-			if (iPos >= 0) {
-				s_grid1->Put(iPos, 1, item->GetSize());
+			int iPos = s_grid1.FindBlank(1, item->GetSize());
+
+			if (iPos >= 0)
+			{
+				s_grid1.Put(iPos, 1, item->GetSize());
 			}
-			else {
-				iPos = s_grid2->FindBlank(1, item->GetSize());
-				if (iPos >= 0) {
-					s_grid2->Put(iPos, 1, item->GetSize());
+			else
+			{
+				iPos = s_grid2.FindBlank(1, item->GetSize());
+
+				if (iPos >= 0)
+				{
+					s_grid2.Put(iPos, 1, item->GetSize());
 				}
-#ifdef ENABLE_EXTEND_INVEN_SYSTEM
-				else {
-					iPos = s_grid3->FindBlank(1, item->GetSize());
-					if (iPos >= 0) {
-						s_grid3->Put(iPos, 1, item->GetSize());
+				else
+				{
+					iPos = s_grid3.FindBlank(1, item->GetSize());
+
+					if (iPos >= 0)
+					{
+						s_grid3.Put(iPos, 1, item->GetSize());
 					}
-					else {
-						iPos = s_grid4->FindBlank(1, item->GetSize());
-						if (iPos >= 0) {
-							s_grid4->Put(iPos, 1, item->GetSize());
+					else
+					{
+						iPos = s_grid4.FindBlank(1, item->GetSize());
+
+						if (iPos >= 0)
+						{
+							s_grid4.Put(iPos, 1, item->GetSize());
 						}
 						else
+						{
 							return false;
+						}
 					}
 				}
-#else
-				else {
-					return false;
-				}
-#endif
 			}
 		}
 	}
-	
 	return true;
 }
 
@@ -936,64 +474,30 @@ bool CExchange::Done()
 
 		if (item->IsDragonSoul())
 			empty_pos = victim->GetEmptyDragonSoulInventory(item);
-#ifdef ENABLE_EXTRA_INVENTORY
-		else if (item->IsExtraItem())
-			empty_pos = victim->GetEmptyExtraInventory(item);
-#endif
 		else
 			empty_pos = victim->GetEmptyInventory(item->GetSize());
 
 		if (empty_pos < 0)
 		{
-			sys_err("Exchange::Done : Cannot find blank position in inventory %s <-> %s item %s",
+			sys_err("Exchange::Done : Cannot find blank position in inventory %s <-> %s item %s", 
 					m_pOwner->GetName(), victim->GetName(), item->GetName());
 			continue;
 		}
 
 		assert(empty_pos >= 0);
 
-		if (item->GetVnum() == 90008 || item->GetVnum() == 90009) // VCARD
-		{
-			VCardUse(m_pOwner, victim, item);
-			continue;
-		}
-
-#ifdef ENABLE_EXTRA_INVENTORY
-		if (item->IsExtraItem()) {
-			m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM_EXTRA, item->GetCell(), 255);
-		} else {
-			m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 255);
-		}
-#else
 		m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 255);
-#endif
 
 		item->RemoveFromCharacter();
 		if (item->IsDragonSoul())
 			item->AddToCharacter(victim, TItemPos(DRAGON_SOUL_INVENTORY, empty_pos));
-#ifdef ENABLE_EXTRA_INVENTORY
-		else if (item->IsExtraItem())
-			item->AddToCharacter(victim, TItemPos(EXTRA_INVENTORY, empty_pos));
-#endif
 		else
 			item->AddToCharacter(victim, TItemPos(INVENTORY, empty_pos));
 		ITEM_MANAGER::instance().FlushDelayedSave(item);
 
 		item->SetExchanging(false);
 		{
-			char exchange_buf[51];
-
-			snprintf(exchange_buf, sizeof(exchange_buf), "%s %u %u", item->GetName(), GetOwner()->GetPlayerID(), item->GetCount());
-			LogManager::instance().ItemLog(victim, item, "EXCHANGE_TAKE", exchange_buf);
-
-			snprintf(exchange_buf, sizeof(exchange_buf), "%s %u %u", item->GetName(), victim->GetPlayerID(), item->GetCount());
-			LogManager::instance().ItemLog(GetOwner(), item, "EXCHANGE_GIVE", exchange_buf);
-
-			if (item->GetVnum() >= 80003 && item->GetVnum() <= 80007)
-			{
-				LogManager::instance().GoldBarLog(victim->GetPlayerID(), item->GetID(), EXCHANGE_TAKE, "");
-				LogManager::instance().GoldBarLog(GetOwner()->GetPlayerID(), item->GetID(), EXCHANGE_GIVE, "");
-			}
+			LogManager::instance().ExchangeLogItems(GetOwner()->GetName(), victim->GetName(), item->GetName(), item->GetID(), item->GetCount(), GetOwner()->GetAID(), victim->GetAID());
 		}
 
 		m_apItems[i] = NULL;
@@ -1004,14 +508,9 @@ bool CExchange::Done()
 		GetOwner()->PointChange(POINT_GOLD, -m_lGold, true);
 		victim->PointChange(POINT_GOLD, m_lGold, true);
 
-		if (m_lGold > 1000)
+		if (m_lGold >= 10000000)
 		{
-			char exchange_buf[51];
-			snprintf(exchange_buf, sizeof(exchange_buf), "%u %s", GetOwner()->GetPlayerID(), GetOwner()->GetName());
-			LogManager::instance().CharLog(victim, m_lGold, "EXCHANGE_GOLD_TAKE", exchange_buf);
-
-			snprintf(exchange_buf, sizeof(exchange_buf), "%u %s", victim->GetPlayerID(), victim->GetName());
-			LogManager::instance().CharLog(GetOwner(), m_lGold, "EXCHANGE_GOLD_GIVE", exchange_buf);
+			LogManager::instance().ExchangeLogGold(GetOwner()->GetName(), victim->GetName(), m_lGold, GetOwner()->GetAID(), victim->GetAID());
 		}
 	}
 
@@ -1019,7 +518,6 @@ bool CExchange::Done()
 	return true;
 }
 
-// 교환을 동의
 bool CExchange::Accept(bool bAccept)
 {
 	if (m_bAccept == bAccept)
@@ -1027,94 +525,91 @@ bool CExchange::Accept(bool bAccept)
 
 	m_bAccept = bAccept;
 
-	// 둘 다 동의 했으므로 교환 성립
 	if (m_bAccept && GetCompany()->m_bAccept)
 	{
 		int	iItemCount;
 
 		LPCHARACTER victim = GetCompany()->GetOwner();
 
-		//PREVENT_PORTAL_AFTER_EXCHANGE
 		GetOwner()->SetExchangeTime();
-		victim->SetExchangeTime();
-		//END_PREVENT_PORTAL_AFTER_EXCHANGE
+		victim->SetExchangeTime();		
 
-		// @fixme150 BEGIN
-		if (quest::CQuestManager::instance().GetPCForce(GetOwner()->GetPlayerID())->IsRunning() == true || quest::CQuestManager::instance().GetPCForce(victim->GetPlayerID())->IsRunning() == true)
+		LPDESC desc_victim = GetCompany()->GetOwner()->GetDesc();
+		LPDESC desc = GetOwner()->GetDesc();
+
+		if (desc_victim != nullptr)
 		{
-#ifdef TEXTS_IMPROVEMENT
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 631, "");
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 631, "");
-#endif
+			if (desc_victim->IsDisconnectEvent())
+				goto EXCHANGE_END;
+		}
+
+		if (desc != nullptr)
+		{
+			if (desc->IsDisconnectEvent())
+				goto EXCHANGE_END;
+		}
+
+		if (quest::CQuestManager::instance().GetPCForce(GetOwner()->GetPlayerID())->IsRunning() == true)
+		{
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;432]");
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;1255]");
 			goto EXCHANGE_END;
 		}
-		// @fixme150 END
+		else if (quest::CQuestManager::instance().GetPCForce(victim->GetPlayerID())->IsRunning() == true)
+		{
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;432]");
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;1255]");
+			goto EXCHANGE_END;
+		}
 
-		// exchange_check 에서는 교환할 아이템들이 제자리에 있나 확인하고,
-		// 엘크도 충분히 있나 확인한다, 두번째 인자로 교환할 아이템 개수
-		// 를 리턴한다.
 		if (!Check(&iItemCount))
 		{
-#ifdef TEXTS_IMPROVEMENT
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 232, "");
-#endif
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 274, "%s", GetOwner()->GetName());
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;897]");
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;898]");
 			goto EXCHANGE_END;
 		}
 
-		// 리턴 받은 아이템 개수로 상대방의 소지품에 남은 자리가 있나 확인한다.
 		if (!CheckSpace())
 		{
-#ifdef TEXTS_IMPROVEMENT
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 365, "%s", victim->GetName());
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 366, "");
-#endif
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;899]");
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;1466]");
 			goto EXCHANGE_END;
 		}
 
-		// 상대방도 마찬가지로..
 		if (!GetCompany()->Check(&iItemCount))
 		{
-#ifdef TEXTS_IMPROVEMENT
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 232, "");
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 274, "%s", victim->GetName());
-#endif
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;897]");
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;898]");
 			goto EXCHANGE_END;
 		}
 
 		if (!GetCompany()->CheckSpace())
 		{
-#ifdef TEXTS_IMPROVEMENT
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 365, "%s", GetOwner()->GetName());
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 366, "");
-#endif
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;899]");
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;1466]");
 			goto EXCHANGE_END;
 		}
 
 		if (db_clientdesc->GetSocket() == INVALID_SOCKET)
 		{
 			sys_err("Cannot use exchange feature while DB cache connection is dead.");
-#ifdef TEXTS_IMPROVEMENT
-			victim->ChatPacketNew(CHAT_TYPE_INFO, 759, "");
-			GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 759, "");
-#endif
+			victim->ChatPacket(CHAT_TYPE_INFO, "[LS;769]");
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;769]");
 			goto EXCHANGE_END;
 		}
 
 		if (Done())
 		{
-			if (m_lGold) // 돈이 있을 떄만 저장
+			if (m_lGold)
 				GetOwner()->Save();
 
 			if (GetCompany()->Done())
 			{
-				if (GetCompany()->m_lGold) // 돈이 있을 때만 저장
+				if (GetCompany()->m_lGold)
 					victim->Save();
 
-#ifdef TEXTS_IMPROVEMENT
-				GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 105, "%s", victim->GetName());
-				victim->ChatPacketNew(CHAT_TYPE_INFO, 105, "%s", GetOwner()->GetName());
-#endif
+				GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;900;%s]", victim->GetName());
+				victim->ChatPacket(CHAT_TYPE_INFO, "[LS;900;%s]", GetOwner()->GetName());
 			}
 		}
 
@@ -1124,14 +619,12 @@ EXCHANGE_END:
 	}
 	else
 	{
-		// 아니면 accept에 대한 패킷을 보내자.
 		exchange_packet(GetOwner(), EXCHANGE_SUBHEADER_GC_ACCEPT, true, m_bAccept, NPOS, 0);
 		exchange_packet(GetCompany()->GetOwner(), EXCHANGE_SUBHEADER_GC_ACCEPT, false, m_bAccept, NPOS, 0);
 		return true;
 	}
 }
 
-// 교환 취소
 void CExchange::Cancel()
 {
 	exchange_packet(GetOwner(), EXCHANGE_SUBHEADER_GC_END, 0, 0, NPOS, 0);
@@ -1151,4 +644,3 @@ void CExchange::Cancel()
 
 	M2_DELETE(this);
 }
-

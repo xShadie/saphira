@@ -1,6 +1,4 @@
-#ifndef __QUEST_PC_H
-#define __QUEST_PC_H
-
+#pragma once
 #include "quest.h"
 
 class CHARACTER;
@@ -19,9 +17,9 @@ namespace quest
 		} type;
 
 		DWORD value1;
-		int value2;
+		int value2;	
 
-		RewardData(RewardType t, DWORD value1, int value2 = 0) :
+		RewardData(RewardType t, DWORD value1, int value2 = 0) : 
 			type(t),
 			value1(value1),
 			value2(value2)
@@ -32,17 +30,44 @@ namespace quest
 	class PC
 	{
 		public:
-			enum
+			enum 
 			{
 				QUEST_SEND_ISBEGIN		= (1 << 0),
-				QUEST_SEND_TITLE		= (1 << 1),  // 30자 까지
-				QUEST_SEND_CLOCK_NAME		= (1 << 2),  // 16자 까지
+				QUEST_SEND_TITLE		= (1 << 1),
+				QUEST_SEND_CLOCK_NAME		= (1 << 2),	
 				QUEST_SEND_CLOCK_VALUE		= (1 << 3),
-				QUEST_SEND_COUNTER_NAME		= (1 << 4),  // 16자 까지
+				QUEST_SEND_COUNTER_NAME		= (1 << 4),	
 				QUEST_SEND_COUNTER_VALUE	= (1 << 5),
-				QUEST_SEND_ICON_FILE		= (1 << 6),  // 24자 까지
+				QUEST_SEND_ICON_FILE		= (1 << 6),
 			};
 
+#if defined(__QUEST_RENEWAL__)
+			enum EQuestType
+			{
+				QUEST_TYPE_MAIN,
+				QUEST_TYPE_SUB,
+				QUEST_TYPE_LEVELUP,
+				QUEST_TYPE_EVENT,
+				QUEST_TYPE_COLLECTION,
+				QUEST_TYPE_SYSTEM,
+				QUEST_TYPE_SCROLL,
+				QUEST_TYPE_DAILY,
+				QUEST_TYPE_UNEXPOSED,
+				QUEST_TYPE_MAX
+			};
+
+			enum EQuestSkin
+			{
+				QUEST_SKIN_NOWINDOW,
+				QUEST_SKIN_NORMAL,
+				QUEST_SKIN_UNKOWN1,
+				QUEST_SKIN_UNKOWN2,
+				QUEST_SKIN_SCROLL,
+				QUEST_SKIN_CINEMATIC,
+				QUEST_SKIN_COUNT,
+				QUEST_SKIN_MAX
+			};
+#endif
 			typedef map<unsigned int, QuestState>	QuestInfo;
 			typedef QuestInfo::iterator				QuestInfoIterator;
 
@@ -122,7 +147,6 @@ namespace quest
 			bool		IsLoaded() const	{ return m_bLoaded; }
 			void		SetLoaded()	{ m_bLoaded = true; }
 			void		Build();
-			// DB에 저장
 			void		Save();
 
 			bool		HasReward() { return !m_vRewardData.empty() || m_bIsGivenReward; }
@@ -176,7 +200,7 @@ namespace quest
 			TTimerMap		m_TimerMap;
 
 			int			m_iSendToClient;
-			bool		m_bLoaded; // 로드는 한번만 한다.
+			bool		m_bLoaded;
 
 			int			m_iLastState;
 
@@ -209,5 +233,3 @@ namespace quest
 		return m_RunningQuestState;
 	}
 }
-
-#endif

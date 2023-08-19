@@ -1,6 +1,4 @@
-#ifndef __INC_METIN_II_STL_H__
-#define __INC_METIN_II_STL_H__
-
+#pragma once
 #include <vector>
 #include <string>
 #include <map>
@@ -8,10 +6,6 @@
 #include <functional>
 #include <stack>
 #include <set>
-#ifdef __GNUC__
-#include <ext/functional>
-#endif
-
 #ifndef itertype
 #define itertype(v) __typeof((v).begin())
 #endif
@@ -22,7 +16,7 @@ inline void stl_lowers(std::string& rstRet)
 		rstRet[i] = tolower(rstRet[i]);
 }
 
-struct stringhash
+struct stringhash       
 {
 	size_t operator () (const std::string & str) const
 	{
@@ -38,19 +32,6 @@ struct stringhash
 
 		return h;
 	}
-};
-
-// code from tr1/functional_hash.h
-template<typename T>
-struct hash;
-
-template<typename _Tp>
-struct hash<_Tp*>
-: public std::unary_function<_Tp*, std::size_t>
-{
-	std::size_t
-		operator()(_Tp* __p) const
-		{ return reinterpret_cast<std::size_t>(__p); }
 };
 
 namespace std
@@ -96,49 +77,23 @@ namespace std
 			a.clear();
 		}
 
-	//template <typename T> T MINMAX(T min, T value, T max)
-	//{
-	//	T tv;
-	//
-	//	tv = (min > value ? min : value);
-	//	return (max < tv) ? max : tv;
-	//}
+#ifdef WIN32
+	template <typename T> T MIN(T a, T b)
+	{
+		return a < b ? a : b;
+	}
 
-	//template <class _Ty>
-	//	class void_mem_fun_t : public unary_function<_Ty *, void>
-	//	{
-	//		public:
-	//			explicit void_mem_fun_t(void (_Ty::*_Pm)()) : _Ptr(_Pm)
-	//			{
-	//			}
-	//
-	//			void operator()(_Ty* p) const
-	//			{
-	//				((p->*_Ptr)());
-	//			}
-	//
-	//		private:
-	//			void (_Ty::*_Ptr)();
-	//	};
-	//
-	//template<class _Ty> inline
-	//	void_mem_fun_t<_Ty> void_mem_fun(void (_Ty::*_Pm)())
-	//	{ return (void_mem_fun_t<_Ty>(_Pm)); }
-	//
-	//template<class _Ty>
-	//	class void_mem_fun_ref_t : public unary_function<_Ty, void>
-	//	{
-	//		public:
-	//			explicit void_mem_fun_ref_t(void (_Ty::*_Pm)()) : _Ptr(_Pm) {}
-	//			void operator()(_Ty& x) const
-	//			{ return ((x.*_Ptr)()); }
-	//		private:
-	//			void (_Ty::*_Ptr)();
-	//	};
-	//
-	//template<class _Ty> inline
-	//	void_mem_fun_ref_t<_Ty> void_mem_fun_ref(void (_Ty::*_Pm)())
-	//	{ return (void_mem_fun_ref_t< _Ty>(_Pm)); }
-};
-
+	template <typename T> T MAX(T a, T b)
+	{
+		return a > b ? a : b;
+	}
 #endif
+
+	template <typename T> T MINMAX(T min, T value, T max)
+	{
+		T tv;
+
+		tv = (min > value ? min : value);
+		return (max < tv) ? max : tv;
+	}
+};

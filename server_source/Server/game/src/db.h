@@ -1,7 +1,5 @@
-#ifndef __INC_METIN_II_DB_MANAGER_H__
-#define __INC_METIN_II_DB_MANAGER_H__
-
-#include "../../libsql/AsyncSQL.h"
+#pragma once
+#include "../../libsql/src/AsyncSQL.h"
 #include "any_function.h"
 
 enum
@@ -14,35 +12,19 @@ enum
 enum
 {
 	QID_SAFEBOX_SIZE,
-	QID_DB_STRING,
 	QID_AUTH_LOGIN,
-	QID_LOTTO,
-	QID_HIGHSCORE_REGISTER,
+	QID_HIGHSCORE_REGISTER = 3,
 	QID_HIGHSCORE_SHOW,
-	QID_BILLING_GET_TIME,
-	QID_BILLING_CHECK,
-
-	// BLOCK_CHAT
 	QID_BLOCK_CHAT_LIST,
-	// END_OF_BLOCK_CHAT
-
-	// PCBANG_IP_LIST
-	QID_PCBANG_IP_LIST_CHECK,
-	QID_PCBANG_IP_LIST_SELECT,
-	// END_OF_PCBANG_IP_LIST
-
-	// PROTECT_CHILD_FOR_NEWCIBN
 	QID_PROTECT_CHILD,
-	// END_PROTECT_CHILD_FOR_NEWCIBN
 };
 
 typedef struct SUseTime
 {
 	DWORD	dwLoginKey;
-	char        szLogin[LOGIN_MAX_LEN+1];
-	BYTE        bBillType;
-	DWORD       dwUseSec;
-	char        szIP[MAX_HOST_LENGTH+1];
+	char	szLogin[LOGIN_MAX_LEN+1];
+	DWORD	dwUseSec;
+	char	szIP[MAX_HOST_LENGTH+1];
 } TUseTime;
 
 class CQueryInfo
@@ -54,9 +36,9 @@ class CQueryInfo
 class CReturnQueryInfo : public CQueryInfo
 {
 	public:
-		int	iType;
+		int		iType;
 		DWORD	dwIdent;
-		void			*	pvData;
+		void	*pvData;
 };
 
 class CFuncQueryInfo : public CQueryInfo
@@ -73,7 +55,6 @@ class CFuncAfterQueryInfo : public CQueryInfo
 
 class CLoginData;
 
-
 class DBManager : public singleton<DBManager>
 {
 	public:
@@ -81,59 +62,32 @@ class DBManager : public singleton<DBManager>
 		virtual ~DBManager();
 
 		bool			IsConnected();
-
 		bool			Connect(const char * host, const int port, const char * user, const char * pwd, const char * db);
 		void			Query(const char * c_pszFormat, ...);
-
 		SQLMsg *		DirectQuery(const char * c_pszFormat, ...);
 		void			ReturnQuery(int iType, DWORD dwIdent, void* pvData, const char * c_pszFormat, ...);
-
 		void			Process();
 		void			AnalyzeReturnQuery(SQLMsg * pmsg);
-#ifdef ENABLE_LONG_LONG
-		void			SendMoneyLog(BYTE type, DWORD vnum, long long gold);
-#else
-		void			SendMoneyLog(BYTE type, DWORD vnum, int gold);
-#endif
-
-		void			LoginPrepare(BYTE bBillType, DWORD dwBillID, long lRemainSecs, LPDESC d, DWORD * pdwClientKey, int * paiPremiumTimes = NULL);
+		void			LoginPrepare(LPDESC d, DWORD * pdwClientKey, int * paiPremiumTimes = NULL);
 		void			SendAuthLogin(LPDESC d);
 		void			SendLoginPing(const char * c_pszLogin);
-
 		void			InsertLoginData(CLoginData * pkLD);
 		void			DeleteLoginData(CLoginData * pkLD);
-		CLoginData *		GetLoginData(DWORD dwKey);
-		void			SetBilling(DWORD dwKey, bool bOn, bool bSkipPush = false);
-		void			PushBilling(CLoginData * pkLD);
-		void			FlushBilling(bool bForce=false);
-		void			CheckBilling();
-
-		void			StopAllBilling(); // 20050503.ipkn.DB-AUTH 접속 종료시 빌링 테이블 모두 지우기 (재연결시 복구함)
-
+		CLoginData *	GetLoginData(DWORD dwKey);
 		DWORD			CountQuery()		{ return m_sql.CountQuery(); }
 		DWORD			CountQueryResult()	{ return m_sql.CountResult(); }
 		void			ResetQueryResult()	{ m_sql.ResetQueryFinished(); }
 
-		void			LoadDBString();
-		const std::string &	GetDBString(const std::string& key);
-		const std::vector<std::string> & GetGreetMessage();
-
-		template<class Functor> void FuncQuery(Functor f, const char * c_pszFormat, ...); // 결과를 f인자로 호출함 (SQLMsg *) 알아서 해제됨
-		template<class Functor> void FuncAfterQuery(Functor f, const char * c_pszFormat, ...); // 끝나고 나면 f가 호출됨 void			f(void) 형태
-
+		template<class Functor> void FuncQuery(Functor f, const char * c_pszFormat, ...);
+		template<class Functor> void FuncAfterQuery(Functor f, const char * c_pszFormat, ...);
 		size_t EscapeString(char* dst, size_t dstSize, const char *src, size_t srcSize);
 
 	private:
-		SQLMsg *				PopResult();
-
-		CAsyncSQL				m_sql;
-		CAsyncSQL				m_sql_direct;
-		bool					m_bIsConnect;
-
-		std::map<std::string, std::string>	m_map_dbstring;
-		std::vector<std::string>		m_vec_GreetMessage;
-		std::map<DWORD, CLoginData *>		m_map_pkLoginData;
-		std::map<std::string, CLoginData *>	mapLDBilling;
+		SQLMsg *						PopResult();
+		CAsyncSQL						m_sql;
+		CAsyncSQL						m_sql_direct;
+		bool							m_bIsConnect;
+		std::map<DWORD, CLoginData *>	m_map_pkLoginData;
 		std::vector<TUseTime>			m_vec_kUseTime;
 };
 
@@ -171,46 +125,32 @@ template <class Functor> void DBManager::FuncAfterQuery(Functor f, const char* c
 	m_sql.ReturnQuery(szQuery, p);
 }
 
-////////////////////////////////////////////////////////////////
 typedef struct SHighscoreRegisterQueryInfo
 {
-	char    szBoard[20+1];
+	char    szBoard[20+1]; 
 	DWORD   dwPID;
 	int     iValue;
 	bool    bOrder;
 } THighscoreRegisterQueryInfo;
 
-extern void SendBillingExpire(const char * c_pszLogin, BYTE bBillType, int iSecs, CLoginData * pkLD);
-extern void VCardUse(LPCHARACTER CardOwner, LPCHARACTER CardTaker, LPITEM item);
-
-
-// ACCOUNT_DB
 class AccountDB : public singleton<AccountDB>
 {
 	public:
 		AccountDB();
-
 		bool IsConnected();
 		bool Connect(const char * host, const int port, const char * user, const char * pwd, const char * db);
 		bool ConnectAsync(const char * host, const int port, const char * user, const char * pwd, const char * db, const char * locale);
-
-		SQLMsg* DirectQuery(const char * query);
+		SQLMsg* DirectQuery(const char * query);		
 		void ReturnQuery(int iType, DWORD dwIdent, void * pvData, const char * c_pszFormat, ...);
 		void AsyncQuery(const char* query);
-
 		void SetLocale(const std::string & stLocale);
-
 		void Process();
 
 	private:
 		SQLMsg * PopResult();
 		void AnalyzeReturnQuery(SQLMsg * pMsg);
-
 		CAsyncSQL2	m_sql_direct;
 		CAsyncSQL2	m_sql;
 		bool		m_IsConnect;
 
 };
-//END_ACCOUNT_DB
-
-#endif

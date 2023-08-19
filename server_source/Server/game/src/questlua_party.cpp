@@ -1,33 +1,21 @@
 #include "stdafx.h"
 #include <sstream>
-
 #include "desc.h"
 #include "party.h"
 #include "char.h"
 #include "questlua.h"
 #include "questmanager.h"
 #include "packet.h"
-#include "char_manager.h"
-#include "db.h"
-
-#undef sys_err
-#ifndef __WIN32__
-#define sys_err(fmt, args...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, ##args)
-#else
-#define sys_err(fmt, ...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, __VA_ARGS__)
-#endif
+#include "quest_sys_err.h"
 
 namespace quest
 {
 	using namespace std;
 
-	//
-	// "party" Lua functions
-	//
-	ALUA(party_clear_ready)
+	int party_clear_ready(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-
+		
 		if (ch->GetParty())
 		{
 			FPartyClearReady f;
@@ -36,7 +24,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(party_get_max_level)
+	int party_get_max_level(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -47,54 +35,6 @@ namespace quest
 
 		return 1;
 	}
-
-#ifdef ENABLE_NEWSTUFF
-	ALUA(party_get_min_level)
-	{
-		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-
-		if (ch->GetParty())
-			lua_pushnumber(L,ch->GetParty()->GetMemberMinLevel());
-		else
-			lua_pushnumber(L, 1);
-
-		return 1;
-	}
-
-	ALUA(party_leave_party)
-	{
-		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-
-		// if (!ch->GetParty()&&!CPartyManager::instance().IsEnablePCParty()&&ch->GetDungeon())
-			// return 0;
-
-		LPPARTY pParty = ch->GetParty();
-		if (pParty)
-		{
-			if (pParty->GetMemberCount() == 2)
-				CPartyManager::instance().DeleteParty(pParty);
-			else
-				pParty->Quit(ch->GetPlayerID());
-		}
-
-		lua_pushboolean(L, ch->GetParty()==NULL);
-		return 1;
-	}
-
-	ALUA(party_delete_party)
-	{
-		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-
-		// if (!ch->GetParty()&&!CPartyManager::instance().IsEnablePCParty()&&ch->GetDungeon()&&!ch->GetParty()->GetLeaderPID() == ch->GetPlayerID())
-			// return 0;
-
-		if (ch->GetParty() && ch->GetParty()->GetLeaderPID() == ch->GetPlayerID())
-			CPartyManager::instance().DeleteParty(ch->GetParty());
-
-		lua_pushboolean(L, ch->GetParty()==NULL);
-		return 1;
-	}
-#endif
 
     struct FRunCinematicSender
     {
@@ -109,7 +49,6 @@ namespace quest
 
             pack.header = HEADER_GC_SCRIPT;
             pack.skin = CQuestManager::QUEST_SKIN_CINEMATIC;
-            //pack.skin = CQuestManager::QUEST_SKIN_NOWINDOW;
             pack.src_size = data.size();
             pack.size = pack.src_size + sizeof(struct packet_script);
         }
@@ -127,11 +66,11 @@ namespace quest
         }
     };
 
-	ALUA(party_run_cinematic)
+	int party_run_cinematic(lua_State* L)
 	{
 		if (!lua_isstring(L, 1))
 			return 0;
-
+		
 		sys_log(0, "RUN_CINEMA %s", lua_tostring(L, 1));
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -176,7 +115,7 @@ namespace quest
 		}
 	};
 
-	ALUA(party_show_cinematic)
+	int party_show_cinematic(lua_State* L)
 	{
 		if (!lua_isstring(L, 1))
 			return 0;
@@ -194,7 +133,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(party_get_near_count)
+	int party_get_near_count(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -206,7 +145,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(party_syschat)
+	int party_syschat(lua_State* L)
 	{
 		LPPARTY pParty = CQuestManager::Instance().GetCurrentCharacterPtr()->GetParty();
 
@@ -223,7 +162,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(party_is_leader)
+	int party_is_leader(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -235,14 +174,14 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(party_is_party)
+	int party_is_party(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		lua_pushboolean(L, ch->GetParty() ? 1 : 0);
 		return 1;
 	}
 
-	ALUA(party_get_leader_pid)
+	int party_get_leader_pid(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		if (ch->GetParty())
@@ -257,7 +196,7 @@ namespace quest
 	}
 
 
-	ALUA(party_chat)
+	int party_chat(lua_State* L)
 	{
 		LPPARTY pParty = CQuestManager::Instance().GetCurrentCharacterPtr()->GetParty();
 
@@ -275,7 +214,7 @@ namespace quest
 	}
 
 
-	ALUA(party_is_map_member_flag_lt)
+	int party_is_map_member_flag_lt(lua_State* L)
 	{
 
 		if (!lua_isstring(L, 1) || !lua_isnumber(L, 2))
@@ -304,7 +243,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(party_set_flag)
+	int party_set_flag(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -314,7 +253,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(party_get_flag)
+	int party_get_flag(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -326,7 +265,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(party_set_quest_flag)
+	int party_set_quest_flag(lua_State* L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 
@@ -345,7 +284,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(party_is_in_dungeon)
+	int party_is_in_dungeon (lua_State* L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -369,7 +308,7 @@ namespace quest
 		bool bOverride;
 		bool IsCube;
 
-		FGiveBuff (DWORD _dwType, BYTE _bApplyOn, long _lApplyValue, DWORD _dwFlag, long _lDuration,
+		FGiveBuff (DWORD _dwType, BYTE _bApplyOn, long _lApplyValue, DWORD _dwFlag, long _lDuration, 
 					long _lSPCost, bool _bOverride, bool _IsCube = false)
 			: dwType (_dwType), bApplyOn (_bApplyOn), lApplyValue (_lApplyValue), dwFlag(_dwFlag), lDuration(_lDuration),
 				lSPCost(_lSPCost), bOverride(_bOverride), IsCube(_IsCube)
@@ -380,14 +319,12 @@ namespace quest
 		}
 	};
 
-	// 파티 단위로 버프 주는 함수.
-	// 같은 맵에 있는 파티원만 영향을 받는다.
-	ALUA(party_give_buff)
+	int party_give_buff (lua_State* L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
-
-		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4) ||
+		
+		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4) || 
 			!lua_isnumber(L, 5) || !lua_isnumber(L, 6) || !lua_isboolean(L, 7) || !lua_isboolean(L, 8))
 		{
 			lua_pushboolean (L, false);
@@ -408,7 +345,7 @@ namespace quest
 		else
 			f(ch);
 
-		lua_pushboolean(L, true);
+		lua_pushboolean (L, true);
 		return 1;
 	}
 
@@ -423,8 +360,7 @@ namespace quest
 			vecPIDs.push_back(ch->GetPlayerID());
 		}
 	};
-
-	ALUA(party_get_member_pids)
+	int party_get_member_pids(lua_State *L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
@@ -435,149 +371,17 @@ namespace quest
 		}
 		FPartyPIDCollector f;
 		pParty->ForEachOnMapMember(f, ch->GetMapIndex());
-
-		for (std::vector <DWORD>::iterator it = f.vecPIDs.begin(); it != f.vecPIDs.end(); it++)
+		
+		for (auto it = f.vecPIDs.begin(); it != f.vecPIDs.end(); it++)
 		{
 			lua_pushnumber(L, *it);
 		}
 		return f.vecPIDs.size();
 	}
 
-	ALUA(party_get_leader_name)
-	{
-		std::string name = "";
-
-		CQuestManager & q = CQuestManager::instance();
-		LPCHARACTER ch = q.GetCurrentCharacterPtr();
-		if (!ch)
-		{
-			lua_pushstring(L, name.c_str());
-			return 1;
-		}
-
-		LPPARTY party = ch->GetParty();
-		if (party)
-		{
-			int32_t pid = party->GetLeaderPID();
-			LPCHARACTER leader = CHARACTER_MANAGER::instance().FindByPID(pid);
-			name = leader != NULL ? leader->GetName() : ch->GetName();
-		}
-		else
-		{
-			name = ch->GetName();
-		}
-
-		lua_pushstring(L, name.c_str());
-		return 1;
-	}
-
-	ALUA(party_give_gold)
-	{
-		CQuestManager & q = CQuestManager::instance();
-		LPCHARACTER ch = q.GetCurrentCharacterPtr();
-		if (!ch)
-		{
-			return 0;
-		}
-
-#ifdef ENABLE_LONG_LONG
-		int64_t gold = (int64_t)lua_tonumber(L, -1);
-#else
-		int32_t gold = (int32_t)lua_tonumber(L, -1);
-#endif
-
-		LPPARTY party = ch->GetParty();
-		if (party)
-		{
-			FPartyPIDCollector f;
-			party->ForEachOnMapMember(f, ch->GetMapIndex());
-
-			for (auto it = f.vecPIDs.begin(); it != f.vecPIDs.end(); it++)
-			{
-				LPCHARACTER tch = CHARACTER_MANAGER::instance().FindByPID(*it);
-				if (tch && tch->IsPC())
-				{
-					if (gold + tch->GetGold() < 0)
-					{
-#ifdef ENABLE_LONG_LONG
-						sys_err("QUEST wrong ChangeGold %lld (now %lld)", gold, tch->GetGold());
-#else
-						sys_err("QUEST wrong ChangeGold %d (now %d)", gold, tch->GetGold());
-#endif
-					}
-					else
-					{
-						DBManager::instance().SendMoneyLog(MONEY_LOG_QUEST, tch->GetPlayerID(), gold);
-						tch->PointChange(POINT_GOLD, gold, true);
-					}
-				}
-			}
-
-			if (!q.GetPC(ch->GetPlayerID()))
-			{
-				sys_err("cannot return to main.");
-			}
-		}
-		else
-		{
-			if (gold + ch->GetGold() < 0)
-			{
-#ifdef ENABLE_LONG_LONG
-				sys_err("QUEST wrong ChangeGold %lld (now %lld)", gold, ch->GetGold());
-#else
-				sys_err("QUEST wrong ChangeGold %d (now %d)", gold, ch->GetGold());
-#endif
-			}
-			else
-			{
-				DBManager::instance().SendMoneyLog(MONEY_LOG_QUEST, ch->GetPlayerID(), gold);
-				ch->PointChange(POINT_GOLD, gold, true);
-			}
-		}
-
-		return 0;
-	}
-
-	ALUA(party_give_blacksmith)
-	{
-		CQuestManager & q = CQuestManager::instance();
-		LPCHARACTER ch = q.GetCurrentCharacterPtr();
-		if (!ch)
-		{
-			return 0;
-		}
-
-		LPPARTY party = ch->GetParty();
-		if (party)
-		{
-			FPartyPIDCollector f;
-			party->ForEachOnMapMember(f, ch->GetMapIndex());
-
-			for (auto it = f.vecPIDs.begin(); it != f.vecPIDs.end(); it++)
-			{
-				LPCHARACTER tch = CHARACTER_MANAGER::instance().FindByPID(*it);
-				if (tch && tch->IsPC())
-				{
-					tch->SetQuestFlag("deviltower_zone.can_refine", 1);
-				}
-			}
-
-			if (!q.GetPC(ch->GetPlayerID()))
-			{
-				sys_err("cannot return to main.");
-			}
-		}
-		else
-		{
-			ch->SetQuestFlag("deviltower_zone.can_refine", 1);
-		}
-
-		return 0;
-	}
-
 	void RegisterPartyFunctionTable()
 	{
-		luaL_reg party_functions[] =
+		luaL_reg party_functions[] = 
 		{
 			{ "is_leader",		party_is_leader		},
 			{ "is_party",		party_is_party		},
@@ -591,19 +395,11 @@ namespace quest
 			{ "show_cinematic",	party_show_cinematic},
 			{ "run_cinematic",	party_run_cinematic	},
 			{ "get_max_level",	party_get_max_level	},
-#ifdef ENABLE_NEWSTUFF
-			{ "get_min_level",	party_get_min_level	},	// [return lua number]
-			{ "leave_party",	party_leave_party	},	// [return lua boolean=successfulness]
-			{ "delete_party",	party_delete_party	},	// [return lua boolean=successfulness]
-#endif
 			{ "clear_ready",	party_clear_ready	},
 			{ "is_in_dungeon",	party_is_in_dungeon	},
 			{ "give_buff",		party_give_buff		},
 			{ "is_map_member_flag_lt",	party_is_map_member_flag_lt	},
-			{ "get_member_pids",		party_get_member_pids	}, // 파티원들의 pid를 return
-			{"get_leader_name", party_get_leader_name},
-			{"give_gold", party_give_gold},
-			{"give_blacksmith", party_give_blacksmith},
+			{ "get_member_pids",		party_get_member_pids	},
 			{ NULL,				NULL				}
 		};
 

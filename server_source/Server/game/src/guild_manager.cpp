@@ -52,7 +52,7 @@ CGuildManager::CGuildManager()
 
 CGuildManager::~CGuildManager()
 {
-	for( TGuildMap::const_iterator iter = m_mapGuild.begin() ; iter != m_mapGuild.end() ; ++iter )
+	for(auto iter = m_mapGuild.begin() ; iter != m_mapGuild.end() ; ++iter )
 	{
 		M2_DELETE(iter->second);
 	}
@@ -77,21 +77,17 @@ DWORD CGuildManager::CreateGuild(TGuildCreateParameter& gcp)
 
 	if (!check_name(gcp.name))
 	{
-#ifdef TEXTS_IMPROVEMENT
-		gcp.master->ChatPacketNew(CHAT_TYPE_INFO, 135, "");
-#endif
+		gcp.master->ChatPacket(CHAT_TYPE_INFO, "[LS;472]");
 		return 0;
 	}
 
-	// @fixme143 BEGIN
-	static char	__guild_name[GUILD_NAME_MAX_LEN*2+1];
+	static char	__guild_name[GUILD_NAME_MAX_LEN * 2 + 1];
 	DBManager::instance().EscapeString(__guild_name, sizeof(__guild_name), gcp.name, strnlen(gcp.name, sizeof(gcp.name)));
 	if (strncmp(__guild_name, gcp.name, strnlen(gcp.name, sizeof(gcp.name))))
 		return 0;
-	// @fixme143 END
 
 	std::unique_ptr<SQLMsg> pmsg(DBManager::instance().DirectQuery("SELECT COUNT(*) FROM guild%s WHERE name = '%s'",
-				get_table_postfix(), __guild_name));
+				get_table_postfix(), gcp.name));
 
 	if (pmsg->Get()->uiNumRows > 0)
 	{
@@ -99,22 +95,16 @@ DWORD CGuildManager::CreateGuild(TGuildCreateParameter& gcp)
 
 		if (!(row[0] && row[0][0] == '0'))
 		{
-#ifdef TEXTS_IMPROVEMENT
-			gcp.master->ChatPacketNew(CHAT_TYPE_INFO, 166, "");
-#endif
+			gcp.master->ChatPacket(CHAT_TYPE_INFO, "[LS;473]");
 			return 0;
 		}
 	}
 	else
 	{
-#ifdef TEXTS_IMPROVEMENT
-		gcp.master->ChatPacketNew(CHAT_TYPE_INFO, 136, "");
-#endif
+		gcp.master->ChatPacket(CHAT_TYPE_INFO, "[LS;474]");
 		return 0;
 	}
 
-	// new CGuild(gcp) queries guild tables and tell dbcache to notice other game servers.
-	// other game server calls CGuildManager::LoadGuild to load guild.
 	CGuild * pg = M2_NEW CGuild(gcp);
 	m_mapGuild.insert(std::make_pair(pg->GetID(), pg));
 	return pg->GetID();
@@ -127,12 +117,12 @@ void CGuildManager::Unlink(DWORD pid)
 
 CGuild * CGuildManager::GetLinkedGuild(DWORD pid)
 {
-	TGuildMap::iterator it = m_map_pkGuildByPID.find(pid);
+	auto it = m_map_pkGuildByPID.find(pid);
 
 	if (it == m_map_pkGuildByPID.end())
 		return NULL;
 
-	return it->second;
+	return it->second; 
 }
 
 void CGuildManager::Link(DWORD pid, CGuild* guild)
@@ -143,7 +133,7 @@ void CGuildManager::Link(DWORD pid, CGuild* guild)
 
 void CGuildManager::P2PLogoutMember(DWORD pid)
 {
-	TGuildMap::iterator it = m_map_pkGuildByPID.find(pid);
+	auto it = m_map_pkGuildByPID.find(pid);
 
 	if (it != m_map_pkGuildByPID.end())
 	{
@@ -153,7 +143,7 @@ void CGuildManager::P2PLogoutMember(DWORD pid)
 
 void CGuildManager::P2PLoginMember(DWORD pid)
 {
-	TGuildMap::iterator it = m_map_pkGuildByPID.find(pid);
+	auto it = m_map_pkGuildByPID.find(pid);
 
 	if (it != m_map_pkGuildByPID.end())
 	{
@@ -163,7 +153,7 @@ void CGuildManager::P2PLoginMember(DWORD pid)
 
 void CGuildManager::LoginMember(LPCHARACTER ch)
 {
-	TGuildMap::iterator it = m_map_pkGuildByPID.find(ch->GetPlayerID());
+	auto it = m_map_pkGuildByPID.find(ch->GetPlayerID());
 
 	if (it != m_map_pkGuildByPID.end())
 	{
@@ -174,7 +164,7 @@ void CGuildManager::LoginMember(LPCHARACTER ch)
 
 CGuild* CGuildManager::TouchGuild(DWORD guild_id)
 {
-	TGuildMap::iterator it = m_mapGuild.find(guild_id);
+	auto it = m_mapGuild.find(guild_id);
 
 	if (it == m_mapGuild.end())
 	{
@@ -189,7 +179,7 @@ CGuild* CGuildManager::TouchGuild(DWORD guild_id)
 
 CGuild* CGuildManager::FindGuild(DWORD guild_id)
 {
-	TGuildMap::iterator it = m_mapGuild.find(guild_id);
+	auto it = m_mapGuild.find(guild_id);
 	if (it == m_mapGuild.end())
 	{
 		return NULL;
@@ -197,21 +187,9 @@ CGuild* CGuildManager::FindGuild(DWORD guild_id)
 	return it->second;
 }
 
-#ifdef ADVANCED_GUILD_INFO
-void CGuildManager::ResetStatsToAll()
-{
-	itertype(m_mapGuild) it;
-	for (it = m_mapGuild.begin(); it!=m_mapGuild.end(); ++it)
-	{
-		it->second->ResetAllStats();
-	}
-}
-#endif
-
 CGuild*	CGuildManager::FindGuildByName(const std::string guild_name)
 {
-	itertype(m_mapGuild) it;
-	for (it = m_mapGuild.begin(); it!=m_mapGuild.end(); ++it)
+	for (auto it = m_mapGuild.begin(); it!=m_mapGuild.end(); ++it)
 	{
 		if (it->second->GetName()==guild_name)
 			return it->second;
@@ -225,7 +203,6 @@ void CGuildManager::Initialize()
 
 	if (g_bAuthServer)
 	{
-		sys_log(0, "	No need for auth server");
 		return;
 	}
 
@@ -257,7 +234,7 @@ void CGuildManager::Initialize()
 
 void CGuildManager::LoadGuild(DWORD guild_id)
 {
-	TGuildMap::iterator it = m_mapGuild.find(guild_id);
+	auto it = m_mapGuild.find(guild_id);
 
 	if (it == m_mapGuild.end())
 	{
@@ -265,13 +242,12 @@ void CGuildManager::LoadGuild(DWORD guild_id)
 	}
 	else
 	{
-		//it->second->Load(guild_id);
 	}
 }
 
 void CGuildManager::DisbandGuild(DWORD guild_id)
 {
-	TGuildMap::iterator it = m_mapGuild.find(guild_id);
+	auto it = m_mapGuild.find(guild_id);
 
 	if (it == m_mapGuild.end())
 		return;
@@ -286,7 +262,7 @@ void CGuildManager::DisbandGuild(DWORD guild_id)
 
 void CGuildManager::SkillRecharge()
 {
-	for (TGuildMap::iterator it = m_mapGuild.begin(); it!=m_mapGuild.end();++it)
+	for (auto it = m_mapGuild.begin(); it!=m_mapGuild.end();++it)
 	{
 		it->second->SkillRecharge();
 	}
@@ -297,7 +273,7 @@ int CGuildManager::GetRank(CGuild* g)
 	int point = g->GetLadderPoint();
 	int rank = 1;
 
-	for (itertype(m_mapGuild) it = m_mapGuild.begin(); it != m_mapGuild.end();++it)
+	for (auto it = m_mapGuild.begin(); it != m_mapGuild.end();++it)
 	{
 		CGuild * pg = it->second;
 
@@ -308,8 +284,12 @@ int CGuildManager::GetRank(CGuild* g)
 	return rank;
 }
 
-struct FGuildCompare : public std::binary_function<CGuild*, CGuild*, bool>
+struct FGuildCompare
 {
+	typedef CGuild* first_argument_type;
+	typedef CGuild* second_argument_type;
+	typedef bool result_type;
+
 	bool operator () (CGuild* g1, CGuild* g2) const
 	{
 		if (g1->GetLadderPoint() < g2->GetLadderPoint())
@@ -325,7 +305,7 @@ struct FGuildCompare : public std::binary_function<CGuild*, CGuild*, bool>
 		if (g1->GetGuildWarLossCount() > g2->GetGuildWarLossCount())
 			return false;
 		int c = strcmp(g1->GetName(), g2->GetName());
-		if (c>0)
+		if (c > 0)
 			return true;
 		return false;
 	}
@@ -336,7 +316,7 @@ void CGuildManager::GetHighRankString(DWORD dwMyGuild, char * buffer, size_t buf
 	using namespace std;
 	vector<CGuild*> v;
 
-	for (itertype(m_mapGuild) it = m_mapGuild.begin(); it != m_mapGuild.end(); ++it)
+	for (auto it = m_mapGuild.begin(); it != m_mapGuild.end(); ++it)
 	{
 		if (it->second)
 			v.push_back(it->second);
@@ -380,7 +360,7 @@ void CGuildManager::GetHighRankString(DWORD dwMyGuild, char * buffer, size_t buf
 				len += len2;
 		}
 
-		len2 = snprintf(buffer + len, buflen - len, "%3d | %-12s | %-8d | %4d | %4d | %4d",
+		len2 = snprintf(buffer + len, buflen - len, "%3d | %-12s | %-8d | %4d | %4d | %4d", 
 				GetRank(g),
 				g->GetName(),
 				g->GetLadderPoint(),
@@ -410,7 +390,7 @@ void CGuildManager::GetAroundRankString(DWORD dwMyGuild, char * buffer, size_t b
 	using namespace std;
 	vector<CGuild*> v;
 
-	for (itertype(m_mapGuild) it = m_mapGuild.begin(); it != m_mapGuild.end(); ++it)
+	for (auto it = m_mapGuild.begin(); it != m_mapGuild.end(); ++it)
 	{
 		if (it->second)
 			v.push_back(it->second);
@@ -461,7 +441,7 @@ void CGuildManager::GetAroundRankString(DWORD dwMyGuild, char * buffer, size_t b
 				len += len2;
 		}
 
-		len2 = snprintf(buffer + len, buflen - len, "%3d | %-12s | %-8d | %4d | %4d | %4d",
+		len2 = snprintf(buffer + len, buflen - len, "%3d | %-12s | %-8d | %4d | %4d | %4d", 
 				GetRank(g),
 				g->GetName(),
 				g->GetLadderPoint(),
@@ -488,9 +468,6 @@ void CGuildManager::GetAroundRankString(DWORD dwMyGuild, char * buffer, size_t b
 	}
 }
 
-/////////////////////////////////////////////////////////////////////
-// Guild War
-/////////////////////////////////////////////////////////////////////
 void CGuildManager::RequestCancelWar(DWORD guild_id1, DWORD guild_id2)
 {
 	sys_log(0, "RequestCancelWar %d %d", guild_id1, guild_id2);
@@ -528,10 +505,8 @@ void CGuildManager::RequestWarOver(DWORD dwGuild1, DWORD dwGuild2, DWORD dwGuild
 	TPacketGuildWar p;
 
 	p.bWar = GUILD_WAR_OVER;
-	// 길드전이 끝나도 보상은 없다.
-	//p.lWarPrice = lReward;
 	p.lWarPrice = 0;
-	p.bType = dwGuildWinner == 0 ? 1 : 0; // bType == 1 means draw for this packet.
+	p.bType = dwGuildWinner == 0 ? 1 : 0;
 
 	if (dwGuildWinner == 0)
 	{
@@ -545,7 +520,7 @@ void CGuildManager::RequestWarOver(DWORD dwGuild1, DWORD dwGuild2, DWORD dwGuild
 	}
 
 	db_clientdesc->DBPacket(HEADER_GD_GUILD_WAR, 0, &p, sizeof(p));
-	sys_log(0, "RequestWarOver : winner %u loser %u draw %u betprice %d", p.dwGuildFrom, p.dwGuildTo, p.bType, p.lWarPrice);
+	sys_log(0, "RequestWarOver : winner %u loser %u draw %u betprice %lld", p.dwGuildFrom, p.dwGuildTo, p.bType, p.lWarPrice);
 }
 
 void CGuildManager::DeclareWar(DWORD guild_id1, DWORD guild_id2, BYTE bType)
@@ -559,24 +534,25 @@ void CGuildManager::DeclareWar(DWORD guild_id1, DWORD guild_id2, BYTE bType)
 	if (!g1 || !g2)
 		return;
 
-#ifdef TEXTS_IMPROVEMENT
-	if (g1->DeclareWar(guild_id2, bType, GUILD_WAR_SEND_DECLARE) && g2->DeclareWar(guild_id1, bType, GUILD_WAR_RECV_DECLARE)) {
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 563, "%s#%s", TouchGuild(guild_id1)->GetName(), TouchGuild(guild_id2)->GetName());
+	if (g1->DeclareWar(guild_id2, bType, GUILD_WAR_SEND_DECLARE) && g2->DeclareWar(guild_id1, bType, GUILD_WAR_RECV_DECLARE))
+	{
+		char buf[256];
+		snprintf(buf, sizeof(buf), "[LS;475;%s;%s]", TouchGuild(guild_id1)->GetName(), TouchGuild(guild_id2)->GetName());
+		SendNotice(buf);
 	}
-#endif
 }
 
 void CGuildManager::RefuseWar(DWORD guild_id1, DWORD guild_id2)
 {
 	CGuild * g1 = FindGuild(guild_id1);
 	CGuild * g2 = FindGuild(guild_id2);
-#ifdef TEXTS_IMPROVEMENT
+
 	if (g1 && g2)
 	{
 		if (g2->GetMasterCharacter())
-			g2->GetMasterCharacter()->ChatPacketNew(CHAT_TYPE_INFO, 124, "%s", g1->GetName());
+			g2->GetMasterCharacter()->ChatPacket(CHAT_TYPE_INFO, "[LS;476;%s]", g1->GetName());
 	}
-#endif
+
 	if ( g1 != NULL )
 		g1->RefuseWar(guild_id2);
 
@@ -595,11 +571,12 @@ void CGuildManager::WaitStartWar(DWORD guild_id1, DWORD guild_id2)
 		return;
 	}
 
-#ifdef TEXTS_IMPROVEMENT
-	if (g1->WaitStartWar(guild_id2) || g2->WaitStartWar(guild_id1)) {
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 564, "%s#%s", g1->GetName(), g2->GetName());
+	if (g1->WaitStartWar(guild_id2) || g2->WaitStartWar(guild_id1) )
+	{
+		char buf[256];
+		snprintf(buf, sizeof(buf), "[LS;477;%s;%s]", g1->GetName(), g2->GetName());
+		SendNotice(buf);
 	}
-#endif
 }
 
 struct FSendWarList
@@ -644,9 +621,9 @@ void CGuildManager::StartWar(DWORD guild_id1, DWORD guild_id2)
 	g1->StartWar(guild_id2);
 	g2->StartWar(guild_id1);
 
-#ifdef TEXTS_IMPROVEMENT
-	SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 565, "%s#%s", g1->GetName(), g2->GetName());
-#endif
+	char buf[256];
+	snprintf(buf, sizeof(buf), "[LS;478;%s;%s]", g1->GetName(), g2->GetName());
+	SendNotice(buf);
 
 	if (guild_id1 > guild_id2)
 		std::swap(guild_id1, guild_id2);
@@ -657,18 +634,28 @@ void CGuildManager::StartWar(DWORD guild_id1, DWORD guild_id2)
 
 void SendGuildWarOverNotice(CGuild* g1, CGuild* g2, bool bDraw)
 {
-#ifdef TEXTS_IMPROVEMENT
 	if (g1 && g2)
 	{
-		if ( g1->GetWarScoreAgainstTo( g2->GetID() ) > g2->GetWarScoreAgainstTo( g1->GetID() ) ) {
-			SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 566, "%s#%s", g1->GetName(), g2->GetName());
-		} else if (g1->GetWarScoreAgainstTo( g2->GetID() ) < g2->GetWarScoreAgainstTo( g1->GetID() )) {
-			SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 566, "%s#%s", g1->GetName(), g2->GetName());
-		} else {
-			SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 567, "%s#%s", g1->GetName(), g2->GetName());
+		char buf[256];
+
+		if (bDraw)
+		{
+			snprintf(buf, sizeof(buf), "[LS;479;%s;%s]", g1->GetName(), g2->GetName());
 		}
+		else
+		{
+			if ( g1->GetWarScoreAgainstTo( g2->GetID() ) > g2->GetWarScoreAgainstTo( g1->GetID() ) )
+			{
+				snprintf(buf, sizeof(buf), "[LS;480;%s;%s]", g1->GetName(), g2->GetName());
+			}
+			else
+			{
+				snprintf(buf, sizeof(buf), "[LS;480;%s;%s]", g2->GetName(), g1->GetName());
+			}
+		}
+
+		SendNotice(buf);
 	}
-#endif
 }
 
 bool CGuildManager::EndWar(DWORD guild_id1, DWORD guild_id2)
@@ -681,7 +668,7 @@ bool CGuildManager::EndWar(DWORD guild_id1, DWORD guild_id2)
 
 	std::pair<DWORD, DWORD> k = std::make_pair(guild_id1, guild_id2);
 
-	TGuildWarContainer::iterator it = m_GuildWar.find(k);
+	auto it = m_GuildWar.find(k);
 
 	if (m_GuildWar.end() == it)
 	{
@@ -700,24 +687,6 @@ bool CGuildManager::EndWar(DWORD guild_id1, DWORD guild_id2)
 	{
 	    return false;
 	}
-
-#ifdef ADVANCED_GUILD_INFO
-	if(g1->GetWarScoreAgainstTo( g2->GetID() ) > g2->GetWarScoreAgainstTo( g1->GetID()))
-	{
-		g1->ChangeTrophies(true, false); 
-		g2->ChangeTrophies(false, false);
-	}
-	else if(g1->GetWarScoreAgainstTo( g2->GetID() ) < g2->GetWarScoreAgainstTo( g1->GetID()))
-	{
-		g2->ChangeTrophies(true, false); 
-		g1->ChangeTrophies(false, false);
-	}
-	else if(g1->GetWarScoreAgainstTo( g2->GetID() ) == g2->GetWarScoreAgainstTo( g1->GetID() ))
-	{
-		g2->ChangeTrophies(false, true); 
-		g1->ChangeTrophies(false, true);
-	}
-#endif
 
 	if (g1)
 		g1->EndWar(guild_id2);
@@ -742,7 +711,7 @@ void CGuildManager::WarOver(DWORD guild_id1, DWORD guild_id2, bool bDraw)
 
 	std::pair<DWORD, DWORD> k = std::make_pair(guild_id1, guild_id2);
 
-	TGuildWarContainer::iterator it = m_GuildWar.find(k);
+	auto it = m_GuildWar.find(k);
 
 	if (m_GuildWar.end() == it)
 		return;
@@ -759,31 +728,32 @@ void CGuildManager::CancelWar(DWORD guild_id1, DWORD guild_id2)
 
 	CGuild * g1 = FindGuild(guild_id1);
 	CGuild * g2 = FindGuild(guild_id2);
-#ifdef TEXTS_IMPROVEMENT
+
 	if (g1)
 	{
 		LPCHARACTER master1 = g1->GetMasterCharacter();
-		if (master1) {
-			master1->ChatPacketNew(CHAT_TYPE_INFO, 146, "");
-		}
+
+		if (master1)
+			master1->ChatPacket(CHAT_TYPE_INFO, "[LS;482]");
 	}
-#endif
-#ifdef TEXTS_IMPROVEMENT
+
 	if (g2)
 	{
 		LPCHARACTER master2 = g2->GetMasterCharacter();
-		if (master2) {
-			master2->ChatPacketNew(CHAT_TYPE_INFO, 146, "");
-		}
+
+		if (master2)
+			master2->ChatPacket(CHAT_TYPE_INFO, "[LS;482]");
 	}
 
-	if (g1 && g2) {
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 568, "%s#%s", g1->GetName(), g2->GetName());
+	if (g1 && g2)
+	{
+		char buf[256+1];
+		snprintf(buf, sizeof(buf), "[LS;483;%s;%s]", g1->GetName(), g2->GetName());
+		SendNotice(buf);
 	}
-#endif
 }
 
-void CGuildManager::ReserveWar(DWORD dwGuild1, DWORD dwGuild2, BYTE bType) // from DB
+void CGuildManager::ReserveWar(DWORD dwGuild1, DWORD dwGuild2, BYTE bType)
 {
 	sys_log(0, "GuildManager::ReserveWar %u %u", dwGuild1, dwGuild2);
 
@@ -799,7 +769,7 @@ void CGuildManager::ReserveWar(DWORD dwGuild1, DWORD dwGuild2, BYTE bType) // fr
 
 void CGuildManager::ShowGuildWarList(LPCHARACTER ch)
 {
-	for (itertype(m_GuildWar) it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
+	for (auto it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
 	{
 		CGuild * A = TouchGuild(it->first);
 		CGuild * B = TouchGuild(it->second);
@@ -826,9 +796,7 @@ void CGuildManager::SendGuildWar(LPCHARACTER ch)
 	p.size = sizeof(p) + (sizeof(DWORD) * 2) * m_GuildWar.size();
 	buf.write(&p, sizeof(p));
 
-	itertype(m_GuildWar) it;
-
-	for (it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
+	for (auto it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
 	{
 		buf.write(&it->first, sizeof(DWORD));
 		buf.write(&it->second, sizeof(DWORD));
@@ -881,7 +849,7 @@ void CGuildManager::Kill(LPCHARACTER killer, LPCHARACTER victim)
 
 void CGuildManager::StopAllGuildWar()
 {
-	for (itertype(m_GuildWar) it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
+	for (auto it = m_GuildWar.begin(); it != m_GuildWar.end(); ++it)
 	{
 		CGuild * g = CGuildManager::instance().TouchGuild(it->first);
 		CGuild * pg = CGuildManager::instance().TouchGuild(it->second);
@@ -894,7 +862,7 @@ void CGuildManager::StopAllGuildWar()
 
 void CGuildManager::ReserveWarAdd(TGuildWarReserve * p)
 {
-	itertype(m_map_kReserveWar) it = m_map_kReserveWar.find(p->dwID);
+	auto it = m_map_kReserveWar.find(p->dwID);
 
 	CGuildWarReserveForGame * pkReserve;
 
@@ -916,17 +884,17 @@ void CGuildManager::ReserveWarAdd(TGuildWarReserve * p)
 
 void CGuildManager::ReserveWarBet(TPacketGDGuildWarBet * p)
 {
-	itertype(m_map_kReserveWar) it = m_map_kReserveWar.find(p->dwWarID);
+	auto it = m_map_kReserveWar.find(p->dwWarID);
 
 	if (it == m_map_kReserveWar.end())
 		return;
 
-	it->second->mapBet.insert(std::make_pair(p->szLogin, std::make_pair(p->dwGuild, p->dwGold)));
+	it->second->mapBet.insert(std::make_pair(p->szLogin, std::make_pair(p->dwGuild, p->lldGold)));
 }
 
 bool CGuildManager::IsBet(DWORD dwID, const char * c_pszLogin)
 {
-	itertype(m_map_kReserveWar) it = m_map_kReserveWar.find(dwID);
+	auto it = m_map_kReserveWar.find(dwID);
 
 	if (it == m_map_kReserveWar.end())
 		return true;
@@ -937,12 +905,12 @@ bool CGuildManager::IsBet(DWORD dwID, const char * c_pszLogin)
 void CGuildManager::ReserveWarDelete(DWORD dwID)
 {
 	sys_log(0, "ReserveWarDelete %u", dwID);
-	itertype(m_map_kReserveWar) it = m_map_kReserveWar.find(dwID);
+	auto it = m_map_kReserveWar.find(dwID);
 
 	if (it == m_map_kReserveWar.end())
 		return;
 
-	itertype(m_vec_kReserveWar) it_vec = m_vec_kReserveWar.begin();
+	auto it_vec = m_vec_kReserveWar.begin();
 
 	while (it_vec != m_vec_kReserveWar.end())
 	{
@@ -964,22 +932,16 @@ std::vector<CGuildWarReserveForGame *> & CGuildManager::GetReserveWarRef()
 	return m_vec_kReserveWar;
 }
 
-//
-// End of Guild War
-//
-
 void CGuildManager::ChangeMaster(DWORD dwGID)
 {
-	TGuildMap::iterator iter = m_mapGuild.find(dwGID);
+	auto iter = m_mapGuild.find(dwGID);
 
 	if ( iter != m_mapGuild.end() )
 	{
 		iter->second->Load(dwGID);
 	}
 
-	// 업데이트된 정보 보내주기
-	DBManager::instance().FuncQuery(std::bind1st(std::mem_fun(&CGuild::SendGuildDataUpdateToAllMember), iter->second),
-			"SELECT 1");
-
+	DBManager::instance().FuncQuery(std::bind(&CGuild::SendGuildDataUpdateToAllMember, iter->second, std::placeholders::_1),
+		"SELECT 1");
 }
 

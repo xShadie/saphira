@@ -5,10 +5,7 @@
 #include "text_file_loader.h"
 #include "mob_manager.h"
 #include "char.h"
-#include "../../common/CommonDefines.h"
-#include "config.h"
 
-// POLYMORPH_BUG_FIX
 static float MSA_GetNormalAttackDuration(const char* msaPath)
 {
 	float duration = 99.0f;
@@ -41,7 +38,7 @@ static float MOB_GetNormalAttackDuration(TMobTable* mobTable)
 	const char * folder = mobTable->szFolder;
 
 	char motlistPath[1024];
-	snprintf(motlistPath, sizeof(motlistPath), "data/monster/%s/motlist.txt", folder);
+	snprintf(motlistPath, sizeof(motlistPath), "share/data/monster/%s/motlist.txt", folder);
 
 	FILE * fp = fopen(motlistPath, "rt");
 	if (!fp)
@@ -59,7 +56,7 @@ static float MOB_GetNormalAttackDuration(TMobTable* mobTable)
 		if (strcmp(mode, "GENERAL") == 0 && strncmp(type, "NORMAL_ATTACK", 13) == 0)
 		{
 			char msaPath[1024];
-			snprintf(msaPath, sizeof(msaPath), "data/monster/%s/%s", folder, msaName);
+			snprintf(msaPath, sizeof(msaPath), "share/data/monster/%s/%s", folder, msaName);
 			float curDuration = MSA_GetNormalAttackDuration(msaPath);
 			if (curDuration < minDuration)
 				minDuration = curDuration;
@@ -69,13 +66,17 @@ static float MOB_GetNormalAttackDuration(TMobTable* mobTable)
 
 	return minDuration;
 }
-// END_OF_POLYMORPH_BUG_FIX
 
 static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 {
+	if (IS_SET(mobTable->dwAIFlag, AIFLAG_NOMOVE))
+	{
+		return nullptr;
+	}
+
 	char buf[1024];
 	const char * folder = mobTable->szFolder;
-	snprintf(buf, sizeof(buf), "data/monster/%s/motlist.txt", folder);
+	snprintf(buf, sizeof(buf), "share/data/monster/%s/motlist.txt", folder);
 
 	FILE * fp = fopen(buf, "rt");
 	char * v[4];
@@ -113,7 +114,7 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 				fclose(fp);
 
 				static std::string str;
-				str = "data/monster/";
+				str = "share/data/monster/";
 				str += folder;
 				str += "/";
 				str += v[2];
@@ -124,7 +125,8 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 
 		fclose(fp);
 	}
-	else if (test_server) {
+	else
+	{
 		sys_err("Motion: %s have not motlist.txt vnum(%d) folder(%s)", folder, mobTable->dwVnum, mobTable->szFolder);
 	}
 
@@ -144,11 +146,9 @@ static void LoadMotion(CMotionSet* pMotionSet, TMobTable* mob_table, EPublicMoti
 
 	if (pMotion->LoadFromFile(cpFileName) == true)
 	{
-		if (test_server) {
-			if (motion == MOTION_RUN)
-				if (0.0f == pMotion->GetAccumVector().y)
-					sys_err("cannot find accumulation data in file '%s'", cpFileName);
-		}
+		if (motion == MOTION_RUN)
+			if (0.0f == pMotion->GetAccumVector().y)
+				sys_err("cannot find accumulation data in file '%s'", cpFileName);
 
 		pMotionSet->Insert(MAKE_MOTION_KEY(MOTION_MODE_GENERAL, motion), pMotion);
 	}
@@ -172,7 +172,7 @@ static void LoadSkillMotion(CMotionSet* pMotionSet, CMob* pMob, EPublicMotion mo
 		case MOTION_SPECIAL_5 : idx = 4; break;
 
 		default :
-			return;
+			return;					
 	}
 
 	TMobTable* mob_table = &pMob->m_table;
@@ -205,7 +205,7 @@ CMotionManager::CMotionManager()
 
 CMotionManager::~CMotionManager()
 {
-	iterator it = m_map_pkMotionSet.begin();
+	auto it = m_map_pkMotionSet.begin();
 	for ( ; it != m_map_pkMotionSet.end(); ++it) {
 		M2_DELETE(it->second);
 	}
@@ -213,7 +213,7 @@ CMotionManager::~CMotionManager()
 
 const CMotionSet * CMotionManager::GetMotionSet(DWORD dwVnum)
 {
-	iterator it = m_map_pkMotionSet.find(dwVnum);
+	auto it = m_map_pkMotionSet.find(dwVnum);
 
 	if (m_map_pkMotionSet.end() == it)
 		return NULL;
@@ -237,50 +237,48 @@ float CMotionManager::GetMotionDuration(DWORD dwVnum, DWORD dwKey)
 	return pkMotion ? pkMotion->GetDuration() : 0.0f;
 }
 
-// POLYMORPH_BUG_FIX
 float	CMotionManager::GetNormalAttackDuration(DWORD dwVnum)
 {
-	std::map<DWORD, float>::iterator f = m_map_normalAttackDuration.find(dwVnum);
+	auto f = m_map_normalAttackDuration.find(dwVnum);
 	if (m_map_normalAttackDuration.end() == f)
 		return 0.0f;
 	else
 		return f->second;
 }
-// END_OF_POLYMORPH_BUG_FIX
 
 enum EMotionEventType
 {
-	MOTION_EVENT_TYPE_NONE,					// 0
-	MOTION_EVENT_TYPE_EFFECT,				// 1
-	MOTION_EVENT_TYPE_SCREEN_WAVING,		// 2
-	MOTION_EVENT_TYPE_SCREEN_FLASHING,		// 3
-	MOTION_EVENT_TYPE_SPECIAL_ATTACKING,	// 4
-	MOTION_EVENT_TYPE_SOUND,				// 5
-	MOTION_EVENT_TYPE_FLY,					// 6
-	MOTION_EVENT_TYPE_CHARACTER_SHOW,		// 7
-	MOTION_EVENT_TYPE_CHARACTER_HIDE,		// 8
-	MOTION_EVENT_TYPE_WARP,					// 9
-	MOTION_EVENT_TYPE_EFFECT_TO_TARGET,		// 10
-	MOTION_EVENT_TYPE_MAX_NUM,				// 11
+	MOTION_EVENT_TYPE_NONE,
+	MOTION_EVENT_TYPE_EFFECT,
+	MOTION_EVENT_TYPE_SCREEN_WAVING,
+	MOTION_EVENT_TYPE_SCREEN_FLASHING,
+	MOTION_EVENT_TYPE_SPECIAL_ATTACKING,
+	MOTION_EVENT_TYPE_SOUND,
+	MOTION_EVENT_TYPE_FLY,
+	MOTION_EVENT_TYPE_CHARACTER_SHOW,
+	MOTION_EVENT_TYPE_CHARACTER_HIDE,
+	MOTION_EVENT_TYPE_WARP,
+	MOTION_EVENT_TYPE_EFFECT_TO_TARGET,
+	MOTION_EVENT_TYPE_MAX_NUM,
 };
 
 bool CMotionManager::Build()
 {
 	const char * c_apszFolderName[MAIN_RACE_MAX_NUM] =
 	{
-		"data/pc/warrior",
-		"data/pc/assassin",
-		"data/pc/sura",
-		"data/pc/shaman",
-		"data/pc2/warrior",
-		"data/pc2/assassin",
-		"data/pc2/sura",
-		"data/pc2/shaman",
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		"data/pc3/wolfman",
+		"share/data/pc/warrior",
+		"share/data/pc/assassin",
+		"share/data/pc/sura",
+		"share/data/pc/shaman",
+		"share/data/pc2/warrior",
+		"share/data/pc2/assassin",
+		"share/data/pc2/sura",
+		"share/data/pc2/shaman",
+#ifdef ENABLE_WOLFMAN
+		"share/data/pc3/wolfman",
 #endif
 	};
-
+	
 	for (int i = 0; i < MAIN_RACE_MAX_NUM; ++i)
 	{
 		CMotionSet * pkMotionSet = M2_NEW CMotionSet;
@@ -293,49 +291,69 @@ bool CMotionManager::Build()
 		snprintf(sz, sizeof(sz), "%s/general/walk.msa", c_apszFolderName[i]);
 		pkMotionSet->Load(sz, MOTION_MODE_GENERAL, MOTION_WALK);
 
-		snprintf(sz, sizeof(sz), "%s/twohand_sword/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_TWOHAND_SWORD, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/twohand_sword/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_TWOHAND_SWORD, MOTION_WALK);
+		if (i == MAIN_RACE_WARRIOR_M || i == MAIN_RACE_WARRIOR_W)
+		{
+			snprintf(sz, sizeof(sz), "%s/twohand_sword/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_TWOHAND_SWORD, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/twohand_sword/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_TWOHAND_SWORD, MOTION_WALK);
+		}
 
-		snprintf(sz, sizeof(sz), "%s/onehand_sword/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_ONEHAND_SWORD, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/onehand_sword/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_ONEHAND_SWORD, MOTION_WALK);
+		if (i != MAIN_RACE_SHAMAN_W && i != MAIN_RACE_SHAMAN_M
+#ifdef ENABLE_WOLFMAN
+			&& i != MAIN_RACE_WOLFMAN_M
+#endif
+			)
+		{
+			snprintf(sz, sizeof(sz), "%s/onehand_sword/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_ONEHAND_SWORD, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/onehand_sword/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_ONEHAND_SWORD, MOTION_WALK);
+		}
 
-		snprintf(sz, sizeof(sz), "%s/dualhand_sword/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_DUALHAND_SWORD, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/dualhand_sword/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_DUALHAND_SWORD, MOTION_WALK);
+		if (i == MAIN_RACE_ASSASSIN_W || i == MAIN_RACE_ASSASSIN_M)
+		{
+			snprintf(sz, sizeof(sz), "%s/dualhand_sword/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_DUALHAND_SWORD, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/dualhand_sword/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_DUALHAND_SWORD, MOTION_WALK);
 
-		snprintf(sz, sizeof(sz), "%s/bow/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_BOW, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/bow/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_BOW, MOTION_WALK);
+			snprintf(sz, sizeof(sz), "%s/bow/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_BOW, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/bow/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_BOW, MOTION_WALK);
+		}
 
-		snprintf(sz, sizeof(sz), "%s/bell/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_BELL, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/bell/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_BELL, MOTION_WALK);
+		if (i == MAIN_RACE_SHAMAN_W || i == MAIN_RACE_SHAMAN_M)
+		{
+			snprintf(sz, sizeof(sz), "%s/bell/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_BELL, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/bell/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_BELL, MOTION_WALK);
 
-		snprintf(sz, sizeof(sz), "%s/fan/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_FAN, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/fan/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_FAN, MOTION_WALK);
+			snprintf(sz, sizeof(sz), "%s/fan/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_FAN, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/fan/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_FAN, MOTION_WALK);
+		}
 
 		snprintf(sz, sizeof(sz), "%s/horse/run.msa", c_apszFolderName[i]);
 		pkMotionSet->Load(sz, MOTION_MODE_HORSE, MOTION_RUN);
 		snprintf(sz, sizeof(sz), "%s/horse/walk.msa", c_apszFolderName[i]);
 		pkMotionSet->Load(sz, MOTION_MODE_HORSE, MOTION_WALK);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		snprintf(sz, sizeof(sz), "%s/claw/run.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_CLAW, MOTION_RUN);
-		snprintf(sz, sizeof(sz), "%s/claw/walk.msa", c_apszFolderName[i]);
-		pkMotionSet->Load(sz, MOTION_MODE_CLAW, MOTION_WALK);
+
+#ifdef ENABLE_WOLFMAN
+		if (i == MAIN_RACE_WOLFMAN_M)
+		{
+			snprintf(sz, sizeof(sz), "%s/claw/run.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_CLAW, MOTION_RUN);
+			snprintf(sz, sizeof(sz), "%s/claw/walk.msa", c_apszFolderName[i]);
+			pkMotionSet->Load(sz, MOTION_MODE_CLAW, MOTION_WALK);
+		}
 #endif
 	}
 
-	CMobManager::iterator it = CMobManager::instance().begin();
+	auto it = CMobManager::instance().begin();
 
 	while (it != CMobManager::instance().end())
 	{
@@ -357,11 +375,8 @@ bool CMotionManager::Build()
 			LoadSkillMotion(pkMotionSet, pkMob, MOTION_SPECIAL_4);
 			LoadSkillMotion(pkMotionSet, pkMob, MOTION_SPECIAL_5);
 
-			// POLYMORPH_BUG_FIX
 			float normalAttackDuration = MOB_GetNormalAttackDuration(t);
-			sys_log(0, "mob_normal_attack_duration:%d:%s:%.2f", t->dwVnum, t->szFolder, normalAttackDuration);
 			m_map_normalAttackDuration.insert(std::map<DWORD, float>::value_type(t->dwVnum, normalAttackDuration));
-			// END_OF_POLYMORPH_BUG_FIX
 		}
 	}
 
@@ -374,7 +389,7 @@ CMotionSet::CMotionSet()
 
 CMotionSet::~CMotionSet()
 {
-	iterator it = m_map_pkMotion.begin();
+	auto it = m_map_pkMotion.begin();
 	for ( ; it != m_map_pkMotion.end(); ++it) {
 		M2_DELETE(it->second);
 	}
@@ -382,7 +397,7 @@ CMotionSet::~CMotionSet()
 
 const CMotion * CMotionSet::GetMotion(DWORD dwKey) const
 {
-	const_iterator it = m_map_pkMotion.find(dwKey);
+	auto it = m_map_pkMotion.find(dwKey);
 
 	if (it == m_map_pkMotion.end())
 		return NULL;
@@ -415,7 +430,7 @@ CMotion::CMotion() : m_isEmpty(true), m_fDuration(0.0f), m_isAccumulation(false)
 	m_vec3Accumulation.x = 0.0f;
 	m_vec3Accumulation.y = 0.0f;
 	m_vec3Accumulation.z = 0.0f;
-}
+}  
 
 CMotion::~CMotion()
 {
@@ -427,9 +442,6 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 	if (!rkTextFileLoader.Load(c_pszFileName))
 		return false;
 
-	//if (rkTextFileLoader.IsEmpty())
-	//return false;
-
 	rkTextFileLoader.SetTop();
 
 	if (!rkTextFileLoader.GetTokenFloat("motionduration", &m_fDuration))
@@ -438,13 +450,9 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 		return false;
 	}
 
-	//if (rkTextFileLoader.GetTokenPosition("accumulation", &m_vec3Accumulation))
-	//m_isAccumulation = true;
-
 	std::string strNodeName;
 	for (DWORD i = 0; i < rkTextFileLoader.GetChildNodeCount(); ++i)
 	{
-		//CTextFileLoader::CGotoChild GotoChild(rkTextFileLoader, i);
 		rkTextFileLoader.SetChildNode(i);
 
 		rkTextFileLoader.GetCurrentNodeName(&strNodeName);
@@ -471,7 +479,6 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 					return false;
 				}
 
-				//float fRadius;
 				D3DVECTOR v3Position;
 
 				switch (iType)
@@ -488,15 +495,12 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 						continue;
 
 					case MOTION_EVENT_TYPE_SPECIAL_ATTACKING:
-						// 구 데이터는 하나 라고 가정
 						if (!rkTextFileLoader.SetChildNode("spheredata", 0))
 						{
 							sys_err("Motion: no sphere data %s", c_pszFileName);
 							return false;
 						}
 
-						//if (!rTextFileLoader.GetTokenFloat("radius", &fRadius))
-						//return false;
 						if (!rkTextFileLoader.GetTokenPosition("position", &v3Position))
 						{
 							sys_err("Motion: no position data %s", c_pszFileName);
@@ -518,8 +522,11 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 					sys_err("Motion: no startingtime data %s", c_pszFileName);
 					return false;
 				}
-
+#ifdef _WIN32
+				pMob->AddSkillSplash(iSkillIndex, 100 + DWORD(fStartingTime * 1000), -static_cast<long>(v3Position.y));
+#else
 				pMob->AddSkillSplash(iSkillIndex, 100 + DWORD(fStartingTime * 1000), -(DWORD)(v3Position.y));
+#endif
 
 				rkTextFileLoader.SetParentNode();
 			}

@@ -1,5 +1,4 @@
-#ifndef __INC_CONFIG_H__
-#define __INC_CONFIG_H__
+#pragma once
 
 typedef std::map<std::string, std::string> TValueMap;
 
@@ -30,5 +29,3 @@ class CConfig : public singleton<CConfig>
 	private:
 		TValueMap	m_valueMap;
 };
-
-#endif

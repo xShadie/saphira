@@ -11,9 +11,7 @@ CLoginData::CLoginData()
 	memset(m_szIP, 0, sizeof(m_szIP));
 	m_bPlay = false;
 	m_bDeleted = false;
-	m_bBillType = 0;
-	m_dwBillID = 0;
-	m_lastplay = 0;
+	m_lastPlayTime = 0;
 	m_dwLastPlayerID = 0;
 
 	memset(&m_data, 0, sizeof(TAccountTable));
@@ -85,7 +83,7 @@ void CLoginData::SetPlay(bool bOn)
 		sys_log(0, "SetPlay off %lu %s", GetKey(), m_data.login);
 
 	m_bPlay = bOn;
-	m_lastplay = CClientManager::instance().GetCurrentTime();
+	m_lastPlayTime = CClientManager::instance().GetCurrentTime();
 }
 
 bool CLoginData::IsPlay()

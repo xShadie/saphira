@@ -5,20 +5,19 @@
 #include "char.h"
 #include "desc.h"
 #include "item_manager.h"
-#ifdef ENABLE_NEWSTUFF
-#include "config.h"
-#endif
 
-#ifndef ENABLE_SWITCHBOT
 const int MAX_NORM_ATTR_NUM = ITEM_MANAGER::MAX_NORM_ATTR_NUM;
 const int MAX_RARE_ATTR_NUM = ITEM_MANAGER::MAX_RARE_ATTR_NUM;
-#endif
+const int MAX_COSTUME_ATTR_NUM = ITEM_MANAGER::MAX_COSTUME_ATTR_NUM;
 
 int CItem::GetAttributeSetIndex()
 {
 	if (GetType() == ITEM_WEAPON)
 	{
 		if (GetSubType() == WEAPON_ARROW)
+			return -1;
+
+		if (GetSubType() == WEAPON_QUIVER)
 			return -1;
 
 		return ATTRIBUTE_SET_WEAPON;
@@ -48,35 +47,26 @@ int CItem::GetAttributeSetIndex()
 
 			case ARMOR_EAR:
 				return ATTRIBUTE_SET_EAR;
-		
-#if defined(ENABLE_PENDANT) && defined(ENABLE_NEW_BONUS_TALISMAN)
+
 			case ARMOR_PENDANT:
 				return ATTRIBUTE_SET_PENDANT;
-#endif
 		}
 	}
-#ifdef ENABLE_ATTR_COSTUMES
-	else if (GetType() == ITEM_COSTUME)
+
+	if (GetType() == ITEM_COSTUME)
 	{
 		switch (GetSubType())
 		{
-			case COSTUME_BODY:
-				return ATTRIBUTE_SET_COSTUME_BODY;
-			case COSTUME_HAIR:
-				return ATTRIBUTE_SET_COSTUME_HAIR;
-			case COSTUME_WEAPON:
-				return ATTRIBUTE_SET_COSTUME_WEAPON;
-#ifdef ENABLE_STOLE_COSTUME
-			case COSTUME_STOLE:
-				return ATTRIBUTE_SET_COSTUME_STOLE;
-#endif
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-			case COSTUME_MOUNT:
-				break;
-#endif
+		case COSTUME_BODY:
+			return ATTRIBUTE_SET_COSTUME_BODY;
+
+		case COSTUME_HAIR:
+			return ATTRIBUTE_SET_COSTUME_HAIR;
+
+		case COSTUME_WEAPON:
+			return ATTRIBUTE_SET_COSTUME_WEAPON;
 		}
 	}
-#endif
 
 	return -1;
 }
@@ -91,18 +81,6 @@ bool CItem::HasAttr(BYTE bApply)
 		if (GetAttributeType(i) == bApply)
 			return true;
 
-#ifdef ENABLE_ITEM_EXTRA_PROTO
-	if (HasExtraProto())
-	{
-#ifdef ENABLE_NEW_EXTRA_BONUS
-		for (int i = 0; i < NEW_EXTRA_BONUS_COUNT; i++){
-			if (m_ExtraProto->ExtraBonus[i].bType == bApply)
-				return true;
-		}
-#endif
-	}
-#endif
-
 	return false;
 }
 
@@ -110,6 +88,15 @@ bool CItem::HasRareAttr(BYTE bApply)
 {
 	for (int i = 0; i < MAX_RARE_ATTR_NUM; ++i)
 		if (GetAttributeType(i + 5) == bApply)
+			return true;
+
+	return false;
+}
+
+bool CItem::HasCostumeAttr(BYTE bApply)
+{
+	for (int i = 0; i < MAX_COSTUME_ATTR_NUM; ++i)
+		if (GetAttributeType(i) == bApply)
 			return true;
 
 	return false;
@@ -147,11 +134,7 @@ void CItem::AddAttr(BYTE bApply, BYTE bLevel)
 	{
 		const TItemAttrTable & r = g_map_itemAttr[bApply];
 		long lVal = r.lValues[MIN(4, bLevel - 1)];
-#ifdef ENABLE_ATTR_COSTUMES
-		if (GetType() == ITEM_COSTUME)
-			lVal = r.lValues[MIN(9, bLevel + 5 - 1)];
-#endif
-		
+
 		if (lVal)
 			SetAttribute(i, bApply, lVal);
 	}
@@ -160,6 +143,7 @@ void CItem::AddAttr(BYTE bApply, BYTE bLevel)
 void CItem::PutAttributeWithLevel(BYTE bLevel)
 {
 	int iAttributeSet = GetAttributeSetIndex();
+
 	if (iAttributeSet < 0)
 		return;
 
@@ -170,7 +154,6 @@ void CItem::PutAttributeWithLevel(BYTE bLevel)
 
 	int total = 0;
 
-	// 붙일 수 있는 속성 배열을 구축
 	for (int i = 0; i < MAX_APPLY_NUM; ++i)
 	{
 		const TItemAttrTable & r = g_map_itemAttr[i];
@@ -182,12 +165,6 @@ void CItem::PutAttributeWithLevel(BYTE bLevel)
 		}
 	}
 
-	if (avail.empty())
-	{
-		return;
-	}
-
-	// 구축된 배열로 확률 계산을 통해 붙일 속성 선정
 	unsigned int prob = number(1, total);
 	int attr_idx = APPLY_NONE;
 
@@ -212,7 +189,6 @@ void CItem::PutAttributeWithLevel(BYTE bLevel)
 
 	const TItemAttrTable & r = g_map_itemAttr[attr_idx];
 
-	// 종류별 속성 레벨 최대값 제한
 	if (bLevel > r.bMaxLevelBySet[iAttributeSet])
 		bLevel = r.bMaxLevelBySet[iAttributeSet];
 
@@ -233,6 +209,22 @@ void CItem::PutAttribute(const int * aiAttrPercentTable)
 	}
 
 	PutAttributeWithLevel(i + 1);
+}
+
+void CItem::PutCostumeAttribute(const int* aiAttrPercentTable)
+{
+	int iAttrLevelPercent = number(1, 100);
+	int i;
+
+	for (i = 0; i < ITEM_ATTRIBUTE_MAX_LEVEL; ++i)
+	{
+		if (iAttrLevelPercent <= aiAttrPercentTable[i])
+			break;
+
+		iAttrLevelPercent -= aiAttrPercentTable[i];
+	}
+
+	PutCostumeAttributeWithLevel(i + 1);
 }
 
 void CItem::ChangeAttribute(const int* aiChangeProb)
@@ -258,12 +250,6 @@ void CItem::ChangeAttribute(const int* aiChangeProb)
 
 	for (int i = GetAttributeCount(); i < iAttributeCount; ++i)
 	{
-#ifdef ATTR_LOCK		
-		if (GetLockedAttr() == i)
-		{
-			continue;
-		}
-#endif
 		if (aiChangeProb == NULL)
 		{
 			PutAttribute(tmpChangeProb);
@@ -277,7 +263,7 @@ void CItem::ChangeAttribute(const int* aiChangeProb)
 
 void CItem::AddAttribute()
 {
-	static const int aiItemAddAttributePercent[ITEM_ATTRIBUTE_MAX_LEVEL] =
+	static const int aiItemAddAttributePercent[ITEM_ATTRIBUTE_MAX_LEVEL] = 
 	{
 		40, 50, 10, 0, 0
 	};
@@ -290,12 +276,6 @@ void CItem::ClearAttribute()
 {
 	for (int i = 0; i < MAX_NORM_ATTR_NUM; ++i)
 	{
-#ifdef ATTR_LOCK		
-		if (GetLockedAttr() == i)
-		{
-			continue;
-		}
-#endif
 		m_aAttr[i].bType = 0;
 		m_aAttr[i].sValue = 0;
 	}
@@ -366,8 +346,6 @@ void CItem::SetAttribute(int i, BYTE bType, short sValue)
 
 		if (GetOwner() && GetOwner()->GetDesc())
 			pszIP = GetOwner()->GetDesc()->GetHostName();
-
-		LOG_LEVEL_CHECK(LOG_LEVEL_MAX, LogManager::instance().ItemLog(i, bType, sValue, GetID(), "SET_ATTR", "", pszIP ? pszIP : "", GetOriginalVnum()));
 	}
 }
 
@@ -386,8 +364,6 @@ void CItem::SetForceAttribute(int i, BYTE bType, short sValue)
 
 		if (GetOwner() && GetOwner()->GetDesc())
 			pszIP = GetOwner()->GetDesc()->GetHostName();
-
-		LOG_LEVEL_CHECK(LOG_LEVEL_MAX, LogManager::instance().ItemLog(i, bType, sValue, GetID(), "SET_FORCE_ATTR", "", pszIP ? pszIP : "", GetOriginalVnum()));
 	}
 }
 
@@ -401,11 +377,11 @@ int CItem::GetRareAttrCount()
 {
 	int ret = 0;
 
-	for (DWORD dwIdx = ITEM_ATTRIBUTE_RARE_START; dwIdx < ITEM_ATTRIBUTE_RARE_END; dwIdx++)
-	{
-		if (m_aAttr[dwIdx].bType != 0)
-			ret++;
-	}
+	if (m_aAttr[5].bType != 0)
+		ret++;
+
+	if (m_aAttr[6].bType != 0)
+		ret++;
 
 	return ret;
 }
@@ -419,14 +395,9 @@ bool CItem::ChangeRareAttribute()
 
 	for (int i = 0; i < cnt; ++i)
 	{
-		m_aAttr[i + ITEM_ATTRIBUTE_RARE_START].bType = 0;
-		m_aAttr[i + ITEM_ATTRIBUTE_RARE_START].sValue = 0;
+		m_aAttr[i + 5].bType = 0;
+		m_aAttr[i + 5].sValue = 0;
 	}
-
-	if (GetOwner() && GetOwner()->GetDesc())
-		LOG_LEVEL_CHECK(LOG_LEVEL_MAX, LogManager::instance().ItemLog(GetOwner(), this, "SET_RARE_CHANGE", ""))
-	else
-		LOG_LEVEL_CHECK(LOG_LEVEL_MAX, LogManager::instance().ItemLog(0, 0, 0, GetID(), "SET_RARE_CHANGE", "", "", GetOriginalVnum()))
 
 	for (int i = 0; i < cnt; ++i)
 	{
@@ -440,10 +411,10 @@ bool CItem::AddRareAttribute()
 {
 	int count = GetRareAttrCount();
 
-	if (count >= ITEM_ATTRIBUTE_RARE_NUM)
+	if (count >= 2)
 		return false;
 
-	int pos = count + ITEM_ATTRIBUTE_RARE_START;
+	int pos = count + 5;
 	TPlayerItemAttribute & attr = m_aAttr[pos];
 
 	int nAttrSet = GetAttributeSetIndex();
@@ -466,7 +437,7 @@ bool CItem::AddRareAttribute()
 	}
 
 	const TItemAttrTable& r = g_map_itemRare[avail[number(0, avail.size() - 1)]];
-	int nAttrLevel = 5;
+	int nAttrLevel = number(1, 5);
 
 	if (nAttrLevel > r.bMaxLevelBySet[nAttrSet])
 		nAttrLevel = r.bMaxLevelBySet[nAttrSet];
@@ -483,42 +454,104 @@ bool CItem::AddRareAttribute()
 	if (GetOwner() && GetOwner()->GetDesc())
 		pszIP = GetOwner()->GetDesc()->GetHostName();
 
-	LOG_LEVEL_CHECK(LOG_LEVEL_MAX, LogManager::instance().ItemLog(pos, attr.bType, attr.sValue, GetID(), "SET_RARE", "", pszIP ? pszIP : "", GetOriginalVnum()));
 	return true;
 }
 
-void CItem::AddRareAttribute2(const int * aiAttrPercentTable)
+int CItem::GetCostumeAttrCount()
 {
-	static const int aiItemAddAttributePercent[ITEM_ATTRIBUTE_MAX_LEVEL] =
-	{
-		40, 50, 10, 0, 0
-	};
-	if (aiAttrPercentTable == NULL)
-		aiAttrPercentTable = aiItemAddAttributePercent;
-
-	if (GetRareAttrCount() < MAX_RARE_ATTR_NUM)
-		PutRareAttribute(aiAttrPercentTable);
-}
-
-void CItem::PutRareAttribute(const int * aiAttrPercentTable)
-{
-	int iAttrLevelPercent = number(1, 100);
 	int i;
 
-	for (i = 0; i < ITEM_ATTRIBUTE_MAX_LEVEL; ++i)
+	for (i = 0; i < MAX_NORM_ATTR_NUM; ++i)
 	{
-		if (iAttrLevelPercent <= aiAttrPercentTable[i])
+		if (GetAttributeType(i) == 0)
 			break;
-
-		iAttrLevelPercent -= aiAttrPercentTable[i];
 	}
 
-	PutRareAttributeWithLevel(i + 1);
+	return i;
 }
 
-void CItem::PutRareAttributeWithLevel(BYTE bLevel)
+bool CItem::ChangeCostumeAttribute()
+{
+	if (GetCostumeAttrCount() == 0)
+		return false;
+
+	int cnt = GetCostumeAttrCount();
+
+	for (int i = 0; i < cnt; ++i)
+	{
+		m_aAttr[i].bType = 0;
+		m_aAttr[i].sValue = 0;
+	}
+
+	for (int i = 0; i < cnt; ++i)
+	{
+		AddCostumeAttribute();
+	}
+
+	return true;
+}
+
+bool CItem::AddCostumeAttribute()
+{
+	int count = GetCostumeAttrCount();
+
+	int pos = count;
+	TPlayerItemAttribute& attr = m_aAttr[pos];
+
+	int nAttrSet = GetAttributeSetIndex();
+	std::vector<int> avail;
+
+	for (int i = 0; i < MAX_APPLY_NUM; ++i)
+	{
+		const TItemAttrTable& r = g_map_itemCostume[i];
+
+		if (r.dwApplyIndex != 0 && r.bMaxLevelBySet[nAttrSet] > 0 && HasCostumeAttr(i) != true)
+		{
+			avail.push_back(i);
+		}
+	}
+
+	if (avail.empty())
+	{
+		sys_err("Couldn't add a rare bonus - item_attr_rare has incorrect values!");
+		return false;
+	}
+
+	const TItemAttrTable& r = g_map_itemCostume[avail[number(0, avail.size() - 1)]];
+	int nAttrLevel = number(1, 5);
+
+	if (nAttrLevel > r.bMaxLevelBySet[nAttrSet])
+		nAttrLevel = r.bMaxLevelBySet[nAttrSet];
+
+	attr.bType = r.dwApplyIndex;
+	attr.sValue = r.lValues[nAttrLevel - 1];
+
+	UpdatePacket();
+
+	Save();
+
+	const char* pszIP = NULL;
+
+	if (GetOwner() && GetOwner()->GetDesc())
+		pszIP = GetOwner()->GetDesc()->GetHostName();
+
+	return true;
+}
+
+void CItem::ClearCostumeAttribute()
+{
+	for (int i = 0; i < MAX_COSTUME_ATTR_NUM; ++i)
+	{
+		m_aAttr[i].bType = 0;
+		m_aAttr[i].sValue = 0;
+	}
+}
+
+
+void CItem::PutCostumeAttributeWithLevel(BYTE bLevel)
 {
 	int iAttributeSet = GetAttributeSetIndex();
+
 	if (iAttributeSet < 0)
 		return;
 
@@ -529,30 +562,23 @@ void CItem::PutRareAttributeWithLevel(BYTE bLevel)
 
 	int total = 0;
 
-	// 붙일 수 있는 속성 배열을 구축
 	for (int i = 0; i < MAX_APPLY_NUM; ++i)
 	{
-		const TItemAttrTable & r = g_map_itemRare[i];
+		const TItemAttrTable& r = g_map_itemCostume[i];
 
-		if (r.bMaxLevelBySet[iAttributeSet] && !HasRareAttr(i))
+		if (r.bMaxLevelBySet[iAttributeSet] && !HasCostumeAttr(i))
 		{
 			avail.push_back(i);
 			total += r.dwProb;
 		}
 	}
 
-	if (avail.empty())
-	{
-		return;
-	}
-
-	// 구축된 배열로 확률 계산을 통해 붙일 속성 선정
 	unsigned int prob = number(1, total);
 	int attr_idx = APPLY_NONE;
 
 	for (DWORD i = 0; i < avail.size(); ++i)
 	{
-		const TItemAttrTable & r = g_map_itemRare[avail[i]];
+		const TItemAttrTable& r = g_map_itemCostume[avail[i]];
 
 		if (prob <= r.dwProb)
 		{
@@ -565,38 +591,54 @@ void CItem::PutRareAttributeWithLevel(BYTE bLevel)
 
 	if (!attr_idx)
 	{
-		sys_err("Cannot put item rare attribute %d %d", iAttributeSet, bLevel);
+		sys_err("Cannot put item costume attribute %d %d", iAttributeSet, bLevel);
 		return;
 	}
 
-	const TItemAttrTable & r = g_map_itemRare[attr_idx];
+	const TItemAttrTable& r = g_map_itemCostume[attr_idx];
 
-	// 종류별 속성 레벨 최대값 제한
 	if (bLevel > r.bMaxLevelBySet[iAttributeSet])
 		bLevel = r.bMaxLevelBySet[iAttributeSet];
 
-	AddRareAttr(attr_idx, bLevel);
+	AddCostumeAttr(attr_idx, bLevel);
 }
 
-void CItem::AddRareAttr(BYTE bApply, BYTE bLevel)
+void CItem::AddCostumeAttr(BYTE bApply, BYTE bLevel)
 {
-	if (HasRareAttr(bApply))
+	if (HasCostumeAttr(bApply))
 		return;
 
 	if (bLevel <= 0)
 		return;
 
-	int i = ITEM_ATTRIBUTE_RARE_START + GetRareAttrCount();
+	int i = GetCostumeAttrCount();
 
-	if (i == ITEM_ATTRIBUTE_RARE_END)
-		sys_err("item rare attribute overflow!");
+	if (i == MAX_COSTUME_ATTR_NUM)
+		sys_err("item attribute overflow!");
 	else
 	{
-		const TItemAttrTable & r = g_map_itemRare[bApply];
+		const TItemAttrTable& r = g_map_itemCostume[bApply];
 		long lVal = r.lValues[MIN(4, bLevel - 1)];
 
 		if (lVal)
-			SetForceAttribute(i, bApply, lVal);
+			SetCostumeAttr(i, bApply, lVal);
 	}
 }
 
+void CItem::SetCostumeAttr(int i, BYTE bType, short sValue)
+{
+	assert(i < MAX_COSTUME_ATTR_NUM);
+
+	m_aAttr[i].bType = bType;
+	m_aAttr[i].sValue = sValue;
+	UpdatePacket();
+	Save();
+
+	if (bType)
+	{
+		const char* pszIP = NULL;
+
+		if (GetOwner() && GetOwner()->GetDesc())
+			pszIP = GetOwner()->GetDesc()->GetHostName();
+	}
+}

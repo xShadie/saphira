@@ -1,16 +1,8 @@
-/*********************************************************************
- * date        : 2007.02.24
- * file        : blend_item.cpp
- * author      : mhh
- * description :
- */
-
 #define _blend_item_cpp_
 
 #include "stdafx.h"
 #include "constants.h"
 #include "log.h"
-#include "dev_log.h"
 #include "locale_service.h"
 #include "item.h"
 #include "blend_item.h"
@@ -61,7 +53,7 @@ bool	Blend_Item_load(char *file)
 	const char	*delim = " \t\r\n";
 	char	*v;
 
-	BLEND_ITEM_INFO	*blend_item_info;
+	BLEND_ITEM_INFO	*blend_item_info = M2_NEW BLEND_ITEM_INFO;
 
 	if (0==file || 0==file[0])
 		return false;
@@ -106,7 +98,11 @@ bool	Blend_Item_load(char *file)
 				return false;
 			}
 
-			blend_item_info->apply_type = FN_get_apply_type(v);
+			if (0 == (blend_item_info->apply_type = FN_get_apply_type(v)))
+			{
+				sys_err ("Invalid apply_type(%s)", v);
+				return false;
+			}
 		}
 		else TOKEN("apply_value")
 		{
@@ -120,7 +116,7 @@ bool	Blend_Item_load(char *file)
 					return false;
 				}
 
-				str_to_number(blend_item_info->apply_value[i], v);
+				str_to_number(blend_item_info->apply_value[i], v); 
 			}
 		}
 		else TOKEN("apply_duration")
@@ -153,46 +149,39 @@ static int FN_random_index()
 {
 	int	percent = number(1,100);
 
-	if (percent<=10)			// level 1 :10%
+	if (percent<=10)
 		return 0;
-	else if (percent<=30)		// level 2 : 20%
+	else if (percent<=30)
 		return 1;
-	else if (percent<=70)		// level 3 : 40%
+	else if (percent<=70)
 		return 2;
-	else if (percent<=90)		// level 4 : 20%
+	else if (percent<=90)
 		return 3;
 	else
-		return 4;				// level 5 : 10%
+		return 4;
 
 	return 0;
 }
-
-// 충기환의 확률 테이블
-// blend.txt에서 확률도 받도록 고치면 깔끔하겠지만
-// 각 나라별로 item proto 등을 따로 관리하므로,
-// 혼란이 올 수 있어 이렇게 추가한다.
-// by rtsummit
 
 static int FN_ECS_random_index()
 {
 	int	percent = number(1,100);
 
-	if (percent<=5)			// level 1 : 5%
+	if (percent<=5)
 		return 0;
-	else if (percent<=15)		// level 2 : 10%
+	else if (percent<=15)
 		return 1;
-	else if (percent<=60)		// level 3 : 45%
+	else if (percent<=60)
 		return 2;
-	else if (percent<=85)		// level 4 : 25%
+	else if (percent<=85)
 		return 3;
 	else
-		return 4;				// level 5 : 15%
+		return 4;
 
 	return 0;
 }
 
-
-bool	Blend_Item_set_value(LPITEM item)
+bool Blend_Item_set_value(LPITEM item)
 {
 	BLEND_ITEM_INFO	*blend_info;
 	T_BLEND_ITEM_INFO::iterator	iter;
@@ -205,7 +194,7 @@ bool	Blend_Item_set_value(LPITEM item)
 			int	apply_type;
 			int	apply_value;
 			int	apply_duration;
-
+	
 			if (item->GetVnum() == 51002)
 			{
 				apply_type		= blend_info->apply_type;

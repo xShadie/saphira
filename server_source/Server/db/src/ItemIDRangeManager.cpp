@@ -109,7 +109,7 @@ bool CItemIDRangeManager::BuildRange(DWORD dwMin, DWORD dwMax, TItemIDRangeTable
 		dwItemMaxID = dwMin;
 	else
 		dwItemMaxID++;
-
+	
 	if ((dwMax < dwItemMaxID) || (dwMax - dwItemMaxID < cs_dwMinimumRemainCount))
 	{
 		sys_log(0, "ItemIDRange: Build %u ~ %u start: %u\tNOT USE remain count is below %u",
@@ -121,7 +121,7 @@ bool CItemIDRangeManager::BuildRange(DWORD dwMin, DWORD dwMax, TItemIDRangeTable
 		range.dwMax = dwMax;
 		range.dwUsableItemIDMin = dwItemMaxID;
 
-		snprintf(szQuery, sizeof(szQuery), "SELECT COUNT(*) FROM item%s WHERE id >= %u AND id <= %u",
+		snprintf(szQuery, sizeof(szQuery), "SELECT COUNT(*) FROM item%s WHERE id >= %u AND id <= %u", 
 				GetTablePostfix(), range.dwUsableItemIDMin, range.dwMax);
 
 		pMsg = CDBManager::instance().DirectQuery(szQuery);

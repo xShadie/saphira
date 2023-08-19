@@ -19,9 +19,6 @@ CPrivManager::~CPrivManager()
 {
 }
 
-//
-// @version 05/06/07	Bang2ni - 중복적으로 보너스가 적용 된 길드에 대한 처리
-//
 void CPrivManager::Update()
 {
 	time_t now = CClientManager::instance().GetCurrentTime();
@@ -34,15 +31,12 @@ void CPrivManager::Update()
 		if (p->value != 0 && !p->bRemoved)
 		{
 
-			__typeof(m_aPrivGuild[p->type].begin()) it = m_aPrivGuild[p->type].find(p->guild_id);
+			auto it = m_aPrivGuild[p->type].find(p->guild_id);
 
-			// ADD_GUILD_PRIV_TIME
-			// 길드에 중복적으로 보너스가 설정되었을 경우 map 의 value 가 갱신(수정) 되었으므로
-			// TPrivGuildData 의 포인터가 같을때 실제로 삭제해 주고 게임서버들에게 cast 해 준다.
-			if (it != m_aPrivGuild[p->type].end() && it->second == p) {
+			if (it != m_aPrivGuild[p->type].end() && it->second == p) 
+			{
 				m_aPrivGuild[p->type].erase(it);
 				SendChangeGuildPriv(p->guild_id, p->type, 0, 0);
-				// END_OF_ADD_GUILD_PRIV_TIME
 			}
 		}
 
@@ -70,9 +64,8 @@ void CPrivManager::Update()
 
 		if (!p->bRemoved)
 		{
-			// TODO send packet
 			SendChangeCharPriv(p->pid, p->type, 0);
-			__typeof(m_aPrivChar[p->type].begin()) it = m_aPrivChar[p->type].find(p->pid);
+			auto it = m_aPrivChar[p->type].find(p->pid);
 			if (it != m_aPrivChar[p->type].end())
 				m_aPrivChar[p->type].erase(it);
 		}
@@ -88,7 +81,7 @@ void CPrivManager::AddCharPriv(DWORD pid, BYTE type, int value)
 		return;
 	}
 
-	__typeof(m_aPrivChar[type].begin()) it = m_aPrivChar[type].find(pid);
+	auto it = m_aPrivChar[type].find(pid);
 
 	if (it != m_aPrivChar[type].end())
 		return;
@@ -107,14 +100,10 @@ void CPrivManager::AddCharPriv(DWORD pid, BYTE type, int value)
 	m_pqPrivChar.push(std::make_pair(now+iDuration, p));
 	m_aPrivChar[type].insert(std::make_pair(pid, p));
 
-	// TODO send packet
 	sys_log(0, "AddCharPriv %d %d %d", pid, type, value);
 	SendChangeCharPriv(pid, type, value);
 }
 
-//
-// @version 05/06/07	Bang2ni - 이미 보너스가 적용 된 길드에 보너스 설정
-//
 void CPrivManager::AddGuildPriv(DWORD guild_id, BYTE type, int value, time_t duration_sec)
 {
 	if (MAX_PRIV_NUM <= type)
@@ -123,23 +112,19 @@ void CPrivManager::AddGuildPriv(DWORD guild_id, BYTE type, int value, time_t dur
 		return;
 	}
 
-	__typeof(m_aPrivGuild[type].begin()) it = m_aPrivGuild[type].find(guild_id);
+	auto it = m_aPrivGuild[type].find(guild_id);
 
 	time_t now = CClientManager::instance().GetCurrentTime();
 	time_t end = now + duration_sec;
 	TPrivGuildData * p = new TPrivGuildData(type, value, guild_id, end);
 	m_pqPrivGuild.push(std::make_pair(end, p));
 
-	// ADD_GUILD_PRIV_TIME
-	// 이미 보너스가 설정되 있다면 map 의 value 를 갱신해 준다.
-	// 이전 value 의 포인터는 priority queue 에서 삭제될 때 해제된다.
 	if (it != m_aPrivGuild[type].end())
 		it->second = p;
 	else
 		m_aPrivGuild[type].insert(std::make_pair(guild_id, p));
 
 	SendChangeGuildPriv(guild_id, type, value, end);
-	// END_OF_ADD_GUILD_PRIV_TIME
 
 	sys_log(0, "Guild Priv guild(%d) type(%d) value(%d) duration_sec(%d)", guild_id, type, value, duration_sec);
 }
@@ -158,8 +143,6 @@ void CPrivManager::AddEmpirePriv(BYTE empire, BYTE type, int value, time_t durat
 	time_t now = CClientManager::instance().GetCurrentTime();
 	time_t end = now+duration_sec;
 
-	// 이전 설정값 무효화
-	// priority_queue에 들어있는 pointer == m_aaPrivEmpire[type][empire]
 	{
 		if (m_aaPrivEmpire[type][empire])
 			m_aaPrivEmpire[type][empire]->bRemoved = true;
@@ -169,16 +152,11 @@ void CPrivManager::AddEmpirePriv(BYTE empire, BYTE type, int value, time_t durat
 	m_pqPrivEmpire.push(std::make_pair(end, p));
 	m_aaPrivEmpire[type][empire] = p;
 
-	// ADD_EMPIRE_PRIV_TIME
 	SendChangeEmpirePriv(empire, type, value, end);
-	// END_OF_ADD_EMPIRE_PRIV_TIME
 
 	sys_log(0, "Empire Priv empire(%d) type(%d) value(%d) duration_sec(%d)", empire, type, value, duration_sec);
 }
 
-/**
- * @version 05/06/08	Bang2ni - 지속시간 추가
- */
 struct FSendChangeGuildPriv
 {
 	FSendChangeGuildPriv(DWORD guild_id, BYTE type, int value, time_t end_time_sec)
@@ -187,9 +165,7 @@ struct FSendChangeGuildPriv
 		p.type = type;
 		p.value = value;
 		p.bLog = 1;
-		// ADD_GUILD_PRIV_TIME
 		p.end_time_sec = end_time_sec;
-		// END_OF_ADD_GUILD_PRIV_TIME
 	}
 
 	void operator() (CPeer* peer)
@@ -210,9 +186,7 @@ struct FSendChangeEmpirePriv
 		p.type = type;
 		p.value = value;
 		p.bLog = 1;
-		// ADD_EMPIRE_PRIV_TIME
 		p.end_time_sec = end_time_sec;
-		// END_OF_ADD_EMPIRE_PRIV_TIME
 	}
 
 	void operator ()(CPeer* peer)
@@ -243,19 +217,15 @@ struct FSendChangeCharPriv
 	TPacketDGChangeCharacterPriv p;
 };
 
-// ADD_GUILD_PRIV_TIME
 void CPrivManager::SendChangeGuildPriv(DWORD guild_id, BYTE type, int value, time_t end_time_sec)
 {
 	CClientManager::instance().for_each_peer(FSendChangeGuildPriv(guild_id, type, value, end_time_sec));
 }
-// END_OF_ADD_GUILD_PRIV_TIME
 
-// ADD_EMPIRE_PRIV_TIME
 void CPrivManager::SendChangeEmpirePriv(BYTE empire, BYTE type, int value, time_t end_time_sec)
 {
 	CClientManager::instance().for_each_peer(FSendChangeEmpirePriv(empire, type, value, end_time_sec));
 }
-// END_OF_ADD_EMPIRE_PRIV_TIME
 
 void CPrivManager::SendChangeCharPriv(DWORD pid, BYTE type, int value)
 {
@@ -268,22 +238,18 @@ void CPrivManager::SendPrivOnSetup(CPeer* peer)
 	{
 		for (int e = 0; e < EMPIRE_MAX_NUM; ++e)
 		{
-			// ADD_EMPIRE_PRIV_TIME
 			TPrivEmpireData* pPrivEmpireData = m_aaPrivEmpire[i][e];
 			if (pPrivEmpireData)
 			{
 				FSendChangeEmpirePriv(e, i, pPrivEmpireData->value, pPrivEmpireData->end_time_sec)(peer);
 			}
-			// END_OF_ADD_EMPIRE_PRIV_TIME
 		}
 
-		for (__typeof(m_aPrivGuild[i].begin()) it = m_aPrivGuild[i].begin(); it != m_aPrivGuild[i].end();++it)
+		for (auto it = m_aPrivGuild[i].begin(); it != m_aPrivGuild[i].end();++it)
 		{
-			// ADD_GUILD_PRIV_TIME
 			FSendChangeGuildPriv(it->first, i, it->second->value, it->second->end_time_sec)(peer);
-			// END_OF_ADD_GUILD_PRIV_TIME
 		}
-		for (__typeof(m_aPrivChar[i].begin()) it = m_aPrivChar[i].begin(); it != m_aPrivChar[i].end(); ++it)
+		for (auto it = m_aPrivChar[i].begin(); it != m_aPrivChar[i].end(); ++it)
 		{
 			FSendChangeCharPriv(it->first, i, it->second->value)(peer);
 		}

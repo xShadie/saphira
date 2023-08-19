@@ -11,19 +11,14 @@
 #include "char_manager.h"
 #include "buffer_manager.h"
 #include "db.h"
+#include "xmas_event.h"
 #include "locale_service.h"
 #include "regen.h"
 #include "affect.h"
 #include "guild.h"
 #include "guild_manager.h"
 #include "sectree_manager.h"
-
-#undef sys_err
-#ifndef __WIN32__
-#define sys_err(fmt, args...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, ##args)
-#else
-#define sys_err(fmt, ...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, __VA_ARGS__)
-#endif
+#include "quest_sys_err.h"
 
 namespace quest
 {
@@ -74,7 +69,7 @@ namespace quest
 			return false;
 
 		PC * pPC = CQuestManager::instance().GetPCForce(ch->GetPlayerID());
-		bool returnBool = false;
+		bool returnBool;
 		if (pPC)
 		{
 			int flagValue = pPC->GetFlag(flagname);
@@ -196,7 +191,6 @@ namespace quest
 		for (i = 1; i <= n; ++i)
 		{
 			if (lua_isstring(L,i))
-				//printf("%s\n",lua_tostring(L,i));
 				s << lua_tostring(L, i);
 			else if (lua_isnumber(L, i))
 			{
@@ -206,20 +200,20 @@ namespace quest
 		}
 	}
 
-	ALUA(highscore_show)
+	int highscore_show(lua_State* L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 		const char * pszBoardName = lua_tostring(L, 1);
 		DWORD mypid = q.GetCurrentCharacterPtr()->GetPlayerID();
 		bool bOrder = (int) lua_tonumber(L, 2) != 0 ? true : false;
 
-		DBManager::instance().ReturnQuery(QID_HIGHSCORE_SHOW, mypid, NULL,
+		DBManager::instance().ReturnQuery(QID_HIGHSCORE_SHOW, mypid, NULL, 
 				"SELECT h.pid, p.name, h.value FROM highscore%s as h, player%s as p WHERE h.board = '%s' AND h.pid = p.id ORDER BY h.value %s LIMIT 10",
 				get_table_postfix(), get_table_postfix(), pszBoardName, bOrder ? "DESC" : "");
 		return 0;
 	}
 
-	ALUA(highscore_register)
+	int highscore_register(lua_State* L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 
@@ -230,15 +224,12 @@ namespace quest
 		qi->iValue = (int) lua_tonumber(L, 2);
 		qi->bOrder = (int) lua_tonumber(L, 3);
 
-		DBManager::instance().ReturnQuery(QID_HIGHSCORE_REGISTER, qi->dwPID, qi,
+		DBManager::instance().ReturnQuery(QID_HIGHSCORE_REGISTER, qi->dwPID, qi, 
 				"SELECT value FROM highscore%s WHERE board='%s' AND pid=%u", get_table_postfix(), qi->szBoard, qi->dwPID);
 		return 1;
 	}
 
-	//
-	// "member" Lua functions
-	//
-	ALUA(member_chat)
+	int member_chat(lua_State* L)
 	{
 		ostringstream s;
 		combine_lua_string(L, s);
@@ -246,21 +237,21 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(member_clear_ready)
+	int member_clear_ready(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentPartyMember();
 		ch->RemoveAffect(AFFECT_DUNGEON_READY);
 		return 0;
 	}
 
-	ALUA(member_set_ready)
+	int member_set_ready(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentPartyMember();
 		ch->AddAffect(AFFECT_DUNGEON_READY, POINT_NONE, 0, AFF_DUNGEON_READY, 65535, 0, true);
 		return 0;
 	}
 
-	ALUA(mob_spawn)
+	int mob_spawn(lua_State* L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4))
 		{
@@ -330,7 +321,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(mob_spawn_group)
+	int mob_spawn_group(lua_State* L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4) || !lua_isnumber(L, 6))
 		{
@@ -399,31 +390,9 @@ namespace quest
 		return 1;
 	}
 
-	//
-	// global Lua functions
-	//
-	//
-	// Registers Lua function table
-	//
-	void CQuestManager::AddLuaFunctionTable(const char * c_pszName, luaL_reg * preg, bool bCheckIfExists)
+	void CQuestManager::AddLuaFunctionTable(const char * c_pszName, luaL_reg * preg)
 	{
-#ifdef ENABLE_NEWSTUFF
-		bool bIsExists = false;
-		if (bCheckIfExists)
-		{
-			int x = lua_gettop(L);
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				lua_settop(L, x);
-				bIsExists = true;
-			}
-		}
-		if (!bIsExists)
-			lua_newtable(L);
-#else
 		lua_newtable(L);
-#endif
 
 		while ((preg->name))
 		{
@@ -435,177 +404,6 @@ namespace quest
 
 		lua_setglobal(L, c_pszName);
 	}
-
-	void CQuestManager::AddLuaFunctionSubTable(const char * c_pszName, const char * c_pszSubName, luaL_reg * preg)
-	{
-		// lua_State* L = CQuestManager::instance().GetLuaState();
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				sys_err("%s global index not found for %s", c_pszName, c_pszSubName);
-				lua_settop(L, x);
-				return;
-			}
-			lua_pushstring(L, c_pszSubName);
-			{
-				lua_newtable(L);
-				while ((preg->name))
-				{
-					lua_pushstring(L, preg->name);
-					lua_pushcfunction(L, preg->func);
-					lua_rawset(L, -3);
-					preg++;
-				}
-			}
-			lua_rawset(L, -3);
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-
-#ifdef ENABLE_NEWSTUFF
-	void CQuestManager::AppendLuaFunctionTable(const char * c_pszName, luaL_reg * preg, bool bForceCreation)
-	{
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				sys_err("%s global index not found (force=%d)", c_pszName, bForceCreation);
-				lua_settop(L, x);
-				if (bForceCreation)
-					AddLuaFunctionTable(c_pszName, preg);
-				return;
-			}
-
-			while ((preg->name))
-			{
-				lua_pushstring(L, preg->name);
-				lua_pushcfunction(L, preg->func);
-				lua_rawset(L, -3);
-				preg++;
-			}
-
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-
-	void CQuestManager::AddLuaConstantGlobal(const char * c_pszName, lua_Number lNumber, bool bOverwrite)
-	{
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (lua_isnumber(L, -1))
-			{
-				if (!bOverwrite)
-				{
-					sys_err("%s global index already defined", c_pszName);
-					lua_settop(L, x);
-					return;
-				}
-			}
-			lua_pushnumber(L, lNumber);
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-
-	void CQuestManager::AddLuaConstantInTable(const char * c_pszName, const char * c_pszSubName, lua_Number lNumber, bool bForceCreation)
-	{
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				if (!bForceCreation)
-				{
-					sys_err("%s global index for %s already defined", c_pszName, c_pszSubName);
-					lua_settop(L, x);
-					return;
-				}
-				lua_newtable(L);
-			}
-			{
-				lua_pushstring(L, c_pszSubName);
-				lua_pushnumber(L, lNumber);
-				lua_rawset(L, -3);
-			}
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-
-	void CQuestManager::AddLuaConstantInTable(const char * c_pszName, const char * c_pszSubName, const char * szString, bool bForceCreation)
-	{
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				if (!bForceCreation)
-				{
-					sys_err("%s global index for %s already defined", c_pszName, c_pszSubName);
-					lua_settop(L, x);
-					return;
-				}
-				lua_newtable(L);
-			}
-			{
-				lua_pushstring(L, c_pszSubName);
-				lua_pushstring(L, szString);
-				lua_rawset(L, -3);
-			}
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-
-	void CQuestManager::AddLuaConstantSubTable(const char * c_pszName, const char * c_pszSubName, luaC_tab * preg)
-	{
-		// lua_State* L = CQuestManager::instance().GetLuaState();
-		int x = lua_gettop(L);
-		{
-			lua_getglobal(L, c_pszName);
-			if (!lua_istable(L, -1))
-			{
-				sys_err("%s global index not found for %s", c_pszName, c_pszSubName);
-				lua_settop(L, x);
-				return;
-			}
-			lua_pushstring(L, c_pszSubName);
-			{
-				lua_newtable(L);
-				while ((preg->name))
-				{
-					lua_pushstring(L, preg->name);
-					switch (preg->val.type)
-					{
-						case ETL_CFUN:
-							lua_pushcfunction(L, preg->val.cfVal);
-							break;
-						case ETL_LNUM:
-							lua_pushnumber(L, preg->val.lnVal);
-							break;
-						case ETL_LSTR:
-							lua_pushstring(L, preg->val.lsVal);
-							break;
-						case ETL_NIL:
-							lua_pushnil(L);
-							break;
-					}
-					lua_rawset(L, -3);
-					preg++;
-				}
-			}
-			lua_rawset(L, -3);
-			lua_setglobal(L, c_pszName);
-		}
-		lua_settop(L, x);
-	}
-#endif
 
 	void CQuestManager::BuildStateIndexToName(const char* questName)
 	{
@@ -635,24 +433,16 @@ namespace quest
 		lua_settop(L, x);
 	}
 
-	/**
-	 * @version 05/06/08	Bang2ni - __get_guildid_byname 스크립트 함수 등록
-	 */
 	bool CQuestManager::InitializeLua()
 	{
-#if LUA_V == 503
 		L = lua_open();
 
 		luaopen_base(L);
 		luaopen_table(L);
 		luaopen_string(L);
 		luaopen_math(L);
-		//TEMP
 		luaopen_io(L);
 		luaopen_debug(L);
-#else
-	#error "lua version not found"
-#endif
 
 		RegisterAffectFunctionTable();
 		RegisterBuildingFunctionTable();
@@ -660,12 +450,7 @@ namespace quest
 		RegisterGameFunctionTable();
 		RegisterGuildFunctionTable();
 		RegisterHorseFunctionTable();
-#ifdef __PET_SYSTEM__
 		RegisterPetFunctionTable();
-#endif
-#ifdef __NEWPET_SYSTEM__
-		RegisterNewPetFunctionTable();
-#endif
 		RegisterITEMFunctionTable();
 		RegisterMarriageFunctionTable();
 		RegisterNPCFunctionTable();
@@ -673,14 +458,13 @@ namespace quest
 		RegisterPCFunctionTable();
 		RegisterQuestFunctionTable();
 		RegisterTargetFunctionTable();
-		RegisterArenaFunctionTable();
 		RegisterOXEventFunctionTable();
-		RegisterBattleArenaFunctionTable();
 		RegisterDanceEventFunctionTable();
+		RegisterDragonLairFunctionTable();
 		RegisterDragonSoulFunctionTable();
 
 		{
-			luaL_reg member_functions[] =
+			luaL_reg member_functions[] = 
 			{
 				{ "chat",			member_chat		},
 				{ "set_ready",			member_set_ready	},
@@ -692,7 +476,7 @@ namespace quest
 		}
 
 		{
-			luaL_reg highscore_functions[] =
+			luaL_reg highscore_functions[] = 
 			{
 				{ "register",			highscore_register	},
 				{ "show",			highscore_show		},
@@ -713,12 +497,8 @@ namespace quest
 			AddLuaFunctionTable("mob", mob_functions);
 		}
 
-		//
-		// global namespace functions
-		//
 		RegisterGlobalFunctionTable(L);
 
-		// LUA_INIT_ERROR_MESSAGE
 		{
 			char settingsFileName[256];
 			snprintf(settingsFileName, sizeof(settingsFileName), "%s/settings.lua", LocaleService_GetBasePath().c_str());
@@ -727,7 +507,7 @@ namespace quest
 			sys_log(0, "LoadSettings(%s), returns %d", settingsFileName, settingsLoadingResult);
 			if (settingsLoadingResult != 0)
 			{
-				sys_err("LOAD_SETTINS_FAILURE(%s)", settingsFileName);
+				sys_err("LOAD_SETTINGS_FAILURE(%s)", settingsFileName);
 				return false;
 			}
 		}
@@ -745,54 +525,7 @@ namespace quest
 			}
 		}
 
-#define ENABLE_TRANSLATE_LUA
-#ifdef ENABLE_TRANSLATE_LUA
-		{
-			char translateFileName[256];
-			snprintf(translateFileName, sizeof(translateFileName), "%s/translate.lua", LocaleService_GetBasePath().c_str());
-
-			int translateLoadingResult = lua_dofile(L, translateFileName);
-			sys_log(0, "LoadTranslate(%s), returns %d", translateFileName, translateLoadingResult);
-			if (translateLoadingResult != 0)
-			{
-				sys_err("LOAD_TRANSLATE_ERROR(%s)", translateFileName);
-				return false;
-			}
-		}
-#ifdef ENABLE_MULTILANGUAGE_SYSTEM
-			std::string eMultiLanguages[] =
-			{
-				"en", "de", "it", "tr", "ro", "pl", "pt", "hu", "es"
-			};
-			
-			for (int i = 0; i < _countof(eMultiLanguages); i++)
-			{
-				char translateFileNameNew[256];
-				snprintf(translateFileNameNew, sizeof(translateFileNameNew), "%s/translate/%s/translate.lua", LocaleService_GetBasePath().c_str(), eMultiLanguages[i].c_str());
-				if (lua_dofile(L, translateFileNameNew) != 0)
-				{
-					sys_err("LOAD_TRANSLATE_ERROR(%s)", translateFileNameNew);
-					return false;
-				}
-			}
-#endif
-#endif
-
-		{
-			char questLocaleFileName[256];
-			snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale.lua", g_stQuestDir.c_str());
-
-			int questLocaleLoadingResult = lua_dofile(L, questLocaleFileName);
-			sys_log(0, "LoadQuestLocale(%s), returns %d", questLocaleFileName, questLocaleLoadingResult);
-			if (questLocaleLoadingResult != 0)
-			{
-				sys_err("LoadQuestLocale(%s) FAILURE", questLocaleFileName);
-				return false;
-			}
-		}
-		// END_OF_LUA_INIT_ERROR_MESSAGE
-
-		for (itertype(g_setQuestObjectDir) it = g_setQuestObjectDir.begin(); it != g_setQuestObjectDir.end(); ++it)
+		for (auto it = g_setQuestObjectDir.begin(); it != g_setQuestObjectDir.end(); ++it)
 		{
 			const string& stQuestObjectDir = *it;
 			char buf[PATH_MAX];
@@ -813,8 +546,6 @@ namespace quest
 
 					RegisterQuest(pde->d_name, ++iQuestIdx);
 					int ret = lua_dofile(L, (stQuestObjectDir + "/state/" + pde->d_name).c_str());
-					sys_log(0, "QUEST: loading %s, returns %d", (stQuestObjectDir + "/state/" + pde->d_name).c_str(), ret);
-
 					BuildStateIndexToName(pde->d_name);
 				}
 
@@ -822,9 +553,8 @@ namespace quest
 			}
 		}
 
-#if LUA_V == 503
 		lua_setgcthreshold(L, 0);
-#endif
+
 		lua_newtable(L);
 		lua_setglobal(L, "__codecache");
 		return true;
@@ -833,12 +563,8 @@ namespace quest
 	void CQuestManager::GotoSelectState(QuestState& qs)
 	{
 		lua_checkstack(qs.co, 1);
-
-		//int n = lua_gettop(L);
 		int n = luaL_getn(qs.co, -1);
 		qs.args = n;
-		//cout << "select here (1-" << qs.args << ")" << endl;
-		//
 
 		ostringstream os;
 		os << "[QUESTION ";
@@ -848,7 +574,6 @@ namespace quest
 			lua_rawgeti(qs.co,-1,i);
 			if (lua_isstring(qs.co,-1))
 			{
-				//printf("%d\t%s\n",i,lua_tostring(qs.co,-1));
 				if (i != 1)
 					os << "|";
 				os << i << ";" << lua_tostring(qs.co,-1);
@@ -865,8 +590,6 @@ namespace quest
 
 		AddScript(os.str());
 		qs.suspend_state = SUSPEND_STATE_SELECT;
-		if ( test_server )
-			sys_log( 0, "%s", m_strScript.c_str() );
 		SendScript();
 	}
 
@@ -893,11 +616,10 @@ namespace quest
 		}
 
 		LPCHARACTER chWait = CHARACTER_MANAGER::instance().FindByPID(info->dwWaitPID);
-		LPCHARACTER chReply = NULL; //CHARACTER_MANAGER::info().FindByPID(info->dwReplyPID);
+		LPCHARACTER chReply = NULL;
 
 		if (chReply)
 		{
-			// 시간 지나면 알아서 닫힘
 		}
 
 		if (chWait)
@@ -917,26 +639,18 @@ namespace quest
 
 		sys_log(0, "GotoConfirmState vid %u msg '%s', timeout %d", dwVID, szMsg, iTimeout);
 
-		// 1. 상대방에게 확인창 띄움
-		// 2. 나에게 확인 기다린다고 표시하는 창 띄움
-		// 3. 타임아웃 설정 (타임아웃 되면 상대방 창 닫고 나에게도 창 닫으라고 보냄)
-
-		// 1
-		// 상대방이 없는 경우는 그냥 상대방에게 보내지 않는다. 타임아웃에 의해서 넘어가게됨
 		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(dwVID);
 		if (ch && ch->IsPC())
 		{
 			ch->ConfirmWithMsg(szMsg, iTimeout, GetCurrentCharacterPtr()->GetPlayerID());
 		}
 
-		// 2
 		GetCurrentPC()->SetConfirmWait((ch && ch->IsPC())?ch->GetPlayerID():0);
 		ostringstream os;
 		os << "[CONFIRM_WAIT timeout;" << iTimeout << "]";
 		AddScript(os.str());
 		SendScript();
 
-		// 3
 		confirm_timeout_event_info* info = AllocEventInfo<confirm_timeout_event_info>();
 
 		info->dwWaitPID = GetCurrentCharacterPtr()->GetPlayerID();
@@ -957,9 +671,6 @@ namespace quest
 		qs.suspend_state = SUSPEND_STATE_INPUT;
 		AddScript("[INPUT]");
 		SendScript();
-
-		// 시간 제한을 검
-		//event_create(input_timeout_event, dwEI, PASSES_PER_SEC(iTimeout));
 	}
 
 	void CQuestManager::GotoPauseState(QuestState & qs)
@@ -975,39 +686,27 @@ namespace quest
 		SendScript();
 	}
 
-	//
-	// * OpenState
-	//
-	// The beginning of script
-	//
-
 	QuestState CQuestManager::OpenState(const string& quest_name, int state_index)
 	{
 		QuestState qs;
 		qs.args=0;
 		qs.st = state_index;
 		qs.co = lua_newthread(L);
-		qs.ico = lua_ref(L, 1/*qs.co*/);
+		qs.ico = lua_ref(L, 1);
 		return qs;
 	}
 
-	//
-	// * RunState
-	//
-	// decides script to wait for user input, or finish
-	//
 	bool CQuestManager::RunState(QuestState & qs)
 	{
 		ClearError();
 
 		m_CurrentRunningState = &qs;
-
 		int ret = lua_resume(qs.co, qs.args);
+
 		if (ret == 0)
 		{
 			if (lua_gettop(qs.co) == 0)
 			{
-				// end of quest
 				GotoEndState(qs);
 				return false;
 			}
@@ -1054,16 +753,10 @@ namespace quest
 		return false;
 	}
 
-	//
-	// * CloseState
-	//
-	// makes script end
-	//
 	void CQuestManager::CloseState(QuestState& qs)
 	{
 		if (qs.co)
 		{
-			//cerr << "ICO "<<qs.ico <<endl;
 			lua_unref(L, qs.ico);
 			qs.co = 0;
 		}

@@ -47,40 +47,36 @@ namespace quest
 
 	EVENTFUNC(quest_timer_event)
 	{
-		quest_event_info * info = dynamic_cast<quest_event_info *>( event->info );
-
-		if ( info == NULL )
+		quest_event_info* info = dynamic_cast<quest_event_info*>(event->info);
+		if (info == NULL)
 		{
-			sys_err( "quest_timer_event> <Factor> Null pointer" );
+			sys_err("quest_timer_event> <Factor> Null pointer");
 			return 0;
 		}
 
-		CQuestManager & q = CQuestManager::instance();
+		CQuestManager& q = CQuestManager::instance();
 
 		if (CHARACTER_MANAGER::instance().FindByPID(info->player_id))
 		{
 			if (!CQuestManager::instance().Timer(info->player_id, info->npc_id))
 				return (passes_per_sec / 2 + 1);
 
-			if (0 == info->time_cycle)
-				goto END_OF_TIMER_EVENT;
+			if (info->time_cycle != 0)
+				return info->time_cycle;
 		}
-		else
-		{
-END_OF_TIMER_EVENT:
-			PC * pPC = q.GetPC(info->player_id);
 
-			if (pPC && info->name) // @fixme168
+		if (info->name != NULL)
+		{
+			PC* pPC = q.GetPC(info->player_id);
+			if (pPC)
 				pPC->RemoveTimerNotCancel(info->name);
 			else
 				sys_err("quest::PC pointer null. player_id: %u", info->player_id);
 
 			M2_DELETE_ARRAY(info->name);
 			info->name = NULL;
-			return 0;
 		}
-
-		return info->time_cycle;
+		return 0;
 	}
 
 	LPEVENT quest_create_server_timer_event(const char * name, double when, unsigned int timernpc, bool loop, unsigned int arg)
@@ -123,4 +119,3 @@ END_OF_TIMER_EVENT:
 		return event_create(quest_timer_event, info, ltime_cycle);
 	}
 }
-

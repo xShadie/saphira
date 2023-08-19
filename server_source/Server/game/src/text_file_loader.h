@@ -1,6 +1,4 @@
-#ifndef __INC_METIN_II_TEXTFILELOADER_H__
-#define __INC_METIN_II_TEXTFILELOADER_H__
-
+#pragma once
 #include "../../common/d3dtype.h"
 #include "../../common/pool.h"
 #include "file_loader.h"
@@ -39,7 +37,6 @@ class CTextFileLoader
 		BOOL SetChildNode(DWORD dwIndex);
 		BOOL SetParentNode();
 		BOOL GetCurrentNodeName(std::string * pstrName);
-
 		BOOL IsToken(const std::string & c_rstrKey);
 		BOOL GetTokenVector(const std::string & c_rstrKey, TTokenVector ** ppTokenVector);
 		BOOL GetTokenBoolean(const std::string & c_rstrKey, BOOL * pData);
@@ -48,11 +45,9 @@ class CTextFileLoader
 		BOOL GetTokenInteger(const std::string & c_rstrKey, int * pData);
 		BOOL GetTokenDoubleWord(const std::string & c_rstrKey, DWORD * pData);
 		BOOL GetTokenFloat(const std::string & c_rstrKey, float * pData);
-
 		BOOL GetTokenVector2(const std::string & c_rstrKey, D3DXVECTOR2 * pVector2);
 		BOOL GetTokenVector3(const std::string & c_rstrKey, D3DXVECTOR3 * pVector3);
 		BOOL GetTokenVector4(const std::string & c_rstrKey, D3DXVECTOR4 * pVector4);
-
 		BOOL GetTokenPosition(const std::string & c_rstrKey, D3DXVECTOR3 * pVector);
 		BOOL GetTokenQuaternion(const std::string & c_rstrKey, D3DXQUATERNION * pQ);
 		BOOL GetTokenDirection(const std::string & c_rstrKey, D3DVECTOR * pVector);
@@ -64,18 +59,13 @@ class CTextFileLoader
 		bool LoadGroup(TGroupNode * pGroupNode);
 
 	protected:
-		std::string					m_strFileName;
-		DWORD						m_dwcurLineIndex;
-		const void *					mc_pData;
-
-		CMemoryTextFileLoader				m_fileLoader;
-
-		TGroupNode					m_globalNode;
-		TGroupNode *					m_pcurNode;
+		std::string				m_strFileName;
+		DWORD					m_dwcurLineIndex;
+		const void *			mc_pData;
+		CMemoryTextFileLoader	m_fileLoader;
+		TGroupNode				m_globalNode;
+		TGroupNode *			m_pcurNode;
 
 	private:
-		static CDynamicPool<TGroupNode>			ms_groupNodePool;
+		static CDynamicPool<TGroupNode>	ms_groupNodePool;
 };
-
-#endif
-

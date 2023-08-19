@@ -9,10 +9,7 @@
 
 namespace quest
 {
-	//
-	// "building" Lua functions
-	//
-	ALUA(building_get_land_id)
+	int building_get_land_id(lua_State * L)
 	{
 		using namespace building;
 
@@ -28,9 +25,9 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(building_get_land_info)
+	int building_get_land_info(lua_State * L)
 	{
-		int price = 1000000000;
+		long long price = 1000000000;
 		int owner = 1000000000;
 		int level_limit = 1000000000;
 
@@ -44,7 +41,7 @@ namespace quest
 			{
 				const TLand & t = pkLand->GetData();
 
-				price = t.dwPrice;
+				price = t.lldPrice;
 				owner = t.dwGuildID;
 				level_limit = t.bGuildLevelLimit;
 			}
@@ -58,7 +55,7 @@ namespace quest
 		return 3;
 	}
 
-	ALUA(building_set_land_owner)
+	int building_set_land_owner(lua_State * L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
@@ -79,7 +76,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(building_has_land)
+	int building_has_land(lua_State * L)
 	{
 		using namespace building;
 
@@ -89,13 +86,6 @@ namespace quest
 			lua_pushboolean(L, true);
 			return 1;
 		}
-
-		/*
-		if (CManager::instance().FindLandByGuild((DWORD) lua_tonumber(L, 1)))
-			lua_pushboolean(L, true);
-		else
-			lua_pushboolean(L, false);
-		*/
 
 		std::unique_ptr<SQLMsg> pmsg(DBManager::instance().DirectQuery("SELECT COUNT(*) FROM land%s WHERE guild_id = %d", get_table_postfix(), (DWORD)lua_tonumber(L,1)));
 
@@ -123,7 +113,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(building_reconstruct)
+	int building_reconstruct(lua_State* L)
 	{
 		using namespace building;
 

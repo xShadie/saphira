@@ -28,7 +28,6 @@
 #include "dungeon.h"
 #include "cmd.h"
 #include "refine.h"
-#include "banword.h"
 #include "priv_manager.h"
 #include "war_map.h"
 #include "building.h"
@@ -39,87 +38,27 @@
 #include "fishing.h"
 #include "item_addon.h"
 #include "locale_service.h"
-#include "arena.h"
 #include "OXEvent.h"
 #include "polymorph.h"
 #include "blend_item.h"
 #include "ani.h"
-#include "BattleArena.h"
-#include "over9refine.h"
 #include "horsename_manager.h"
-#include "pcbang.h"
 #include "MarkManager.h"
 #include "spam.h"
+#include "DragonLair.h"
 #include "skill_power.h"
 #include "DragonSoul.h"
 #include <boost/bind.hpp>
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-#include "new_offlineshop.h"
-#include "new_offlineshop_manager.h"
-#endif
-
-#ifdef ENABLE_WHISPER_ADMIN_SYSTEM
-	#include "whisper_admin.h"
-#endif
-
-
-#ifndef __WIN32__
-	#include "limit_time.h"
-#endif
-
-#ifdef __NEWPET_SYSTEM__
-	#include "fstream"
-#endif
-
-#ifdef ENABLE_BATTLE_PASS
-#include "battle_pass.h"
-#endif
-
-//#define __FILEMONITOR__
-
-#if defined (__FreeBSD__) && defined(__FILEMONITOR__)
-	#include "FileMonitor_FreeBSD.h"
-#endif
-
-#ifdef ENABLE_GOOGLE_TEST
-#ifndef __WIN32__
-#include <gtest/gtest.h>
-#endif
-#endif
-
 #ifdef USE_STACKTRACE
 #include <execinfo.h>
 #endif
-#ifdef ENABLE_SWITCHBOT
-#include "new_switchbot.h"
+#ifdef ENABLE_ITEMSHOP
+#include "itemshop.h"
 #endif
-//// 윈도우에서 테스트할 때는 항상 서버키 체크
-#ifdef _WIN32
-	#define _USE_SERVER_KEY_
-#endif
-#ifdef __NEW_EVENT_HANDLER__
-#include "EventFunctionHandler.h"
-#endif
-#ifdef ENABLE_HWID
-#include "hwidmanager.h"
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+#include "HAntiMultipleFarm.h"
 #endif
 
-extern void WriteVersion();
-//extern const char * _malloc_options;
-#if defined(__FreeBSD__) && defined(DEBUG_ALLOC)
-extern void (*_malloc_message)(const char* p1, const char* p2, const char* p3, const char* p4);
-// FreeBSD _malloc_message replacement
-void WriteMallocMessage(const char* p1, const char* p2, const char* p3, const char* p4) {
-	FILE* fp = ::fopen(DBGALLOC_LOG_FILENAME, "a");
-	if (fp == NULL) {
-		return;
-	}
-	::fprintf(fp, "%s %s %s %s\n", p1, p2, p3, p4);
-	::fclose(fp);
-}
-#endif
-
-// 게임과 연결되는 소켓
 volatile int	num_events_called = 0;
 int             max_bytes_written = 0;
 int             current_bytes_written = 0;
@@ -137,8 +76,6 @@ int		io_loop(LPFDWATCH fdw);
 int		start(int argc, char **argv);
 int		idle();
 void	destroy();
-
-void 	test();
 
 enum EProfile
 {
@@ -187,11 +124,15 @@ void ShutdownOnFatalError()
 	if (!g_bShutdown)
 	{
 		sys_err("ShutdownOnFatalError!!!!!!!!!!");
-#ifdef TEXTS_IMPROVEMENT
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 570, "");
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 571, "");
-		SendNoticeNew(CHAT_TYPE_NOTICE, 0, 0, 572, "");
-#endif
+		{
+			char buf[256];
+			strlcpy(buf, "[LS;738]", sizeof(buf));
+			SendNotice(buf);
+			strlcpy(buf, "[LS;739]", sizeof(buf));
+			SendNotice(buf);
+			strlcpy(buf, "[LS;740]", sizeof(buf));
+			SendNotice(buf);
+		}
 
 		g_bShutdown = true;
 		g_bNoMoreClient = true;
@@ -231,12 +172,12 @@ namespace
 	};
 }
 
-extern std::map<DWORD, CLoginSim *> g_sim; // first: AID
+extern std::map<DWORD, CLoginSim *> g_sim;
 extern std::map<DWORD, CLoginSim *> g_simByPID;
 extern std::vector<TPlayerTable> g_vec_save;
 unsigned int save_idx = 0;
 
-void heartbeat(LPHEART ht, int pulse)
+void heartbeat(LPHEART ht, int pulse) 
 {
 	DWORD t;
 
@@ -246,17 +187,8 @@ void heartbeat(LPHEART ht, int pulse)
 
 	t = get_dword_time();
 
-	// 1초마다
 	if (!(pulse % ht->passes_per_sec))
 	{
-#ifdef ENABLE_LIMIT_TIME
-		if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
-		{
-			sys_err("Server life time expired.");
-			g_bShutdown = true;
-		}
-#endif
-
 		if (!g_bAuthServer)
 		{
 			TPlayerCountPacket pack;
@@ -266,16 +198,11 @@ void heartbeat(LPHEART ht, int pulse)
 		else
 		{
 			DESC_MANAGER::instance().ProcessExpiredLoginKey();
-			DBManager::instance().FlushBilling();
-			/*
-			   if (!(pulse % (ht->passes_per_sec * 600)))
-			   DBManager::instance().CheckBilling();
-			 */
 		}
 
 		{
 			int count = 0;
-			itertype(g_sim) it = g_sim.begin();
+			auto it = g_sim.begin();
 
 			while (it != g_sim.end())
 			{
@@ -305,23 +232,16 @@ void heartbeat(LPHEART ht, int pulse)
 		}
 	}
 
-	//
-	// 25 PPS(Pulse per second) 라고 가정할 때
-	//
-
-	// 약 1.16초마다
 	if (!(pulse % (passes_per_sec + 4)))
 		CHARACTER_MANAGER::instance().ProcessDelayedSave();
 
-	//4초 마다
 #if defined (__FreeBSD__) && defined(__FILEMONITOR__)
 	if (!(pulse % (passes_per_sec * 5)))
 	{
-		FileMonitorFreeBSD::Instance().Update(pulse);
+		FileMonitorFreeBSD::Instance().Update(pulse); 
 	}
 #endif
 
-	// 약 5.08초마다
 	if (!(pulse % (passes_per_sec * 5 + 2)))
 	{
 		ITEM_MANAGER::instance().Update();
@@ -360,35 +280,8 @@ static void CleanUpForEarlyExit() {
 
 int main(int argc, char **argv)
 {
-//#ifdef __ENABLE_NEW_OFFLINESHOP__
-//	if(!Offlineshop_InitializeLibrary("wonder2", "vgbp1q098vgtajp9")){
-//		std::fprintf(stderr, "Cannot initialize correctly offlineshop library!\n");
-//		return 0;
-//	}
-//#endif
-#ifdef DEBUG_ALLOC
-	DebugAllocator::StaticSetUp();
-#endif
+	ilInit();
 
-#ifdef ENABLE_GOOGLE_TEST
-#ifndef __WIN32__
-	// <Factor> start unit tests if option is set
-	if ( argc > 1 )
-	{
-		if ( strcmp( argv[1], "unittest" ) == 0 )
-		{
-			::testing::InitGoogleTest(&argc, argv);
-			return RUN_ALL_TESTS();
-		}
-	}
-#endif
-#endif
-
-	ilInit(); // DevIL Initialize
-#ifdef __NEW_EVENT_HANDLER__
-	CEventFunctionHandler EventFunctionHandler;
-#endif
-	WriteVersion();
 	SECTREE_MANAGER	sectree_manager;
 	CHARACTER_MANAGER	char_manager;
 	ITEM_MANAGER	item_manager;
@@ -402,10 +295,6 @@ int main(int argc, char **argv)
 	DBManager		db_manager;
 	AccountDB 		account_db;
 
-#ifdef ENABLE_BATTLE_PASS
-	CBattlePass	battle_pass;
-#endif
-
 	LogManager		log_manager;
 	MessengerManager	messenger_manager;
 	P2P_MANAGER		p2p_manager;
@@ -413,7 +302,6 @@ int main(int argc, char **argv)
 	CGuildMarkManager mark_manager;
 	CDungeonManager	dungeon_manager;
 	CRefineManager	refine_manager;
-	CBanwordManager	banword_manager;
 	CPrivManager	priv_manager;
 	CWarMapManager	war_map_manager;
 	building::CManager	building_manager;
@@ -421,43 +309,31 @@ int main(int argc, char **argv)
 	marriage::CManager	marriage_manager;
 	marriage::WeddingManager wedding_manager;
 	CItemAddonManager	item_addon_manager;
-	CArenaManager arena_manager;
 	COXEventManager OXEvent_manager;
 	CHorseNameManager horsename_manager;
-	CPCBangManager pcbang_manager;
-
 	DESC_MANAGER	desc_manager;
-
-#ifdef ENABLE_WHISPER_ADMIN_SYSTEM
-	CWhisperAdmin whisper;
-#endif
-
-
 	CTableBySkill SkillPowerByLevel;
 	CPolymorphUtils polymorph_utils;
 	CProfiler		profiler;
-	CBattleArena	ba;
-	COver9RefineManager	o9r;
 	SpamManager		spam_mgr;
+	CDragonLairManager	dl_manager;
 	DSManager dsManager;
-#ifdef ENABLE_HWID
-	CHwidManager	hwid_manager;
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+	CAntiMultipleFarm c_anti_multiple_farm;
 #endif
-#ifdef ENABLE_SWITCHBOT
-	CSwitchbotManager switchbot;
+#ifdef ENABLE_ITEMSHOP
+	CItemshopManager itemshop_manager;
 #endif
-
-	if (!start(argc, argv)) {
+	if (!start(argc, argv)) 
+	{
 		CleanUpForEarlyExit();
 		return 0;
 	}
 
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-	offlineshop::CShopManager offshopManager;
-#endif
-	quest::CQuestManager quest_manager;
 
-	if (!quest_manager.Initialize()) {
+	quest::CQuestManager quest_manager;
+	if (!quest_manager.Initialize()) 
+	{
 		CleanUpForEarlyExit();
 		return 0;
 	}
@@ -466,40 +342,12 @@ int main(int argc, char **argv)
 	CGuildManager::instance().Initialize();
 	fishing::Initialize();
 	OXEvent_manager.Initialize();
-	Cube_init();
-	Blend_Item_init();
-	ani_init();
 
-#ifdef __NEWPET_SYSTEM__
-	std::string temp_exp_line;
-	std::ifstream exppet_table_open("/usr/src/server/server/share/locale/germany/exppettable.txt");//README: CHANGE THIS DIRECOTRY.
-	/*if (!exp_table_open.is_open())
-	return 0;*/
-
-	int exppet_table_counter = 0;
-	//int tmppet_exp = 0;
-	while (!exppet_table_open.eof())
+	if (!g_bAuthServer)
 	{
-		exppet_table_open >> temp_exp_line;
-		str_to_number(exppet_table_common[exppet_table_counter], temp_exp_line.c_str());
-		if (exppet_table_common[exppet_table_counter] < 2147483647) 
-		{
-			sys_log(0, "Livelli Pet caricati da exppettable.txt: %d !", exppet_table_common[exppet_table_counter]);
-			exppet_table_counter++;
-		}
-		else 
-		{
-			fprintf(stderr, "[main] Impossibile caricare la tabella exp valore non valido\n");
-			break;
-		}
-}
-#endif
-
-	if (g_bAuthServer)
-	{
-#ifdef ENABLE_HWID
-		hwid_manager.InitializeBlocked();
-#endif
+		Cube_init();
+		Blend_Item_init();
+		ani_init();
 	}
 
 	while (idle());
@@ -510,8 +358,6 @@ int main(int argc, char **argv)
 
 	if (g_bAuthServer)
 	{
-		DBManager::instance().FlushBilling(true);
-
 		int iLimit = DBManager::instance().CountQuery() / 50;
 		int i = 0;
 
@@ -530,12 +376,7 @@ int main(int argc, char **argv)
 					break;
 		} while (1);
 	}
-//#ifdef __ENABLE_NEW_OFFLINESHOP__
-//	Offlineshop_CleanUpLibrary();
-//#endif
 
-	sys_log(0, "<shutdown> Destroying CArenaManager...");
-	arena_manager.Destroy();
 	sys_log(0, "<shutdown> Destroying COXEventManager...");
 	OXEvent_manager.Destroy();
 
@@ -560,28 +401,12 @@ int main(int argc, char **argv)
 	item_manager.Destroy();
 	sys_log(0, "<shutdown> Destroying DESC_MANAGER...");
 	desc_manager.Destroy();
-#ifdef __NEW_EVENT_HANDLER__
-	sys_log(0, "<shutdown> Destroying CEventFunctionHandler...");
-	CEventFunctionHandler::instance().Destroy();
-#endif
 	sys_log(0, "<shutdown> Destroying quest::CQuestManager...");
 	quest_manager.Destroy();
 	sys_log(0, "<shutdown> Destroying building::CManager...");
 	building_manager.Destroy();
 
-	if (g_bAuthServer)
-	{
-#ifdef ENABLE_HWID
-		hwid_manager.CleanBlocked();
-#endif
-	}
-
 	destroy();
-
-#ifdef DEBUG_ALLOC
-	DebugAllocator::StaticTearDown();
-#endif
-
 	return 1;
 }
 
@@ -590,45 +415,25 @@ void usage()
 	printf("Option list\n"
 			"-p <port>    : bind port number (port must be over 1024)\n"
 			"-l <level>   : sets log level\n"
-			"-n <locale>  : sets locale name\n"
-#ifdef ENABLE_NEWSTUFF
-			"-C <on-off>  : checkpointing check on/off\n"
-#endif
 			"-v           : log to stdout\n"
 			"-r           : do not load regen tables\n"
-			"-t           : traffic profile on\n");
+			"-t           : traffic proflie on\n");
 }
 
-int start(int argc, char **argv)
+int start(int argc, char** argv)
 {
 	std::string st_localeServiceName;
 
 	bool bVerbose = false;
 	char ch;
 
-	//_malloc_options = "A";
-#if defined(__FreeBSD__) && defined(DEBUG_ALLOC)
-	_malloc_message = WriteMallocMessage;
-#endif
-#ifdef ENABLE_LIMIT_TIME
-	if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
-	{
-		sys_err("Server life time expired.");
-		return 0;
-	}
-#endif
-
-#ifdef ENABLE_NEWSTUFF
-	while ((ch = getopt(argc, argv, "npverltIC")) != -1)
-#else
-	while ((ch = getopt(argc, argv, "npverltI")) != -1)
-#endif
+	while((ch = getopt(argc, argv, "npverltI")) != -1)
 	{
 		char* ep = NULL;
 
-		switch (ch)
+		switch(ch)
 		{
-			case 'I': // IP
+			case 'I':
 				strlcpy(g_szPublicIP, argv[optind], sizeof(g_szPublicIP));
 
 				printf("IP %s\n", g_szPublicIP);
@@ -637,10 +442,10 @@ int start(int argc, char **argv)
 				optreset = 1;
 				break;
 
-			case 'p': // port
+			case 'p':
 				mother_port = strtol(argv[optind], &ep, 10);
 
-				if (mother_port <= 1024)
+				if(mother_port <= 1024)
 				{
 					usage();
 					return 0;
@@ -653,61 +458,42 @@ int start(int argc, char **argv)
 				break;
 
 			case 'l':
-				{
-					long l = strtol(argv[optind], &ep, 10);
+			{
+				long l = strtol(argv[optind], &ep, 10);
 
-					log_set_level(l);
-
-					optind++;
-					optreset = 1;
-				}
-				break;
-
-				// LOCALE_SERVICE
-			case 'n':
-				{
-					if (optind < argc)
-					{
-						st_localeServiceName = argv[optind++];
-						optreset = 1;
-					}
-				}
-				break;
-				// END_OF_LOCALE_SERVICE
-
-#ifdef ENABLE_NEWSTUFF
-			case 'C': // checkpoint check
-				//bCheckpointCheck = strtol(argv[optind], &ep, 10);;
-				//printf("CHECKPOINT_CHECK %d\n", bCheckpointCheck);
+				log_set_level(l);
 
 				optind++;
 				optreset = 1;
-				break;
-#endif
+			}
+			break;
 
-			case 'v': // verbose
+			case 'n':
+			{
+				if(optind < argc)
+				{
+					st_localeServiceName = argv[optind++];
+					optreset = 1;
+				}
+			}
+			break;
+
+			case 'v':
 				bVerbose = true;
-				break;
-
-			case 'r':
-				g_bNoRegen = true;
 				break;
 		}
 	}
 
-	// LOCALE_SERVICE
 	config_init(st_localeServiceName);
-	// END_OF_LOCALE_SERVICE
 
-#ifdef __WIN32__
-	// In Windows dev mode, "verbose" option is [on] by default.
-	bVerbose = true;
-#endif
-	if (!bVerbose)
+	if(!bVerbose)
+	{
 		freopen("stdout", "a", stdout);
+	}
 
 	bool is_thecore_initialized = thecore_init(25, heartbeat);
-	if (!is_thecore_initialized)
+
+	if(!is_thecore_initialized)
 	{
 		fprintf(stderr, "Could not initialize thecore, check owner of pid, syslog\n");
 		exit(0);
@@ -717,66 +503,52 @@ int start(int argc, char **argv)
 
 	main_fdw = fdwatch_new(4096);
 
-	if ((tcp_socket = socket_tcp_bind(g_szPublicIP, mother_port)) == INVALID_SOCKET)
+	if((tcp_socket = socket_tcp_bind(g_szPublicIP, mother_port)) == INVALID_SOCKET)
 	{
 		perror("socket_tcp_bind: tcp_socket");
 		return 0;
 	}
 
 
-#ifndef __UDP_BLOCK__
-	if ((udp_socket = socket_udp_bind(g_szPublicIP, mother_port)) == INVALID_SOCKET)
+#ifndef ENABLE_UDP_BLOCK
+	if((udp_socket = socket_udp_bind(g_szPublicIP, mother_port)) == INVALID_SOCKET)
 	{
 		perror("socket_udp_bind: udp_socket");
 		return 0;
 	}
 #endif
 
-	// if internal ip exists, p2p socket uses internal ip, if not use public ip
-	//if ((p2p_socket = socket_tcp_bind(*g_szInternalIP ? g_szInternalIP : g_szPublicIP, p2p_port)) == INVALID_SOCKET)
-	if ((p2p_socket = socket_tcp_bind(g_szPublicIP, p2p_port)) == INVALID_SOCKET)
+	if ((p2p_socket = socket_tcp_bind(*g_szInternalIP ? g_szInternalIP : g_szPublicIP, p2p_port)) == INVALID_SOCKET)
 	{
 		perror("socket_tcp_bind: p2p_socket");
 		return 0;
 	}
 
 	fdwatch_add_fd(main_fdw, tcp_socket, NULL, FDW_READ, false);
-#ifndef __UDP_BLOCK__
+#ifndef ENABLE_UDP_BLOCK
 	fdwatch_add_fd(main_fdw, udp_socket, NULL, FDW_READ, false);
 #endif
 	fdwatch_add_fd(main_fdw, p2p_socket, NULL, FDW_READ, false);
 
 	db_clientdesc = DESC_MANAGER::instance().CreateConnectionDesc(main_fdw, db_addr, db_port, PHASE_DBCLIENT, true);
-	if (!g_bAuthServer) {
+	if(!g_bAuthServer)
+	{
 		db_clientdesc->UpdateChannelStatus(0, true);
 	}
 
-	if (g_bAuthServer)
+	if(g_bAuthServer)
 	{
-		if (g_stAuthMasterIP.length() != 0)
+		if(g_stAuthMasterIP.length() != 0)
 		{
-			fprintf(stderr, "SlaveAuth");
+			fprintf(stderr, "SlaveAuth! \n");
 			g_pkAuthMasterDesc = DESC_MANAGER::instance().CreateConnectionDesc(main_fdw, g_stAuthMasterIP.c_str(), g_wAuthMasterPort, PHASE_P2P, true);
 			P2P_MANAGER::instance().RegisterConnector(g_pkAuthMasterDesc);
 			g_pkAuthMasterDesc->SetP2P(g_stAuthMasterIP.c_str(), g_wAuthMasterPort, g_bChannel);
-
 		}
 		else
 		{
-			fprintf(stderr, "MasterAuth %d\n", LC_GetLocalType());
+			fprintf(stderr, "Master Auth! \n");
 		}
-	}
-	/* game server to teen server */
-	else
-	{
-		if (teen_addr[0] && teen_port)
-			g_TeenDesc = DESC_MANAGER::instance().CreateConnectionDesc(main_fdw, teen_addr, teen_port, PHASE_TEEN, true);
-
-		sys_log(0, "SPAM_CONFIG: duration %u score %u reload cycle %u\n",
-				g_uiSpamBlockDuration, g_uiSpamBlockScore, g_uiSpamReloadCycle);
-
-		extern void LoadSpamDB();
-		LoadSpamDB();
 	}
 
 	signal_timer_enable(30);
@@ -793,7 +565,7 @@ void destroy()
 
 	sys_log(0, "<shutdown> Closing sockets...");
 	socket_close(tcp_socket);
-#ifndef __UDP_BLOCK__
+#ifndef ENABLE_UDP_BLOCK
 	socket_close(udp_socket);
 #endif
 	socket_close(p2p_socket);
@@ -831,8 +603,6 @@ int idle()
 
 	while (passed_pulses--) {
 		heartbeat(thecore_heart, ++thecore_heart->pulse);
-
-		// To reduce the possibility of abort() in checkpointing
 		thecore_tick();
 	}
 
@@ -867,30 +637,12 @@ int idle()
 		num_events_called = 0;
 		current_bytes_written = 0;
 
-		process_time_count = 0;
+		process_time_count = 0; 
 		gettimeofday(&pta, (struct timezone *) 0);
 
 		memset(&thecore_profiler[0], 0, sizeof(thecore_profiler));
 		memset(&s_dwProfiler[0], 0, sizeof(s_dwProfiler));
 	}
-
-#ifdef __WIN32__
-	if (_kbhit()) {
-		int c = _getch();
-		switch (c) {
-			case 0x1b: // Esc
-				return 0; // shutdown
-				break;
-			default:
-				break;
-		}
-	}
-#endif
-
-#ifdef __NEW_EVENT_HANDLER__
-	CEventFunctionHandler::instance().Process();
-#endif
-
 	return 1;
 }
 
@@ -899,7 +651,7 @@ int io_loop(LPFDWATCH fdw)
 	LPDESC	d;
 	int		num_events, event_idx;
 
-	DESC_MANAGER::instance().DestroyClosed(); // PHASE_CLOSE인 접속들을 끊어준다.
+	DESC_MANAGER::instance().DestroyClosed();
 	DESC_MANAGER::instance().TryConnect();
 
 	if ((num_events = fdwatch(fdw, 0)) < 0)
@@ -921,29 +673,7 @@ int io_loop(LPFDWATCH fdw)
 				DESC_MANAGER::instance().AcceptP2PDesc(fdw, p2p_socket);
 				fdwatch_clear_event(fdw, p2p_socket, event_idx);
 			}
-			/*
-			else if (FDW_READ == fdwatch_check_event(fdw, udp_socket, event_idx))
-			{
-				char			buf[256];
-				struct sockaddr_in	cliaddr;
-				socklen_t		socklen = sizeof(cliaddr);
-
-				int iBytesRead;
-
-				if ((iBytesRead = socket_udp_read(udp_socket, buf, 256, (struct sockaddr *) &cliaddr, &socklen)) > 0)
-				{
-					static CInputUDP s_inputUDP;
-
-					s_inputUDP.SetSockAddr(cliaddr);
-
-					int iBytesProceed;
-					s_inputUDP.Process(NULL, buf, iBytesRead, iBytesProceed);
-				}
-
-				fdwatch_clear_event(fdw, udp_socket, event_idx);
-			}
-			*/
-			continue;
+			continue; 
 		}
 
 		int iRet = fdwatch_check_event(fdw, d->GetSocket(), event_idx);
@@ -989,21 +719,6 @@ int io_loop(LPFDWATCH fdw)
 				{
 					d->SetPhase(PHASE_CLOSE);
 				}
-				else if (g_TeenDesc==d)
-				{
-					int buf_size = buffer_size(d->GetOutputBuffer());
-					int sock_buf_size = fdwatch_get_buffer_size(fdw, d->GetSocket());
-
-					int ret = d->ProcessOutput();
-
-					if (ret < 0)
-					{
-						d->SetPhase(PHASE_CLOSE);
-					}
-
-					if (buf_size)
-						sys_log(0, "TEEN::Send(size %d sock_buf %d ret %d)", buf_size, sock_buf_size, ret);
-				}
 				break;
 
 			case FDW_EOF:
@@ -1014,6 +729,10 @@ int io_loop(LPFDWATCH fdw)
 
 			default:
 				sys_err("fdwatch_check_event returned unknown %d", iRet);
+#ifdef _WIN32
+				if (d == NULL)
+					return 1;
+#endif
 				d->SetPhase(PHASE_CLOSE);
 				break;
 		}

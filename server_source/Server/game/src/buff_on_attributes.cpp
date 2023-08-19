@@ -13,6 +13,7 @@ CBuffOnAttributes::CBuffOnAttributes(LPCHARACTER pOwner, BYTE point_type, std::v
 
 CBuffOnAttributes::~CBuffOnAttributes()
 {
+	Off();
 }
 
 void CBuffOnAttributes::Initialize()
@@ -29,7 +30,7 @@ void CBuffOnAttributes::RemoveBuffFromItem(LPITEM pItem)
 	{
 		if (pItem->GetCell() < INVENTORY_MAX_NUM)
 			return;
-		std::vector <BYTE>::iterator it = find (m_p_vec_buff_wear_targets->begin(), m_p_vec_buff_wear_targets->end(), pItem->GetCell() - INVENTORY_MAX_NUM);
+		auto it = find (m_p_vec_buff_wear_targets->begin(), m_p_vec_buff_wear_targets->end(), pItem->GetCell() - INVENTORY_MAX_NUM);
 		if (m_p_vec_buff_wear_targets->end() == it)
 			return;
 
@@ -37,9 +38,8 @@ void CBuffOnAttributes::RemoveBuffFromItem(LPITEM pItem)
 		for (int j = 0; j < m; j++)
 		{
 			TPlayerItemAttribute attr = pItem->GetAttribute(j);
-			TMapAttr::iterator it = m_map_additional_attrs.find(attr.bType);
-			// m_map_additional_attrs에서 해당 attribute type에 대한 값을 제거하고,
-			// 변경된 값의 (m_bBuffValue)%만큼의 버프 효과 감소
+			auto it = m_map_additional_attrs.find(attr.bType);
+
 			if (it != m_map_additional_attrs.end())
 			{
 				int& sum_of_attr_value = it->second;
@@ -65,7 +65,7 @@ void CBuffOnAttributes::AddBuffFromItem(LPITEM pItem)
 	{
 		if (pItem->GetCell() < INVENTORY_MAX_NUM)
 			return;
-		std::vector <BYTE>::iterator it = find (m_p_vec_buff_wear_targets->begin(), m_p_vec_buff_wear_targets->end(), pItem->GetCell() - INVENTORY_MAX_NUM);
+		auto it = find (m_p_vec_buff_wear_targets->begin(), m_p_vec_buff_wear_targets->end(), pItem->GetCell() - INVENTORY_MAX_NUM);
 		if (m_p_vec_buff_wear_targets->end() == it)
 			return;
 
@@ -73,17 +73,13 @@ void CBuffOnAttributes::AddBuffFromItem(LPITEM pItem)
 		for (int j = 0; j < m; j++)
 		{
 			TPlayerItemAttribute attr = pItem->GetAttribute(j);
-			TMapAttr::iterator it = m_map_additional_attrs.find(attr.bType);
+			auto it = m_map_additional_attrs.find(attr.bType);
 
-			// m_map_additional_attrs에서 해당 attribute type에 대한 값이 없다면 추가.
-			// 추가된 값의 (m_bBuffValue)%만큼의 버프 효과 추가
 			if (it == m_map_additional_attrs.end())
 			{
 				m_pBuffOwner->ApplyPoint(attr.bType, attr.sValue * m_bBuffValue / 100);
 				m_map_additional_attrs.insert(TMapAttr::value_type(attr.bType, attr.sValue));
 			}
-			// m_map_additional_attrs에서 해당 attribute type에 대한 값이 있다면, 그 값을 증가시키고,
-			// 변경된 값의 (m_bBuffValue)%만큼의 버프 효과 추가
 			else
 			{
 				int& sum_of_attr_value = it->second;
@@ -104,17 +100,28 @@ void CBuffOnAttributes::ChangeBuffValue(BYTE bNewValue)
 		Off();
 	else
 	{
-		// 기존에, m_map_additional_attrs의 값의 (m_bBuffValue)%만큼이 버프로 들어가 있었으므로,
-		// (bNewValue)%만큼으로 값을 변경함.
-		for (TMapAttr::iterator it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
+		for (auto it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
 		{
 			int& sum_of_attr_value = it->second;
-			//int old_value = sum_of_attr_value * m_bBuffValue / 100;
-			//int new_value = sum_of_attr_value * bNewValue / 100;
-
+			int old_value = sum_of_attr_value * m_bBuffValue / 100;
+			int new_value = sum_of_attr_value * bNewValue / 100;
+			
 			m_pBuffOwner->ApplyPoint(it->first, -sum_of_attr_value * m_bBuffValue / 100);
 		}
 		m_bBuffValue = bNewValue;
+	}
+}
+
+void CBuffOnAttributes::GiveAllAttributes()
+{
+	if (0 == m_bBuffValue)
+		return;
+	for (auto it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
+	{
+		BYTE apply_type = it->first;
+		int apply_value = it->second * m_bBuffValue / 100;
+		
+		m_pBuffOwner->ApplyPoint(apply_type, apply_value);
 	}
 }
 
@@ -122,7 +129,7 @@ bool CBuffOnAttributes::On(BYTE bValue)
 {
 	if (0 != m_bBuffValue || 0 == bValue)
 		return false;
-
+	
 	int n = m_p_vec_buff_wear_targets->size();
 	m_map_additional_attrs.clear();
 	for (int i = 0; i < n; i++)
@@ -133,19 +140,8 @@ bool CBuffOnAttributes::On(BYTE bValue)
 			int m = pItem->GetAttributeCount();
 			for (int j = 0; j < m; j++)
 			{
-#ifdef ATTR_LOCK
-				if (pItem->GetLockedAttr() == j)
-				{
-#ifdef TEXTS_IMPROVEMENT
-					if (pItem->GetOwner()) {
-						pItem->GetOwner()->ChatPacketNew(CHAT_TYPE_INFO, 781, "%d#%s", j, pItem->GetName());
-					}
-#endif
-					continue;
-				}
-#endif
 				TPlayerItemAttribute attr = pItem->GetAttribute(j);
-				TMapAttr::iterator it = m_map_additional_attrs.find(attr.bType);
+				auto it = m_map_additional_attrs.find(attr.bType);
 				if (it != m_map_additional_attrs.end())
 				{
 					it->second += attr.sValue;
@@ -158,11 +154,11 @@ bool CBuffOnAttributes::On(BYTE bValue)
 		}
 	}
 
-	for (TMapAttr::iterator it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
+	for (auto it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
 	{
 		m_pBuffOwner->ApplyPoint(it->first, it->second * bValue / 100);
 	}
-
+	
 	m_bBuffValue = bValue;
 
 	return true;
@@ -173,7 +169,7 @@ void CBuffOnAttributes::Off()
 	if (0 == m_bBuffValue)
 		return ;
 
-	for (TMapAttr::iterator it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
+	for (auto it = m_map_additional_attrs.begin(); it != m_map_additional_attrs.end(); it++)
 	{
 		m_pBuffOwner->ApplyPoint(it->first, -it->second * m_bBuffValue / 100);
 	}

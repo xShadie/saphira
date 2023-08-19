@@ -128,12 +128,7 @@ int CDBManager::Connect(int iSlot, const char * db_address, const int db_port, c
 
 SQLMsg * CDBManager::DirectQuery(const char * c_pszQuery, int iSlot)
 {
-//#ifdef ENABLE_BUG_FIXES
-//	std::string sQuery(c_pszQuery);
-//	return m_directSQL[iSlot]->DirectQuery(sQuery.substr(0, sQuery.find_first_of(";") == std::string::npos ? sQuery.length(): sQuery.find_first_of(";")).c_str());
-//#else
 	return m_directSQL[iSlot]->DirectQuery(c_pszQuery);
-//#endif
 }
 
 extern CPacketInfo g_query_info;
@@ -142,7 +137,6 @@ extern int g_query_count[2];
 void CDBManager::ReturnQuery(const char * c_pszQuery, int iType, IDENT dwIdent, void * udata, int iSlot)
 {
 	assert(iSlot < SQL_MAX_NUM);
-	//sys_log(0, "ReturnQuery %s", c_pszQuery);
 	CQueryInfo * p = new CQueryInfo;
 
 	p->iType = iType;
@@ -151,7 +145,6 @@ void CDBManager::ReturnQuery(const char * c_pszQuery, int iType, IDENT dwIdent, 
 
 	m_mainSQL[iSlot]->ReturnQuery(c_pszQuery, p);
 
-	//g_query_info.Add(iType);
 	++g_query_count[0];
 }
 
@@ -171,14 +164,14 @@ unsigned long CDBManager::EscapeString(void *to, const void *from, unsigned long
 void CDBManager::SetLocale(const char * szLocale)
 {
 	const std::string stLocale(szLocale);
-	sys_log(0, "SetLocale start %s", szLocale);
+	sys_log(0, "SetLocale start" );
 	for (int n = 0; n < SQL_MAX_NUM; ++n)
 	{
 		m_mainSQL[n]->SetLocale(stLocale);
 		m_directSQL[n]->SetLocale(stLocale);
 		m_asyncSQL[n]->SetLocale(stLocale);
 	}
-	sys_log(0, "SetLocale end %s", szLocale);
+	sys_log(0, "End setlocale %s", szLocale);
 }
 
 void CDBManager::QueryLocaleSet()

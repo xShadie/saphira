@@ -1,6 +1,4 @@
-#ifndef __INC_METIN_II_GAME_PROFILER_H__
-#define __INC_METIN_II_GAME_PROFILER_H__
-
+#pragma once
 #include <boost/unordered_map.hpp>
 
 class CProfiler : public singleton<CProfiler>
@@ -71,7 +69,7 @@ class CProfiler : public singleton<CProfiler>
 
 		void Clear()
 		{
-			TProfileAccumDataMap::iterator it = m_ProfileAccumDataMap.begin();
+			auto it = m_ProfileAccumDataMap.begin();
 
 			for (; it != m_ProfileAccumDataMap.end(); ++it)
 			{
@@ -111,7 +109,7 @@ class CProfiler : public singleton<CProfiler>
 
 		__inline void PushAccum(const char * c_szName)
 		{
-			TProfileAccumDataMap::iterator it = m_ProfileAccumDataMap.find(c_szName);
+			auto it = m_ProfileAccumDataMap.find(c_szName);
 
 			if (it == m_ProfileAccumDataMap.end())
 			{
@@ -134,7 +132,7 @@ class CProfiler : public singleton<CProfiler>
 
 		__inline void PopAccum(const char * c_szName)
 		{
-			TProfileAccumDataMap::iterator it = m_ProfileAccumDataMap.find(c_szName);
+			auto it = m_ProfileAccumDataMap.find(c_szName);
 
 			if (it == m_ProfileAccumDataMap.end())
 				return;
@@ -179,7 +177,7 @@ class CProfiler : public singleton<CProfiler>
 				stLine.assign(p->iDepth * 5, ' ');
 				stLine += p->strName;
 
-				fprintf(fp, "%-30s %10d/%-10d %.2f\n",
+				fprintf(fp, "%-30s %10d/%-10d %.2f\n", 
 						stLine.c_str(),
 						p->iCallingCount, p->iCollapsedTime,
 						p->iCallingCount != 0 ? (float) p->iCollapsedTime / p->iCallingCount : 0.0f);
@@ -198,7 +196,7 @@ class CProfiler : public singleton<CProfiler>
 
 		void PrintOneAccumData(const char * c_szName)
 		{
-			TProfileAccumDataMap::iterator it = m_ProfileAccumDataMap.find(c_szName);
+			auto it = m_ProfileAccumDataMap.find(c_szName);
 
 			if (it == m_ProfileAccumDataMap.end())
 				return;
@@ -228,11 +226,9 @@ class CProfiler : public singleton<CProfiler>
 		}
 
 	protected:
-		// Profile Stack Data
 		int m_ProfileStackDataCount;
 		TProfileStackData m_ProfileStackDatas[STACK_DATA_MAX_NUM];
 
-		// Profile Accum Data
 		TProfileAccumDataMap			m_ProfileAccumDataMap;
 		std::vector<TProfileAccumData *>	m_vec_Accum;
 		int					m_iAccumDepth;
@@ -270,5 +266,3 @@ template <typename T> class CProfileUnit
 };
 
 #define PROF_UNIT CProfileUnit<void>
-
-#endif

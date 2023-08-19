@@ -8,10 +8,7 @@
 
 namespace quest
 {
-	//
-	// "affect" Lua functions
-	//
-	ALUA(affect_add)
+	int affect_add(lua_State * L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
@@ -31,7 +28,7 @@ namespace quest
 			return 0;
 		}
 
-		if (ch->FindAffect(AFFECT_QUEST_START_IDX, applyOn)) // 퀘스트로 인해 같은 곳에 효과가 걸려있으면 스킵
+		if (ch->FindAffect(AFFECT_QUEST_START_IDX, applyOn))
 			return 0;
 
 		long value = (long) lua_tonumber(L, 2);
@@ -42,7 +39,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(affect_remove)
+	int affect_remove(lua_State * L)
 	{
 		CQuestManager & q = CQuestManager::instance();
 		int iType;
@@ -62,21 +59,21 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(affect_remove_bad) // 나쁜 효과를 없앰
+	int affect_remove_bad(lua_State * L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		ch->RemoveBadAffect();
 		return 0;
 	}
 
-	ALUA(affect_remove_good) // 좋은 효과를 없앰
+	int affect_remove_good(lua_State * L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		ch->RemoveGoodAffect();
 		return 0;
 	}
 
-	ALUA(affect_add_hair)
+	int affect_add_hair(lua_State * L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
@@ -104,7 +101,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(affect_remove_hair) // 헤어 효과를 없앤다.
+	int affect_remove_hair(lua_State * L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -122,10 +119,8 @@ namespace quest
 
 		return 1;
 	}
-
-	// 현재 캐릭터가 AFFECT_TYPE affect를 갖고있으면 bApplyOn 값을 반환하고 없으면 nil을 반환하는 함수.
-	// usage :	applyOn = affect.get_apply(AFFECT_TYPE)
-	ALUA(affect_get_apply_on)
+	
+	int affect_get_apply_on(lua_State * L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -148,7 +143,7 @@ namespace quest
 
 	}
 
-	ALUA(affect_add_collect)
+	int affect_add_collect(lua_State * L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
@@ -175,36 +170,8 @@ namespace quest
 
 		return 0;
 	}
-#ifdef __NEWPET_SYSTEM__
-	ALUA (affect_pet_bonus)
-	{
-		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
-		{
-			sys_err("invalid argument");
-			return 0;
-		}
 
-		CQuestManager & q = CQuestManager::instance();
-
-		BYTE applyOn = (BYTE) lua_tonumber(L, 1);
-
-		LPCHARACTER ch = q.GetCurrentCharacterPtr();
-
-		if (applyOn >= MAX_APPLY_NUM || applyOn < 1)
-		{
-			sys_err("apply is out of range : %d", applyOn);
-			return 0;
-		}
-
-		long value = (long) lua_tonumber(L, 2);
-		long duration = (long) lua_tonumber(L, 3);
-
-		ch->AddAffect(AFFECT_PET, aApplyInfo[applyOn].bPointType, value, 0, duration, 0, false);
-
-		return 0;
-	}
-#endif
-	ALUA(affect_add_collect_point)
+	int affect_add_collect_point(lua_State * L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
@@ -232,7 +199,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(affect_remove_collect)
+	int affect_remove_collect(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -248,7 +215,7 @@ namespace quest
 			const std::list<CAffect*>& rList = ch->GetAffectContainer();
 			const CAffect* pAffect = NULL;
 
-			for ( std::list<CAffect*>::const_iterator iter = rList.begin(); iter != rList.end(); ++iter )
+			for (auto iter = rList.begin(); iter != rList.end(); ++iter )
 			{
 				pAffect = *iter;
 
@@ -272,7 +239,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(affect_remove_all_collect)
+	int affect_remove_all_collect( lua_State* L )
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
@@ -295,9 +262,6 @@ namespace quest
 			{ "add_hair",		affect_add_hair		},
 			{ "remove_hair",	affect_remove_hair		},
 			{ "add_collect",		affect_add_collect		},
-#ifdef __NEWPET_SYSTEM__
-			{ "pet_bonus",		affect_pet_bonus		},
-#endif
 			{ "add_collect_point",		affect_add_collect_point		},
 			{ "remove_collect",		affect_remove_collect	},
 			{ "remove_all_collect",	affect_remove_all_collect	},

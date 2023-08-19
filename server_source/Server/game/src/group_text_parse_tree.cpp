@@ -3,7 +3,7 @@
 #include "group_text_parse_tree.h"
 
 CGroupTextParseTreeLoader::CGroupTextParseTreeLoader()
-	: m_pRootGroupNode(NULL), m_dwcurLineIndex(0)
+	: m_dwcurLineIndex(0), m_pRootGroupNode(NULL)
 {
 }
 
@@ -70,7 +70,6 @@ bool CGroupTextParseTreeLoader::LoadGroup(CGroupNode * pGroupNode)
 		if ('}' == stTokenVector[0][0])
 			break;
 
-		// Group
 		if (0 == stTokenVector[0].compare("group"))
 		{
 			if (2 != stTokenVector.size())
@@ -86,17 +85,17 @@ bool CGroupTextParseTreeLoader::LoadGroup(CGroupNode * pGroupNode)
 
 			pNewNode->strGroupName = stTokenVector[1];
 			stl_lowers(pNewNode->strGroupName);
-
+			
 			pGroupNode->SetChildNode(pNewNode->strGroupName.c_str(), pNewNode);
 
 			++m_dwcurLineIndex;
 
 			LoadGroup(pNewNode);
 		}
-		// Column Names
+
 		else if (0 == stTokenVector[0].compare("#--#"))
 		{
-			for (TTokenVector::size_type i = 1; i < stTokenVector.size(); i++)
+			for (int i = 1; i < stTokenVector.size(); i++)
 			{
 				stl_lowers(stTokenVector[i]);
 				pGroupNode->m_map_columnNameToIndex.insert(TMapNameToIndex::value_type (stTokenVector[i], i - 1));
@@ -136,7 +135,7 @@ CGroupNode::CGroupNode()
 
 CGroupNode::~CGroupNode()
 {
-	for (TMapGroup::iterator it = m_mapChildNodes.begin(); it != m_mapChildNodes.end(); it++)
+	for (auto it = m_mapChildNodes.begin(); it != m_mapChildNodes.end(); it++)
 	{
 		delete it->second;
 	}
@@ -154,18 +153,18 @@ bool CGroupNode::SetChildNode(const char * c_szKey, CGroupNode* pChildGroup)
 		m_mapChildNodes.erase(c_szKey);
 		return true;
 	}
-	TMapGroup::iterator it = m_mapChildNodes.find(c_szKey);
+	auto it = m_mapChildNodes.find(c_szKey);
 	if (it != m_mapChildNodes.end())
 		return false;
 
 	m_mapChildNodes.insert (TMapGroup::value_type (c_szKey, pChildGroup));
-
+	
 	return true;
 }
 
 CGroupNode* CGroupNode::GetChildNode(const std::string & c_rstrKey) const
 {
-	TMapGroup::const_iterator it = m_mapChildNodes.find(c_rstrKey);
+	auto it = m_mapChildNodes.find(c_rstrKey);
 	if (it != m_mapChildNodes.end())
 		return it->second;
 	else
@@ -189,7 +188,7 @@ int CGroupNode::GetRowCount()
 
 bool CGroupNode::GetRow(const std::string & c_rstrRowKey, OUT const CGroupNode::CGroupNodeRow ** ppRow) const
 {
-	TMapRow::const_iterator row_it = m_map_rows.find(c_rstrRowKey);
+	auto row_it = m_map_rows.find(c_rstrRowKey);
 	if (m_map_rows.end() == row_it)
 	{
 		return false;
@@ -200,13 +199,12 @@ bool CGroupNode::GetRow(const std::string & c_rstrRowKey, OUT const CGroupNode::
 	return true;
 }
 
-// 참고로, idx랑 txt에 쓰여진 순서랑 관계 없음.
 bool CGroupNode::GetRow(int idx, OUT const CGroupNode::CGroupNodeRow ** ppRow) const
 {
-	if ((TMapRow::size_type)idx >= m_map_rows.size())
+	if (idx >= m_map_rows.size())
 		return false;
 
-	TMapRow::const_iterator row_it = m_map_rows.begin();
+	auto row_it = m_map_rows.begin();
 
 	std::advance(row_it, idx);
 
@@ -223,7 +221,7 @@ bool CGroupNode::GetGroupRow(const std::string& stGroupName, const std::string& 
 		if (pChildGroup->GetRow(stRow, ppRow))
 			return true;
 	}
-	// default group을 살펴봄.
+
 	pChildGroup = GetChildNode("default");
 	if (NULL != pChildGroup)
 	{
@@ -235,7 +233,7 @@ bool CGroupNode::GetGroupRow(const std::string& stGroupName, const std::string& 
 
 int	CGroupNode::GetColumnIndexFromName(const std::string& stName) const
 {
-	TMapNameToIndex::const_iterator it = m_map_columnNameToIndex.find(stName);
+	auto it = m_map_columnNameToIndex.find(stName);
 	if (m_map_columnNameToIndex.end() == it)
 		return -1;
 	else

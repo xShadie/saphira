@@ -15,6 +15,9 @@
 #include "utils.h"
 #include "locale_service.h"
 #include <sstream>
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+#include "HAntiMultipleFarm.h"
+#endif
 
 P2P_MANAGER::P2P_MANAGER()
 {
@@ -30,7 +33,7 @@ P2P_MANAGER::~P2P_MANAGER()
 
 void P2P_MANAGER::Boot(LPDESC d)
 {
-	CHARACTER_MANAGER::NAME_MAP & map = CHARACTER_MANAGER::instance().GetPCMap();
+	CHARACTER_MANAGER::NAME_MAP& map = CHARACTER_MANAGER::instance().GetPCMap();
 	CHARACTER_MANAGER::NAME_MAP::iterator it = map.begin();
 
 	TPacketGGLogin p;
@@ -38,7 +41,7 @@ void P2P_MANAGER::Boot(LPDESC d)
 	while (it != map.end())
 	{
 		LPCHARACTER ch = it->second;
-		it++;
+		++it;
 
 		p.bHeader = HEADER_GG_LOGIN;
 		strlcpy(p.szName, ch->GetName(), sizeof(p.szName));
@@ -46,6 +49,10 @@ void P2P_MANAGER::Boot(LPDESC d)
 		p.bEmpire = ch->GetEmpire();
 		p.lMapIndex = SECTREE_MANAGER::instance().GetMapIndex(ch->GetX(), ch->GetY());
 		p.bChannel = g_bChannel;
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+		strlcpy(p.cMAIf, d->GetLoginMacAdress(), sizeof(p.cMAIf));
+		p.i8BlockState = CAntiMultipleFarm::AF_GENERATE_NEW_STATE;
+#endif
 
 		d->Packet(&p, sizeof(p));
 	}
@@ -53,7 +60,7 @@ void P2P_MANAGER::Boot(LPDESC d)
 
 void P2P_MANAGER::FlushOutput()
 {
-	TR1_NS::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
+	boost::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
 
 	while (it != m_set_pkPeers.end())
 	{
@@ -91,7 +98,7 @@ void P2P_MANAGER::RegisterConnector(LPDESC d)
 
 void P2P_MANAGER::UnregisterConnector(LPDESC d)
 {
-	TR1_NS::unordered_set<LPDESC>::iterator it = m_set_pkPeers.find(d);
+	boost::unordered_set<LPDESC>::iterator it = m_set_pkPeers.find(d);
 
 	if (it != m_set_pkPeers.end())
 	{
@@ -108,7 +115,7 @@ void P2P_MANAGER::EraseUserByDesc(LPDESC d)
 	while (it != m_map_pkCCI.end())
 	{
 		CCI * pkCCI = it->second;
-		it++;
+		++it;
 
 		if (pkCCI->pkDesc == d)
 			Logout(pkCCI);
@@ -117,7 +124,7 @@ void P2P_MANAGER::EraseUserByDesc(LPDESC d)
 
 void P2P_MANAGER::Send(const void * c_pvData, int iSize, LPDESC except)
 {
-	TR1_NS::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
+	boost::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
 
 	while (it != m_set_pkPeers.end())
 	{
@@ -165,19 +172,28 @@ void P2P_MANAGER::Login(LPDESC d, const TPacketGGLogin * p)
 	pkCCI->lMapIndex = p->lMapIndex;
 	pkCCI->pkDesc = d;
 	pkCCI->bChannel = p->bChannel;
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+	strlcpy(pkCCI->cMAIf, p->cMAIf, sizeof(pkCCI->cMAIf));
+#endif
 	sys_log(0, "P2P: Login %s", pkCCI->szName);
 
 	CGuildManager::instance().P2PLoginMember(pkCCI->dwPID);
 	CPartyManager::instance().P2PLogin(pkCCI->dwPID, pkCCI->szName);
 
-	// CCI가 생성시에만 메신저를 업데이트하면 된다.
 	if (UpdateP2P) {
 		std::string name(pkCCI->szName);
 	    MessengerManager::instance().P2PLogin(name);
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+		CAntiMultipleFarm::instance().P2PLogin(pkCCI->cMAIf, pkCCI->dwPID, p->i8BlockState);
+#endif
 	}
 }
 
-void P2P_MANAGER::Logout(CCI * pkCCI)
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+void P2P_MANAGER::Logout(CCI* pkCCI, bool is_warping)
+#else
+void P2P_MANAGER::Logout(CCI* pkCCI)
+#endif
 {
 	if (pkCCI->bChannel == g_bChannel)
 	{
@@ -202,25 +218,37 @@ void P2P_MANAGER::Logout(CCI * pkCCI)
 	MessengerManager::instance().P2PLogout(name);
 	marriage::CManager::instance().Logout(pkCCI->dwPID);
 
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+	CAntiMultipleFarm::instance().P2PLogout(pkCCI->cMAIf, pkCCI->dwPID, is_warping);
+#endif
 	m_map_pkCCI.erase(name);
 	m_map_dwPID_pkCCI.erase(pkCCI->dwPID);
 	M2_DELETE(pkCCI);
 }
 
-void P2P_MANAGER::Logout(const char * c_pszName)
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+void P2P_MANAGER::Logout(const char* c_pszName, bool is_warping)
+#else
+void P2P_MANAGER::Logout(const char* c_pszName)
+#endif
 {
 	CCI * pkCCI = Find(c_pszName);
 
 	if (!pkCCI)
 		return;
 
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+	Logout(pkCCI, is_warping);
+#else
 	Logout(pkCCI);
+#endif
 	sys_log(0, "P2P: Logout %s", c_pszName);
 }
 
 CCI * P2P_MANAGER::FindByPID(DWORD pid)
 {
 	TPIDCCIMap::iterator it = m_map_dwPID_pkCCI.find(pid);
+
 	if (it == m_map_dwPID_pkCCI.end())
 		return NULL;
 	return it->second;
@@ -240,7 +268,6 @@ CCI * P2P_MANAGER::Find(const char * c_pszName)
 
 int P2P_MANAGER::GetCount()
 {
-	//return m_map_pkCCI.size();
 	return m_aiEmpireUserCount[1] + m_aiEmpireUserCount[2] + m_aiEmpireUserCount[3];
 }
 
@@ -258,7 +285,7 @@ int P2P_MANAGER::GetDescCount()
 
 void P2P_MANAGER::GetP2PHostNames(std::string& hostNames)
 {
-	TR1_NS::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
+	boost::unordered_set<LPDESC>::iterator it = m_set_pkPeers.begin();
 
 	std::ostringstream oss(std::ostringstream::out);
 

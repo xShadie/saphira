@@ -43,7 +43,7 @@ void CGuildMarkImage::Create()
 	ilGenImages(1, &m_uImg);
 }
 
-bool CGuildMarkImage::Save(const char* c_szFileName)
+bool CGuildMarkImage::Save(const char* c_szFileName) 
 {
 	ilEnable(IL_FILE_OVERWRITE);
 	ilBindImage(m_uImg);
@@ -84,10 +84,10 @@ bool CGuildMarkImage::Build(const char * c_szFileName)
 	return true;
 }
 
-bool CGuildMarkImage::Load(const char * c_szFileName)
+bool CGuildMarkImage::Load(const char * c_szFileName) 
 {
 	Destroy();
-	Create();
+	Create();	
 
 	ilBindImage(m_uImg);
 	ilEnable(IL_ORIGIN_SET);
@@ -99,7 +99,7 @@ bool CGuildMarkImage::Load(const char * c_szFileName)
 		return false;
 	}
 
-	if (ilGetInteger(IL_IMAGE_WIDTH) != WIDTH)
+	if (ilGetInteger(IL_IMAGE_WIDTH) != WIDTH)	
 	{
 		sys_err("GuildMarkImage: %s width must be %u", c_szFileName, WIDTH);
 		return false;
@@ -126,15 +126,9 @@ void CGuildMarkImage::PutData(UINT x, UINT y, UINT width, UINT height, void * da
 void CGuildMarkImage::GetData(UINT x, UINT y, UINT width, UINT height, void * data)
 {
 	ilBindImage(m_uImg);
-	ilCopyPixels(x, y, 0, width, height, 1, IL_BGRA, IL_UNSIGNED_BYTE, data);
+	ilCopyPixels(x, y, 0, width, height, 1, IL_BGRA, IL_UNSIGNED_BYTE, data);	
 }
 
-// 이미지 = 512x512
-//   블럭 = 마크 4 x 4
-//   마크 = 16 x 12
-// 한 이미지의 블럭 = 8 x 10
-
-// SERVER
 bool CGuildMarkImage::SaveMark(DWORD posMark, BYTE * pbImage)
 {
 	if (posMark >= MARK_TOTAL_COUNT)
@@ -143,14 +137,12 @@ bool CGuildMarkImage::SaveMark(DWORD posMark, BYTE * pbImage)
 		return false;
 	}
 
-	// 마크를 전체 이미지에 그린다.
 	DWORD colMark = posMark % MARK_COL_COUNT;
 	DWORD rowMark = posMark / MARK_COL_COUNT;
 
 	printf("PutMark pos %u %ux%u\n", posMark, colMark * SGuildMark::WIDTH, rowMark * SGuildMark::HEIGHT);
 	PutData(colMark * SGuildMark::WIDTH, rowMark * SGuildMark::HEIGHT, SGuildMark::WIDTH, SGuildMark::HEIGHT, pbImage);
 
-	// 그려진 곳의 블럭을 업데이트
 	DWORD rowBlock = rowMark / SGuildMarkBlock::MARK_PER_BLOCK_HEIGHT;
 	DWORD colBlock = colMark / SGuildMarkBlock::MARK_PER_BLOCK_WIDTH;
 
@@ -167,7 +159,6 @@ bool CGuildMarkImage::DeleteMark(DWORD posMark)
 	return SaveMark(posMark, (BYTE *) &image);
 }
 
-// CLIENT
 bool CGuildMarkImage::SaveBlockFromCompressedData(DWORD posBlock, const BYTE * pbComp, DWORD dwCompSize)
 {
 	if (posBlock >= BLOCK_TOTAL_COUNT)
@@ -197,7 +188,7 @@ bool CGuildMarkImage::SaveBlockFromCompressedData(DWORD posBlock, const BYTE * p
 	return true;
 }
 
-void CGuildMarkImage::BuildAllBlocks() // 이미지 전체를 블럭화
+void CGuildMarkImage::BuildAllBlocks()
 {
 	Pixel apxBuf[SGuildMarkBlock::SIZE];
 	sys_log(0, "GuildMarkImage::BuildAllBlocks");
@@ -251,11 +242,10 @@ void CGuildMarkImage::GetBlockCRCList(DWORD * crcList)
 			*(crcList++) = m_aakBlock[row][col].GetCRC();
 }
 
-////////////////////////////////////////////////////////////////////////////////
 void SGuildMark::Clear()
 {
 	for (DWORD iPixel = 0; iPixel < SIZE; ++iPixel)
-		m_apxBuf[iPixel] = 0xff000000;
+		m_apxBuf[iPixel] = 0xff000000;	
 }
 
 bool SGuildMark::IsEmpty()
@@ -267,7 +257,6 @@ bool SGuildMark::IsEmpty()
 	return true;
 }
 
-////////////////////////////////////////////////////////////////////////////////
 DWORD SGuildMarkBlock::GetCRC() const
 {
 	return m_crc;
@@ -281,7 +270,6 @@ void SGuildMarkBlock::CopyFrom(const BYTE * pbCompBuf, DWORD dwCompSize, DWORD c
 	m_sizeCompBuf = dwCompSize;
 	thecore_memcpy(m_abCompBuf, pbCompBuf, dwCompSize);
 	m_crc = crc;
-	//printf("SGuildMarkBlock::CopyFrom: %u > %u crc %u\n", sizeof(Pixel) * SGuildMarkBlock::SIZE, m_sizeCompBuf, m_crc);
 }
 
 void SGuildMarkBlock::Compress(const Pixel * pxBuf)
@@ -294,6 +282,5 @@ void SGuildMarkBlock::Compress(const Pixel * pxBuf)
 		return;
 	}
 
-	//sys_log(0, "SGuildMarkBlock::Compress %u > %u", sizeof(Pixel) * SGuildMarkBlock::SIZE, m_sizeCompBuf);
 	m_crc = GetCRC32((const char *) pxBuf, sizeof(Pixel) * SGuildMarkBlock::SIZE);
 }

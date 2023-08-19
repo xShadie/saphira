@@ -1,6 +1,4 @@
-#ifndef __HEADER_QUEST_LUA__
-#define __HEADER_QUEST_LUA__
-
+#pragma once
 #include "quest.h"
 #include "buffer_manager.h"
 
@@ -20,23 +18,19 @@ namespace quest
 	extern void RegisterPartyFunctionTable();
 	extern void RegisterHorseFunctionTable();
 	extern void RegisterPetFunctionTable();
-#ifdef __NEWPET_SYSTEM__
-	extern void RegisterNewPetFunctionTable();
-#endif	
 	extern void RegisterGuildFunctionTable();
 	extern void RegisterGameFunctionTable();
-	extern void RegisterArenaFunctionTable();
 	extern void RegisterGlobalFunctionTable(lua_State* L);
 	extern void RegisterOXEventFunctionTable();
-	extern void RegisterBattleArenaFunctionTable();
 	extern void RegisterDanceEventFunctionTable();
+	extern void RegisterDragonLairFunctionTable();
 	extern void RegisterDragonSoulFunctionTable();
 
 	extern void combine_lua_string(lua_State* L, std::ostringstream &s);
-
+	
 	struct FSetWarpLocation
 	{
-		long map_index;
+		long map_index; 
 		long x;
 		long y;
 
@@ -109,7 +103,7 @@ namespace quest
 		long 	m_x;
 		long	m_y;
 
-		warp_all_to_map_my_empire_event_info()
+		warp_all_to_map_my_empire_event_info() 
 		: m_bEmpire( 0 )
 		, m_lMapIndexFrom( 0 )
 		, m_lMapIndexTo( 0 )
@@ -130,5 +124,3 @@ namespace quest
 		void operator() (DWORD g1, DWORD g2);
 	};
 }
-#endif /*__HEADER_QUEST_LUA__*/
-

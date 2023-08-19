@@ -6,7 +6,6 @@
 #include "GuildManager.h"
 #include "ItemAwardManager.h"
 #include "PrivManager.h"
-#include "MoneyLog.h"
 #include "Marriage.h"
 #include "ItemIDRangeManager.h"
 #include <signal.h>
@@ -17,39 +16,16 @@ int Start();
 
 std::string g_stTablePostfix;
 std::string g_stLocaleNameColumn = "name";
-std::string g_stLocale = "latin1"; // default: euckr
+std::string g_stLocale = "latin1";
 std::string g_stPlayerDBName = "";
-
 BOOL g_test_server = false;
+BOOL g_noTXT = false;
 
-//단위 초
-int g_iPlayerCacheFlushSeconds = 60*5;
+int g_iPlayerCacheFlushSeconds = 60*7;
 int g_iItemCacheFlushSeconds = 60*5;
-
-#ifdef ENABLE_BATTLE_PASS
-int g_iCurrentBattlePassId = 1;
-#endif
-
-#ifdef __SKILL_COLOR_SYSTEM__
-	int g_iSkillColorCacheFlushSeconds = 60*7;
-#endif
-
-
-//g_iLogoutSeconds 수치는 g_iPlayerCacheFlushSeconds 와 g_iItemCacheFlushSeconds 보다 길어야 한다.
 int g_iLogoutSeconds = 60*10;
-
 int g_log = 1;
-
-
-// MYSHOP_PRICE_LIST
 int g_iItemPriceListTableCacheFlushSeconds = 540;
-// END_OF_MYSHOP_PRICE_LIST
-
-#if defined(__FreeBSD__) && defined(__FreeBSD_version) && __FreeBSD_version<1000000
-extern const char * _malloc_options;
-#endif
-
-extern void WriteVersion();
 
 void emergency_sig(int sig)
 {
@@ -64,19 +40,12 @@ void emergency_sig(int sig)
 
 int main()
 {
-	WriteVersion();
-
-#if defined(__FreeBSD__) && defined(__FreeBSD_version) && __FreeBSD_version<1000000
-	_malloc_options = "A";
-#endif
-
 	CConfig Config;
 	CNetPoller poller;
-	CDBManager DBManager;
+	CDBManager DBManager; 
 	CClientManager ClientManager;
 	CGuildManager GuildManager;
 	CPrivManager PrivManager;
-	CMoneyLog MoneyLog;
 	ItemAwardManager ItemAwardManager;
 	marriage::CManager MarriageManager;
 	CItemIDRangeManager ItemIDRangeManager;
@@ -114,14 +83,11 @@ int main()
 
 void emptybeat(LPHEART heart, int pulse)
 {
-	if (!(pulse % heart->passes_per_sec))	// 1초에 한번
+	if (!(pulse % heart->passes_per_sec))
 	{
 	}
 }
 
-//
-// @version	05/06/13 Bang2ni - 아이템 가격정보 캐시 flush timeout 설정 추가.
-//
 int Start()
 {
 	if (!CConfig::instance().LoadFile("conf.txt"))
@@ -147,8 +113,8 @@ int Start()
 		g_log = 1;
 		fprintf(stderr, "Log On");
 	}
-
-
+	
+	
 	int tmpValue;
 
 	int heart_beat = 50;
@@ -178,9 +144,18 @@ int Start()
 		sys_log(0, "LOCALE set to %s", g_stLocale.c_str());
 	}
 
+	int iNoTXT = 0;
+	if (CConfig::instance().GetValue("NO_TXT", &iNoTXT))
+	{
+		if (iNoTXT == 1)
+		{
+			sys_log(0, "CONFIG: NO_TXT");
+			g_noTXT = true;
+		}
+	}
+
 	if (!CConfig::instance().GetValue("TABLE_POSTFIX", szBuf, 256))
 	{
-		sys_log(0, "TABLE_POSTFIX not configured use default"); // @warme012
 		szBuf[0] = '\0';
 	}
 
@@ -198,14 +173,12 @@ int Start()
 		sys_log(0, "ITEM_CACHE_FLUSH_SECONDS: %d", g_iItemCacheFlushSeconds);
 	}
 
-	// MYSHOP_PRICE_LIST
-	if (CConfig::instance().GetValue("ITEM_PRICELIST_CACHE_FLUSH_SECONDS", szBuf, 256))
+	if (CConfig::instance().GetValue("ITEM_PRICELIST_CACHE_FLUSH_SECONDS", szBuf, 256)) 
 	{
 		str_to_number(g_iItemPriceListTableCacheFlushSeconds, szBuf);
 		sys_log(0, "ITEM_PRICELIST_CACHE_FLUSH_SECONDS: %d", g_iItemPriceListTableCacheFlushSeconds);
 	}
-	// END_OF_MYSHOP_PRICE_LIST
-	//
+
 	if (CConfig::instance().GetValue("CACHE_FLUSH_LIMIT_PER_SECOND", szBuf, 256))
 	{
 		DWORD dwVal = 0; str_to_number(dwVal, szBuf);
@@ -226,14 +199,6 @@ int Start()
 		fprintf(stderr, "%s %s", g_stLocaleNameColumn.c_str(), szBuf);
 		g_stLocaleNameColumn = szBuf;
 	}
-
-#ifdef ENABLE_BATTLE_PASS
-	if (CConfig::instance().GetValue("CURRENT_BATTLE_PASS_ID", szBuf, 256))
-	{
-		str_to_number(g_iCurrentBattlePassId, szBuf);
-		sys_log(0, "CURRENT_BATTLE_PASS_ID: %d", g_iCurrentBattlePassId);
-	}
-#endif
 
 	char szAddr[64], szDB[64], szUser[64], szPassword[64];
 	int iPort;
@@ -320,6 +285,35 @@ int Start()
 		sys_err("SQL_COMMON not configured");
 		return false;
 	}
+	
+#ifdef ENABLE_ITEMSHOP
+	if (CConfig::instance().GetValue("SQL_ITEMSHOP", line, 256))
+	{
+		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
+		sys_log(0, "connecting to MySQL server (itemshop)");
+
+		int iRetry = 5;
+
+		do
+		{
+			if (CDBManager::instance().Connect(SQL_ITEMSHOP, szAddr, iPort, szDB, szUser, szPassword))
+			{
+				sys_log(0, "   OK");
+				break;
+			}
+
+			sys_log(0, "   failed, retrying in 5 seconds");
+			fprintf(stderr, "   failed, retrying in 5 seconds");
+			sleep(5);
+		} while (iRetry--);
+		fprintf(stderr, "Success ITEMSHOP\n");
+	}
+	else
+	{
+		sys_err("SQL_ITEMSHOP not configured");
+		return false;
+	}
+#endif
 
 	if (!CNetPoller::instance().Create())
 	{
@@ -331,15 +325,13 @@ int Start()
 
 	if (!CClientManager::instance().Initialize())
 	{
-		sys_log(0, "   failed");
+		sys_log(0, "   failed"); 
 		return false;
 	}
 
 	sys_log(0, "   OK");
 
-#ifndef __WIN32__
 	signal(SIGUSR1, emergency_sig);
-#endif
 	signal(SIGSEGV, emergency_sig);
 	return true;
 }

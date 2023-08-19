@@ -1,13 +1,11 @@
 #include "stdafx.h"
 #include "constants.h"
-#include "../../common/teen_packet.h"
 #include "config.h"
 #include "utils.h"
 #include "input.h"
 #include "desc_client.h"
 #include "desc_manager.h"
 #include "char.h"
-#include "item.h"
 #include "char_manager.h"
 #include "cmd.h"
 #include "buffer_manager.h"
@@ -23,55 +21,17 @@
 #include "building.h"
 #include "wedding.h"
 #include "affect.h"
-#include "arena.h"
 #include "OXEvent.h"
 #include "priv_manager.h"
-#include "dev_log.h"
 #include "log.h"
 #include "horsename_manager.h"
 #include "MarkManager.h"
-#include "../../common/CommonDefines.h"
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-#include "new_offlineshop.h"
-#include "new_offlineshop_manager.h"
+#include "PetSystem.h"
+#ifdef ENABLE_ITEMSHOP
+#include "itemshop.h"
 #endif
-#ifdef ENABLE_SWITCHBOT
-#include "new_switchbot.h"
-#endif
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-#include "MountSystem.h"
-#endif
-
-#ifdef ENABLE_WOLFMAN_CHARACTER
-
-// #define USE_LYCAN_CREATE_POSITION
-#ifdef USE_LYCAN_CREATE_POSITION
-
-DWORD g_lycan_create_position[4][2] =
-{
-	{		0,		0 },
-	{ 768000+38300, 896000+35500 },
-	{ 819200+38300, 896000+35500 },
-	{ 870400+38300, 896000+35500 },
-};
-
-inline DWORD LYCAN_CREATE_START_X(BYTE e, BYTE job)
-{
-	if (1 <= e && e <= 3)
-		return (job==JOB_WOLFMAN)?g_lycan_create_position[e][0]:g_create_position[e][0];
-	return 0;
-}
-
-inline DWORD LYCAN_CREATE_START_Y(BYTE e, BYTE job)
-{
-	if (1 <= e && e <= 3)
-		return (job==JOB_WOLFMAN)?g_lycan_create_position[e][1]:g_create_position[e][1];
-	return 0;
-}
-
-#endif
-
-
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+#include "HAntiMultipleFarm.h"
 #endif
 
 static void _send_bonus_info(LPCHARACTER ch)
@@ -81,37 +41,40 @@ static void _send_bonus_info(LPCHARACTER ch)
 	int gold10_drop_bonus	= 0;
 	int exp_bonus		= 0;
 
-	item_drop_bonus = CPrivManager::instance().GetPriv(ch, PRIV_ITEM_DROP);
-	gold_drop_bonus = CPrivManager::instance().GetPriv(ch, PRIV_GOLD_DROP);
-	gold10_drop_bonus = CPrivManager::instance().GetPriv(ch, PRIV_GOLD10_DROP);
-	exp_bonus = CPrivManager::instance().GetPriv(ch, PRIV_EXP_PCT);
-#ifdef TEXTS_IMPROVEMENT
-	if (item_drop_bonus) {
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 243, "%d", item_drop_bonus);
+	item_drop_bonus		= CPrivManager::instance().GetPriv(ch, PRIV_ITEM_DROP);
+	gold_drop_bonus		= CPrivManager::instance().GetPriv(ch, PRIV_GOLD_DROP);
+	gold10_drop_bonus	= CPrivManager::instance().GetPriv(ch, PRIV_GOLD10_DROP);
+	exp_bonus			= CPrivManager::instance().GetPriv(ch, PRIV_EXP_PCT);
+
+	if (item_drop_bonus)
+	{
+		ch->ChatPacket(CHAT_TYPE_NOTICE, "[LS;871;%d]", item_drop_bonus);
 	}
-	if (gold_drop_bonus) {
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 244, "%d", item_drop_bonus);
+	if (gold_drop_bonus)
+	{
+		ch->ChatPacket(CHAT_TYPE_NOTICE, "[LS;872;%d]", gold_drop_bonus);
 	}
-	if (gold10_drop_bonus) {
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 245, "%d", item_drop_bonus);
+	if (gold10_drop_bonus)
+	{
+		ch->ChatPacket(CHAT_TYPE_NOTICE, "[LS;873;%d]", gold10_drop_bonus);
 	}
-	if (exp_bonus) {
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 246, "%d", item_drop_bonus);
+	if (exp_bonus)
+	{
+		ch->ChatPacket(CHAT_TYPE_NOTICE, "[LS;874;%d]", exp_bonus);
 	}
-#endif
 }
 
 static bool FN_is_battle_zone(LPCHARACTER ch)
 {
 	switch (ch->GetMapIndex())
 	{
-		case 1:         // 신수 1차 마을
-		case 2:         // 신수 2차 마을
-		case 21:        // 천조 1차 마을
-		case 23:        // 천조 2차 마을
-		case 41:        // 진노 1차 마을
-		case 43:        // 진노 2차 마을
-		case 113:       // OX 맵
+		case 1:
+		case 2:
+		case 21:
+		case 23:
+		case 41:
+		case 43:
+		case 113:
 			return false;
 	}
 
@@ -129,14 +92,7 @@ void CInputLogin::Login(LPDESC d, const char * data)
 
 	TPacketGCLoginFailure failurePacket;
 
-	if (!test_server)
-	{
-		failurePacket.header = HEADER_GC_LOGIN_FAILURE;
-		strlcpy(failurePacket.szStatus, "VERSION", sizeof(failurePacket.szStatus));
-		d->Packet(&failurePacket, sizeof(TPacketGCLoginFailure));
-		return;
-	}
-
+#ifdef _IMPROVED_PACKET_ENCRYPTION_
 	if (g_bNoMoreClient)
 	{
 		failurePacket.header = HEADER_GC_LOGIN_FAILURE;
@@ -144,6 +100,7 @@ void CInputLogin::Login(LPDESC d, const char * data)
 		d->Packet(&failurePacket, sizeof(TPacketGCLoginFailure));
 		return;
 	}
+#endif
 
 	if (g_iUserLimit > 0)
 	{
@@ -167,7 +124,7 @@ void CInputLogin::Login(LPDESC d, const char * data)
 	strlcpy(login_packet.login, login, sizeof(login_packet.login));
 	strlcpy(login_packet.passwd, pinfo->passwd, sizeof(login_packet.passwd));
 
-	db_clientdesc->DBPacket(HEADER_GD_LOGIN, d->GetHandle(), &login_packet, sizeof(TLoginPacket));
+	db_clientdesc->DBPacket(HEADER_GD_LOGIN, d->GetHandle(), &login_packet, sizeof(TLoginPacket)); 
 }
 
 void CInputLogin::LoginByKey(LPDESC d, const char * data)
@@ -177,6 +134,7 @@ void CInputLogin::LoginByKey(LPDESC d, const char * data)
 	char login[LOGIN_MAX_LEN + 1];
 	trim_and_lower(pinfo->login, login, sizeof(login));
 
+#ifdef _IMPROVED_PACKET_ENCRYPTION_
 	if (g_bNoMoreClient)
 	{
 		TPacketGCLoginFailure failurePacket;
@@ -186,6 +144,7 @@ void CInputLogin::LoginByKey(LPDESC d, const char * data)
 		d->Packet(&failurePacket, sizeof(TPacketGCLoginFailure));
 		return;
 	}
+#endif
 
 	if (g_iUserLimit > 0)
 	{
@@ -213,6 +172,9 @@ void CInputLogin::LoginByKey(LPDESC d, const char * data)
 #ifndef _IMPROVED_PACKET_ENCRYPTION_
 	d->SetSecurityKey(pinfo->adwClientKey);
 #endif
+#ifdef ENABLE_ANTI_MULTIPLE_FARM
+	d->SetLoginMacAdress(pinfo->cMAIf);
+#endif
 
 	TPacketGDLoginByKey ptod;
 
@@ -232,6 +194,13 @@ void CInputLogin::ChangeName(LPDESC d, const char * data)
 	if (!c_r.id)
 	{
 		sys_err("no account table");
+		return;
+	}
+
+	if (c_r.players[p->index].dwID == 0)
+	{
+		sys_err("invalid player_id from account %d\n", c_r.id);
+		d->DelayedDisconnect(0);
 		return;
 	}
 
@@ -273,9 +242,16 @@ void CInputLogin::CharacterSelect(LPDESC d, const char * data)
 		return;
 	}
 
+	if (c_r.players[pinfo->index].dwID == 0)
+	{
+		sys_err("invalid player_id from account %d\n", c_r.id);
+		d->DelayedDisconnect(0);
+		return;
+	}
+
 	if (c_r.players[pinfo->index].bChangeName)
 	{
-		sys_err("name must be changed idx %d, login %s, name %s",
+		sys_err("name must be changed idx %d, login %s, name %s", 
 				pinfo->index, c_r.login, c_r.players[pinfo->index].szName);
 		return;
 	}
@@ -285,6 +261,13 @@ void CInputLogin::CharacterSelect(LPDESC d, const char * data)
 	player_load_packet.account_id	= c_r.id;
 	player_load_packet.player_id	= c_r.players[pinfo->index].dwID;
 	player_load_packet.account_index	= pinfo->index;
+
+	if (player_load_packet.player_id == 0)
+	{
+		sys_err("invalid player_id from account %d\n", c_r.id);
+		d->DelayedDisconnect(0);
+		return;
+	}
 
 	db_clientdesc->DBPacket(HEADER_GD_PLAYER_LOAD, d->GetHandle(), &player_load_packet, sizeof(TPlayerLoadPacket));
 }
@@ -310,7 +293,7 @@ bool NewPlayerTable(TPlayerTable * table,
 	table->job = job;
 	table->voice = 0;
 	table->part_base = shape;
-
+	
 	table->st = JobInitialPoints[job].st;
 	table->dx = JobInitialPoints[job].dx;
 	table->ht = JobInitialPoints[job].ht;
@@ -320,26 +303,12 @@ bool NewPlayerTable(TPlayerTable * table,
 	table->sp = JobInitialPoints[job].max_sp + table->iq * JobInitialPoints[job].sp_per_iq;
 	table->stamina = JobInitialPoints[job].max_stamina;
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_LYCAN_CREATE_POSITION)
-	table->x 	= LYCAN_CREATE_START_X(bEmpire, job) + number(-300, 300);
-	table->y 	= LYCAN_CREATE_START_Y(bEmpire, job) + number(-300, 300);
-#else
 	table->x 	= CREATE_START_X(bEmpire) + number(-300, 300);
 	table->y 	= CREATE_START_Y(bEmpire) + number(-300, 300);
-#endif
 	table->z	= 0;
 	table->dir	= 0;
 	table->playtime = 0;
-	table->gold = 
-#ifdef ENABLE_REWARD_AT_START
-	500000
-#else
-	0
-#endif
-	;
-#ifdef ENABLE_GAYA_SYSTEM
-	table->gaya = 0;
-#endif
+	table->gold 	= 0;
 
 	table->skill_group = 0;
 
@@ -386,11 +355,13 @@ bool RaceToJob(unsigned race, unsigned* ret_job)
 		case MAIN_RACE_SHAMAN_W:
 			*ret_job = JOB_SHAMAN;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
+
+#ifdef ENABLE_WOLFMAN
 		case MAIN_RACE_WOLFMAN_M:
 			*ret_job = JOB_WOLFMAN;
 			break;
 #endif
+
 		default:
 			return false;
 			break;
@@ -398,7 +369,6 @@ bool RaceToJob(unsigned race, unsigned* ret_job)
 	return true;
 }
 
-// 신규 캐릭터 지원
 bool NewPlayerTable2(TPlayerTable * table, const char * name, BYTE race, BYTE shape, BYTE bEmpire)
 {
 	if (race >= MAIN_RACE_MAX_NUM)
@@ -410,52 +380,38 @@ bool NewPlayerTable2(TPlayerTable * table, const char * name, BYTE race, BYTE sh
 	unsigned job;
 
 	if (!RaceToJob(race, &job))
-	{
+	{	
 		sys_err("NewPlayerTable2.RACE_TO_JOB_ERROR(%d)\n", race);
 		return false;
 	}
 
-	sys_log(0, "NewPlayerTable2(name=%s, race=%d, job=%d)", name, race, job);
+	sys_log(0, "NewPlayerTable2(name=%s, race=%d, job=%d)", name, race, job); 
 
 	memset(table, 0, sizeof(TPlayerTable));
 
 	strlcpy(table->name, name, sizeof(table->name));
 
-	table->level = 1;
-	table->job = race; // 직업대신 종족을 넣는다
-	table->voice = 0;
-	table->part_base = shape;
+	table->level		= 1;
+	table->job			= race;
+	table->voice		= 0;
+	table->part_base	= shape;
 
-	table->st = JobInitialPoints[job].st;
-	table->dx = JobInitialPoints[job].dx;
-	table->ht = JobInitialPoints[job].ht;
-	table->iq = JobInitialPoints[job].iq;
+	table->st		= JobInitialPoints[job].st;
+	table->dx		= JobInitialPoints[job].dx;
+	table->ht		= JobInitialPoints[job].ht;
+	table->iq		= JobInitialPoints[job].iq;
 
-	table->hp = JobInitialPoints[job].max_hp + table->ht * JobInitialPoints[job].hp_per_ht;
-	table->sp = JobInitialPoints[job].max_sp + table->iq * JobInitialPoints[job].sp_per_iq;
-	table->stamina = JobInitialPoints[job].max_stamina;
+	table->hp		= JobInitialPoints[job].max_hp + table->ht * JobInitialPoints[job].hp_per_ht;
+	table->sp		= JobInitialPoints[job].max_sp + table->iq * JobInitialPoints[job].sp_per_iq;
+	table->stamina	= JobInitialPoints[job].max_stamina;
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_LYCAN_CREATE_POSITION)
-	table->x = LYCAN_CREATE_START_X(bEmpire, job) + number(-300, 300);
-	table->y = LYCAN_CREATE_START_Y(bEmpire, job) + number(-300, 300);
-#else
-	table->x = CREATE_START_X(bEmpire) + number(-300, 300);
-	table->y = CREATE_START_Y(bEmpire) + number(-300, 300);
-#endif
-	table->z = 0;
-	table->dir = 0;
+	table->x		= CREATE_START_X(bEmpire) + number(-300, 300);
+	table->y		= CREATE_START_Y(bEmpire) + number(-300, 300);
+	table->z		= 0;
+	table->dir		= 0;
 	table->playtime = 0;
-	table->gold = 
-#ifdef ENABLE_REWARD_AT_START
-	500000
-#else
-	0
-#endif
-	;
-#ifdef ENABLE_GAYA_SYSTEM
-	table->gaya = 0;
-#endif
-	table->stat_point = 0;
+	table->gold 	= 0;
+
 	table->skill_group = 0;
 
 	return true;
@@ -467,9 +423,9 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 	TPlayerCreatePacket player_create_packet;
 
 	sys_log(0, "PlayerCreate: name %s pos %d job %d shape %d",
-			pinfo->name,
-			pinfo->index,
-			pinfo->job,
+			pinfo->name, 
+			pinfo->index, 
+			pinfo->job, 
 			pinfo->shape);
 
 	TPacketGCLoginFailure packFailure;
@@ -482,14 +438,6 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 		return;
 	}
 
-#ifdef ENABLE_BUG_FIXES
-	if (strlen(pinfo->name) > 12) {
-		d->Packet(&packFailure, sizeof(packFailure));
-		return;
-	}
-#endif
-
-	// 사용할 수 없는 이름이거나, 잘못된 평상복이면 생설 실패
 	if (!check_name(pinfo->name) || pinfo->shape > 1)
 	{
 		d->Packet(&packFailure, sizeof(packFailure));
@@ -524,8 +472,8 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 	player_create_packet.account_index	= pinfo->index;
 
 	sys_log(0, "PlayerCreate: name %s account_id %d, TPlayerCreatePacketSize(%d), Packet->Gold %d",
-			pinfo->name,
-			pinfo->index,
+			pinfo->name, 
+			pinfo->index, 
 			sizeof(TPlayerCreatePacket),
 			player_create_packet.player_table.gold);
 
@@ -558,20 +506,13 @@ void CInputLogin::CharacterDelete(LPDESC d, const char * data)
 		return;
 	}
 
-	// @fixme143 BEGIN
-	static char __private_code[8 * 2 + 1];
-	DBManager::instance().EscapeString(__private_code, sizeof(__private_code), pinfo->private_code, strnlen(pinfo->private_code, sizeof(pinfo->private_code)));
-	if (strncmp(__private_code, pinfo->private_code, strnlen(pinfo->private_code, sizeof(pinfo->private_code))))
-	{
-		return;
-	}
-	// @fixme143 END
-
 	TPlayerDeletePacket	player_delete_packet;
+
 	trim_and_lower(c_rAccountTable.login, player_delete_packet.login, sizeof(player_delete_packet.login));
-	player_delete_packet.player_id = c_rAccountTable.players[pinfo->index].dwID;
-	player_delete_packet.account_index = pinfo->index;
-	strlcpy(player_delete_packet.private_code, __private_code, sizeof(player_delete_packet.private_code));
+	player_delete_packet.player_id	= c_rAccountTable.players[pinfo->index].dwID;
+	player_delete_packet.account_index	= pinfo->index;
+	strlcpy(player_delete_packet.private_code, pinfo->private_code, sizeof(player_delete_packet.private_code));
+
 	db_clientdesc->DBPacket(HEADER_GD_PLAYER_DELETE, d->GetHandle(), &player_delete_packet, sizeof(TPlayerDeletePacket));
 }
 
@@ -601,7 +542,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 		PIXEL_POSITION pos2;
 		SECTREE_MANAGER::instance().GetRecallPositionByEmpire(ch->GetMapIndex(), ch->GetEmpire(), pos2);
 
-		sys_err("!GetMovablePosition (name %s %dx%d map %d changed to %dx%d)",
+		sys_err("!GetMovablePosition (name %s %dx%d map %d changed to %dx%d)", 
 				ch->GetName(),
 				pos.x, pos.y,
 				ch->GetMapIndex(),
@@ -611,47 +552,15 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 
 	CGuildManager::instance().LoginMember(ch);
 
-	// 캐릭터를 맵에 추가
 	ch->Show(ch->GetMapIndex(), pos.x, pos.y, pos.z);
 	ch->ReviveInvisible(5);
+
 	d->SetPhase(PHASE_GAME);
-	SECTREE_MANAGER::instance().SendNPCPosition(ch);
-#ifdef ENABLE_ATLAS_BOSS
-	SECTREE_MANAGER::instance().SendBossPosition(ch);
-#endif
 
-
-#ifdef __HIDE_COSTUME_SYSTEM__
-	if (ch->GetQuestFlag("costume_option.hide_body") != 0)
-		ch->SetBodyCostumeHidden(true);
-	else
-		ch->SetBodyCostumeHidden(false);
-
-	if (ch->GetQuestFlag("costume_option.hide_hair") != 0)
-		ch->SetHairCostumeHidden(true);
-	else
-		ch->SetHairCostumeHidden(false);
-
-#ifdef ENABLE_ACCE_SYSTEM
-	if (ch->GetQuestFlag("costume_option.hide_acce") != 0)
-		ch->SetAcceCostumeHidden(true);
-	else
-		ch->SetAcceCostumeHidden(false);
-#endif
-
-#ifdef __WEAPON_COSTUME_SYSTEM__
-	if (ch->GetQuestFlag("costume_option.hide_weapon") != 0)
-		ch->SetWeaponCostumeHidden(true);
-	else
-		ch->SetWeaponCostumeHidden(false);
-#endif
-#endif
-
-
-	if(ch->GetItemAward_cmd())																		//게임페이즈 들어가면
-		quest::CQuestManager::instance().ItemInformer(ch->GetPlayerID(),ch->GetItemAward_vnum());	//questmanager 호출
-
-	sys_log(0, "ENTERGAME: %s %dx%dx%d %s map_index %d",
+	if(ch->GetItemAward_cmd())
+		quest::CQuestManager::instance().ItemInformer(ch->GetPlayerID(),ch->GetItemAward_vnum());
+	
+	sys_log(0, "ENTERGAME: %s %dx%dx%d %s map_index %d", 
 			ch->GetName(), ch->GetX(), ch->GetY(), ch->GetZ(), d->GetHostName(), ch->GetMapIndex());
 
 	if (ch->GetHorseLevel() > 0)
@@ -659,12 +568,11 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 		ch->EnterHorse();
 	}
 
-	// 플레이시간 레코딩 시작
 	ch->ResetPlayTime();
 
-	// 자동 저장 이벤트 추가
 	ch->StartSaveEvent();
 	ch->StartRecoveryEvent();
+	ch->StartCheckSpeedHackEvent();
 
 	CPVPManager::instance().Connect(ch);
 	CPVPManager::instance().SendList(d);
@@ -677,8 +585,12 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 	building::CManager::instance().SendLandList(d, ch->GetMapIndex());
 
 	marriage::CManager::instance().Login(ch);
-#ifdef ENABLE_EVENT_MANAGER
-	CHARACTER_MANAGER::Instance().SendDataPlayer(ch);
+#ifdef ENABLE_MULTI_FARM_BLOCK
+	CHARACTER_MANAGER::Instance().CheckMultiFarmAccount(d->GetHostName(), ch->GetPlayerID(), true, false);
+#endif
+
+#ifdef ENABLE_REWARD_SYSTEM
+	CHARACTER_MANAGER::Instance().SendRewardInfo(ch);
 #endif
 
 	TPacketGCTime p;
@@ -690,18 +602,8 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 	p2.header = HEADER_GC_CHANNEL;
 	p2.channel = g_bChannel;
 	d->Packet(&p2, sizeof(p2));
-	ch->SendGreetMessage();
 
-#ifdef ENABLE_PVP_ADVANCED // If something is wrong and server is crashed or stopping when you was in duel.
-	int isDuel = ch->GetQuestFlag(CHECK_IS_FIGHT);
-	if (isDuel)
-		ch->SetQuestFlag(CHECK_IS_FIGHT, 0);	
-#endif
-	
 	_send_bonus_info(ch);
-#if defined(BL_OFFLINE_MESSAGE)
-	ch->ReadOfflineMessages();
-#endif
 	
 	for (int i = 0; i <= PREMIUM_MAX_NUM; ++i)
 	{
@@ -712,25 +614,6 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 
 		ch->AddAffect(AFFECT_PREMIUM_START + i, POINT_NONE, 0, 0, remain, 0, true);
 		sys_log(0, "PREMIUM: %s type %d %dmin", ch->GetName(), i, remain);
-	}
-
-	if (g_bCheckClientVersion)
-	{
-		sys_log(0, "VERSION CHECK %s %s", g_stClientVersion.c_str(), d->GetClientVersion());
-
-		if (!d->GetClientVersion()) {
-			d->DelayedDisconnect(10);
-		}
-		else {
-			if (0 != g_stClientVersion.compare(d->GetClientVersion())) {
-				d->DelayedDisconnect(0);
-				LogManager::instance().HackLog("VERSION_CONFLICT", ch);
-			}
-		}
-	}
-	else
-	{
-		sys_log(0, "VERSION : NO CHECK");
 	}
 
 	if (ch->IsGM() == true)
@@ -746,82 +629,10 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 			ch->SetDungeon(CDungeonManager::instance().FindByMapIndex(ch->GetMapIndex()));
 		}
 	}
-	else if (CArenaManager::instance().IsArenaMap(ch->GetMapIndex()) == true)
-	{
-		int memberFlag = CArenaManager::instance().IsMember(ch->GetMapIndex(), ch->GetPlayerID());
-		if (memberFlag == MEMBER_OBSERVER)
-		{
-			ch->SetObserverMode(true);
-			ch->SetArenaObserverMode(true);
-			if (CArenaManager::instance().RegisterObserverPtr(ch, ch->GetMapIndex(), ch->GetX()/100, ch->GetY()/100))
-			{
-				sys_log(0, "ARENA : Observer add failed");
-			}
-
-			if (ch->IsHorseRiding() == true)
-			{
-				ch->StopRiding();
-				ch->HorseSummon(false);
-			}
-		}
-		else if (memberFlag == MEMBER_DUELIST)
-		{
-			TPacketGCDuelStart duelStart;
-			duelStart.header = HEADER_GC_DUEL_START;
-			duelStart.wSize = sizeof(TPacketGCDuelStart);
-
-			ch->GetDesc()->Packet(&duelStart, sizeof(TPacketGCDuelStart));
-
-			if (ch->IsHorseRiding() == true)
-			{
-				ch->StopRiding();
-				ch->HorseSummon(false);
-			}
-
-			LPPARTY pParty = ch->GetParty();
-			if (pParty != NULL)
-			{
-				if (pParty->GetMemberCount() == 2)
-				{
-					CPartyManager::instance().DeleteParty(pParty);
-				}
-				else
-				{
-					pParty->Quit(ch->GetPlayerID());
-				}
-			}
-		}
-		else if (memberFlag == MEMBER_NO)
-		{
-			if (ch->GetGMLevel() == GM_PLAYER)
-				ch->WarpSet(EMPIRE_START_X(ch->GetEmpire()), EMPIRE_START_Y(ch->GetEmpire()));
-		}
-		else
-		{
-			// wtf
-		}
-	}
 	else if (ch->GetMapIndex() == 113)
 	{
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-		if (ch->IsHorseRiding()) {
-			ch->StopRiding();
-			ch->HorseSummon(false);
-		}
-
-		CMountSystem* mountSystem = ch->GetMountSystem();
-		LPITEM mount = ch->GetWear(WEAR_COSTUME_MOUNT);
-		if (mountSystem && ch->GetMountVnum() && mount) {
-			mountSystem->Unmount(mount->GetValue(1));
-		} else {
-			ch->RemoveAffect(AFFECT_MOUNT);
-			ch->RemoveAffect(AFFECT_MOUNT_BONUS);
-		}
-#endif
-		// ox 이벤트 맵
 		if (COXEventManager::instance().Enter(ch) == false)
 		{
-			// ox 맵 진입 허가가 나지 않음. 플레이어면 마을로 보내자
 			if (ch->GetGMLevel() == GM_PLAYER)
 				ch->WarpSet(EMPIRE_START_X(ch->GetEmpire()), EMPIRE_START_Y(ch->GetEmpire()));
 		}
@@ -836,134 +647,33 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 		}
 	}
 
-	// 청소년 보호
-	if (g_TeenDesc) // BufferedPacket 사용 금지
-	{
-		TPacketGTLogin p;
-
-		p.header = HEADER_GT_LOGIN;
-		p.empty = 0;
-		p.id = d->GetAccountTable().id;
-
-		g_TeenDesc->Packet(&p, sizeof(p));
-		sys_log(0, "TEEN_SEND: (%u, %s)", d->GetAccountTable().id, ch->GetName());
-	}
-
 	if (ch->GetHorseLevel() > 0)
 	{
 		DWORD pid = ch->GetPlayerID();
+
 		if (pid != 0 && CHorseNameManager::instance().GetHorseName(pid) == NULL)
 			db_clientdesc->DBPacket(HEADER_GD_REQ_HORSE_NAME, 0, &pid, sizeof(DWORD));
-
-#ifdef ENABLE_BUG_FIXES
-		ch->SetHorseLevel(ch->GetHorseLevel());
-		ch->SkillLevelPacket();
-#endif
 	}
 
-#ifdef TEXTS_IMPROVEMENT
-	if (g_noticeBattleZone) {
-		if (FN_is_battle_zone(ch)) {
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 637, "");
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 638, "");
+	ch->LoadPickup();
+
+	if (!ch->IsRiding() && !ch->GetHorse())
+	{
+		LPITEM pkCostumeMount = ch->GetWear(WEAR_COSTUME_MOUNT);
+		if (pkCostumeMount)
+		{
+			ch->HorseSummon(true);
 		}
 	}
-#endif
 
-#ifdef __ENABLE_NEW_OFFLINESHOP__
-	if (ch->IsPC())
+	CPetSystem* petSystem = ch->GetPetSystem();
+	if (petSystem)
 	{
-		offlineshop::CShop* pkShop= offlineshop::GetManager().GetShopByOwnerID(ch->GetPlayerID());
-		if(pkShop)
-			ch->SetOfflineShop(pkShop);
-
-		offlineshop::CAuction* auction = offlineshop::GetManager().GetAuctionByOwnerID(ch->GetPlayerID());
-		if(auction)
-			ch->SetAuction(auction);
+		petSystem->HandlePetCostumeItem();
 	}
-#endif
 
-#ifdef ENABLE_SWITCHBOT
-	CSwitchbotManager::Instance().EnterGame(ch);
-#endif
-
-
-#ifdef ENABLE_BATTLE_PASS_STAY_ONLINE
-	ch->LoadStayActiveBattlePass();
-#endif
-#ifdef __ENABLE_BLOCK_EXP__
-	int expret = ch->GetQuestFlag("exp.stat");
-	ch->Block_Exp = expret == 1 ? true : false;
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "manage_exp_status %d", ch->GetQuestFlag("exp.stat"));
-#endif
-
-#ifdef ENABLE_MULTI_LANGUAGE
-	TPacketChangeLanguage packet;
-	packet.bHeader = HEADER_GC_REQUEST_CHANGE_LANGUAGE;
-	packet.bLanguage = ch->GetDesc()->GetLanguage();
-	ch->GetDesc()->Packet(&packet, sizeof(TPacketChangeLanguage));
-#endif
-#ifdef ENABLE_RUNE_SYSTEM
-	ch->SetPart(PART_RUNE, ch->GetRuneEffect());
-	ch->UpdatePacket();
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "rune_affect %d", ch->GetQuestFlag("rune.hide_effect"));
-#endif
-#ifdef ENABLE_PVP_ADVANCED
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "equipview %d", ch->GetQuestFlag(BLOCK_EQUIPMENT_));
-#endif
-#ifdef BLOCK_RIDING_INSIDE_WAR
-	if (ch->GetWarMap()) {
-		if (ch->IsHorseRiding()) {
-			ch->StopRiding();
-			ch->HorseSummon(false);
-		}
-
-		CMountSystem* mountSystem = ch->GetMountSystem();
-		LPITEM mount = ch->GetWear(WEAR_COSTUME_MOUNT);
-		if (mountSystem && ch->GetMountVnum() && mount) {
-			mountSystem->Unmount(mount->GetValue(1));
-		} else {
-			ch->RemoveAffect(AFFECT_MOUNT);
-			ch->RemoveAffect(AFFECT_MOUNT_BONUS);
-		}
-	}
-#endif
-
-#ifdef ENABLE_BIOLOGIST_UI
-	if (ch->GetQuestFlag("biologist.stat") <= 13)
-	{
-		int biologisttime = ch->GetQuestFlag("biologist.time");
-		biologisttime = biologisttime > 0 ? biologisttime : 1;
-		ch->ChatPacket(CHAT_TYPE_COMMAND, "biologist_time %d", biologisttime);
-	}
-#endif
-
-#ifdef __HIDE_COSTUME_SYSTEM__
-	ch->SetBodyCostumeHidden(ch->GetQuestFlag("costume_option.hide_body") == 1 ? true : false, true);
-	ch->SetHairCostumeHidden(ch->GetQuestFlag("costume_option.hide_hair") == 1 ? true : false, true);
-#ifdef ENABLE_ACCE_SYSTEM
-	ch->SetAcceCostumeHidden(ch->GetQuestFlag("costume_option.hide_acce") == 1 ? true : false, true);
-#endif
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
-	ch->SetWeaponCostumeHidden(ch->GetQuestFlag("costume_option.hide_weapon") == 1 ? true : false, true);
-#endif
-#endif
-#ifdef ENABLE_LOCKED_EXTRA_INVENTORY
-	ch->PointChange(POINT_EXTRA_INVENTORY1, ch->GetQuestFlag("lock_extra.cat1"));
-	ch->PointChange(POINT_EXTRA_INVENTORY2, ch->GetQuestFlag("lock_extra.cat2"));
-	ch->PointChange(POINT_EXTRA_INVENTORY3, ch->GetQuestFlag("lock_extra.cat3"));
-	ch->PointChange(POINT_EXTRA_INVENTORY4, ch->GetQuestFlag("lock_extra.cat4"));
-	ch->PointChange(POINT_EXTRA_INVENTORY5, ch->GetQuestFlag("lock_extra.cat5"));
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "RefreshExpandInventory");
-#endif
-#ifdef ENABLE_ANTICHEAT
-	ch->ClearCheatChecks();
-#endif
-#if defined(ENABLE_CHRISTMAS_2021) && defined(TEXTS_IMPROVEMENT)
-	if (quest::CQuestManager::instance().GetEventFlag("christmas_event") != 0)
-	{
-		ch->ChatPacketNew(CHAT_TYPE_NOTICE, 1305, "");
-	}
+#ifdef ENABLE_ITEMSHOP
+	ch->SendItemshopItemsPacket(CItemshopManager::instance().GetItemshopItems(), CItemshopManager::instance().GetItemshopCategories());
 #endif
 }
 
@@ -986,6 +696,7 @@ void CInputLogin::Empire(LPDESC d, const char * c_pData)
 			if (0 != r.players[i].dwID)
 			{
 				sys_err("EmpireSelectFailed %d", r.players[i].dwID);
+				d->DelayedDisconnect(0);
 				return;
 			}
 		}
@@ -1015,13 +726,10 @@ int CInputLogin::GuildSymbolUpload(LPDESC d, const char* c_pData, size_t uiBytes
 
 	if (iSymbolSize <= 0 || iSymbolSize > 64 * 1024)
 	{
-		// 64k 보다 큰 길드 심볼은 올릴수없다
-		// 접속을 끊고 무시
 		d->SetPhase(PHASE_CLOSE);
 		return 0;
 	}
 
-	// 땅을 소유하지 않은 길드인 경우.
 	if (!test_server)
 		if (!building::CManager::instance().FindLandByGuild(p->guild_id))
 		{
@@ -1060,7 +768,7 @@ void CInputLogin::GuildSymbolCRC(LPDESC d, const char* c_pData)
 		d->BufferedPacket(&GCPacket, sizeof(GCPacket));
 		d->Packet(&pkGS->raw[0], pkGS->raw.size());
 
-		sys_log(0, "SendGuildSymbolHead %02X%02X%02X%02X Size %d",
+		sys_log(0, "SendGuildSymbolHead %02X%02X%02X%02X Size %d", 
 				pkGS->raw[0], pkGS->raw[1], pkGS->raw[2], pkGS->raw[3], pkGS->raw.size());
 	}
 }
@@ -1102,7 +810,7 @@ void CInputLogin::GuildMarkUpload(LPDESC d, const char* c_pData)
 void CInputLogin::GuildMarkIDXList(LPDESC d, const char* c_pData)
 {
 	CGuildMarkManager & rkMarkMgr = CGuildMarkManager::instance();
-
+	
 	DWORD bufSize = sizeof(WORD) * 2 * rkMarkMgr.GetMarkCount();
 	char * buf = NULL;
 
@@ -1137,9 +845,9 @@ void CInputLogin::GuildMarkCRCList(LPDESC d, const char* c_pData)
 	CGuildMarkManager::instance().GetDiffBlocks(pCG->imgIdx, pCG->crclist, mapDiffBlocks);
 
 	DWORD blockCount = 0;
-	TEMP_BUFFER buf(1024 * 1024); // 1M 버퍼
+	TEMP_BUFFER buf(1024 * 1024);
 
-	for (itertype(mapDiffBlocks) it = mapDiffBlocks.begin(); it != mapDiffBlocks.end(); ++it)
+	for (auto it = mapDiffBlocks.begin(); it != mapDiffBlocks.end(); ++it)
 	{
 		BYTE posBlock = it->first;
 		const SGuildMarkBlock & rkBlock = *it->second;
@@ -1214,9 +922,9 @@ int CInputLogin::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		case HEADER_CG_MOVE:
 			break;
 
-			///////////////////////////////////////
-			// Guild Mark
-			/////////////////////////////////////
+		case HEADER_CG_MARK_LOGIN:
+			break;
+
 		case HEADER_CG_MARK_CRCLIST:
 			GuildMarkCRCList(d, c_pData);
 			break;
@@ -1229,9 +937,6 @@ int CInputLogin::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			GuildMarkUpload(d, c_pData);
 			break;
 
-			//////////////////////////////////////
-			// Guild Symbol
-			/////////////////////////////////////
 		case HEADER_CG_GUILD_SYMBOL_UPLOAD:
 			if ((iExtraLen = GuildSymbolUpload(d, c_pData, m_iBufferLeft)) < 0)
 				return -1;
@@ -1240,7 +945,6 @@ int CInputLogin::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		case HEADER_CG_SYMBOL_CRC:
 			GuildSymbolCRC(d, c_pData);
 			break;
-			/////////////////////////////////////
 
 		case HEADER_CG_HACK:
 			break;
@@ -1249,20 +953,8 @@ int CInputLogin::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			ChangeName(d, c_pData);
 			break;
 
-		case HEADER_CG_CLIENT_VERSION:
-			Version(d->GetCharacter(), c_pData);
-			break;
-
-		case HEADER_CG_CLIENT_VERSION2:
-			Version(d->GetCharacter(), c_pData);
-			break;
-		// @fixme120
-		case HEADER_CG_ITEM_USE:
-		case HEADER_CG_TARGET:
-			break;
 		default:
 			sys_err("login phase does not handle this packet! header %d", bHeader);
-			//d->SetPhase(PHASE_CLOSE);
 			return (0);
 	}
 

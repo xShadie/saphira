@@ -11,24 +11,25 @@
 #include "db.h"
 
 #include "party.h"
-#include "../../common/CommonDefines.h"
 
 extern LPFDWATCH	main_fdw;
 
 LPCLIENT_DESC db_clientdesc = NULL;
 LPCLIENT_DESC g_pkAuthMasterDesc = NULL;
 LPCLIENT_DESC g_NetmarbleDBDesc = NULL;
-LPCLIENT_DESC g_TeenDesc		= NULL;
 
 static const char* GetKnownClientDescName(LPCLIENT_DESC desc) {
-	if (desc == db_clientdesc) {
+	if (desc == db_clientdesc)
+	{
 		return "db_clientdesc";
-	} else if (desc == g_pkAuthMasterDesc) {
+	}
+	else if (desc == g_pkAuthMasterDesc)
+	{
 		return "g_pkAuthMasterDesc";
-	} else if (desc == g_NetmarbleDBDesc) {
+	}
+	else if (desc == g_NetmarbleDBDesc)
+	{
 		return "g_NetmarbleDBDesc";
-	} else if (desc == g_TeenDesc) {
-		return "g_TeenDesc";
 	}
 	return "unknown";
 }
@@ -58,7 +59,6 @@ void CLIENT_DESC::Destroy()
 		CPartyManager::instance().DeleteAllParty();
 		CPartyManager::instance().DisablePCParty();
 		CGuildManager::instance().StopAllGuildWar();
-		DBManager::instance().StopAllBilling();
 	}
 
 	fdwatch_del_fd(m_lpFdw, m_sock);
@@ -68,7 +68,6 @@ void CLIENT_DESC::Destroy()
 	socket_close(m_sock);
 	m_sock = INVALID_SOCKET;
 
-	// Chain up to base class Destroy()
 	DESC::Destroy();
 }
 
@@ -82,7 +81,7 @@ bool CLIENT_DESC::Connect(int iPhaseWhenSucceed)
 	if (iPhaseWhenSucceed != 0)
 		m_iPhaseWhenSucceed = iPhaseWhenSucceed;
 
-	if (get_global_time() - m_LastTryToConnectTime < 3)	// 3초
+	if (get_global_time() - m_LastTryToConnectTime < 3)
 		return false;
 
 	m_LastTryToConnectTime = get_global_time();
@@ -111,7 +110,6 @@ bool CLIENT_DESC::Connect(int iPhaseWhenSucceed)
 
 void CLIENT_DESC::Setup(LPFDWATCH _fdw, const char * _host, WORD _port)
 {
-	// 1MB input/output buffer
 	m_lpFdw = _fdw;
 	m_stHost = _host;
 	m_wPort = _port;
@@ -162,12 +160,11 @@ void CLIENT_DESC::SetPhase(int iPhase)
 					p.wListenPort = mother_port;
 					p.wP2PPort	= p2p_port;
 					p.bAuthServer = false;
-					map_allow_copy(p.alMaps, MAP_ALLOW_LIMIT);
+					map_allow_copy(p.alMaps, 32);
 
 					const DESC_MANAGER::DESC_SET & c_set = DESC_MANAGER::instance().GetClientSet();
-					DESC_MANAGER::DESC_SET::const_iterator it;
 
-					for (it = c_set.begin(); it != c_set.end(); ++it)
+					for (auto it = c_set.begin(); it != c_set.end(); ++it)
 					{
 						LPDESC d = *it;
 
@@ -181,7 +178,7 @@ void CLIENT_DESC::SetPhase(int iPhase)
 					{
 						TPacketLoginOnSetup pck;
 
-						for (it = c_set.begin(); it != c_set.end(); ++it)
+						for (auto it = c_set.begin(); it != c_set.end(); ++it)
 						{
 							LPDESC d = *it;
 
@@ -189,17 +186,11 @@ void CLIENT_DESC::SetPhase(int iPhase)
 
 							if (r.id != 0)
 							{
-#ifdef ENABLE_HWID
-								strlcpy(pck.hwid, r.hwid, sizeof(pck.hwid));
-#endif
 								pck.dwID = r.id;
 								strlcpy(pck.szLogin, r.login, sizeof(pck.szLogin));
 								strlcpy(pck.szSocialID, r.social_id, sizeof(pck.szSocialID));
 								strlcpy(pck.szHost, d->GetHostName(), sizeof(pck.szHost));
 								pck.dwLoginKey = d->GetLoginKey();
-#ifdef ENABLE_MULTI_LANGUAGE
-								pck.bLanguage = r.bLanguage;
-#endif
 #ifndef _IMPROVED_PACKET_ENCRYPTION_
 								thecore_memcpy(pck.adwClientKey, d->GetDecryptionKey(), 16);
 #endif
@@ -211,9 +202,7 @@ void CLIENT_DESC::SetPhase(int iPhase)
 
 					sys_log(0, "DB_SETUP current user %d size %d", p.dwLoginCount, buf.size());
 
-					// 파티를 처리할 수 있게 됨.
 					CPartyManager::instance().EnablePCParty();
-					//CPartyManager::instance().SendPartyToDB();
 				}
 				else
 				{
@@ -228,7 +217,7 @@ void CLIENT_DESC::SetPhase(int iPhase)
 
 		case PHASE_P2P:
 			sys_log(1, "PHASE_P2P");
-
+			
 			if (m_lpInputBuffer)
 				buffer_reset(m_lpInputBuffer);
 
@@ -240,11 +229,6 @@ void CLIENT_DESC::SetPhase(int iPhase)
 
 		case PHASE_CLOSE:
 			m_pInputProcessor = NULL;
-			break;
-
-		case PHASE_TEEN:
-			m_inputTeen.SetStep(0);
-			m_pInputProcessor = &m_inputTeen;
 			break;
 
 	}
@@ -290,7 +274,8 @@ bool CLIENT_DESC::IsRetryWhenClosed()
 
 void CLIENT_DESC::Update(DWORD t)
 {
-	if (!g_bAuthServer) {
+	if (!g_bAuthServer) 
+	{
 		UpdateChannelStatus(t, false);
 	}
 }
@@ -298,11 +283,11 @@ void CLIENT_DESC::Update(DWORD t)
 void CLIENT_DESC::UpdateChannelStatus(DWORD t, bool fForce)
 {
 	enum {
-		CHANNELSTATUS_UPDATE_PERIOD = 5*60*1000,	// 5분마다
+		CHANNELSTATUS_UPDATE_PERIOD = 5*60*1000,
 	};
-	DWORD tLCSUP = m_tLastChannelStatusUpdateTime+CHANNELSTATUS_UPDATE_PERIOD;
-	if (fForce || tLCSUP < t) {
-		int iTotal;
+	if (fForce || m_tLastChannelStatusUpdateTime+CHANNELSTATUS_UPDATE_PERIOD < t) 
+	{
+		int iTotal; 
 		int * paiEmpireUserCount;
 		int iLocal;
 		DESC_MANAGER::instance().GetUserCount(iTotal, &paiEmpireUserCount, iLocal);
@@ -320,7 +305,6 @@ void CLIENT_DESC::UpdateChannelStatus(DWORD t, bool fForce)
 
 void CLIENT_DESC::Reset()
 {
-	// Backup connection target info
 	LPFDWATCH fdw = m_lpFdw;
 	std::string host = m_stHost;
 	WORD port = m_wPort;
@@ -328,7 +312,6 @@ void CLIENT_DESC::Reset()
 	Destroy();
 	Initialize();
 
-	// Restore connection target info
 	m_lpFdw = fdw;
 	m_stHost = host;
 	m_wPort = port;

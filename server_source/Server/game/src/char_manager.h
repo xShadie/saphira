@@ -1,17 +1,6 @@
-#ifndef __INC_METIN_II_GAME_CHARACTER_MANAGER_H__
-#define __INC_METIN_II_GAME_CHARACTER_MANAGER_H__
-
-#ifdef ENABLE_EVENT_MANAGER
-#include "buffer_manager.h"
-#endif
-
-#ifdef M2_USE_POOL
-#include "pool.h"
-#endif
-
+#pragma once
 #include "../../common/stl.h"
 #include "../../common/length.h"
-
 #include "vid.h"
 
 class CDungeon;
@@ -21,28 +10,21 @@ class CharacterVectorInteractor;
 class CHARACTER_MANAGER : public singleton<CHARACTER_MANAGER>
 {
 	public:
-		typedef TR1_NS::unordered_map<std::string, LPCHARACTER> NAME_MAP;
+		typedef boost::unordered_map<std::string, LPCHARACTER> NAME_MAP;
 
 		CHARACTER_MANAGER();
 		virtual ~CHARACTER_MANAGER();
 
 		void                    Destroy();
 
-		void			GracefulShutdown();	// 정상적 셧다운할 때 사용. PC를 모두 저장시키고 Destroy 한다.
+		void			GracefulShutdown();
 
 		DWORD			AllocVID();
 
 		LPCHARACTER             CreateCharacter(const char * name, DWORD dwPID = 0);
-#ifndef DEBUG_ALLOC
 		void DestroyCharacter(LPCHARACTER ch);
-#else
-		void DestroyCharacter(LPCHARACTER ch, const char* file, size_t line);
-#endif
-#ifdef REGEN_ANDRA
-void	DestroyCharacterInMap(long lMapIndex);
-#endif
-		void			Update(int iPulse);
 
+		void			Update(int iPulse);
 		LPCHARACTER		SpawnMob(DWORD dwVnum, long lMapIndex, long x, long y, long z, bool bSpawnMotion = false, int iRot = -1, bool bShow = true);
 		LPCHARACTER		SpawnMobRange(DWORD dwVnum, long lMapIndex, int sx, int sy, int ex, int ey, bool bIsException=false, bool bSpawnMotion = false , bool bAggressive = false);
 		LPCHARACTER		SpawnGroup(DWORD dwVnum, long lMapIndex, int sx, int sy, int ex, int ey, LPREGEN pkRegen = NULL, bool bAggressive_ = false, LPDUNGEON pDungeon = NULL);
@@ -61,19 +43,11 @@ void	DestroyCharacterInMap(long lMapIndex);
 
 		bool			AddToStateList(LPCHARACTER ch);
 		void			RemoveFromStateList(LPCHARACTER ch);
-
-		// DelayedSave: 어떠한 루틴 내에서 저장을 해야 할 짓을 많이 하면 저장
-		// 쿼리가 너무 많아지므로 "저장을 한다" 라고 표시만 해두고 잠깐
-		// (예: 1 frame) 후에 저장시킨다.
-		void                    DelayedSave(LPCHARACTER ch);
-		bool                    FlushDelayedSave(LPCHARACTER ch); // Delayed 리스트에 있다면 지우고 저장한다. 끊김 처리시 사용 됨.
+		void			DelayedSave(LPCHARACTER ch);
+		bool			FlushDelayedSave(LPCHARACTER ch);
 		void			ProcessDelayedSave();
 
 		template<class Func>	Func for_each_pc(Func f);
-
-		void			RegisterForMonsterLog(LPCHARACTER ch);
-		void			UnregisterForMonsterLog(LPCHARACTER ch);
-		void			PacketMonsterLog(LPCHARACTER ch, const void* buf, int size);
 
 		void			KillLog(DWORD dwVnum);
 
@@ -104,26 +78,10 @@ void	DestroyCharacterInMap(long lMapIndex);
 		int			GetMobExpRate(LPCHARACTER ch);
 
 		int			GetUserDamageRate(LPCHARACTER ch);
-		void		SendScriptToMap(long lMapIndex, const std::string & s);
+		void		SendScriptToMap(long lMapIndex, const std::string & s); 
 
 		bool			BeginPendingDestroy();
 		void			FlushPendingDestroy();
-
-#ifdef ENABLE_EVENT_MANAGER
-	public:
-		void			ClearEventData();
-		bool			CloseEventManuel(BYTE eventIndex);
-		void			SetEventData(BYTE dayIndex, const std::vector<TEventManagerData>& m_data);
-		void			SetEventStatus(const WORD eventID, const bool eventStatus, const int endTime);
-		void			SendDataPlayer(LPCHARACTER ch);
-		void			CheckBonusEvent(LPCHARACTER ch);
-		void			UpdateAllPlayerEventData();
-		void			CompareEventSendData(TEMP_BUFFER* buf);
-		const TEventManagerData* CheckEventIsActive(BYTE eventIndex, BYTE empireIndex = 0);
-		void			CheckEventForDrop(LPCHARACTER pkChr, LPCHARACTER pkKiller, std::vector<LPITEM>& vec_item);
-	protected:
-		std::map<BYTE, std::vector<TEventManagerData>>	m_eventData;
-#endif
 
 	private:
 		int					m_iMobItemRate;
@@ -139,17 +97,15 @@ void	DestroyCharacterInMap(long lMapIndex);
 
 		int					m_iUserDamageRate;
 		int					m_iUserDamageRatePremium;
-		DWORD				m_iVIDCount;
+		int					m_iVIDCount;
 
-		TR1_NS::unordered_map<DWORD, LPCHARACTER> m_map_pkChrByVID;
-		TR1_NS::unordered_map<DWORD, LPCHARACTER> m_map_pkChrByPID;
+		boost::unordered_map<DWORD, LPCHARACTER> m_map_pkChrByVID;
+		boost::unordered_map<DWORD, LPCHARACTER> m_map_pkChrByPID;
 		NAME_MAP			m_map_pkPCChr;
 
-		char				dummy1[1024];	// memory barrier
-		CHARACTER_SET		m_set_pkChrState;	// FSM이 돌아가고 있는 놈들
+		char				dummy1[1024];
+		CHARACTER_SET		m_set_pkChrState;
 		CHARACTER_SET		m_set_pkChrForDelayedSave;
-		CHARACTER_SET		m_set_pkChrMonsterLog;
-
 		LPCHARACTER			m_pkChrSelectedStone;
 
 		std::map<DWORD, DWORD> m_map_dwMobKillCount;
@@ -160,17 +116,38 @@ void	DestroyCharacterInMap(long lMapIndex);
 		bool				m_bUsePendingDestroy;
 		CHARACTER_SET		m_set_pkChrPendingDestroy;
 
-#ifdef M2_USE_POOL
-		ObjectPool<CHARACTER> pool_;
+
+#ifdef ENABLE_ITEMSHOP
+	public:
+		void			SendItemshopSingleRemoveItem(TItemshopItemTable* item);
+		void			SendItemshopSingleAddItem(TItemshopItemTable* item);
+		void			SendItemshopSingleItemRefresh(TItemshopItemTable* item);
+		void			SendItemshopItems();
+#endif
+#ifdef ENABLE_REWARD_SYSTEM
+	public:
+		void	LoadRewardData();
+		void	SetRewardData(BYTE rewardIndex, const char* playerName, bool isP2P);
+		bool	IsRewardEmpty(BYTE rewardIndex);
+		void	SendRewardInfo(LPCHARACTER ch);
+	protected:
+		std::map<BYTE, TRewardInfo> m_rewardData;
+#endif
+#ifdef ENABLE_MULTI_FARM_BLOCK
+	public:
+		int	GetMultiFarmCount(const char* szIP);
+		void	CheckMultiFarmAccount(const char* szIP, const DWORD playerID, const bool bStatus, BYTE affectType = 0, int affectDuration = 0, bool isP2P = false);
+		void	SetMultiFarm(const char* szIP, const DWORD playerID, const bool bStatus, const BYTE affectType, const int affectTime);
+		void	RemoveMultiFarm(const char* szIP, const DWORD playerID, const bool isP2P);
+	protected:
+		std::map<std::string, std::vector<TMultiFarm>> m_mapmultiFarm;
 #endif
 };
 
-	template<class Func>
+	template<class Func>	
 Func CHARACTER_MANAGER::for_each_pc(Func f)
 {
-	TR1_NS::unordered_map<DWORD, LPCHARACTER>::iterator it;
-
-	for (it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); ++it)
+	for (auto it = m_map_pkChrByPID.begin(); it != m_map_pkChrByPID.end(); ++it)
 		f(it->second);
 
 	return f;
@@ -188,10 +165,4 @@ class CharacterVectorInteractor : public CHARACTER_VECTOR
 		bool m_bMyBegin;
 };
 
-#ifndef DEBUG_ALLOC
 #define M2_DESTROY_CHARACTER(ptr) CHARACTER_MANAGER::instance().DestroyCharacter(ptr)
-#else
-#define M2_DESTROY_CHARACTER(ptr) CHARACTER_MANAGER::instance().DestroyCharacter(ptr, __FILE__, __LINE__)
-#endif
-
-#endif

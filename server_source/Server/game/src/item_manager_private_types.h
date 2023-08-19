@@ -8,7 +8,7 @@ public:
 
 	  int	m_iLevelStart;
 	  int	m_iLevelEnd;
-	  int	m_iPercent; // 1 ~ 1000
+	  int	m_iPercent;
 	  DWORD	m_dwVnum;
 
 	  friend bool operator < (const CItemDropInfo & l, const CItemDropInfo & r)

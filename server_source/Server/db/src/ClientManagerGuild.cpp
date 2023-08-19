@@ -1,4 +1,3 @@
-// vim:ts=4 sw=4
 #include "stdafx.h"
 #include "ClientManager.h"
 #include "Main.h"
@@ -29,13 +28,13 @@ void CClientManager::GuildAddMember(CPeer* peer, TPacketGDGuildAddMember * p)
 
 	char szQuery[512];
 
-	snprintf(szQuery, sizeof(szQuery),
+	snprintf(szQuery, sizeof(szQuery), 
 			"INSERT INTO guild_member%s VALUES(%u, %u, %d, 0, 0)",
 			GetTablePostfix(), p->dwPID, p->dwGuild, p->bGrade);
 
 	std::unique_ptr<SQLMsg> pmsg_insert(CDBManager::instance().DirectQuery(szQuery));
 
-	snprintf(szQuery, sizeof(szQuery),
+	snprintf(szQuery, sizeof(szQuery), 
 			"SELECT pid, grade, is_general, offer, level, job, name FROM guild_member%s, player%s WHERE guild_id = %u and pid = id and pid = %u", GetTablePostfix(), GetTablePostfix(), p->dwGuild, p->dwPID);
 
 	std::unique_ptr<SQLMsg> pmsg(CDBManager::instance().DirectQuery(szQuery));
@@ -73,8 +72,7 @@ void CClientManager::GuildRemoveMember(CPeer* peer, TPacketGuild* p)
 	snprintf(szQuery, sizeof(szQuery), "DELETE FROM guild_member%s WHERE pid=%u and guild_id=%u", GetTablePostfix(), p->dwInfo, p->dwGuild);
 	CDBManager::instance().AsyncQuery(szQuery);
 
-	// @fixme202 new_+withdraw_time
-	snprintf(szQuery, sizeof(szQuery), "REPLACE INTO quest%s (dwPID, szName, szState, lValue) VALUES(%u, 'guild_manage', 'new_withdraw_time', %u)", GetTablePostfix(), p->dwInfo, (DWORD) GetCurrentTime());
+	snprintf(szQuery, sizeof(szQuery), "REPLACE INTO quest%s (dwPID, szName, szState, lValue) VALUES(%u, 'guild_manage', 'withdraw_time', %u)", GetTablePostfix(), p->dwInfo, (DWORD) GetCurrentTime());
 	CDBManager::instance().AsyncQuery(szQuery);
 
 	ForwardPacket(HEADER_DG_GUILD_REMOVE_MEMBER, p, sizeof(TPacketGuild));
@@ -110,13 +108,12 @@ void CClientManager::GuildDisband(CPeer* peer, TPacketGuild* p)
 	snprintf(szQuery, sizeof(szQuery), "DELETE FROM guild_grade%s WHERE guild_id=%u", GetTablePostfix(), p->dwGuild);
 	CDBManager::instance().AsyncQuery(szQuery);
 
-	// @fixme401 (withdraw -> new_disband)_time
-	snprintf(szQuery, sizeof(szQuery), "REPLACE INTO quest%s (dwPID, szName, szState, lValue) SELECT pid, 'guild_manage', 'new_disband_time', %u FROM guild_member%s WHERE guild_id = %u", GetTablePostfix(), (DWORD) GetCurrentTime(), GetTablePostfix(), p->dwGuild);
+	snprintf(szQuery, sizeof(szQuery), "REPLACE INTO quest%s (dwPID, szName, szState, lValue) SELECT pid, 'guild_manage', 'withdraw_time', %u FROM guild_member%s WHERE guild_id = %u", GetTablePostfix(), (DWORD) GetCurrentTime(), GetTablePostfix(), p->dwGuild);
 	CDBManager::instance().AsyncQuery(szQuery);
 
 	snprintf(szQuery, sizeof(szQuery), "DELETE FROM guild_member%s WHERE guild_id=%u", GetTablePostfix(), p->dwGuild);
 	CDBManager::instance().AsyncQuery(szQuery);
-
+	
 	snprintf(szQuery, sizeof(szQuery), "DELETE FROM guild_comment%s WHERE guild_id=%u", GetTablePostfix(), p->dwGuild);
 	CDBManager::instance().AsyncQuery(szQuery);
 
@@ -128,13 +125,13 @@ const char* __GetWarType(int n)
 	switch (n)
 	{
 		case 0 :
-			return "Field";
+			return "패왕";
 		case 1 :
-			return "Theater";
+			return "맹장";
 		case 2 :
-			return "CTF"; //Capture The Flag
+			return "수호";
 		default :
-			return "Wrong number";
+			return "없는 번호";
 	}
 }
 
@@ -151,19 +148,11 @@ void CClientManager::GuildWar(CPeer* peer, TPacketGuildWar* p)
 			sys_log(0, "GuildWar: GUILD_WAR_REFUSE type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 			break;
-			/*
-			   case GUILD_WAR_WAIT_START:
-			   CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 
-			   if (!CGuildManager::instance().WaitStart(p))
-			   p->bWar = GUILD_WAR_CANCEL;
-
-			   break;
-			   */
 
 		case GUILD_WAR_WAIT_START:
 			sys_log(0, "GuildWar: GUILD_WAR_WAIT_START type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
-		case GUILD_WAR_RESERVE:	// 길드전 예약
+		case GUILD_WAR_RESERVE:
 			if (p->bWar != GUILD_WAR_WAIT_START)
 				sys_log(0, "GuildWar: GUILD_WAR_RESERVE type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
@@ -175,21 +164,21 @@ void CClientManager::GuildWar(CPeer* peer, TPacketGuildWar* p)
 
 			break;
 
-		case GUILD_WAR_ON_WAR:		// 길드전을 시작 시킨다. (필드전은 바로 시작 됨)
+		case GUILD_WAR_ON_WAR:
 			sys_log(0, "GuildWar: GUILD_WAR_ON_WAR type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().StartWar(p->bType, p->dwGuildFrom, p->dwGuildTo);
 			break;
 
-		case GUILD_WAR_OVER:		// 길드전 정상 종료
+		case GUILD_WAR_OVER:
 			sys_log(0, "GuildWar: GUILD_WAR_OVER type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RecvWarOver(p->dwGuildFrom, p->dwGuildTo, p->bType, p->lWarPrice);
 			break;
 
-		case GUILD_WAR_END:		// 길드전 비정상 종료
+		case GUILD_WAR_END:
 			sys_log(0, "GuildWar: GUILD_WAR_END type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RecvWarEnd(p->dwGuildFrom, p->dwGuildTo);
-			return; // NOTE: RecvWarEnd에서 패킷을 보내므로 따로 브로드캐스팅 하지 않는다.
+			return;
 
 		case GUILD_WAR_CANCEL :
 			sys_log(0, "GuildWar: GUILD_WAR_CANCEL type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
@@ -204,13 +193,6 @@ void CClientManager::GuildWarScore(CPeer* peer, TPacketGuildWarScore * p)
 {
 	CGuildManager::instance().UpdateScore(p->dwGuildGainPoint, p->dwGuildOpponent, p->lScore, p->lBetScore);
 }
-
-#ifdef ADVANCED_GUILD_INFO
-void CClientManager::GuildResetInfo()
-{
-	CGuildManager::instance().ResetAllInfo();
-}
-#endif
 
 void CClientManager::GuildChangeLadderPoint(TPacketGuildLadderPoint* p)
 {

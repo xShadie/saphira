@@ -1,4 +1,3 @@
-// vim:ts=4 sw=4
 #include "stdafx.h"
 #include "ClientManager.h"
 #include "Main.h"
@@ -34,7 +33,7 @@ void CClientManager::SetEventFlag(TPacketSetEventFlag* p)
 
 	bool bChanged = false;
 
-	__typeof(m_map_lEventFlag.begin()) it = m_map_lEventFlag.find(p->szFlagName);
+	auto it = m_map_lEventFlag.find(p->szFlagName);
 	if (it == m_map_lEventFlag.end())
 	{
 		bChanged = true;
@@ -54,7 +53,6 @@ void CClientManager::SetEventFlag(TPacketSetEventFlag* p)
 				GetTablePostfix(), p->szFlagName, p->lValue);
 		szQuery[1023] = '\0';
 
-		//CDBManager::instance().ReturnQuery(szQuery, QID_QUEST_SAVE, 0, NULL);
 		CDBManager::instance().AsyncQuery(szQuery);
 		sys_log(0, "HEADER_GD_SET_EVENT_FLAG : Changed CClientmanager::SetEventFlag(%s %d) ", p->szFlagName, p->lValue);
 		return;
@@ -64,8 +62,7 @@ void CClientManager::SetEventFlag(TPacketSetEventFlag* p)
 
 void CClientManager::SendEventFlagsOnSetup(CPeer* peer)
 {
-	__typeof(m_map_lEventFlag.begin()) it;
-	for (it = m_map_lEventFlag.begin(); it != m_map_lEventFlag.end(); ++it)
+	for (auto it = m_map_lEventFlag.begin(); it != m_map_lEventFlag.end(); ++it)
 	{
 		TPacketSetEventFlag p;
 		strlcpy(p.szFlagName, it->first.c_str(), sizeof(p.szFlagName));

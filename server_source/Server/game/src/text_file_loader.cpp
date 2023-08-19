@@ -19,7 +19,7 @@ CTextFileLoader::CTextFileLoader()
 }
 
 CTextFileLoader::~CTextFileLoader()
-{
+{	
 }
 
 const char * CTextFileLoader::GetFileName()
@@ -69,7 +69,6 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 		if ('}' == stTokenVector[0][0])
 			break;
 
-		// Group
 		if (0 == stTokenVector[0].compare("group"))
 		{
 			if (2 != stTokenVector.size())
@@ -91,7 +90,6 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 
 			LoadGroup(pNewNode);
 		}
-		// List
 		else if (0 == stTokenVector[0].compare("list"))
 		{
 			if (2 != stTokenVector.size())
@@ -260,7 +258,7 @@ BOOL CTextFileLoader::GetTokenVector(const std::string & c_rstrKey, TTokenVector
 		return FALSE;
 	}
 
-	TTokenVectorMap::iterator it = m_pcurNode->LocalTokenVectorMap.find(c_rstrKey);
+	auto it = m_pcurNode->LocalTokenVectorMap.find(c_rstrKey);
 	if (m_pcurNode->LocalTokenVectorMap.end() == it)
 	{
 		sys_log(2, " CTextFileLoader::GetTokenVector - Failed to find the key %s [%s :: %s]", m_strFileName.c_str(), m_pcurNode->strGroupName.c_str(), c_rstrKey.c_str());

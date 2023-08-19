@@ -1,17 +1,14 @@
-#ifndef __INC_METIN_II_GAME_PACKET_HEADER_INFO_H__
-#define __INC_METIN_II_GAME_PACKET_HEADER_INFO_H__
+#pragma once
 
 #include "packet.h"
 
 typedef struct SPacketElement
 {
-	int		iSize;
+	int			iSize;
 	std::string	stName;
-	int		iCalled;
-	DWORD	dwLoad;
-#ifndef __DISABLE_SEND_SEQUENCE__
-	bool	bSequencePacket;
-#endif
+	int			iCalled;
+	DWORD		dwLoad;
+	bool		bSequencePacket;
 } TPacketElement;
 
 class CPacketInfo
@@ -20,17 +17,14 @@ class CPacketInfo
 		CPacketInfo();
 		virtual ~CPacketInfo();
 
-		void Set(int header, int size, const char* c_pszName, bool bSeq = false);
+		void Set(int header, int size, const char * c_pszName, bool bSeq=false);
 		bool Get(int header, int * size, const char ** c_ppszName);
-
 		void Start();
 		void End();
-
 		void Log(const char * c_pszFileName);
-
-#ifndef __DISABLE_SEND_SEQUENCE__
-	bool IsSequence(int header);
-	void SetSequence(int header, bool bSeq);
+#ifdef ENABLE_SEQUENCE_SYSTEM
+		bool IsSequence(int header);
+		void SetSequence(int header, bool bSeq);
 #endif
 
 	private:
@@ -49,7 +43,6 @@ class CPacketInfoCG : public CPacketInfo
 		virtual ~CPacketInfoCG();
 };
 
-// PacketInfo P2P
 class CPacketInfoGG : public CPacketInfo
 {
 	public:
@@ -57,12 +50,9 @@ class CPacketInfoGG : public CPacketInfo
 		virtual ~CPacketInfoGG();
 };
 
-/// Implemented in input_udp.cpp
 class CPacketInfoUDP : public CPacketInfo
 {
 	public:
 		CPacketInfoUDP();
 		virtual ~CPacketInfoUDP();
 };
-
-#endif

@@ -2,7 +2,7 @@ namespace boost
 {
     class any
     {
-    public: // structors
+    public:
 
         any()
           : content(0)
@@ -25,7 +25,7 @@ namespace boost
             delete content;
         }
 
-    public: // modifiers
+    public:
 
         any & swap(any & rhs)
         {
@@ -51,24 +51,24 @@ namespace boost
 	    (*content)(func_arg);
 	}
 
-    public: // queries
+    public:
 
         bool empty() const
         {
             return !content;
         }
 
-    private: // types
+    private:
 
         class placeholder
         {
-        public: // structors
+        public:
     
             virtual ~placeholder()
             {
             }
 
-        public: // queries
+        public:
 
             virtual placeholder * clone() const = 0;
 
@@ -79,14 +79,14 @@ namespace boost
         template<typename ValueType>
         class holder : public placeholder
         {
-        public: // structors
+        public:
 
             holder(const ValueType & value)
               : held(value)
             {
             }
 
-        public: // queries
+        public:
 
             virtual placeholder * clone() const
             {
@@ -98,13 +98,13 @@ namespace boost
 		held(func_arg);
 	    }
 
-        public: // representation
+        public:
 
             ValueType held;
 
         };
 
-    private: // representation
+    private:
 
         template<typename ValueType>
         friend ValueType * any_cast(any *);

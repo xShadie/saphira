@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "config.h"
 #include "constants.h"
 #include "questmanager.h"
 #include "packet.h"
@@ -7,6 +6,8 @@
 #include "char.h"
 #include "desc_client.h"
 #include "questevent.h"
+
+extern int test_server;
 
 namespace quest
 {
@@ -62,7 +63,7 @@ namespace quest
 			return;
 		}
 
-		TFlagMap::iterator it = m_FlagMap.find(name);
+		auto it = m_FlagMap.find(name);
 
 		if (it == m_FlagMap.end())
 			m_FlagMap.insert(make_pair(name, value));
@@ -77,7 +78,7 @@ namespace quest
 
 	bool PC::DeleteFlag(const string & name)
 	{
-		TFlagMap::iterator it = m_FlagMap.find(name);
+		auto it = m_FlagMap.find(name);
 
 		if (it != m_FlagMap.end())
 		{
@@ -91,7 +92,7 @@ namespace quest
 
 	int PC::GetFlag(const string & name)
 	{
-		TFlagMap::iterator it = m_FlagMap.find(name);
+		auto it = m_FlagMap.find(name);
 
 		if (it != m_FlagMap.end())
 		{
@@ -103,7 +104,7 @@ namespace quest
 
 	void PC::SaveFlag(const string & name, int value)
 	{
-		TFlagMap::iterator it = m_FlagSaveMap.find(name);
+		auto it = m_FlagSaveMap.find(name);
 
 		if (it == m_FlagSaveMap.end())
 			m_FlagSaveMap.insert(make_pair(name, value));
@@ -111,8 +112,7 @@ namespace quest
 			it->second = value;
 	}
 
-	// only from lua call
-	void PC::SetCurrentQuestStateName(const string& state_name)
+	void PC::SetCurrentQuestStateName(const string& state_name) 
 	{
 		SetFlag(m_stCurQuest + ".__status", CQuestManager::Instance().GetQuestStateIndex(m_stCurQuest,state_name));
 	}
@@ -139,9 +139,8 @@ namespace quest
 
 	void PC::SetQuest(const string& quest_name, QuestState& qs)
 	{
-		//sys_log(0, "PC SetQuest %s", quest_name.c_str());
 		unsigned int qi = CQuestManager::instance().GetQuestIndexByName(quest_name);
-		QuestInfo::iterator it = m_QuestInfo.find(qi);
+		auto it = m_QuestInfo.find(qi);
 
 		if (it == m_QuestInfo.end())
 			m_QuestInfo.insert(make_pair(qi, qs));
@@ -155,13 +154,8 @@ namespace quest
 		m_iLastState = qs.st;
 		SetFlag(quest_name + ".__status", qs.st);
 
-		//m_RunningQuestState->iIndex = GetCurrentQuestBeginFlag();
 		m_RunningQuestState->iIndex = qi;
 		m_bShouldSendDone = false;
-		//if (GetCurrentQuestBeginFlag())
-		//{
-		//m_bSendToClient = true;
-		//}
 	}
 
 	void PC::AddTimer(const string & name, LPEVENT pEvent)
@@ -173,7 +167,7 @@ namespace quest
 
 	void PC::RemoveTimerNotCancel(const string & name)
 	{
-		TTimerMap::iterator it = m_TimerMap.find(name);
+		auto it = m_TimerMap.find(name);
 
 		if (it != m_TimerMap.end())
 		{
@@ -186,7 +180,7 @@ namespace quest
 
 	void PC::RemoveTimer(const string & name)
 	{
-		TTimerMap::iterator it = m_TimerMap.find(name);
+		auto it = m_TimerMap.find(name);
 
 		if (it != m_TimerMap.end())
 		{
@@ -201,7 +195,7 @@ namespace quest
 	void PC::ClearTimer()
 	{
 		sys_log(0, "QUEST clear timer %d", m_TimerMap.size());
-		TTimerMap::iterator it = m_TimerMap.begin();
+		auto it = m_TimerMap.begin();
 
 		while (it != m_TimerMap.end())
 		{
@@ -234,12 +228,18 @@ namespace quest
 		assert(m_RunningQuestState);
 
 		packet_quest_info qi;
+
 		qi.header = HEADER_GC_QUEST_INFO;
 		qi.size = sizeof(struct packet_quest_info);
 		qi.index = m_RunningQuestState->iIndex;
 		qi.flag = m_iSendToClient;
-#ifdef __QUEST_RENEWAL__
-		qi.c_index = CQuestManager::instance().GetQuestCategoryByQuestIndex(qi.index);
+#if defined(__QUEST_RENEWAL__)
+		qi.type = CQuestManager::instance().ReadQuestCategoryFile(qi.index);
+
+		qi.is_confirmed = false;
+		const LPCHARACTER c_lpCh = CQuestManager::instance().GetCurrentCharacterPtr();
+		if (c_lpCh != NULL)
+			qi.is_confirmed = static_cast<bool>(c_lpCh->GetQuestFlag(m_stCurQuest + ".is_confirmed"));
 #endif
 
 		TEMP_BUFFER buf;
@@ -247,127 +247,72 @@ namespace quest
 
 		if (m_iSendToClient & QUEST_SEND_ISBEGIN)
 		{
-			BYTE temp = m_RunningQuestState->bStart ? 1 : 0;
-			buf.write(&temp, 1);
-			qi.size += 1;
+			BYTE temp = m_RunningQuestState->bStart?1:0;
+			buf.write(&temp,1);		
+			qi.size+=1;
 
 			sys_log(1, "QUEST BeginFlag %d", (int)temp);
 		}
-
 		if (m_iSendToClient & QUEST_SEND_TITLE)
 		{
-			m_RunningQuestState->_title.reserve(30 + 1);
-			buf.write(m_RunningQuestState->_title.c_str(), 30 + 1);
-			qi.size += 30 + 1;
+			m_RunningQuestState->_title.reserve(30+1);
+			buf.write(m_RunningQuestState->_title.c_str(), 30+1);
+			qi.size+=30+1;
 
 			sys_log(1, "QUEST Title %s", m_RunningQuestState->_title.c_str());
 		}
-
 		if (m_iSendToClient & QUEST_SEND_CLOCK_NAME)
 		{
-			m_RunningQuestState->_clock_name.reserve(16 + 1);
-			buf.write(m_RunningQuestState->_clock_name.c_str(), 16 + 1);
-			qi.size += 16 + 1;
+			m_RunningQuestState->_clock_name.reserve(16+1);
+			buf.write(m_RunningQuestState->_clock_name.c_str(), 16+1);
+			qi.size+=16+1;
 
 			sys_log(1, "QUEST Clock Name %s", m_RunningQuestState->_clock_name.c_str());
 		}
-
 		if (m_iSendToClient & QUEST_SEND_CLOCK_VALUE)
 		{
 			buf.write(&m_RunningQuestState->_clock_value, sizeof(int));
-			qi.size += 4;
+			qi.size+=4;
 
 			sys_log(1, "QUEST Clock Value %d", m_RunningQuestState->_clock_value);
 		}
-
 		if (m_iSendToClient & QUEST_SEND_COUNTER_NAME)
 		{
-			m_RunningQuestState->_counter_name.reserve(16 + 1);
-			buf.write(m_RunningQuestState->_counter_name.c_str(), 16 + 1);
-			qi.size += 16 + 1;
+			m_RunningQuestState->_counter_name.reserve(16+1);
+			buf.write(m_RunningQuestState->_counter_name.c_str(), 16+1);
+			qi.size+=16+1;
 
 			sys_log(1, "QUEST Counter Name %s", m_RunningQuestState->_counter_name.c_str());
 		}
-
 		if (m_iSendToClient & QUEST_SEND_COUNTER_VALUE)
 		{
 			buf.write(&m_RunningQuestState->_counter_value, sizeof(int));
-			qi.size += 4;
+			qi.size+=4;
 
 			sys_log(1, "QUEST Counter Value %d", m_RunningQuestState->_counter_value);
 		}
-
 		if (m_iSendToClient & QUEST_SEND_ICON_FILE)
 		{
-			m_RunningQuestState->_icon_file.reserve(24 + 1);
-			buf.write(m_RunningQuestState->_icon_file.c_str(), 24 + 1);
-			qi.size += 24 + 1;
+			m_RunningQuestState->_icon_file.reserve(24+1);
+			buf.write(m_RunningQuestState->_icon_file.c_str(), 24+1);
+			qi.size+=24+1;
 
 			sys_log(1, "QUEST Icon File %s", m_RunningQuestState->_icon_file.c_str());
 		}
 
-		CQuestManager::instance().GetCurrentCharacterPtr()->GetDesc()->Packet(buf.read_peek(), buf.size());
+		CQuestManager::instance().GetCurrentCharacterPtr()->GetDesc()->Packet(buf.read_peek(),buf.size());
 
 		m_iSendToClient = 0;
-//		if (m_iSendToClient & QUEST_SEND_TITLE) {
-//			m_RunningQuestState->_title.reserve(30+1);
-//			strlcpy(qi.szTitle, m_RunningQuestState->_title.c_str(), sizeof(qi.szTitle));
-//		}
-//		qi.szTitle[30] = '\0';
-//
-//		if (m_iSendToClient & QUEST_SEND_ISBEGIN) {
-//			qi.isBegin = m_RunningQuestState->bStart?1:0;
-//		}
-//		else {
-//			qi.isBegin = 0;
-//		}
-//
-//		if (m_iSendToClient & QUEST_SEND_CLOCK_NAME) {
-//			m_RunningQuestState->_clock_name.reserve(16+1);
-//			strlcpy(qi.szClockName, m_RunningQuestState->_clock_name.c_str(), sizeof(qi.szClockName));
-//		}
-//		qi.szClockName[16] = '\0';
-//
-//		if (m_iSendToClient & QUEST_SEND_CLOCK_VALUE) {
-//			qi.iClockValue = m_RunningQuestState->_clock_value;
-//		}
-//		else  {
-//			qi.iClockValue = 0;
-//		}
-//
-//		if (m_iSendToClient & QUEST_SEND_COUNTER_NAME) {
-//			m_RunningQuestState->_counter_name.reserve(16+1);
-//			strlcpy(qi.szCounterName, m_RunningQuestState->_counter_name.c_str(), sizeof(qi.szCounterName));
-//		}
-//		qi.szCounterName[16] = '\0';
-//
-//		if (m_iSendToClient & QUEST_SEND_COUNTER_VALUE) {
-//			qi.iCounterValue = m_RunningQuestState->_counter_value;
-//		}
-//		else {
-//			qi.iCounterValue = 0;
-//		}
-//
-//		if (m_iSendToClient & QUEST_SEND_ICON_FILE) {
-//			m_RunningQuestState->_icon_file.reserve(24+1);
-//			strlcpy(qi.szIconFileName, m_RunningQuestState->_icon_file.c_str(), sizeof(qi.szIconFileName));
-//		}
-//		qi.szIconFileName[24] = '\0';
-//
-//		CQuestManager::instance().GetCurrentCharacterPtr()->GetDesc()->Packet(&qi, sizeof(qi));
-//		m_iSendToClient = 0;
+
 	}
 
 	void PC::EndRunning()
 	{
-		// unlocked locked npc
 		{
 			LPCHARACTER npc = CQuestManager::instance().GetCurrentNPCCharacterPtr();
 			LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-			// npc 있었던 경우
 			if (npc && !npc->IsPC())
 			{
-				// 그 엔피씨가 나에게 락인 경우
 				if (ch->GetPlayerID() == npc->GetQuestNPCID())
 				{
 					npc->SetQuestNPCID(0);
@@ -377,7 +322,6 @@ namespace quest
 			}
 		}
 
-		// commit data
 		if (HasReward())
 		{
 			Save();
@@ -439,7 +383,7 @@ namespace quest
 				continue;
 
 			DWORD dwQuestIdx = rInfo.quest_idx;
-			QuestInfoIterator it = quest_find(dwQuestIdx);
+			auto it = quest_find(dwQuestIdx);
 			const string stQuestName = CQuestManager::instance().GetQuestNameByIndex(dwQuestIdx);
 
 			if (it == quest_end())
@@ -470,7 +414,6 @@ namespace quest
 
 	void PC::CancelRunning()
 	{
-		// cancel data
 		m_RunningQuestState = 0;
 		m_iSendToClient = 0;
 		m_bShouldSendDone = false;
@@ -483,10 +426,8 @@ namespace quest
 
 	void PC::ClearCurrentQuestBeginFlag()
 	{
-		//cerr << "iIndex " << m_RunningQuestState->iIndex << endl;
 		SetSendFlag(QUEST_SEND_ISBEGIN);
 		m_RunningQuestState->bStart = false;
-		//SetFlag(m_stCurQuest+".__isbegin", 0);
 	}
 
 	void PC::SetCurrentQuestBeginFlag()
@@ -497,13 +438,11 @@ namespace quest
 		m_RunningQuestState->iIndex = iQuestIndex;
 
 		SetSendFlag(QUEST_SEND_ISBEGIN);
-		//SetFlag(m_stCurQuest+".__isbegin", iQuestIndex);
 	}
 
 	int PC::GetCurrentQuestBeginFlag()
 	{
 		return m_RunningQuestState?m_RunningQuestState->iIndex:0;
-		//return GetFlag(m_stCurQuest+".__isbegin");
 	}
 
 	void PC::SetCurrentQuestTitle(const string& title)
@@ -514,12 +453,10 @@ namespace quest
 
 	void PC::SetQuestTitle(const string& quest, const string& title)
 	{
-		//SetSendFlag(QUEST_SEND_TITLE);
-		QuestInfo::iterator it = m_QuestInfo.find(CQuestManager::instance().GetQuestIndexByName(quest));
+		auto it = m_QuestInfo.find(CQuestManager::instance().GetQuestIndexByName(quest));
 
-		if (it != m_QuestInfo.end())
+		if (it != m_QuestInfo.end()) 
 		{
-			//(*it)->_title = title;
 			QuestState* old = m_RunningQuestState;
 			int old2 = m_iSendToClient;
 			std::string oldquestname = m_stCurQuest;
@@ -578,7 +515,7 @@ namespace quest
 
 		int i = 0;
 
-		TFlagMap::iterator it = m_FlagSaveMap.begin();
+		auto it = m_FlagSaveMap.begin();
 
 		while (it != m_FlagSaveMap.end())
 		{
@@ -657,7 +594,6 @@ namespace quest
 		if (!GetFlag(m_stCurQuest+"."+label))
 		{
 			m_vRewardData.push_back(RewardData(RewardData::REWARD_TYPE_ITEM, dwVnum, count));
-			//SetFlag(m_stCurQuest+"."+label,1);
 		}
 		else
 			m_bIsGivenReward = true;
@@ -670,7 +606,6 @@ namespace quest
 		if (!GetFlag(m_stCurQuest+"."+label))
 		{
 			m_vRewardData.push_back(RewardData(RewardData::REWARD_TYPE_EXP, exp));
-			//SetFlag(m_stCurQuest+"."+label,1);
 		}
 		else
 			m_bIsGivenReward = true;
@@ -680,13 +615,11 @@ namespace quest
 	{
 		if (m_bIsGivenReward)
 		{
-#ifdef TEXTS_IMPROVEMENT
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 191, "");
-#endif
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;392]");
 			m_bIsGivenReward = false;
 		}
 
-		for (vector<RewardData>::iterator it = m_vRewardData.begin(); it != m_vRewardData.end(); ++it)
+		for (auto it = m_vRewardData.begin(); it != m_vRewardData.end(); ++it)
 		{
 			switch (it->type)
 			{
@@ -716,8 +649,7 @@ namespace quest
 
 	void PC::Build()
 	{
-		itertype(m_FlagMap) it;
-		for (it = m_FlagMap.begin(); it != m_FlagMap.end(); ++it)
+		for (auto it = m_FlagMap.begin(); it != m_FlagMap.end(); ++it)
 		{
 			if (it->first.size()>9 && it->first.compare(it->first.size()-9,9, ".__status") == 0)
 			{
@@ -734,19 +666,18 @@ namespace quest
 	void PC::ClearQuest(const string& quest_name)
 	{
 		string quest_name_with_dot = quest_name + '.';
-		for (itertype(m_FlagMap) it = m_FlagMap.begin(); it!= m_FlagMap.end();)
+		for (auto it = m_FlagMap.begin(); it!= m_FlagMap.end();)
 		{
-			itertype(m_FlagMap) itNow = it++;
+			auto itNow = it++;
 			if (itNow->second != 0 && itNow->first.compare(0, quest_name_with_dot.size(), quest_name_with_dot) == 0)
 			{
-				//m_FlagMap.erase(itNow);
 				SetFlag(itNow->first, 0);
 			}
 		}
 
 		ClearTimer();
 
-		quest::PC::QuestInfoIterator it = quest_begin();
+		auto it = quest_begin();
 		unsigned int questindex = quest::CQuestManager::instance().GetQuestIndexByName(quest_name);
 
 		while (it!= quest_end())
@@ -763,21 +694,18 @@ namespace quest
 
 	void PC::SendFlagList(LPCHARACTER ch)
 	{
-		for (itertype(m_FlagMap) it = m_FlagMap.begin(); it!= m_FlagMap.end(); ++it)
+		for (auto it = m_FlagMap.begin(); it!= m_FlagMap.end(); ++it)
 		{
 			if (it->first.size()>9 && it->first.compare(it->first.size()-9,9, ".__status") == 0)
 			{
 				const string quest_name = it->first.substr(0, it->first.size()-9);
 				const char* state_name = CQuestManager::instance().GetQuestStateName(quest_name, it->second);
-#ifdef TEXTS_IMPROVEMENT
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 758, "%s#%s#%d", quest_name.c_str(), state_name, it->second);
-#endif
+				ch->ChatPacket(CHAT_TYPE_INFO, "%s %s (%d)", quest_name.c_str(), state_name, it->second);
 			}
-#ifdef TEXTS_IMPROVEMENT
-			else {
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 757, "%s#%d", it->first.c_str(), it->second);
+			else
+			{
+				ch->ChatPacket(CHAT_TYPE_INFO, "%s %d", it->first.c_str(), it->second);
 			}
-#endif
 		}
 	}
 }

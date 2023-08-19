@@ -5,17 +5,13 @@
 #include "questmanager.h"
 #include "utils.h"
 #include "config.h"
+#include "quest_sys_err.h"
 
-#undef sys_err
-#ifndef __WIN32__
-#define sys_err(fmt, args...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, ##args)
-#else
-#define sys_err(fmt, ...) quest::CQuestManager::instance().QuestError(__FUNCTION__, __LINE__, fmt, __VA_ARGS__)
-#endif
+extern int g_nPortalLimitTime;
 
 namespace quest
 {
-	ALUA(marriage_engage_to)
+	int marriage_engage_to(lua_State* L)
 	{
 		DWORD vid = (DWORD) lua_tonumber(L, 1);
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
@@ -27,7 +23,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(marriage_remove)
+	int marriage_remove(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -40,7 +36,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(marriage_set_to_marriage)
+	int marriage_set_to_marriage(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -53,7 +49,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(marriage_find_married_vid)
+	int marriage_find_married_vid(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -97,13 +93,13 @@ namespace quest
 		}
 	};
 
-	ALUA(marriage_get_wedding_list)
+	int marriage_get_wedding_list(lua_State* L)
 	{
 		marriage::CManager::instance().for_each_wedding(FBuildLuaWeddingMapList(L));
 		return 1;
 	}
 
-	ALUA(marriage_join_wedding)
+	int marriage_join_wedding(lua_State* L)
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
@@ -127,16 +123,15 @@ namespace quest
 			sys_err("not married %u %u", pid1, pid2);
 			return 0;
 		}
-		//PREVENT_HACK
+
 		if ( ch->IsHack() )
 			return 0;
-		//END_PREVENT_HACK
 
 		pMarriage->WarpToWeddingMap(ch->GetPlayerID());
 		return 0;
 	}
 
-	ALUA(marriage_warp_to_my_marriage_map)
+	int marriage_warp_to_my_marriage_map(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -146,17 +141,14 @@ namespace quest
 			return 0;
 		}
 
-
-		//PREVENT_HACK
 		if ( ch->IsHack() )
 			return 0;
-		//END_PREVENT_HACK
 
 		pMarriage->WarpToWeddingMap(ch->GetPlayerID());
 		return 0;
 	}
 
-	ALUA(marriage_end_wedding)
+	int marriage_end_wedding(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -167,13 +159,12 @@ namespace quest
 		}
 		if (pMarriage->pWeddingInfo)
 		{
-			// 결혼식 끝내기 요청
 			pMarriage->RequestEndWedding();
 		}
 		return 0;
 	}
 
-	ALUA(marriage_wedding_dark)
+	int marriage_wedding_dark(lua_State* L)
 	{
 		if (!lua_isboolean(L, 1))
 		{
@@ -197,7 +188,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(marriage_wedding_client_command)
+	int marriage_wedding_client_command(lua_State* L)
 	{
 		if (!lua_isstring(L, 1))
 		{
@@ -221,7 +212,7 @@ namespace quest
 
 	}
 
-	ALUA(marriage_wedding_is_playing_music)
+	int marriage_wedding_is_playing_music(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -242,7 +233,7 @@ namespace quest
 		lua_pushboolean(L, false);
 		return 1;
 	}
-	ALUA(marriage_wedding_music)
+	int marriage_wedding_music(lua_State* L)
 	{
 		if (!lua_isboolean(L, 1))
 		{
@@ -272,7 +263,7 @@ namespace quest
 		}
 		return 0;
 	}
-	ALUA(marriage_wedding_snow)
+	int marriage_wedding_snow(lua_State* L)
 	{
 		if (!lua_isboolean(L, 1))
 		{
@@ -294,7 +285,7 @@ namespace quest
 		return 0;
 	}
 
-	ALUA(marriage_in_my_wedding)
+	int marriage_in_my_wedding(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -309,7 +300,7 @@ namespace quest
 		return 1;
 	}
 
-	ALUA(marriage_get_married_time)
+	int marriage_get_married_time(lua_State* L)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
@@ -327,7 +318,7 @@ namespace quest
 
 	void RegisterMarriageFunctionTable()
 	{
-		luaL_reg marriage_functions[] =
+		luaL_reg marriage_functions[] = 
 		{
 			{ "engage_to",		marriage_engage_to	    },
 			{ "remove",			marriage_remove		    },

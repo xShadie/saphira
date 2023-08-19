@@ -9,9 +9,6 @@
 #include "packet.h"
 #include "target.h"
 
-/////////////////////////////////////////////////////////////////////
-// Packet
-/////////////////////////////////////////////////////////////////////
 void SendTargetCreatePacket(LPDESC d, TargetInfo * info)
 {
 if (!info->bSendToClient)
@@ -45,7 +42,7 @@ pck.bHeader = HEADER_GC_TARGET_DELETE;
 pck.lID = iID;
 d->Packet(&pck, sizeof(TPacketGCTargetDelete));
 }
-/////////////////////////////////////////////////////////////////////
+
 CTargetManager::CTargetManager() : m_iID(0)
 {
 }
@@ -64,11 +61,11 @@ EVENTFUNC(target_event)
 		return 0;
 	}
 
-// <Factor> Raplaced direct pointer reference with key searching.
-	//LPCHARACTER pkChr = info->pkChr;
+
 	LPCHARACTER pkChr = CHARACTER_MANAGER::instance().FindByPID(info->dwPID);
-	if (pkChr == NULL) {
-		return 0; // <Factor> need to be confirmed
+	if (pkChr == NULL) 
+	{
+		return 0;
 	}
 	LPCHARACTER tch = NULL;
 	int x = 0, y = 0;
@@ -138,7 +135,7 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 		int iArg1,
 		int iArg2,
 		int iMapIndex,
-		const char * c_pszTargetDesc,
+		const char * c_pszTargetDesc, 
 		int iSendFlag)
 {
 	sys_log(0, "CreateTarget : target pid %u quest %u name %s arg %d %d %d",
@@ -155,11 +152,11 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 	if (pkChr->GetMapIndex() != iMapIndex)
 		return;
 
-	itertype(m_map_kListEvent) it = m_map_kListEvent.find(dwPID);
+	auto it = m_map_kListEvent.find(dwPID);
 
 	if (it != m_map_kListEvent.end())
 	{
-		std::list<LPEVENT>::const_iterator it2 = it->second.begin();
+		auto it2 = it->second.begin();
 
 		while (it2 != it->second.end())
 		{
@@ -214,8 +211,6 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 	}
 
 	newInfo->iID = ++m_iID;
-	// <Factor> Removed pkChr
-	//newInfo->pkChr = pkChr;
 	newInfo->dwPID = dwPID;
 	newInfo->dwQuestIndex = dwQuestIndex;
 	strlcpy(newInfo->szTargetName, c_pszTargetName, sizeof(newInfo->szTargetName));
@@ -239,12 +234,12 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 
 void CTargetManager::DeleteTarget(DWORD dwPID, DWORD dwQuestIndex, const char * c_pszTargetName)
 {
-	itertype(m_map_kListEvent) it = m_map_kListEvent.find(dwPID);
+	auto it = m_map_kListEvent.find(dwPID);
 
 	if (it == m_map_kListEvent.end())
 		return;
 
-	std::list<LPEVENT>::iterator it2 = it->second.begin();
+	auto it2 = it->second.begin();
 
 	while (it2 != it->second.end())
 	{
@@ -262,11 +257,11 @@ void CTargetManager::DeleteTarget(DWORD dwPID, DWORD dwQuestIndex, const char * 
 		{
 			if (!c_pszTargetName || !strcmp(info->szTargetName, c_pszTargetName))
 			{
-				if (info->bSendToClient) {
-					// <Factor> Removed pkChr
-					//SendTargetDeletePacket(info->pkChr->GetDesc(), info->iID);
+				if (info->bSendToClient)
+				{
 					LPCHARACTER pkChr = CHARACTER_MANAGER::instance().FindByPID(info->dwPID);
-					if (pkChr != NULL) {
+					if (pkChr != NULL) 
+					{
 						SendTargetDeletePacket(pkChr->GetDesc(), info->iID);
 					}
 				}
@@ -283,12 +278,12 @@ void CTargetManager::DeleteTarget(DWORD dwPID, DWORD dwQuestIndex, const char * 
 
 LPEVENT CTargetManager::GetTargetEvent(DWORD dwPID, DWORD dwQuestIndex, const char * c_pszTargetName)
 {
-	itertype(m_map_kListEvent) it = m_map_kListEvent.find(dwPID);
+	auto it = m_map_kListEvent.find(dwPID);
 
 	if (it == m_map_kListEvent.end())
 		return NULL;
 
-	std::list<LPEVENT>::iterator it2 = it->second.begin();
+	auto it2 = it->second.begin();
 
 	while (it2 != it->second.end())
 	{
@@ -316,12 +311,12 @@ LPEVENT CTargetManager::GetTargetEvent(DWORD dwPID, DWORD dwQuestIndex, const ch
 
 TargetInfo * CTargetManager::GetTargetInfo(DWORD dwPID, int iType, int iArg1)
 {
-	itertype(m_map_kListEvent) it = m_map_kListEvent.find(dwPID);
+	auto it = m_map_kListEvent.find(dwPID);
 
 	if (it == m_map_kListEvent.end())
 		return NULL;
 
-	std::list<LPEVENT>::iterator it2 = it->second.begin();
+	auto it2 = it->second.begin();
 
 	while (it2 != it->second.end())
 	{
@@ -349,12 +344,12 @@ TargetInfo * CTargetManager::GetTargetInfo(DWORD dwPID, int iType, int iArg1)
 
 void CTargetManager::Logout(DWORD dwPID)
 {
-	itertype(m_map_kListEvent) it = m_map_kListEvent.find(dwPID);
+	auto it = m_map_kListEvent.find(dwPID);
 
 	if (it == m_map_kListEvent.end())
 		return;
 
-	std::list<LPEVENT>::iterator it2 = it->second.begin();
+	auto it2 = it->second.begin();
 
 	while (it2 != it->second.end())
 		event_cancel(&(*(it2++)));

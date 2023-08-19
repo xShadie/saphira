@@ -13,9 +13,7 @@ CPolymorphUtils::CPolymorphUtils()
 
 POLYMORPH_BONUS_TYPE CPolymorphUtils::GetBonusType(DWORD dwVnum)
 {
-	boost::unordered_map<DWORD, DWORD>::iterator iter;
-
-	iter = m_mapSPDType.find(dwVnum);
+	auto iter = m_mapSPDType.find(dwVnum);
 
 	if (iter != m_mapSPDType.end())
 		return POLYMORPH_SPD_BONUS;
@@ -62,32 +60,24 @@ bool CPolymorphUtils::PolymorphCharacter(LPCHARACTER pChar, LPITEM pItem, const 
 			return false;
 	}
 
-	// dwDuration *= 60;
-
-	// º¯½Å È®·ü = Ä³¸¯ÅÍ ·¹º§ - ¸÷ ·¹º§ + µÐ°©¼­ ·¹º§ + 29 + µÐ°© ½ºÅ³ ·¹º§
 	iPolyPercent = pChar->GetLevel() - pMob->m_table.bLevel + pItem->GetSocket(2) + (29 + bySkillLevel);
 
 	if (iPolyPercent <= 0)
 	{
-#ifdef TEXTS_IMPROVEMENT
-		pChar->ChatPacketNew(CHAT_TYPE_INFO, 317, "");
-#endif
+		pChar->ChatPacket(CHAT_TYPE_INFO, "[LS;499]");
 		return false;
 	}
 	else
 	{
 		if (number(1, 100) > iPolyPercent)
 		{
-#ifdef TEXTS_IMPROVEMENT
-			pChar->ChatPacketNew(CHAT_TYPE_INFO, 317, "");
-#endif
+			pChar->ChatPacket(CHAT_TYPE_INFO, "[LS;499]");
 			return false;
 		}
 	}
 
 	pChar->AddAffect(AFFECT_POLYMORPH, POINT_POLYMORPH, pMob->m_table.dwVnum, AFF_POLYMORPH, dwDuration, 0, true);
 
-	// º¯½Å º¸³Ê½º = µÐ°© ½ºÅ³ ·¹º§ + µÐ°©¼­ ·¹º§
 	dwBonusPercent = bySkillLevel + pItem->GetSocket(2);
 
 	switch (GetBonusType(pMob->m_table.dwVnum))
@@ -117,21 +107,16 @@ bool CPolymorphUtils::UpdateBookPracticeGrade(LPCHARACTER pChar, LPITEM pItem)
 	if (pChar == NULL || pItem == NULL)
 		return false;
 
-	if (pItem->GetSocket(1) > 0) {
+	if (pItem->GetSocket(1) > 0)
 		pItem->SetSocket(1, pItem->GetSocket(1) - 1);
-	}
-#ifdef TEXTS_IMPROVEMENT
-	else {
-		pChar->ChatPacketNew(CHAT_TYPE_INFO, 232, "");
-	}
-#endif
+	else
+		pChar->ChatPacket(CHAT_TYPE_INFO, "[LS;974]");
+
 	return true;
 }
 
 bool CPolymorphUtils::GiveBook(LPCHARACTER pChar, DWORD dwMobVnum, DWORD dwPracticeCount, BYTE BookLevel, BYTE LevelLimit)
 {
-	// ¼ÒÄÏ0                ¼ÒÄÏ1       ¼ÒÄÏ2
-	// µÐ°©ÇÒ ¸ó½ºÅÍ ¹øÈ£   ¼ö·ÃÁ¤µµ    µÐ°©¼­ ·¹º§
 	if (pChar == NULL)
 		return false;
 
@@ -142,14 +127,14 @@ bool CPolymorphUtils::GiveBook(LPCHARACTER pChar, DWORD dwMobVnum, DWORD dwPract
 
 	if (CMobManager::instance().Get(dwMobVnum) == NULL)
 	{
-		sys_err("Wrong Polymorph vnum passed: CPolymorphUtils::GiveBook(PID(%d), %d %d %d %d)",
+		sys_err("Wrong Polymorph vnum passed: CPolymorphUtils::GiveBook(PID(%d), %d %d %d %d)", 
 				pChar->GetPlayerID(), dwMobVnum, dwPracticeCount, BookLevel, LevelLimit);
 		return false;
 	}
 
-	pItem->SetSocket(0, dwMobVnum);			// µÐ°©ÇÒ ¸ó½ºÅÍ ¹øÈ£
-	pItem->SetSocket(1, dwPracticeCount);		// ¼ö·ÃÇØ¾ßÇÒ È½¼ö
-	pItem->SetSocket(2, BookLevel);			// ¼ö·Ã·¹º§
+	pItem->SetSocket(0, dwMobVnum);
+	pItem->SetSocket(1, dwPracticeCount);
+	pItem->SetSocket(2, BookLevel);
 	return true;
 }
 

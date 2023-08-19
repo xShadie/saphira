@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "../../libgame/include/attribute.h"
+#include "../../libgame/src/attribute.h"
 #include "sectree_manager.h"
 #include "char.h"
 #include "char_manager.h"
@@ -32,7 +32,7 @@ void SECTREE::Destroy()
 	{
 		sys_err("Sectree: entity set not empty!!");
 
-		ENTITY_SET::iterator it = m_set_entity.begin();
+		auto it = m_set_entity.begin();
 
 		for ( ; it != m_set_entity.end(); ++it)
 		{
@@ -77,7 +77,7 @@ SECTREEID SECTREE::GetID()
 
 void SECTREE::IncreasePC()
 {
-	LPSECTREE_LIST::iterator it_tree = m_neighbor_list.begin();
+	auto it_tree = m_neighbor_list.begin();
 
 	while (it_tree != m_neighbor_list.end())
 	{
@@ -88,7 +88,7 @@ void SECTREE::IncreasePC()
 
 void SECTREE::DecreasePC()
 {
-	LPSECTREE_LIST::iterator it_tree = m_neighbor_list.begin();
+	auto it_tree = m_neighbor_list.begin();
 
 	while (it_tree != m_neighbor_list.end())
 	{
@@ -102,7 +102,7 @@ void SECTREE::DecreasePC()
 				tree->m_iPCCount = 0;
 			}
 
-			ENTITY_SET::iterator it_entity = tree->m_set_entity.begin();
+			auto it_entity = tree->m_set_entity.begin();
 
 			while (it_entity != tree->m_set_entity.end())
 			{
@@ -134,7 +134,6 @@ bool SECTREE::InsertEntity(LPENTITY pkEnt)
 		pkCurTree->m_set_entity.erase(pkEnt);
 
 	pkEnt->SetSectree(this);
-	//pkEnt->UpdateSectree();
 
 	m_set_entity.insert(pkEnt);
 
@@ -149,7 +148,7 @@ bool SECTREE::InsertEntity(LPENTITY pkEnt)
 			if (pkCurTree)
 				pkCurTree->DecreasePC();
 		}
-		else if (m_iPCCount > 0 && !pkChr->IsWarp() && !pkChr->IsGoto()) // PC가 아니고 이 곳에 PC가 있다면 Idle event를 시작 시킨다.
+		else if (m_iPCCount > 0 && !pkChr->IsWarp() && !pkChr->IsGoto())
 		{
 			pkChr->StartStateMachine();
 		}
@@ -160,7 +159,7 @@ bool SECTREE::InsertEntity(LPENTITY pkEnt)
 
 void SECTREE::RemoveEntity(LPENTITY pkEnt)
 {
-	ENTITY_SET::iterator it = m_set_entity.find(pkEnt);
+	auto it = m_set_entity.find(pkEnt);
 
 	if (it == m_set_entity.end()) {
 		return;

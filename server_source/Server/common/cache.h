@@ -1,5 +1,4 @@
-#ifndef __INC_COMMON_CACHE_H__
-#define __INC_COMMON_CACHE_H__
+#pragma once
 
 template <typename T> class cache
 {
@@ -65,5 +64,3 @@ template <typename T> class cache
 		time_t	m_lastUpdateTime;
 		time_t	m_lastFlushTime;
 };
-
-#endif

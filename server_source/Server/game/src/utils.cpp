@@ -1,6 +1,4 @@
 #include "stdafx.h"
-#include <boost/algorithm/string/classification.hpp> // Include boost::for is_any_of
-#include <boost/algorithm/string/split.hpp>
 
 static int global_time_gap = 0;
 
@@ -9,44 +7,33 @@ time_t get_global_time()
 	return time(0) + global_time_gap;
 }
 
-#ifdef ENABLE_GAYA_SYSTEM
-time_t init_gayaTime()
-{
-	return time(0) + global_time_gap;
-}
-#endif
-
 void set_global_time(time_t t)
 {
 	global_time_gap = t - time(0);
 
-	//char time_str_buf[32];
-	//snprintf(time_str_buf, sizeof(time_str_buf), "%s", time_str(get_global_time()));
+	char time_str_buf[32];
+	snprintf(time_str_buf, sizeof(time_str_buf), "%s", time_str(get_global_time()));
 
-	//sys_log(0, "GLOBAL_TIME: %s time_gap %d", time_str_buf, global_time_gap);
-}
-
-#include <mysql/mysql.h>
-#ifndef SHA1_HASH_SIZE
-#define SHA1_HASH_SIZE 20
-#endif
-std::string mysql_hash_password(const char* tmp_pwd)
-{
-	char hash_buf[2*SHA1_HASH_SIZE + 2] = "";
-	make_scrambled_password(hash_buf, tmp_pwd);
-	return hash_buf;
+	if (global_time_gap > 0)
+		sys_log(0, "GLOBAL_TIME: %s time_gap %d", time_str_buf, global_time_gap);
 }
 
 int dice(int number, int size)
 {
 	int sum = 0, val;
 
-	if (size <= 0 || number <= 0)
-		return (0);
-
-	while (number)
+	if(size <= 0 || number <= 0)
 	{
+		return (0);
+	}
+
+	while(number)
+	{
+#ifdef ENABLE_XOSHIRO
+		val = number(1, size);
+#else
 		val = ((thecore_random() % size) + 1);
+#endif
 		sum += val;
 		--number;
 	}
@@ -54,25 +41,26 @@ int dice(int number, int size)
 	return (sum);
 }
 
-size_t str_lower(const char * src, char * dest, size_t dest_size)
+size_t str_lower(const char* src, char* dest, size_t dest_size)
 {
 	size_t len = 0;
 
-	if (!dest || dest_size == 0)
+	if(!dest || dest_size == 0)
+	{
 		return len;
+	}
 
-	if (!src)
+	if(!src)
 	{
 		*dest = '\0';
 		return len;
 	}
 
-	// \0 자리 확보
 	--dest_size;
 
-	while (*src && len < dest_size)
+	while(*src && len < dest_size)
 	{
-		*dest = LOWER(*src); // LOWER 매크로에서 ++나 --하면 안됨!!
+		*dest = LOWER(*src);
 
 		++src;
 		++dest;
@@ -83,41 +71,42 @@ size_t str_lower(const char * src, char * dest, size_t dest_size)
 	return len;
 }
 
-void skip_spaces(const char **string)
+void skip_spaces(const char** string)
 {
-	for (; **string != '\0' && isnhspace(**string); ++(*string));
+	for(;** string != '\0' && isnhspace(**string); ++ (*string));
 }
 
-const char *one_argument(const char *argument, char *first_arg, size_t first_size)
+const char* one_argument(const char* argument, char* first_arg, size_t first_size)
 {
 	char mark = FALSE;
 	size_t first_len = 0;
 
-	if (!argument || 0 == first_size)
+	if(!argument || 0 == first_size)
 	{
 		sys_err("one_argument received a NULL pointer!");
 		*first_arg = '\0';
 		return NULL;
 	}
 
-	// \0 자리 확보
 	--first_size;
 
 	skip_spaces(&argument);
 
-	while (*argument && first_len < first_size)
+	while(*argument && first_len < first_size)
 	{
-		if (*argument == '\"')
+		if(*argument == '\"')
 		{
 			mark = !mark;
 			++argument;
 			continue;
 		}
 
-		if (!mark && isnhspace(*argument))
+		if(!mark && isnhspace(*argument))
+		{
 			break;
+		}
 
-		*(first_arg++) = *argument;
+		* (first_arg++) = *argument;
 		++argument;
 		++first_len;
 	}
@@ -128,40 +117,26 @@ const char *one_argument(const char *argument, char *first_arg, size_t first_siz
 	return (argument);
 }
 
-const char *two_arguments(const char *argument, char *first_arg, size_t first_size, char *second_arg, size_t second_size)
+const char* two_arguments(const char* argument, char* first_arg, size_t first_size, char* second_arg, size_t second_size)
 {
 	return (one_argument(one_argument(argument, first_arg, first_size), second_arg, second_size));
 }
 
-const char * pvp_arguments(const char * argument, char * arg1, size_t arg1_size, char * arg2, size_t arg2_size, char * arg3, size_t arg3_size, char * arg4, size_t arg4_size, char * arg5, size_t arg5_size, char * arg6, size_t arg6_size, char * arg7, size_t arg7_size, char * arg8, size_t arg8_size, char * arg9, size_t arg9_size, char * arg10, size_t arg10_size)
-{
-	return (one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(argument, arg1, arg1_size), arg2, arg2_size), arg3, arg3_size), arg4, arg4_size), arg5, arg5_size), arg6, arg6_size), arg7, arg7_size), arg8, arg8_size), arg9, arg9_size), arg10, arg10_size));
-}
-
-#ifdef ENABLE_GAYA_SYSTEM
-const char * three_arguments(const char * argument, char * first_arg, size_t first_size, char * second_arg, size_t second_size, char * third_arg, size_t third_size)
+const char* three_arguments(const char* argument, char* first_arg, size_t first_size, char* second_arg, size_t second_size, char* third_arg, size_t third_size)
 {
 	return (one_argument(one_argument(one_argument(argument, first_arg, first_size), second_arg, second_size), third_arg, third_size));
 }
-#endif
 
-void split_argument(const char *argument, std::vector<std::string> & vecArgs)
-{
-	std::string arg = argument;
-	boost::split(vecArgs, arg, boost::is_any_of(" "), boost::token_compress_on);
-}
-
-const char *first_cmd(const char *argument, char *first_arg, size_t first_arg_size, size_t *first_arg_len_result)
+const char* first_cmd(const char* argument, char* first_arg, size_t first_arg_size, size_t* first_arg_len_result)
 {
 	size_t cur_len = 0;
 	skip_spaces(&argument);
 
-	// \0 자리 확보
 	first_arg_size -= 1;
 
-	while (*argument && !isnhspace(*argument) && cur_len < first_arg_size)
+	while(*argument && !isnhspace(*argument) && cur_len < first_arg_size)
 	{
-		*(first_arg++) = LOWER(*argument);
+		* (first_arg++) = LOWER(*argument);
 		++argument;
 		++cur_len;
 	}
@@ -175,19 +150,26 @@ int CalculateDuration(int iSpd, int iDur)
 {
 	int i = 100 - iSpd;
 
-	if (i > 0)
+	if(i > 0)
+	{
 		i = 100 + i;
-	else if (i < 0)
+	}
+	else if(i < 0)
+	{
 		i = 10000 / (100 - i);
+	}
 	else
+	{
 		i = 100;
+	}
 
 	return iDur * i / 100;
 }
 
+#ifndef ENABLE_XOSHIRO
 double uniform_random(double a, double b)
 {
-	return thecore_random() / (RAND_MAX + 1.f) * (b - a) + a;
+	return thecore_random() / ((double)RAND_MAX + 1.f) * (b - a) + a;
 }
 
 float gauss_random(float avg, float sigma)
@@ -203,28 +185,28 @@ float gauss_random(float avg, float sigma)
 	else
 	{
 		double v1, v2, s;
-		do {
-			//v1 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
-			//v2 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
+		do
+		{
 			v1 = uniform_random(-1.f, 1.f);
 			v2 = uniform_random(-1.f, 1.f);
 			s = v1 * v1 + v2 * v2;
 		} while (s >= 1.f || fabs(s) < FLT_EPSILON);
-		double multiplier = sqrtf(-2 * logf(s)/s);
+		double multiplier = sqrtf(-2 * logf(s) / s);
 		nextGaussian = v2 * multiplier;
 		haveNextGaussian = true;
 		return v1 * multiplier * sigma + avg;
 	}
 }
+#endif
 
 int parse_time_str(const char* str)
 {
 	int tmp = 0;
 	int secs = 0;
 
-	while (*str != 0)
+	while(*str != 0)
 	{
-		switch (*str)
+		switch(*str)
 		{
 			case 'm':
 			case 'M':
@@ -272,53 +254,56 @@ int parse_time_str(const char* str)
 	return secs + tmp;
 }
 
-bool LEVEL_DELTA(int iLevel, int yLevel, int iDifLev)
+bool WildCaseCmp(const char* w, const char* s)
 {
-	return ((iLevel - iDifLev <= yLevel) && (iLevel + iDifLev >= yLevel));
-}
-
-bool WildCaseCmp(const char *w, const char *s)
-{
-	for (;;)
+	for(;;)
 	{
 		switch(*w)
 		{
 			case '*':
-				if ('\0' == w[1])
-					return true;
+				if('\0' == w[1])
 				{
-					for (size_t i = 0; i <= strlen(s); ++i)
+					return true;
+				}
+				{
+					for(size_t i = 0; i <= strlen(s); ++i)
 					{
-						if (true == WildCaseCmp(w + 1, s + i))
+						if(true == WildCaseCmp(w + 1, s + i))
+						{
 							return true;
+						}
 					}
 				}
 				return false;
 
 			case '?':
-				if ('\0' == *s)
+				if('\0' == *s)
+				{
 					return false;
+				}
 
 				++w;
 				++s;
 				break;
 
 			default:
-				if (*w != *s)
+				if(*w != *s)
 				{
-					if (tolower(*w) != tolower(*s))
+					if(tolower(*w) != tolower(*s))
+					{
 						return false;
+					}
 				}
 
-				if ('\0' == *w)
+				if('\0' == *w)
+				{
 					return true;
+				}
 
 				++w;
 				++s;
 				break;
 		}
 	}
-
 	return false;
 }
-

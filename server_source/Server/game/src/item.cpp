@@ -12,7 +12,6 @@
 #include "profiler.h"
 #include "marriage.h"
 #include "item_addon.h"
-#include "dev_log.h"
 #include "locale_service.h"
 #include "item.h"
 #include "item_manager.h"
@@ -21,20 +20,11 @@
 #include "buff_on_attributes.h"
 #include "belt_inventory_helper.h"
 #include "../../common/VnumHelper.h"
-#include "../../common/CommonDefines.h"
-#ifdef ENABLE_RUNE_SYSTEM
-#include "../../common/rune_length.h"
-#endif
 
 CItem::CItem(DWORD dwVnum)
 	: m_dwVnum(dwVnum), m_bWindow(0), m_dwID(0), m_bEquipped(false), m_dwVID(0), m_wCell(0), m_dwCount(0), m_lFlag(0), m_dwLastOwnerPID(0),
-	m_bExchanging(false), m_pkDestroyEvent(NULL), m_pkExpireEvent(NULL),
-
-#ifdef ENABLE_SOUL_SYSTEM
-	m_pkSoulItemEvent(NULL),
-#endif
-
-	 m_pkUniqueExpireEvent(NULL), m_pkTimerBasedOnWearExpireEvent(NULL), m_pkRealTimeExpireEvent(NULL),
+	m_bExchanging(false), m_pkDestroyEvent(NULL), m_pkUniqueExpireEvent(NULL), m_pkTimerBasedOnWearExpireEvent(NULL), m_pkRealTimeExpireEvent(NULL),
+	m_pkExpireEvent(NULL),
    	m_pkAccessorySocketExpireEvent(NULL), m_pkOwnershipEvent(NULL), m_dwOwnershipPID(0), m_bSkipSave(false), m_isLocked(false),
 	m_dwMaskVnum(0), m_dwSIGVnum (0)
 {
@@ -58,20 +48,13 @@ void CItem::Initialize()
 	m_dwVID = m_wCell = m_dwCount = m_lFlag = 0;
 	m_pProto = NULL;
 	m_bExchanging = false;
-#ifdef ENABLE_SOUL_SYSTEM
-	m_pkSoulItemEvent = NULL;
-#endif
-	m_pkUniqueExpireEvent = NULL;
 	memset(&m_alSockets, 0, sizeof(m_alSockets));
 	memset(&m_aAttr, 0, sizeof(m_aAttr));
-#ifdef ATTR_LOCK
-	m_sLockedAttr = -1;
-#endif
 
 	m_pkDestroyEvent = NULL;
 	m_pkOwnershipEvent = NULL;
 	m_dwOwnershipPID = 0;
-
+	m_pkUniqueExpireEvent = NULL;
 	m_pkTimerBasedOnWearExpireEvent = NULL;
 	m_pkRealTimeExpireEvent = NULL;
 
@@ -86,11 +69,6 @@ void CItem::Destroy()
 	event_cancel(&m_pkDestroyEvent);
 	event_cancel(&m_pkOwnershipEvent);
 	event_cancel(&m_pkUniqueExpireEvent);
-
-#ifdef ENABLE_SOUL_SYSTEM
-	event_cancel(&m_pkSoulItemEvent);
-#endif
-
 	event_cancel(&m_pkTimerBasedOnWearExpireEvent);
 	event_cancel(&m_pkRealTimeExpireEvent);
 	event_cancel(&m_pkAccessorySocketExpireEvent);
@@ -154,7 +132,7 @@ void CItem::EncodeInsertPacket(LPENTITY ent)
 	pack.z		= c_pos.z;
 	pack.dwVnum		= GetVnum();
 	pack.dwVID		= m_dwVID;
-	//pack.count	= m_dwCount;
+	pack.dwCount = GetCount();
 
 	d->Packet(&pack, sizeof(pack));
 
@@ -201,18 +179,6 @@ void CItem::SetProto(const TItemTable * table)
 	SetFlag(m_pProto->dwFlags);
 }
 
-#ifdef ENABLE_ITEM_EXTRA_PROTO
-void CItem::SetExtraProto(TItemExtraProto* Proto) 
-{
-	m_ExtraProto = Proto;
-}
-
-TItemExtraProto* CItem::GetExtraProto() 
-{
-	return m_ExtraProto;
-}
-#endif
-
 void CItem::UsePacketEncode(LPCHARACTER ch, LPCHARACTER victim, struct packet_item_use *packet)
 {
 	if (!GetVnum())
@@ -240,19 +206,11 @@ void CItem::UpdatePacket()
 	if (!m_pOwner || !m_pOwner->GetDesc())
 		return;
 
-#ifdef ENABLE_SWITCHBOT
-	if (m_bWindow == SWITCHBOT)
-		return;
-#endif
-
 	TPacketGCItemUpdate pack;
 
 	pack.header = HEADER_GC_ITEM_UPDATE;
 	pack.Cell = TItemPos(GetWindow(), m_wCell);
 	pack.count	= m_dwCount;
-#ifdef ATTR_LOCK
-	pack.lockedattr = m_sLockedAttr;
-#endif
 
 	for (int i = 0; i < ITEM_SOCKET_MAX_NUM; ++i)
 		pack.alSockets[i] = m_alSockets[i];
@@ -263,80 +221,16 @@ void CItem::UpdatePacket()
 	m_pOwner->GetDesc()->Packet(&pack, sizeof(pack));
 }
 
-int CItem::GetCount()
+DWORD CItem::GetCount()
 {
 	if (GetType() == ITEM_ELK) return MIN(m_dwCount, INT_MAX);
 	else
 	{
-		return MIN(m_dwCount, g_bItemCountLimit);
+		return MIN(m_dwCount, MAX_ITEM_STACK);
 	}
 }
 
-#ifdef ATTR_LOCK
-
-bool CItem::CheckHumanApply()
-{
-	bool bHaveHuman = false;
-	TItemTable * p = ITEM_MANAGER::instance().GetTable(GetVnum());
-	for (int i = 0; i < ITEM_APPLY_MAX_NUM; ++i)
-		if (p->aApplies[i].bType == APPLY_ATTBONUS_HUMAN)
-			bHaveHuman = true;
-			
-	return bHaveHuman;
-}
-
-void CItem::AddLockedAttr()
-{
-	int iCount = GetAttributeCount();
-	int iRand = rand() % (iCount);
-	bool bCheckHuman = CheckHumanApply();
-
-	if (bCheckHuman)
-	{
-		while(GetAttributeType(iRand) == APPLY_ATTBONUS_HUMAN || GetAttributeType(iRand) == APPLY_SKILL_DAMAGE_BONUS || GetAttributeType(iRand) == APPLY_NORMAL_HIT_DAMAGE_BONUS)
-			iRand = rand() % (iCount);
-	}
-	else
-	{
-		while(GetAttributeType(iRand) == APPLY_SKILL_DAMAGE_BONUS || GetAttributeType(iRand) == APPLY_NORMAL_HIT_DAMAGE_BONUS)
-			iRand = rand() % (iCount);
-	}
-	
-	SetLockedAttr((short)iRand);
-}
-void CItem::ChangeLockedAttr()
-{
-	int iCount = GetAttributeCount();
-	int iRand = rand() % (iCount);
-	bool bCheckHuman = CheckHumanApply();
-
-	if (bCheckHuman)
-	{
-		while (iRand == (int)GetLockedAttr() || GetAttributeType(iRand) == APPLY_ATTBONUS_HUMAN || GetAttributeType(iRand) == APPLY_SKILL_DAMAGE_BONUS || GetAttributeType(iRand) == APPLY_NORMAL_HIT_DAMAGE_BONUS)
-			iRand = rand() % (iCount);
-	}
-	else
-	{
-		while(iRand == (int)GetLockedAttr() || GetAttributeType(iRand) == APPLY_SKILL_DAMAGE_BONUS || GetAttributeType(iRand) == APPLY_NORMAL_HIT_DAMAGE_BONUS)
-			iRand = rand() % (iCount);
-	}
-	
-	SetLockedAttr((short)iRand);
-}
-void CItem::RemoveLockedAttr()
-{
-	SetLockedAttr(-1);	
-}
-void CItem::SetLockedAttr(short sIndex)
-{
-	m_sLockedAttr = sIndex;
-	UpdatePacket();
-	Save();
-}
-
-#endif
-
-bool CItem::SetCount(int count)
+bool CItem::SetCount(DWORD count)
 {
 	if (GetType() == ITEM_ELK)
 	{
@@ -344,7 +238,7 @@ bool CItem::SetCount(int count)
 	}
 	else
 	{
-		m_dwCount = MIN(count, g_bItemCountLimit);
+		m_dwCount = MIN(count, MAX_ITEM_STACK);
 	}
 
 	if (count == 0 && m_pOwner)
@@ -356,34 +250,17 @@ bool CItem::SetCount(int count)
 
 			RemoveFromCharacter();
 
-			if (!IsDragonSoul()
-			)
+			if (!IsDragonSoul())
 			{
 				LPITEM pItem = pOwner->FindSpecifyItem(GetVnum());
 
 				if (NULL != pItem)
 				{
-#ifdef ENABLE_EXTRA_INVENTORY
-					if (IsExtraItem()) {
-						pOwner->ChainQuickslotItem(pItem, QUICKSLOT_TYPE_ITEM_EXTRA, wCell);
-					} else {
-						pOwner->ChainQuickslotItem(pItem, QUICKSLOT_TYPE_ITEM, wCell);
-					}
-#else
 					pOwner->ChainQuickslotItem(pItem, QUICKSLOT_TYPE_ITEM, wCell);
-#endif
 				}
 				else
 				{
-#ifdef ENABLE_EXTRA_INVENTORY
-					if (IsExtraItem()) {
-						pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM_EXTRA, wCell, 255);
-					} else {
-						pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, wCell, 255);
-					}
-#else
 					pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, wCell, 255);
-#endif
 				}
 			}
 
@@ -393,17 +270,8 @@ bool CItem::SetCount(int count)
 		{
 			if (!IsDragonSoul())
 			{
-#ifdef ENABLE_EXTRA_INVENTORY
-				if (IsExtraItem()) {
-					m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM_EXTRA, m_wCell, 255);
-				} else {
-					m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, m_wCell, 255);
-				}
-#else
 				m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, m_wCell, 255);
-#endif
 			}
-
 			M2_DESTROY_ITEM(RemoveFromCharacter());
 		}
 
@@ -426,10 +294,9 @@ LPITEM CItem::RemoveFromCharacter()
 
 	LPCHARACTER pOwner = m_pOwner;
 
-	if (m_bEquipped)	// 장착되었는가?
+	if (m_bEquipped)
 	{
 		Unequip();
-		//pOwner->UpdatePacket();
 		SetWindow(RESERVED_WINDOW);
 		Save();
 		return (this);
@@ -445,33 +312,11 @@ LPITEM CItem::RemoveFromCharacter()
 				else
 					pOwner->SetItem(TItemPos(m_bWindow, m_wCell), NULL);
 			}
-#ifdef ENABLE_EXTRA_INVENTORY
-			else if (IsExtraItem())
-			{
-				if (m_wCell >= EXTRA_INVENTORY_MAX_NUM)
-					sys_err("CItem::RemoveFromCharacter: pos >= EXTRA_INVENTORY_MAX_NUM");
-				else
-					pOwner->SetItem(TItemPos(m_bWindow, m_wCell), NULL);
-			}
-#endif
-#ifdef ENABLE_SWITCHBOT
-			else if (m_bWindow == SWITCHBOT)
-			{
-				if (m_wCell >= SWITCHBOT_SLOT_COUNT)
-				{
-					sys_err("CItem::RemoveFromCharacter: pos >= SWITCHBOT_SLOT_COUNT");
-				}
-				else
-				{
-					pOwner->SetItem(TItemPos(SWITCHBOT, m_wCell), NULL);
-				}
-			}
-#endif
 			else
 			{
 				TItemPos cell(INVENTORY, m_wCell);
 
-				if (false == cell.IsDefaultInventoryPosition() && false == cell.IsBeltInventoryPosition()) // 아니면 소지품에?
+				if (false == cell.IsDefaultInventoryPosition() && false == cell.IsBeltInventoryPosition())
 					sys_err("CItem::RemoveFromCharacter: Invalid Item Position");
 				else
 				{
@@ -489,45 +334,15 @@ LPITEM CItem::RemoveFromCharacter()
 	}
 }
 
-#ifdef __HIGHLIGHT_SYSTEM__
-bool CItem::AddToCharacter(LPCHARACTER ch, TItemPos Cell, bool isHighLight)
-#else
 bool CItem::AddToCharacter(LPCHARACTER ch, TItemPos Cell)
-#endif
 {
 	assert(GetSectree() == NULL);
 	assert(m_pOwner == NULL);
 	WORD pos = Cell.cell;
 	BYTE window_type = Cell.window_type;
-
+	
 	if (INVENTORY == window_type)
 	{
-#ifdef ENABLE_RUNE_SYSTEM
-		if ((IsRune()) && (ch)) {
-			int iFindCell = FindEquipCell(ch);
-			LPITEM pkItem = ch->GetWear(iFindCell);
-			if (pkItem) {
-#ifdef TEXTS_IMPROVEMENT
-				ch->ChatPacketNew(CHAT_TYPE_INFO, 35, "%s", GetName());
-#endif
-				M2_DESTROY_ITEM(this);
-				return false;
-			}
-			else {
-				this->EquipTo(ch, iFindCell);
-				if (ch->GetDesc())
-					m_dwLastOwnerPID = ch->GetPlayerID();
-				
-				event_cancel(&m_pkDestroyEvent);
-				
-				ch->SetItem(TItemPos(EQUIPMENT, iFindCell), this);
-				m_pOwner = ch;
-				Save();
-				return true;
-			}
-		}
-#endif
-		
 		if (m_wCell >= INVENTORY_MAX_NUM && BELT_INVENTORY_SLOT_START > m_wCell)
 		{
 			sys_err("CItem::AddToCharacter: cell overflow: %s to %s cell %d", m_pProto->szName, ch->GetName(), m_wCell);
@@ -542,70 +357,13 @@ bool CItem::AddToCharacter(LPCHARACTER ch, TItemPos Cell)
 			return false;
 		}
 	}
-#ifdef ENABLE_EXTRA_INVENTORY
-	else if (window_type == EXTRA_INVENTORY)
-	{
-		if (m_wCell >= EXTRA_INVENTORY_MAX_NUM)
-		{
-			sys_err("CItem::AddToCharacter: EXTRA cell overflow: %s to %s cell %d", m_pProto->szName, ch->GetName(), m_wCell);
-			return false;
-		}
-	}
-#endif
-#ifdef ENABLE_SWITCHBOT
-	else if (SWITCHBOT == window_type)
-	{
-		if (m_wCell >= SWITCHBOT_SLOT_COUNT)
-		{
-			sys_err("CItem::AddToCharacter:switchbot cell overflow: %s to %s cell %d", m_pProto->szName, ch->GetName(), m_wCell);
-			return false;
-		}
-	}
-#endif
+
 	if (ch->GetDesc())
 		m_dwLastOwnerPID = ch->GetPlayerID();
 
-
-#ifdef ENABLE_ACCE_SYSTEM
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_ACCE) && (GetSocket(ACCE_ABSORPTION_SOCKET) == 0))
-	{
-		long lVal = GetValue(ACCE_GRADE_VALUE_FIELD);
-		switch (lVal)
-		{
-		case 2:
-		{
-			lVal = ACCE_GRADE_2_ABS;
-		}
-		break;
-		case 3:
-		{
-			lVal = ACCE_GRADE_3_ABS;
-		}
-		break;
-		case 4:
-		{
-			lVal = number(ACCE_GRADE_4_ABS_MIN, ACCE_GRADE_4_ABS_MAX_COMB);
-		}
-		break;
-		default:
-		{
-			lVal = ACCE_GRADE_1_ABS;
-		}
-		break;
-		}
-
-		SetSocket(ACCE_ABSORPTION_SOCKET, lVal);
-	}
-#endif
-
-
 	event_cancel(&m_pkDestroyEvent);
 
-#ifdef __HIGHLIGHT_SYSTEM__
-	ch->SetItem(TItemPos(window_type, pos), this, isHighLight);
-#else
 	ch->SetItem(TItemPos(window_type, pos), this);
-#endif
 	m_pOwner = ch;
 
 	Save();
@@ -617,9 +375,9 @@ LPITEM CItem::RemoveFromGround()
 	if (GetSectree())
 	{
 		SetOwnership(NULL);
-
+		
 		GetSectree()->RemoveEntity(this);
-
+		
 		ViewCleanup();
 
 		Save();
@@ -656,8 +414,6 @@ bool CItem::AddToGround(long lMapIndex, const PIXEL_POSITION & pos, bool skipOwn
 		return false;
 	}
 
-	//tree->Touch();
-
 	SetWindow(GROUND);
 	SetXYZ(pos.x, pos.y, pos.z);
 	tree->InsertEntity(this);
@@ -669,18 +425,27 @@ bool CItem::AddToGround(long lMapIndex, const PIXEL_POSITION & pos, bool skipOwn
 bool CItem::DistanceValid(LPCHARACTER ch)
 {
 	if (!GetSectree())
+	{
 		return false;
+	}
 
-	int iDist = DISTANCE_APPROX(GetX() - ch->GetX(), GetY() - ch->GetY());
-	if (iDist > 600)
+	DWORD iDist = DISTANCE_APPROX(GetX() - ch->GetX(), GetY() - ch->GetY());
+	WORD max_distance = ch->IsRiding() ? 500 : 300;
+	WORD tolerance = 150;
+
+	if (iDist > max_distance + tolerance)
+	{
+		if (test_server)
+		{
+			ch->ChatPacket(CHAT_TYPE_INFO, "%d: Distance is not valid: %d > %d", GetID(), iDist, max_distance + tolerance);
+		}
 		return false;
-
+	}
 	return true;
 }
 
 bool CItem::CanUsedBy(LPCHARACTER ch)
 {
-	// Anti flag check
 	switch (ch->GetJob())
 	{
 		case JOB_WARRIOR:
@@ -702,10 +467,12 @@ bool CItem::CanUsedBy(LPCHARACTER ch)
 			if (GetAntiFlag() & ITEM_ANTIFLAG_SURA)
 				return false;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
+#ifdef ENABLE_WOLFMAN
 		case JOB_WOLFMAN:
 			if (GetAntiFlag() & ITEM_ANTIFLAG_WOLFMAN)
+			{
 				return false;
+			}
 			break;
 #endif
 	}
@@ -713,18 +480,27 @@ bool CItem::CanUsedBy(LPCHARACTER ch)
 	return true;
 }
 
+bool __IsWearableWithoutWearFlags(BYTE item_type)
+{
+	switch (item_type)
+	{
+	case ITEM_COSTUME:
+	case ITEM_DS:
+	case ITEM_SPECIAL_DS:
+	case ITEM_RING:
+	case ITEM_BELT:
+		return true;
+	default:
+		return false;
+	}
+}
+
 int CItem::FindEquipCell(LPCHARACTER ch, int iCandidateCell)
 {
-	// 코스츔 아이템(ITEM_COSTUME)은 WearFlag 없어도 됨. (sub type으로 착용위치 구분. 귀찮게 또 wear flag 줄 필요가 있나..)
-	// 용혼석(ITEM_DS, ITEM_SPECIAL_DS)도  SUB_TYPE으로 구분. 신규 반지, 벨트는 ITEM_TYPE으로 구분 -_-
-	if ((0 == GetWearFlag() || ITEM_TOTEM == GetType()) && ITEM_COSTUME != GetType() && ITEM_DS != GetType() && ITEM_SPECIAL_DS != GetType() && ITEM_RING != GetType() && ITEM_BELT != GetType())
+
+	if ((!GetWearFlag() || ITEM_TOTEM == GetType()) && !__IsWearableWithoutWearFlags(GetType()))
 		return -1;
 
-	// 용혼석 슬롯을 WEAR로 처리할 수가 없어서(WEAR는 최대 32개까지 가능한데 용혼석을 추가하면 32가 넘는다.)
-	// 인벤토리의 특정 위치((INVENTORY_MAX_NUM + WEAR_MAX_NUM)부터 (INVENTORY_MAX_NUM + WEAR_MAX_NUM + DRAGON_SOUL_DECK_MAX_NUM * DS_SLOT_MAX - 1)까지)를
-	// 용혼석 슬롯으로 정함.
-	// return 할 때에, INVENTORY_MAX_NUM을 뺀 이유는,
-	// 본래 WearCell이 INVENTORY_MAX_NUM를 빼고 return 하기 때문.
 	if (GetType() == ITEM_DS || GetType() == ITEM_SPECIAL_DS)
 	{
 		if (iCandidateCell < 0)
@@ -748,55 +524,26 @@ int CItem::FindEquipCell(LPCHARACTER ch, int iCandidateCell)
 		if (GetSubType() == COSTUME_BODY)
 			return WEAR_COSTUME_BODY;
 		else if (GetSubType() == COSTUME_HAIR)
+		{
 			return WEAR_COSTUME_HAIR;
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
+		}
 		else if (GetSubType() == COSTUME_MOUNT)
+		{
 			return WEAR_COSTUME_MOUNT;
-#endif
-#ifdef ENABLE_ACCE_SYSTEM
+		}
+		else if (GetSubType() == COSTUME_PET)
+		{
+			return WEAR_COSTUME_PET;
+		}
 		else if (GetSubType() == COSTUME_ACCE)
-			return WEAR_COSTUME_ACCE_SLOT;
-#endif
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
-		else if (GetSubType() == COSTUME_WEAPON)
-			return WEAR_COSTUME_WEAPON;
-#endif
-#ifdef ENABLE_STOLE_COSTUME
-		else if (GetSubType() == COSTUME_STOLE)
+		{
 			return WEAR_COSTUME_ACCE;
-#endif
-#ifdef ENABLE_COSTUME_PET
-		else if (GetSubType() == COSTUME_PET_SKIN)
-			return WEAR_COSTUME_PET_SKIN;
-#endif
-#ifdef ENABLE_COSTUME_MOUNT
-		else if (GetSubType() == COSTUME_MOUNT_SKIN)
-			return WEAR_COSTUME_MOUNT_SKIN;
-#endif
-#ifdef ENABLE_COSTUME_EFFECT
-		else if (GetSubType() == COSTUME_EFFECT_BODY)
-			return WEAR_COSTUME_EFFECT_BODY;
-		else if (GetSubType() == COSTUME_EFFECT_WEAPON)
-			return WEAR_COSTUME_EFFECT_WEAPON;
-#endif
-#ifdef ENABLE_RUNE_SYSTEM
-		else if (GetSubType() == RUNE_SLOT1)
-			return WEAR_RUNE1;
-		else if (GetSubType() == RUNE_SLOT2)
-			return WEAR_RUNE2;
-		else if (GetSubType() == RUNE_SLOT3)
-			return WEAR_RUNE3;
-		else if (GetSubType() == RUNE_SLOT4)
-			return WEAR_RUNE4;
-		else if (GetSubType() == RUNE_SLOT5)
-			return WEAR_RUNE5;
-		else if (GetSubType() == RUNE_SLOT6)
-			return WEAR_RUNE6;
-		else if (GetSubType() == RUNE_SLOT7)
-			return WEAR_RUNE7;
-#endif
+		}
+		else if (GetSubType() == COSTUME_WEAPON)
+		{
+			return WEAR_COSTUME_WEAPON;
+		}
 	}
-#if !defined(ENABLE_MOUNT_COSTUME_SYSTEM) && !defined(ENABLE_ACCE_SYSTEM)
 	else if (GetType() == ITEM_RING)
 	{
 		if (ch->GetWear(WEAR_RING1))
@@ -804,7 +551,6 @@ int CItem::FindEquipCell(LPCHARACTER ch, int iCandidateCell)
 		else
 			return WEAR_RING1;
 	}
-#endif
 	else if (GetType() == ITEM_BELT)
 		return WEAR_BELT;
 	else if (GetWearFlag() & WEARABLE_BODY)
@@ -827,87 +573,30 @@ int CItem::FindEquipCell(LPCHARACTER ch, int iCandidateCell)
 		return WEAR_ARROW;
 	else if (GetWearFlag() & WEARABLE_UNIQUE)
 	{
-#ifdef ENABLE_NEW_UNIQUE_WEAR_LIMITED
-		if (GetSubType() == UNIQUE_PVM) {
-			return WEAR_UNIQUE1;
-		} else if (GetSubType() == UNIQUE_PVP) {
-			return WEAR_UNIQUE2;
-		} else {
-			return -1;
-		}
-#else
 		if (ch->GetWear(WEAR_UNIQUE1))
 			return WEAR_UNIQUE2;
 		else
-			return WEAR_UNIQUE1;
-#endif
+			return WEAR_UNIQUE1;		
 	}
-#ifdef ENABLE_PENDANT
-	else if (GetSubType() == ARMOR_PENDANT || GetWearFlag() & WEARABLE_PENDANT)
+	else if (GetWearFlag() & WEARABLE_PENDANT)
 		return WEAR_PENDANT;
-#endif
 
-	// 수집 퀘스트를 위한 아이템이 박히는곳으로 한번 박히면 절대 뺼수 없다.
-	else if (GetWearFlag() & WEARABLE_ABILITY)
-	{
-		if (!ch->GetWear(WEAR_ABILITY1))
-		{
-			return WEAR_ABILITY1;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY2))
-		{
-			return WEAR_ABILITY2;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY3))
-		{
-			return WEAR_ABILITY3;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY4))
-		{
-			return WEAR_ABILITY4;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY5))
-		{
-			return WEAR_ABILITY5;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY6))
-		{
-			return WEAR_ABILITY6;
-		}
-		else if (!ch->GetWear(WEAR_ABILITY7))
-		{
-			return WEAR_ABILITY7;
-		}
-#ifndef ENABLE_STOLE_REAL
-		else if (!ch->GetWear(WEAR_ABILITY8))
-		{
-			return WEAR_ABILITY8;
-		}
-#endif
-		else
-		{
-			return -1;
-		}
-	}
 	return -1;
 }
 
 void CItem::ModifyPoints(bool bAdd)
 {
-#ifdef ENABLE_BUG_FIXES
-	if (!m_pOwner) {
+	if (IsCostumeMountItem() && !m_pOwner->IsRiding())
+	{
 		return;
 	}
-#endif
 
 	int accessoryGrade;
 
-	// 무기와 갑옷만 소켓을 적용시킨다.
 	if (false == IsAccessoryForSocket())
 	{
-		if (m_pProto->bType == ITEM_WEAPON || m_pProto->bType == ITEM_ARMOR)
+		if ((m_pProto->bType == ITEM_WEAPON || m_pProto->bType == ITEM_ARMOR) && m_pProto->bSubType != WEAPON_QUIVER)
 		{
-			// 소켓이 속성강화에 사용되는 경우 적용하지 않는다 (ARMOR_WRIST ARMOR_NECK ARMOR_EAR)
 			for (int i = 0; i < ITEM_SOCKET_MAX_NUM; ++i)
 			{
 				DWORD dwVnum;
@@ -929,7 +618,7 @@ void CItem::ModifyPoints(bool bAdd)
 					{
 						if (p->aApplies[i].bType == APPLY_NONE)
 							continue;
-						
+
 						if (p->aApplies[i].bType == APPLY_SKILL)
 							m_pOwner->ApplyPoint(p->aApplies[i].bType, bAdd ? p->aApplies[i].lValue : p->aApplies[i].lValue ^ 0x00800000);
 						else
@@ -946,156 +635,51 @@ void CItem::ModifyPoints(bool bAdd)
 		accessoryGrade = MIN(GetAccessorySocketGrade(), ITEM_ACCESSORY_SOCKET_MAX_NUM);
 	}
 
-
-#ifdef ENABLE_ACCE_SYSTEM
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_ACCE) && (GetSocket(ACCE_ABSORBED_SOCKET)))
-	{
-		TItemTable * pkItemAbsorbed = ITEM_MANAGER::instance().GetTable(GetSocket(ACCE_ABSORBED_SOCKET));
-		if (pkItemAbsorbed)
-		{
-			if ((pkItemAbsorbed->bType == ITEM_ARMOR) && (pkItemAbsorbed->bSubType == ARMOR_BODY))
-			{
-				long lDefGrade = pkItemAbsorbed->alValues[1] + long(pkItemAbsorbed->alValues[5] * 2);
-				double dValue = lDefGrade * GetSocket(ACCE_ABSORPTION_SOCKET);
-				dValue = (double)dValue / 100;
-				dValue = (double)dValue + .5;
-				lDefGrade = (long) dValue;
-				if ((pkItemAbsorbed->alValues[1] > 0 && (lDefGrade <= 0)) || (pkItemAbsorbed->alValues[5] > 0 && (lDefGrade < 1)))
-					lDefGrade += 1;
-				else if ((pkItemAbsorbed->alValues[1] > 0) || (pkItemAbsorbed->alValues[5] > 0))
-					lDefGrade += 1;
-
-				m_pOwner->ApplyPoint(APPLY_DEF_GRADE_BONUS, bAdd ? lDefGrade : -lDefGrade);
-
-				long lDefMagicBonus = pkItemAbsorbed->alValues[0];
-				dValue = lDefMagicBonus * GetSocket(ACCE_ABSORPTION_SOCKET);
-				dValue = (double)dValue / 100;
-				dValue = (double)dValue + .5;
-				lDefMagicBonus = (long) dValue;
-				if ((pkItemAbsorbed->alValues[0] > 0) && (lDefMagicBonus < 1))
-					lDefMagicBonus += 1;
-				else if (pkItemAbsorbed->alValues[0] > 0)
-					lDefMagicBonus += 1;
-
-				m_pOwner->ApplyPoint(APPLY_MAGIC_DEF_GRADE, bAdd ? lDefMagicBonus : -lDefMagicBonus);
-			}
-			else if (pkItemAbsorbed->bType == ITEM_WEAPON)
-			{
-				long lAttGrade = pkItemAbsorbed->alValues[4] + pkItemAbsorbed->alValues[5];
-				if (pkItemAbsorbed->alValues[3] > pkItemAbsorbed->alValues[4])
-					lAttGrade = pkItemAbsorbed->alValues[3] + pkItemAbsorbed->alValues[5];
-
-				double dValue = lAttGrade * GetSocket(ACCE_ABSORPTION_SOCKET);
-				dValue = (double)dValue / 100;
-				dValue = (double)dValue + .5;
-				lAttGrade = (long) dValue;
-				if (((pkItemAbsorbed->alValues[3] > 0) && (lAttGrade < 1)) || ((pkItemAbsorbed->alValues[4] > 0) && (lAttGrade < 1)))
-					lAttGrade += 1;
-				else if ((pkItemAbsorbed->alValues[3] > 0) || (pkItemAbsorbed->alValues[4] > 0))
-					lAttGrade += 1;
-
-				m_pOwner->ApplyPoint(APPLY_ATT_GRADE_BONUS, bAdd ? lAttGrade : -lAttGrade);
-
-				long lAttMagicGrade = pkItemAbsorbed->alValues[2] + pkItemAbsorbed->alValues[5];
-				if (pkItemAbsorbed->alValues[1] > pkItemAbsorbed->alValues[2])
-					lAttMagicGrade = pkItemAbsorbed->alValues[1] + pkItemAbsorbed->alValues[5];
-
-				dValue = lAttMagicGrade * GetSocket(ACCE_ABSORPTION_SOCKET);
-				dValue = (double)dValue / 100;
-				dValue = (double)dValue + .5;
-				lAttMagicGrade = (long) dValue;
-				if (((pkItemAbsorbed->alValues[1] > 0) && (lAttMagicGrade < 1)) || ((pkItemAbsorbed->alValues[2] > 0) && (lAttMagicGrade < 1)))
-					lAttMagicGrade += 1;
-				else if ((pkItemAbsorbed->alValues[1] > 0) || (pkItemAbsorbed->alValues[2] > 0))
-					lAttMagicGrade += 1;
-
-				m_pOwner->ApplyPoint(APPLY_MAGIC_ATT_GRADE, bAdd ? lAttMagicGrade : -lAttMagicGrade);
-			}
-		}
-	}
-#endif
-
-
 	for (int i = 0; i < ITEM_APPLY_MAX_NUM; ++i)
 	{
-#ifdef ENABLE_ACCE_SYSTEM
-		if ((m_pProto->aApplies[i].bType == APPLY_NONE) && (GetType() != ITEM_COSTUME) && (GetSubType() != COSTUME_ACCE))
-#else
 		if (m_pProto->aApplies[i].bType == APPLY_NONE)
-#endif
 			continue;
 
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-		if(IsMountItem())
-			continue;
-#endif
-
+		BYTE bType = m_pProto->aApplies[i].bType;
 		long value = m_pProto->aApplies[i].lValue;
-#ifdef ENABLE_ACCE_SYSTEM
-		if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_ACCE))
-		{
-			TItemTable * pkItemAbsorbed = ITEM_MANAGER::instance().GetTable(GetSocket(ACCE_ABSORBED_SOCKET));
-			if (pkItemAbsorbed)
-			{
-				if (pkItemAbsorbed->aApplies[i].bType == APPLY_NONE)
-					continue;
 
-				value = pkItemAbsorbed->aApplies[i].lValue;
-				if (value < 0)
-					continue;
-
-				double dValue = value * GetSocket(ACCE_ABSORPTION_SOCKET);
-				dValue = (double)dValue / 100;
-				dValue = (double)dValue + .5;
-				value = (long) dValue;
-				if ((pkItemAbsorbed->aApplies[i].lValue > 0) && (value <= 0))
-					value += 1;
-			}
-			else
-				continue;
-		}
-#endif
-		if (m_pProto->aApplies[i].bType == APPLY_SKILL)
+		if (bType != APPLY_SKILL)
 		{
-			m_pOwner->ApplyPoint(m_pProto->aApplies[i].bType, bAdd ? value : value ^ 0x00800000);
-		}
-		else
-		{
-			if (0 != accessoryGrade)
+			if (accessoryGrade != 0)
 				value += MAX(accessoryGrade, value * aiAccessorySocketEffectivePct[accessoryGrade] / 100);
 
-			m_pOwner->ApplyPoint(m_pProto->aApplies[i].bType, bAdd ? value : -value);
+			m_pOwner->ApplyPoint(bType, bAdd ? value : -value);
 		}
-	} 
-
-#ifdef ENABLE_ITEM_EXTRA_PROTO
-	if (HasExtraProto()) 
-	{
-#ifdef ENABLE_NEW_EXTRA_BONUS
-		for (int i = 0; i < NEW_EXTRA_BONUS_COUNT; i++) 
-		{
-			auto type = m_ExtraProto->ExtraBonus[i].bType;			
-			if (type != APPLY_NONE) {
-				auto value = m_ExtraProto->ExtraBonus[i].lValue;
-				m_pOwner->ApplyPoint(m_ExtraProto->ExtraBonus[i].bType, bAdd ? value : -value);
-			}			
-		}
-#endif
+		else
+			m_pOwner->ApplyPoint(bType, bAdd ? value : value ^ 0x00800000);
 	}
-#endif
 
+	if (ITEM_COSTUME == GetType() && COSTUME_ACCE == GetSubType())
+	{
+		TItemTable* p = ITEM_MANAGER::instance().GetTable(GetSocket(1));
 
+		if (p)
+		{
+			for (int i = 0; i < ITEM_APPLY_MAX_NUM; ++i)
+			{
+				if (p->aApplies[i].bType == APPLY_NONE)
+					continue;
 
-	// 초승달의 반지, 할로윈 사탕, 행복의 반지, 영원한 사랑의 펜던트의 경우
-	// 기존의 하드 코딩으로 강제로 속성을 부여했지만,
-	// 그 부분을 제거하고 special item group 테이블에서 속성을 부여하도록 변경하였다.
-	// 하지만 하드 코딩되어있을 때 생성된 아이템이 남아있을 수도 있어서 특수처리 해놓는다.
-	// 이 아이템들의 경우, 밑에 ITEM_UNIQUE일 때의 처리로 속성이 부여되기 때문에,
-	// 아이템에 박혀있는 attribute는 적용하지 않고 넘어간다.
+				int value = p->aApplies[i].lValue;
+				long drainPct = GetSocket(0);
+				value = value < 0 ? 1 : ((float)value / 100) * drainPct;
+
+				if (p->aApplies[i].bType == APPLY_SKILL)
+					m_pOwner->ApplyPoint(p->aApplies[i].bType, bAdd ? value : value ^ 0x00800000);
+				else
+					m_pOwner->ApplyPoint(p->aApplies[i].bType, bAdd ? value : -value);
+			}
+		}
+	}
+
 	if (true == CItemVnumHelper::IsRamadanMoonRing(GetVnum()) || true == CItemVnumHelper::IsHalloweenCandy(GetVnum())
 		|| true == CItemVnumHelper::IsHappinessRing(GetVnum()) || true == CItemVnumHelper::IsLovePendant(GetVnum()))
 	{
-		// Do not anything.
 	}
 	else
 	{
@@ -1104,28 +688,18 @@ void CItem::ModifyPoints(bool bAdd)
 			if (GetAttributeType(i))
 			{
 				const TPlayerItemAttribute& ia = GetAttribute(i);
-				long sValue = ia.sValue;
-#ifdef ENABLE_ACCE_SYSTEM
-				if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_ACCE)) {
-					double dValue = sValue * GetSocket(ACCE_ABSORPTION_SOCKET);
-					dValue = (double)dValue / 100;
-					dValue = (double)dValue + .5;
-					sValue = (long) dValue;
-					if ((ia.sValue > 0) && (sValue <= 0))
-						sValue += 1;
-				}
-#endif
+				short value = ia.sValue;
 
-#ifdef ATTR_LOCK
-				if (GetLockedAttr() == i) {
-					continue;
+				if (ITEM_COSTUME == GetType() && COSTUME_ACCE == GetSubType())
+				{
+					long drainPct = GetSocket(0);
+					value = value < 0 ? 1 : ((float)value / 100) * drainPct;
 				}
-#endif
 
 				if (ia.bType == APPLY_SKILL)
-					m_pOwner->ApplyPoint(ia.bType, bAdd ? sValue : sValue ^ 0x00800000);
+					m_pOwner->ApplyPoint(ia.bType, bAdd ? value : value ^ 0x00800000);
 				else
-					m_pOwner->ApplyPoint(ia.bType, bAdd ? sValue : -sValue);
+					m_pOwner->ApplyPoint(ia.bType, bAdd ? value : -value);
 			}
 		}
 	}
@@ -1143,102 +717,51 @@ void CItem::ModifyPoints(bool bAdd)
 				else
 				{
 					if (m_wCell == INVENTORY_MAX_NUM + WEAR_WEAPON)
-						m_pOwner->SetPart(PART_WEAPON, 0);
+						m_pOwner->SetPart(PART_WEAPON, m_pOwner->GetOriginalPart(PART_WEAPON));
 				}
 			}
 			break;
 
 		case ITEM_WEAPON:
 			{
-#ifdef ENABLE_COSTUME_EFFECT
-				if ((GetSubType() == WEAPON_SWORD) || (GetSubType() == WEAPON_DAGGER) || (GetSubType() == WEAPON_BOW) || (GetSubType() == WEAPON_TWO_HANDED) || (GetSubType() == WEAPON_BELL) || (GetSubType() == WEAPON_FAN)) {
-					CItem* item = m_pOwner->GetWear(WEAR_COSTUME_EFFECT_WEAPON);
-					if (item) {
-						DWORD toSetValueEffect;
-						switch (this->GetSubType()) {
-							case WEAPON_SWORD:
-								toSetValueEffect = item->GetValue(0);
-								break;
-							case WEAPON_DAGGER:
-								toSetValueEffect = item->GetValue(2);
-								break;
-							case WEAPON_BOW:
-								toSetValueEffect = item->GetValue(3);
-								break;
-							case WEAPON_TWO_HANDED:
-								toSetValueEffect = item->GetValue(1);
-								break;
-							case WEAPON_BELL:
-								toSetValueEffect = item->GetValue(4);
-								break;
-							case WEAPON_FAN:
-								toSetValueEffect = item->GetValue(5);
-								break;
-							default:
-								toSetValueEffect = 0;
-								break;
-						}
-						
-						if (toSetValueEffect > 0) {
-							DWORD dwWeaponVnum = GetVnum();
-							if (((dwWeaponVnum >= 1180) && (dwWeaponVnum <= 1189)) || 
-								((dwWeaponVnum >= 1090) && (dwWeaponVnum <= 1099)) || 
-								(dwWeaponVnum == 1199) || 
-								(dwWeaponVnum == 1209) || 
-								(dwWeaponVnum == 1219) || 
-								(dwWeaponVnum == 1229) || 
-								(dwWeaponVnum == 40099) || 
-								((dwWeaponVnum >= 7190) && (dwWeaponVnum <= 7199))
-							)
-								toSetValueEffect += 500;
-						}
-						
-						if (!bAdd)
-							toSetValueEffect = 0;
-						
-						m_pOwner->SetPart((BYTE)PART_EFFECT_WEAPON, toSetValueEffect);
+				LPITEM pkCostumeWeapon = m_pOwner->GetWear(WEAR_COSTUME_WEAPON);
+				if (pkCostumeWeapon && bAdd && m_pProto->bSubType != WEAPON_ARROW && m_pProto->bSubType != WEAPON_QUIVER)
+				{
+					if (pkCostumeWeapon->GetValue(3) == GetSubType() && bAdd)
+					{
+						m_pOwner->SetPart(PART_WEAPON, pkCostumeWeapon->GetVnum());
+						break;
+					}
+					else
+					{
+						m_pOwner->SetPart(PART_WEAPON, GetVnum());
+						break;
 					}
 				}
-#endif
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
-				if (0 != m_pOwner->GetWear(WEAR_COSTUME_WEAPON))
-					break;
-#endif
 
 				if (bAdd)
 				{
 					if (m_wCell == INVENTORY_MAX_NUM + WEAR_WEAPON)
+					{
 						m_pOwner->SetPart(PART_WEAPON, GetVnum());
+					}
 				}
 				else
 				{
 					if (m_wCell == INVENTORY_MAX_NUM + WEAR_WEAPON)
-						m_pOwner->SetPart(PART_WEAPON, 0);
+					{
+						m_pOwner->SetPart(PART_WEAPON, m_pOwner->GetOriginalPart(PART_WEAPON));
+					}
 				}
 			}
 			break;
 
 		case ITEM_ARMOR:
 			{
-#ifdef ENABLE_COSTUME_EFFECT
-				if (GetSubType() == ARMOR_BODY) {
-					CItem* item = m_pOwner->GetWear(WEAR_COSTUME_EFFECT_BODY);
-					if (item) {
-						DWORD toSetValueEffect;
-						toSetValueEffect = item->GetValue(0);
-						if ((!bAdd) && (!m_pOwner->GetWear(WEAR_COSTUME_BODY)))
-							toSetValueEffect = 0;
-						
-						m_pOwner->SetPart((BYTE)PART_EFFECT_BODY, toSetValueEffect);
-					}
-				}
-#endif
-				
-				// 코스츔 body를 입고있다면 armor는 벗던 입던 상관 없이 비주얼에 영향을 주면 안 됨.
 				if (0 != m_pOwner->GetWear(WEAR_COSTUME_BODY))
 					break;
 
-				if (GetSubType() == ARMOR_BODY || GetSubType() == ARMOR_HEAD || GetSubType() == ARMOR_FOOTS || GetSubType() == ARMOR_SHIELD)
+				if (GetSubType() == ARMOR_BODY || GetSubType() == ARMOR_HEAD || GetSubType() == ARMOR_FOOTS || GetSubType() == ARMOR_SHIELD || GetSubType() == ARMOR_PENDANT)
 				{
 					if (bAdd)
 					{
@@ -1254,184 +777,59 @@ void CItem::ModifyPoints(bool bAdd)
 			}
 			break;
 
-		// 코스츔 아이템 입었을 때 캐릭터 parts 정보 세팅. 기존 스타일대로 추가함..
 		case ITEM_COSTUME:
 			{
 				DWORD toSetValue = this->GetVnum();
 				EParts toSetPart = PART_MAX_NUM;
 
-				// 갑옷 코스츔
 				if (GetSubType() == COSTUME_BODY)
 				{
-#ifdef ENABLE_COSTUME_EFFECT
-					CItem* item = m_pOwner->GetWear(WEAR_COSTUME_EFFECT_BODY);
-					if (item) {
-						DWORD toSetValueEffect;
-						toSetValueEffect = item->GetValue(0);
-						if ((!bAdd) && (!m_pOwner->GetWear(WEAR_BODY)))
-							toSetValueEffect = 0;
-						
-						m_pOwner->SetPart((BYTE)PART_EFFECT_BODY, toSetValueEffect);
-					}
-#endif
 					toSetPart = PART_MAIN;
 
 					if (false == bAdd)
 					{
-						// 코스츔 갑옷을 벗었을 때 원래 갑옷을 입고 있었다면 그 갑옷으로 look 세팅, 입지 않았다면 default look
 						const CItem* pArmor = m_pOwner->GetWear(WEAR_BODY);
-						toSetValue = (NULL != pArmor) ? pArmor->GetVnum() : m_pOwner->GetOriginalPart(PART_MAIN);
+						toSetValue = (NULL != pArmor) ? pArmor->GetVnum() : m_pOwner->GetOriginalPart(PART_MAIN);						
 					}
+					
 				}
-#ifdef ENABLE_RUNE_SYSTEM
-				else if (GetSubType() == RUNE_SLOT7)
-				{
-					toSetPart = PART_RUNE;
-					toSetValue = (true == bAdd) ? m_pOwner->GetRuneEffect() : 0;
-				}
-#endif
-				// 헤어 코스츔
+
 				else if (GetSubType() == COSTUME_HAIR)
 				{
 					toSetPart = PART_HAIR;
-
-					// 코스츔 헤어는 shape값을 item proto의 value3에 세팅하도록 함. 특별한 이유는 없고 기존 갑옷(ARMOR_BODY)의 shape값이 프로토의 value3에 있어서 헤어도 같이 value3으로 함.
-					// [NOTE] 갑옷은 아이템 vnum을 보내고 헤어는 shape(value3)값을 보내는 이유는.. 기존 시스템이 그렇게 되어있음...
 					toSetValue = (true == bAdd) ? this->GetValue(3) : 0;
 				}
 
-#ifdef ENABLE_ACCE_SYSTEM
 				else if (GetSubType() == COSTUME_ACCE)
 				{
-					toSetValue -= 85000;
-					if (GetSocket(ACCE_ABSORPTION_SOCKET) >= ACCE_EFFECT_FROM_ABS)
-						toSetValue += 1000;
-					
-					toSetValue = (bAdd == true) ? toSetValue : 0;
-					
-#ifdef ENABLE_STOLE_COSTUME
-					const CItem* pAcce = m_pOwner->GetWear(WEAR_COSTUME_ACCE);
-					if (pAcce) {
-						toSetValue = pAcce->GetVnum();
-						toSetValue -= 85000;
-						toSetValue += 1000;
-					}
-#endif
-					
 					toSetPart = PART_ACCE;
+					toSetValue = (true == bAdd) ? this->GetVnum() : 0;
 				}
-#endif
-#ifdef ENABLE_STOLE_COSTUME
-				else if (GetSubType() == COSTUME_STOLE)
-				{
-					toSetValue -= 85000;
-					if (!bAdd) {
-						CItem* pAcce = m_pOwner->GetWear(WEAR_COSTUME_ACCE_SLOT);
-						if (!pAcce)
-							toSetValue = 0;
-						else {
-							toSetValue = pAcce->GetVnum();
-							toSetValue -= 85000;
-							if (pAcce->GetSocket(ACCE_ABSORPTION_SOCKET) >= ACCE_EFFECT_FROM_ABS)
-								toSetValue += 1000;
-						}
-					}
-					else
-						toSetValue += 1000;
-					
-					toSetPart = PART_ACCE;
-				}
-#endif
-#ifdef ENABLE_COSTUME_EFFECT
-				else if (GetSubType() == COSTUME_EFFECT_BODY)
-				{
-					if (bAdd) {
-						CItem* item = m_pOwner->GetWear(WEAR_BODY);
-						toSetValue = item != NULL ? this->GetValue(0) : 0;
-						if (toSetValue == 0) {
-							item = m_pOwner->GetWear(WEAR_COSTUME_BODY);
-							toSetValue = item != NULL ? this->GetValue(0) : 0;
-						}
-					}
-					else
-						toSetValue = 0;
-					
-					toSetPart = PART_EFFECT_BODY;
-				}
-				else if (GetSubType() == COSTUME_EFFECT_WEAPON)
-				{
-					if (bAdd) {
-						CItem* item = m_pOwner->GetWear(WEAR_WEAPON);
-						if (item) {
-							switch (item->GetSubType()) {
-								case WEAPON_SWORD:
-									toSetValue = this->GetValue(0);
-									break;
-								case WEAPON_DAGGER:
-									toSetValue = this->GetValue(2);
-									break;
-								case WEAPON_BOW:
-									toSetValue = this->GetValue(3);
-									break;
-								case WEAPON_TWO_HANDED:
-									toSetValue = this->GetValue(1);
-									break;
-								case WEAPON_BELL:
-									toSetValue = this->GetValue(4);
-									break;
-								case WEAPON_FAN:
-									toSetValue = this->GetValue(5);
-									break;
-								default:
-									toSetValue = 0;
-									break;
-							}
-							
-							if (toSetValue > 0) {
-								DWORD dwWeaponVnum = item->GetVnum();
-								if (((dwWeaponVnum >= 1180) && (dwWeaponVnum <= 1189)) || 
-									((dwWeaponVnum >= 1090) && (dwWeaponVnum <= 1099)) || 
-									(dwWeaponVnum == 1199) || 
-									(dwWeaponVnum == 1209) || 
-									(dwWeaponVnum == 1219) || 
-									(dwWeaponVnum == 1229) || 
-									(dwWeaponVnum == 40099) || 
-									((dwWeaponVnum >= 7190) && (dwWeaponVnum <= 7199))
-								)
-									toSetValue += 500;
-							}
-						}
-						else
-							toSetValue = 0;
-					}
-					else
-						toSetValue = 0;
-					
-					toSetPart = PART_EFFECT_WEAPON;
-				}
-#endif
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-				else if (GetSubType() == COSTUME_MOUNT)
-				{
-					// not need to do a thing in here
-				}
-#endif
 
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
 				else if (GetSubType() == COSTUME_WEAPON)
 				{
 					toSetPart = PART_WEAPON;
-					if (false == bAdd)
+
+					const CItem* resetToItem = m_pOwner->GetWear(WEAR_WEAPON);
+					if (resetToItem)
 					{
-						const CItem* pWeapon = m_pOwner->GetWear(WEAR_WEAPON);
-						if (pWeapon != NULL) {
-							toSetValue = (NULL != pWeapon) ? pWeapon->GetVnum() : m_pOwner->GetOriginalPart(PART_WEAPON);
-						} else {
-							toSetValue = 0;
+						if (bAdd)
+						{
+							if (resetToItem->GetSubType() != GetValue(3))
+							{
+								toSetValue = resetToItem->GetVnum();
+							}
+						}
+						else
+						{
+							toSetValue = resetToItem->GetVnum();
 						}
 					}
+					else
+					{
+						toSetValue = 0;
+					}
 				}
-#endif
 
 				if (PART_MAX_NUM != toSetPart)
 				{
@@ -1446,14 +844,25 @@ void CItem::ModifyPoints(bool bAdd)
 				{
 					const CSpecialItemGroup* pItemGroup = ITEM_MANAGER::instance().GetSpecialItemGroup(GetSIGVnum());
 					if (NULL == pItemGroup)
+					{
 						break;
+					}
+
 					DWORD dwAttrVnum = pItemGroup->GetAttrVnum(GetVnum());
 					const CSpecialAttrGroup* pAttrGroup = ITEM_MANAGER::instance().GetSpecialAttrGroup(dwAttrVnum);
+
 					if (NULL == pAttrGroup)
-						break;
-					for (itertype (pAttrGroup->m_vecAttrs) it = pAttrGroup->m_vecAttrs.begin(); it != pAttrGroup->m_vecAttrs.end(); it++)
 					{
+						break;
+					}
+
+					for (auto it = pAttrGroup->m_vecAttrs.begin(); it != pAttrGroup->m_vecAttrs.end(); it++)
+					{
+#ifdef _WIN32
+						m_pOwner->ApplyPoint(it->apply_type, bAdd ? it->apply_value : -static_cast<long>(it->apply_value));
+#else
 						m_pOwner->ApplyPoint(it->apply_type, bAdd ? it->apply_value : -it->apply_value);
+#endif
 					}
 				}
 			}
@@ -1481,8 +890,6 @@ bool CItem::IsEquipable() const
 	return false;
 }
 
-#define ENABLE_IMMUNE_FIX
-// return false on error state
 bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 {
 	if (!ch)
@@ -1491,7 +898,6 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 		return false;
 	}
 
-	// 용혼석 슬롯 index는 WEAR_MAX_NUM 보다 큼.
 	if (IsDragonSoul())
 	{
 		if (bWearCell < WEAR_MAX_NUM || bWearCell >= WEAR_MAX_NUM + DRAGON_SOUL_DECK_MAX_NUM * DS_SLOT_MAX)
@@ -1518,25 +924,20 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 	if (GetOwner())
 		RemoveFromCharacter();
 
-	ch->SetWear(bWearCell, this); // 여기서 패킷 나감
+	ch->SetWear(bWearCell, this);
 
 	m_pOwner = ch;
 	m_bEquipped = true;
 	m_wCell	= INVENTORY_MAX_NUM + bWearCell;
 
-#ifndef ENABLE_IMMUNE_FIX
 	DWORD dwImmuneFlag = 0;
 
 	for (int i = 0; i < WEAR_MAX_NUM; ++i)
 	{
-		if (m_pOwner->GetWear(i))
-		{
-			SET_BIT(dwImmuneFlag, m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag);
-		}
+		if (LPITEM pItem = m_pOwner->GetWear(i))
+			SET_BIT(dwImmuneFlag, pItem->GetRealImmuneFlag());
 	}
-
 	m_pOwner->SetImmuneFlag(dwImmuneFlag);
-#endif
 
 	if (IsDragonSoul())
 	{
@@ -1544,43 +945,22 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 	}
 	else
 	{
-#ifdef ENABLE_RUNE_SYSTEM
-		if (!IsRune())
-			ModifyPoints(true);
-		else if (GetSocket(1) == 1)
-			ModifyPoints(true);
-#else
-		ModifyPoints(true);
-#endif
+		ModifyPoints(true);	
 		StartUniqueExpireEvent();
 		if (-1 != GetProto()->cLimitTimerBasedOnWearIndex)
 			StartTimerBasedOnWearExpireEvent();
 
-		// ACCESSORY_REFINE
 		StartAccessorySocketExpireEvent();
-		// END_OF_ACCESSORY_REFINE
 	}
 
 	ch->BuffOnAttr_AddBuffsFromItem(this);
 
 	m_pOwner->ComputeBattlePoints();
 
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-	if (IsMountItem())
-		ch->MountSummon(this);
-#endif
 	m_pOwner->UpdatePacket();
-#ifdef ENABLE_COSTUME_PET
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_PET_SKIN)) {
-		m_pOwner->UpdatePetSkin();
-	}
-#endif
-#ifdef ENABLE_COSTUME_MOUNT
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_MOUNT_SKIN)) {
-		m_pOwner->UpdateMountSkin();
-	}
-#endif
+
 	Save();
+
 	return (true);
 }
 
@@ -1588,10 +968,9 @@ bool CItem::Unequip()
 {
 	if (!m_pOwner || GetCell() < INVENTORY_MAX_NUM)
 	{
-		// ITEM_OWNER_INVALID_PTR_BUG
-		sys_err("%s %u m_pOwner %p, GetCell %d",
+		sys_err("%s %u m_pOwner %p, GetCell %d", 
 				GetName(), GetID(), get_pointer(m_pOwner), GetCell());
-		// END_OF_ITEM_OWNER_INVALID_PTR_BUG
+
 		return false;
 	}
 
@@ -1601,12 +980,6 @@ bool CItem::Unequip()
 		return false;
 	}
 
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-	if (IsMountItem())
-		m_pOwner->MountUnsummon(this);
-#endif
-
-	//신규 말 아이템 제거시 처리
 	if (IsRideItem())
 		ClearMountAttributeAndAffect();
 
@@ -1614,12 +987,6 @@ bool CItem::Unequip()
 	{
 		DSManager::instance().DeactivateDragonSoul(this);
 	}
-#ifdef ENABLE_RUNE_SYSTEM
-	else if (IsRune()) {
-		if (GetSocket(1) == 1)
-			ModifyPoints(false);
-	}
-#endif
 	else
 	{
 		ModifyPoints(false);
@@ -1630,45 +997,31 @@ bool CItem::Unequip()
 	if (-1 != GetProto()->cLimitTimerBasedOnWearIndex)
 		StopTimerBasedOnWearExpireEvent();
 
-	// ACCESSORY_REFINE
 	StopAccessorySocketExpireEvent();
-	// END_OF_ACCESSORY_REFINE
-
 
 	m_pOwner->BuffOnAttr_RemoveBuffsFromItem(this);
 
 	m_pOwner->SetWear(GetCell() - INVENTORY_MAX_NUM, NULL);
 
-#ifndef ENABLE_IMMUNE_FIX
 	DWORD dwImmuneFlag = 0;
-
-	for (int i = 0; i < WEAR_MAX_NUM; ++i)
+	 
+	for (int i = 0; i < WEAR_MAX_NUM; i++)
 	{
-		if (m_pOwner->GetWear(i))
+		LPITEM pItem = m_pOwner->GetWear(i);
+		if (pItem)
 		{
-			SET_BIT(dwImmuneFlag, m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag);
+			SET_BIT(dwImmuneFlag, m_pOwner->GetWear(i)->GetImmuneFlag());
 		}
 	}
-
-	m_pOwner->SetImmuneFlag(dwImmuneFlag);
-#endif
 
 	m_pOwner->ComputeBattlePoints();
 
 	m_pOwner->UpdatePacket();
-#ifdef ENABLE_COSTUME_PET
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_PET_SKIN)) {
-		m_pOwner->UpdatePetSkin();
-	}
-#endif
-#ifdef ENABLE_COSTUME_MOUNT
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_MOUNT_SKIN)) {
-		m_pOwner->UpdateMountSkin();
-	}
-#endif
+
 	m_pOwner = NULL;
 	m_wCell = 0;
 	m_bEquipped	= false;
+
 	return true;
 }
 
@@ -1724,43 +1077,38 @@ void CItem::SetSocket(int i, long v, bool bLog)
 	m_alSockets[i] = v;
 	UpdatePacket();
 	Save();
-	if (bLog)
-	{
-#ifdef ENABLE_NEWSTUFF
-		if (g_iDbLogLevel>=LOG_LEVEL_MAX)
-#endif
-		LogManager::instance().ItemLog(i, v, 0, GetID(), "SET_SOCKET", "", "", GetOriginalVnum());
-	}
 }
-#ifdef ENABLE_LONG_LONG
+
 long long CItem::GetGold()
-#else
-int CItem::GetGold()
-#endif
 {
 	if (IS_SET(GetFlag(), ITEM_FLAG_COUNT_PER_1GOLD))
 	{
-		if (GetProto()->dwGold == 0)
+		if (GetProto()->lldGold == 0)
+		{
 			return GetCount();
+		}
 		else
-			return GetCount() / GetProto()->dwGold;
+		{
+			return GetCount() / GetProto()->lldGold;
+		}
 	}
 	else
-		return GetProto()->dwGold;
+	{
+		return GetProto()->lldGold;
+	}
 }
-#ifdef ENABLE_LONG_LONG
+
 long long CItem::GetShopBuyPrice()
-#else
-int CItem::GetShopBuyPrice()
-#endif
 {
-	return GetProto()->dwShopBuyPrice;
+	return GetProto()->lldShopBuyPrice;
 }
 
 bool CItem::IsOwnership(LPCHARACTER ch)
 {
 	if (!m_pkOwnershipEvent)
+	{
 		return true;
+	}
 
 	return m_dwOwnershipPID == ch->GetPlayerID() ? true : false;
 }
@@ -1868,78 +1216,61 @@ void CItem::AlterToSocketItem(int iSocketCount)
 		SetSocket(i, 1);
 }
 
-void CItem::AlterToMagicItem()
+void CItem::AlterToMagicItem(int iSecondPct, int iThirdPct)
 {
-	if (GetAttributeSetIndex() < 0)
-	{
-		return;
-	}
+	int idx = GetAttributeSetIndex();
+	int test = 0;
 
-	int iSecondPct;
-	int iThirdPct;
+	if (idx < 0)
+		return;
 
 	switch (GetType())
 	{
-		case ITEM_WEAPON:
-			{
-				iSecondPct = 20;
-				iThirdPct = 5;
-			}
-			break;
+	case ITEM_WEAPON:
+		iSecondPct = 20;
+		iThirdPct = 5;
+		break;
+	case ITEM_COSTUME:
+		iSecondPct = 30;
+		iThirdPct = 20;
+		test = 1;
+		break;
+	case ITEM_ARMOR:
+		if (GetSubType() == ARMOR_BODY)
+		{
+			iSecondPct = 10;
+			iThirdPct = 2;
+		}
+		else
+		{
+			iSecondPct = 10;
+			iThirdPct = 1;
+		}
+		break;
 
-		case ITEM_ARMOR:
-			{
-				if (GetSubType() == ARMOR_BODY)
-				{
-					iSecondPct = 10;
-					iThirdPct = 2;
-				}
-				else
-				{
-					iSecondPct = 10;
-					iThirdPct = 1;
-				}
-			}
-			break;
-#ifdef ENABLE_ATTR_COSTUMES
-		case ITEM_COSTUME:
-			{
-				uint8_t subtype = GetSubType();
-				iSecondPct = subtype == COSTUME_BODY || subtype == COSTUME_HAIR
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
-				 || subtype == COSTUME_WEAPON
-#endif
-				 ? 100 : 0;
-				iThirdPct = subtype == COSTUME_BODY || subtype == COSTUME_HAIR
-#ifdef ENABLE_WEAPON_COSTUME_SYSTEM
-				 || subtype == COSTUME_WEAPON
-#endif
-				 ? 100 : 0;
-			}
-			break;
-#endif
-		default:
-			{
-				iSecondPct = 0;
-				iThirdPct = 0;
-			}
-			break;
-	}
-
-	if (iSecondPct == 0 && iThirdPct == 0)
-	{
+	default:
 		return;
 	}
 
-	PutAttribute(aiItemMagicAttributePercentHigh);
-	if (number(1, 100) <= iSecondPct)
+	if (test == 1)
 	{
-		PutAttribute(aiItemMagicAttributePercentLow);
-	}
+		PutCostumeAttribute(aiItemMagicAttributePercentHigh);
 
-	if (number(1, 100) <= iThirdPct)
+		if (number(1, 100) <= iSecondPct)
+			PutCostumeAttribute(aiItemMagicAttributePercentLow);
+
+		if (number(1, 100) <= iThirdPct)
+			PutCostumeAttribute(aiItemMagicAttributePercentLow);
+	}
+	else
 	{
-		PutAttribute(aiItemMagicAttributePercentLow);
+		PutAttribute(aiItemMagicAttributePercentHigh);
+
+		if (number(1, 100) <= iSecondPct)
+			PutAttribute(aiItemMagicAttributePercentLow);
+
+		if (number(1, 100) <= iThirdPct)
+			PutAttribute(aiItemMagicAttributePercentLow);
 	}
 }
 
@@ -2010,7 +1341,7 @@ EVENTFUNC(unique_expire_event)
 	else
 	{
 		time_t cur = get_global_time();
-
+		
 		if (pkItem->GetSocket(ITEM_SOCKET_UNIQUE_REMAIN_TIME) <= cur)
 		{
 			pkItem->SetUniqueExpireEvent(NULL);
@@ -2019,9 +1350,6 @@ EVENTFUNC(unique_expire_event)
 		}
 		else
 		{
-			// 게임 내에 시간제 아이템들이 빠릿빠릿하게 사라지지 않는 버그가 있어
-			// 수정
-			// by rtsummit
 			if (pkItem->GetSocket(ITEM_SOCKET_UNIQUE_REMAIN_TIME) - cur < 600)
 				return PASSES_PER_SEC(pkItem->GetSocket(ITEM_SOCKET_UNIQUE_REMAIN_TIME) - cur);
 			else
@@ -2030,9 +1358,6 @@ EVENTFUNC(unique_expire_event)
 	}
 }
 
-// 시간 후불제
-// timer를 시작할 때에 시간 차감하는 것이 아니라,
-// timer가 발화할 때에 timer가 동작한 시간 만큼 시간 차감을 한다.
 EVENTFUNC(timer_based_on_wear_expire_event)
 {
 	item_event_info* info = dynamic_cast<item_event_info*>( event->info );
@@ -2045,33 +1370,12 @@ EVENTFUNC(timer_based_on_wear_expire_event)
 
 	LPITEM pkItem = info->item;
 	int remain_time = pkItem->GetSocket(ITEM_SOCKET_REMAIN_SEC) - processing_time/passes_per_sec;
-#ifdef ENABLE_RUNE_SYSTEM
-	if (pkItem->IsRune()) {
-		if (remain_time <= 0) {
-			pkItem->SetSocket(ITEM_SOCKET_REMAIN_SEC, 0);
-			pkItem->DeactivateRune();
-			return 0;
-		}
-		
-		if (long(remain_time / (pkItem->GetValue(0) / 100)) < 50) {
-			pkItem->DeactivateRuneBonus();
-		}
-		
-		if ((pkItem->GetSubType() == RUNE_SLOT7) || (pkItem->GetSocket(1) != 1))
-			return PASSES_PER_SEC(MIN(60, remain_time));
-		
-		if (pkItem->GetSocket(1) == 1)
-			pkItem->ChangeRuneAttr(remain_time);
-	}
-#endif
-	
 	if (remain_time <= 0)
 	{
 		sys_log(0, "ITEM EXPIRED : expired %s %u", pkItem->GetName(), pkItem->GetID());
 		pkItem->SetTimerBasedOnWearExpireEvent(NULL);
 		pkItem->SetSocket(ITEM_SOCKET_REMAIN_SEC, 0);
-
-		// 일단 timer based on wear 용혼석은 시간 다 되었다고 없애지 않는다.
+	
 		if (pkItem->IsDragonSoul())
 		{
 			DSManager::instance().DeactivateDragonSoul(pkItem);
@@ -2082,7 +1386,6 @@ EVENTFUNC(timer_based_on_wear_expire_event)
 		}
 		return 0;
 	}
-	
 	pkItem->SetSocket(ITEM_SOCKET_REMAIN_SEC, remain_time);
 	return PASSES_PER_SEC (MIN (60, remain_time));
 }
@@ -2108,64 +1411,21 @@ EVENTFUNC(real_time_expire_event)
 
 	if (NULL == item)
 		return 0;
-	
-#ifdef ENABLE_NEW_USE_POTION
-	if (info->newpotion) {
-		long remainSec = item->GetSocket(0);
-		if (remainSec <= 0) {
-			if (item->GetSocket(1) == 1) {
-				LPCHARACTER pkOwner = item->GetOwner();
-				if (pkOwner) {
-					if (pkOwner->FindAffect(item->GetValue(0))) {
-						pkOwner->RemoveAffect(item->GetValue(0));
-					}
-
-#ifdef TEXTS_IMPROVEMENT
-					pkOwner->ChatPacketNew(CHAT_TYPE_INFO, 27, "%s", item->GetName());
-#endif
-				}
-			}
-
-			ITEM_MANAGER::instance().RemoveItem(item, "REAL_TIME_EXPIRE");
-			return 0;
-		}
-
-		if (item->GetSocket(1) != 1) {
-			return PASSES_PER_SEC(60);
-		}
-		else {
-			long nextSec = (remainSec - 60) > 0 ? (remainSec - 60) : 0;
-			item->SetSocket(0, nextSec);
-			if (nextSec <= 0) {
-				LPCHARACTER pkOwner = item->GetOwner();
-				if (pkOwner) {
-					if (pkOwner->FindAffect(item->GetValue(0))) {
-						pkOwner->RemoveAffect(item->GetValue(0));
-					}
-
-#ifdef TEXTS_IMPROVEMENT
-					pkOwner->ChatPacketNew(CHAT_TYPE_INFO, 27, "%s", item->GetName());
-#endif
-				}
-
-				ITEM_MANAGER::instance().RemoveItem(item, "REAL_TIME_EXPIRE");
-				return 0;
-			} else {
-				return PASSES_PER_SEC(nextSec > 60 ? 60 : nextSec);
-			}
-		}
-	}
-#endif
 
 	const time_t current = get_global_time();
+
 	if (current > item->GetSocket(0))
 	{
-		if(item->IsNewMountItem()) {
+		if(item->IsNewMountItem())
+		{
 			if (item->GetSocket(2) != 0)
+			{
 				item->ClearMountAttributeAndAffect();
+			}
 		}
 
 		ITEM_MANAGER::instance().RemoveItem(item, "REAL_TIME_EXPIRE");
+
 		return 0;
 	}
 
@@ -2176,46 +1436,17 @@ void CItem::StartRealTimeExpireEvent()
 {
 	if (m_pkRealTimeExpireEvent)
 		return;
-	
 	for (int i=0 ; i < ITEM_LIMIT_MAX_NUM ; i++)
 	{
 		if (LIMIT_REAL_TIME == GetProto()->aLimits[i].bType || LIMIT_REAL_TIME_START_FIRST_USE == GetProto()->aLimits[i].bType)
 		{
 			item_vid_event_info* info = AllocEventInfo<item_vid_event_info>();
 			info->item_vid = GetVID();
-#ifdef ENABLE_NEW_USE_POTION
-			if ((GetType() == ITEM_USE) && (GetSubType() == USE_NEW_POTIION)) {
-				long remainSec = GetSocket(0);
-				if (remainSec <= 0) {
-					if (GetSocket(1) == 1) {
-						LPCHARACTER pkOwner = GetOwner();
-						if (pkOwner) {
-							if (pkOwner->FindAffect(GetValue(0))) {
-								pkOwner->RemoveAffect(GetValue(0));
-							}
 
-#ifdef TEXTS_IMPROVEMENT
-							pkOwner->ChatPacketNew(CHAT_TYPE_INFO, 27, "%s", GetName());
-#endif
-						}
-					}
-
-					ITEM_MANAGER::instance().RemoveItem(this, "REAL_TIME_EXPIRE");
-					return;
-				}
-
-				info->newpotion = true;
-				m_pkRealTimeExpireEvent = event_create(real_time_expire_event, info, PASSES_PER_SEC(remainSec > 60 ? 60 : remainSec));
-			}
-			else {
-				info->newpotion = false;
-				m_pkRealTimeExpireEvent = event_create( real_time_expire_event, info, PASSES_PER_SEC(1));
-			}
-#else
 			m_pkRealTimeExpireEvent = event_create( real_time_expire_event, info, PASSES_PER_SEC(1));
-#endif
-			
+
 			sys_log(0, "REAL_TIME_EXPIRE: StartRealTimeExpireEvent");
+
 			return;
 		}
 	}
@@ -2225,36 +1456,11 @@ bool CItem::IsRealTimeItem()
 {
 	if(!GetProto())
 		return false;
-	
 	for (int i=0 ; i < ITEM_LIMIT_MAX_NUM ; i++)
 	{
 		if (LIMIT_REAL_TIME == GetProto()->aLimits[i].bType)
 			return true;
 	}
-	return false;
-}
-
-bool CItem::IsRealTimeFirstUseItem()
-{
-	if(GetProto()) {
-		for (int i=0 ; i < ITEM_LIMIT_MAX_NUM ; i++) {
-			if (LIMIT_REAL_TIME_START_FIRST_USE == GetProto()->aLimits[i].bType)
-				return true;
-		}
-	}
-
-	return false;
-}
-
-bool CItem::IsUnlimitedTimeUnique()
-{
-	if(GetProto()) {
-		for (int i=0 ; i < ITEM_LIMIT_MAX_NUM ; i++) {
-			if (LIMIT_UNIQUE_UNLIMITED == GetProto()->aLimits[i].bType)
-				return true;
-		}
-	}
-
 	return false;
 }
 
@@ -2266,11 +1472,9 @@ void CItem::StartUniqueExpireEvent()
 	if (m_pkUniqueExpireEvent)
 		return;
 
-	//기간제 아이템일 경우 시간제 아이템은 동작하지 않는다
-	if (IsRealTimeItem() || IsRealTimeFirstUseItem() || IsUnlimitedTimeUnique())
+	if (IsRealTimeItem())
 		return;
 
-	// HARD CODING
 	if (GetVnum() == UNIQUE_ITEM_HIDE_ALIGNMENT_TITLE)
 		m_pOwner->ShowAlignment(false);
 
@@ -2289,14 +1493,11 @@ void CItem::StartUniqueExpireEvent()
 	SetUniqueExpireEvent(event_create(unique_expire_event, info, PASSES_PER_SEC(iSec)));
 }
 
-// 시간 후불제
-// timer_based_on_wear_expire_event 설명 참조
 void CItem::StartTimerBasedOnWearExpireEvent()
 {
 	if (m_pkTimerBasedOnWearExpireEvent)
 		return;
 
-	//기간제 아이템일 경우 시간제 아이템은 동작하지 않는다
 	if (IsRealTimeItem())
 		return;
 
@@ -2304,8 +1505,7 @@ void CItem::StartTimerBasedOnWearExpireEvent()
 		return;
 
 	int iSec = GetSocket(0);
-
-	// 남은 시간을 분단위로 끊기 위해...
+	
 	if (0 != iSec)
 	{
 		iSec %= 60;
@@ -2324,10 +1524,9 @@ void CItem::StopUniqueExpireEvent()
 	if (!m_pkUniqueExpireEvent)
 		return;
 
-	if (GetValue(2) != 0) // 게임시간제 이외의 아이템은 UniqueExpireEvent를 중단할 수 없다.
+	if (GetValue(2) != 0)
 		return;
 
-	// HARD CODING
 	if (GetVnum() == UNIQUE_ITEM_HIDE_ALIGNMENT_TITLE)
 		m_pOwner->ShowAlignment(true);
 
@@ -2356,49 +1555,35 @@ void CItem::ApplyAddon(int iAddonType)
 }
 
 int CItem::GetSpecialGroup() const
-{
-	return ITEM_MANAGER::instance().GetSpecialGroupFromItem(GetVnum());
+{ 
+	return ITEM_MANAGER::instance().GetSpecialGroupFromItem(GetVnum()); 
 }
 
-//
-// 악세서리 소켓 처리.
-//
 bool CItem::IsAccessoryForSocket()
 {
 	return (m_pProto->bType == ITEM_ARMOR && (m_pProto->bSubType == ARMOR_WRIST || m_pProto->bSubType == ARMOR_NECK || m_pProto->bSubType == ARMOR_EAR)) ||
-		(m_pProto->bType == ITEM_BELT);				// 2013년 2월 새로 추가된 '벨트' 아이템의 경우 기획팀에서 악세서리 소켓 시스템을 그대로 이용하자고 함.
+		(m_pProto->bType == ITEM_BELT);
 }
 
-void CItem::SetAccessorySocketGrade(int iGrade
-#ifdef ENABLE_INFINITE_RAFINES
-, bool infinite
-#endif
-)
-{
-	SetSocket(0, MINMAX(0, iGrade, GetAccessorySocketMaxGrade()));
+void CItem::SetAccessorySocketGrade(int iGrade) 
+{ 
+	SetSocket(0, MINMAX(0, iGrade, GetAccessorySocketMaxGrade())); 
 
-	int iDownTime = 
-#ifdef ENABLE_INFINITE_RAFINES
-	infinite == true ? 86410 : aiAccessorySocketDegradeTime[GetAccessorySocketGrade()];
-#else
-	aiAccessorySocketDegradeTime[GetAccessorySocketGrade()]
-#endif
-	;
-
-	//if (test_server)
-	//	iDownTime /= 60;
-
+	int iDownTime = aiAccessorySocketDegradeTime[GetAccessorySocketGrade()];
 	SetAccessorySocketDownGradeTime(iDownTime);
 }
 
-void CItem::SetAccessorySocketMaxGrade(int iMaxGrade)
-{
-	SetSocket(1, MINMAX(0, iMaxGrade, ITEM_ACCESSORY_SOCKET_MAX_NUM));
+void CItem::SetAccessorySocketMaxGrade(int iMaxGrade) 
+{ 
+	SetSocket(1, MINMAX(0, iMaxGrade, ITEM_ACCESSORY_SOCKET_MAX_NUM)); 
 }
 
-void CItem::SetAccessorySocketDownGradeTime(DWORD time)
-{
-	SetSocket(2, time);
+void CItem::SetAccessorySocketDownGradeTime(DWORD time) 
+{ 
+	SetSocket(2, time); 
+
+	if (test_server && GetOwner())
+		GetOwner()->ChatPacket(CHAT_TYPE_INFO, "[LS;469;%s;%d]", GetName(), time);
 }
 
 EVENTFUNC(accessory_socket_expire_event)
@@ -2412,6 +1597,7 @@ EVENTFUNC(accessory_socket_expire_event)
 	}
 
 	LPITEM item = ITEM_MANAGER::instance().FindByVID(info->item_vid);
+
 	if (item->GetAccessorySocketDownGradeTime() <= 1)
 	{
 degrade:
@@ -2450,11 +1636,6 @@ void CItem::StartAccessorySocketExpireEvent()
 		return;
 
 	int iSec = GetAccessorySocketDownGradeTime();
-#ifdef ENABLE_INFINITE_RAFINES
-	if (iSec > 86400) {
-		return;
-	}
-#endif
 	SetAccessorySocketExpireEvent(NULL);
 
 	if (iSec <= 1)
@@ -2489,27 +1670,16 @@ void CItem::StopAccessorySocketExpireEvent()
 		SetAccessorySocketDownGradeTime(new_time);
 	}
 }
-
+		
 bool CItem::IsRideItem()
 {
 	if (ITEM_UNIQUE == GetType() && UNIQUE_SPECIAL_RIDE == GetSubType())
 		return true;
 	if (ITEM_UNIQUE == GetType() && UNIQUE_SPECIAL_MOUNT_RIDE == GetSubType())
 		return true;
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-	if (ITEM_COSTUME == GetType() && COSTUME_MOUNT == GetSubType())
-		return true;
-#endif
 	return false;
 }
-
-bool CItem::IsRamadanRing()
-{
-	if (GetVnum() == UNIQUE_ITEM_RAMADAN_RING)
-		return true;
-	return false;
-}
-
+		
 void CItem::ClearMountAttributeAndAffect()
 {
 	LPCHARACTER ch = GetOwner();
@@ -2525,20 +1695,27 @@ void CItem::ClearMountAttributeAndAffect()
 	ch->PointChange(POINT_IQ, 0);
 }
 
-// fixme
-// 이거 지금은 안쓴데... 근데 혹시나 싶어서 남겨둠.
-// by rtsummit
 bool CItem::IsNewMountItem()
 {
 	switch(GetVnum())
 	{
-		case 76000: case 76001: case 76002: case 76003:
+		case 76000: case 76001: case 76002: case 76003: 
 		case 76004: case 76005: case 76006: case 76007:
-		case 76008: case 76009: case 76010: case 76011:
+		case 76008: case 76009: case 76010: case 76011: 
 		case 76012: case 76013: case 76014:
 			return true;
 	}
 	return false;
+}
+
+bool CItem::IsCostumeMountItem()
+{
+	return GetType() == ITEM_COSTUME && GetSubType() == COSTUME_MOUNT;
+}
+
+bool CItem::IsCostumePetItem()
+{
+	return GetType() == ITEM_COSTUME && GetSubType() == COSTUME_PET;
 }
 
 void CItem::SetAccessorySocketExpireEvent(LPEVENT pkEvent)
@@ -2551,12 +1728,10 @@ void CItem::AccessorySocketDegrade()
 	if (GetAccessorySocketGrade() > 0)
 	{
 		LPCHARACTER ch = GetOwner();
-#ifdef TEXTS_IMPROVEMENT
-		if (ch) {
-			ch->ChatPacketNew(CHAT_TYPE_INFO, 117, "%s", GetName());
-		}
-#endif
-		
+
+		if (ch)
+			ch->ChatPacket(CHAT_TYPE_INFO, "[LS;471;%d]", GetVnum());
+
 		ModifyPoints(false);
 		SetAccessorySocketGrade(GetAccessorySocketGrade()-1);
 		ModifyPoints(true);
@@ -2573,28 +1748,17 @@ void CItem::AccessorySocketDegrade()
 	}
 }
 
-// ring에 item을 박을 수 있는지 여부를 체크해서 리턴
 static const bool CanPutIntoRing(LPITEM ring, LPITEM item)
 {
-	//const DWORD vnum = item->GetVnum();
+	const DWORD vnum = item->GetVnum();
 	return false;
 }
 
-#ifdef ENABLE_COSTUME_TIME_EXTENDER
-static const int COSTUME_TIME_EXTENDER_VNUMS[] = {71590, 71591, 71592}; //Add vnums of extenders here.
-#endif
-
-
 bool CItem::CanPutInto(LPITEM item)
 {
-	if (item->GetType() == ITEM_BELT) {
-		if (GetSubType() == USE_PUT_INTO_BELT_SOCKET && GetValue(0) != 1) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
+	if (item->GetType() == ITEM_BELT)
+		return this->GetSubType() == USE_PUT_INTO_BELT_SOCKET;
+
 	else if(item->GetType() == ITEM_RING)
 		return CanPutIntoRing(item, this);
 
@@ -2603,14 +1767,6 @@ bool CItem::CanPutInto(LPITEM item)
 
 	DWORD vnum = item->GetVnum();
 
-	if (GetVnum() == 50634) {
-		return (vnum >= 14220 && vnum <= 14233) || (vnum >= 16220 && vnum <= 16233) || (vnum >= 17220 && vnum <= 17233) ? true : false;
-	}
-
-	if (GetVnum() == 50640) {
-		return (vnum >= 14580 && vnum <= 14589) || (vnum >= 15010 && vnum <= 15013) || (vnum >= 16580 && vnum <= 16593) || (vnum >= 17570 && vnum <= 17583) ? true : false;
-	}
-
 	struct JewelAccessoryInfo
 	{
 		DWORD jewel;
@@ -2618,17 +1774,17 @@ bool CItem::CanPutInto(LPITEM item)
 		DWORD neck;
 		DWORD ear;
 	};
-	const static JewelAccessoryInfo infos[] = {
-		{ 50634, 14420, 16220, 17220 },
-		{ 50635, 14500, 16500, 17500 },
-		{ 50636, 14520, 16520, 17520 },
-		{ 50637, 14540, 16540, 17540 },
-		{ 50638, 14560, 16560, 17560 },
+	const static JewelAccessoryInfo infos[] = { 
+		{ 50634, 14420, 16220, 17220 }, 
+		{ 50635, 14500, 16500, 17500 }, 
+		{ 50636, 14520, 16520, 17520 }, 
+		{ 50637, 14540, 16540, 17540 }, 
+		{ 50638, 14560, 16560, 17560 }, 
 		{ 50639, 14570, 16570, 17570 },
 	};
-
+	
 	DWORD item_type = (item->GetVnum() / 10) * 10;
-	for (size_t i = 0; i < sizeof(infos) / sizeof(infos[0]); i++)
+	for (int i = 0; i < sizeof(infos) / sizeof(infos[0]); i++)
 	{
 		const JewelAccessoryInfo& info = infos[i];
 		switch(item->GetSubType())
@@ -2712,148 +1868,6 @@ bool CItem::CanPutInto(LPITEM item)
 	return 50623 + type == GetVnum();
 }
 
-#ifdef ENABLE_INFINITE_RAFINES
-bool CItem::CanPutInto2(LPITEM item)
-{
-	if (item->GetType() == ITEM_BELT) {
-		if (GetSubType() == USE_PUT_INTO_BELT_SOCKET && GetValue(0) == 1) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-
-	else if(item->GetType() == ITEM_RING)
-		return CanPutIntoRing(item, this);
-
-	else if (item->GetType() != ITEM_ARMOR)
-		return false;
-
-	DWORD vnum = item->GetVnum();
-
-	if (GetVnum() == 50684) {
-		return (vnum >= 14220 && vnum <= 14233) || (vnum >= 16220 && vnum <= 16233) || (vnum >= 17220 && vnum <= 17233) ? true : false;
-	}
-
-	if (GetVnum() == 50690) {
-		return (vnum >= 14580 && vnum <= 14589) || (vnum >= 15010 && vnum <= 15013) || (vnum >= 16580 && vnum <= 16593) || (vnum >= 17570 && vnum <= 17583) ? true : false;
-	}
-
-	struct JewelAccessoryInfo
-	{
-		DWORD jewel;
-		DWORD wrist;
-		DWORD neck;
-		DWORD ear;
-	};
-	const static JewelAccessoryInfo infos[] = {
-		{ 50684, 14420, 16220, 17220 },
-		{ 50685, 14500, 16500, 17500 },
-		{ 50686, 14520, 16520, 17520 },
-		{ 50687, 14540, 16540, 17540 },
-		{ 50688, 14560, 16560, 17560 },
-		{ 50689, 14570, 16570, 17570 },
-	};
-
-	DWORD item_type = (item->GetVnum() / 10) * 10;
-	for (size_t i = 0; i < sizeof(infos) / sizeof(infos[0]); i++)
-	{
-		const JewelAccessoryInfo& info = infos[i];
-		switch(item->GetSubType())
-		{
-		case ARMOR_WRIST:
-			if (info.wrist == item_type)
-			{
-				if (info.jewel == GetVnum())
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-			}
-			break;
-		case ARMOR_NECK:
-			if (info.neck == item_type)
-			{
-				if (info.jewel == GetVnum())
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-			}
-			break;
-		case ARMOR_EAR:
-			if (info.ear == item_type)
-			{
-				if (info.jewel == GetVnum())
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-			}
-			break;
-		}
-	}
-	if (item->GetSubType() == ARMOR_WRIST)
-		vnum -= 14000;
-	else if (item->GetSubType() == ARMOR_NECK)
-		vnum -= 16000;
-	else if (item->GetSubType() == ARMOR_EAR)
-		vnum -= 17000;
-	else
-		return false;
-
-	DWORD type = vnum / 20;
-
-	if (type < 0 || type > 11)
-	{
-		type = (vnum - 170) / 20;
-
-		if (50673 + type != GetVnum())
-			return false;
-		else
-			return true;
-	}
-	else if (item->GetVnum() >= 16210 && item->GetVnum() <= 16219)
-	{
-		if (50675 != GetVnum())
-			return false;
-		else
-			return true;
-	}
-	else if (item->GetVnum() >= 16230 && item->GetVnum() <= 16239)
-	{
-		if (50676 != GetVnum())
-			return false;
-		else
-			return true;
-	}
-
-	return 50673 + type == GetVnum();
-}
-#endif
-
-// PC_BANG_ITEM_ADD
-bool CItem::IsPCBangItem()
-{
-	for (int i = 0; i < ITEM_LIMIT_MAX_NUM; ++i)
-	{
-		if (m_pProto->aLimits[i].bType == LIMIT_PCBANG)
-			return true;
-	}
-	return false;
-}
-// END_PC_BANG_ITEM_ADD
-
 bool CItem::CheckItemUseLevel(int nLevel)
 {
 	for (int i = 0; i < ITEM_LIMIT_MAX_NUM; ++i)
@@ -2891,7 +1905,7 @@ void CItem::CopySocketTo(LPITEM pItem)
 
 int CItem::GetAccessorySocketGrade()
 {
-   	return MINMAX(0, GetSocket(0), GetAccessorySocketMaxGrade());
+   	return MINMAX(0, GetSocket(0), GetAccessorySocketMaxGrade()); 
 }
 
 int CItem::GetAccessorySocketMaxGrade()
@@ -2901,44 +1915,7 @@ int CItem::GetAccessorySocketMaxGrade()
 
 int CItem::GetAccessorySocketDownGradeTime()
 {
-#ifdef ENABLE_INFINITE_RAFINES
-	return GetSocket(2);
-#else
 	return MINMAX(0, GetSocket(2), aiAccessorySocketDegradeTime[GetAccessorySocketGrade()]);
-#endif
-}
-
-void CItem::AttrLog()
-{
-	const char * pszIP = NULL;
-
-	if (GetOwner() && GetOwner()->GetDesc())
-		pszIP = GetOwner()->GetDesc()->GetHostName();
-
-	for (int i = 0; i < ITEM_SOCKET_MAX_NUM; ++i)
-	{
-		if (m_alSockets[i])
-		{
-#ifdef ENABLE_NEWSTUFF
-			if (g_iDbLogLevel>=LOG_LEVEL_MAX)
-#endif
-			LogManager::instance().ItemLog(i, m_alSockets[i], 0, GetID(), "INFO_SOCKET", "", pszIP ? pszIP : "", GetOriginalVnum());
-		}
-	}
-
-	for (int i = 0; i<ITEM_ATTRIBUTE_MAX_NUM; ++i)
-	{
-		int	type	= m_aAttr[i].bType;
-		int value	= m_aAttr[i].sValue;
-
-		if (type)
-		{
-#ifdef ENABLE_NEWSTUFF
-			if (g_iDbLogLevel>=LOG_LEVEL_MAX)
-#endif
-			LogManager::instance().ItemLog(i, type, value, GetID(), "INFO_ATTR", "", pszIP ? pszIP : "", GetOriginalVnum());
-		}
-	}
 }
 
 int CItem::GetLevelLimit()
@@ -2955,22 +1932,13 @@ int CItem::GetLevelLimit()
 
 bool CItem::OnAfterCreatedItem()
 {
-	// 아이템을 한 번이라도 사용했다면, 그 이후엔 사용 중이지 않아도 시간이 차감되는 방식
 	if (-1 != this->GetProto()->cLimitRealTimeFirstUseIndex)
 	{
-		// Socket1에 아이템의 사용 횟수가 기록되어 있으니, 한 번이라도 사용한 아이템은 타이머를 시작한다.
 		if (0 != GetSocket(1))
 		{
 			StartRealTimeExpireEvent();
 		}
 	}
-
-#ifdef ENABLE_SOUL_SYSTEM
-	if(GetType() == ITEM_SOUL)
-	{
-		StartSoulItemEvent();
-	}
-#endif
 
 	return true;
 }
@@ -2985,8 +1953,8 @@ int CItem::GiveMoreTime_Per(float fPercent)
 	if (IsDragonSoul())
 	{
 		DWORD duration = DSManager::instance().GetDuration(this);
-		DWORD remain_sec = GetSocket(ITEM_SOCKET_REMAIN_SEC);
-		DWORD given_time = fPercent * duration / 100u;
+		int remain_sec = GetSocket(ITEM_SOCKET_REMAIN_SEC);
+		int given_time = fPercent * duration / 100;
 		if (remain_sec == duration)
 			return false;
 		if ((given_time + remain_sec) >= duration)
@@ -3000,7 +1968,6 @@ int CItem::GiveMoreTime_Per(float fPercent)
 			return given_time;
 		}
 	}
-	// 우선 용혼석에 관해서만 하도록 한다.
 	else
 		return 0;
 }
@@ -3010,13 +1977,13 @@ int CItem::GiveMoreTime_Fix(DWORD dwTime)
 	if (IsDragonSoul())
 	{
 		DWORD duration = DSManager::instance().GetDuration(this);
-		DWORD remain_sec = GetSocket(ITEM_SOCKET_REMAIN_SEC);
+		int remain_sec = GetSocket(ITEM_SOCKET_REMAIN_SEC);
 		if (remain_sec == duration)
 			return false;
 		if ((dwTime + remain_sec) >= duration)
 		{
 			SetSocket(ITEM_SOCKET_REMAIN_SEC, duration);
-			return duration - remain_sec;
+			return duration - remain_sec; 
 		}
 		else
 		{
@@ -3024,7 +1991,6 @@ int CItem::GiveMoreTime_Fix(DWORD dwTime)
 			return dwTime;
 		}
 	}
-	// 우선 용혼석에 관해서만 하도록 한다.
 	else
 		return 0;
 }
@@ -3040,19 +2006,15 @@ int	CItem::GetDuration()
 		if (LIMIT_REAL_TIME == GetProto()->aLimits[i].bType)
 			return GetProto()->aLimits[i].lValue;
 	}
-
-	if (GetProto()->cLimitTimerBasedOnWearIndex >= 0)
-	{
-		BYTE cLTBOWI = GetProto()->cLimitTimerBasedOnWearIndex;
-		return GetProto()->aLimits[cLTBOWI].lValue;
-	}
+	
+	if (-1 != GetProto()->cLimitTimerBasedOnWearIndex)
+		return GetProto()->aLimits[GetProto()->cLimitTimerBasedOnWearIndex].lValue;	
 
 	return -1;
 }
 
 bool CItem::IsSameSpecialGroup(const LPITEM item) const
 {
-	// 서로 VNUM이 같다면 같은 그룹인 것으로 간주
 	if (this->GetVnum() == item->GetVnum())
 		return true;
 
@@ -3062,593 +2024,22 @@ bool CItem::IsSameSpecialGroup(const LPITEM item) const
 	return false;
 }
 
-
-#ifdef ENABLE_EXTRA_INVENTORY
-bool CItem::IsExtraItem()
+DWORD CItem::GetRealImmuneFlag()
 {
-	switch (GetVnum()) {
-		case 70612:
-		case 70613:
-		case 70614:
-		case 88968:
-		case 30002:
-		case 30003:
-		case 30004:
-		case 30005:
-		case 30006:
-		case 30015:
-		case 30047:
-		case 30050:
-		case 30165:
-		case 30166:
-		case 30167:
-		case 30168:
-		case 30251:
-		case 30252:
-			return false;
-		case 30277:
-		case 30279:
-		case 30284:
-		case 86053:
-		case 86054:
-		case 86055:
-		case 70102:
-		case 39008:
-		case 71001:
-		case 72310:
-		case 39030:
-		case 71094:
-#ifdef __NEWPET_SYSTEM__
-		case 86077:
-		case 86076:
-		case 55010:
-		case 55011:
-		case 55012:
-		case 55013:
-		case 55014:
-		case 55015:
-		case 55016:
-		case 55017:
-		case 55018:
-		case 55019:
-		case 55020:
-		case 55021:
-#endif
-		case 50513:
-		case 50525:
-		case 50526:
-		case 50527:
-			return true;
-		default:
-			break;
-	}
+	DWORD dwImmuneFlag = GetImmuneFlag();
 
-	switch (GetType()) {
-		case ITEM_MATERIAL:
-		case ITEM_METIN:
-		case ITEM_SKILLBOOK:
-		case ITEM_SKILLFORGET:
-		case ITEM_GIFTBOX:
-		case ITEM_TREASURE_BOX:
-		case ITEM_TREASURE_KEY:
-		{
-			return true;
-		}
-		case ITEM_USE:
-		{
-			BYTE subtype = GetSubType();
-			return (subtype == USE_CHANGE_ATTRIBUTE ||
-			 subtype == USE_ADD_ATTRIBUTE ||
-			 subtype == USE_ADD_ATTRIBUTE2 ||
-			 subtype == USE_CHANGE_ATTRIBUTE2 ||
-			 subtype == USE_CHANGE_COSTUME_ATTR ||
-			 subtype == USE_RESET_COSTUME_ATTR ||
-			 subtype == USE_CHANGE_ATTRIBUTE_PLUS ||
-#ifdef ATTR_LOCK
-			 subtype == USE_ADD_ATTRIBUTE_LOCK ||
-			 subtype == USE_CHANGE_ATTRIBUTE_LOCK ||
-			 subtype == USE_DELETE_ATTRIBUTE_LOCK ||
-#endif
-#ifdef ENABLE_ATTR_COSTUMES
-			 subtype == USE_CHANGE_ATTR_COSTUME ||
-			 subtype == USE_ADD_ATTR_COSTUME1 ||
-			 subtype == USE_ADD_ATTR_COSTUME2 ||
-			 subtype == USE_REMOVE_ATTR_COSTUME ||
-#endif
-#ifdef ENABLE_DS_ENCHANT
-			 subtype == USE_DS_ENCHANT ||
-#endif
-#ifdef ENABLE_DS_ENCHANT
-			 subtype == USE_ENCHANT_STOLE
-#endif
-			);
-		}
-		default:
-		{
-			break;
-		}
-	}
-
-	return false;
-}
-
-
-BYTE CItem::GetExtraCategory()
-{
-	switch (GetType())
+	for (int i = 0; i < ITEM_ATTRIBUTE_MAX_NUM; ++i)
 	{
-		case ITEM_SKILLBOOK:
-		case ITEM_SKILLFORGET:
-		{
-			return 0;
-		}
-		case ITEM_MATERIAL:
-		{
-			return 1;
-		}
-		case ITEM_METIN:
-		{
-			return 2;
-		}
-		case ITEM_GIFTBOX:
-		case ITEM_TREASURE_BOX:
-		case ITEM_TREASURE_KEY:
-		{
-			return 3;
-		}
-		case ITEM_USE:
-		{
-			BYTE subtype = GetSubType();
-			if (subtype == USE_CHANGE_ATTRIBUTE ||
-			 subtype == USE_ADD_ATTRIBUTE ||
-			 subtype == USE_ADD_ATTRIBUTE2 ||
-			 subtype == USE_CHANGE_ATTRIBUTE2 ||
-			 subtype == USE_CHANGE_COSTUME_ATTR ||
-			 subtype == USE_RESET_COSTUME_ATTR ||
-			 subtype == USE_CHANGE_ATTRIBUTE_PLUS ||
-#ifdef ATTR_LOCK
-			 subtype == USE_ADD_ATTRIBUTE_LOCK ||
-			 subtype == USE_CHANGE_ATTRIBUTE_LOCK ||
-			 subtype == USE_DELETE_ATTRIBUTE_LOCK ||
-#endif
-#ifdef ENABLE_ATTR_COSTUMES
-			 subtype == USE_CHANGE_ATTR_COSTUME ||
-			 subtype == USE_ADD_ATTR_COSTUME1 ||
-			 subtype == USE_ADD_ATTR_COSTUME2 ||
-			 subtype == USE_REMOVE_ATTR_COSTUME ||
-#endif
-#ifdef ENABLE_DS_ENCHANT
-			 subtype == USE_DS_ENCHANT ||
-#endif
-#ifdef ENABLE_DS_ENCHANT
-			 subtype == USE_ENCHANT_STOLE
-#endif
-			) {
-				return 4;
-			} else {
-				break;
-			}
-		}
-		default:
-		{
-			break;
-		}
-	}
-	
-	switch (GetVnum()) {
-		case 30277:
-		case 30279:
-		case 30284:
-		case 86053:
-		case 86054:
-		case 86055:
-			return 1;
-		case 70102:
-		case 39008:
-		case 71001:
-		case 72310:
-		case 39030:
-		case 71094:
-#ifdef __NEWPET_SYSTEM__
-		case 86077:
-		case 86076:
-		case 55010:
-		case 55011:
-		case 55012:
-		case 55013:
-		case 55014:
-		case 55015:
-		case 55016:
-		case 55017:
-		case 55018:
-		case 55019:
-		case 55020:
-		case 55021:
-#endif
-		case 50513:
-		case 50525:
-		case 50526:
-		case 50527:
-			return 0;
+		if (!GetAttribute(i).sValue)
+			continue;
+
+		if (GetAttribute(i).bType == APPLY_IMMUNE_STUN)
+			SET_BIT(dwImmuneFlag, IMMUNE_STUN);
+		else if (GetAttribute(i).bType == APPLY_IMMUNE_SLOW)
+			SET_BIT(dwImmuneFlag, IMMUNE_SLOW);
+		else if (GetAttribute(i).bType == APPLY_IMMUNE_FALL)
+			SET_BIT(dwImmuneFlag, IMMUNE_FALL);
 	}
 
-	return 0;
+	return dwImmuneFlag;
 }
-#endif
-
-#ifdef ENABLE_SOUL_SYSTEM
-EVENTFUNC(soul_item_event)
-{
-	const item_vid_event_info * pInfo = reinterpret_cast<item_vid_event_info*>(event->info);
-	if (!pInfo)
-		return 0;
-	
-	const LPITEM pItem = ITEM_MANAGER::instance().FindByVID(pInfo->item_vid);
-	if (!pItem)
-		return 0;
-	
-	int iCurrentMinutes = (pItem->GetSocket(2) / 10000);
-	int iCurrentStrike = (pItem->GetSocket(2) % 10000);
-	int iNextMinutes = iCurrentMinutes + 1;
-	
-	if(iNextMinutes >= pItem->GetLimitValue(1))
-	{
-		if (pItem->GetValue(0) != 1)
-		{
-			pItem->SetSocket(2, (pItem->GetLimitValue(1) * 10000 + iCurrentStrike)); // just in case
-			pItem->SetSoulItemEvent(NULL);
-			return 0;
-		}
-	}
-	
-	pItem->SetSocket(2, (iNextMinutes * 10000 + iCurrentStrike));
-	
-	if(test_server)
-		return PASSES_PER_SEC(5);
-	
-	return PASSES_PER_SEC(60);
-}
-
-void CItem::SetSoulItemEvent(LPEVENT pkEvent)
-{
-	m_pkSoulItemEvent = pkEvent;
-}
-
-void CItem::StartSoulItemEvent()
-{
-	if (GetType() != ITEM_SOUL)
-		return;
-
-	if (m_pkSoulItemEvent)
-		return;
-
-	int iMinutes = (GetSocket(2) / 10000);
-	if(iMinutes >= GetLimitValue(1))
-		return;
-
-	item_vid_event_info * pInfo = AllocEventInfo<item_vid_event_info>();
-	pInfo->item_vid = GetVID();
-	SetSoulItemEvent(event_create(soul_item_event, pInfo, PASSES_PER_SEC( test_server ? 5 : 60 )));
-}
-#endif
-
-#ifdef ENABLE_MOUNT_COSTUME_SYSTEM
-bool CItem::IsMountItem()
-{
-	if (GetType() == ITEM_COSTUME && GetSubType() == COSTUME_MOUNT)
-		return true;
-	
-	return false;
-}
-#endif
-
-#ifdef ENABLE_RUNE_SYSTEM
-bool CItem::IsRune() {
-	if ((GetType() == ITEM_COSTUME) && (GetSubType() >= RUNE_SLOT1) && (GetSubType() <= RUNE_SLOT7))
-		return true;
-	
-	return false;
-}
-
-long CItem::GetRuneAttrType(int c) {
-	long v = 0;
-	BYTE bSubType = GetSubType();
-	if (bSubType == RUNE_SLOT1)
-		v = c == 1 ? aApplyRuneInfo[1][0] : aApplyRuneInfo[0][0];
-	else if (bSubType == RUNE_SLOT2)
-		v = c == 1 ? aApplyRuneInfo[3][0] : aApplyRuneInfo[2][0];
-	else if (bSubType == RUNE_SLOT3)
-		v = c == 1 ? aApplyRuneInfo[5][0] : aApplyRuneInfo[4][0];
-	else if (bSubType == RUNE_SLOT4)
-		v = c == 1 ? aApplyRuneInfo[7][0] : aApplyRuneInfo[6][0];
-	else if (bSubType == RUNE_SLOT5)
-		v = c == 1 ? aApplyRuneInfo[9][0] : aApplyRuneInfo[8][0];
-	else if (bSubType == RUNE_SLOT6)
-		v = c == 1 ? aApplyRuneInfo[11][0] : aApplyRuneInfo[10][0];
-	else if (bSubType == RUNE_SLOT7)
-		v = c == 1 ? aApplyRuneInfo[13][0] : aApplyRuneInfo[12][0];
-	
-	return v;
-}
-
-long CItem::GetRuneAttrValue(int c, long lTime) {
-	long v = 0;
-	long t = 1;
-	long lMaxTime = GetValue(0);
-	long lOnePercent = lMaxTime / 100;
-	long lRemainPercent = lTime / lOnePercent;
-	if (lRemainPercent >= 81)
-		t = 7;
-	else if (lRemainPercent >= 61)
-		t = 6;
-	else if (lRemainPercent >= 41)
-		t = 5;
-	else if (lRemainPercent >= 21)
-		t = 4;
-	else if (lRemainPercent >= 11)
-		t = 3;
-	else if (lRemainPercent >= 6)
-		t = 2;
-	else if (lRemainPercent >= 0)
-		t = 1;
-	
-	BYTE bSubType = GetSubType();
-	if (bSubType == RUNE_SLOT1)
-		v = c == 1 ? aApplyRuneInfo[1][t] : aApplyRuneInfo[0][t];
-	else if (bSubType == RUNE_SLOT2)
-		v = c == 1 ? aApplyRuneInfo[3][t] : aApplyRuneInfo[2][t];
-	else if (bSubType == RUNE_SLOT3)
-		v = c == 1 ? aApplyRuneInfo[5][t] : aApplyRuneInfo[4][t];
-	else if (bSubType == RUNE_SLOT4)
-		v = c == 1 ? aApplyRuneInfo[7][t] : aApplyRuneInfo[6][t];
-	else if (bSubType == RUNE_SLOT5)
-		v = c == 1 ? aApplyRuneInfo[9][t] : aApplyRuneInfo[8][t];
-	else if (bSubType == RUNE_SLOT6)
-		v = c == 1 ? aApplyRuneInfo[11][t] : aApplyRuneInfo[10][t];
-	else if (bSubType == RUNE_SLOT7)
-		v = c == 1 ? aApplyRuneInfo[13][t] : aApplyRuneInfo[12][t];
-	
-	return v;
-}
-
-void CItem::InitializeRune() {
-	if ((GetType() == ITEM_USE) && (GetSubType() == USE_RUNE_PERC_CHARGE)) {
-		SetSocket(0, GetValue(0));
-		UpdatePacket();
-		return;
-	}
-	
-	if (!IsRune())
-		return;
-	
-	long lTime = 0, lAttr = 0, lValue = 0;
-	for (int i = 0; i < RUNE_ATTR_EACH; ++i) {
-		lTime = GetSocket(0);
-		lAttr = GetRuneAttrType(i);
-		lValue = GetRuneAttrValue(i, lTime);
-		if ((lAttr > 0) && (lValue > 0)) {
-			SetForceAttribute(i, lAttr, lValue);
-		}
-	}
-}
-
-void CItem::ChangeRuneAttr(long lTime) {
-	long lValue = GetRuneAttrValue(0, lTime);
-	bool bChange = lValue != GetAttributeValue(0) ? true : false;
-	if (!bChange)
-		return;
-	
-	bool isActive = GetSocket(1) == 1 ? true : false;
-	if (isActive)
-		ModifyPoints(false);
-	
-	for (int i = 0; i < RUNE_ATTR_EACH; ++i) {
-		lValue = GetRuneAttrValue(i, lTime);
-		SetForceAttribute(i, GetAttributeType(i), lValue);
-	}
-	
-	if (isActive)
-		ModifyPoints(true);
-	
-	UpdatePacket();
-}
-
-void CItem::ActivateRuneBonus() {
-	if (!m_pOwner)
-		return;
-	
-	LPITEM pkItem1 = m_pOwner->GetWear(WEAR_RUNE7);
-	if (!pkItem1)
-		return;
-	
-	if (pkItem1->GetSocket(1) == 1)
-		return;
-	
-	bool bCan = true;
-	int iMaxSubTypes = RUNE_SUBTYPES - 1;
-	LPITEM pkItem2 = NULL;
-	for (int i = 0; i < iMaxSubTypes; i++) {
-		pkItem2 = m_pOwner->GetWear(WEAR_RUNE1 + i);
-		if (pkItem2) {
-			if (pkItem2->GetSocket(1) != 1) {
-				bCan = false;
-				break;
-			}
-			else {
-				if (long(pkItem2->GetSocket(0) / (pkItem2->GetValue(0) / 100)) < 50) {
-					bCan = false;
-					break;
-				}
-			}
-		}
-		else {
-			bCan = false;
-			break;
-		}
-	}
-	
-	if (!bCan) {
-		if (m_pOwner->FindAffect(AFFECT_RUNE2))
-			m_pOwner->RemoveAffect(AFFECT_RUNE2);
-		
-		if (!m_pOwner->FindAffect(AFFECT_RUNE1))
-			m_pOwner->AddAffect(AFFECT_RUNE1, APPLY_NONE, 0, 0, INFINITE_AFFECT_DURATION, false, false);
-		
-		return;
-	}
-	else {
-		if (m_pOwner->FindAffect(AFFECT_RUNE1))
-			m_pOwner->RemoveAffect(AFFECT_RUNE1);
-		
-		if (!m_pOwner->FindAffect(AFFECT_RUNE2))
-			m_pOwner->AddAffect(AFFECT_RUNE2, APPLY_NONE, 0, 0, INFINITE_AFFECT_DURATION, false, false);
-	}
-	
-	pkItem1->SetSocket(1, 1);
-	pkItem1->ModifyPoints(true);
-	pkItem1->UpdatePacket();
-#ifdef TEXTS_IMPROVEMENT
-	m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 31, "%s", pkItem1->GetName());
-#endif
-}
-
-void CItem::DeactivateRuneBonus() {
-	if (!m_pOwner)
-		return;
-	
-	LPITEM pkItem1 = m_pOwner->GetWear(WEAR_RUNE7);
-	if (!pkItem1)
-		return;
-	
-	if (pkItem1->GetSocket(1) != 1)
-		return;
-	
-	if (m_pOwner->FindAffect(AFFECT_RUNE2))
-		m_pOwner->RemoveAffect(AFFECT_RUNE2);
-	
-	pkItem1->SetSocket(1, 0);
-	pkItem1->ModifyPoints(false);
-	pkItem1->UpdatePacket();
-#ifdef TEXTS_IMPROVEMENT
-	m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 901, "%s", pkItem1->GetName());
-#endif
-}
-
-void CItem::DeactivateRuneBonusRefresh() {
-	int iMaxSubTypes = RUNE_SUBTYPES - 1;
-	bool bAdd = false;
-	LPITEM pkItem2 = NULL;
-	if (!m_pOwner->FindAffect(AFFECT_RUNE1)) {
-		for (int i = 0; i < iMaxSubTypes; i++) {
-			pkItem2 = m_pOwner->GetWear(WEAR_RUNE1 + i);
-			if (pkItem2) {
-				if (pkItem2->GetSocket(1) != 0) {
-					bAdd = true;
-					break;
-				}
-			}
-			else {
-				bAdd = true;
-				break;
-			}
-		}
-		
-		if (bAdd)
-			m_pOwner->AddAffect(AFFECT_RUNE1, APPLY_NONE, 0, 0, INFINITE_AFFECT_DURATION, false, false);
-	}
-	else {
-		for (int i = 0; i < iMaxSubTypes; i++) {
-			pkItem2 = m_pOwner->GetWear(WEAR_RUNE1 + i);
-			if (pkItem2) {
-				if (pkItem2->GetSocket(1) != 0) {
-					bAdd = true;
-					break;
-				}
-			}
-			else {
-				bAdd = true;
-				break;
-			}
-		}
-		
-		if (!bAdd)
-			m_pOwner->RemoveAffect(AFFECT_RUNE1);
-	}
-}
-
-void CItem::ActivateRune() {
-	if (!IsRune())
-		return;
-	
-	if (GetSocket(1) == 1)
-		return;
-	
-	if (GetSocket(ITEM_SOCKET_REMAIN_SEC) <= 0) {
-#ifdef TEXTS_IMPROVEMENT
-		if (m_pOwner) {
-			m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 30, "%s", GetName());
-		}
-#endif
-		return;
-	}
-	
-	SetSocket(1, 1);
-	ModifyPoints(true);
-	UpdatePacket();
-#ifdef TEXTS_IMPROVEMENT
-	if (m_pOwner) {
-		m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 31, "%s", GetName());
-	}
-#endif
-	
-	ActivateRuneBonus();
-}
-
-void CItem::DeactivateRune() {
-	if (!IsRune())
-		return;
-	
-	if (GetSocket(1) == 0)
-		return;
-	
-	DeactivateRuneBonus();
-	
-	SetSocket(1, 0);
-	ModifyPoints(false);
-	UpdatePacket();
-	DeactivateRuneBonusRefresh();
-#ifdef TEXTS_IMPROVEMENT
-	if (m_pOwner) {
-		m_pOwner->ChatPacketNew(CHAT_TYPE_INFO, 32, "%s", GetName());
-	}
-#endif
-}
-#endif
-
-#ifdef ENABLE_MULTI_NAMES
-const char * CItem::GetName(BYTE Lang) {
-	if (Lang == 0) {
-		if (m_pOwner) {
-			if (m_pOwner->GetDesc()) {
-				return m_pProto ? m_pProto->szLocaleName[m_pOwner->GetDesc()->GetLanguage()] : NULL;
-			} else {
-				return m_pProto ? m_pProto->szLocaleName[1] : NULL;
-			}
-		} else {
-			return m_pProto ? m_pProto->szLocaleName[1] : NULL;
-		}
-	} else {
-		return m_pProto ? m_pProto->szLocaleName[Lang] : NULL;
-	}
-}
-#endif
-
-#ifdef ENABLE_COSTUME_TIME_EXTENDER
-bool CItem::IsCostumeTimeExtender()
-{
-	for (unsigned int i=0; i < sizeof(COSTUME_TIME_EXTENDER_VNUMS)/sizeof(*COSTUME_TIME_EXTENDER_VNUMS); i++)
-		if ((unsigned int) COSTUME_TIME_EXTENDER_VNUMS[i] == this->GetVnum())
-			return true;
-	return false;
-}
-#endif

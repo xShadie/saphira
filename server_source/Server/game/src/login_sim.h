@@ -1,5 +1,4 @@
-#ifndef __INC_METIN_II_SERVER_LOGINSIM__
-#define __INC_METIN_II_SERVER_LOGINSIM__
+#pragma once
 
 #include "desc_client.h"
 
@@ -69,5 +68,3 @@ class CLoginSim
 		unsigned int vecIdx;
 		bool bCheck;
 };
-
-#endif

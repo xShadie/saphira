@@ -1,5 +1,4 @@
-#ifndef __INC_METIN_II_GAME_SAFEBOX_H__
-#define __INC_METIN_II_GAME_SAFEBOX_H__
+#pragma once
 
 class CHARACTER;
 class CItem;
@@ -7,41 +6,36 @@ class CGrid;
 
 class CSafebox
 {
-	public:
-		CSafebox(LPCHARACTER pkChrOwner, int iSize, DWORD dwGold);
-		~CSafebox();
+public:
+	CSafebox(LPCHARACTER pkChrOwner, int iSize, long long lldGold);
+	~CSafebox();
 
-		bool		Add(DWORD dwPos, LPITEM pkItem);
-		LPITEM		Get(DWORD dwPos);
-		LPITEM		Remove(DWORD dwPos);
-		void		ChangeSize(int iSize);
+	bool			Add(DWORD dwPos, LPITEM pkItem);
+	LPITEM			Get(DWORD dwPos);
+	LPITEM			Remove(DWORD dwPos);
+	void			ChangeSize(int iSize);
 
-		bool		MoveItem(BYTE bCell, BYTE bDestCell,
-#ifdef ENABLE_NEW_STACK_LIMIT
-		int 
-#else
-		BYTE 
+	bool			MoveItem(BYTE bCell, BYTE bDestCell, WORD count);
+	LPITEM			GetItem(BYTE bCell);
+
+	void			Save();
+
+	bool			IsEmpty(DWORD dwPos, BYTE bSize);
+#if defined(ITEM_CHECKINOUT_UPDATE)
+	int				GetEmptySafebox(BYTE size);
 #endif
-		count);
-		LPITEM		GetItem(BYTE bCell);
+	bool			IsValidPosition(DWORD dwPos);
 
-		void		Save();
+	void			SetWindowMode(BYTE bWindowMode);
+	unsigned int	GetGridTotalSize() const;
 
-		bool		IsEmpty(DWORD dwPos, BYTE bSize);
-		bool		IsValidPosition(DWORD dwPos);
+protected:
+	void		__Destroy();
 
-		void		SetWindowMode(BYTE bWindowMode);
-
-	protected:
-		void		__Destroy();
-
-		LPCHARACTER	m_pkChrOwner;
-		LPITEM		m_pkItems[SAFEBOX_MAX_NUM];
-		CGrid *		m_pkGrid;
-		int		m_iSize;
-		long		m_lGold;
-
-		BYTE		m_bWindowMode;
+	LPCHARACTER	m_pkChrOwner;
+	LPITEM		m_pkItems[SAFEBOX_MAX_NUM];
+	int			m_iSize;
+	long long	m_lldGold;
+	BYTE		m_bWindowMode;
+	std::vector<std::shared_ptr<CGrid>> v_Grid;
 };
-
-#endif

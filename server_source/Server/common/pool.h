@@ -1,6 +1,4 @@
-#ifndef __INC_METIN_II_COMMON_POOL_H__
-#define __INC_METIN_II_COMMON_POOL_H__
-
+#pragma once
 #include <assert.h>
 #include <string>
 
@@ -19,13 +17,13 @@ class CPoolNode : public T
 		}
 
 	public:
-		CPoolNode<T> * m_pNext;
+		CPoolNode<T> * m_pNext;	
 		CPoolNode<T> * m_pPrev;
 };
 
 template<typename T>
 class CDynamicPool
-{
+{	
 	public:
 		typedef CPoolNode<T> TNode;
 
@@ -65,7 +63,7 @@ class CDynamicPool
 		{
 			TNode* pnewNode;
 
-			if (m_pFreeList)
+			if (m_pFreeList) 
 			{
 				pnewNode = m_pFreeList;
 				m_pFreeList = m_pFreeList->m_pNext;
@@ -76,7 +74,7 @@ class CDynamicPool
 			}
 
 			if (!pnewNode)
-				return NULL;
+				return NULL;		
 
 			if (!m_pUsedList)
 			{
@@ -90,7 +88,6 @@ class CDynamicPool
 				pnewNode->m_pPrev = NULL;
 				m_pUsedList = pnewNode;
 			}
-			//Tracef("%s Pool Alloc %p\n", m_stName.c_str(), pnewNode);
 			return (T*) pnewNode;
 		}
 
@@ -115,7 +112,6 @@ class CDynamicPool
 			pfreeNode->m_pPrev = NULL;
 			pfreeNode->m_pNext = m_pFreeList;
 			m_pFreeList = pfreeNode;
-			//Tracef("%s Pool Free\n", m_stName.c_str());
 		}
 
 		void FreeAll()
@@ -181,5 +177,3 @@ class CDynamicPool
 		DWORD		m_nodeCount;
 		std::string	m_stName;
 };
-
-#endif

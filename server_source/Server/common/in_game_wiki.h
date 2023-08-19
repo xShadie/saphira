@@ -9,10 +9,22 @@
 
 #pragma pack(1)
 
+typedef float _wfloat;
+
+typedef int _wint32;
+typedef unsigned long long _wuint64;
+
+typedef unsigned short _wunsignedshort;
+typedef WORD _wGC_PACKAGE_SIZE;
+typedef DWORD _wuint32;
+
+typedef BYTE _wunsignedchar;
+typedef BYTE _wHEADER_TYPE;
+
 namespace CommonWikiData
 {
-	static const int MAX_REFINE_COUNT = 9;
-	static const int REFINE_MATERIAL_MAX_NUM = 5;
+	static const _wint32 MAX_REFINE_COUNT = 9;
+	static const _wint32 REFINE_MATERIAL_MAX_NUM = 5;
 	
 	typedef struct SRefineMaterialNew
 	{
@@ -22,32 +34,32 @@ namespace CommonWikiData
 			count = 0;
 		}
 		
-		DWORD vnum;
-		int count;
+		_wuint32 vnum;
+		_wint32 count;
 	} TRefineMaterialNew;
 	
 	typedef struct SWikiChestInfo
 	{
 		~SWikiChestInfo() = default;
-		SWikiChestInfo(DWORD r_vnum = 0, DWORD r_count = 0) {
+		SWikiChestInfo(_wuint32 r_vnum = 0, _wuint32 r_count = 0) {
 			vnum = r_vnum;
 			count = r_count;
 		}
 		
-		DWORD vnum;
-		int count;
+		_wuint32 vnum;
+		_wint32 count;
 	} TWikiChestInfo;
 	
 	typedef struct SWikiMobDropInfo
 	{
 		~SWikiMobDropInfo() = default;
-		SWikiMobDropInfo(DWORD r_vnum = 0, DWORD r_count = 0) {
+		SWikiMobDropInfo(_wuint32 r_vnum = 0, _wuint32 r_count = 0) {
 			vnum = r_vnum;
 			count = r_count;
 		}
 		
-		DWORD vnum;
-		int count;
+		_wuint32 vnum;
+		_wint32 count;
 	} TWikiMobDropInfo;
 	
 	typedef struct SWikiRefineInfo
@@ -60,24 +72,24 @@ namespace CommonWikiData
 			price = 0;
 		}
 		
-		int index;
+		_wint32 index;
 		TRefineMaterialNew materials[REFINE_MATERIAL_MAX_NUM];
-		DWORD mat_count;
-		int price;
+		_wuint32 mat_count;
+		_wint32 price;
 	} TWikiRefineInfo;
 	
 	typedef struct SWikiItemOriginInfo
 	{
 		~SWikiItemOriginInfo() = default;
-		SWikiItemOriginInfo(DWORD r_vnum = 0, bool r_is_mob = false) {
+		SWikiItemOriginInfo(_wuint32 r_vnum = 0, bool r_is_mob = false) {
 			vnum = r_vnum;
 			is_mob = r_is_mob;
 		}
 		
-		void set_vnum(DWORD r_vnum) { vnum = r_vnum; }
+		void set_vnum(_wuint32 r_vnum) { vnum = r_vnum; }
 		void set_is_mob(bool flag) { is_mob = flag; }
 		
-		DWORD vnum;
+		_wuint32 vnum;
 		bool is_mob;
 	} TWikiItemOriginInfo;
 	
@@ -92,9 +104,9 @@ namespace CommonWikiData
 		}
 		
 		bool is_common;
-		int refine_infos_count;
-		int chest_info_count;
-		DWORD origin_vnum;
+		_wint32 refine_infos_count;
+		_wint32 chest_info_count;
+		_wuint32 origin_vnum;
 	} TWikiInfoTable;
 }
 
@@ -102,12 +114,12 @@ namespace InGameWiki
 {
 	enum HCommunicationsPacketsCG
 	{
-		HEADER_CG_WIKI = 200,
+		HEADER_CG_WIKI = 210,
 	};
 
 	enum HCommunicationsPacketsGC
 	{
-		HEADER_GC_WIKI = 211,
+		HEADER_GC_WIKI = 213,
 	};
 	
 	enum SHCommunicationsPacketsGC
@@ -128,10 +140,10 @@ namespace InGameWiki
 			ret_id = 0;
 		}
 
-		BYTE bHeader;
+		_wHEADER_TYPE bHeader;
 		bool is_mob;
-		DWORD vnum;
-		unsigned long long ret_id;
+		_wuint32 vnum;
+		_wuint64 ret_id;
 	} TCGWikiPacket;
 	
 	typedef struct SGCWikiPacket
@@ -143,13 +155,13 @@ namespace InGameWiki
 			bSubHeader = LOAD_WIKI_ITEM;
 		}
 		
-		void increment_data_size(WORD r_data_size) { size += r_data_size; }
-		void set_data_type(BYTE r_dataType) { bSubHeader = r_dataType; }
-		bool is_data_type(BYTE r_dataType) { return bSubHeader == r_dataType; }
+		void increment_data_size(_wGC_PACKAGE_SIZE r_data_size) { size += r_data_size; }
+		void set_data_type(_wHEADER_TYPE r_dataType) { bSubHeader = r_dataType; }
+		bool is_data_type(_wHEADER_TYPE r_dataType) { return bSubHeader == r_dataType; }
 		
-		BYTE bHeader;
-		WORD size;
-		BYTE bSubHeader;
+		_wHEADER_TYPE bHeader;
+		_wGC_PACKAGE_SIZE size;
+		_wHEADER_TYPE bSubHeader;
 	} TGCWikiPacket;
 	
 	typedef struct SGCItemWikiPacket
@@ -158,14 +170,14 @@ namespace InGameWiki
 		SGCItemWikiPacket() = default;
 		
 		void mutable_wiki_info(TWikiInfoTable r_wif) { wiki_info = r_wif; }
-		void set_origin_infos_count(int elem_count) { origin_infos_count = elem_count; }
-		void set_vnum(DWORD r_vnum) { vnum = r_vnum; }
-		void set_ret_id(unsigned long long r_ret_id) { ret_id = r_ret_id; }
+		void set_origin_infos_count(_wint32 elem_count) { origin_infos_count = elem_count; }
+		void set_vnum(_wuint32 r_vnum) { vnum = r_vnum; }
+		void set_ret_id(_wuint64 r_ret_id) { ret_id = r_ret_id; }
 		
 		TWikiInfoTable wiki_info;
-		int origin_infos_count;
-		DWORD vnum;
-		unsigned long long ret_id;
+		_wint32 origin_infos_count;
+		_wuint32 vnum;
+		_wuint64 ret_id;
 	} TGCItemWikiPacket;
 	
 	typedef struct SGCMobWikiPacket
@@ -176,13 +188,13 @@ namespace InGameWiki
 			ret_id = 0;
 		}
 		
-		void set_drop_info_count(int r_drop_info_count) { drop_info_count = r_drop_info_count; }
-		void set_vnum(DWORD r_vnum) { vnum = r_vnum; }
-		void set_ret_id(unsigned long long r_ret_id) { ret_id = r_ret_id; }
+		void set_drop_info_count(_wint32 r_drop_info_count) { drop_info_count = r_drop_info_count; }
+		void set_vnum(_wuint32 r_vnum) { vnum = r_vnum; }
+		void set_ret_id(_wuint64 r_ret_id) { ret_id = r_ret_id; }
 		
-		int drop_info_count;
-		DWORD vnum;
-		unsigned long long ret_id;
+		_wint32 drop_info_count;
+		_wuint32 vnum;
+		_wuint64 ret_id;
 	} TGCMobWikiPacket;
 }
 

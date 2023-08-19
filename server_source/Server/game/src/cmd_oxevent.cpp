@@ -19,22 +19,16 @@ ACMD(do_oxevent_log)
 {
 	if ( COXEventManager::instance().LogWinner() == false )
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 813, "");
-#endif
+		ch->ChatPacket(CHAT_TYPE_INFO, "[LS;803]");
 	}
 	else
 	{
-#ifdef TEXTS_IMPROVEMENT
-		ch->ChatPacketNew(CHAT_TYPE_INFO, 814, "");
-#endif
+		ch->ChatPacket(CHAT_TYPE_INFO, "[LS;814]");
 	}
 }
 
 ACMD(do_oxevent_get_attender)
 {
-#ifdef TEXTS_IMPROVEMENT
-	ch->ChatPacketNew(CHAT_TYPE_INFO, 812, "%d", COXEventManager::instance().GetAttenderCount());
-#endif
+	ch->ChatPacket(CHAT_TYPE_INFO, "[LS;825;%d]", COXEventManager::instance().GetAttenderCount());
 }
 

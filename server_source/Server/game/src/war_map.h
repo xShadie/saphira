@@ -1,6 +1,4 @@
-#ifndef __GUILD_WAR_MAP_MANAGER_H
-#define __GUILD_WAR_MAP_MANAGER_H
-
+#pragma once
 #include "constants.h"
 #include "guild.h"
 
@@ -22,13 +20,11 @@ namespace warmap
 	enum
 	{
 		WAR_FLAG_VNUM_START = 20035,
-		WAR_FLAG_VNUM_END = 20037,
-
-		WAR_FLAG_VNUM0 = 20035,
-		WAR_FLAG_VNUM1 = 20036,
-		WAR_FLAG_VNUM2 = 20037,
-
-		WAR_FLAG_BASE_VNUM = 20038
+		WAR_FLAG_VNUM_END	= 20037,
+		WAR_FLAG_VNUM0		= 20035,
+		WAR_FLAG_VNUM1		= 20036,
+		WAR_FLAG_VNUM2		= 20037,
+		WAR_FLAG_BASE_VNUM	= 20038
 	};
 
 	inline bool IsWarFlag(DWORD dwVnum)
@@ -54,47 +50,33 @@ class CWarMap
 		~CWarMap();
 
 		bool	GetTeamIndex(DWORD dwGuild, BYTE & bIdx);
-
 		void	IncMember(LPCHARACTER ch);
 		void	DecMember(LPCHARACTER ch);
-
 		CGuild * GetGuild(BYTE bIdx);
 		DWORD	GetGuildID(BYTE bIdx);
-
 		BYTE	GetType();
 		long	GetMapIndex();
 		DWORD	GetGuildOpponent(LPCHARACTER ch);
-
 		DWORD	GetWinnerGuild();
 		void	UsePotion(LPCHARACTER ch, LPITEM item);
-
-		void	Draw();	// 강제 무승부 처리
+		void	Draw();
 		void	Timeout();
 		void	CheckWarEnd();
 		bool	SetEnded();
 		void	ExitAll();
-
 		void	SetBeginEvent(LPEVENT pkEv);
 		void	SetTimeoutEvent(LPEVENT pkEv);
 		void	SetEndEvent(LPEVENT pkEv);
 		void	SetResetFlagEvent(LPEVENT pkEv);
-
 		void	UpdateScore(DWORD g1, int score1, DWORD g2, int score2);
 		bool	CheckScore();
-
-		int	GetRewardGold(BYTE bWinnerIdx);
-
+		long long	GetRewardGold(BYTE bWinnerIdx);
 		bool	GetGuildIndex(DWORD dwGuild, int& iIndex);
-
 		void	Packet(const void * pv, int size);
-#ifdef TEXTS_IMPROVEMENT
-		void Notice(BYTE type, DWORD idx, const char * format, ...);
-#endif
+		void	Notice(const char * psz);
 		void	SendWarPacket(LPDESC d);
 		void	SendScorePacket(BYTE bIdx, LPDESC d = NULL);
-
 		void	OnKill(LPCHARACTER killer, LPCHARACTER ch);
-
 		void	AddFlag(BYTE bIdx, DWORD x=0, DWORD y=0);
 		void	AddFlagBase(BYTE bIdx, DWORD x=0, DWORD y=0);
 		void	RemoveFlag(BYTE bIdx);
@@ -118,7 +100,7 @@ class CWarMap
 			DWORD	dwID;
 			CGuild * pkGuild;
 			int		iMemberCount;
-			int		iUsePotionPrice;
+			long long	lldUsePotionPrice;
 			int		iScore;
 			LPCHARACTER pkChrFlag;
 			LPCHARACTER pkChrFlagBase;
@@ -127,21 +109,19 @@ class CWarMap
 
 			void Initialize();
 
-			int GetAccumulatedJoinerCount(); // 누적된 참가자 수
-			int GetCurJointerCount(); // 현재 참가자 수
+			int GetAccumulatedJoinerCount();
+			int GetCurJointerCount();
 
 			void AppendMember(LPCHARACTER ch);
 			void RemoveMember(LPCHARACTER ch);
 		} TeamData;
 
-		TeamData	m_TeamData[2];
-		int		m_iObserverCount;
-		DWORD		m_dwStartTime;
-		BYTE		m_bTimeout;
-
+		TeamData		m_TeamData[2];
+		int				m_iObserverCount;
+		DWORD			m_dwStartTime;
+		BYTE			m_bTimeout;
 		TGuildWarInfo	m_WarInfo;
-
-		CHARACTER_SET m_set_pkChr;
+		CHARACTER_SET	m_set_pkChr;
 };
 
 class CWarMapManager : public singleton<CWarMapManager>
@@ -152,15 +132,13 @@ class CWarMapManager : public singleton<CWarMapManager>
 
 		bool		LoadWarMapInfo(const char * c_pszFileName);
 		bool		IsWarMap(long lMapIndex);
-		TWarMapInfo *	GetWarMapInfo(long lMapIndex);
+		TWarMapInfo *GetWarMapInfo(long lMapIndex);
 		bool		GetStartPosition(long lMapIndex, BYTE bIdx, PIXEL_POSITION & pos);
-
 		template <typename Func> Func for_each(Func f);
 		long		CreateWarMap(const TGuildWarInfo & r_WarInfo, DWORD dwGuildID1, DWORD dwGuildID2);
 		void		DestroyWarMap(CWarMap* pMap);
 		CWarMap *	Find(long lMapIndex);
-		int		CountWarMap() { return m_mapWarMap.size(); }
-
+		int			CountWarMap() { return m_mapWarMap.size(); }
 		void		OnShutdown();
 
 	private:
@@ -170,10 +148,9 @@ class CWarMapManager : public singleton<CWarMapManager>
 
 template <typename Func> Func CWarMapManager::for_each(Func f)
 {
-	for (itertype(m_mapWarMap) it = m_mapWarMap.begin(); it != m_mapWarMap.end(); ++it)
+	for (auto it = m_mapWarMap.begin(); it != m_mapWarMap.end(); ++it)
 		f(it->second);
 
 	return f;
 }
 
-#endif
